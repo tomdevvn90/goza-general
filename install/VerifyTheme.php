@@ -10,7 +10,7 @@ if (!class_exists('BearsthemesCommunicator')):
   class BearsthemesCommunicator{
     var $baseUrl;
     var $message;
-    function __construct($baseUrl='http://apialone.beplusprojects.com') {
+    function __construct($baseUrl='http://apigoza.beplusprojects.com') {
         $this->baseUrl = $baseUrl;
     }
 
@@ -31,7 +31,7 @@ if (!class_exists('BearsthemesCommunicator')):
 
         if ( is_wp_error( $response ) ) {
            $error_message = $response->get_error_message();
-           $this->message = __("Something went wrong on unregister your domain: ", "alone").$error_message;
+           $this->message = __("Something went wrong on unregister your domain: ", "goza").$error_message;
            return null;
         } else {
            return true;
@@ -54,7 +54,7 @@ if (!class_exists('BearsthemesCommunicator')):
 
       if ( is_wp_error( $response ) ) {
          $error_message = $response->get_error_message();
-         $this->message = __("Something went wrong on unregister your domain: ", "alone").$error_message;
+         $this->message = __("Something went wrong on unregister your domain: ", "goza").$error_message;
          return null;
       } else {
          return true;
@@ -73,7 +73,7 @@ if (!class_exists('BearsthemesCommunicator')):
       $response = wp_remote_get( $this->baseUrl.'/api/v2/registered-by-purchase-code/'.$purchaseCode, array( 'timeout' => 50 ) );
       if ( is_wp_error( $response ) ) {
          $error_message = $response->get_error_message();
-         $this->message = __("Something went wrong on get connected domain with your purchase code: ", "alone").$error_message;
+         $this->message = __("Something went wrong on get connected domain with your purchase code: ", "goza").$error_message;
          return null;
       } else {
          $result = json_decode($response['body']);
@@ -91,7 +91,7 @@ if (!class_exists('BearsthemesCommunicator')):
       $response = wp_remote_get( $this->baseUrl.'/api/v2/verify-purchase-code/'.$purchaseCode, array( 'timeout' => 50 ) );
       if ( is_wp_error( $response ) ) {
          $error_message = $response->get_error_message();
-         $this->message = __("Something went wrong on get purchase information: ", "alone").$error_message;
+         $this->message = __("Something went wrong on get purchase information: ", "goza").$error_message;
          return null;
       } else {
          $result = json_decode($response['body']);
@@ -366,7 +366,7 @@ class VerifyTheme {
           if($communicator->message){
             $message .= $communicator->message;
           }else{
-            $message .= __("Invalid purchase code<br />","alone");
+            $message .= __("Invalid purchase code<br />","goza");
           }
         }
         $connected_domain = $communicator->getConnectedDomains( $new_input['purchase_code'] );

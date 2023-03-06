@@ -75,8 +75,8 @@ $environment = array(
 <div class="ip-theme_requirements">
   <div class="info-item">
     <div class="title">
-      <h3 data-export-label="WordPress address (URL)"><?php esc_html_e( 'WordPress address (URL)', 'alone' ); ?>:</h3>
-      <div class="help"><?php echo esc_html__( 'The root URL of your site.', 'alone' ); ?></div>
+      <h3 data-export-label="WordPress address (URL)"><?php esc_html_e( 'WordPress address (URL)', 'goza' ); ?>:</h3>
+      <div class="help"><?php echo esc_html__( 'The root URL of your site.', 'goza' ); ?></div>
     </div>
     <div class="value">
       <?php echo esc_html( $environment['site_url'] ); ?>
@@ -85,8 +85,8 @@ $environment = array(
 
   <div class="info-item">
     <div class="title">
-      <h3 data-export-label="PHP Version"><?php esc_html_e( 'PHP version', 'alone' ); ?></h3>
-      <div class="help"><?php echo esc_html__( 'Information about the web server that is currently hosting your site.', 'alone' ); ?></div>
+      <h3 data-export-label="PHP Version"><?php esc_html_e( 'PHP version', 'goza' ); ?></h3>
+      <div class="help"><?php echo esc_html__( 'Information about the web server that is currently hosting your site.', 'goza' ); ?></div>
     </div>
     <div class="value">
       <?php
@@ -102,13 +102,13 @@ $environment = array(
   <?php if ( $environment['mysql_version'] ) : ?>
     <div class="info-item">
       <div class="title">
-        <h3 data-export-label="MySQL Version"><?php esc_html_e( 'MySQL version', 'alone' ); ?>:</h3>
-        <div class="help"><?php echo esc_html__( 'The version of MySQL installed on your hosting server.', 'alone' ); ?></div>
+        <h3 data-export-label="MySQL Version"><?php esc_html_e( 'MySQL version', 'goza' ); ?>:</h3>
+        <div class="help"><?php echo esc_html__( 'The version of MySQL installed on your hosting server.', 'goza' ); ?></div>
       </div>
       <div class="value">
         <?php
         if ( version_compare( $environment['mysql_version'], '7.3', '<' ) && ! strstr( $environment['mysql_version_string'], 'MariaDB' ) ) {
-          echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - We recommend a minimum MySQL version of 7.3. See: %2$s', 'alone' ), esc_html( $environment['mysql_version_string'] ), '<a href="https://wordpress.org/about/requirements/" target="_blank">' . esc_html__( 'WordPress requirements', 'alone' ) . '</a>' ) . '</mark>';
+          echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - We recommend a minimum MySQL version of 7.3. See: %2$s', 'goza' ), esc_html( $environment['mysql_version_string'] ), '<a href="https://wordpress.org/about/requirements/" target="_blank">' . esc_html__( 'WordPress requirements', 'goza' ) . '</a>' ) . '</mark>';
         } else {
           echo '<mark class="yes">' . esc_html( $environment['mysql_version_string'] ) . '</mark>';
         }
@@ -119,13 +119,13 @@ $environment = array(
 
   <div class="info-item">
     <div class="title">
-      <h3 data-export-label="WP Memory Limit"><?php esc_html_e( 'WordPress memory limit', 'alone' ); ?>:</h3>
-  		<div class="help"><?php echo esc_html__( 'The maximum amount of memory (RAM) that your site can use at one time.', 'alone' ); ?></div>
+      <h3 data-export-label="WP Memory Limit"><?php esc_html_e( 'WordPress memory limit', 'goza' ); ?>:</h3>
+  		<div class="help"><?php echo esc_html__( 'The maximum amount of memory (RAM) that your site can use at one time.', 'goza' ); ?></div>
     </div>
 		<div class="value">
 			<?php
 			if ( $environment['wp_memory_limit'] < 536870912 ) { //512M
-				echo '<mark class="error">' . sprintf( esc_html__( '%1$s - We recommend setting memory to at least 512MB. See: %2$s', 'alone' ), esc_html( size_format( $environment['wp_memory_limit'] ) ), '<a href="https://wordpress.org/support/article/editing-wp-config-php/#increasing-memory-allocated-to-php" target="_blank">' . esc_html__( 'Increasing memory allocated to PHP', 'alone' ) . '</a>' ) . '</mark>';
+				echo '<mark class="error">' . sprintf( esc_html__( '%1$s - We recommend setting memory to at least 512MB. See: %2$s', 'goza' ), esc_html( size_format( $environment['wp_memory_limit'] ) ), '<a href="https://wordpress.org/support/article/editing-wp-config-php/#increasing-memory-allocated-to-php" target="_blank">' . esc_html__( 'Increasing memory allocated to PHP', 'goza' ) . '</a>' ) . '</mark>';
 			} else {
 				echo '<mark class="yes">' . esc_html( size_format( $environment['wp_memory_limit'] ) ) . '</mark>';
 			}
@@ -136,13 +136,13 @@ $environment = array(
   <?php if ( function_exists( 'ini_get' ) ) : ?>
     <div class="info-item">
       <div class="title">
-        <h3 data-export-label="PHP Post Max Size"><?php esc_html_e( 'PHP post max size', 'alone' ); ?>:</h3>
-        <div class="help"><?php echo esc_html__( 'The largest filesize that can be contained in one post.', 'alone' ); ?></div>
+        <h3 data-export-label="PHP Post Max Size"><?php esc_html_e( 'PHP post max size', 'goza' ); ?>:</h3>
+        <div class="help"><?php echo esc_html__( 'The largest filesize that can be contained in one post.', 'goza' ); ?></div>
       </div>
       <div class="value">
 				<?php
 					if ( $environment['php_post_max_size'] < 268435456 ) { //256M
-						echo '<mark class="error">' . sprintf( esc_html__( '%1$s - We recommend setting post max size to at least 256MB.', 'alone' ), esc_html( size_format( $environment['php_post_max_size'] ) ) ) . '</mark>';
+						echo '<mark class="error">' . sprintf( esc_html__( '%1$s - We recommend setting post max size to at least 256MB.', 'goza' ), esc_html( size_format( $environment['php_post_max_size'] ) ) ) . '</mark>';
 					} else {
 						echo '<mark class="yes">' . esc_html( size_format( $environment['php_post_max_size'] ) ) . '</mark>';
 					}
@@ -152,13 +152,13 @@ $environment = array(
 
     <div class="info-item">
       <div class="title">
-        <h3 data-export-label="PHP Time Limit"><?php esc_html_e( 'PHP time limit', 'alone' ); ?>:</h3>
-        <div class="help"><?php echo esc_html__( 'The amount of time (in seconds) that your site will spend on a single operation before timing out (to avoid server lockups)', 'alone' ); ?></div>
+        <h3 data-export-label="PHP Time Limit"><?php esc_html_e( 'PHP time limit', 'goza' ); ?>:</h3>
+        <div class="help"><?php echo esc_html__( 'The amount of time (in seconds) that your site will spend on a single operation before timing out (to avoid server lockups)', 'goza' ); ?></div>
       </div>
       <div class="value">
         <?php
 					if ( $environment['php_max_execution_time'] < 300 ) { //300
-						echo '<mark class="error">' . sprintf( esc_html__( '%1$s - We recommend setting time limit to at least 300.', 'alone' ), esc_html( $environment['php_max_execution_time'] ) ) . '</mark>';
+						echo '<mark class="error">' . sprintf( esc_html__( '%1$s - We recommend setting time limit to at least 300.', 'goza' ), esc_html( $environment['php_max_execution_time'] ) ) . '</mark>';
 					} else {
 						echo '<mark class="yes">' . esc_html( $environment['php_max_execution_time'] ) . '</mark>';
 					}
@@ -168,13 +168,13 @@ $environment = array(
 
     <div class="info-item">
       <div class="title">
-        <h3 data-export-label="PHP Max Input Vars"><?php esc_html_e( 'PHP max input vars', 'alone' ); ?>:</h3>
-        <div class="help"><?php echo esc_html__( 'The maximum number of variables your server can use for a single function to avoid overloads.', 'alone' ); ?></div>
+        <h3 data-export-label="PHP Max Input Vars"><?php esc_html_e( 'PHP max input vars', 'goza' ); ?>:</h3>
+        <div class="help"><?php echo esc_html__( 'The maximum number of variables your server can use for a single function to avoid overloads.', 'goza' ); ?></div>
       </div>
       <div class="value">
         <?php
 					if ( $environment['php_max_input_vars'] < 3000 ) { //3000
-						echo '<mark class="error">' . sprintf( esc_html__( '%1$s - We recommend setting input vars to at least 300.', 'alone' ), esc_html( $environment['php_max_input_vars'] ) ) . '</mark>';
+						echo '<mark class="error">' . sprintf( esc_html__( '%1$s - We recommend setting input vars to at least 300.', 'goza' ), esc_html( $environment['php_max_input_vars'] ) ) . '</mark>';
 					} else {
 						echo '<mark class="yes">' . esc_html( $environment['php_max_input_vars'] ) . '</mark>';
 					}
@@ -185,13 +185,13 @@ $environment = array(
 
   <div class="info-item">
     <div class="title">
-      <h3 data-export-label="Max Upload Size"><?php esc_html_e( 'Max upload size', 'alone' ); ?>:</h3>
-      <div class="help"><?php echo esc_html__( 'The largest filesize that can be uploaded to your WordPress installation.', 'alone' ); ?></div>
+      <h3 data-export-label="Max Upload Size"><?php esc_html_e( 'Max upload size', 'goza' ); ?>:</h3>
+      <div class="help"><?php echo esc_html__( 'The largest filesize that can be uploaded to your WordPress installation.', 'goza' ); ?></div>
     </div>
     <div class="value">
       <?php
 				if ( $environment['max_upload_size'] < 268435456 ) { //256M
-					echo '<mark class="error">' . sprintf( esc_html__( '%1$s - We recommend setting upload size to at least 256MB.', 'alone' ), esc_html( size_format( $environment['max_upload_size'] ) ) ) . '</mark>';
+					echo '<mark class="error">' . sprintf( esc_html__( '%1$s - We recommend setting upload size to at least 256MB.', 'goza' ), esc_html( size_format( $environment['max_upload_size'] ) ) ) . '</mark>';
 				} else {
 					echo '<mark class="yes">' . esc_html( size_format( $environment['max_upload_size'] ) ) . '</mark>';
 				}
@@ -201,15 +201,15 @@ $environment = array(
 
   <div class="info-item">
     <div class="title">
-      <h3 data-export-label="GZip"><?php esc_html_e( 'GZip', 'alone' ); ?>:</h3>
-      <div class="help"><?php echo esc_html__( 'GZip (gzopen) is used to open the GEOIP database from MaxMind.', 'alone' ); ?></div>
+      <h3 data-export-label="GZip"><?php esc_html_e( 'GZip', 'goza' ); ?>:</h3>
+      <div class="help"><?php echo esc_html__( 'GZip (gzopen) is used to open the GEOIP database from MaxMind.', 'goza' ); ?></div>
     </div>
     <div class="value">
       <?php
 	      if ( $environment['gzip_enabled'] ) {
 	        echo '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>';
 	      } else {
-	        echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( 'Your server does not support the %s function - this is required to use the GeoIP database from MaxMind.', 'alone' ), '<a href="https://php.net/manual/en/zlib.installation.php">gzopen</a>' ) . '</mark>';
+	        echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( 'Your server does not support the %s function - this is required to use the GeoIP database from MaxMind.', 'goza' ), '<a href="https://php.net/manual/en/zlib.installation.php">gzopen</a>' ) . '</mark>';
 	      }
       ?>
     </div>

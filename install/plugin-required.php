@@ -31,7 +31,7 @@
 
 require_once get_template_directory() . '/install/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'alone_register_required_plugins' );
+add_action( 'tgmpa_register', 'goza_register_required_plugins' );
 
 /**
  * Register the required plugins for this theme.
@@ -50,7 +50,7 @@ add_action( 'tgmpa_register', 'alone_register_required_plugins' );
  *
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
-function alone_register_required_plugins() {
+function goza_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
