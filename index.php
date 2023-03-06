@@ -1,37 +1,24 @@
 <?php
 /**
- * The site's entry point.
- *
- * Loads the relevant template part,
- * the loop is executed (when needed) by the relevant template part.
- *
- * @package gozagutenberg
+ * The main template file
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @package goza
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-
 get_header();
-
-$is_gutenberg_theme_exist = function_exists( 'gutenberg_theme_do_location' );
-
-if ( is_singular() ) {
-	if ( ! $is_gutenberg_theme_exist || ! gutenberg_theme_do_location( 'single' ) ) {
-		get_template_part( 'template-parts/single' );
-	}
-} elseif ( is_archive() || is_home() ) {
-	if ( ! $is_gutenberg_theme_exist || ! gutenberg_theme_do_location( 'archive' ) ) {
-		get_template_part( 'template-parts/archive' );
-	}
-} elseif ( is_search() ) {
-	if ( ! $is_gutenberg_theme_exist || ! gutenberg_theme_do_location( 'archive' ) ) {
-		get_template_part( 'template-parts/search' );
-	}
-} else {
-	if ( ! $is_gutenberg_theme_exist || ! gutenberg_theme_do_location( 'single' ) ) {
-		get_template_part( 'template-parts/404' );
-	}
-}
-
+?>
+    <main id="primary" class="site-main container lib-filter-wrap">
+        <?php
+        if ( have_posts() ) :
+	        get_template_part( 'template-parts/content-loop', get_post_type() );
+        else :
+	        get_template_part( 'template-parts/content', 'none' );
+        endif;
+        ?>
+	</main><!-- #main -->
+<?php
 get_footer();

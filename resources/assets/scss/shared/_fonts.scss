@@ -1,0 +1,26 @@
+@each $font-key, $font-item in $fonts_primary {
+  $font-family: map-get($font-item, 'family');
+  $font-weight: map-get($font-item, 'weight');
+  $font-style: map-get($font-item, 'style');
+  $font-file: map-get($font-item, 'file');
+  @font-face {
+    font-family: $font-family;
+    src: url('../fonts/Arimo/' + $font-file + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@each $font-key, $font-item in $fonts_second {
+  $font-family: map-get($font-item, 'family');
+  $font-weight: map-get($font-item, 'weight');
+  $font-style: map-get($font-item, 'style');
+  $font-file: map-get($font-item, 'file');
+  @font-face {
+    font-family: $font-family;
+    src: url('../fonts/Poppins/' + $font-file + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+

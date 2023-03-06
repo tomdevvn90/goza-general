@@ -1,26 +1,20 @@
 <?php
 /**
- * The template for displaying the footer.
- *
- * Contains the body & html closing tags.
- *
- * @package gozagutenberg
+ * The template for displaying the footer
+ * Contains the closing of the #content div and all content after.
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * @package goza
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+echo "</div><!--End site wrap-->";
 
-if ( ! function_exists( 'gutenberg_theme_do_location' ) || ! gutenberg_theme_do_location( 'footer' ) ) {
-	if ( did_action( 'gutenberg/loaded' ) && goza_header_footer_experiment_active() ) {
-		get_template_part( 'template-parts/dynamic-footer' );
-	} else {
-		get_template_part( 'template-parts/footer' );
-	}
-}
+/**
+ * goza_hook_footer hook.
+ * @see goza_footer_template - 20
+ */
+do_action( 'goza_hook_footer' );
+
+wp_footer();
 ?>
-
-<?php wp_footer(); ?>
-
 </body>
 </html>
