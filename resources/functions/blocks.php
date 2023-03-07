@@ -1,0 +1,85 @@
+<?php
+
+/**
+ * Blocks
+ *
+ * @package      Goza
+ * @author       Beplus Team
+ * @since        1.0.0
+ * @license      GPL-2.0+
+ **/
+
+
+/**
+ * Load Blocks
+ */
+function goza_load_blocks()
+{
+    $theme  = wp_get_theme();
+    $blocks = goza_get_blocks();
+    
+    foreach ($blocks as $block) {
+        if (file_exists(get_template_directory() . '/resources/blocks/' . $block . '/block.json')) {
+            register_block_type(get_template_directory() . '/resources/blocks/' . $block . '/block.json');
+            wp_register_style('block-' . $block, get_template_directory_uri() . '/resources/blocks/' . $block . '/css/style.css', null, $theme->get('Version'));
+            wp_register_script('block-' . $block, get_template_directory_uri() . '/resources/blocks/' . $block . '/js/script.js', ['jquery'], $theme->get('Version'), true );
+
+            if (file_exists(get_template_directory() . '/resources/blocks/' . $block . '/init.php')) {
+                include_once get_template_directory() . '/resources/blocks/' . $block . '/init.php';
+            }
+        }
+    }
+}
+add_action('init', 'goza_load_blocks', 5);
+
+
+/**
+ * Get Blocks
+ */
+function goza_get_blocks()
+{
+    $theme   = wp_get_theme();
+    $blocks  = get_option('goza_blocks');
+    $version = get_option('goza_blocks_version');
+    if (empty($blocks) || version_compare($theme->get('Version'), $version) || (function_exists('wp_get_environment_type') && 'production' !== wp_get_environment_type())) {
+        $blocks = scandir(get_template_directory() . '/resources/blocks/');
+        $blocks = array_values(array_diff($blocks, array('..', '.', '.DS_Store', '_base-block')));
+
+        update_option('goza_blocks', $blocks);
+        update_option('goza_blocks_version', $theme->get('Version'));
+    }
+    return $blocks;
+}
+
+/**
+ * Block categories
+ *
+ * @since 1.0.0
+ */
+function goza_block_categories($categories)
+{
+
+    // Check to see if we already have a Goza Theme category
+    $include = true;
+    foreach ($categories as $category) {
+        if ('goza-theme' === $category['slug']) {
+            $include = false;
+        }
+    }
+
+    if ($include) {
+        $categories = array_merge(
+            $categories,
+            [
+                [
+                    'slug'  => 'goza-theme',
+                    'title' => __('Goza Theme', 'goza'),
+                    'icon'  => ''
+                ]
+            ]
+        );
+    }
+
+    return $categories;
+}
+add_filter('block_categories_all', 'goza_block_categories');

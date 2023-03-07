@@ -1,0 +1,23 @@
+{
+    "name": "goza/hero",
+    "title": "Hero",
+    "description": "Image background with text & call to action.",
+    "style": "block-hero",
+    "editorStyle": "file:./css/editor.css",
+    "script": "block-hero",
+    "category": "goza-theme",
+    "icon": "format-image",
+    "keywords": ["hero", "image"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "align": true
+    },
+    "styles": [
+        { "name": "default", "label": "Default", "isDefault": true },
+        { "name": "other", "label": "Other" }
+    ],
+    "align": "full"
+  }
