@@ -6,9 +6,9 @@
 if ( ! function_exists( 'goza_create_custom_post_type' ) ) {
 	// Register Custom Post Type
 	function goza_create_custom_post_type() {
-		register_post_type( 'events', array(
-			'label'               => __( 'Events', 'goza' ),
-			'description'         => __( 'Events', 'goza' ),
+		register_post_type( 'fw-portfolio', array(
+			'label'               => __( 'Portfolio', 'goza' ),
+			'description'         => __( 'Portfolio', 'goza' ),
 			//'labels'                => $labels,
 			'supports'            => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'excerpt' ),
 			'taxonomies'          => array( '' ),
@@ -17,7 +17,7 @@ if ( ! function_exists( 'goza_create_custom_post_type' ) ) {
 			'show_ui'             => true,
 			'show_in_menu'        => true,
 			'menu_position'       => 5,
-			'menu_icon'		  => 'dashicons-calendar',
+			'menu_icon'		  => 'dashicons-portfolio',
 			'show_in_admin_bar'   => true,
 			'show_in_nav_menus'   => true,
 			'can_export'          => true,
@@ -30,16 +30,16 @@ if ( ! function_exists( 'goza_create_custom_post_type' ) ) {
 
 	}
 
-	//add_action( 'init', 'goza_create_custom_post_type', 0 ); // Register Custom Taxonomy
+	add_action( 'init', 'goza_create_custom_post_type', 0 ); // Register Custom Taxonomy
 }
 
 if ( ! function_exists( 'goza_create_custom_taxonomy' ) ) {
 	function goza_create_custom_taxonomy() {
-		register_taxonomy('taxonomy', array('events'), array(
+		register_taxonomy('fw-portfolio-category', array('fw-portfolio'), array(
 			'labels'            => array(
-				'name'          => _x('Taxonomy', 'Taxonomy General Name', 'goza'),
-				'singular_name' => _x('Taxonomy', 'Taxonomy Singular Name', 'goza'),
-				'menu_name'     => __('Taxonomy', 'goza'),
+				'name'          => _x('Categories', 'Taxonomy General Name', 'goza'),
+				'singular_name' => _x('Categories', 'Taxonomy Singular Name', 'goza'),
+				'menu_name'     => __('Categories', 'goza'),
 			),
 			'hierarchical'      => true,
 			'public'            => true,
@@ -51,5 +51,5 @@ if ( ! function_exists( 'goza_create_custom_taxonomy' ) ) {
 		));
 	}
 
-	//add_action( 'init', 'goza_create_custom_taxonomy', 0 );
+	add_action( 'init', 'goza_create_custom_taxonomy', 0 );
 }
