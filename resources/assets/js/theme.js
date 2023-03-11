@@ -9,5 +9,7 @@ AOS.init({
 });
 
 
+import './blocks/hero'
+
 
 
