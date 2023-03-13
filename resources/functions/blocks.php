@@ -15,14 +15,12 @@
  */
 function goza_load_blocks()
 {
-    $theme  = wp_get_theme();
     $blocks = goza_get_blocks();
-    
     foreach ($blocks as $block) {
         if (file_exists(get_template_directory() . '/resources/blocks/' . $block . '/block.json')) {
             register_block_type(get_template_directory() . '/resources/blocks/' . $block . '/block.json');
             wp_register_style('block-' . $block, get_template_directory_uri() . '/resources/blocks/' . $block . '/css/style.css', null, THEME_VERSION);
-            wp_register_script('block-' . $block, get_template_directory_uri() . '/resources/blocks/' . $block . '/js/script.js', ['jquery'], THEME_VERSION, true );
+            wp_register_script('block-' . $block, get_template_directory_uri() . '/resources/blocks/' . $block . '/js/script.js', ['jquery'], THEME_VERSION, true);
             if (file_exists(get_template_directory() . '/resources/blocks/' . $block . '/init.php')) {
                 include_once get_template_directory() . '/resources/blocks/' . $block . '/init.php';
             }
@@ -37,16 +35,12 @@ add_action('init', 'goza_load_blocks');
  */
 function goza_get_blocks()
 {
-    $theme   = wp_get_theme();
     $blocks  = get_option('goza_blocks');
-    $version = get_option('goza_blocks_version');
-    if (empty($blocks) || version_compare(THEME_VERSION, $version)) {
-        $blocks = scandir(get_template_directory() . '/resources/blocks/');
-        $blocks = array_values(array_diff($blocks, array('..', '.', '.DS_Store', '_base-block')));
+    $blocks = scandir(get_template_directory() . '/resources/blocks/');
+    $blocks = array_values(array_diff($blocks, array('..', '.', '.DS_Store', '_base-block')));
 
-        update_option('goza_blocks', $blocks);
-        update_option('goza_blocks_version', THEME_VERSION);
-    }
+    update_option('goza_blocks', $blocks);
+
     return $blocks;
 }
 
