@@ -1,0 +1,23 @@
+{
+    "name": "goza/be-testimonials",
+    "title": "Be Testimonials",
+    "description": "Image background with text & call to action.",
+    "style": "block-be-testominial",
+    "editorStyle": "file:./css/editor.css",
+    "script": "be-testominial",
+    "category": "goza-theme",
+    "icon": "format-image",
+    "keywords": ["carousel", "testimonials"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "align": true
+    },
+    "styles": [
+        { "name": "default", "label": "Default", "isDefault": true },
+        { "name": "other", "label": "Other" }
+    ],
+    "align": "full"
+  }
