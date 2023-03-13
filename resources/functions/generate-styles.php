@@ -116,7 +116,7 @@ function goza_theme_options_styles()
     $container_width = __get_field('goza_site_width', 'option');
 	if(!empty($container_width)) {
 		$custom_css .= "@media (min-width: 1400px) {";
-		$custom_css .= ":root {
+		$custom_css .= ":root { 
 	        --max-width: {$container_width}px !important;
 	    }";
 		$custom_css .= "}";

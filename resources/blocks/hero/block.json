@@ -3,6 +3,8 @@
     "title": "Hero",
     "description": "Image background with text & call to action.",
     "editorStyle": "file:./css/editor.css",
+    "style": "block-hero",
+    "script": "block-hero",
     "category": "goza-theme",
     "icon": "format-image",
     "keywords": ["hero", "image"],
