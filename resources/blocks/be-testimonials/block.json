@@ -2,12 +2,12 @@
     "name": "goza/be-testimonials",
     "title": "Be Testimonials",
     "description": "Image background with text & call to action.",
-    "style": "block-be-testominial",
     "editorStyle": "file:./css/editor.css",
-    "script": "be-testominial",
+    "style": "block-be-testominial",
+    "script": "block-be-testominial",
     "category": "goza-theme",
     "icon": "format-image",
-    "keywords": ["carousel", "testimonials"],
+    "keywords": ["carousel", "image"],
     "acf": {
         "mode": "preview",
         "renderTemplate": "render.php"
