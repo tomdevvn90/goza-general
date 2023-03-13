@@ -25,9 +25,10 @@ require get_template_directory() . '/resources/functions/meta.php';
 require get_template_directory() . '/resources/functions/images.php';
 require get_template_directory() . '/resources/functions/helpers.php';
 require get_template_directory() . '/resources/functions/template-tags.php';
-require get_template_directory() . '/resources/functions/template-func.php';
 require get_template_directory() . '/resources/functions/hooks.php';
 require get_template_directory() . '/resources/functions/blocks.php';
+require get_template_directory() . '/resources/functions/generate-styles.php';
+require get_template_directory() . '/resources/functions/template-func.php';
 
 /**
  * Theme install
