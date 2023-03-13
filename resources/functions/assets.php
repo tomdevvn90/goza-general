@@ -7,6 +7,10 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_script( 'vendor-scripts', get_template_directory_uri() . '/dist/js/vendor.js', ['jquery'], THEME_VERSION, true );
 	wp_enqueue_script( 'app-scripts', get_template_directory_uri() . '/dist/js/theme.js', ['jquery'], THEME_VERSION, true );
 
+	// lib slick
+	wp_enqueue_script( 'be-goza-slick', get_template_directory_uri() . '/resources/assets/lib/slick/slick.min.js', ['jquery'], THEME_VERSION, true );
+	wp_enqueue_style( 'be-goza-slick', get_template_directory_uri() . '/resources/assets/lib/slick/slick.css', [], THEME_VERSION );
+
 	wp_localize_script( 'app-scripts', 'php_data', [
 		'admin_logged' => in_array( 'administrator', wp_get_current_user()->roles ) ? 'yes' : 'no',
 		'ajax_url'     => admin_url( 'admin-ajax.php' )
