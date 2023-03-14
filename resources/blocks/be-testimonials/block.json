@@ -7,7 +7,7 @@
     "script": "block-be-testimonials",
     "category": "goza-theme",
     "icon": "format-image",
-    "keywords": ["carousel", "testimonials"],
+    "keywords": ["carousel", "image"],
     "acf": {
         "mode": "preview",
         "renderTemplate": "render.php"

@@ -23,6 +23,16 @@ function goza_acf_init()
 			'menu_title'    => 'Footer',
 			'parent_slug'   => 'theme-options',
 		));
+		acf_add_options_sub_page(array(
+			'page_title'    => 'Typography Options',
+			'menu_title'    => 'Typography',
+			'parent_slug'   => 'theme-options',
+		));
+		acf_add_options_sub_page(array(
+			'page_title'    => 'Color Options',
+			'menu_title'    => 'Color',
+			'parent_slug'   => 'theme-options',
+		));
 	}
 }
 

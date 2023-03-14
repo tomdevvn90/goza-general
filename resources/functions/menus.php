@@ -3,7 +3,8 @@
 add_action( 'after_setup_theme', function () {
 	register_nav_menus( [
 		'main-menu'   => esc_html__( 'Primary', 'goza' ),
-		'footer-menu' => esc_html__( 'Footer Menu', 'goza' )
+		'quicklinks-menu' => esc_html__( 'Quick Links', 'goza' ),
+		'privacy-menu' => esc_html__( 'Privacy Policy', 'goza' )
 	] );
 } );
 
