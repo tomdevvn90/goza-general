@@ -6,6 +6,7 @@
             "key": "field_6409efd0cf2be",
             "label": "Header Options",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -15,7 +16,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "placement": "top",
             "endpoint": 0
         },
@@ -23,6 +23,7 @@
             "key": "field_6409ef6dcf2bc",
             "label": "Layout Header",
             "name": "goza_layout_header",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -32,14 +33,13 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "choices": {
                 "default": "Header Default",
                 "transparent": "Header Transparent",
                 "btn_search": "Header Button + Search",
                 "menu_center": "Header Menu Center"
             },
-            "default_value": [],
+            "default_value": false,
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -51,6 +51,7 @@
             "key": "field_6409ffbfe7348",
             "label": "Sticky Header",
             "name": "goza_sticky_header",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -60,7 +61,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "message": "",
             "default_value": 0,
             "ui_on_text": "",
@@ -71,6 +71,7 @@
             "key": "field_6409fbffd4397",
             "label": "Header background color",
             "name": "goza_header_bg_color",
+            "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
@@ -88,8 +89,7 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
-            "default_value": "",
+            "default_value": "#FFF",
             "enable_opacity": 1,
             "return_format": "string"
         },
@@ -97,6 +97,7 @@
             "key": "field_6409ff17d70dc",
             "label": "Header Text Color",
             "name": "goza_header_txt_color",
+            "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
@@ -114,8 +115,7 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
-            "default_value": "",
+            "default_value": "#282828",
             "enable_opacity": 1,
             "return_format": "string"
         },
@@ -123,6 +123,7 @@
             "key": "field_6409efe9cf2bf",
             "label": "Top bar",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -132,7 +133,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "placement": "top",
             "endpoint": 0
         },
@@ -140,6 +140,7 @@
             "key": "field_6409f0b9cf2c0",
             "label": "Enable",
             "name": "goza_enable_topbar",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -149,9 +150,8 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "message": "",
-            "default_value": 0,
+            "default_value": 1,
             "ui_on_text": "",
             "ui_off_text": "",
             "ui": 1
@@ -160,6 +160,7 @@
             "key": "field_6409f1dbcf2c1",
             "label": "Top bar background color",
             "name": "goza_topbar_bg_color",
+            "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
@@ -177,7 +178,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "#000",
             "enable_opacity": 0,
             "return_format": "string"
@@ -186,6 +186,7 @@
             "key": "field_6409f347cab11",
             "label": "Top bar text color",
             "name": "goza_topbar_text_color",
+            "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
@@ -203,7 +204,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "#FFF",
             "enable_opacity": 0,
             "return_format": "string"
@@ -212,6 +212,7 @@
             "key": "field_6409f3b69bb50",
             "label": "Enable Social",
             "name": "goza_en_social",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -229,7 +230,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "message": "",
             "default_value": 0,
             "ui_on_text": "",
@@ -240,6 +240,7 @@
             "key": "field_6409f3f39bb51",
             "label": "Label Social",
             "name": "goza_label_social",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -262,7 +263,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "GET IN TOUCH:",
             "maxlength": "",
             "placeholder": "",
@@ -273,6 +273,7 @@
             "key": "field_6409f46a9bb53",
             "label": "Phone Number",
             "name": "goza_phone_number",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -290,7 +291,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "091-234-5670",
             "maxlength": "",
             "placeholder": "",
@@ -301,6 +301,7 @@
             "key": "field_6409f4969bb54",
             "label": "Email",
             "name": "goza_email",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -318,7 +319,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "bearstheme@gmail.com",
             "maxlength": "",
             "placeholder": "",
@@ -329,6 +329,7 @@
             "key": "field_6409f4c89bb55",
             "label": "Label Button",
             "name": "goza_label_btn",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -346,7 +347,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "BECOME A VOLUNTEER",
             "maxlength": "",
             "placeholder": "",
@@ -357,6 +357,7 @@
             "key": "field_6409f5499bb56",
             "label": "Url Button",
             "name": "goza_url_button",
+            "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -374,7 +375,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "return_format": "array"
         }
     ],
@@ -393,7 +393,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1678503149
+    "show_in_rest": 0,
+    "modified": 1678806130
 }
