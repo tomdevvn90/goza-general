@@ -27,6 +27,45 @@
             "mime_types": ""
         },
         {
+            "key": "field_6409e90d501ac",
+            "label": "Site width (px)",
+            "name": "goza_site_width",
+            "type": "range",
+            "instructions": "Defines the main content width",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1140,
+            "min": 800,
+            "max": 2000,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6409e93c501ad",
+            "label": "Enable preloader",
+            "name": "goza_enable_preloader",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_6409ec6efd2fb",
             "label": "Social Network",
             "name": "goza_social_network",
@@ -119,45 +158,6 @@
             ]
         },
         {
-            "key": "field_6409e90d501ac",
-            "label": "Site width (px)",
-            "name": "goza_site_width",
-            "type": "range",
-            "instructions": "Defines the main content width",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": 1140,
-            "min": 800,
-            "max": 2000,
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6409e93c501ad",
-            "label": "Enable preloader",
-            "name": "goza_enable_preloader",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
             "key": "field_6409e979501ae",
             "label": "Preloader color",
             "name": "goza_preloader_color",
@@ -198,5 +198,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1678501735
+    "modified": 1678782121
 }
