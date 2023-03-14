@@ -6,6 +6,7 @@
             "key": "field_640bfc1c96e88",
             "label": "General",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_640bfa6e96e85",
             "label": "Layout Footer",
             "name": "layout_footer",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -32,9 +34,12 @@
                 "id": ""
             },
             "choices": {
-                "layout_1": "Layout 1"
+                "default": "Layout Default",
+                "goza_water": "Layout Goza Water",
+                "goza_orgazination": "Layout Goza  Orgazination",
+                "goza_ngo": "Layout Goza Ngo"
             },
-            "default_value": [],
+            "default_value": false,
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -46,17 +51,17 @@
             "key": "field_640bfa9096e86",
             "label": "Background image",
             "name": "goza_ft_bg_image",
+            "aria-label": "",
             "type": "image",
             "instructions": "Image for footer background",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33.3333",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "return_format": "url",
-            "preview_size": "thumbnail",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -64,42 +69,14 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_640bfb9e96e87",
-            "label": "Footer background color",
-            "name": "goza_ft_bg_color",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33.3333",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "#000"
-        },
-        {
-            "key": "field_640bfd8ef21fa",
-            "label": "Footer Text Color",
-            "name": "goza_ft_txt_color",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33.333",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "#c3c3c3"
+            "mime_types": "",
+            "preview_size": "thumbnail"
         },
         {
             "key": "field_640bfc3118d05",
             "label": "Address",
             "name": "goza_ft_address",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -119,6 +96,7 @@
             "key": "field_640bfca518d06",
             "label": "Phone",
             "name": "goza_ft_phone",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -138,6 +116,7 @@
             "key": "field_640bfcb018d07",
             "label": "Email",
             "name": "goza_ft_email",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -157,37 +136,31 @@
             "key": "field_640bfce618d08",
             "label": "Text Copyright",
             "name": "goza_txt_copyright",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "default_value": "© All right reserved 2022 <a href=\"#\">Goza<\/a> —&nbsp; Trusted by <a href=\"https:\/\/wimgo.com\/\" target=\"_blank\" rel=\"noopener\">Wimgo<\/a>",
+            "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
             "key": "field_640bfe9416219",
-            "label": "Column 1",
+            "label": "Column Logo",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_640bfa6e96e85",
-                        "operator": "==",
-                        "value": "layout_1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -200,6 +173,7 @@
             "key": "field_640c033670746",
             "label": "Logo Footer",
             "name": "goza_logo_ft",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -223,36 +197,33 @@
         {
             "key": "field_640c035770747",
             "label": "Heading",
-            "name": "goza_h_col_1",
+            "name": "goza_h_col_logo",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_640bfa6e96e85",
+                        "operator": "==",
+                        "value": "default"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_640bfa6e96e85",
+                        "operator": "==",
+                        "value": "goza_orgazination"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_640c03ed70749",
-            "label": "Shortcode Subscribe",
-            "name": "shortcode_subscribe",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
+            "default_value": "Trusted by the Nonprofit Organization",
             "placeholder": "",
             "prepend": "",
             "append": "",
@@ -261,26 +232,50 @@
         {
             "key": "field_640c038070748",
             "label": "Content",
-            "name": "goza_content_col_1",
-            "type": "text",
+            "name": "goza_content_col_logo",
+            "aria-label": "",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_640bfa6e96e85",
+                        "operator": "==",
+                        "value": "goza_water"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_640bfa6e96e85",
+                        "operator": "==",
+                        "value": "goza_orgazination"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_640bfa6e96e85",
+                        "operator": "==",
+                        "value": "goza_ngo"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "default_value": "Lorem ipsum dolor sit amet co cidunt piscing elit diam, se diam nonu elit diam sit amet co cidunt piscing elit dia.",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_640c0104d4353",
             "label": "Quick Links",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -297,8 +292,9 @@
             "key": "field_640c0143d4354",
             "label": "Heading",
             "name": "goza_h_quicklinks",
+            "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "You can choose menu here: <a href=\"\/wp-admin\/nav-menus.php?action=edit&menu=0\">Menu<\/a>",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -306,7 +302,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "QUICK LINKS",
             "placeholder": "",
             "prepend": "",
             "append": "",
@@ -316,10 +312,19 @@
             "key": "field_640c018370743",
             "label": "Social",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_640bfa6e96e85",
+                        "operator": "==",
+                        "value": "default"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -332,6 +337,7 @@
             "key": "field_640c018d70744",
             "label": "Heading",
             "name": "goza_h_col_social",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -351,6 +357,7 @@
             "key": "field_640c01aa70745",
             "label": "Subscribe Newsletter",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -367,31 +374,76 @@
             "key": "field_640c04c276851",
             "label": "Heading",
             "name": "goza_h_sub_newsletter",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_640bfa6e96e85",
+                        "operator": "==",
+                        "value": "default"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_640bfa6e96e85",
+                        "operator": "==",
+                        "value": "goza_ngo"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "SUBSCRIBE NEWSLETTER",
             "placeholder": "",
             "prepend": "",
             "append": "",
             "maxlength": ""
         },
         {
+            "key": "field_6410241a36bdc",
+            "label": "Descriptions",
+            "name": "descriptions",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_640bfa6e96e85",
+                        "operator": "==",
+                        "value": "goza_ngo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_640c04e676852",
             "label": "Shortcode Subscribe Form",
             "name": "shortcode_subscribe_form",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -405,10 +457,19 @@
             "key": "field_640c0513442c6",
             "label": "Our Gallery",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_640bfa6e96e85",
+                        "operator": "==",
+                        "value": "goza_ngo"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -418,9 +479,38 @@
             "endpoint": 0
         },
         {
+            "key": "field_64102935ceba2",
+            "label": "Heading",
+            "name": "goza_ft_h_gallery",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_640bfa6e96e85",
+                        "operator": "==",
+                        "value": "goza_ngo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Our Gallery",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_640c051d442c7",
             "label": "Footer Gallery",
             "name": "goza_ft_gallery",
+            "aria-label": "",
             "type": "gallery",
             "instructions": "",
             "required": 0,
@@ -448,10 +538,19 @@
             "key": "field_640c0545442c8",
             "label": "Instagram",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_640bfa6e96e85",
+                        "operator": "==",
+                        "value": "goza_water"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -461,9 +560,30 @@
             "endpoint": 0
         },
         {
+            "key": "field_6410291b01bff",
+            "label": "Heading",
+            "name": "goza_ft_h_ig",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Instagram",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_640c0552442c9",
             "label": "Footer Instagram",
             "name": "goza_ft_instagram",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -478,6 +598,85 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_64102bfd1c81c",
+            "label": "Color",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_640bfd8ef21fa",
+            "label": "Footer Text Color",
+            "name": "goza_ft_txt_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#c3c3c3",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
+            "key": "field_640bfb9e96e87",
+            "label": "Footer background color",
+            "name": "goza_ft_bg_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#000",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
+            "key": "field_64102c6b1c81d",
+            "label": "Socket background color",
+            "name": "goza_socket_bg_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_640bfa6e96e85",
+                        "operator": "==",
+                        "value": "goza_orgazination"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": false,
+            "return_format": "string"
         }
     ],
     "location": [
@@ -495,7 +694,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1678509415
+    "show_in_rest": 0,
+    "modified": 1678807098
 }
