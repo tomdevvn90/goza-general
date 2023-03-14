@@ -57,12 +57,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33.3333",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "return_format": "url",
-            "preview_size": "thumbnail",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -70,7 +69,8 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "preview_size": "thumbnail"
         },
         {
             "key": "field_640bfc3118d05",
@@ -697,5 +697,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1678806943
+    "modified": 1678807098
 }
