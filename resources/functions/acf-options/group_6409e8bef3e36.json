@@ -44,6 +44,32 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_6409e979501ae",
+            "label": "Preloader color",
+            "name": "goza_preloader_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6409e93c501ad",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#d41b65",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
             "key": "field_6409ec6efd2fb",
             "label": "Social Network",
             "name": "goza_social_network",
@@ -134,32 +160,6 @@
                     "parent_repeater": "field_6409ec6efd2fb"
                 }
             ]
-        },
-        {
-            "key": "field_6409e979501ae",
-            "label": "Preloader color",
-            "name": "goza_preloader_color",
-            "aria-label": "",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6409e93c501ad",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "#d41b65",
-            "enable_opacity": false,
-            "return_format": "string"
         }
     ],
     "location": [
@@ -180,5 +180,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1678806811
+    "modified": 1678807243
 }
