@@ -33,7 +33,6 @@ import 'slick-carousel/slick/slick-theme.css';
 				dots: false,
 				autoplay: true,
 				arrows: false,
-                fade: true,
                 responsive: [
                     {
                       breakpoint: 992,

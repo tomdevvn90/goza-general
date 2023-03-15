@@ -54,7 +54,6 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
         dots: false,
         autoplay: true,
         arrows: false,
-        fade: true,
         responsive: [{
           breakpoint: 992,
           settings: {
