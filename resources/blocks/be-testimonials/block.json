@@ -7,7 +7,7 @@
     "script": "block-be-testimonials",
     "category": "goza-theme",
     "icon": "format-image",
-    "keywords": ["carousel", "image"],
+    "keywords": ["carousel", "testimonials"],
     "acf": {
         "mode": "preview",
         "renderTemplate": "render.php"
@@ -17,7 +17,8 @@
     },
     "styles": [
         { "name": "default", "label": "Default", "isDefault": true },
-        { "name": "other", "label": "Other" }
+        { "name": "2", "label": "Style 2" },
+        { "name": "3", "label": "Style 3" }
     ],
     "align": "full"
   }
