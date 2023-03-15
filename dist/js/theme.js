@@ -37,19 +37,34 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
     var $block = $('.be-testominials-block');
     if ($block.length === 0) return;
     $block.each(function () {
-      var $carousel = $(this).find('.be-testominials-block-carousel');
-      var $dataCarousel = $(this).data('carousel');
+      var $carousel = $(this).find('.be-testominials-block-carousel'),
+        $dataCarousel = $(this).data('carousel'),
+        $style = $(this).data('style'),
+        $arrowTablet = true,
+        $arrowMobile = false;
+      if ($style == 'is-style-default') {
+        $arrowTablet = false;
+      }
+      if ($style == 'is-style-2') {
+        $arrowMobile = true;
+      }
       var opt_df = {
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false,
         autoplay: true,
         arrows: false,
+        fade: true,
         responsive: [{
           breakpoint: 992,
           settings: {
-            arrows: false,
+            arrows: $arrowTablet,
             slidesToShow: 1
+          }
+        }, {
+          breakpoint: 768,
+          settings: {
+            arrows: $arrowMobile
           }
         }]
       };
@@ -151,8 +166,8 @@ aos__WEBPACK_IMPORTED_MODULE_2___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-module.exports = __webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+module.exports = __webpack_require__(/*! C:\Users\Vuong\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
 
 
 /***/ })

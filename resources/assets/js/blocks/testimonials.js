@@ -13,8 +13,19 @@ import 'slick-carousel/slick/slick-theme.css';
 		if ($block.length === 0) return;
 
         $block.each(function () {
-            let $carousel     = $(this).find('.be-testominials-block-carousel')
-            let $dataCarousel = $(this).data('carousel')
+            let $carousel     = $(this).find('.be-testominials-block-carousel'),
+                $dataCarousel = $(this).data('carousel'),
+                $style        = $(this).data('style'),
+                $arrowTablet  = true,
+                $arrowMobile  = false
+
+            if($style == 'is-style-default'){
+                $arrowTablet = false
+            }
+
+            if($style == 'is-style-2'){
+                $arrowMobile = true
+            }
             
             let opt_df = {
 				slidesToShow: 1,
@@ -22,13 +33,20 @@ import 'slick-carousel/slick/slick-theme.css';
 				dots: false,
 				autoplay: true,
 				arrows: false,
+                fade: true,
                 responsive: [
                     {
                       breakpoint: 992,
                       settings: {
-                        arrows: false,
+                        arrows: $arrowTablet,
                         slidesToShow: 1
                       }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                          arrows: $arrowMobile,
+                        }
                     },
                   ]
 			};
