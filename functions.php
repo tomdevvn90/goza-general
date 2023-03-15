@@ -35,3 +35,19 @@ require get_template_directory() . '/resources/functions/blocks.php';
  */
 require get_template_directory() . '/install/plugin-required.php';
 require  get_template_directory() . '/install/import-pack/functions.php';
+/**
+ * SVG Icons class.
+ */
+require get_template_directory() . '/classes/class-goza-svg-icons.php';
+
+
+if ( class_exists( 'Tribe__Events__Main' ) ) {
+	/**
+	 * Tribe Events.
+	 */
+	require get_template_directory() . '/tribe-events/helper-functions.php';
+}
+/**
+ * SVG Icons related functions.
+ */
+require get_template_directory() . '/includes/icon-functions.php';
