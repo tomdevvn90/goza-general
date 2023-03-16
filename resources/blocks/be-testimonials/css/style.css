@@ -1,4 +1,4 @@
-.be-testominials-block {
+/* .be-testominials-block {
     box-sizing: border-box;
 }
 .be-testominials-block-carousel .slick-track .slick-slide {
@@ -28,6 +28,11 @@
     top: -30px;
     right: 20px;
 }
+@media (max-width: 540px) {
+    .be-testominials-block-carousel .item-testominial--icon-quocte {
+        top: 30px;
+   }
+}
 .be-testominials-block-carousel .item-testominial--icon-quocte svg {
     width: 100%;
     max-width: 64px;
@@ -35,6 +40,11 @@
 }
 .be-testominials-block-carousel .item-testominial--icon-quocte svg path {
     fill: #d41b65;
+}
+@media (max-width: 540px) {
+    .be-testominials-block-carousel .item-testominial--icon-quocte svg {
+        max-width: 30px;
+   }
 }
 .be-testominials-block-carousel .item-testominial-info {
     display: flex;
@@ -44,8 +54,17 @@
     flex-direction: row-reverse;
     margin-top: 30px;
 }
+@media (max-width: 541px) {
+    .be-testominials-block-carousel .item-testominial-info {
+        margin-top: 20px;
+   }
+}
 .be-testominials-block-carousel .item-testominial-desc {
     margin: 0;
+    font-style: italic;
+    color: #666;
+    font-size: 17px;
+    line-height: 26px;
 }
 .be-testominials-block-carousel .item-testominial-name, .be-testominials-block-carousel .item-testominial-position {
     font-size: 15px;
@@ -80,6 +99,7 @@
     .be-testominials-block-carousel .item-testominial-thumbnail img {
         max-width: 100%;
         min-height: 400px;
+        height: 400px;
    }
 }
 .be-testominials-block-carousel .item-testominial-content {
@@ -93,11 +113,20 @@
 @media (min-width: 541px) {
     .be-testominials-block-carousel .item-testominial-content {
         position: absolute;
-        top: 50%;
         right: 0;
-        transform: translateY(-50%);
         max-width: 60%;
-        box-shadow: 0px 0px 10px 0px #000;
+        bottom: 10%;
+        box-shadow: 0px 0px 10px 0px #000 33;
+   }
+}
+@media (max-width: 1199px) {
+    .be-testominials-block-carousel .item-testominial-content {
+        padding: 50px 20px;
+   }
+}
+@media (max-width: 540px) {
+    .be-testominials-block-carousel .item-testominial-content {
+        padding: 80px 20px 30px 20px;
    }
 }
 .be-testominials-block-carousel .slick-arrow {
@@ -360,4 +389,4 @@
 }
 .be-testominials-block.is-style-3 .be-testominials-block-carousel .slick-slide > div {
     width: 100%;
-}
+} */

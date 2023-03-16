@@ -35,16 +35,17 @@ import 'slick-carousel/slick/slick-theme.css';
 				arrows: false,
                 responsive: [
                     {
-                      breakpoint: 992,
-                      settings: {
-                        arrows: $arrowTablet,
-                        slidesToShow: 1
+                        breakpoint: 992,
+                        settings: {
+                            arrows: $arrowTablet,
+                            slidesToShow: 1
                       }
                     },
                     {
                         breakpoint: 768,
                         settings: {
-                          arrows: $arrowMobile,
+                            slidesToShow: 1,
+                            arrows: $arrowMobile,
                         }
                     },
                   ]

@@ -17,7 +17,7 @@
             @media (max-width: 540px) {
                 padding: 0 2px 2px 2px;
                 &-inner{
-                    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
+                    box-shadow: 0px 0px 10px 0px #00000033;
                 }
             }
 
@@ -26,12 +26,19 @@
                 position: absolute;
                 top: -30px;
                 right: 20px;
+                @media (max-width: 540px) {
+                    top:30px;
+                }
                 svg{
                     width: 100%;
                     max-width: 64px;
                     height: auto;
                     path {
                         fill: #d41b65;
+                    }
+
+                    @media (max-width: 540px) {
+                        max-width: 30px;
                     }
                 }
             }
@@ -43,10 +50,17 @@
                 justify-content: flex-end;
                 flex-direction: row-reverse;
                 margin-top: 30px;
+                @media (max-width: 541px) {
+                    margin-top: 20px;
+                }
             }
 
             &-desc{
                 margin: 0;
+                font-style: italic;
+                color: #666;
+                font-size: 17px;
+                line-height: 26px;
             }
     
             &-name, &-position{
@@ -82,6 +96,7 @@
                     @media (max-width: 540px) {
                         max-width: 100%;
                         min-height: 400px;
+                        height: 400px;
                     }
                 }
             }
@@ -95,24 +110,19 @@
                 box-sizing: border-box;
                 @media (min-width: 541px) {
                     position: absolute;
-                    top: 50%;
                     right: 0;
-                    transform: translateY(-50%);
                     max-width: 60%;
-                    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
+                    bottom: 10%;
+                    box-shadow: 0px 0px 10px 0px #00000033;
                 }
-                // &::before{
-                //     content: '\f10e';
-                //     display: block;
-                //     font-family: FontAwesome;
-                //     text-align: center;
-                //     font-size: 60px;
-                //     color: #d41b65;
-                //     z-index: 9999;
-                //     position: absolute;
-                //     top: -48px;
-                //     right: 20px;
-                // }
+
+                @media (max-width: 1199px) {
+                    padding: 50px 20px;
+                }
+
+                @media (max-width: 540px) {
+                    padding: 80px 20px 30px 20px;
+                }
             }
         }
 
@@ -200,43 +210,49 @@
                     max-width: 100%;
                     padding-top: 35px;
                     padding-bottom: 0px;
-                    &::before{
-                        content: none;
-                    }
+                }
+
+                &--icon-quocte{
+                    display: none;
                 }
 
                 &-desc{
-                    font-style: italic;
                     text-align: center;
                     width: fit-content;
                     margin: 0 auto;
                     position: relative;
-                    padding-right: 25px;
-                    &::before{
-                        content: "\F10E";
-                        top: -10px;
-                        right: 0px;
-                        font-size: 30px;
-                        display: block;
-                        font-family: FontAwesome;
-                        text-align: center;
-                        color: #d41b65;
-                        z-index: 9999;
-                        position: absolute;
-                    }
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    -moz-line-clamp: 3;
+                    -moz-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    line-height: 31px;
+                    color: #333;
                 }
 
                 &-info{
                     text-align: center;
+                    flex-direction: column;
                 }
 
                 &-name{
-                    margin-top: 30px;
-                    margin-bottom: 10px;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 32px;
+                    line-height: 38px;
+                    color: #0a0a0a;
                 }
 
                 &-position{
                     margin: 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    color: #b7b7b7;
+                    text-transform: initial;
+                    margin-top: 10px;
                 }
             }
 
