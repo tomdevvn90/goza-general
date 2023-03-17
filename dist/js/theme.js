@@ -54,6 +54,9 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
         dots: false,
         autoplay: true,
         arrows: false,
+        adaptiveHeight: true,
+        fade: false,
+        cssEase: 'linear',
         responsive: [{
           breakpoint: 992,
           settings: {
@@ -64,7 +67,8 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
           breakpoint: 768,
           settings: {
             slidesToShow: 1,
-            arrows: $arrowMobile
+            arrows: $arrowMobile,
+            dots: true
           }
         }]
       };

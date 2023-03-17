@@ -17,6 +17,7 @@ $data_carousel = array(
     'dots'           =>  $carousel_setting['dots'] ? $carousel_setting['dots'] : false,
     'autoplay'       =>  $carousel_setting['autoplay'] ? $carousel_setting['autoplay'] : false,
     'loop'           =>  $carousel_setting['loop'] ? $carousel_setting['loop'] : false,
+    'fade'           =>  $carousel_setting['fade'] ? $carousel_setting['fade'] : false,
 );
 
 $is_style = isset($block['className']) ? $block['className'] : "is-style-default";
