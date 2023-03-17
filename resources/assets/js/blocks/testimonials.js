@@ -33,27 +33,29 @@ import 'slick-carousel/slick/slick-theme.css';
 				dots: false,
 				autoplay: true,
 				arrows: false,
+                adaptiveHeight: true,
+                fade: false,
+                cssEase: 'linear',
                 responsive: [
                     {
-                      breakpoint: 992,
-                      settings: {
-                        arrows: $arrowTablet,
-                        slidesToShow: 1
+                        breakpoint: 992,
+                        settings: {
+                            arrows: $arrowTablet,
+                            slidesToShow: 1
                       }
                     },
                     {
                         breakpoint: 768,
                         settings: {
-                          arrows: $arrowMobile,
+                            slidesToShow: 1,
+                            arrows: $arrowMobile,
+                            dots: true
                         }
                     },
                   ]
 			};
 			$carousel.slick(Object.assign({}, opt_df, $dataCarousel));
         })
-
-
-
     }
 
 

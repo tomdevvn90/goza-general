@@ -54,6 +54,9 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
         dots: false,
         autoplay: true,
         arrows: false,
+        adaptiveHeight: true,
+        fade: false,
+        cssEase: 'linear',
         responsive: [{
           breakpoint: 992,
           settings: {
@@ -63,7 +66,9 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
         }, {
           breakpoint: 768,
           settings: {
-            arrows: $arrowMobile
+            slidesToShow: 1,
+            arrows: $arrowMobile,
+            dots: true
           }
         }]
       };
@@ -165,8 +170,8 @@ aos__WEBPACK_IMPORTED_MODULE_2___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-module.exports = __webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+module.exports = __webpack_require__(/*! C:\Users\Vuong\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
 
 
 /***/ })
