@@ -18,3 +18,7 @@ img {
       max-width: var(--max-width, 1140px) !important;
    }
 }
+
+*{
+   box-sizing: border-box;
+}

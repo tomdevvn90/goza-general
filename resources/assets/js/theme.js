@@ -10,6 +10,6 @@ AOS.init({
 
 
 import './blocks/hero'
-
+import './blocks/testimonials'
 
 

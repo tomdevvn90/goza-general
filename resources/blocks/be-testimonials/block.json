@@ -1,13 +1,13 @@
 {
     "name": "goza/be-testimonials",
     "title": "Be Testimonials",
-    "description": "Image background with text & call to action.",
+    "description": "Display testimonials & gain instant credibility.",
     "style": "block-be-testimonials",
     "editorStyle": "file:./css/editor.css",
     "script": "block-be-testimonials",
     "category": "goza-theme",
-    "icon": "format-image",
-    "keywords": ["carousel", "image"],
+    "icon": "testimonial",
+    "keywords": ["carousel", "testimonials"],
     "acf": {
         "mode": "preview",
         "renderTemplate": "render.php"
@@ -17,7 +17,9 @@
     },
     "styles": [
         { "name": "default", "label": "Default", "isDefault": true },
-        { "name": "other", "label": "Other" }
+        { "name": "2", "label": "Style 2" },
+        { "name": "3", "label": "Style 3" },
+        { "name": "4", "label": "Style 4" }
     ],
     "align": "full"
   }

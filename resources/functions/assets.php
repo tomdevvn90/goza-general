@@ -2,9 +2,9 @@
 
 add_action('wp_enqueue_scripts', function () {
 
-	// lib slick
-	wp_enqueue_script( 'be-goza-slick', get_template_directory_uri() . '/resources/assets/lib/slick/slick.min.js', ['jquery'], THEME_VERSION, true );
-	wp_enqueue_style( 'be-goza-slick', get_template_directory_uri() . '/resources/assets/lib/slick/slick.css', [], THEME_VERSION );
+	// // lib slick
+	// wp_enqueue_script( 'be-goza-slick', get_template_directory_uri() . '/resources/assets/lib/slick/slick.min.js', ['jquery'], THEME_VERSION, true );
+	wp_enqueue_style( 'be-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css', [], THEME_VERSION );
 
 	wp_localize_script( 'app-scripts', 'php_data', [
 		'admin_logged' => in_array( 'administrator', wp_get_current_user()->roles ) ? 'yes' : 'no',

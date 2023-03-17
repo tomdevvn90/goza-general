@@ -151,7 +151,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": 1,
+                    "default_value": 2,
                     "min": "",
                     "max": "",
                     "placeholder": "",
@@ -260,6 +260,26 @@
                     "ui_on_text": "Enable",
                     "ui_off_text": "Disable",
                     "ui": 1
+                },
+                {
+                    "key": "field_64147f0420661",
+                    "label": "Fade",
+                    "name": "fade",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "Enable",
+                    "ui_off_text": "Disable",
+                    "ui": 1
                 }
             ],
             "acfe_group_modal_close": 0,
@@ -292,5 +312,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1678718198
+    "modified": 1679064849
 }
