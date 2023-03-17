@@ -29,12 +29,6 @@ add_action('wp_enqueue_scripts', function () {
 	}
 });
 
-function be_enqueue_custom_admin_style() {
-	wp_register_style( 'be-admin-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css', false, '1.0.0' );
-	wp_enqueue_style( 'be-admin-font-awesome' );
-}
-add_action( 'admin_enqueue_scripts', 'be_enqueue_custom_admin_style' );
-
 if (!function_exists('goza_load_fonts')) {
 	/**
 	 * Load custom font family
