@@ -35,7 +35,7 @@ if (!function_exists('goza_load_fonts')) {
 	 */
 	function goza_load_fonts()
 	{
-		//wp_enqueue_style( 'primary-font', get_template_directory_uri() . '/resources/assets/fonts/fonts.css', false, THEME_VERSION );
+		wp_enqueue_style( 'admin-font', get_template_directory_uri() . '/resources/assets/fonts/fonts.css', false, THEME_VERSION );
 	}
 }
 

@@ -1226,8 +1226,7 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
-            "layout": "table",
+            "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_64148a362a724",
@@ -1242,13 +1241,20 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
-                    "choices": [],
+                    "choices": {
+                        "Arimo": "Arimo",
+                        "Poppins": "Poppins",
+                        "Barlow": "Barlow",
+                        "Exo 2": "Exo 2",
+                        "Fira Sans": "Fira Sans",
+                        "Roboto": "Roboto",
+                        "Calligraffitti": "Calligraffitti"
+                    },
                     "default_value": [],
-                    "return_format": "value",
-                    "multiple": 0,
                     "allow_null": 0,
+                    "multiple": 0,
                     "ui": 0,
+                    "return_format": "value",
                     "ajax": 0,
                     "placeholder": ""
                 },
@@ -1265,7 +1271,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "choices": {
                         "100": "100",
                         "200": "200",
@@ -1277,12 +1282,22 @@
                         "800": "800",
                         "900": "900"
                     },
-                    "default_value": [],
-                    "return_format": "value",
-                    "multiple": 0,
+                    "default_value": [
+                        400,
+                        100,
+                        200,
+                        300,
+                        500,
+                        600,
+                        700,
+                        800,
+                        900
+                    ],
                     "allow_null": 0,
-                    "ui": 0,
+                    "multiple": 0,
+                    "ui": 1,
                     "ajax": 0,
+                    "return_format": "value",
                     "placeholder": ""
                 },
                 {
@@ -1360,8 +1375,7 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
-            "layout": "table",
+            "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_64148b4703061",
@@ -1376,21 +1390,28 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
-                    "choices": [],
+                    "choices": {
+                        "Arimo": "Arimo",
+                        "Poppins": "Poppins",
+                        "Barlow": "Barlow",
+                        "Exo 2": "Exo 2",
+                        "Fira Sans": "Fira Sans",
+                        "Roboto": "Roboto",
+                        "Calligraffitti": "Calligraffitti"
+                    },
                     "default_value": [],
-                    "return_format": "value",
-                    "multiple": 0,
                     "allow_null": 0,
-                    "ui": 0,
+                    "multiple": 0,
+                    "ui": 1,
                     "ajax": 0,
+                    "return_format": "value",
                     "placeholder": ""
                 },
                 {
                     "key": "field_64148b5803062",
                     "label": "Select font-weight",
                     "name": "heading_font_weight",
-                    "type": "text",
+                    "type": "select",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -1399,12 +1420,49 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "choices": {
+                        "100": "100",
+                        "200": "200",
+                        "300": "300",
+                        "400": "400",
+                        "500": "500",
+                        "600": "600",
+                        "700": "700",
+                        "800": "800",
+                        "900": "900"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_641528901daa6",
+                    "label": "Select font-style",
+                    "name": "heading_font_style",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "normal": "Normal",
+                        "italic": "Italic"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 }
             ]
         },
@@ -1894,5 +1952,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1679103974
+    "modified": 1679112076
 }

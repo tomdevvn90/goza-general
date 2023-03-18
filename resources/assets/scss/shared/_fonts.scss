@@ -1,4 +1,5 @@
-@each $font-key, $font-item in $fonts_primary {
+//font Arimo
+@each $font-key, $font-item in $fonts_arimo {
   $font-family: map-get($font-item, 'family');
   $font-weight: map-get($font-item, 'weight');
   $font-style: map-get($font-item, 'style');
@@ -11,7 +12,8 @@
   }
 }
 
-@each $font-key, $font-item in $fonts_second {
+//font Poppins
+@each $font-key, $font-item in $fonts_poppins {
   $font-family: map-get($font-item, 'family');
   $font-weight: map-get($font-item, 'weight');
   $font-style: map-get($font-item, 'style');
@@ -23,4 +25,76 @@
     font-style: $font-style;
   }
 }
+
+//font Barlow
+@each $font-key, $font-item in $fonts_barlow {
+  $font-family: map-get($font-item, 'family');
+  $font-weight: map-get($font-item, 'weight');
+  $font-style: map-get($font-item, 'style');
+  $font-file: map-get($font-item, 'file');
+  @font-face {
+    font-family: $font-family;
+    src: url('../fonts/Barlow/' + $font-file + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+//font Exo2
+@each $font-key, $font-item in $fonts_exo_2 {
+  $font-family: map-get($font-item, 'family');
+  $font-weight: map-get($font-item, 'weight');
+  $font-style: map-get($font-item, 'style');
+  $font-file: map-get($font-item, 'file');
+  @font-face {
+    font-family: $font-family;
+    src: url('../fonts/Exo_2/' + $font-file + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+//font Firasans
+@each $font-key, $font-item in $fonts_fira_sans {
+  $font-family: map-get($font-item, 'family');
+  $font-weight: map-get($font-item, 'weight');
+  $font-style: map-get($font-item, 'style');
+  $font-file: map-get($font-item, 'file');
+  @font-face {
+    font-family: $font-family;
+    src: url('../fonts/Fira_Sans/' + $font-file + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+//font Roboto
+@each $font-key, $font-item in $fonts_roboto {
+  $font-family: map-get($font-item, 'family');
+  $font-weight: map-get($font-item, 'weight');
+  $font-style: map-get($font-item, 'style');
+  $font-file: map-get($font-item, 'file');
+  @font-face {
+    font-family: $font-family;
+    src: url('../fonts/Roboto/' + $font-file + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+//font Calligraffitti
+@each $font-key, $font-item in $fonts_calligraffitti {
+  $font-family: map-get($font-item, 'family');
+  $font-weight: map-get($font-item, 'weight');
+  $font-style: map-get($font-item, 'style');
+  $font-file: map-get($font-item, 'file');
+  @font-face {
+    font-family: $font-family;
+    src: url('../fonts/Calligraffitti/' + $font-file + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+
 

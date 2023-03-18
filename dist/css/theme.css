@@ -28,7 +28,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Arimo";
+  font-family: var(--body-family, "Arimo", sans-serif);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.625;
@@ -156,7 +156,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: "Arimo";
+  font-family: var(--body-family, "Arimo", sans-serif);
   font-size: 1em;
 }
 
@@ -375,8 +375,8 @@ h6,
 .h5,
 .h6 {
   margin-bottom: 8px;
-  font-family: "Poppins";
-  font-weight: 700;
+  font-family: var(--heading-family, "Poppins", sans-serif);
+  font-weight: var(--heading-font-weight, 700);
   line-height: 1.2;
   color: inherit;
 }
@@ -5367,7 +5367,7 @@ button.bg-dark:focus {
 }
 
 .text-monospace {
-  font-family: "Arimo" !important;
+  font-family: var(--body-family, "Arimo", sans-serif) !important;
 }
 
 .text-justify {
@@ -5919,7 +5919,7 @@ a.text-dark:focus {
 
 .btn {
   display: inline-block;
-  font-family: "Arimo";
+  font-family: var(--body-family, "Arimo", sans-serif);
   font-weight: 400;
   color: #666;
   text-align: center;
@@ -7558,6 +7558,55 @@ img {
 }
 
 @font-face {
+  font-family: "Arimo";
+  src: url(../fonts/Arimo-Bold.ttf?38ca58b61a8e638f9cb2cfeecf0fac9e) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arimo";
+  src: url(../fonts/Arimo-BoldItalic.ttf?6ca5b080dc50aaa74c8195572df1e25f) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Arimo";
+  src: url(../fonts/Arimo-Italic.ttf?aa0219d869cac1e4b2966b8f314e5379) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Arimo";
+  src: url(../fonts/Arimo-Medium.ttf?916aadd4f935ccb98cd544a62f06a5ad) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arimo";
+  src: url(../fonts/Arimo-MediumItalic.ttf?a65c96ddbf1cf906343ba9efe1b74864) format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Arimo";
+  src: url(../fonts/Arimo-SemiBold.ttf?079d8c0292da280eef26c14815a86496) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arimo";
+  src: url(../fonts/Arimo-SemiBoldItalic.ttf?a7b67b93efc33f1ffc53d532b8628cc0) format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
   font-family: "Poppins";
   src: url(../fonts/Poppins-Light.ttf?fcc40ae9a542d001971e53eaed948410) format("truetype");
   font-weight: 300;
@@ -7617,6 +7666,475 @@ img {
   font-family: "Poppins";
   src: url(../fonts/Poppins-Black.ttf?14d00dab1f6802e787183ecab5cce85e) format("truetype");
   font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-Black.ttf?3259b9d5da281613ed918c9d165c20a5) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-BlackItalic.ttf?24404d87029dab428f1102872581bd7f) format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-Bold.ttf?72871854aabdd7a79c4fc5038cb4faaf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-BoldItalic.ttf?4b570971567053b1204438e248a88b30) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-ExtraBold.ttf?12075155b398a9e6cc43cb03300e00de) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-ExtraBoldItalic.ttf?b9bbe6d5299b39c2c272653a245e8d60) format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-ExtraLight.ttf?f7e57760641fada9e5bbab93c12e3614) format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-ExtraLightItalic.ttf?98958f423d96a38619408113e1a423de) format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-Italic.ttf?ed7d4bb9c5638c38a28ccd3149b334fb) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-Light.ttf?2f88cf8762c53a8be3c3ec53b8e01edf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-LightItalic.ttf?2a4be013f41213c4cca8db8449754665) format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-Medium.ttf?bdffb48240a3383080812d6830ff6f54) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-MediumItalic.ttf?4257d524ad11d173176df62fc3c03c60) format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-Regular.ttf?9373fb661b5c2954ab84d1b7f42774fe) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-SemiBold.ttf?29527ab52af2334e2bcb6290c8692f70) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-SemiBoldItalic.ttf?089c2031b86f3a8575428e825ab26dbf) format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-Thin.ttf?72e9db32bda6dbdfd6da0e9d74420ad0) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../fonts/Barlow-ThinItalic.ttf?8f3831b74d2837bafff3b3b802929c49) format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-Black.ttf?e495f6598be7d1108a1dfec8e1625035) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-BlackItalic.ttf?750d8a99a1d1eabfa77d78b8233aed2f) format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-Bold.ttf?5d4f587039304fcdaaac13d16d26fda2) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-BoldItalic.ttf?9d44757c32ccc22912ac8ce83eb9b33f) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-ExtraBold.ttf?258e6f715505ae621af1d67fb516ea01) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-ExtraBoldItalic.ttf?7a14d2544cbd1e2d0be6271cff586120) format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-ExtraLight.ttf?14765b0608a530252483f427b4adf200) format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-ExtraLightItalic.ttf?d6bd09fe746181ac84032ec4cb003dfb) format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-Italic.ttf?c4751bb388a9d0d242eb25b4b802e3e2) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-Light.ttf?71330d68d887758bea8c742eb6641325) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-LightItalic.ttf?8660efb8dbb8ffe267716b484d3d9d3c) format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-Medium.ttf?1e7da3a913cc046ed13485961df9616d) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-MediumItalic.ttf?468bf7d124d03f090ea1bd0a6839f7da) format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-Regular.ttf?d1a552c4d4489fe0ed010009ef192da7) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-SemiBold.ttf?fbc3540c10b31b22320e5fe5c1afa086) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-SemiBoldItalic.ttf?81dc81825e0f260483c7b31a8058c2a6) format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-Thin.ttf?a4dea8da04dbda111c3da4670294d80e) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url(../fonts/Exo2-ThinItalic.ttf?49a2ac0f1e8680ca5704d842ec52875a) format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-Black.ttf?608b764a1cc4218d10f27600ef530fa6) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-BlackItalic.ttf?57579f90e4c29a5d880a83efe78e1833) format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-Bold.ttf?382e230417d252a0cb16c7d491b030c7) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-BoldItalic.ttf?6e7fd9789e43219fec5bcefb98aa872f) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-ExtraBold.ttf?ab5e89ae3427a97125ae380280b1df7f) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-ExtraBoldItalic.ttf?efd9cf8a84e4ddc8be4774fec875b06b) format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-ExtraLight.ttf?7b01a1d6efbf405007495ea871f58d42) format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-ExtraLightItalic.ttf?ffffdab9fd18858235473d663b2ab325) format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-Italic.ttf?576fe2da09745b60e892fb5bbda8bf77) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-Light.ttf?20161a557e36034d7255f22dadab5f58) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-LightItalic.ttf?19d6dc84ea6417eb624c3313a9397e51) format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-Medium.ttf?f97963c595e8acb87013c1d4e1c3c9f9) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-MediumItalic.ttf?c4a7f4d91c0e1cda2d762796f3f887e2) format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-Regular.ttf?50e780b45678ae34cef52d3e5112bd0d) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-SemiBold.ttf?eb5e811f2fe0408c9d0a552fcf1fb390) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-SemiBoldItalic.ttf?a61964676efbf35bc263fe7086ef1716) format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-Thin.ttf?8205dc3e1f7953b4f52ed6a23977a6be) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url(../fonts/FiraSans-ThinItalic.ttf?5512e98f8b6a8f9e5f0a11546cd1e084) format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Black.ttf?d6a6f8878adb0d8e69f9fa2e0b622924) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-BlackItalic.ttf?c3332e3b8feff748ecb0c6cb75d65eae) format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Bold.ttf?b8e42971dec8d49207a8c8e2b919a6ac) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-BoldItalic.ttf?fd6e9700781c4aaae877999d09db9e09) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Italic.ttf?cebd892d1acfcc455f5e52d4104f2719) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Light.ttf?881e150ab929e26d1f812c4342c15a7c) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-LightItalic.ttf?5788d5ce921d7a9b4fa0eaa9bf7fec8d) format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Medium.ttf?68ea4734cf86bd544650aee05137d7bb) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-MediumItalic.ttf?c16d19c2c0fd1278390a82fc245f4923) format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.ttf?8a36205bd9b83e03af0591a004bc97f4) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Thin.ttf?66209ae01f484e46679622dd607fcbc5) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-ThinItalic.ttf?7bcadd0675fe47d69c2d8aaef683416f) format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Calligraffitti";
+  src: url(../fonts/Calligraffitti-Regular.ttf?c192f5fcabf628d18b4e4c59ca41fb37) format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -8811,110 +9329,110 @@ img {
 h1 {
   font-size: 55px;
   letter-spacing: 0;
-  line-height: 1.18;
+  line-height: var(--h1-line-height, 65px);
 }
 
 h2 {
   font-size: 40px;
   letter-spacing: 0;
-  line-height: 1.4;
+  line-height: var(--h2-line-height, 56px);
 }
 
 h3 {
   font-size: 32px;
   letter-spacing: 0;
-  line-height: 1.1875;
+  line-height: var(--h3-line-height, 38px);
 }
 
 h4 {
   font-size: 26px;
   letter-spacing: 0;
-  line-height: 1.23;
+  line-height: var(--h4-line-height, 32px);
 }
 
 h5 {
   font-size: 19px;
   letter-spacing: 0;
-  line-height: 1.75;
+  line-height: var(--h5-line-height, 28px);
 }
 
 h6 {
   font-size: 16px;
   letter-spacing: 0;
-  line-height: 1.625;
+  line-height: var(--h6-line-height, 26px);
 }
 
 .h1 {
   font-size: 55px;
   letter-spacing: 0;
-  line-height: 1.18;
+  line-height: var(--h1-line-height, 65px);
 }
 
 .h2 {
   font-size: 40px;
   letter-spacing: 0;
-  line-height: 1.4;
+  line-height: var(--h2-line-height, 56px);
 }
 
 .h3 {
   font-size: 32px;
   letter-spacing: 0;
-  line-height: 1.1875;
+  line-height: var(--h3-line-height, 38px);
 }
 
 .h4 {
   font-size: 26px;
   letter-spacing: 0;
-  line-height: 1.23;
+  line-height: var(--h4-line-height, 32px);
 }
 
 .h5 {
   font-size: 19px;
   letter-spacing: 0;
-  line-height: 1.75;
+  line-height: var(--h5-line-height, 28px);
 }
 
 .h6 {
   font-size: 16px;
   letter-spacing: 0;
-  line-height: 1.625;
+  line-height: var(--h6-line-height, 26px);
 }
 
 @media (min-width: 576px) {
   .h1-sm {
     font-size: 55px;
     letter-spacing: 0;
-    line-height: 1.18;
+    line-height: var(--h1-line-height, 65px);
   }
 
   .h2-sm {
     font-size: 40px;
     letter-spacing: 0;
-    line-height: 1.4;
+    line-height: var(--h2-line-height, 56px);
   }
 
   .h3-sm {
     font-size: 32px;
     letter-spacing: 0;
-    line-height: 1.1875;
+    line-height: var(--h3-line-height, 38px);
   }
 
   .h4-sm {
     font-size: 26px;
     letter-spacing: 0;
-    line-height: 1.23;
+    line-height: var(--h4-line-height, 32px);
   }
 
   .h5-sm {
     font-size: 19px;
     letter-spacing: 0;
-    line-height: 1.75;
+    line-height: var(--h5-line-height, 28px);
   }
 
   .h6-sm {
     font-size: 16px;
     letter-spacing: 0;
-    line-height: 1.625;
+    line-height: var(--h6-line-height, 26px);
   }
 }
 
@@ -8922,37 +9440,37 @@ h6 {
   .h1-md {
     font-size: 55px;
     letter-spacing: 0;
-    line-height: 1.18;
+    line-height: var(--h1-line-height, 65px);
   }
 
   .h2-md {
     font-size: 40px;
     letter-spacing: 0;
-    line-height: 1.4;
+    line-height: var(--h2-line-height, 56px);
   }
 
   .h3-md {
     font-size: 32px;
     letter-spacing: 0;
-    line-height: 1.1875;
+    line-height: var(--h3-line-height, 38px);
   }
 
   .h4-md {
     font-size: 26px;
     letter-spacing: 0;
-    line-height: 1.23;
+    line-height: var(--h4-line-height, 32px);
   }
 
   .h5-md {
     font-size: 19px;
     letter-spacing: 0;
-    line-height: 1.75;
+    line-height: var(--h5-line-height, 28px);
   }
 
   .h6-md {
     font-size: 16px;
     letter-spacing: 0;
-    line-height: 1.625;
+    line-height: var(--h6-line-height, 26px);
   }
 }
 
@@ -8960,37 +9478,37 @@ h6 {
   .h1-lg {
     font-size: 55px;
     letter-spacing: 0;
-    line-height: 1.18;
+    line-height: var(--h1-line-height, 65px);
   }
 
   .h2-lg {
     font-size: 40px;
     letter-spacing: 0;
-    line-height: 1.4;
+    line-height: var(--h2-line-height, 56px);
   }
 
   .h3-lg {
     font-size: 32px;
     letter-spacing: 0;
-    line-height: 1.1875;
+    line-height: var(--h3-line-height, 38px);
   }
 
   .h4-lg {
     font-size: 26px;
     letter-spacing: 0;
-    line-height: 1.23;
+    line-height: var(--h4-line-height, 32px);
   }
 
   .h5-lg {
     font-size: 19px;
     letter-spacing: 0;
-    line-height: 1.75;
+    line-height: var(--h5-line-height, 28px);
   }
 
   .h6-lg {
     font-size: 16px;
     letter-spacing: 0;
-    line-height: 1.625;
+    line-height: var(--h6-line-height, 26px);
   }
 }
 
@@ -8998,37 +9516,37 @@ h6 {
   .h1-xl {
     font-size: 55px;
     letter-spacing: 0;
-    line-height: 1.18;
+    line-height: var(--h1-line-height, 65px);
   }
 
   .h2-xl {
     font-size: 40px;
     letter-spacing: 0;
-    line-height: 1.4;
+    line-height: var(--h2-line-height, 56px);
   }
 
   .h3-xl {
     font-size: 32px;
     letter-spacing: 0;
-    line-height: 1.1875;
+    line-height: var(--h3-line-height, 38px);
   }
 
   .h4-xl {
     font-size: 26px;
     letter-spacing: 0;
-    line-height: 1.23;
+    line-height: var(--h4-line-height, 32px);
   }
 
   .h5-xl {
     font-size: 19px;
     letter-spacing: 0;
-    line-height: 1.75;
+    line-height: var(--h5-line-height, 28px);
   }
 
   .h6-xl {
     font-size: 16px;
     letter-spacing: 0;
-    line-height: 1.625;
+    line-height: var(--h6-line-height, 26px);
   }
 }
 
