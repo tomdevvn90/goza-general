@@ -78,7 +78,7 @@ function goza_theme_options_styles()
             'color' => 'red'
         ),
         'div' => array(
-            'color' => __get_field('goza_topbar_bg_color', 'option')
+            'color' => ''
         ),
         'p' => array(
             'margin-bottom' => '10',
