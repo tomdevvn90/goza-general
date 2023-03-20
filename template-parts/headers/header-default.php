@@ -10,5 +10,5 @@ $classes = [
 $custom_logo_id = get_theme_mod('custom_logo');
 ?>
 <header class="<?php echo implode(' ', $classes) ?>">
-   
+   Default
 </header> <!-- #site-header -->

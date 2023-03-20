@@ -52,3 +52,4 @@ if ( class_exists( 'Tribe__Events__Main' ) ) {
  * SVG Icons related functions.
  */
 require get_template_directory() . '/includes/icon-functions.php';
+

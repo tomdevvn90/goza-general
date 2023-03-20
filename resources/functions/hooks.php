@@ -20,7 +20,8 @@ add_filter('upload_mimes', function ($mime_types) {
 add_action('goza_hook_header', 'goza_header_template');
 function goza_header_template()
 {
-	load_template(get_template_directory() . '/template-parts/header.php', false);
+	$goza_layout_header = __get_field('goza_layout_header', 'option');
+	load_template(get_template_directory() . '/template-parts/headers/header-' . $goza_layout_header . '.php', false);
 }
 
 /**
@@ -30,7 +31,8 @@ function goza_header_template()
 add_action('goza_hook_footer', 'goza_footer_template');
 function goza_footer_template()
 {
-	load_template(get_template_directory() . '/template-parts/footer.php', false);
+	$goza_layout_footer = __get_field('goza_layout_footer', 'option');
+	load_template(get_template_directory() . '/template-parts/footers/footer-' . $goza_layout_footer . '.php', false);
 }
 
 /**
@@ -61,4 +63,3 @@ function goza_child_deregister_styles()
 	wp_dequeue_style('classic-theme-styles');
 }
 add_action('wp_enqueue_scripts', 'goza_child_deregister_styles', 20);
-

@@ -266,18 +266,17 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "choices": {
                 "default": "Header Default",
                 "transparent": "Header Transparent",
-                "btn_search": "Header Button + Search",
-                "menu_center": "Header Menu Center"
+                "btn-search": "Header Button + Search",
+                "menu-center": "Header Menu Center"
             },
             "default_value": [],
-            "return_format": "value",
-            "multiple": 0,
             "allow_null": 0,
+            "multiple": 0,
             "ui": 0,
+            "return_format": "value",
             "ajax": 0,
             "placeholder": ""
         },
@@ -459,18 +458,17 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "choices": {
                 "default": "Layout Default",
-                "goza_water": "Layout Goza Water",
-                "goza_orgazination": "Layout Goza  Orgazination",
-                "goza_ngo": "Layout Goza Ngo"
+                "water": "Layout Goza Water",
+                "organization": "Layout Goza Orgazination",
+                "ngo": "Layout Goza Ngo"
             },
             "default_value": [],
-            "return_format": "value",
-            "multiple": 0,
             "allow_null": 0,
+            "multiple": 0,
             "ui": 0,
+            "return_format": "value",
             "ajax": 0,
             "placeholder": ""
         },
@@ -1826,5 +1824,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1679286059
+    "modified": 1679298337
 }
