@@ -23,7 +23,7 @@
             "key": "field_64147540eeee8",
             "label": "Site width (px)",
             "name": "goza_site_width",
-            "type": "range",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -32,12 +32,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": 1140,
-            "min": 500,
-            "max": 2000,
-            "step": 5,
+            "default_value": "1140px",
+            "placeholder": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_6414759beeee9",
@@ -344,42 +343,6 @@
             "aria-label": "",
             "layout": "row",
             "sub_fields": [
-                {
-                    "key": "field_64147a6acef29",
-                    "label": "Top bar background color",
-                    "name": "goza_topbar_bg_color",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "aria-label": "",
-                    "default_value": "#000",
-                    "enable_opacity": 1,
-                    "return_format": "string"
-                },
-                {
-                    "key": "field_64147a89cef2a",
-                    "label": "Top bar text color",
-                    "name": "goza_topbar_text_color",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "aria-label": "",
-                    "default_value": "#FFF",
-                    "enable_opacity": 1,
-                    "return_format": "string"
-                },
                 {
                     "key": "field_64147aa6cef2b",
                     "label": "Enable Social",
@@ -1005,7 +968,7 @@
                 {
                     "key": "field_641484d9cfc47",
                     "label": "Top bar background color",
-                    "name": "top_bar_background_color",
+                    "name": "goza_topbar_bg_color",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1015,10 +978,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
-                    "default_value": "#000",
-                    "enable_opacity": 1,
-                    "return_format": "string"
+                    "default_value": "#000"
                 },
                 {
                     "key": "field_641484eccfc48",
@@ -1053,9 +1013,23 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "layout": "row",
             "sub_fields": [
+                {
+                    "key": "field_6417df017cf86",
+                    "label": "Footer Heading Color",
+                    "name": "goza_ft_heading_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#FFFFFF"
+                },
                 {
                     "key": "field_64148534cfc4a",
                     "label": "Footer Text Color",
@@ -1093,6 +1067,21 @@
                     "return_format": "string"
                 },
                 {
+                    "key": "field_6417dd4e44b33",
+                    "label": "Socket text color",
+                    "name": "goza_socket_txt_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#FFFFFF"
+                },
+                {
                     "key": "field_64148576cfc4c",
                     "label": "Socket background color",
                     "name": "goza_socket_bg_color",
@@ -1125,7 +1114,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "layout": "row",
             "sub_fields": [
                 {
@@ -1165,36 +1153,6 @@
                     "return_format": "string"
                 }
             ]
-        },
-        {
-            "key": "field_641487a8fae7c",
-            "label": "Select body color",
-            "name": "body_color",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "#666"
-        },
-        {
-            "key": "field_64148b9a4c44d",
-            "label": "Select heading color",
-            "name": "heading_color",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "#333333"
         },
         {
             "key": "field_641486b5fae76",
@@ -1322,7 +1280,7 @@
                 },
                 {
                     "key": "field_64148a8f2a727",
-                    "label": "Enter line height (px)",
+                    "label": "Enter line height",
                     "name": "body_line_height",
                     "type": "text",
                     "instructions": "",
@@ -1333,12 +1291,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": ""
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_64148aa22a728",
@@ -1359,6 +1316,21 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_6417d8d6c484b",
+                    "label": "Select color",
+                    "name": "body_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#666"
                 }
             ]
         },
@@ -1463,6 +1435,40 @@
                     "return_format": "value",
                     "ajax": 0,
                     "placeholder": ""
+                },
+                {
+                    "key": "field_6417c9ade6837",
+                    "label": "Enter letter-spacing (px)",
+                    "name": "heading_letter_spacing",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6417d8f5c484c",
+                    "label": "Select Color",
+                    "name": "heading_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#333"
                 }
             ]
         },
@@ -1479,8 +1485,7 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
-            "layout": "table",
+            "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_64148c224c44f",
@@ -1504,7 +1509,7 @@
                 },
                 {
                     "key": "field_64148c354c450",
-                    "label": "Enter line height (px)",
+                    "label": "Enter line height",
                     "name": "line_height",
                     "type": "text",
                     "instructions": "",
@@ -1515,32 +1520,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_64148c474c451",
-                    "label": "Enter letter spacing (px)",
-                    "name": "letter_spacing",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "aria-label": "",
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -1557,8 +1541,7 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
-            "layout": "table",
+            "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_64148c7f6f56c",
@@ -1582,7 +1565,7 @@
                 },
                 {
                     "key": "field_64148c7f6f56d",
-                    "label": "Enter line height (px)",
+                    "label": "Enter line height",
                     "name": "line_height",
                     "type": "text",
                     "instructions": "",
@@ -1593,32 +1576,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_64148c7f6f56e",
-                    "label": "Enter letter spacing (px)",
-                    "name": "letter_spacing",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "aria-label": "",
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -1635,8 +1597,7 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
-            "layout": "table",
+            "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_64148ce9bb1bb",
@@ -1660,7 +1621,7 @@
                 },
                 {
                     "key": "field_64148ce9bb1bc",
-                    "label": "Enter line height (px)",
+                    "label": "Enter line height",
                     "name": "line_height",
                     "type": "text",
                     "instructions": "",
@@ -1671,32 +1632,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_64148ce9bb1bd",
-                    "label": "Enter letter spacing (px)",
-                    "name": "letter_spacing",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "aria-label": "",
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -1713,8 +1653,7 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
-            "layout": "table",
+            "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_64148d00bb1bf",
@@ -1738,7 +1677,7 @@
                 },
                 {
                     "key": "field_64148d00bb1c0",
-                    "label": "Enter line height (px)",
+                    "label": "Enter line height",
                     "name": "line_height",
                     "type": "text",
                     "instructions": "",
@@ -1749,32 +1688,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_64148d00bb1c1",
-                    "label": "Enter letter spacing (px)",
-                    "name": "letter_spacing",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "aria-label": "",
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -1791,8 +1709,7 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
-            "layout": "table",
+            "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_64148d0dbb1c3",
@@ -1816,7 +1733,7 @@
                 },
                 {
                     "key": "field_64148d0dbb1c4",
-                    "label": "Enter line height (px)",
+                    "label": "Enter line height",
                     "name": "line_height",
                     "type": "text",
                     "instructions": "",
@@ -1827,32 +1744,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_64148d0dbb1c5",
-                    "label": "Enter letter spacing (px)",
-                    "name": "letter_spacing",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "aria-label": "",
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -1869,8 +1765,7 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
-            "layout": "table",
+            "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_64148d1dbb1c8",
@@ -1894,7 +1789,7 @@
                 },
                 {
                     "key": "field_64148d1dbb1c9",
-                    "label": "Enter line height (px)",
+                    "label": "Enter line height",
                     "name": "line_height",
                     "type": "text",
                     "instructions": "",
@@ -1905,32 +1800,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_64148d1dbb1ca",
-                    "label": "Enter letter spacing (px)",
-                    "name": "letter_spacing",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "aria-label": "",
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         }
@@ -1952,5 +1826,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1679112076
+    "modified": 1679286059
 }
