@@ -281,6 +281,25 @@
             "placeholder": ""
         },
         {
+            "key": "field_6418197c6cc4b",
+            "label": "Header Search",
+            "name": "goza_header_search",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_64147942cef24",
             "label": "Sticky Header",
             "name": "goza_sticky_header",
@@ -289,7 +308,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33.3333",
                 "class": "",
                 "id": ""
             },
@@ -308,7 +327,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33.3333",
                 "class": "",
                 "id": ""
             },
@@ -317,6 +336,90 @@
             "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_641819986cc4c",
+            "label": "Header Button Label",
+            "name": "goza_header_btn_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Donate Now",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_641819ba6cc4d",
+            "label": "Header Button Link",
+            "name": "goza_header_btn_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_64181a088467c",
+            "label": "Header Link Label",
+            "name": "goza_header_link_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64147910cef23",
+                        "operator": "==",
+                        "value": "menu-center"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Become A Volunteer",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_64181a338467d",
+            "label": "Header Link Url",
+            "name": "goza_header_link_url",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64147910cef23",
+                        "operator": "==",
+                        "value": "menu-center"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         },
         {
             "key": "field_64147a2bcef28",
@@ -342,6 +445,31 @@
             "aria-label": "",
             "layout": "row",
             "sub_fields": [
+                {
+                    "key": "field_6418129355161",
+                    "label": "Select layout top bar",
+                    "name": "goza_layout_top_bar",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "default": "Default",
+                        "layout-2": "Layout 2"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
                 {
                     "key": "field_64147aa6cef2b",
                     "label": "Enable Social",
@@ -944,6 +1072,29 @@
                     "default_value": "#282828",
                     "enable_opacity": 1,
                     "return_format": "string"
+                },
+                {
+                    "key": "field_64181ae41ac7b",
+                    "label": "Background Menu",
+                    "name": "goza_bg_menu",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_64147910cef23",
+                                "operator": "==",
+                                "value": "menu-center"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#213e8c"
                 }
             ]
         },
@@ -1824,5 +1975,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1679298337
+    "modified": 1679303015
 }

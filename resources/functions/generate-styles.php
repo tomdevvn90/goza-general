@@ -108,6 +108,7 @@ function goza_theme_options_styles()
     $header_color_op = __get_field('goza_header_color_op', 'option');
     $header_bg_color = $header_color_op['goza_header_bg_color'];
     $header_txt_color = $header_color_op['goza_header_txt_color'];
+    $header_bg_menu_color = $header_color_op['goza_bg_menu'];
 
     //footer color
     $footer_color_op = __get_field('goza_ft_color_op', 'option');
@@ -157,6 +158,7 @@ function goza_theme_options_styles()
         "--preloader-color" => $preloader_color,
         "--header-bg-color" => $header_bg_color,
         "--header-text-color" => $header_txt_color,
+        "--header-bg-menu-color" => $header_bg_menu_color,
         "--footer-heading-color" => $footer_heading_color,
         "--footer-text-color" => $footer_text_color,
         "--footer-bg-color" => $footer_bg_color,
@@ -164,6 +166,7 @@ function goza_theme_options_styles()
         "--socket-bg-color" => $socket_bg_color,
         "--topbar-text-color" => $topbar_text_color,
         "--topbar-bg-color" => $topbar_bg_color,
+        
     ];
 
     $custom_css .= render_custom_css($var_styles);
