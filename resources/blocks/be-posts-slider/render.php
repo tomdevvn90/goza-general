@@ -33,10 +33,10 @@ $is_style = isset($block['className']) ? $block['className'] : "is-style-default
 
 ob_start();
 $the_query = new WP_Query($args);
-
 ?>
+
 <div id="<?php echo $id; ?>" class="be-post-slider-block <?php echo $align_class; ?> <?php echo $is_style?>" data-style="<?php echo $is_style?>"  data-slider='<?= json_encode($data_carousel) ?>'> 
-<?php if ($the_query->have_posts()) { ?>
+    <?php if ($the_query->have_posts()) { ?>
         <div class="be-post-slider-block-inner"> 
             <?php while ($the_query->have_posts()) {
                 $the_query->the_post(); 
@@ -44,9 +44,8 @@ $the_query = new WP_Query($args);
             } ?>
         </div>
     <?php }else{
-        echo '<div class="bph-not-found">No results found.</div>';
+        echo '<div class="be-not-found">No results found.</div>';
     } ?>      
- <!-- get_template_part('resources/blocks/be-posts-slider/layout/template-default'); -->
 </div>
 <?php 
 
