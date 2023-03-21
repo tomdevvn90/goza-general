@@ -61,10 +61,9 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
         fade: false,
         cssEase: 'linear',
         responsive: [{
-          breakpoint: 992,
+          breakpoint: 1200,
           settings: {
-            arrows: $arrowTablet,
-            slidesToShow: 1
+            slidesToShow: 2
           }
         }, {
           breakpoint: 768,
