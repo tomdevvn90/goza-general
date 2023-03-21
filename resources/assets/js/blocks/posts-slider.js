@@ -38,10 +38,11 @@ import 'slick-carousel/slick/slick-theme.css';
                 cssEase: 'linear',
                 responsive: [
                     {
-                        breakpoint: 1200,
+                        breakpoint: 992,
                         settings: {
-                            slidesToShow: 2
-                        }
+                            arrows: $arrowTablet,
+                            slidesToShow: 1
+                      }
                     },
                     {
                         breakpoint: 768,

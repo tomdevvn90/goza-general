@@ -1,0 +1,74 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-block-cgb-block-my-block  {
+  background: $green;
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem;
+}
+
+
+
+.is-root-container {
+	p,
+	div,
+	span:not(.dashicon),
+	a {
+		font-family: var(--body-family, $font-arimo); 
+	}
+  h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 8px;
+  font-family: var(--heading-family, "Poppins", sans-serif);
+  font-weight: var(--heading-font-weight, 700);
+  line-height: 1.2;
+  color: var(--heading-color, #333);
+}
+
+h1,
+.h1 {
+  font-size: var(--h1-font-size, 55px);
+}
+
+h2,
+.h2 {
+  font-size: var(--h2-font-size, 42px);
+}
+
+h3,
+.h3 {
+  font-size: var(--h3-font-size, 36px);
+}
+
+h4,
+.h4 {
+  font-size: var(--h4-font-size, 28px);
+}
+
+h5,
+.h5 {
+  font-size: var(--h5-font-size, 24px);
+}
+
+h6,
+.h6 {
+  font-size: var(--h6-font-size, 20px);
+}
+}

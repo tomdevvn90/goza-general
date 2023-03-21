@@ -2,7 +2,7 @@
     "name": "goza/be-posts-slider",
     "title": "Be Post Slider",
     "description": "Display testimonials & gain instant credibility.",
-    "style": "block-be-posts-slider",
+    "style": "block-be-testimonials",
     "editorStyle": "file:./css/editor.css",
     "script": "block-be-posts-slider",
     "category": "goza-theme",
