@@ -18,7 +18,8 @@
             }
 
             &-content{
-                padding: 30px;               
+                padding: 30px;              
+                position: relative; 
             }
 
             &-thumbnail{
@@ -46,18 +47,23 @@
             }
 
             &-title{
-                font-family: 'Poppins';
+                font-family: var(--heading-family);
                 font-style: normal;
                 font-weight: 700;
                 margin: 0;
                 color: #333;
+                font-size: 22px;
+                line-height: 130%;
+                @media screen and (max-width: 767px) {
+                    font-size: 18px;
+                }
                 &:hover{
                     color: var(--heading-color, #d41b65); 
                 }
             }
 
             &-excerpt{
-                font-size: 16x;
+                font-size: 16px;
                 line-height: 28px;
                 margin-top: 14px;
                 overflow: hidden;
@@ -208,4 +214,55 @@
             }
         }
     }
+
+    &.is-style-2{
+        .be-post-slider-block-inner{
+            .item-post{
+                &-content{
+                    padding: 20px;
+                }
+
+                &-date{
+                    right: 15px;
+                    position: absolute;
+                    width: 80px;
+                    height: 70px;
+                    background: var(--heading-color, #d41b65); 
+                    padding: 15px 5px;
+                    top: -35px;
+                    border-radius: 4px;
+                    z-index: 9;
+                    color: #fff;
+                    font-size: 13px;
+                    text-align: center;
+                    line-height: 20px;
+                    font-family: var(--heading-family);
+                    font-weight: 400;
+                    > span{
+                        font-size: 30px;
+                    }
+                }
+
+                &-category{
+                    a{
+                        display: inline-block;
+                    }
+                }
+
+                &-title{
+                    margin-top: 10px;
+                }
+
+                &-excerpt{
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    word-wrap: break-word;
+                    line-height: 28px;
+                    height: 52px;
+                    font-size: 16px;
+                    font-family: var(--heading-family);
+                }
+            }
+        }
+    }        
 }

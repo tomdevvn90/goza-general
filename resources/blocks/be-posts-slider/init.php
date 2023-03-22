@@ -23,6 +23,8 @@ function be_template_post_style_2(){
     $post_date    = get_the_date('d M, Y');
     $comment      = get_comments_number();
     $categories   = get_the_category();
+    $day          = get_the_date('d');
+    $post_date    = get_the_date('M Y');
     // echo "<pre>";
     // echo print_r($categories);
     // echo "</pre>";
@@ -33,19 +35,18 @@ function be_template_post_style_2(){
     </div>
 
     <div class="item-post-content post-caption"> 
-        <span class="item-post-comment edu-cmt"> <?php echo $comment ?> </span>
+        <span class="item-post-date edu-date"> 
+                <span> <?php echo $day ?> </span> <br/> <?php echo $post_date ?>
+        </span>
 
         <?php if(!empty($categories)): ?>
-            <?php 
-                $num_of_items = count($categories); ?>
+            <?php $num_of_items = count($categories); ?>
             <div class="item-post-category post-term-list"> 
                 <?php foreach ($categories as $key => $value) : ?>
                     <?php $comma = $key + 1 < $num_of_items ? ',' : ''; ?>
-                    <div class="item-category"> 
-                        <a href="<?php echo esc_url(get_category_link($value->term_id)) ?>">
-                            <?php echo $value->name ?> <?php echo $comma; ?>
+                        <a class="item-category" href="<?php echo esc_url(get_category_link($value->term_id)) ?>">
+                            <?php echo $value->name ?><?php echo $comma; echo " ";?>
                         </a>
-                    </div>
                 <?php endforeach; ?>    
             </div>
         <?php endif; ?>    
@@ -53,6 +54,15 @@ function be_template_post_style_2(){
         <a class="post-title-link" href="<?php the_permalink() ?>"> 
             <h2 class="item-post-title post-title"> <?php the_title() ?> </h2>
         </a>
+
+        <div class="item-post-excerpt post-excerpt"> <?php the_excerpt() ?> </div>
+
+        <div class="item-post-button">  
+            <a href="<?php the_permalink() ?>" class="post-more-link">
+                 Learn More
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
     </div>
 
 <?php }
