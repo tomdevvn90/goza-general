@@ -61,9 +61,10 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
         fade: false,
         cssEase: 'linear',
         responsive: [{
-          breakpoint: 1200,
+          breakpoint: 992,
           settings: {
-            slidesToShow: 2
+            arrows: $arrowTablet,
+            slidesToShow: 1
           }
         }, {
           breakpoint: 768,
@@ -247,13 +248,8 @@ aos__WEBPACK_IMPORTED_MODULE_2___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 __webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
 module.exports = __webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-=======
-__webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-module.exports = __webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
->>>>>>> e9f7edae1e4918ddded335e20601014db4a3f6c5
 
 
 /***/ })
