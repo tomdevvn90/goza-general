@@ -11,6 +11,7 @@
 }
 .be-post-slider-block-inner .item-post-content {
     padding: 30px;
+    position: relative;
 }
 .be-post-slider-block-inner .item-post-thumbnail {
     position: relative;
@@ -35,17 +36,24 @@
     transition: visibility 0s 0.3s, opacity 0.3s linear;
 }
 .be-post-slider-block-inner .item-post-title {
-    font-family: 'Poppins';
+    font-family: var(--heading-family);
     font-style: normal;
     font-weight: 700;
     margin: 0;
     color: #333;
+    font-size: 22px;
+    line-height: 130%;
+}
+@media screen and (max-width: 767px) {
+    .be-post-slider-block-inner .item-post-title {
+        font-size: 18px;
+   }
 }
 .be-post-slider-block-inner .item-post-title:hover {
     color: var(--heading-color, #d41b65);
 }
 .be-post-slider-block-inner .item-post-excerpt {
-    font-size: 16x;
+    font-size: 16px;
     line-height: 28px;
     margin-top: 14px;
     overflow: hidden;
@@ -172,4 +180,42 @@
 }
 .be-post-slider-block.is-style-default .be-post-slider-block-inner .item-post-meta > .item-post-date {
     margin-right: 30px;
+}
+.be-post-slider-block.is-style-2 .be-post-slider-block-inner .item-post-content {
+    padding: 20px;
+}
+.be-post-slider-block.is-style-2 .be-post-slider-block-inner .item-post-date {
+    right: 15px;
+    position: absolute;
+    width: 80px;
+    height: 70px;
+    background: var(--heading-color, #d41b65);
+    padding: 15px 5px;
+    top: -35px;
+    border-radius: 4px;
+    z-index: 9;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    line-height: 20px;
+    font-family: var(--heading-family);
+    font-weight: 400;
+}
+.be-post-slider-block.is-style-2 .be-post-slider-block-inner .item-post-date > span {
+    font-size: 30px;
+}
+.be-post-slider-block.is-style-2 .be-post-slider-block-inner .item-post-category a {
+    display: inline-block;
+}
+.be-post-slider-block.is-style-2 .be-post-slider-block-inner .item-post-title {
+    margin-top: 10px;
+}
+.be-post-slider-block.is-style-2 .be-post-slider-block-inner .item-post-excerpt {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    line-height: 28px;
+    height: 52px;
+    font-size: 16px;
+    font-family: var(--heading-family);
 }
