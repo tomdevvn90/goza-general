@@ -10,6 +10,7 @@ add_action('wp_enqueue_scripts', function () {
 		'admin_logged' => in_array( 'administrator', wp_get_current_user()->roles ) ? 'yes' : 'no',
 		'ajax_url'     => admin_url( 'admin-ajax.php' )
 	] );
+
 	$upload_dir = wp_upload_dir();
 
 	//Global
@@ -35,9 +36,61 @@ if (!function_exists('goza_load_fonts')) {
 	 */
 	function goza_load_fonts()
 	{
-		wp_enqueue_style( 'admin-font', get_template_directory_uri() . '/resources/assets/fonts/fonts.css', false, THEME_VERSION );
+		$upload_dir = wp_upload_dir();
+		wp_enqueue_style( 'admin-font', get_template_directory_uri() . '/resources/assets/fonts/fonts.css', [], THEME_VERSION );
+		wp_enqueue_style('goza-theme-general-styles', $upload_dir['baseurl'] . '/styles_uploads/variable-css.css', [], THEME_VERSION);
 	}
 }
 
 add_action('admin_enqueue_scripts', 'goza_load_fonts');
 
+function my_block_cgb_block_assets() { // phpcs:ignore
+	// Register block styles for both frontend + backend.
+	wp_register_style(
+		'my_block-cgb-style-css', // Handle.
+		get_template_directory_uri() . "/dist/blocks.style.build.css", // Block style CSS.
+		is_admin() ? array( 'wp-editor' ) : null, // Dependency to include the CSS after it.
+		null // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.style.build.css' ) // Version: File modification time.
+	);
+
+	// Register block editor script for backend.
+	wp_register_script(
+		'my_block-cgb-block-js', // Handle.
+		get_template_directory_uri() . "/dist/blocks.build.js", // Block.build.js: We register the block here. Built with Webpack.
+		array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' ), // Dependencies, defined above.
+		null, // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.build.js' ), // Version: filemtime — Gets file modification time.
+		true // Enqueue the script in the footer.
+	);
+
+	// Register block editor styles for backend.
+	wp_register_style(
+		'my_block-cgb-block-editor-css', // Handle.
+		get_template_directory_uri() . "/dist/blocks.editor.build.css", // Block editor CSS.
+		array( 'wp-edit-blocks' ), // Dependency to include the CSS after it.
+		null // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.editor.build.css' ) // Version: File modification time.
+	);
+
+	/**
+	 * Register Gutenberg block on server-side.
+	 *
+	 * Register the block on server-side to ensure that the block
+	 * scripts and styles for both frontend and backend are
+	 * enqueued when the editor loads.
+	 *
+	 * @link https://wordpress.org/gutenberg/handbook/blocks/writing-your-first-block-type#enqueuing-block-scripts
+	 * @since 1.16.0
+	 */
+	register_block_type(
+		'cgb/block-my-block', array(
+			// Enqueue blocks.style.build.css on both frontend & backend.
+			'style'         => 'my_block-cgb-style-css',
+			// Enqueue blocks.build.js in the editor only.
+			'editor_script' => 'my_block-cgb-block-js',
+			// Enqueue blocks.editor.build.css in the editor only.
+			'editor_style'  => 'my_block-cgb-block-editor-css',
+		)
+	);
+}
+
+// Hook: Block assets.
+add_action( 'init', 'my_block_cgb_block_assets' );

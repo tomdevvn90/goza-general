@@ -21,8 +21,8 @@ add_action('goza_hook_header', 'goza_header_template');
 function goza_header_template()
 {
 	$goza_layout_header = __get_field('goza_layout_header', 'option');
-	$layout_name = (isset($goza_layout_header) && !empty($goza_layout_header)) ? $goza_layout_header : 'default';
-	load_template(get_template_directory() . '/template-parts/headers/header-' . $layout_name . '.php', false);
+	$template_name = (isset($goza_layout_header) && !empty($goza_layout_header)) ? $goza_layout_header : 'default';
+	load_template(get_template_directory() . '/template-parts/headers/header-' . $template_name . '.php', false);
 }
 
 /**
@@ -33,8 +33,21 @@ add_action('goza_hook_footer', 'goza_footer_template');
 function goza_footer_template()
 {
 	$goza_layout_footer = __get_field('goza_layout_footer', 'option');
-	$layout_name = (isset($goza_layout_footer) && !empty($goza_layout_footer)) ? $goza_layout_footer : 'default';
-	load_template(get_template_directory() . '/template-parts/footers/footer-' . $layout_name . '.php', false);
+	$template_name = (isset($goza_layout_footer) && !empty($goza_layout_footer)) ? $goza_layout_footer : 'default';
+	load_template(get_template_directory() . '/template-parts/footers/footer-' . $template_name . '.php', false);
+}
+
+/**
+ * Topbar template
+ * @return void
+ */
+add_action('goza_hook_topbar', 'goza_topbar_template');
+function goza_topbar_template()
+{
+	$goza_layout_topbar = __get_field('goza_topbar_options', 'option');
+	// dump($goza_layout_topbar['goza_layout_top_bar']);
+	$template_name = (isset($goza_layout_topbar['goza_layout_top_bar']) && !empty($goza_layout_topbar['goza_layout_top_bar'])) ? $goza_layout_topbar['goza_layout_top_bar'] : 'default';
+	load_template(get_template_directory() . '/template-parts/topbar/topbar-' . $template_name . '.php', false);
 }
 
 /**
@@ -64,4 +77,4 @@ function goza_child_deregister_styles()
 {
 	wp_dequeue_style('classic-theme-styles');
 }
-add_action('wp_enqueue_scripts', 'goza_child_deregister_styles', 20);
+add_action('wp_enqueue_scripts', 'goza_child_deregister_styles', 20); 

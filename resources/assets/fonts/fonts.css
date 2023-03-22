@@ -1,587 +1,587 @@
 @font-face {
     font-family: "Arimo";
-    src: url(../fonts/Arimo-Regular.ttf?f308213411bb2ec3d44a93563cf441c0) format("truetype");
+    src: url(Arimo/Arimo-Regular.ttf) format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Arimo";
-    src: url(../fonts/Arimo-Bold.ttf?38ca58b61a8e638f9cb2cfeecf0fac9e) format("truetype");
+    src: url(Arimo/Arimo-Bold.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Arimo";
-    src: url(../fonts/Arimo-BoldItalic.ttf?6ca5b080dc50aaa74c8195572df1e25f) format("truetype");
+    src: url(Arimo/Arimo-BoldItalic.ttf) format("truetype");
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Arimo";
-    src: url(../fonts/Arimo-Italic.ttf?aa0219d869cac1e4b2966b8f314e5379) format("truetype");
+    src: url(Arimo/Arimo-Italic.ttf) format("truetype");
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Arimo";
-    src: url(../fonts/Arimo-Medium.ttf?916aadd4f935ccb98cd544a62f06a5ad) format("truetype");
+    src: url(Arimo/Arimo-Medium.ttf) format("truetype");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Arimo";
-    src: url(../fonts/Arimo-MediumItalic.ttf?a65c96ddbf1cf906343ba9efe1b74864) format("truetype");
+    src: url(Arimo/Arimo-MediumItalic.ttf) format("truetype");
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Arimo";
-    src: url(../fonts/Arimo-SemiBold.ttf?079d8c0292da280eef26c14815a86496) format("truetype");
+    src: url(Arimo/Arimo-SemiBold.ttf) format("truetype");
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Arimo";
-    src: url(../fonts/Arimo-SemiBoldItalic.ttf?a7b67b93efc33f1ffc53d532b8628cc0) format("truetype");
+    src: url(Arimo/Arimo-SemiBoldItalic.ttf) format("truetype");
     font-weight: 600;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url(../fonts/Poppins-Light.ttf?fcc40ae9a542d001971e53eaed948410) format("truetype");
+    src: url(Poppins/Poppins-Light.ttf) format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url(../fonts/Poppins-Regular.ttf?093ee89be9ede30383f39a899c485a82) format("truetype");
+    src: url(Poppins/Poppins-Regular.ttf) format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url(../fonts/Poppins-Italic.ttf?c1034239929f4651cc17d09ed3a28c69) format("truetype");
+    src: url(Poppins/Poppins-Italic.ttf) format("truetype");
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url(../fonts/Poppins-Medium.ttf?bf59c687bc6d3a70204d3944082c5cc0) format("truetype");
+    src: url(Poppins/Poppins-Medium.ttf) format("truetype");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url(../fonts/Poppins-SemiBold.ttf?6f1520d107205975713ba09df778f93f) format("truetype");
+    src: url(Poppins/Poppins-SemiBold.ttf) format("truetype");
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url(../fonts/Poppins-Bold.ttf?08c20a487911694291bd8c5de41315ad) format("truetype");
+    src: url(Poppins/Poppins-Bold.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url(../fonts/Poppins-ExtraBold.ttf?d45bdbc2d4a98c1ecb17821a1dbbd3a4) format("truetype");
+    src: url(Poppins/Poppins-ExtraBold.ttf) format("truetype");
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url(../fonts/Poppins-BoldItalic.ttf?19406f767addf00d2ea82cdc9ab104ce) format("truetype");
+    src: url(Poppins/Poppins-BoldItalic.ttf) format("truetype");
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url(../fonts/Poppins-Black.ttf?14d00dab1f6802e787183ecab5cce85e) format("truetype");
+    src: url(Poppins/Poppins-Black.ttf) format("truetype");
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-Black.ttf?3259b9d5da281613ed918c9d165c20a5) format("truetype");
+    src: url(Barlow/Barlow-Black.ttf) format("truetype");
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-BlackItalic.ttf?24404d87029dab428f1102872581bd7f) format("truetype");
+    src: url(Barlow/Barlow-BlackItalic.ttf) format("truetype");
     font-weight: 900;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-Bold.ttf?72871854aabdd7a79c4fc5038cb4faaf) format("truetype");
+    src: url(Barlow/Barlow-Bold.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-BoldItalic.ttf?4b570971567053b1204438e248a88b30) format("truetype");
+    src: url(Barlow/Barlow-BoldItalic.ttf) format("truetype");
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-ExtraBold.ttf?12075155b398a9e6cc43cb03300e00de) format("truetype");
+    src: url(Barlow/Barlow-ExtraBold.ttf) format("truetype");
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-ExtraBoldItalic.ttf?b9bbe6d5299b39c2c272653a245e8d60) format("truetype");
+    src: url(Barlow/Barlow-ExtraBoldItalic.ttf) format("truetype");
     font-weight: 800;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-ExtraLight.ttf?f7e57760641fada9e5bbab93c12e3614) format("truetype");
+    src: url(Barlow/Barlow-ExtraLight.ttf) format("truetype");
     font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-ExtraLightItalic.ttf?98958f423d96a38619408113e1a423de) format("truetype");
+    src: url(Barlow/Barlow-ExtraLightItalic.ttf) format("truetype");
     font-weight: 200;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-Italic.ttf?ed7d4bb9c5638c38a28ccd3149b334fb) format("truetype");
+    src: url(Barlow/Barlow-Italic.ttf) format("truetype");
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-Light.ttf?2f88cf8762c53a8be3c3ec53b8e01edf) format("truetype");
+    src: url(Barlow/Barlow-Light.ttf) format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-LightItalic.ttf?2a4be013f41213c4cca8db8449754665) format("truetype");
+    src: url(Barlow/Barlow-LightItalic.ttf) format("truetype");
     font-weight: 300;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-Medium.ttf?bdffb48240a3383080812d6830ff6f54) format("truetype");
+    src: url(Barlow/Barlow-Medium.ttf) format("truetype");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-MediumItalic.ttf?4257d524ad11d173176df62fc3c03c60) format("truetype");
+    src: url(Barlow/Barlow-MediumItalic.ttf) format("truetype");
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-Regular.ttf?9373fb661b5c2954ab84d1b7f42774fe) format("truetype");
+    src: url(Barlow/Barlow-Regular.ttf) format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-SemiBold.ttf?29527ab52af2334e2bcb6290c8692f70) format("truetype");
+    src: url(Barlow/Barlow-SemiBold.ttf) format("truetype");
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-SemiBoldItalic.ttf?089c2031b86f3a8575428e825ab26dbf) format("truetype");
+    src: url(Barlow/Barlow-SemiBoldItalic.ttf) format("truetype");
     font-weight: 600;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-Thin.ttf?72e9db32bda6dbdfd6da0e9d74420ad0) format("truetype");
+    src: url(Barlow/Barlow-Thin.ttf) format("truetype");
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Barlow";
-    src: url(../fonts/Barlow-ThinItalic.ttf?8f3831b74d2837bafff3b3b802929c49) format("truetype");
+    src: url(Barlow/Barlow-ThinItalic.ttf) format("truetype");
     font-weight: 100;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-Black.ttf?e495f6598be7d1108a1dfec8e1625035) format("truetype");
+    src: url(Exo_2/Exo2-Black.ttf) format("truetype");
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-BlackItalic.ttf?750d8a99a1d1eabfa77d78b8233aed2f) format("truetype");
+    src: url(Exo_2/Exo2-BlackItalic.ttf) format("truetype");
     font-weight: 900;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-Bold.ttf?5d4f587039304fcdaaac13d16d26fda2) format("truetype");
+    src: url(Exo_2/Exo2-Bold.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-BoldItalic.ttf?9d44757c32ccc22912ac8ce83eb9b33f) format("truetype");
+    src: url(Exo_2/Exo2-BoldItalic.ttf) format("truetype");
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-ExtraBold.ttf?258e6f715505ae621af1d67fb516ea01) format("truetype");
+    src: url(Exo_2/Exo2-ExtraBold.ttf) format("truetype");
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-ExtraBoldItalic.ttf?7a14d2544cbd1e2d0be6271cff586120) format("truetype");
+    src: url(Exo_2/Exo2-ExtraBoldItalic.ttf) format("truetype");
     font-weight: 800;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-ExtraLight.ttf?14765b0608a530252483f427b4adf200) format("truetype");
+    src: url(Exo_2/Exo2-ExtraLight.ttf) format("truetype");
     font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-ExtraLightItalic.ttf?d6bd09fe746181ac84032ec4cb003dfb) format("truetype");
+    src: url(Exo_2/Exo2-ExtraLightItalic.ttf) format("truetype");
     font-weight: 200;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-Italic.ttf?c4751bb388a9d0d242eb25b4b802e3e2) format("truetype");
+    src: url(Exo_2/Exo2-Italic.ttf) format("truetype");
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-Light.ttf?71330d68d887758bea8c742eb6641325) format("truetype");
+    src: url(Exo_2/Exo2-Light.ttf) format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-LightItalic.ttf?8660efb8dbb8ffe267716b484d3d9d3c) format("truetype");
+    src: url(Exo_2/Exo2-LightItalic.ttf) format("truetype");
     font-weight: 300;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-Medium.ttf?1e7da3a913cc046ed13485961df9616d) format("truetype");
+    src: url(Exo_2/Exo2-Medium.ttf) format("truetype");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-MediumItalic.ttf?468bf7d124d03f090ea1bd0a6839f7da) format("truetype");
+    src: url(Exo_2/Exo2-MediumItalic.ttf) format("truetype");
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-Regular.ttf?d1a552c4d4489fe0ed010009ef192da7) format("truetype");
+    src: url(Exo_2/Exo2-Regular.ttf) format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-SemiBold.ttf?fbc3540c10b31b22320e5fe5c1afa086) format("truetype");
+    src: url(Exo_2/Exo2-SemiBold.ttf) format("truetype");
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-SemiBoldItalic.ttf?81dc81825e0f260483c7b31a8058c2a6) format("truetype");
+    src: url(Exo_2/Exo2-SemiBoldItalic.ttf) format("truetype");
     font-weight: 600;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-Thin.ttf?a4dea8da04dbda111c3da4670294d80e) format("truetype");
+    src: url(Exo_2/Exo2-Thin.ttf) format("truetype");
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Exo 2";
-    src: url(../fonts/Exo2-ThinItalic.ttf?49a2ac0f1e8680ca5704d842ec52875a) format("truetype");
+    src: url(Exo_2/Exo2-ThinItalic.ttf) format("truetype");
     font-weight: 100;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-Black.ttf?608b764a1cc4218d10f27600ef530fa6) format("truetype");
+    src: url(Fira_Sans/FiraSans-Black.ttf) format("truetype");
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-BlackItalic.ttf?57579f90e4c29a5d880a83efe78e1833) format("truetype");
+    src: url(Fira_Sans/FiraSans-BlackItalic.ttf) format("truetype");
     font-weight: 900;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-Bold.ttf?382e230417d252a0cb16c7d491b030c7) format("truetype");
+    src: url(Fira_Sans/FiraSans-Bold.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-BoldItalic.ttf?6e7fd9789e43219fec5bcefb98aa872f) format("truetype");
+    src: url(Fira_Sans/FiraSans-BoldItalic.ttf) format("truetype");
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-ExtraBold.ttf?ab5e89ae3427a97125ae380280b1df7f) format("truetype");
+    src: url(Fira_Sans/FiraSans-ExtraBold.ttf) format("truetype");
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-ExtraBoldItalic.ttf?efd9cf8a84e4ddc8be4774fec875b06b) format("truetype");
+    src: url(Fira_Sans/FiraSans-ExtraBoldItalic.ttf) format("truetype");
     font-weight: 800;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-ExtraLight.ttf?7b01a1d6efbf405007495ea871f58d42) format("truetype");
+    src: url(Fira_Sans/FiraSans-ExtraLight.ttf) format("truetype");
     font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-ExtraLightItalic.ttf?ffffdab9fd18858235473d663b2ab325) format("truetype");
+    src: url(Fira_Sans/FiraSans-ExtraLightItalic.ttf) format("truetype");
     font-weight: 200;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-Italic.ttf?576fe2da09745b60e892fb5bbda8bf77) format("truetype");
+    src: url(Fira_Sans/FiraSans-Italic.ttf) format("truetype");
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-Light.ttf?20161a557e36034d7255f22dadab5f58) format("truetype");
+    src: url(Fira_Sans/FiraSans-Light.ttf) format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-LightItalic.ttf?19d6dc84ea6417eb624c3313a9397e51) format("truetype");
+    src: url(Fira_Sans/FiraSans-LightItalic.ttf) format("truetype");
     font-weight: 300;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-Medium.ttf?f97963c595e8acb87013c1d4e1c3c9f9) format("truetype");
+    src: url(Fira_Sans/FiraSans-Medium.ttf) format("truetype");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-MediumItalic.ttf?c4a7f4d91c0e1cda2d762796f3f887e2) format("truetype");
+    src: url(Fira_Sans/FiraSans-MediumItalic.ttf) format("truetype");
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-Regular.ttf?50e780b45678ae34cef52d3e5112bd0d) format("truetype");
+    src: url(Fira_Sans/FiraSans-Regular.ttf) format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-SemiBold.ttf?eb5e811f2fe0408c9d0a552fcf1fb390) format("truetype");
+    src: url(Fira_Sans/FiraSans-SemiBold.ttf) format("truetype");
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-SemiBoldItalic.ttf?a61964676efbf35bc263fe7086ef1716) format("truetype");
+    src: url(Fira_Sans/FiraSans-SemiBoldItalic.ttf) format("truetype");
     font-weight: 600;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-Thin.ttf?8205dc3e1f7953b4f52ed6a23977a6be) format("truetype");
+    src: url(Fira_Sans/FiraSans-Thin.ttf) format("truetype");
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-ThinItalic.ttf?5512e98f8b6a8f9e5f0a11546cd1e084) format("truetype");
+    src: url(Fira_Sans/FiraSans-ThinItalic.ttf) format("truetype");
     font-weight: 100;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url(../fonts/Roboto-Black.ttf?d6a6f8878adb0d8e69f9fa2e0b622924) format("truetype");
+    src: url(Roboto/Roboto-Black.ttf) format("truetype");
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url(../fonts/Roboto-BlackItalic.ttf?c3332e3b8feff748ecb0c6cb75d65eae) format("truetype");
+    src: url(Roboto/Roboto-BlackItalic.ttf) format("truetype");
     font-weight: 900;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url(../fonts/Roboto-Bold.ttf?b8e42971dec8d49207a8c8e2b919a6ac) format("truetype");
+    src: url(Roboto/Roboto-Bold.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url(../fonts/Roboto-BoldItalic.ttf?fd6e9700781c4aaae877999d09db9e09) format("truetype");
+    src: url(Roboto/Roboto-BoldItalic.ttf) format("truetype");
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url(../fonts/Roboto-Italic.ttf?cebd892d1acfcc455f5e52d4104f2719) format("truetype");
+    src: url(Roboto/Roboto-Italic.ttf) format("truetype");
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url(../fonts/Roboto-Light.ttf?881e150ab929e26d1f812c4342c15a7c) format("truetype");
+    src: url(Roboto/Roboto-Light.ttf) format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url(../fonts/Roboto-LightItalic.ttf?5788d5ce921d7a9b4fa0eaa9bf7fec8d) format("truetype");
+    src: url(Roboto/Roboto-LightItalic.ttf) format("truetype");
     font-weight: 300;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url(../fonts/Roboto-Medium.ttf?68ea4734cf86bd544650aee05137d7bb) format("truetype");
+    src: url(Roboto/Roboto-Medium.ttf) format("truetype");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url(../fonts/Roboto-MediumItalic.ttf?c16d19c2c0fd1278390a82fc245f4923) format("truetype");
+    src: url(Roboto/Roboto-MediumItalic.ttf) format("truetype");
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url(../fonts/Roboto-Regular.ttf?8a36205bd9b83e03af0591a004bc97f4) format("truetype");
+    src: url(Roboto/Roboto-Regular.ttf) format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url(../fonts/Roboto-Thin.ttf?66209ae01f484e46679622dd607fcbc5) format("truetype");
+    src: url(Roboto/Roboto-Thin.ttf) format("truetype");
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url(../fonts/Roboto-ThinItalic.ttf?7bcadd0675fe47d69c2d8aaef683416f) format("truetype");
+    src: url(Roboto/Roboto-ThinItalic.ttf) format("truetype");
     font-weight: 100;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Calligraffitti";
-    src: url(../fonts/Calligraffitti-Regular.ttf?c192f5fcabf628d18b4e4c59ca41fb37) format("truetype");
+    src: url(Calligraffitti/Calligraffitti-Regular.ttf) format("truetype");
     font-weight: 400;
     font-style: normal;
 }

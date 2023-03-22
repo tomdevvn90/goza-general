@@ -19,8 +19,10 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@webcomponents/webcomponentsjs": "^2.2.10",
         "aos": "^2.3.4",
         "bootstrap": "^4.3.1",
+        "cgb-scripts": "1.23.1",
         "dom4": "^2.1.4",
         "jquery": "^3.4.1",
         "slick-carousel": "^1.8.1"
