@@ -21,7 +21,8 @@ add_action('goza_hook_header', 'goza_header_template');
 function goza_header_template()
 {
 	$goza_layout_header = __get_field('goza_layout_header', 'option');
-	load_template(get_template_directory() . '/template-parts/headers/header-' . $goza_layout_header . '.php', false);
+	$layout_name = (isset($goza_layout_header) && !empty($goza_layout_header)) ? $goza_layout_header : 'default';
+	load_template(get_template_directory() . '/template-parts/headers/header-' . $layout_name . '.php', false);
 }
 
 /**
@@ -32,7 +33,8 @@ add_action('goza_hook_footer', 'goza_footer_template');
 function goza_footer_template()
 {
 	$goza_layout_footer = __get_field('goza_layout_footer', 'option');
-	load_template(get_template_directory() . '/template-parts/footers/footer-' . $goza_layout_footer . '.php', false);
+	$layout_name = (isset($goza_layout_footer) && !empty($goza_layout_footer)) ? $goza_layout_footer : 'default';
+	load_template(get_template_directory() . '/template-parts/footers/footer-' . $layout_name . '.php', false);
 }
 
 /**
