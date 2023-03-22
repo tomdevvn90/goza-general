@@ -18,14 +18,6 @@ import 'slick-carousel/slick/slick-theme.css';
                 $style        = $(this).data('style'),
                 $arrowTablet  = true,
                 $arrowMobile  = false
-
-            // if($style == 'is-style-default'){
-            //     $arrowTablet = false
-            // }
-
-            // if($style == 'is-style-2'){
-            //     $arrowMobile = true
-            // }
             
             let opt_df = {
 				slidesToShow: 1,
@@ -38,10 +30,10 @@ import 'slick-carousel/slick/slick-theme.css';
                 cssEase: 'linear',
                 responsive: [
                     {
-                        breakpoint: 992,
+                        breakpoint: 1200,
                         settings: {
                             arrows: $arrowTablet,
-                            slidesToShow: 1
+                            slidesToShow: 2
                       }
                     },
                     {
