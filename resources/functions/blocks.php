@@ -62,14 +62,11 @@ function goza_block_categories($categories)
 
     if ($include) {
         $categories = array_merge(
-            $categories,
-            [
-                [
+            $categories, [[
                     'slug'  => 'goza-theme',
                     'title' => __('Goza Theme', 'goza'),
                     'icon'  => ''
-                ]
-            ]
+                ]]
         );
     }
 
