@@ -513,29 +513,9 @@
                     "append": ""
                 },
                 {
-                    "key": "field_64147b9bcef2f",
-                    "label": "Label Button",
-                    "name": "goza_label_btn",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "BECOME A VOLUNTEER",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
                     "key": "field_64147bb6cef30",
-                    "label": "Url Button",
-                    "name": "goza_url_button",
+                    "label": "Top bar button",
+                    "name": "goza_topbar_btn",
                     "aria-label": "",
                     "type": "link",
                     "instructions": "",
@@ -2004,5 +1984,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679582477
+    "modified": 1679670864
 }
