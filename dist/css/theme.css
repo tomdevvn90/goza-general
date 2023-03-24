@@ -10921,6 +10921,7 @@ h6 {
   letter-spacing: 0px;
   color: #fff;
   font-style: normal;
+  transition: 0.3s;
   font-weight: 400;
   font-family: var(--heading-family, Poppins, sans-serif);
 }
@@ -10958,6 +10959,7 @@ h6 {
   color: #fff;
   font-style: normal;
   font-weight: 400;
+  transition: 0.3s;
 }
 
 .be-post-slider-block {
