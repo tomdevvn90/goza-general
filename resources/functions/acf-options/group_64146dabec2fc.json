@@ -87,7 +87,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "taxonomy": "fw-portfolio-category",
+                    "taxonomy": "category",
                     "add_term": 1,
                     "save_terms": 0,
                     "load_terms": 0,
@@ -307,5 +307,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679066582
+    "modified": 1679667093
 }

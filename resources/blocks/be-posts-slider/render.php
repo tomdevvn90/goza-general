@@ -15,9 +15,12 @@ $args = [
     'post_status' => 'publish',
 ];
 
-$args['posts_per_page']  = $query['posts_per_page'];
-$query['order']          = $query['order'];
+$listCate = $query['categoires'];
 
+$args['posts_per_page']  = $query['posts_per_page'];
+$args['order']           = $query['order'];
+$args['category__in']    = (!empty($query['categoires'])) ? $query['categoires'] : [ ];
+$args['tag__in']         = (!empty($query['tags'])) ? $query['tags'] : [ ];
 
 $data_carousel = array(
     'slidesToShow'   =>  $slider_setting['slidesToShow'] ? intval($slider_setting['slidesToShow']) : 1,
@@ -30,8 +33,6 @@ $data_carousel = array(
 );
 
 $is_style = isset($block['className']) ? $block['className'] : "is-style-default";
-
-ob_start();
 $the_query = new WP_Query($args);
 ?>
 
