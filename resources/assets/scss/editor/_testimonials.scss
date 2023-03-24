@@ -1,6 +1,8 @@
 .block-editor-block-list__block .be-testominials-block-carousel{
     display: flex;
     overflow: auto;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .block-editor-block-list__block .be-testominials-block-carousel .item-testominial{
