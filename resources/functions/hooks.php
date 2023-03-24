@@ -37,6 +37,7 @@ function goza_footer_template()
 	load_template(get_template_directory() . '/template-parts/footers/footer-' . $template_name . '.php', false);
 }
 
+
 /**
  * Topbar template
  * @return void
@@ -45,9 +46,20 @@ add_action('goza_hook_topbar', 'goza_topbar_template');
 function goza_topbar_template()
 {
 	$goza_layout_topbar = __get_field('goza_topbar_options', 'option');
-	// dump($goza_layout_topbar['goza_layout_top_bar']);
 	$template_name = (isset($goza_layout_topbar['goza_layout_top_bar']) && !empty($goza_layout_topbar['goza_layout_top_bar'])) ? $goza_layout_topbar['goza_layout_top_bar'] : 'default';
 	load_template(get_template_directory() . '/template-parts/topbar/topbar-' . $template_name . '.php', false);
+}
+
+/**
+ * Preloader template
+ * @return void
+ */
+add_action('goza_hook_preloader', 'goza_preloader_template');
+function goza_preloader_template()
+{
+	$goza_enable_preloader = __get_field('goza_enable_preloader', 'option');
+	if (!isset($goza_enable_preloader) || !$goza_enable_preloader) return;
+	load_template(get_template_directory() . '/template-parts/preloader.php', false);
 }
 
 /**
