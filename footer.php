@@ -13,7 +13,7 @@ echo "</div><!--End site wrap-->";
  * @see goza_footer_template - 20
  */
 do_action( 'goza_hook_footer' );
-
+do_action('goza_hook_preloader');
 wp_footer();
 ?>
 </body>
