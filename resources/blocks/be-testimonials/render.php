@@ -27,12 +27,14 @@ $is_style = isset($block['className']) ? $block['className'] : "is-style-default
     <?php if(!empty($testominials)): ?>        
         <div class="be-testominials-block-carousel"> 
             <?php foreach ($testominials as $testominial): ?>
+                <?php 
+   
+                    $img_url = (!empty($testominial['image'])) ? $testominial['image'] : get_template_directory_uri(). '/resources/assets/images/image-default.jpg' ;    
+                ?>
                 <div class="item-testominial"> 
                     <div class="item-testominial-inner"> 
                         <div class="item-testominial-thumbnail"> 
-                            <?php if(!empty($testominial['image'])): ?>
-                                <img src="<?php echo $testominial['image'] ?>" alt="image">
-                            <?php endif; ?>
+                            <img src="<?php echo $img_url ?>" alt="image">
                         </div>
 
                         <div class="item-testominial-content"> 

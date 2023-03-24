@@ -17,6 +17,13 @@
     line-height: 1;
 }
 
+.block-editor-block-list__block .be-testominials-block-carousel .item-testominial-name, .block-editor-block-list__block .be-testominials-block-carousel .item-testominial-position{
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
 /* css for style 2 */
 .block-editor-block-list__block .is-style-2 .be-testominials-block-carousel .item-testominial{
     padding: 10px;

@@ -13,4 +13,23 @@
 
 .block-editor-block-list__block .be-post-slider-block-inner .item-post-thumbnail{
     max-height: 233px;
-}    
+}   
+
+.block-editor-block-list__block .be-post-slider-block-inner .item-post-comment{
+    z-index: 9;
+    color: #fff;
+}
+
+.block-editor-block-list__block .be-post-slider-block.is-style-2 .be-post-slider-block-inner .item-post-date > span{
+    color: #fff;
+}
+
+.block-editor-block-list__block .be-post-slider-block-inner .item-post-title{
+    font-size: 22px;
+    line-height: 130%;
+    color: #333;
+}
+
+.block-editor-block-list__block .be-post-slider-block.is-style-2 .be-post-slider-block-inner .item-post-date{
+    top: -60px;
+}
