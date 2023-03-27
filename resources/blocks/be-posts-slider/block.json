@@ -3,7 +3,7 @@
     "title": "Be Post Slider",
     "description": "Display testimonials & gain instant credibility.",
     "category": "goza-theme",
-    "icon": "testimonial",
+    "icon": "slides",
     "keywords": ["carousel", "posts"],
     "acf": {
         "mode": "preview",
