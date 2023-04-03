@@ -126,6 +126,13 @@
             }
         }
     }
+    
+    &-is-style-default{
+        border-right: 1px solid #000;
+        &:first-child{
+            border-left: 1px solid #000;
+        }
+    }
 
     &.is-style-2{
         .be-icon-box-block-inner{

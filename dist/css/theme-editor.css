@@ -4308,6 +4308,14 @@
   visibility: visible;
 }
 
+.be-icon-box-block-is-style-default {
+  border-right: 1px solid #000;
+}
+
+.be-icon-box-block-is-style-default:first-child {
+  border-left: 1px solid #000;
+}
+
 .be-icon-box-block.is-style-2 .be-icon-box-block-inner {
   padding: 40px 30px;
   position: relative;

@@ -1,6 +1,6 @@
 <?php
 function be_item_icon_box($block){
-    $is_style = isset($block['className']) ? $block['className'] : "is-style-default";
+    $is_style = (isset($block['className']) && !empty($block['className'])) ? $block['className'] : "is-style-default";
 
     // ACF field variables
     $heading = get_field('heading_icon_box');
@@ -8,7 +8,6 @@ function be_item_icon_box($block){
     $icon    = (!empty(get_field('icon__icon_box'))) ? get_field('icon__icon_box') : get_template_directory_uri(). '/resources/assets/images/icon-box-default.svg' ;
     $button  = get_field('button_icon_box');
    
-    
     switch ($is_style) {
         case "is-style-2":
             be_template_icon_box_style_2($heading, $icon, $button, $link);
@@ -22,7 +21,6 @@ function be_item_icon_box($block){
             be_template_icon_box_default($heading, $icon, $button, $link);
             break; 
     } 
-
 }
 
 function be_template_icon_box_style_3($heading, $icon, $button, $link){ ?>
