@@ -1,6 +1,8 @@
 .block-editor-block-list__block .be-testominials-block-carousel{
     display: flex;
     overflow: auto;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .block-editor-block-list__block .be-testominials-block-carousel .item-testominial{
@@ -15,6 +17,13 @@
 
 .block-editor-block-list__block .be-testominials-block .be-testominials-block-carousel .item-testominial-desc::before{
     line-height: 1;
+}
+
+.block-editor-block-list__block .be-testominials-block-carousel .item-testominial-name, .block-editor-block-list__block .be-testominials-block-carousel .item-testominial-position{
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    margin: 0;
 }
 
 /* css for style 2 */

@@ -2,11 +2,8 @@
     "name": "goza/be-posts-slider",
     "title": "Be Post Slider",
     "description": "Display testimonials & gain instant credibility.",
-    "style": "block-be-posts-slider",
-    "editorStyle": "file:./css/editor.css",
-    "script": "block-be-posts-slider",
     "category": "goza-theme",
-    "icon": "testimonial",
+    "icon": "slides",
     "keywords": ["carousel", "posts"],
     "acf": {
         "mode": "preview",
@@ -19,7 +16,8 @@
         { "name": "default", "label": "Default", "isDefault": true },
         { "name": "2", "label": "Style 2" },
         { "name": "3", "label": "Style 3" },
-        { "name": "4", "label": "Style 4" }
+        { "name": "4", "label": "Style 4" },
+        { "name": "5", "label": "Style 5" }
     ],
     "align": "full"
   }

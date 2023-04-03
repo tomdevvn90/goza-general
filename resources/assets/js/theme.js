@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 AOS.init({
     duration: 1200,
     once: true,
-    disable: 'mobile',
+    disable: 'mobile', 
 });
 
 

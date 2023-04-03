@@ -1,16 +1,6 @@
 <?php
 
 add_action('wp_enqueue_scripts', function () {
-
-	// // lib slick
-	// wp_enqueue_script( 'be-goza-slick', get_template_directory_uri() . '/resources/assets/lib/slick/slick.min.js', ['jquery'], THEME_VERSION, true );
-	wp_enqueue_style( 'be-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css', [], THEME_VERSION );
-
-	wp_localize_script( 'app-scripts', 'php_data', [
-		'admin_logged' => in_array( 'administrator', wp_get_current_user()->roles ) ? 'yes' : 'no',
-		'ajax_url'     => admin_url( 'admin-ajax.php' )
-	] );
-
 	$upload_dir = wp_upload_dir();
 
 	//Global
@@ -32,14 +22,40 @@ add_action('wp_enqueue_scripts', function () {
 
 if (!function_exists('goza_load_fonts')) {
 	/**
-	 * Load custom font family
+	 * Load assets backend
 	 */
 	function goza_load_fonts()
 	{
 		$upload_dir = wp_upload_dir();
-		wp_enqueue_style( 'admin-font', get_template_directory_uri() . '/resources/assets/fonts/fonts.css', [], THEME_VERSION );
+		wp_enqueue_style('awesome-font', get_template_directory_uri() . '/dist/css/theme-editor.css', [], THEME_VERSION);
+		wp_enqueue_style('admin-font', get_template_directory_uri() . '/resources/assets/fonts/fonts.css', [], THEME_VERSION);
 		wp_enqueue_style('goza-theme-general-styles', $upload_dir['baseurl'] . '/styles_uploads/variable-css.css', [], THEME_VERSION);
 	}
 }
 
 add_action('admin_enqueue_scripts', 'goza_load_fonts');
+
+
+if (!function_exists('goza_block_assets')) {
+	function goza_block_assets()
+	{
+		// Register block styles for both frontend + backend.
+		wp_register_style('goza-cgb-style-css',  get_template_directory_uri() . "/editor/dist/blocks.style.build.css", is_admin() ? array('wp-editor') : null, THEME_VERSION);
+
+		// Register block editor script for backend.
+		wp_register_script('goza-cgb-block-js', get_template_directory_uri() . "/editor/dist/blocks.build.js", array('wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor'), THEME_VERSION, true);
+
+		// Register block editor styles for backend.
+		wp_register_style('goza-cgb-block-editor-css', get_template_directory_uri() . "/editor/dist/blocks.editor.build.css", array('wp-edit-blocks'), THEME_VERSION);
+		register_block_type(
+			'cgb/block-goza',
+			array(
+				'style'         => 'goza-cgb-style-css',
+				'editor_script' => 'goza-cgb-block-js',
+				'editor_style'  => 'goza-cgb-block-editor-css'
+			)
+		);
+	}
+	// Hook: Block assets.
+	add_action('init', 'goza_block_assets');
+}

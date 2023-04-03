@@ -9,4 +9,10 @@
         
     })
 
+    $(window).on("load", function () {
+        //preloader
+        const $PRELOADER = $('.goza-preloader');
+        $PRELOADER.hide();
+    });
+
 })(jQuery);

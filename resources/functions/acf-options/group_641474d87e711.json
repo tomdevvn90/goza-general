@@ -6,6 +6,7 @@
             "key": "field_641474d9eea0a",
             "label": "General",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -15,7 +16,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "placement": "left",
             "endpoint": 0
         },
@@ -23,6 +23,7 @@
             "key": "field_64147540eeee8",
             "label": "Site width (px)",
             "name": "goza_site_width",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -42,6 +43,7 @@
             "key": "field_6414759beeee9",
             "label": "Enable preloader",
             "name": "goza_enable_preloader",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -51,7 +53,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "message": "",
             "default_value": 0,
             "ui_on_text": "",
@@ -62,6 +63,7 @@
             "key": "field_641475b5eeeea",
             "label": "Preloader color",
             "name": "goza_preloader_color",
+            "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
@@ -79,7 +81,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "#d41b65",
             "enable_opacity": 1,
             "return_format": "string"
@@ -88,6 +89,7 @@
             "key": "field_64147c5dbe9a1",
             "label": "Phone Number",
             "name": "goza_phone_number",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -97,7 +99,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
@@ -108,6 +109,7 @@
             "key": "field_64147c6fbe9a2",
             "label": "Email",
             "name": "goza_email",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -117,7 +119,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
@@ -128,6 +129,7 @@
             "key": "field_64147df8ee678",
             "label": "Address",
             "name": "goza_address",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -137,7 +139,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "Sector # 48, 123 Street, miosya road VIC 28, Australia.",
             "maxlength": "",
             "placeholder": "",
@@ -148,6 +149,7 @@
             "key": "field_641475dfeeeeb",
             "label": "Social Network",
             "name": "goza_social_network",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -157,7 +159,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "layout": "row",
             "pagination": 0,
             "min": 0,
@@ -170,7 +171,8 @@
                     "key": "field_641475f1eeeec",
                     "label": "Icon",
                     "name": "icon",
-                    "type": "image",
+                    "aria-label": "",
+                    "type": "select",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -179,44 +181,28 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
-                    "return_format": "url",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "thumbnail",
-                    "parent_repeater": "field_641475dfeeeeb"
-                },
-                {
-                    "key": "field_6414760deeeed",
-                    "label": "Title",
-                    "name": "title",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
+                    "choices": {
+                        "facebook": "Facebook",
+                        "google-plus": "Google Plus",
+                        "twitter": "Twitter",
+                        "linkedin": "LinkedIn",
+                        "pinterest-p": "Pinterest",
+                        "youtube": "Youtube"
                     },
-                    "aria-label": "",
-                    "default_value": "",
-                    "maxlength": "",
+                    "default_value": false,
+                    "return_format": "array",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
                     "parent_repeater": "field_641475dfeeeeb"
                 },
                 {
                     "key": "field_64147615eeeee",
                     "label": "Url",
                     "name": "url",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -226,7 +212,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -240,6 +225,7 @@
             "key": "field_641478c7cef22",
             "label": "Header",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -249,7 +235,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "placement": "top",
             "endpoint": 0
         },
@@ -257,6 +242,7 @@
             "key": "field_64147910cef23",
             "label": "Layout Header",
             "name": "goza_layout_header",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -272,7 +258,7 @@
                 "btn-search": "Header Button + Search",
                 "menu-center": "Header Menu Center"
             },
-            "default_value": [],
+            "default_value": false,
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -284,6 +270,7 @@
             "key": "field_6418197c6cc4b",
             "label": "Header Search",
             "name": "goza_header_search",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -303,6 +290,7 @@
             "key": "field_64147942cef24",
             "label": "Sticky Header",
             "name": "goza_sticky_header",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -322,6 +310,7 @@
             "key": "field_64147a06cef27",
             "label": "Enable Top bar",
             "name": "goza_enable_topbar",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -341,6 +330,7 @@
             "key": "field_641819986cc4c",
             "label": "Header Button Label",
             "name": "goza_header_btn_label",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -360,6 +350,7 @@
             "key": "field_641819ba6cc4d",
             "label": "Header Button Link",
             "name": "goza_header_btn_link",
+            "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -375,6 +366,7 @@
             "key": "field_64181a088467c",
             "label": "Header Link Label",
             "name": "goza_header_link_label",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -402,6 +394,7 @@
             "key": "field_64181a338467d",
             "label": "Header Link Url",
             "name": "goza_header_link_url",
+            "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -425,6 +418,7 @@
             "key": "field_64147a2bcef28",
             "label": "Top Bar Options",
             "name": "goza_topbar_options",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -442,13 +436,13 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_6418129355161",
                     "label": "Select layout top bar",
                     "name": "goza_layout_top_bar",
+                    "aria-label": "",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
@@ -462,7 +456,7 @@
                         "default": "Default",
                         "layout-2": "Layout 2"
                     },
-                    "default_value": [],
+                    "default_value": false,
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
@@ -474,6 +468,7 @@
                     "key": "field_64147aa6cef2b",
                     "label": "Enable Social",
                     "name": "goza_en_social",
+                    "aria-label": "",
                     "type": "true_false",
                     "instructions": "",
                     "required": 0,
@@ -483,7 +478,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "message": "",
                     "default_value": 0,
                     "ui_on_text": "",
@@ -494,6 +488,7 @@
                     "key": "field_64147ac1cef2c",
                     "label": "Label Social",
                     "name": "goza_label_social",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -511,7 +506,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "GET IN TOUCH:",
                     "maxlength": "",
                     "placeholder": "",
@@ -519,29 +513,10 @@
                     "append": ""
                 },
                 {
-                    "key": "field_64147b9bcef2f",
-                    "label": "Label Button",
-                    "name": "goza_label_btn",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "aria-label": "",
-                    "default_value": "BECOME A VOLUNTEER",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
                     "key": "field_64147bb6cef30",
-                    "label": "Url Button",
-                    "name": "goza_url_button",
+                    "label": "Top bar button",
+                    "name": "goza_topbar_btn",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -551,7 +526,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "return_format": "array"
                 }
             ]
@@ -560,6 +534,7 @@
             "key": "field_64147d11ee675",
             "label": "Footer",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -569,7 +544,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "placement": "top",
             "endpoint": 0
         },
@@ -577,6 +551,7 @@
             "key": "field_64147d53ee676",
             "label": "Layout Footer",
             "name": "goza_layout_footer",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -592,7 +567,7 @@
                 "organization": "Layout Goza Orgazination",
                 "ngo": "Layout Goza Ngo"
             },
-            "default_value": [],
+            "default_value": false,
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -604,6 +579,7 @@
             "key": "field_64147d73ee677",
             "label": "Background image",
             "name": "goza_ft_bg_image",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -628,6 +604,7 @@
             "key": "field_64147e39ee679",
             "label": "Text Copyright",
             "name": "goza_txt_copyright",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -647,6 +624,7 @@
             "key": "field_64147e7025859",
             "label": "General",
             "name": "goza_ft_general_op",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -656,13 +634,13 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_64147e972585a",
                     "label": "Logo",
                     "name": "goza_ft_logo",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -672,7 +650,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "return_format": "url",
                     "library": "all",
                     "min_width": "",
@@ -688,6 +665,7 @@
                     "key": "field_64147eb32585b",
                     "label": "Heading",
                     "name": "goza_general_heading",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -697,7 +675,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -708,6 +685,7 @@
                     "key": "field_64147ed12585c",
                     "label": "Content",
                     "name": "goza_general_content",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -717,7 +695,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "tabs": "all",
                     "toolbar": "full",
@@ -730,6 +707,7 @@
             "key": "field_64147f46a6327",
             "label": "Quick Links",
             "name": "goza_ft_quick_links_op",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -739,13 +717,13 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_64147f65a6328",
                     "label": "Heading",
                     "name": "goza_ql_heading",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "You can choose menu here: <a href=\"\/wp-admin\/nav-menus.php?action=edit&menu=0\">Menu<\/a>",
                     "required": 0,
@@ -755,7 +733,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "QUICK LINKS",
                     "maxlength": "",
                     "placeholder": "",
@@ -768,6 +745,7 @@
             "key": "field_64147fd3a632a",
             "label": "Socials",
             "name": "goza_ft_socials_op",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -777,13 +755,13 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_64147ff0a632b",
                     "label": "Heading",
                     "name": "goza_social_heading",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -793,7 +771,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "FOLLOW US",
                     "maxlength": "",
                     "placeholder": "",
@@ -806,6 +783,7 @@
             "key": "field_6414801da632c",
             "label": "Subscribe Newsletter",
             "name": "goza_sub_news_op",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -815,13 +793,13 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_6414802ea632d",
                     "label": "Heading",
                     "name": "goza_newsletter_heading",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -831,7 +809,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -842,6 +819,7 @@
                     "key": "field_6414804da632e",
                     "label": "Descriptions",
                     "name": "goza_newsletter_desc",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -851,7 +829,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "tabs": "all",
                     "toolbar": "full",
@@ -862,6 +839,7 @@
                     "key": "field_64148074a632f",
                     "label": "Shortcode Subscribe Form",
                     "name": "goza_sc_sub_form",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -871,7 +849,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -884,6 +861,7 @@
             "key": "field_641480aaa6330",
             "label": "Our Gallery",
             "name": "goza_ft_gallery_op",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -893,13 +871,13 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_641480cea6331",
                     "label": "Heading",
                     "name": "goza_gallery_heading",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -909,7 +887,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "Our Gallery",
                     "maxlength": "",
                     "placeholder": "",
@@ -920,6 +897,7 @@
                     "key": "field_64148102a6332",
                     "label": "Gallery",
                     "name": "goza_ft_gallery",
+                    "aria-label": "",
                     "type": "gallery",
                     "instructions": "",
                     "required": 0,
@@ -929,7 +907,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "return_format": "array",
                     "library": "all",
                     "min": "",
@@ -950,6 +927,7 @@
             "key": "field_6414815ca6333",
             "label": "Instagram",
             "name": "goza_ft_ig_op",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -959,13 +937,13 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_64148170a6334",
                     "label": "Heading",
                     "name": "goza_ig_heading",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -975,7 +953,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -986,6 +963,7 @@
                     "key": "field_64148198a6335",
                     "label": "Shortcode IG",
                     "name": "goza_sc_ig",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -995,7 +973,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -1008,6 +985,7 @@
             "key": "field_641481fe380ed",
             "label": "Color",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -1017,7 +995,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "placement": "top",
             "endpoint": 0
         },
@@ -1025,6 +1002,7 @@
             "key": "field_64148415cfc43",
             "label": "Header Color",
             "name": "goza_header_color_op",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1034,13 +1012,13 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_64148460cfc44",
                     "label": "Header background color",
                     "name": "goza_header_bg_color",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1050,7 +1028,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "#FFF",
                     "enable_opacity": 1,
                     "return_format": "string"
@@ -1059,6 +1036,7 @@
                     "key": "field_64148480cfc45",
                     "label": "Header Text Color",
                     "name": "goza_header_txt_color",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1068,7 +1046,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "#282828",
                     "enable_opacity": 1,
                     "return_format": "string"
@@ -1077,6 +1054,7 @@
                     "key": "field_64181ae41ac7b",
                     "label": "Background Menu",
                     "name": "goza_bg_menu",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1094,7 +1072,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "#213e8c"
+                    "default_value": "#213e8c",
+                    "enable_opacity": false,
+                    "return_format": "string"
                 }
             ]
         },
@@ -1102,6 +1082,7 @@
             "key": "field_641484a2cfc46",
             "label": "Top Bar Color",
             "name": "goza_topbar_color_op",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1111,13 +1092,13 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_641484d9cfc47",
                     "label": "Top bar background color",
                     "name": "goza_topbar_bg_color",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1127,12 +1108,15 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "#000"
+                    "default_value": "#000",
+                    "enable_opacity": false,
+                    "return_format": "string"
                 },
                 {
                     "key": "field_641484eccfc48",
                     "label": "Top bar text color",
                     "name": "goza_topbar_text_color",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1142,7 +1126,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "#FFF",
                     "enable_opacity": 1,
                     "return_format": "string"
@@ -1153,6 +1136,7 @@
             "key": "field_6414850acfc49",
             "label": "Footer Color",
             "name": "goza_ft_color_op",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1168,6 +1152,7 @@
                     "key": "field_6417df017cf86",
                     "label": "Footer Heading Color",
                     "name": "goza_ft_heading_color",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1177,12 +1162,15 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "#FFFFFF"
+                    "default_value": "#FFFFFF",
+                    "enable_opacity": false,
+                    "return_format": "string"
                 },
                 {
                     "key": "field_64148534cfc4a",
                     "label": "Footer Text Color",
                     "name": "goza_ft_txt_color",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1192,7 +1180,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "#c3c3c3",
                     "enable_opacity": 1,
                     "return_format": "string"
@@ -1201,6 +1188,7 @@
                     "key": "field_64148544cfc4b",
                     "label": "Footer background color",
                     "name": "goza_ft_bg_color",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1210,7 +1198,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "#000",
                     "enable_opacity": 1,
                     "return_format": "string"
@@ -1219,6 +1206,7 @@
                     "key": "field_6417dd4e44b33",
                     "label": "Socket text color",
                     "name": "goza_socket_txt_color",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1228,12 +1216,15 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "#FFFFFF"
+                    "default_value": "#FFFFFF",
+                    "enable_opacity": false,
+                    "return_format": "string"
                 },
                 {
                     "key": "field_64148576cfc4c",
                     "label": "Socket background color",
                     "name": "goza_socket_bg_color",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1243,7 +1234,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "#213e8c",
                     "enable_opacity": 1,
                     "return_format": "string"
@@ -1254,6 +1244,7 @@
             "key": "field_64148652fae73",
             "label": "Link Color",
             "name": "goza_link_color_op",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1269,6 +1260,7 @@
                     "key": "field_64148678fae74",
                     "label": "Link color",
                     "name": "link_color",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1278,7 +1270,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "#d41b65",
                     "enable_opacity": 1,
                     "return_format": "string"
@@ -1287,6 +1278,7 @@
                     "key": "field_6414868ffae75",
                     "label": "Link hover color",
                     "name": "link_hover_color",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1296,7 +1288,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "#d41b65",
                     "enable_opacity": 1,
                     "return_format": "string"
@@ -1307,6 +1298,7 @@
             "key": "field_641486b5fae76",
             "label": "Typography",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -1316,7 +1308,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "placement": "top",
             "endpoint": 0
         },
@@ -1324,6 +1315,7 @@
             "key": "field_641489f42a723",
             "label": "Body",
             "name": "typography_body",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1339,6 +1331,7 @@
                     "key": "field_64148a362a724",
                     "label": "Select font family",
                     "name": "body_font_family",
+                    "aria-label": "",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
@@ -1357,7 +1350,7 @@
                         "Roboto": "Roboto",
                         "Calligraffitti": "Calligraffitti"
                     },
-                    "default_value": [],
+                    "default_value": false,
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
@@ -1369,6 +1362,7 @@
                     "key": "field_64148a4e2a725",
                     "label": "Select font-weight",
                     "name": "body_font_weight",
+                    "aria-label": "",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
@@ -1389,17 +1383,7 @@
                         "800": "800",
                         "900": "900"
                     },
-                    "default_value": [
-                        400,
-                        100,
-                        200,
-                        300,
-                        500,
-                        600,
-                        700,
-                        800,
-                        900
-                    ],
+                    "default_value": 400,
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 1,
@@ -1411,6 +1395,7 @@
                     "key": "field_64148a722a726",
                     "label": "Enter font size (px)",
                     "name": "body_font_size",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1420,7 +1405,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -1431,6 +1415,7 @@
                     "key": "field_64148a8f2a727",
                     "label": "Enter line height",
                     "name": "body_line_height",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1450,6 +1435,7 @@
                     "key": "field_64148aa22a728",
                     "label": "Enter letter spacing (px)",
                     "name": "body_letter_spacing",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1459,7 +1445,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -1470,6 +1455,7 @@
                     "key": "field_6417d8d6c484b",
                     "label": "Select color",
                     "name": "body_color",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1479,7 +1465,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "#666"
+                    "default_value": "#666",
+                    "enable_opacity": false,
+                    "return_format": "string"
                 }
             ]
         },
@@ -1487,6 +1475,7 @@
             "key": "field_64148b0803060",
             "label": "Heading",
             "name": "typography_heading",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1502,6 +1491,7 @@
                     "key": "field_64148b4703061",
                     "label": "Select font family",
                     "name": "heading_font_family",
+                    "aria-label": "",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
@@ -1520,7 +1510,7 @@
                         "Roboto": "Roboto",
                         "Calligraffitti": "Calligraffitti"
                     },
-                    "default_value": [],
+                    "default_value": false,
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 1,
@@ -1532,6 +1522,7 @@
                     "key": "field_64148b5803062",
                     "label": "Select font-weight",
                     "name": "heading_font_weight",
+                    "aria-label": "",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
@@ -1552,7 +1543,7 @@
                         "800": "800",
                         "900": "900"
                     },
-                    "default_value": [],
+                    "default_value": false,
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
@@ -1564,6 +1555,7 @@
                     "key": "field_641528901daa6",
                     "label": "Select font-style",
                     "name": "heading_font_style",
+                    "aria-label": "",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
@@ -1577,7 +1569,7 @@
                         "normal": "Normal",
                         "italic": "Italic"
                     },
-                    "default_value": [],
+                    "default_value": false,
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
@@ -1589,6 +1581,7 @@
                     "key": "field_6417c9ade6837",
                     "label": "Enter letter-spacing (px)",
                     "name": "heading_letter_spacing",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1608,6 +1601,7 @@
                     "key": "field_6417d8f5c484c",
                     "label": "Select Color",
                     "name": "heading_color",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -1617,7 +1611,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "#333"
+                    "default_value": "#333",
+                    "enable_opacity": false,
+                    "return_format": "string"
                 }
             ]
         },
@@ -1625,6 +1621,7 @@
             "key": "field_64148bef4c44e",
             "label": "H1 font style",
             "name": "h1_font_style",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1640,6 +1637,7 @@
                     "key": "field_64148c224c44f",
                     "label": "Enter font size (px)",
                     "name": "font_size",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1649,7 +1647,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -1660,6 +1657,7 @@
                     "key": "field_64148c354c450",
                     "label": "Enter line height",
                     "name": "line_height",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1681,6 +1679,7 @@
             "key": "field_64148c7f6f56b",
             "label": "H2 font style",
             "name": "h2_font_style",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1696,6 +1695,7 @@
                     "key": "field_64148c7f6f56c",
                     "label": "Enter font size (px)",
                     "name": "font_size",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1705,7 +1705,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -1716,6 +1715,7 @@
                     "key": "field_64148c7f6f56d",
                     "label": "Enter line height",
                     "name": "line_height",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1737,6 +1737,7 @@
             "key": "field_64148ce9bb1ba",
             "label": "H3 font style",
             "name": "h3_font_style",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1752,6 +1753,7 @@
                     "key": "field_64148ce9bb1bb",
                     "label": "Enter font size (px)",
                     "name": "font_size",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1761,7 +1763,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -1772,6 +1773,7 @@
                     "key": "field_64148ce9bb1bc",
                     "label": "Enter line height",
                     "name": "line_height",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1793,6 +1795,7 @@
             "key": "field_64148cffbb1be",
             "label": "H4 font style",
             "name": "h4_font_style",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1808,6 +1811,7 @@
                     "key": "field_64148d00bb1bf",
                     "label": "Enter font size (px)",
                     "name": "font_size",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1817,7 +1821,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -1828,6 +1831,7 @@
                     "key": "field_64148d00bb1c0",
                     "label": "Enter line height",
                     "name": "line_height",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1849,6 +1853,7 @@
             "key": "field_64148d0dbb1c2",
             "label": "H5 font style",
             "name": "h5_font_style",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1864,6 +1869,7 @@
                     "key": "field_64148d0dbb1c3",
                     "label": "Enter font size (px)",
                     "name": "font_size",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1873,7 +1879,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -1884,6 +1889,7 @@
                     "key": "field_64148d0dbb1c4",
                     "label": "Enter line height",
                     "name": "line_height",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1905,6 +1911,7 @@
             "key": "field_64148d1dbb1c7",
             "label": "H6 font style",
             "name": "h6_font_style",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1920,6 +1927,7 @@
                     "key": "field_64148d1dbb1c8",
                     "label": "Enter font size (px)",
                     "name": "font_size",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1929,7 +1937,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "aria-label": "",
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -1940,6 +1947,7 @@
                     "key": "field_64148d1dbb1c9",
                     "label": "Enter line height",
                     "name": "line_height",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1973,7 +1981,8 @@
     "label_placement": "top",
     "instruction_placement": "field",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1679303015
+    "show_in_rest": 0,
+    "modified": 1679670864
 }

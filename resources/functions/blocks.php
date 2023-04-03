@@ -19,8 +19,6 @@ function goza_load_blocks()
     foreach ($blocks as $block) {
         if (file_exists(get_template_directory() . '/resources/blocks/' . $block . '/block.json')) {
             register_block_type(get_template_directory() . '/resources/blocks/' . $block . '/block.json');
-            wp_register_style('block-' . $block, get_template_directory_uri() . '/resources/blocks/' . $block . '/css/style.css', null, THEME_VERSION);
-            wp_register_script('block-' . $block, get_template_directory_uri() . '/resources/blocks/' . $block . '/js/script.js', ['jquery'], THEME_VERSION, true);
             if (file_exists(get_template_directory() . '/resources/blocks/' . $block . '/init.php')) {
                 include_once get_template_directory() . '/resources/blocks/' . $block . '/init.php';
             }
@@ -62,14 +60,11 @@ function goza_block_categories($categories)
 
     if ($include) {
         $categories = array_merge(
-            $categories,
-            [
-                [
+            $categories, [[
                     'slug'  => 'goza-theme',
                     'title' => __('Goza Theme', 'goza'),
                     'icon'  => ''
-                ]
-            ]
+                ]]
         );
     }
 
