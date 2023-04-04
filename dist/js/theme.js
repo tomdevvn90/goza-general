@@ -25,14 +25,18 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
   var beEventsListing = function beEventsListing() {
     var $block = $('.be-events-listing-block');
     if ($block.length === 0) return;
-    var $btnToggle = $block.find('.item-event--icon-toggle');
-    $btnToggle.click(function (e) {
-      e.preventDefault();
-      $('.item-event').removeClass('__is-current');
-      $('.item-event').find('.item-event--excerpt').hide('slow');
-      $(this).parents('.item-event').addClass('__is-current');
-      $(this).parents('.item-event').find('.item-event--excerpt').show('slow');
-    });
+    var $tplDefault = $('.be-events-listing-block.is-style-default');
+    if ($tplDefault.length > -0) {
+      $tplDefault.find('.item-event').first().removeClass('__hide');
+      $tplDefault.find('.item-event').first().find('.item-event--excerpt').show('slow');
+      $(document).on('click', '.item-event.__hide .item-event--icon-toggle', function (e) {
+        e.preventDefault();
+        $('.item-event').addClass('__hide');
+        $('.item-event').find('.item-event--excerpt').hide('slow');
+        $(this).parents('.item-event').removeClass('__hide');
+        $(this).parents('.item-event').find('.item-event--excerpt').show('slow');
+      });
+    }
   };
   $(window).on("scroll", function () {});
   $(document).ready(function () {
@@ -300,9 +304,9 @@ aos__WEBPACK_IMPORTED_MODULE_2___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-module.exports = __webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+module.exports = __webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
 
 
 /***/ })

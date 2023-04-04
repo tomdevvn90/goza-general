@@ -22,6 +22,11 @@
             font-weight: 600;
             margin: 0;
             padding: 0;
+
+            @media screen and (max-width: 767px){
+                font-size: 20px;
+                line-height: 28px;
+            }
             > a{
                 color: inherit;
                 font-size: inherit;
@@ -92,6 +97,14 @@
             padding-left: 50px;
             background-color: #ffffff;
             border-radius: 2px;
+
+            @media screen and (max-width: 991px){
+                padding: 40px 30px;
+            }
+
+            @media screen and (max-width: 767px){
+                padding: 40px 15px;
+            }
         }
 
         .item-event{
@@ -99,8 +112,14 @@
             &-inner{
                 display: flex;
                 justify-content: space-between;
+                @media screen and (max-width: 767px){
+                    flex-wrap: wrap;
+                }
                 &-left{
                     display: flex;
+                    @media screen and (max-width: 767px){
+                        flex-wrap: wrap;
+                    }
                 }
 
                 &-right{
@@ -130,7 +149,10 @@
                     line-height: 30px;
                     font-size: 23px;
                     font-weight: 100;
-                    transition: all 0.3s ease;
+                }
+
+                &:hover{
+                    background-color: #000;
                 }
             }
 
@@ -150,6 +172,11 @@
                 padding-left: 45px;
                 padding-top: 20px;
                 box-sizing: border-box;
+                padding-right: 20px;
+
+                @media screen and (max-width: 767px){
+                    padding-left: 0;
+                }
             }
 
             &--excerpt{
@@ -177,6 +204,15 @@
                 padding-bottom: 20px;
                 border-bottom: #acacac dashed 1px;
                 margin-bottom: 20px;
+            }
+
+            &:not(.__hide){
+                .item-event--icon-toggle{
+                    &::before{
+                        content: "_";
+                        line-height: 9px;
+                    }
+                }
             }
         }
     }

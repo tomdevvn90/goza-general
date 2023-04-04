@@ -13144,6 +13144,13 @@ h6 {
   padding: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .be-events-listing-block .item-event--name {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
 .be-events-listing-block .item-event--name > a {
   color: inherit;
   font-size: inherit;
@@ -13212,6 +13219,18 @@ h6 {
   border-radius: 2px;
 }
 
+@media screen and (max-width: 991px) {
+  .be-events-listing-block.is-style-default .be-events-listing-block-inner {
+    padding: 40px 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-default .be-events-listing-block-inner {
+    padding: 40px 15px;
+  }
+}
+
 .be-events-listing-block.is-style-default .item-event {
   height: auto;
 }
@@ -13221,8 +13240,20 @@ h6 {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-default .item-event-inner {
+    flex-wrap: wrap;
+  }
+}
+
 .be-events-listing-block.is-style-default .item-event-inner-left {
   display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-default .item-event-inner-left {
+    flex-wrap: wrap;
+  }
 }
 
 .be-events-listing-block.is-style-default .item-event-inner-right {
@@ -13253,7 +13284,10 @@ h6 {
   line-height: 30px;
   font-size: 23px;
   font-weight: 100;
-  transition: all 0.3s ease;
+}
+
+.be-events-listing-block.is-style-default .item-event--icon-toggle:hover {
+  background-color: #000;
 }
 
 .be-events-listing-block.is-style-default .item-event--thumbnail {
@@ -13273,6 +13307,13 @@ h6 {
   padding-left: 45px;
   padding-top: 20px;
   box-sizing: border-box;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-default .item-event--meta {
+    padding-left: 0;
+  }
 }
 
 .be-events-listing-block.is-style-default .item-event--excerpt {
@@ -13301,6 +13342,11 @@ h6 {
   padding-bottom: 20px;
   border-bottom: #acacac dashed 1px;
   margin-bottom: 20px;
+}
+
+.be-events-listing-block.is-style-default .item-event:not(.__hide) .item-event--icon-toggle::before {
+  content: "_";
+  line-height: 9px;
 }
 
 .tribe-common h1,

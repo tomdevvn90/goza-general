@@ -5211,6 +5211,13 @@
   padding: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .be-events-listing-block .item-event--name {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
 .be-events-listing-block .item-event--name > a {
   color: inherit;
   font-size: inherit;
@@ -5279,6 +5286,18 @@
   border-radius: 2px;
 }
 
+@media screen and (max-width: 991px) {
+  .be-events-listing-block.is-style-default .be-events-listing-block-inner {
+    padding: 40px 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-default .be-events-listing-block-inner {
+    padding: 40px 15px;
+  }
+}
+
 .be-events-listing-block.is-style-default .item-event {
   height: auto;
 }
@@ -5288,8 +5307,20 @@
   justify-content: space-between;
 }
 
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-default .item-event-inner {
+    flex-wrap: wrap;
+  }
+}
+
 .be-events-listing-block.is-style-default .item-event-inner-left {
   display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-default .item-event-inner-left {
+    flex-wrap: wrap;
+  }
 }
 
 .be-events-listing-block.is-style-default .item-event-inner-right {
@@ -5320,7 +5351,10 @@
   line-height: 30px;
   font-size: 23px;
   font-weight: 100;
-  transition: all 0.3s ease;
+}
+
+.be-events-listing-block.is-style-default .item-event--icon-toggle:hover {
+  background-color: #000;
 }
 
 .be-events-listing-block.is-style-default .item-event--thumbnail {
@@ -5340,6 +5374,13 @@
   padding-left: 45px;
   padding-top: 20px;
   box-sizing: border-box;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-default .item-event--meta {
+    padding-left: 0;
+  }
 }
 
 .be-events-listing-block.is-style-default .item-event--excerpt {
@@ -5368,6 +5409,11 @@
   padding-bottom: 20px;
   border-bottom: #acacac dashed 1px;
   margin-bottom: 20px;
+}
+
+.be-events-listing-block.is-style-default .item-event:not(.__hide) .item-event--icon-toggle::before {
+  content: "_";
+  line-height: 9px;
 }
 
 .block-editor-block-list__block .be-testominials-block-carousel {
@@ -5552,6 +5598,13 @@
 .editor-styles-wrapper .block-editor-block-list__layout .be-icon-box-block.is-style-2 .be-icon-box-block--heading {
   line-height: 28px;
   font-size: 24px;
+}
+
+.editor-styles-wrapper .block-editor-block-list__layout .be-events-listing-block .item-event--name {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+  margin: 0;
 }
 
 .is-root-container p,

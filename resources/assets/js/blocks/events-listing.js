@@ -12,15 +12,23 @@ import 'slick-carousel/slick/slick-theme.css';
         const $block = $('.be-events-listing-block');
 		if ($block.length === 0) return;
 
-        const $btnToggle = $block.find('.item-event--icon-toggle');
+        const $tplDefault = $('.be-events-listing-block.is-style-default');
 
-        $btnToggle.click(function(e){
-            e.preventDefault();
-            $('.item-event').removeClass('__is-current')
-            $('.item-event').find('.item-event--excerpt').hide('slow')
-            $(this).parents('.item-event').addClass('__is-current');
-            $(this).parents('.item-event').find('.item-event--excerpt').show('slow')
-        })
+        if($tplDefault.length > -0){
+           
+            $tplDefault.find('.item-event').first().removeClass('__hide');
+            $tplDefault.find('.item-event').first().find('.item-event--excerpt').show('slow')
+
+            $(document).on( 'click', '.item-event.__hide .item-event--icon-toggle', function(e){    
+                e.preventDefault();
+
+                $('.item-event').addClass('__hide')
+                $('.item-event').find('.item-event--excerpt').hide('slow')
+
+                $(this).parents('.item-event').removeClass('__hide')
+                $(this).parents('.item-event').find('.item-event--excerpt').show('slow')
+            })
+        }
     }
 
 

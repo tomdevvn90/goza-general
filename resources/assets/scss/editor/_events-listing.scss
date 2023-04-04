@@ -1,0 +1,12 @@
+.editor-styles-wrapper .block-editor-block-list__layout{
+    .be-events-listing-block{
+        .item-event{
+            &--name{
+                font-size: 22px;
+                line-height: 30px;
+                font-weight: 600;
+                margin: 0;
+            }
+        }
+    }
+}
