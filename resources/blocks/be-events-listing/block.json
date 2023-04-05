@@ -1,10 +1,9 @@
 {
-    "name": "goza/be-posts-slider",
-    "title": "Be Post Slider",
-    "description": "Display testimonials & gain instant credibility.",
+    "name": "goza/be-events-listing",
+    "title": "Be Events Listing",
     "category": "goza-theme",
-    "icon": "slides",
-    "keywords": ["carousel", "posts"],
+    "icon": "editor-ul",
+    "keywords": ["event", "listing", "goza"],
     "acf": {
         "mode": "preview",
         "renderTemplate": "render.php"
@@ -17,7 +16,9 @@
         { "name": "2", "label": "Style 2" },
         { "name": "3", "label": "Style 3" },
         { "name": "4", "label": "Style 4" },
-        { "name": "5", "label": "Style 5" }
+        { "name": "5", "label": "Style 5" },
+        { "name": "6", "label": "Style 6" }
+        
     ],
     "align": "full"
   }

@@ -1,10 +1,13 @@
 {
-    "name": "goza/be-posts-slider",
-    "title": "Be Post Slider",
-    "description": "Display testimonials & gain instant credibility.",
+    "name": "goza/be-give-grid",
+    "title": "Be Give Grid",
+    "description": "Display Give Donate Grid",
+    "editorStyle": "file:./css/editor.css",
+    "style": "block-be-give-grid",
+    "script": "block-be-give-grid",
     "category": "goza-theme",
-    "icon": "slides",
-    "keywords": ["carousel", "posts"],
+    "icon": "grid-view",
+    "keywords": ["grid", "give"],
     "acf": {
         "mode": "preview",
         "renderTemplate": "render.php"
