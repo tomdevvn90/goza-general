@@ -1,5 +1,8 @@
 <?php
 $bg_image = __get_field('goza_ft_bg_image', 'option');
+if ($bg_image) {
+    $style = 'background-image: url(' . $bg_image . ')';
+}
 
 //general
 $goza_ft_general_op = __get_field('goza_ft_general_op', 'option');
@@ -11,7 +14,7 @@ if ($goza_ft_general_op) {
 //quicklink
 $goza_ft_quick_links_op = __get_field('goza_ft_quick_links_op', 'option');
 if ($goza_ft_quick_links_op) {
-    $goza_ql_heading = $goza_ft_quick_links_ops['goza_ql_heading'];
+    $goza_ql_heading = $goza_ft_quick_links_op['goza_ql_heading'];
 }
 //newsletter
 $goza_sub_news_op = __get_field('goza_sub_news_op', 'option');
@@ -32,7 +35,7 @@ if ($goza_ft_gallery_op) {
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
 ?>
 
-<footer id="site-footer" class="main-footer footer-ngo">
+<footer id="site-footer" class="main-footer footer-ngo" style="<?= esc_attr($style) ?>">
     <div class="container">
         <div class="row">
             <div class="col-md-3 main-footer-widget">
