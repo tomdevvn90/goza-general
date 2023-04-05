@@ -1,7 +1,7 @@
 <?php
 $bg_image = __get_field('goza_ft_bg_image', 'option');
 if ($bg_image) {
-    $style = 'background-image: url(' . $bg_image['url'] . ')';
+    $style = 'background-image: url(' . $bg_image . ')';
 }
 //general
 $goza_ft_general_op = __get_field('goza_ft_general_op', 'option');

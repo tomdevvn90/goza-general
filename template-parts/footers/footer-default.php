@@ -1,7 +1,9 @@
 <?php
 //Background footer
 $bg_footer = __get_field('goza_ft_bg_image', 'option');
-
+if ($bg_image) {
+    $style = 'background-image: url(' . $bg_image . ')';
+}
 //General
 $goza_ft_general_op = __get_field('goza_ft_general_op', 'option');
 if ($goza_ft_general_op) {
@@ -27,10 +29,10 @@ if ($goza_sub_news_op) {
 //
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
 ?>
-<footer id="site-footer" class="main-footer footer-default" style="background-image: url(<?= $bg_footer ? $bg_footer : 'none'; ?>);">
+<footer id="site-footer" class="main-footer footer-default" style="<?= esc_attr($style) ?>">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-lg-4">
+            <div class="col-md-3 col-lg-4 main-footer-widget">
                 <?php if (isset($goza_general_heading) && !empty($goza_general_heading)) { ?>
                     <h3 class='main-footer-heading heading-general'><?= esc_attr($goza_general_heading) ?></h3>
                 <?php } ?>
@@ -38,7 +40,7 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                     <div class='main-footer-content'><?= $goza_general_content ?></div>
                 <?php } ?>
             </div>
-            <div class="col-md-3 col-lg-2">
+            <div class="col-md-3 col-lg-2 main-footer-widget">
                 <?php if (isset($goza_ql_heading) && !empty($goza_ql_heading)) { ?>
                     <h3 class='main-footer-heading'><?= esc_attr($goza_ql_heading) ?></h3>
                 <?php } ?>
@@ -52,7 +54,7 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                 ]);
                 ?>
             </div>
-            <div class="col-md-3 col-lg-2">
+            <div class="col-md-3 col-lg-2 main-footer-widget">
                 <?php if (isset($goza_social_heading) && !empty($goza_social_heading)) { ?>
                     <h3 class='main-footer-heading'><?= esc_attr($goza_social_heading) ?></h3>
                 <?php } ?>
@@ -68,7 +70,7 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                 endif;
                 ?>
             </div>
-            <div class="col-md-3 col-lg-4">
+            <div class="col-md-3 col-lg-4 main-footer-widget">
                 <?php if (isset($goza_newsletter_heading) && !empty($goza_newsletter_heading)) { ?>
                     <h3 class='main-footer-heading'><?= esc_attr($goza_newsletter_heading) ?></h3>
                 <?php } ?>

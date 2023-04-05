@@ -492,14 +492,14 @@
             "choices": {
                 "default": "Layout Default",
                 "water": "Layout Goza Water",
-                "organization": "Layout Goza Orgazination",
-                "ngo": "Layout Goza Ngo"
+                "ngo": "Layout Goza Ngo",
+                "organization": "Layout Goza Orgazination"
             },
             "default_value": false,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
             "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
             "ajax": 0,
             "placeholder": ""
         },
@@ -1912,5 +1912,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680535443
+    "modified": 1680703393
 }
