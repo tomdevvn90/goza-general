@@ -20,26 +20,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_64147540eeee8",
-            "label": "Site width (px)",
-            "name": "goza_site_width",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "1140px",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_6414759beeee9",
             "label": "Enable preloader",
             "name": "goza_enable_preloader",
@@ -276,15 +256,15 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33.3333",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "message": "",
             "default_value": 0,
-            "ui": 1,
             "ui_on_text": "",
-            "ui_off_text": ""
+            "ui_off_text": "",
+            "ui": 1
         },
         {
             "key": "field_64147942cef24",
@@ -296,15 +276,15 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33.3333",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "message": "",
             "default_value": 0,
-            "ui": 1,
             "ui_on_text": "",
-            "ui_off_text": ""
+            "ui_off_text": "",
+            "ui": 1
         },
         {
             "key": "field_64147a06cef27",
@@ -316,99 +296,47 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33.3333",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "message": "",
             "default_value": 0,
-            "ui": 1,
             "ui_on_text": "",
-            "ui_off_text": ""
+            "ui_off_text": "",
+            "ui": 1
         },
         {
-            "key": "field_641819986cc4c",
-            "label": "Header Button Label",
-            "name": "goza_header_btn_label",
+            "key": "field_6421a8bf4e2f3",
+            "label": "Enable Cart Icon",
+            "name": "goza_enable_cart",
             "aria-label": "",
-            "type": "text",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
-            "default_value": "Donate Now",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_641819ba6cc4d",
-            "label": "Header Button Link",
-            "name": "goza_header_btn_link",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_64181a088467c",
-            "label": "Header Link Label",
-            "name": "goza_header_link_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_64147910cef23",
-                        "operator": "==",
-                        "value": "menu-center"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Become A Volunteer",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
         },
         {
             "key": "field_64181a338467d",
-            "label": "Header Link Url",
-            "name": "goza_header_link_url",
+            "label": "Header Button",
+            "name": "goza_header_button",
             "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_64147910cef23",
-                        "operator": "==",
-                        "value": "menu-center"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -589,8 +517,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "preview_size": "thumbnail",
+            "return_format": "url",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -598,7 +525,8 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "preview_size": "thumbnail"
         },
         {
             "key": "field_64147e39ee679",
@@ -1984,5 +1912,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679670864
+    "modified": 1680535443
 }

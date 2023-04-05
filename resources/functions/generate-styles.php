@@ -49,9 +49,6 @@ function goza_theme_options_styles()
 {
     $custom_css = '';
 
-    //container
-    $container_width = __get_field('goza_site_width', 'option');
-
     //typo body
     $typography_body = __get_field('typography_body', 'option');
     $body_font_family = $typography_body['body_font_family'] . ', sans-serif';
@@ -122,12 +119,6 @@ function goza_theme_options_styles()
     $topbar_color_op = __get_field('goza_topbar_color_op', 'option');
     $topbar_bg_color = $topbar_color_op['goza_topbar_bg_color'];
     $topbar_text_color = $topbar_color_op['goza_topbar_text_color'];
-
-    $custom_css .= "@media (min-width: 1400px) {";
-    $custom_css .= ":root {
-        --max-width: {$container_width};    
-    }";
-    $custom_css .= "}";
 
     $var_styles = [
         "--body-family" => $body_font_family,
