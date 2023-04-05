@@ -1,4 +1,103 @@
 .be-events-listing-block{
+    &.is-style-3{
+        .item-event{
+            &-inner{
+                text-align: center;
+            }
+            
+            &--date{
+                display: inline-block;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 16px;
+                text-align: center;
+                color: #fff;
+                background: var(--link-color);
+                padding: 5px 15px;
+                border-radius: 3px;
+                width: fit-content;
+                > span, i{
+                    color: inherit;
+                }
+
+                > span{
+                    font-size: inherit;
+                    font-family: inherit;
+                    font-weight: inherit;
+                    line-height: inherit;
+                    text-transform: inherit;
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+            }
+
+            &--name{
+                font-size: 24px;
+                line-height: 26px;
+                color: var(--heading-color);
+                margin-top: 10px;
+
+                @media screen and (max-width: 991px){
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+
+                @media screen and (max-width: 767px){
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+
+            &--venue{
+                color: var(--link-color);
+                margin-top: 8px;
+                > span{
+                    font-size: inherit;
+                    font-family: inherit;
+                    font-weight: inherit;
+                    line-height: inherit;
+                    text-transform: inherit;
+                    display: inline-block;
+                }
+            }
+
+            &:not(:last-child){
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+
+    &.is-style-4{
+        .item-event{
+            &-inner{
+                text-align: center;
+                box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+                border-radius: 4px;
+                margin: 0 0 55px 0;
+                padding: 0px 35px 15px 35px;
+                background: #fff; 
+                display: flex;           
+            }
+
+            &--thumbnail{
+                width: 200px;
+                height: auto;
+                img{
+                    height: 210px;
+                }
+            }
+
+            &--meta{
+                padding-left: 30px;
+            }
+        }
+    }
+
+}
+
+
+.be-events-listing-block{
 
     .item-event{
         &-inner{

@@ -10,8 +10,12 @@ function be_item_event($block){
             break;
 
         case "is-style-3":
-            
+            be_template_events_listing_style_3();
             break; 
+
+        case "is-style-4":
+            be_template_events_listing_style_4();
+            break;     
 
         default:
             be_template_events_listing_default();
@@ -88,4 +92,70 @@ function be_template_events_listing_default(){
     </div>
 <?php }
 
+function be_template_events_listing_style_3(){
+    $day         = tribe_get_start_date( get_the_ID(), true, 'j F');
+    $time        = tribe_get_start_date( get_the_ID(), true, 'G a');
+    $venue       = tribe_is_event_venue(get_the_ID());
+    // echo "<pre>";
+    // echo print_r($venue);
+    // echo "</pre>";
+    ?>
+    <div class="item-event"> 
+        <div class="item-event-inner">
+            <div class="item-event--date"> 
+                <span class="item-event--date-day"> <?php echo $day ?> </span>
+                <span class="item-event--date-time">  
+                    <i class="fa fa-clock-o" aria-hidden="true"> </i>
+                    <?php echo $time ?>
+                </span>
+            </div>
+
+            <h3 class="item-event--name"> 
+                <a href="<?php the_permalink() ?>"> <?php the_title() ?> </a>
+            </h3>
+
+            <div class="item-event--venue"> 
+                <i class="fa fa-map-marker" aria-hidden="true"> </i>
+                <span> Location </span>
+            </div>
+        </div>
+    </div>    
+<?php }
+
+function be_template_events_listing_style_4(){ 
+        $ev_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+        $day        = tribe_get_start_date( get_the_ID(), true, 'j F Y');
+        $time       = tribe_get_start_date( get_the_ID(), true, 'G a');
+    ?>
+    <div class="item-event"> 
+        <div class="item-event-inner"> 
+            <div class="item-event--thumbnail"> 
+                <img src="<?php echo $ev_img_url ?>" alt="<?php the_title()?>" />
+            </div>
+
+            <div class="item-event--meta"> 
+                <h3 class="item-event--name"> 
+                    <a href="<?php the_permalink() ?>"> <?php the_title() ?> </a>
+                </h3>
+
+                <div class="item-event--venue"> 
+                    <i class="fa fa-map-marker" aria-hidden="true"> </i>
+                    <span> Location </span>
+                </div>  
+                
+                <div class="item-event--start-date"> 
+                    <span class="item-event--start-date-day"> <?php echo $day ?> </span>
+                    <span class="item-event--start-date-time"> <?php echo $time ?> </span>
+                </div>
+
+                <div class="item-event--cta"> 
+                    <a href="<?php the_permalink() ?>"> 
+                        View Details
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>    
+<?php }
 ?>
