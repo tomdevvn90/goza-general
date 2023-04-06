@@ -31,8 +31,6 @@ if ($goza_ft_gallery_op) {
 //newsletter
 $goza_sub_news_op = __get_field('goza_sub_news_op', 'option');
 if ($goza_sub_news_op) {
-    $goza_newsletter_heading = $goza_sub_news_op['goza_newsletter_heading'];
-    $goza_newsletter_desc = $goza_sub_news_op['goza_newsletter_desc'];
     $goza_sc_sub_form = $goza_sub_news_op['goza_sc_sub_form'];
 }
 
@@ -68,12 +66,17 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                     <?php if ($goza_ft_gallery) { ?>
                         <div id="main-footer-gallery-list" class="main-footer-gallery-list">
                             <?php foreach ($goza_ft_gallery as $item) { ?>
-                                    <a class="main-footer-gallery-item" href="<?= esc_url($item['url']); ?>" title="<?= esc_attr($item['title']); ?>">
-                                        <img src="<?= esc_url($item['url']); ?>" alt="<?= esc_attr($item['alt']); ?>" />
-                                        <span class="main-footer-gallery-list-item-icon"><i class="icon ion-ios-plus-empty"></i></span>
-                                    </a>
+                                <a class="main-footer-gallery-item" href="<?= esc_url($item['url']); ?>" title="<?= esc_attr($item['title']); ?>">
+                                    <img src="<?= esc_url($item['url']); ?>" alt="<?= esc_attr($item['alt']); ?>" />
+                                    <span class="main-footer-gallery-list-item-icon"><i class="icon ion-ios-plus-empty"></i></span>
+                                </a>
                             <?php } ?>
                         </div>
+                    <?php } ?>
+                </div>
+                <div class="main-footer-newsletter">
+                    <?php if (isset($goza_sc_sub_form) && !empty($goza_sc_sub_form)) { ?>
+                        <?= do_shortcode($goza_sc_sub_form) ?>
                     <?php } ?>
                 </div>
             </div>

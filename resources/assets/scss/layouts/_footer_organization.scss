@@ -1,7 +1,10 @@
 .main-footer {
     &.footer-organization {
         padding-top: 90px;
-        padding-bottom: 60px;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 60px;
+        }
 
         .main-footer-widget {
             &:first-child {
@@ -114,6 +117,7 @@
                         overflow: hidden;
                         display: block;
                         position: relative;
+
                         &:hover {
                             .main-footer-gallery-list-item-icon {
                                 visibility: visible;
@@ -168,6 +172,81 @@
                     }
                 }
             }
+
+            .main-footer-newsletter {
+                margin-top: 20px;
+
+                form {
+                    position: relative;
+
+                    &:before {
+                        position: absolute;
+                        content: " ";
+                        height: 60px;
+                        width: 1px;
+                        right: 75px;
+                        top: 50%;
+                        background-color: #c3c3c3;
+                        z-index: 1;
+                        transform: translateY(-50%);
+                    }
+
+                    &::after {
+                        content: "\f003";
+                        font-family: FontAwesome;
+                        font-size: 25px;
+                        position: absolute;
+                        top: 50%;
+                        right: 25px;
+                        color: var(--link-color, inherit);
+                        transform: translateY(-50%);
+                    }
+
+                    .tnp-email {
+                        padding: 28px 90px 28px 25px;
+                        position: relative;
+                        color: var(--footer-text-color, #FFF);
+                        box-sizing: border-box;
+                        font-style: italic;
+                        font-size: 14px;
+                        border-radius: 3px;
+                        border: 1px solid rgba(53, 53, 53, 0.1);
+                        background: transparent;
+                        width: 100%;
+                        max-width: 100%;
+
+                        &:focus {
+                            border: 1px solid rgba(236, 94, 135, 0.5);
+                            -webkit-box-shadow: 0px 0px 5px rgba(236, 94, 135, 0.25);
+                            -moz-box-shadow: 0px 0px 5px rgba(236, 94, 135, 0.25);
+                            box-shadow: none;
+                            outline: none;
+                        }
+                    }
+
+                    .tnp-submit {
+                        border-radius: 3px;
+                        border: none;
+                        background: var(--link-color, inherit); 
+                        color: #fff;
+                        padding: 8px 12px;
+                        vertical-align: top;
+                        font-size: 13px;
+                        line-height: normal;
+                        -webkit-transition: 0.3s;
+                        transition: 0.3s;
+                        position: absolute;
+                        width: 25px;
+                        height: 25px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 25px;
+                        opacity: 0;
+                        z-index: 9;
+                    }
+                }
+
+            }
         }
 
         .main-footer-socket {
@@ -177,7 +256,9 @@
             padding-bottom: 15px;
             text-align: center;
             margin-top: 80px;
-
+            @include media-breakpoint-down(sm) {
+                margin-top: 50px;
+            }
             p {
                 margin-bottom: 0;
                 font-size: 17px;

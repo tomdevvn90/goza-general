@@ -13369,7 +13369,12 @@ h6 {
 
 .main-footer.footer-organization {
   padding-top: 90px;
-  padding-bottom: 60px;
+}
+
+@media (max-width: 767.98px) {
+  .main-footer.footer-organization {
+    padding-top: 60px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -13538,6 +13543,77 @@ h6 {
   transition: 0.3s ease;
 }
 
+.main-footer.footer-organization .main-footer-widget .main-footer-newsletter {
+  margin-top: 20px;
+}
+
+.main-footer.footer-organization .main-footer-widget .main-footer-newsletter form {
+  position: relative;
+}
+
+.main-footer.footer-organization .main-footer-widget .main-footer-newsletter form:before {
+  position: absolute;
+  content: " ";
+  height: 60px;
+  width: 1px;
+  right: 75px;
+  top: 50%;
+  background-color: #c3c3c3;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.main-footer.footer-organization .main-footer-widget .main-footer-newsletter form::after {
+  content: "\F003";
+  font-family: FontAwesome;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  color: var(--link-color, inherit);
+  transform: translateY(-50%);
+}
+
+.main-footer.footer-organization .main-footer-widget .main-footer-newsletter form .tnp-email {
+  padding: 28px 90px 28px 25px;
+  position: relative;
+  color: var(--footer-text-color, #FFF);
+  box-sizing: border-box;
+  font-style: italic;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid rgba(53, 53, 53, 0.1);
+  background: transparent;
+  width: 100%;
+  max-width: 100%;
+}
+
+.main-footer.footer-organization .main-footer-widget .main-footer-newsletter form .tnp-email:focus {
+  border: 1px solid rgba(236, 94, 135, 0.5);
+  box-shadow: none;
+  outline: none;
+}
+
+.main-footer.footer-organization .main-footer-widget .main-footer-newsletter form .tnp-submit {
+  border-radius: 3px;
+  border: none;
+  background: var(--link-color, inherit);
+  color: #fff;
+  padding: 8px 12px;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: normal;
+  transition: 0.3s;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+  opacity: 0;
+  z-index: 9;
+}
+
 .main-footer.footer-organization .main-footer-socket {
   background-color: var(--socket-bg-color, #213e8c);
   color: var(--socket-text-color, #636363);
@@ -13545,6 +13621,12 @@ h6 {
   padding-bottom: 15px;
   text-align: center;
   margin-top: 80px;
+}
+
+@media (max-width: 767.98px) {
+  .main-footer.footer-organization .main-footer-socket {
+    margin-top: 50px;
+  }
 }
 
 .main-footer.footer-organization .main-footer-socket p {
