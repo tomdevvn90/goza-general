@@ -5,6 +5,7 @@ add_action('wp_enqueue_scripts', function () {
 
 	//Global
 	wp_enqueue_style('goza-theme-general-styles', $upload_dir['baseurl'] . '/styles_uploads/variable-css.css', [], THEME_VERSION);
+	wp_enqueue_style('icoions', get_template_directory_uri() . '/dist/css/ionicons.min.css', [], THEME_VERSION);
 	wp_enqueue_style('app-styles', get_template_directory_uri() . '/dist/css/theme.css', [], THEME_VERSION);
 	wp_enqueue_script('manifest-scripts', get_template_directory_uri() . '/dist/js/manifest.js', ['jquery'], THEME_VERSION, true);
 	wp_enqueue_script('vendor-scripts', get_template_directory_uri() . '/dist/js/vendor.js', ['jquery'], THEME_VERSION, true);

@@ -5190,6 +5190,101 @@
   animation-name: hvr-bob-float, hvr-bob;
 }
 
+.be-events-listing-block.is-style-3 .item-event-inner {
+  text-align: center;
+}
+
+.be-events-listing-block.is-style-3 .item-event--date {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  background: var(--link-color);
+  padding: 5px 15px;
+  border-radius: 3px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.be-events-listing-block.is-style-3 .item-event--date > span,
+.be-events-listing-block.is-style-3 .item-event--date i {
+  color: inherit;
+}
+
+.be-events-listing-block.is-style-3 .item-event--date > span {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.be-events-listing-block.is-style-3 .item-event--name {
+  font-size: 24px;
+  line-height: 26px;
+  color: var(--heading-color);
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .be-events-listing-block.is-style-3 .item-event--name {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-3 .item-event--name {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.be-events-listing-block.is-style-3 .item-event--venue {
+  color: var(--link-color);
+  margin-top: 8px;
+}
+
+.be-events-listing-block.is-style-3 .item-event--venue > span {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+  display: inline-block;
+}
+
+.be-events-listing-block.is-style-3 .item-event:not(:last-child) {
+  padding-bottom: 20px;
+}
+
+.be-events-listing-block.is-style-4 .item-event-inner {
+  text-align: center;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin: 0 0 55px 0;
+  padding: 0px 35px 15px 35px;
+  background: #fff;
+  display: flex;
+}
+
+.be-events-listing-block.is-style-4 .item-event--thumbnail {
+  width: 200px;
+  height: auto;
+}
+
+.be-events-listing-block.is-style-4 .item-event--thumbnail img {
+  height: 210px;
+}
+
+.be-events-listing-block.is-style-4 .item-event--meta {
+  padding-left: 30px;
+}
+
 .be-events-listing-block .item-event-inner {
   position: relative;
 }
@@ -5315,11 +5410,13 @@
 
 .be-events-listing-block.is-style-default .item-event-inner-left {
   display: flex;
+  width: calc(100% - 112px);
 }
 
 @media screen and (max-width: 767px) {
   .be-events-listing-block.is-style-default .item-event-inner-left {
     flex-wrap: wrap;
+    width: 100%;
   }
 }
 
@@ -5371,6 +5468,7 @@
 }
 
 .be-events-listing-block.is-style-default .item-event--meta {
+  width: calc(100% - 80px);
   padding-left: 45px;
   padding-top: 20px;
   box-sizing: border-box;
@@ -5380,6 +5478,7 @@
 @media screen and (max-width: 767px) {
   .be-events-listing-block.is-style-default .item-event--meta {
     padding-left: 0;
+    width: 100%;
   }
 }
 
@@ -5387,7 +5486,8 @@
   display: none;
   width: 100%;
   height: auto;
-  transition: all 0.3s ease;
+  margin: 15px 0 0 0;
+  min-width: 100%;
 }
 
 .be-events-listing-block.is-style-default .item-event--excerpt > p {
@@ -5402,7 +5502,6 @@
   line-height: 1.6rem;
   width: 100%;
   margin: 0;
-  transition: all 0.3s ease;
 }
 
 .be-events-listing-block.is-style-default .item-event:not(:last-child) {
@@ -5414,6 +5513,142 @@
 .be-events-listing-block.is-style-default .item-event:not(.__hide) .item-event--icon-toggle::before {
   content: "_";
   line-height: 9px;
+}
+
+.be-events-listing-block.is-style-2 .item-event {
+  margin: 0;
+}
+
+.be-events-listing-block.is-style-2 .item-event-inner {
+  display: flex;
+  align-items: center;
+}
+
+.be-events-listing-block.is-style-2 .item-event--meta {
+  padding-left: 20px;
+}
+
+.be-events-listing-block.is-style-2 .item-event--name {
+  font-size: 24px;
+  line-height: 26px;
+  margin: 5px 0 0 0;
+}
+
+@media screen and (max-width: 991px) {
+  .be-events-listing-block.is-style-2 .item-event--name {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-2 .item-event--name {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.be-events-listing-block.is-style-2 .item-event--start-date {
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: var(--link-color);
+  padding: 25px 10px;
+  width: 100px;
+  min-width: 100px;
+  border-radius: 3px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-2 .item-event--start-date {
+    width: 80px;
+    min-width: 80px;
+  }
+}
+
+.be-events-listing-block.is-style-2 .item-event--start-date__day,
+.be-events-listing-block.is-style-2 .item-event--start-date__month {
+  display: inline-block;
+  width: 100%;
+  font-weight: 700;
+  font-family: var(--body-family);
+  color: #fff;
+}
+
+.be-events-listing-block.is-style-2 .item-event--start-date__month {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-2 .item-event--start-date__month {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+.be-events-listing-block.is-style-2 .item-event--start-date__day {
+  font-size: 30px;
+  line-height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-2 .item-event--start-date__day {
+    font-size: 25px;
+  }
+}
+
+.be-events-listing-block.is-style-2 .item-event--time,
+.be-events-listing-block.is-style-2 .item-event--venue {
+  font-size: 16px;
+  color: var(--link-color);
+}
+
+.be-events-listing-block.is-style-2 .item-event--time svg,
+.be-events-listing-block.is-style-2 .item-event--venue svg {
+  width: 100%;
+  max-width: 15px;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.be-events-listing-block.is-style-2 .item-event--time svg path,
+.be-events-listing-block.is-style-2 .item-event--venue svg path {
+  stroke: var(--link-color);
+}
+
+.be-events-listing-block.is-style-2 .item-event--time {
+  font-weight: 700;
+}
+
+.be-events-listing-block.is-style-2 .item-event--time svg {
+  position: relative;
+  margin-bottom: 3px;
+}
+
+.be-events-listing-block.is-style-2 .item-event--time svg path {
+  fill: var(--link-color);
+}
+
+.be-events-listing-block.is-style-2 .item-event--venue {
+  margin: 8px 0 0 0;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-2 .item-event--venue {
+    margin-top: 5px;
+  }
+}
+
+.be-events-listing-block.is-style-2 .item-event:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .block-editor-block-list__block .be-testominials-block-carousel {
@@ -5605,6 +5840,13 @@
   line-height: 30px;
   font-weight: 600;
   margin: 0;
+}
+
+.editor-styles-wrapper .block-editor-block-list__layout .be-events-listing-block.is-style-3 .item-event--name {
+  font-size: 24px;
+  line-height: 26px;
+  color: var(--heading-color);
+  margin-top: 10px;
 }
 
 .is-root-container p,

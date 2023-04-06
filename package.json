@@ -25,6 +25,7 @@
         "dom4": "^2.1.4",
         "font-awesome": "^4.7.0",
         "jquery": "^3.4.1",
+        "lightgallery": "^2.7.1",
         "slick-carousel": "^1.8.1"
     }
 }

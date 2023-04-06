@@ -1,3 +1,4 @@
+
 import './components/navigation';
 import './components/function';
 import AOS from 'aos';
@@ -7,7 +8,6 @@ AOS.init({
     once: true,
     disable: 'mobile', 
 });
-
 
 import './blocks/hero'
 import './blocks/testimonials'

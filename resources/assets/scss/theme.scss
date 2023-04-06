@@ -17,6 +17,11 @@
 @import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/dropdown";
 
+// import styles
+@import '~lightgallery/scss/lightgallery.scss';
+@import '~lightgallery/scss/lg-zoom.scss';
+@import '~lightgallery/scss/lg-thumbnail.scss';
+
 // font awesome
 @import '~font-awesome/scss/font-awesome';
 
