@@ -63,6 +63,16 @@ function goza_preloader_template()
 }
 
 /**
+ * Menu Mobile template
+ * @return void
+ */
+add_action('goza_hook_menu_mobile', 'goza_menu_mobile_template');
+function goza_menu_mobile_template()
+{
+	load_template(get_template_directory() . '/template-parts/menu-mobile.php', false); 
+}
+
+/**
  * Post loop item template
  *
  * @param Int $post_id

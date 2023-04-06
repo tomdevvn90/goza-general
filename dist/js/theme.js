@@ -214,6 +214,13 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
     //preloader
     var $PRELOADER = $('.goza-preloader');
     $PRELOADER.hide();
+
+    //Back to top
+    $("#back-to-top").click(function () {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 1000);
+    });
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
@@ -231,7 +238,31 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 (function ($) {
   "use strict";
 
-  $(window).on("load", function () {});
+  //Toggle Menu
+  var gozaToggleMenu = function gozaToggleMenu() {
+    $('.nav-link.dropdown-toggle').append('<span class="handle-sub"></span>');
+    $(document).on('click', '.handle-sub', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var el = $(this).closest('.menu-item');
+      $(el).toggleClass('li-active');
+      $(el).children('.sub-menu.dropdown-menu').slideToggle();
+      $(el).find('.handle-sub').toggleClass('active');
+    });
+    var SITE_MOBILE = $('.site-menu-mobile'),
+      MENU_HAMBERGER = $('#goza-hamberger'),
+      $body = $('body'),
+      MENU_CLOSE = $('.off-canvas-menu-closed');
+    MENU_HAMBERGER.click(function () {
+      $body.addClass('--menu-open');
+    });
+    MENU_CLOSE.click(function () {
+      $body.removeClass('--menu-open');
+    });
+  };
+  $(window).on("load", function () {
+    gozaToggleMenu();
+  });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 

@@ -14,11 +14,6 @@ img {
    max-width: 100%;
 }
 
-@media (min-width: 1400px) {
-   .container {
-      max-width: var(--max-width, 1140px) !important;
-   }
-}
 
 *{
    box-sizing: border-box;

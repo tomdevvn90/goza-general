@@ -1,0 +1,128 @@
+.site-header {
+    .goza-header-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 27px 0;
+
+        &--logo {
+            a {
+                display: block;
+
+                img {
+                    max-width: 125px;
+                }
+            }
+        }
+
+        &--menus {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &--menu {
+            .navbar-nav {
+                display: flex;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                gap: 35px;
+
+                >li {
+                    >a {
+                        position: relative;
+                        display: block;
+                        text-decoration: none;
+                        color: #282828;
+                        font-size: 15px;
+                        -webkit-transition: 0.3s;
+                        transition: 0.3s;
+                        letter-spacing: 0px;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-family: var(--heading-family, Poppins, sans-serif);
+
+                        &:hover {
+                            color: var(--link-color-hover, #d41b65);
+                        }
+
+                        &.dropdown-toggle {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &--cta {
+            margin-left: 35px;
+            display: flex;
+            align-items: center;
+            gap: 35px;
+
+            .goza-header-cart-icon {
+                position: relative;
+                cursor: pointer;
+                i {
+                    color: #282828;
+                    transition: 0.3s;
+                    &:hover {
+                        color: var(--link-color-hover, #d41b65);
+                    }
+                }
+
+                .goza-total-cart {
+                    right: -9px;
+                    background: #d41b65;
+                    border-radius: 100%;
+                    font-size: 11px;
+                    font-weight: 600;
+                    width: 16px;
+                    color: #fff;
+                    height: 16px;
+                    padding: 0;
+                    text-align: center;
+                    font-family: sans-serif;
+                    line-height: 1;
+                    padding: 2.5px 0;
+                    margin-right: 1px;
+                    position: absolute;
+                    top: -11px;
+                }
+            }
+
+            .goza-header-button {
+                background: var(--link-color, #d41b65);
+                color: #ebebeb;
+                border: medium none;
+                border-radius: 3px;
+                transition: 0.3s;
+                font-size: 16px;
+                letter-spacing: 0px;
+                padding: 13px 20px;
+                line-height: 1.2;
+                display: block;
+
+                &:hover {
+                    background: var(--link-color-hover, #dd548b);
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+
+            #goza-hamberger{
+                display: block;
+                cursor: pointer;
+                @include media-breakpoint-up(lg) {
+                    display: none;
+                }
+            }
+        }
+
+
+    }
+}
