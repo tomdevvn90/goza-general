@@ -13248,11 +13248,13 @@ h6 {
 
 .be-events-listing-block.is-style-default .item-event-inner-left {
   display: flex;
+  width: calc(100% - 112px);
 }
 
 @media screen and (max-width: 767px) {
   .be-events-listing-block.is-style-default .item-event-inner-left {
     flex-wrap: wrap;
+    width: 100%;
   }
 }
 
@@ -13304,6 +13306,7 @@ h6 {
 }
 
 .be-events-listing-block.is-style-default .item-event--meta {
+  width: calc(100% - 80px);
   padding-left: 45px;
   padding-top: 20px;
   box-sizing: border-box;
@@ -13313,6 +13316,7 @@ h6 {
 @media screen and (max-width: 767px) {
   .be-events-listing-block.is-style-default .item-event--meta {
     padding-left: 0;
+    width: 100%;
   }
 }
 
@@ -13320,7 +13324,8 @@ h6 {
   display: none;
   width: 100%;
   height: auto;
-  transition: all 0.3s ease;
+  margin: 15px 0 0 0;
+  min-width: 100%;
 }
 
 .be-events-listing-block.is-style-default .item-event--excerpt > p {
@@ -13335,7 +13340,6 @@ h6 {
   line-height: 1.6rem;
   width: 100%;
   margin: 0;
-  transition: all 0.3s ease;
 }
 
 .be-events-listing-block.is-style-default .item-event:not(:last-child) {
@@ -13347,6 +13351,142 @@ h6 {
 .be-events-listing-block.is-style-default .item-event:not(.__hide) .item-event--icon-toggle::before {
   content: "_";
   line-height: 9px;
+}
+
+.be-events-listing-block.is-style-2 .item-event {
+  margin: 0;
+}
+
+.be-events-listing-block.is-style-2 .item-event-inner {
+  display: flex;
+  align-items: center;
+}
+
+.be-events-listing-block.is-style-2 .item-event--meta {
+  padding-left: 20px;
+}
+
+.be-events-listing-block.is-style-2 .item-event--name {
+  font-size: 24px;
+  line-height: 26px;
+  margin: 5px 0 0 0;
+}
+
+@media screen and (max-width: 991px) {
+  .be-events-listing-block.is-style-2 .item-event--name {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-2 .item-event--name {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.be-events-listing-block.is-style-2 .item-event--start-date {
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: var(--link-color);
+  padding: 25px 10px;
+  width: 100px;
+  min-width: 100px;
+  border-radius: 3px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-2 .item-event--start-date {
+    width: 80px;
+    min-width: 80px;
+  }
+}
+
+.be-events-listing-block.is-style-2 .item-event--start-date__day,
+.be-events-listing-block.is-style-2 .item-event--start-date__month {
+  display: inline-block;
+  width: 100%;
+  font-weight: 700;
+  font-family: var(--body-family);
+  color: #fff;
+}
+
+.be-events-listing-block.is-style-2 .item-event--start-date__month {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-2 .item-event--start-date__month {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+.be-events-listing-block.is-style-2 .item-event--start-date__day {
+  font-size: 30px;
+  line-height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-2 .item-event--start-date__day {
+    font-size: 25px;
+  }
+}
+
+.be-events-listing-block.is-style-2 .item-event--time,
+.be-events-listing-block.is-style-2 .item-event--venue {
+  font-size: 16px;
+  color: var(--link-color);
+}
+
+.be-events-listing-block.is-style-2 .item-event--time svg,
+.be-events-listing-block.is-style-2 .item-event--venue svg {
+  width: 100%;
+  max-width: 15px;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.be-events-listing-block.is-style-2 .item-event--time svg path,
+.be-events-listing-block.is-style-2 .item-event--venue svg path {
+  stroke: var(--link-color);
+}
+
+.be-events-listing-block.is-style-2 .item-event--time {
+  font-weight: 700;
+}
+
+.be-events-listing-block.is-style-2 .item-event--time svg {
+  position: relative;
+  margin-bottom: 3px;
+}
+
+.be-events-listing-block.is-style-2 .item-event--time svg path {
+  fill: var(--link-color);
+}
+
+.be-events-listing-block.is-style-2 .item-event--venue {
+  margin: 8px 0 0 0;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+  .be-events-listing-block.is-style-2 .item-event--venue {
+    margin-top: 5px;
+  }
+}
+
+.be-events-listing-block.is-style-2 .item-event:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .tribe-common h1,
