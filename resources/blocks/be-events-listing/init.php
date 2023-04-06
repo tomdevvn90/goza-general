@@ -17,6 +17,10 @@ function be_item_event($block){
             be_template_events_listing_style_4();
             break;     
 
+        case "is-style-5":
+            be_template_events_listing_style_5();
+            break;  
+
         default:
             be_template_events_listing_default();
             break; 
@@ -128,7 +132,8 @@ function be_template_events_listing_style_3(){
 
 function be_template_events_listing_style_4(){ 
         $ev_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
-        $day        = tribe_get_start_date( get_the_ID(), true, 'j F Y');
+        $day        = tribe_get_start_date( get_the_ID(), true, 'j');
+        $month      = tribe_get_start_date( get_the_ID(), true, 'F Y -');
         $time       = tribe_get_start_date( get_the_ID(), true, 'G a');
     ?>
     <div class="item-event"> 
@@ -148,7 +153,7 @@ function be_template_events_listing_style_4(){
                 </div>  
                 
                 <div class="item-event--start-date"> 
-                    <span class="item-event--start-date-day"> <?php echo $day ?> </span>
+                    <span class="item-event--start-date-day"> <b><?php echo $day ?></b> <?php echo $month ?> </span>
                     <span class="item-event--start-date-time"> <?php echo $time ?> </span>
                 </div>
 
@@ -161,5 +166,35 @@ function be_template_events_listing_style_4(){
             </div>
         </div>
     </div>    
+<?php }
+
+
+function be_template_events_listing_style_5(){ 
+        $ev_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+        $day        = tribe_get_start_date( get_the_ID(), true, 'j F Y,');
+        $time       = tribe_get_start_date( get_the_ID(), true, 'G a');
+        $venue      =  tribe_get_venue(get_the_ID());
+    ?>
+    <div class="item-event"> 
+        <div class="item-event-inner"> 
+            <div class="item-event--thumbnail"> 
+                <img src="<?php echo $ev_img_url ?>" alt="<?php the_title()?>" />
+            </div>
+
+            <div class="item-event--meta"> 
+                <h3 class="item-event--name"> 
+                    <a href="<?php the_permalink() ?>"> <?php the_title() ?> </a>
+                </h3>
+
+                <div class="item-event--info"> 
+                    <div class="item-event--start-time"> 
+                        <?php echo $day ?> <span><?php echo $time ?></span>
+                    </div>
+
+                    <div class="item-event-venue"><?php echo $venue ?></div>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php }
 ?>
