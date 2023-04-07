@@ -33,7 +33,7 @@ function be_template_events_listing_style_2(){
         $time        = tribe_get_start_date( get_the_ID(), true, 'G:i a');
         $author_id   = get_the_author_meta('ID');
         $author_name = get_the_author_meta('display_name', $author_id);
-        $venue       =  tribe_get_venue(get_the_ID());
+        $venue       = tribe_get_venue(get_the_ID());
     ?>
     <div class="item-event"> 
         <div class="item-event-inner">
@@ -65,7 +65,9 @@ function be_template_events_listing_style_2(){
 
 function be_template_events_listing_default(){ 
     $ev_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
-    $start_date = tribe_get_start_date( get_the_ID(), true, 'j M Y - G:i a, l');
+    if(is_plugin_active('the-events-calendar/the-events-calendar.php')){
+        $start_date = tribe_get_start_date( get_the_ID(), true, 'j M Y - G:i a, l');
+    }
     ?>
     <div class="item-event __hide"> 
         <div class="item-event-inner"> 
@@ -101,18 +103,25 @@ function be_template_events_listing_default(){
 }
 
 function be_template_events_listing_style_3(){
-    $day         = tribe_get_start_date( get_the_ID(), true, 'j F');
-    $time        = tribe_get_start_date( get_the_ID(), true, 'G:i a');
-    $venue       = tribe_is_event_venue(get_the_ID());
+    if(is_plugin_active('the-events-calendar/the-events-calendar.php')){
+        $day         = tribe_get_start_date( get_the_ID(), true, 'j F');
+        $time        = tribe_get_start_date( get_the_ID(), true, 'G:i a');
+        $venue       = tribe_is_event_venue(get_the_ID());
+    }
     ?>
     <div class="item-event"> 
         <div class="item-event-inner">
             <div class="item-event--date"> 
-                <span class="item-event--date-day"> <?php echo $day ?> </span>
-                <span class="item-event--date-time">  
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 443.294 443.294" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M221.647 0C99.433 0 0 99.433 0 221.647s99.433 221.647 221.647 221.647 221.647-99.433 221.647-221.647S343.861 0 221.647 0zm0 415.588c-106.941 0-193.941-87-193.941-193.941s87-193.941 193.941-193.941 193.941 87 193.941 193.941-87 193.941-193.941 193.941z" fill="#000000" data-original="#000000" class=""></path><path d="M235.5 83.118h-27.706v144.265l87.176 87.176 19.589-19.589-79.059-79.059z" fill="#000000" data-original="#000000" class=""></path></g></svg>
-                    <p><?php echo $time ?></p>
-                </span>
+                <?php if(!empty($day)): ?>
+                    <span class="item-event--date-day"> <?php echo $day ?> </span>
+                <?php endif; ?>
+
+                <?php if(!empty($time)): ?>
+                    <span class="item-event--date-time">  
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 443.294 443.294" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M221.647 0C99.433 0 0 99.433 0 221.647s99.433 221.647 221.647 221.647 221.647-99.433 221.647-221.647S343.861 0 221.647 0zm0 415.588c-106.941 0-193.941-87-193.941-193.941s87-193.941 193.941-193.941 193.941 87 193.941 193.941-87 193.941-193.941 193.941z" fill="#000000" data-original="#000000" class=""></path><path d="M235.5 83.118h-27.706v144.265l87.176 87.176 19.589-19.589-79.059-79.059z" fill="#000000" data-original="#000000" class=""></path></g></svg>
+                        <p><?php echo $time ?></p>
+                    </span>
+                <?php endif; ?>    
             </div>
 
             <h3 class="item-event--name"> 
@@ -131,10 +140,12 @@ function be_template_events_listing_style_3(){
 
 function be_template_events_listing_style_4(){ 
         $ev_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
-        $day        = tribe_get_start_date( get_the_ID(), true, 'j');
-        $month      = tribe_get_start_date( get_the_ID(), true, 'F Y -');
-        $time       = tribe_get_start_date( get_the_ID(), true, 'G:i a');
-        $venue      =  tribe_get_venue(get_the_ID());
+        if(is_plugin_active('the-events-calendar/the-events-calendar.php')){
+            $day   = tribe_get_start_date( get_the_ID(), true, 'j');
+            $month = tribe_get_start_date( get_the_ID(), true, 'F Y -');
+            $time  = tribe_get_start_date( get_the_ID(), true, 'G:i a');
+            $venue = tribe_get_venue(get_the_ID());
+        }
     ?>
     <div class="item-event"> 
         <div class="item-event-inner"> 
@@ -155,8 +166,13 @@ function be_template_events_listing_style_4(){
                 <?php endif; ?>
 
                 <div class="item-event--start-date"> 
-                    <span class="item-event--start-date-day"> <b><?php echo $day ?></b> <?php echo $month ?> </span>
-                    <span class="item-event--start-date-time"> <?php echo $time ?> </span>
+                    <?php if(!empty($day)): ?>
+                        <span class="item-event--start-date-day"> <b><?php echo $day ?></b> <?php echo $month ?> </span>
+                    <?php endif;?>
+                   
+                    <?php if(!empty($time)): ?>
+                        <span class="item-event--start-date-time"> <?php echo $time ?> </span>
+                    <?php endif; ?>    
                 </div>
 
                 <div class="item-event--cta"> 
@@ -173,9 +189,12 @@ function be_template_events_listing_style_4(){
 
 function be_template_events_listing_style_5(){ 
         $ev_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
-        $day        = tribe_get_start_date( get_the_ID(), true, 'j F Y,');
-        $time       = tribe_get_start_date( get_the_ID(), true, 'G:i a');
-        $venue      =  tribe_get_venue(get_the_ID());
+        if(is_plugin_active('the-events-calendar/the-events-calendar.php')){
+            $day        = tribe_get_start_date( get_the_ID(), true, 'j F Y,');
+            $time       = tribe_get_start_date( get_the_ID(), true, 'G:i a');
+            $venue      = tribe_get_venue(get_the_ID());
+        }
+
     ?>
     <div class="item-event"> 
         <div class="item-event-inner"> 
@@ -189,11 +208,15 @@ function be_template_events_listing_style_5(){
                 </h3>
 
                 <div class="item-event--info"> 
-                    <div class="item-event--start-time"> 
-                        <?php echo $day ?> <span><?php echo $time ?></span>
-                    </div>
+                    <?php if(!empty($day)): ?>
+                        <div class="item-event--start-time"> 
+                            <?php echo $day ?> <span><?php echo $time ?></span>
+                        </div>
+                    <?php endif; ?>    
 
-                    <div class="item-event-venue"><?php echo $venue ?></div>
+                    <?php if(!empty($venue)): ?>
+                        <div class="item-event-venue"><?php echo $venue ?></div>
+                    <?php endif; ?>   
                 </div>
             </div>
         </div>
