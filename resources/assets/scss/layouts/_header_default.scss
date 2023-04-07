@@ -46,7 +46,7 @@
                             font-family: var(--heading-family, Poppins, sans-serif);
 
                             &:hover {
-                                color: var(--link-color-hover, #d41b65);
+                                color: var(--link-color, #d41b65);
                             }
 
                             &.dropdown-toggle {
@@ -94,7 +94,7 @@
                         padding: 2.5px 0;
                         margin-right: 1px;
                         position: absolute;
-                        top: -11px;
+                        top: -5px;
                     }
                 }
 

@@ -9,7 +9,6 @@
  * @license      GPL-2.0+
  **/
 
-
 /**
  * Load Blocks
  */
@@ -36,9 +35,7 @@ function goza_get_blocks()
     $blocks  = get_option('goza_blocks');
     $blocks = scandir(get_template_directory() . '/resources/blocks/');
     $blocks = array_values(array_diff($blocks, array('..', '.', '.DS_Store', '_base-block')));
-
     update_option('goza_blocks', $blocks);
-
     return $blocks;
 }
 
@@ -49,7 +46,6 @@ function goza_get_blocks()
  */
 function goza_block_categories($categories)
 {
-
     // Check to see if we already have a Goza Theme category
     $include = true;
     foreach ($categories as $category) {
@@ -66,7 +62,7 @@ function goza_block_categories($categories)
                     'icon'  => ''
                 ]]
         );
-    }
+    } 
 
     return $categories;
 }

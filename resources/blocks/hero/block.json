@@ -2,12 +2,12 @@
     "name": "goza/hero",
     "title": "Hero",
     "description": "Image background with text & call to action.",
-    "editorStyle": "file:./css/editor.css",
-    "style": "block-hero",
-    "script": "block-hero",
-    "category": "goza-theme",
+    "category": "goza-theme", 
     "icon": "format-image",
-    "keywords": ["hero", "image"],
+    "keywords": [
+        "hero",
+        "image"
+    ],
     "acf": {
         "mode": "preview",
         "renderTemplate": "render.php"
@@ -16,8 +16,15 @@
         "align": true
     },
     "styles": [
-        { "name": "default", "label": "Default", "isDefault": true },
-        { "name": "other", "label": "Other" }
+        {
+            "name": "default",
+            "label": "Default",
+            "isDefault": true
+        },
+        {
+            "name": "other",
+            "label": "Other"
+        }
     ],
     "align": "full"
-  }
+}

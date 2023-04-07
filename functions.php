@@ -28,7 +28,7 @@ require get_template_directory() . '/resources/functions/template-tags.php';
 require get_template_directory() . '/resources/functions/hooks.php';
 require get_template_directory() . '/resources/functions/generate-styles.php';
 require get_template_directory() . '/resources/functions/template-func.php'; 
-require get_template_directory() . '/resources/functions/blocks.php';
+require get_template_directory() . '/resources/functions/blocks.php'; 
 
 /**
  * Theme install

@@ -31,7 +31,7 @@ $the_query = new WP_Query($args);
       <div class="be-events-listing-block-inner"> 
          <?php while ($the_query->have_posts()) {
             $the_query->the_post(); 
-            be_item_event($block);
+            //be_item_event($block);
          } ?>
       </div>
    <?php } ?>   

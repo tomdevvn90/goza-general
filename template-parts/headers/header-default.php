@@ -53,5 +53,4 @@ $icon_cart = __get_field('goza_enable_cart', 'option');
          </div>
       </div>
    </div>
-
 </header> <!-- #site-header -->
