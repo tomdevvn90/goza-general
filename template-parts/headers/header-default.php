@@ -6,6 +6,7 @@
 
 $classes = [
    'site-header',
+   'site-header-default',
 ];
 $custom_logo_id = get_theme_mod('custom_logo');
 $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
@@ -13,7 +14,6 @@ $header_btn = __get_field('goza_header_button', 'option');
 $icon_cart = __get_field('goza_enable_cart', 'option');
 ?>
 <header class="<?php echo implode(' ', $classes) ?>">
-
    <?php do_action('goza_hook_topbar'); ?>
    <div class="container">
       <div class="goza-header-main">
