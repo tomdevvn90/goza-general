@@ -16,9 +16,7 @@
         { "name": "2", "label": "Style 2" },
         { "name": "3", "label": "Style 3" },
         { "name": "4", "label": "Style 4" },
-        { "name": "5", "label": "Style 5" },
-        { "name": "6", "label": "Style 6" }
-        
+        { "name": "5", "label": "Style 5" }
     ],
     "align": "full"
   }

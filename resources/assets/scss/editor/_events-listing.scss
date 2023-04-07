@@ -10,17 +10,21 @@
         }
 
         &.is-style-3{
-            &--name{
-                font-size: 24px;
-                line-height: 26px;
-                color: var(--heading-color);
-                margin-top: 10px;
+            .item-event{
+                &--name{
+                    font-size: 24px;
+                    line-height: 26px;
+                    color: var(--heading-color);
+                    margin-top: 10px;
+                }
             }
         }
 
         &.is-style-5{
-            &--name{
-                color: #fff;
+            .item-event{
+                &--name{
+                    color: #fff;
+                }
             }
         }
     }
