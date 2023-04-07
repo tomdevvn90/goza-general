@@ -29,7 +29,7 @@ if(!empty($query['categories'])){
       )
    ];
 }
-
+ob_start();
 $the_query = new WP_Query($args);
 ?>
 
@@ -41,5 +41,12 @@ $the_query = new WP_Query($args);
             be_item_event($block);
          } ?>
       </div>
-   <?php } ?>   
+   <?php }else{
+      echo '<div class="be-not-found">No results found.</div>';
+   } 
+   ?>   
 </div>
+
+<?php 
+wp_reset_postdata();
+// return ob_get_clean();

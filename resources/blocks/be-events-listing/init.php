@@ -97,7 +97,8 @@ function be_template_events_listing_default(){
             </div>
         </div>
     </div>
-<?php }
+<?php 
+}
 
 function be_template_events_listing_style_3(){
     $day         = tribe_get_start_date( get_the_ID(), true, 'j F');
