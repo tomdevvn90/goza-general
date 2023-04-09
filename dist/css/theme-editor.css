@@ -6484,6 +6484,42 @@
   line-height: 9px;
 }
 
+.be-ss-upcoming-event-video--content-cta svg {
+  width: 100%;
+  max-width: 20px;
+  height: auto;
+}
+
+.be-ss-upcoming-event-video--content-cta svg path {
+  fill: #fff;
+}
+
+.be-ss-upcoming-event-video--content-cta a {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--link-color);
+  position: relative;
+}
+
+.be-ss-upcoming-event-video--content-cta a::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 120px;
+  height: 120px;
+  background: #d41b65 repeat scroll 0 0;
+  border-radius: 50%;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+
 .block-editor-block-list__block .be-testominials-block-carousel {
   display: flex;
   overflow: auto;
