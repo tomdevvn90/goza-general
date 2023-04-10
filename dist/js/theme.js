@@ -208,7 +208,11 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var lightgallery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lightgallery */ "./node_modules/lightgallery/lightgallery.es5.js");
+/* harmony import */ var lightgallery_plugins_video__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lightgallery/plugins/video */ "./node_modules/lightgallery/plugins/video/lg-video.es5.js");
+/* harmony import */ var lightgallery_plugins_autoplay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lightgallery/plugins/autoplay */ "./node_modules/lightgallery/plugins/autoplay/lg-autoplay.es5.js");
 //lightgallery
+
+
 
 (function ($) {
   "use strict";
@@ -216,6 +220,39 @@ __webpack_require__.r(__webpack_exports__);
   var lightGalleryFooter = function lightGalleryFooter() {
     Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(document.getElementById('main-footer-gallery-list'), {
       speed: 500
+    });
+  };
+  var bePopupsVideo = function bePopupsVideo() {
+    var $popupVideo = $('.be-popup-video');
+    if ($popupVideo.length === 0) return;
+    $popupVideo.each(function () {
+      var $idPopupVd = $(this).attr('id');
+      Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(document.getElementById("".concat($idPopupVd)), {
+        plugins: [lightgallery_plugins_video__WEBPACK_IMPORTED_MODULE_1__["default"], lightgallery_plugins_autoplay__WEBPACK_IMPORTED_MODULE_2__["default"]],
+        autoplay: true,
+        speed: 500,
+        videojs: true,
+        videojsOptions: {
+          muted: true
+        },
+        loadYoutubeThumbnail: true,
+        youtubeThumbSize: 'default',
+        loadVimeoThumbnail: true,
+        vimeoThumbSize: 'thumbnail_medium',
+        youtubePlayerParams: {
+          modestbranding: 1,
+          showinfo: 0,
+          rel: 0,
+          controls: 1,
+          autoplay: 1,
+          mute: 1
+        },
+        vimeoPlayerParams: {
+          byline: 0,
+          portrait: 0,
+          color: 'A90707'
+        }
+      });
     });
   };
   $(window).on("scroll", function () {});
@@ -232,6 +269,7 @@ __webpack_require__.r(__webpack_exports__);
       }, 1000);
     });
     lightGalleryFooter();
+    bePopupsVideo();
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
@@ -345,9 +383,9 @@ aos__WEBPACK_IMPORTED_MODULE_2___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-module.exports = __webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+module.exports = __webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
 
 
 /***/ })

@@ -16,7 +16,7 @@ $bg_right = (!empty($bg['right'])) ? $bg['right'] : get_template_directory_uri()
 $show_vd  = (!empty($general['show_video'])) ? $general['show_video'] : false;
 $url_vd   = (!empty($general['url_video'])) ? $general['url_video'] : '';
 ?>
-<div id="<?php echo $id; ?>" class="be-ss-upcoming-event-video <?php echo $align_class; ?>"> 
+<section id="<?php echo $id; ?>" class="be-ss-upcoming-event-video <?php echo $align_class; ?>"> 
    <div class="be-ss-upcoming-event-video--bg"> 
       <div class="be-ss-upcoming-event-video--bg-left">  <img src="<?php echo $bg_left ?>" alt="bg image"> </div>
       <div class="be-ss-upcoming-event-video--bg-right"> <img src="<?php echo $bg_right ?>" alt="bg image"> </div>
@@ -35,12 +35,15 @@ $url_vd   = (!empty($general['url_video'])) ? $general['url_video'] : '';
             <?php be_events_listing() ?>
 
             <?php if($show_vd && !empty($url_vd)): ?>
-               <div class="be-ss-upcoming-event-video--content-cta"> 
-                  <a href="<?php echo $url_vd ?>">
+               <div id="be-popup-video-<?php echo $block['id'] ?>" class="be-ss-upcoming-event-video--content-cta be-popup-video"> 
+                  <a 
+                     data-src="<?php echo $url_vd ?>" 
+                     data-lg-size="1280-720"
+                  >
                      <span class="__icon-play"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 163.861 163.861" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M34.857 3.613C20.084-4.861 8.107 2.081 8.107 19.106v125.637c0 17.042 11.977 23.975 26.75 15.509L144.67 97.275c14.778-8.477 14.778-22.211 0-30.686L34.857 3.613z" fill="#000000" data-original="#000000" class=""></path></g></svg></span>
                   </a>
                </div>
             <?php endif; ?>   
         </div>
    </div>
-</div>
+</section>

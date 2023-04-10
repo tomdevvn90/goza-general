@@ -32,7 +32,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "Upcoming Events",
+                    "default_value": "Upcoming <strong>Events<\/strong>",
                     "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
@@ -308,5 +308,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680857967
+    "modified": 1681099795
 }
