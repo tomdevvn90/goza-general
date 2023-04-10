@@ -1,7 +1,7 @@
 <?php
 
 // create id attribute for specific styling
-$id = 'be-icon-box-' . $block['id'];
+$id = 'be-ss-upcoming-event-video-' . $block['id'];
 
 // create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';

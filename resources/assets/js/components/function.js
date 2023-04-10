@@ -2,7 +2,7 @@
 import lightGallery from 'lightgallery'; 
 import lgVideo from 'lightgallery/plugins/video';
 import lgAutoplay from 'lightgallery/plugins/autoplay'
-
+import counter from 'jquery-counter'
 (function ($) {
     "use strict";
 
@@ -10,6 +10,19 @@ import lgAutoplay from 'lightgallery/plugins/autoplay'
         lightGallery(document.getElementById('main-footer-gallery-list'), {
             speed: 500, 
         });
+    }
+
+    const beCounter = () =>{
+        const $isCounter = $('[data-counter]');
+        if ($isCounter.length === 0) return;
+
+        $isCounter.each(function() {
+            $(this).counter({
+                decimals: 0,
+                decPoint: ".",
+                thousandsSep: ","
+            });
+        })
     }
 
     const bePopupsVideo = () =>{
@@ -68,6 +81,8 @@ import lgAutoplay from 'lightgallery/plugins/autoplay'
 
         lightGalleryFooter();
         bePopupsVideo()
+        beCounter()
+
 
     });
 
