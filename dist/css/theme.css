@@ -12557,11 +12557,50 @@ h6 {
   font-weight: 700 !important;
 }
 
+.site-header .goza-header-main--menu .navbar-nav .menu-item .sub-menu {
+  display: block;
+  min-width: 200px;
+  padding: 0px;
+  background: rgb(255, 255, 255);
+  border-radius: 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px 0px;
+  transition: all 0.3s ease 0s;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  top: calc(100% + 20px);
+  left: -20px;
+}
+
+.site-header .goza-header-main--menu .navbar-nav .menu-item .sub-menu li:not(:last-child) {
+  border-bottom: 1px solid rgba(31, 31, 31, 0.05);
+}
+
+.site-header .goza-header-main--menu .navbar-nav .menu-item .sub-menu li a {
+  padding: 5px 20px;
+  font-size: 15px;
+  line-height: 30px;
+  color: rgb(31, 31, 31);
+  letter-spacing: 0px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.site-header .goza-header-main--menu .navbar-nav .menu-item .sub-menu li a:hover {
+  color: var(--link-color-hover, #d41b65);
+  background-color: transparent;
+}
+
+.site-header .goza-header-main--menu .navbar-nav .menu-item:hover .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  top: 100%;
+}
+
 .site-header.site-header-default .goza-header-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 27px 0;
 }
 
 .site-header.site-header-default .goza-header-main--logo a {
@@ -12595,6 +12634,7 @@ h6 {
   font-size: 15px;
   transition: 0.3s;
   letter-spacing: 0px;
+  line-height: 80px;
   font-style: normal;
   font-weight: 600;
   font-family: var(--heading-family, Poppins, sans-serif);
@@ -12973,6 +13013,155 @@ h6 {
 
 .site-header.site-header-search .goza-header-main--cta #goza-hamberger i {
   font-size: 23px;
+}
+
+.site-header.site-header-menu-center .goza-header-main {
+  padding: 15px 0;
+  background-color: var(--header-bg-color, #fff);
+}
+
+@media (max-width: 991.98px) {
+  .site-header.site-header-menu-center .goza-header-main {
+    background-color: var(--header-bg-menu-color, #213e8c);
+  }
+}
+
+.site-header.site-header-menu-center .goza-header-main--logo a {
+  display: block;
+}
+
+.site-header.site-header-menu-center .goza-header-main--logo a img {
+  max-width: 170px;
+}
+
+.site-header.site-header-menu-center .goza-header-main--cta {
+  gap: 20px;
+}
+
+.site-header.site-header-menu-center .goza-header-main--cta .goza-header-button {
+  background-color: var(--link-color, #ec5e87);
+  color: #ebebeb;
+  border: medium none;
+  border-radius: 3px;
+  font-size: 16px;
+  letter-spacing: 0px;
+  padding: 13px 20px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.site-header.site-header-menu-center .goza-header-main--cta .goza-header-button:hover {
+  background-color: var(--header-bg-menu-color, #213e8c);
+}
+
+.site-header.site-header-menu-center .goza-header-main--cta .goza-header-link {
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #353535;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.site-header.site-header-menu-center .goza-header-main--cta .goza-header-link:hover {
+  color: var(--link-color-hover, #ec5e87);
+}
+
+.site-header.site-header-menu-center .goza-header-main--cta .goza-header-link i {
+  margin-right: 5px;
+  color: var(--link-color, #ec5e87);
+  font-size: 23px;
+}
+
+.site-header.site-header-menu-center .goza-header-main--cta .goza-header-cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.site-header.site-header-menu-center .goza-header-main--cta .goza-header-cart-icon i {
+  color: var(--header-text-color, #FFF);
+  transition: 0.3s;
+}
+
+.site-header.site-header-menu-center .goza-header-main--cta .goza-header-cart-icon i:hover {
+  color: var(--link-color-hover, #ec5e87);
+}
+
+.site-header.site-header-menu-center .goza-header-main--cta .goza-header-cart-icon .goza-total-cart {
+  right: -9px;
+  background: var(--link-color, #ec5e87);
+  border-radius: 100%;
+  font-size: 11px;
+  font-weight: 600;
+  width: 16px;
+  color: #fff;
+  height: 16px;
+  padding: 0;
+  text-align: center;
+  font-family: sans-serif;
+  line-height: 1;
+  padding: 2.5px 0;
+  margin-right: 1px;
+  position: absolute;
+  top: -5px;
+}
+
+.site-header.site-header-menu-center .goza-header-main--cta .goza-header-search {
+  width: 52px;
+  height: 52px;
+  border-radius: 3px;
+  display: inline-block;
+  background: #efefef;
+  text-align: center;
+  line-height: 52px;
+  padding: 0;
+}
+
+.site-header.site-header-menu-center .goza-header-main--cta .goza-header-search i {
+  color: #727b7b;
+}
+
+@media (max-width: 991.98px) {
+  .site-header.site-header-menu-center .goza-header-main--cta #goza-hamberger i {
+    color: var(--header-text-color, #FFF);
+  }
+}
+
+.site-header.site-header-menu-center .goza-header-menus {
+  background-color: var(--header-bg-menu-color, #213e8c);
+}
+
+.site-header.site-header-menu-center .goza-header-menus .navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  gap: 35px;
+}
+
+.site-header.site-header-menu-center .goza-header-menus .navbar-nav > li > a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  line-height: 60px;
+  font-size: 17px;
+  transition: 0.3s;
+  color: var(--header-text-color, #FFF);
+  -webkit-transition: 0.3s;
+  letter-spacing: 0px;
+  font-style: normal;
+  font-weight: 600;
+  font-family: var(--heading-family, Fira Sans, sans-serif);
+}
+
+.site-header.site-header-menu-center .goza-header-menus .navbar-nav > li > a:hover {
+  color: var(--link-color, #ec5e87);
+}
+
+.site-header.site-header-menu-center .goza-header-menus .navbar-nav > li > a.dropdown-toggle::after {
+  display: none;
 }
 
 .main-footer {

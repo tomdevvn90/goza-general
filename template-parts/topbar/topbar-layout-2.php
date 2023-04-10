@@ -14,7 +14,7 @@ if ($goza_topbar_btn) {
 <div class="goza-topbar goza-topbar-layout2">
     <div class="container">
         <div class="d-none d-lg-flex justify-content-between align-items-center goza-topbar-inner">
-            <div class="d-flex align-items-center goza-topbar-inner-info">
+            <div class="d-flex align-items-center flex-wrap goza-topbar-inner-info">
                 <?php if (isset($goza_email) && $goza_email) { ?>
                     <div class="goza-topbar-ep">
                         <a href="mailto:<?= $goza_email ?>"><i class="fa fa-envelope" aria-hidden="true"></i>Send Us Email: <?= $goza_email ?></a>
@@ -43,7 +43,7 @@ if ($goza_topbar_btn) {
                 </div>
             <?php  } ?>
         </div>
-        <div class="d-flex align-items-center justify-content-center d-lg-none goza-topbar-inner goza-topbar-mobile">
+        <div class="d-flex align-items-center justify-content-center flex-wrap d-lg-none goza-topbar-inner goza-topbar-mobile">
             <?php if (isset($goza_email) && $goza_email) { ?>
                 <div class="goza-topbar-item goza-topbar-ep">
                     <a href="mailto:<?= $goza_email ?>"><i class="fa fa-envelope" aria-hidden="true"></i>Send Us Email: <?= $goza_email ?></a>
