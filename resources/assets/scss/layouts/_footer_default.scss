@@ -15,6 +15,42 @@
                 }
             }
 
+            form {
+                overflow: hidden;
+                position: relative;
+
+                input.tnp-email {
+                    height: 60px;
+                    margin-bottom: 10px;
+                    border-radius: 2px !important;
+                    text-align: center;
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding: 10px;
+                    display: inline-block;
+                    border: 1px solid #ddd;
+                    background-color: #f4f4f4;
+                    color: #444;
+                    font-size: 14px;
+                    max-width: 100%;
+                    outline: none;
+                }
+
+                input.tnp-submit {
+                    height: 60px;
+                    border-radius: 2px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    -webkit-appearance: button;
+                    cursor: pointer;
+                    background-color: var(--link-color, rgb(131,61,204));
+                    &:hover{
+                        background-color: var(--link-color-hover, rgb(131,61,204));
+                    }
+                }
+            }
         }
 
         .main-footer-heading {
@@ -128,7 +164,7 @@
             }
 
             &-menu {
-                .privacy-menu {
+                ul {
                     display: flex;
                     align-items: center;
                     list-style-type: none;
