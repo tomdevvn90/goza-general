@@ -219,7 +219,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns: 12 !default;
-$grid-gutter-width: 30px !default;
+$grid-gutter-width: 30px !default; 
 $grid-row-columns: 6 !default;
 
 
@@ -892,7 +892,7 @@ $card-group-margin: $grid-gutter-width / 2 !default;
 $card-deck-margin: $card-group-margin !default;
 
 $card-columns-count: 3 !default;
-$card-columns-gap: 20px !default;
+$card-columns-gap: 15px !default;
 $card-columns-margin: $card-spacer-y !default;
 
 
@@ -1025,7 +1025,7 @@ $modal-transition: transform .3s ease-out !default;
 // Define alert colors, border radius, and padding.
 
 $alert-padding-y: 12px !default;
-$alert-padding-x: 20px !default;
+$alert-padding-x: 15px !default;
 $alert-margin-bottom: 16px !default;
 $alert-border-radius: $border-radius !default;
 $alert-link-font-weight: $font-weight-bold !default;

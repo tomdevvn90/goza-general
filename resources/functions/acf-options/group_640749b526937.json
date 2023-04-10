@@ -3,8 +3,8 @@
     "title": "Block demo",
     "fields": [
         {
-            "key": "field_640749bcfda9d",
-            "label": "Test",
+            "key": "field_642f96a07bb32",
+            "label": "test",
             "name": "test",
             "aria-label": "",
             "type": "text",
@@ -27,8 +27,7 @@
         [
             {
                 "param": "block",
-                "operator": "==",
-                "value": "goza\/hero"
+                "operator": "=="
             }
         ]
     ],
@@ -40,6 +39,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "show_in_rest": 0,
-    "modified": 1678202099
+    "show_in_rest": false,
+    "modified": 1680840585
 }

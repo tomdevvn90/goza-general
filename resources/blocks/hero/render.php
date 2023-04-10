@@ -14,5 +14,5 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 ?>
 <section id="<?php echo $id; ?>" class="hero <?php echo $align_class; ?>">
-    <a href="#">This is demo block</a>
+    <a href="#">This is demo block</a> 
 </section>

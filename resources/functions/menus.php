@@ -4,7 +4,8 @@ add_action( 'after_setup_theme', function () {
 	register_nav_menus( [
 		'main-menu'   => esc_html__( 'Primary', 'goza' ),
 		'quicklinks-menu' => esc_html__( 'Quick Links', 'goza' ),
-		'privacy-menu' => esc_html__( 'Privacy Policy', 'goza' )
+		'privacy-menu' => esc_html__( 'Privacy Policy', 'goza' ),
+		'mobile-menu' => esc_html__( 'Mobile Menu', 'goza' )
 	] );
 } );
 

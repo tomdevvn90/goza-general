@@ -207,15 +207,66 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(jQuery) {!(function webpackMissingModule() { var e = new Error("Cannot find module 'lightgallery'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var lightgallery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lightgallery */ "./node_modules/lightgallery/lightgallery.es5.js");
+/* harmony import */ var lightgallery_plugins_video__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lightgallery/plugins/video */ "./node_modules/lightgallery/plugins/video/lg-video.es5.js");
+/* harmony import */ var lightgallery_plugins_autoplay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lightgallery/plugins/autoplay */ "./node_modules/lightgallery/plugins/autoplay/lg-autoplay.es5.js");
+/* harmony import */ var jquery_counter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery-counter */ "./node_modules/jquery-counter/dist/jquery.counter.min.js");
+/* harmony import */ var jquery_counter__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery_counter__WEBPACK_IMPORTED_MODULE_3__);
 //lightgallery
+
+
+
 
 (function ($) {
   "use strict";
 
   var lightGalleryFooter = function lightGalleryFooter() {
-    !(function webpackMissingModule() { var e = new Error("Cannot find module 'lightgallery'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(document.getElementById('main-footer-gallery-list'), {
+    Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(document.getElementById('main-footer-gallery-list'), {
       speed: 500
+    });
+  };
+  var beCounter = function beCounter() {
+    var $isCounter = $('[data-counter]');
+    if ($isCounter.length === 0) return;
+    $isCounter.each(function () {
+      $(this).counter({
+        decimals: 0,
+        decPoint: ".",
+        thousandsSep: ","
+      });
+    });
+  };
+  var bePopupsVideo = function bePopupsVideo() {
+    var $popupVideo = $('.be-popup-video');
+    if ($popupVideo.length === 0) return;
+    $popupVideo.each(function () {
+      var $idPopupVd = $(this).attr('id');
+      Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(document.getElementById("".concat($idPopupVd)), {
+        plugins: [lightgallery_plugins_video__WEBPACK_IMPORTED_MODULE_1__["default"], lightgallery_plugins_autoplay__WEBPACK_IMPORTED_MODULE_2__["default"]],
+        autoplay: true,
+        speed: 500,
+        videojs: true,
+        videojsOptions: {
+          muted: true
+        },
+        loadYoutubeThumbnail: true,
+        youtubeThumbSize: 'default',
+        loadVimeoThumbnail: true,
+        vimeoThumbSize: 'thumbnail_medium',
+        youtubePlayerParams: {
+          modestbranding: 1,
+          showinfo: 0,
+          rel: 0,
+          controls: 1,
+          autoplay: 1,
+          mute: 1
+        },
+        vimeoPlayerParams: {
+          byline: 0,
+          portrait: 0,
+          color: 'A90707'
+        }
+      });
     });
   };
   $(window).on("scroll", function () {});
@@ -232,6 +283,8 @@ __webpack_require__.r(__webpack_exports__);
       }, 1000);
     });
     lightGalleryFooter();
+    bePopupsVideo();
+    beCounter();
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
@@ -334,7 +387,7 @@ aos__WEBPACK_IMPORTED_MODULE_2___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\n\r\n@import '~lightgallery/scss/lightgallery.scss';\r\n       ^\r\n      Can't find stylesheet to import.\n   ╷\n21 │ @import '~lightgallery/scss/lightgallery.scss';\r\n   │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n   ╵\n  stdin 21:9  root stylesheet\r\n      in C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\resources\\assets\\scss\\theme.scss (line 21, column 9)\n    at C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass-loader\\dist\\index.js:89:7\n    at Function.call$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:103452:16)\n    at render_closure1.call$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:88143:12)\n    at _RootZone.runBinary$3$3 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:30531:18)\n    at _FutureListener.handleError$1 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:29060:21)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:29367:49)\n    at Object._Future__propagateToListeners (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:4001:77)\n    at _Future._completeError$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:29213:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:28861:12)\n    at Object._asyncRethrow (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:3803:17)\n    at C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:20458:20\n    at _wrapJsFunctionForAsync_closure.$protected (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:3828:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:28880:12)\n    at _awaitOnObject_closure0.call$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:28874:25)\n    at _RootZone.runBinary$3$3 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:30531:18)\n    at _FutureListener.handleError$1 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:29060:21)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:29367:49)\n    at Object._Future__propagateToListeners (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:4001:77)\n    at _Future._completeError$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:29213:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:28861:12)\n    at Object._asyncRethrow (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:3803:17)\n    at C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:15856:20\n    at _wrapJsFunctionForAsync_closure.$protected (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:3828:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:28880:12)\n    at _awaitOnObject_closure0.call$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:28874:25)\n    at _RootZone.runBinary$3$3 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:30531:18)\n    at _FutureListener.handleError$1 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:29060:21)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:29367:49)\n    at Object._Future__propagateToListeners (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:4001:77)\n    at _Future._completeError$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:29213:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:28861:12)\n    at Object._asyncRethrow (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:3803:17)\n    at C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:15887:20\n    at _wrapJsFunctionForAsync_closure.$protected (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:3828:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:28880:12)\n    at _awaitOnObject_closure0.call$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:28874:25)\n    at _RootZone.runBinary$3$3 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:30531:18)\n    at _FutureListener.handleError$1 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:29060:21)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:29367:49)\n    at Object._Future__propagateToListeners (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:4001:77)\n    at _Future._completeError$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:29213:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:28861:12)\n    at Object._asyncRethrow (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:3803:17)\n    at C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:75590:20\n    at _wrapJsFunctionForAsync_closure.$protected (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:3828:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (C:\\Users\\rimki\\Local Sites\\goza\\app\\public\\wp-content\\themes\\goza-theme\\node_modules\\sass\\sass.dart.js:28880:12)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

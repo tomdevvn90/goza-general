@@ -233,16 +233,20 @@
                 "id": ""
             },
             "choices": {
-                "default": "Header Default",
-                "transparent": "Header Transparent",
-                "btn-search": "Header Button + Search",
-                "menu-center": "Header Menu Center"
+                "general": "Header General",
+                "ngo": "Header Ngo",
+                "charity": "Header Charity",
+                "water": "Header Water",
+                "orgazination": "Header Orgazination",
+                "ngo-dark": "Header Ngo Dark",
+                "water-charity": "Header Water Charity",
+                "charity-orgazination": "Header Charity Orgazination"
             },
             "default_value": false,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
             "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
             "ajax": 0,
             "placeholder": ""
         },
@@ -382,13 +386,14 @@
                     },
                     "choices": {
                         "default": "Default",
-                        "layout-2": "Layout 2"
+                        "layout-2": "Layout 2",
+                        "layout-3": "Layout 3"
                     },
                     "default_value": false,
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
                     "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
                     "ajax": 0,
                     "placeholder": ""
                 },
@@ -490,10 +495,12 @@
                 "id": ""
             },
             "choices": {
-                "default": "Layout Default",
-                "water": "Layout Goza Water",
-                "ngo": "Layout Goza Ngo",
-                "organization": "Layout Goza Orgazination"
+                "general": "Footer General",
+                "water": "Footer Water",
+                "ngo": "Footer Ngo",
+                "organization": "Footer Orgazination",
+                "water-charity": "Footer Water Charity",
+                "charity-organization": "Footer Charity Organiztion"
             },
             "default_value": false,
             "return_format": "value",
@@ -1912,5 +1919,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680703393
+    "modified": 1681142088
 }
