@@ -71,9 +71,15 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                 <?php if (isset($goza_newsletter_heading) && !empty($goza_newsletter_heading)) { ?>
                     <h3 class="main-footer-title"><?= $goza_newsletter_heading ?></h3>
                 <?php } ?>
+
                 <?php if (isset($goza_newsletter_desc) && !empty($goza_newsletter_desc)) { ?>
                     <div class="main-footer-desc"><?= $goza_newsletter_desc ?></div>
                 <?php } ?>
+
+                <?php if (isset($goza_sc_sub_form) && !empty($goza_sc_sub_form)) { ?>
+                    <?= do_shortcode($goza_sc_sub_form) ?>
+                <?php } ?>
+
             </div>
             <div class="col-md-3 main-footer-widget">
                 <?php if (isset($goza_gallery_heading) && !empty($goza_gallery_heading)) { ?>
@@ -81,13 +87,11 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                 <?php } ?>
                 <div class="main-footer-gallery">
                     <?php if ($goza_ft_gallery) { ?>
-                        <div class="main-footer-gallery-list">
+                        <div id="main-footer-gallery-list" class="main-footer-gallery-list">
                             <?php foreach ($goza_ft_gallery as $item) { ?>
-                                <div class="main-footer-gallery-list-item">
-                                    <a href="<?= esc_url($item['url']); ?>" title="<?= esc_attr($item['title']); ?>">
-                                        <img src="<?= esc_url($item['url']); ?>" alt="<?= esc_attr($item['alt']); ?>" />
-                                    </a>
-                                </div>
+                                <a class="main-footer-gallery-list-item" href="<?= esc_url($item['url']); ?>" title="<?= esc_attr($item['title']); ?>">
+                                    <img src="<?= esc_url($item['url']); ?>" alt="<?= esc_attr($item['alt']); ?>" />
+                                </a>
                             <?php } ?>
                         </div>
                     <?php } ?>
