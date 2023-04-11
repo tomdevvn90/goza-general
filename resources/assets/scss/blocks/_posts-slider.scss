@@ -59,7 +59,7 @@
                     font-size: 18px;
                 }
                 &:hover{
-                    color: var(--heading-color, #d41b65); 
+                    color: var(--link-color); 
                 }
 
                 a{
@@ -115,7 +115,7 @@
                     position: absolute;
                     content: "\f075";
                     font-family: FontAwesome;
-                    color: var(--heading-color, #d41b65);  
+                    color: var(--link-color, #d41b65);  
                     font-size: 35px;
                     z-index: -1;
                     left: 0px;
@@ -140,7 +140,7 @@
             height: 50px;
             line-height: 50px;
             text-align: center;
-            background: var(--heading-color, #d41b65);  
+            background: var(--link-color, #d41b65);  
             color: #fff;
             border-radius: 100px;
             z-index: 5;
@@ -178,7 +178,7 @@
 
             &:hover, &:focus{
                 opacity: 1;
-                background: var(--heading-color, #d41b65);  
+                background: var(--link-color, #d41b65);  
                 color: #fff;
             }
         }
@@ -196,7 +196,7 @@
                 margin: 0px 8px;
                 &.slick-active{
                     transform: scale(3);
-                    background: rgb(212, 27, 101);
+                    background: var(--link-color);
                     box-shadow: rgba(1, 1, 1, 0.2) 0px 0px 13px -2px;
                 }
             }
@@ -246,7 +246,7 @@
                     position: absolute;
                     width: 80px;
                     height: 70px;
-                    background: var(--heading-color, #d41b65); 
+                    background: var(--link-color, #d41b65); 
                     padding: 15px 5px;
                     top: -35px;
                     border-radius: 4px;
@@ -331,7 +331,7 @@
 
                 &-date{
                     background: #f6f9fc;
-                    color: var(--heading-color, #d41b65);
+                    color: var(--link-color, #d41b65);
                     border-radius: 30px;
                     display: block;
                     font-size: 16px;
@@ -428,7 +428,7 @@
                     }
 
                     &:hover{
-                        background: var(--heading-color, #d41b65);
+                        background: var(--link-color, #d41b65);
                         color: #fff;
                     }
                 }
@@ -498,7 +498,7 @@
 
                 &-button{
                     padding: 10px 20px;
-                    background: var(--heading-color, #d41b65);
+                    background: var(--link-color, #d41b65);
                     text-align: center;
                     a{
                         color: #fff;

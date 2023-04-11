@@ -1,0 +1,191 @@
+.be-button{
+    > a{
+        position: relative;
+        transition: 0.4s ease;
+        z-index: 9;
+        word-wrap: break-word;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        text-decoration: none;
+        overflow: hidden;
+        box-sizing: border-box;
+        text-align: center;
+        &::before, &::after{
+            content:  " ";
+            display: inline-block;
+            position: absolute;
+            border-radius: inherit;
+            transition: 0.4s ease;
+        }
+
+        &:focus{
+            box-shadow: none;
+            outline:none;
+        }
+    }
+
+    &.be-button-style_default{
+        > a{
+            &::before{
+                background: #fff;
+                height: 155px;
+                left: -75px;
+                opacity: 0.2;
+                top: -50px;
+                transform: rotate(35deg);
+                transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
+                width: 30px;
+                z-index: 1;
+            }
+
+            &:hover{
+                background-color: var(--link-color-hover);
+                color: #fff;
+                &::before{
+                    left: 120%;
+                    transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
+                }
+            }
+        }
+    }
+
+    &.be-button-style_2{
+        > a{
+            &::before, &::after{
+                content: none;
+            }
+            svg{
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                animation: 20s linear 0s infinite normal both paused dashed_border_running;
+                stroke-width: 2;
+                stroke-dasharray: 9, 5;
+                stroke-dashoffset: 0;
+                stroke-linecap: round;
+                fill: none;
+                transition: all 0.4s ease 0s;
+
+                rect{
+                    height: 40px;
+                    width: 90%;
+                    x: 6px;
+                    y: 5px;
+                }
+            }
+
+            &:hover{
+                svg{
+                    animation-play-state: running;
+                    stroke: rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+
+    &.be-button-style_3{
+        > a{
+            &::before, &::after{
+                width: 0;
+                height: 0;
+                -webkit-transform: rotate(360deg);
+                border-style: solid;
+                border-width: 0 0 0 0;
+                position: absolute;
+                z-index: -1;
+                transition: 0.5s;
+            }
+
+            &::before{
+                border-color: transparent transparent transparent var(--link-color-hover);
+                left: 0;
+                bottom: 0;
+            }
+
+            &::after{
+                border-color: transparent var(--link-color-hover) transparent transparent;
+                right: 0;
+                top:0;
+            }
+
+            &:hover{
+                &::before{
+                    border-width: 165px 0 0 165px;
+                }
+
+                &::after{
+                    border-width: 0 165px 165px 0;
+                }
+            }
+        }
+    }
+
+    &.be-button-style_4{
+        > a{
+            &::after{
+                z-index: -1;
+                background: #000;
+                height: 0;
+                left: 50%;
+                top: 50%;
+                width: 0;
+            }
+
+            &:hover{
+                opacity: 0.85;
+                &::after{
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    width: 100%
+                }
+            }
+        }
+    }
+
+    &.be-button-style_5{
+        > a{
+            background-color: transparent;
+            border: 2px solid var(--heading-color);
+            color: var(--heading-color);
+            &::after, &::before{
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                -webkit-transform: translate(-25%,-267%) rotate(-50deg);
+                transform: translate(-25%,-267%) rotate(-50deg);
+                -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+                transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            }
+
+            &::after{
+                background-color: rgba(51,51,51,1);
+            }
+
+            &::before{
+                background-color: rgba(51,51,51,0.5);
+            }
+
+            &:hover{
+                color: #fff;
+                &::before, &::after{
+                    -webkit-transform: translate(0,0);
+                    transform: translate(0,0);
+                    z-index: -1;
+                }
+
+                &::after{
+                    -webkit-transition-delay: 0.4s;
+                    transition-delay: 0.4s;
+                }
+            }
+        }
+    }   
+}

@@ -136,7 +136,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "30",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -145,6 +145,35 @@
                     "ui_on_text": "Show",
                     "ui_off_text": "Hide",
                     "ui": 1
+                },
+                {
+                    "key": "field_6434ad705130b",
+                    "label": "Select Animation Button",
+                    "name": "animation_button",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "style_default": "Default",
+                        "style_2": "Style 2",
+                        "style_3": "Style 3",
+                        "style_4": "Style 4",
+                        "style_5": "Style 5"
+                    },
+                    "default_value": "style_default",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 1,
+                    "ajax": 1,
+                    "placeholder": ""
                 },
                 {
                     "key": "field_642fc63712fbf",
@@ -164,7 +193,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "70",
+                        "width": "100",
                         "class": "",
                         "id": ""
                     },
@@ -308,5 +337,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681099795
+    "modified": 1681179807
 }

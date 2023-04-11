@@ -1,7 +1,9 @@
 <?php
 function be_events_listing(){
-    $events   = (!empty(get_field('events_listing_ss_up_ev_vd'))) ? get_field('events_listing_ss_up_ev_vd') : '';
-
+    $events        = (!empty(get_field('events_listing_ss_up_ev_vd'))) ? get_field('events_listing_ss_up_ev_vd') : '';
+    $general        = (!empty(get_field('general_ss_up_ev_vd'))) ? get_field('general_ss_up_ev_vd') : '';
+    $btn_animation = (!empty($general['animation_button'])) ? $general['animation_button'] : 'style_default';
+  
     $args = [
         'post_type'   => 'tribe_events',
         'post_status' => 'publish',
@@ -57,8 +59,13 @@ function be_events_listing(){
                             </div>
                             
                             <div class="item-event-inner-right"> 
-                                <div class="item-event--cta"> 
-                                    <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"> Join Us </a>
+                                <div class="item-event--cta be-button be-button-<?php echo $btn_animation ?>"> 
+                                    <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"> 
+                                        <?php if(!empty($btn_animation === 'style_2')): ?>
+                                            <svg class="wgl-dashes inner-dashed-border animated-dashes"> <rect rx="0%" ry="0%">  </rect> </svg>
+                                        <?php endif; ?>    
+                                        Join Us 
+                                    </a>
                                 </div>
                             </div>
                         </div>

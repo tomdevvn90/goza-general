@@ -142,3 +142,9 @@
     opacity: 0; 
   } 
 }
+
+@keyframes dashed_border_running {
+  100% {
+    stroke-dashoffset: -1000;
+  }
+}
