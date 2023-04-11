@@ -19341,7 +19341,7 @@ h6 {
   background-size: cover;
   background-position: center;
   width: 100%;
-  max-width: 730px;
+  max-width: 475px;
   box-sizing: border-box;
 }
 
@@ -19383,6 +19383,121 @@ h6 {
 
 .be-numberal-donation-box--list-item .item-numberal-donation:not(:last-child) {
   margin-bottom: 30px;
+}
+
+.be-numberal-donation-box--buttons .be-button > a {
+  font-size: 14px;
+  line-height: 60px;
+  font-weight: 700;
+  font-family: var(--heading-family);
+  height: 60px;
+  padding: 0 50px;
+  border-radius: 2px;
+  display: inline-block;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-button-style_2 svg rect {
+  height: 48px;
+  width: 95%;
+  x: 8px;
+  y: 6px;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-button-style_3 > a:hover::before {
+  border-width: 200px 0 0 200px;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-button-style_3 > a:hover::after {
+  border-width: 0 200px 200px 0;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-button-style_5 > a::before,
+.be-numberal-donation-box--buttons .be-button.be-button-style_5 > a::after {
+  transform: translate(-40%, -253%) rotate(-50deg);
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one > a {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1));
+  background-color: #fff;
+  color: var(--heading-color);
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one.be-button-style_default > a:hover {
+  background-color: #fff;
+  color: var(--heading-color);
+  opacity: 0.85;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one.be-button-style_2 > a:hover {
+  background-color: #fff;
+  color: var(--heading-color);
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one.be-button-style_2 > a:hover svg {
+  stroke: #000;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one.be-button-style_3 > a::before {
+  border-color: transparent transparent transparent #000;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one.be-button-style_3 > a::after {
+  border-color: transparent #000 transparent transparent;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one.be-button-style_3 > a:hover {
+  color: #fff;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one.be-button-style_4 > a:hover {
+  color: #fff;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two > a {
+  background-color: #000;
+  color: #fff;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_default > a:hover {
+  background-color: #000;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_3 > a::before {
+  border-color: transparent transparent transparent #fff;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_3 > a::after {
+  border-color: transparent #fff transparent transparent;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_3 > a:hover {
+  color: #000;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_4 > a::after {
+  background: #fff;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_4 > a:hover {
+  color: #000;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_5 > a {
+  border-color: #000;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_5 > a::before {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_5 > a::after {
+  background-color: rgb(255, 255, 255);
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_5 > a:hover {
+  color: #000;
 }
 
 .be-button > a {
