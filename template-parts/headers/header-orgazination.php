@@ -19,7 +19,9 @@ if ($goza_topbar_options) {
 }
 ?>
 <header class="<?php echo implode(' ', $classes) ?>">
-   <?php do_action('goza_hook_topbar'); ?>
+   <!-- Topbar -->
+   <?php if ($goza_enable_topbar) do_action('goza_hook_topbar'); ?>
+   
    <div class="goza-header-main">
       <div class="container">
          <div class="d-flex align-items-center justify-content-between goza-wrap-logo">

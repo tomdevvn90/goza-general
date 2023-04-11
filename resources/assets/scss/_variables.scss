@@ -113,6 +113,75 @@ $fonts_calligraffitti: (
   'Calligraffitti-Regular' : (family: 'Calligraffitti', file: 'Calligraffitti-Regular', weight: 400, style: normal)
 );
 
+//font Cormorant_Garamond
+$fonts_cormorant_garamond: (
+  'CormorantGaramond-Bold' : (family: 'Cormorant Garamond', file: 'CormorantGaramond-Bold', weight: 700, style: normal),
+  'CormorantGaramond-BoldItalic' : (family: 'Cormorant Garamond', file: 'CormorantGaramond-BoldItalic', weight: 700, style: italic),
+  'CormorantGaramond-Italic' : (family: 'Cormorant Garamond', file: 'CormorantGaramond-Italic', weight: 400, style: italic),
+  'CormorantGaramond-Light' : (family: 'Cormorant Garamond', file: 'CormorantGaramond-Light', weight: 300, style: normal),
+  'CormorantGaramond-LightItalic' : (family: 'Cormorant Garamond', file: 'CormorantGaramond-LightItalic', weight: 300, style: italic),
+  'CormorantGaramond-Medium' : (family: 'Cormorant Garamond', file: 'CormorantGaramond-Medium', weight: 500, style: normal),
+  'CormorantGaramond-MediumItalic' : (family: 'Cormorant Garamond', file: 'CormorantGaramond-MediumItalic', weight: 500, style: italic),
+  'CormorantGaramond-Regular' : (family: 'Cormorant Garamond', file: 'CormorantGaramond-Regular', weight: 400, style: normal),
+  'CormorantGaramond-SemiBold' : (family: 'Cormorant Garamond', file: 'CormorantGaramond-SemiBold', weight: 600, style: normal),
+  'CormorantGaramond-SemiBoldItalic' : (family: 'Cormorant Garamond', file: 'CormorantGaramond-SemiBoldItalic', weight: 600, style: italic)
+);
+
+//font Lato
+$fonts_lato: (
+  'Lato-Bold' : (family: 'Lato', file: 'Lato-Bold', weight: 700, style: normal),
+  'Lato-BoldItalic' : (family: 'Lato', file: 'Lato-BoldItalic', weight: 700, style: italic),
+  'Lato-Italic' : (family: 'Lato', file: 'Lato-Italic', weight: 400, style: italic),
+  'Lato-Light' : (family: 'Lato', file: 'Lato-Light', weight: 300, style: normal),
+  'Lato-LightItalic' : (family: 'Lato', file: 'Lato-LightItalic', weight: 300, style: italic),
+  'Lato-Black' : (family: 'Lato', file: 'Lato-Black', weight: 900, style: normal),
+  'Lato-BlackItalic' : (family: 'Lato', file: 'Lato-BlackItalic', weight: 900, style: italic),
+  'Lato-Regular' : (family: 'Lato', file: 'Lato-Regular', weight: 400, style: normal),
+  'Lato-Thin' : (family: 'Lato', file: 'Lato-Thin', weight: 100, style: normal),
+  'Lato-ThinItalic' : (family: 'Lato', file: 'Lato-ThinItalic', weight: 100, style: italic)
+);
+
+//font Montserrat
+$fonts_montserrat: (
+  'Montserrat-Bold' : (family: 'Montserrat', file: 'Montserrat-Bold', weight: 700, style: normal),
+  'Montserrat-BoldItalic' : (family: 'Montserrat', file: 'Montserrat-BoldItalic', weight: 700, style: italic),
+  'Montserrat-Italic' : (family: 'Montserrat', file: 'Montserrat-Italic', weight: 400, style: italic),
+  'Montserrat-Light' : (family: 'Montserrat', file: 'Montserrat-Light', weight: 300, style: normal),
+  'Montserrat-LightItalic' : (family: 'Montserrat', file: 'Montserrat-LightItalic', weight: 300, style: italic),
+  'Montserrat-Black' : (family: 'Montserrat', file: 'Montserrat-Black', weight: 900, style: normal),
+  'Montserrat-BlackItalic' : (family: 'Montserrat', file: 'Montserrat-BlackItalic', weight: 900, style: italic),
+  'Montserrat-Regular' : (family: 'Montserrat', file: 'Montserrat-Regular', weight: 400, style: normal),
+  'Montserrat-Thin' : (family: 'Montserrat', file: 'Montserrat-Thin', weight: 100, style: normal),
+  'Montserrat-ThinItalic' : (family: 'Montserrat', file: 'Montserrat-ThinItalic', weight: 100, style: italic),
+  'Montserrat-ExtraBold' : (family: 'Montserrat', file: 'Montserrat-ExtraBold', weight: 800, style: normal),
+  'Montserrat-ExtraBoldItalic' : (family: 'Montserrat', file: 'Montserrat-ExtraBoldItalic', weight: 800, style: italic),
+  'Montserrat-ExtraLight' : (family: 'Montserrat', file: 'Montserrat-ExtraLight', weight: 200, style: normal),
+  'Montserrat-ExtraLightItalic' : (family: 'Montserrat', file: 'Montserrat-ExtraLightItalic', weight: 200, style: italic),
+  'Montserrat-Medium' : (family: 'Montserrat', file: 'Montserrat-Medium', weight: 500, style: normal),
+  'Montserrat-MediumItalic' : (family: 'Montserrat', file: 'Montserrat-MediumItalic', weight: 500, style: italic),
+  'Montserrat-SemiBold' : (family: 'Montserrat', file: 'Montserrat-SemiBold', weight: 600, style: normal),
+  'Montserrat-SemiBoldItalic' : (family: 'Montserrat', file: 'Montserrat-SemiBoldItalic', weight: 600, style: italic)
+);
+
+//font Muli
+$fonts_muli: (
+  'Muli-Bold' : (family: 'Muli', file: 'Muli-Bold', weight: 700, style: normal),
+  'Muli-BoldItalic' : (family: 'Muli', file: 'Muli-BoldItalic', weight: 700, style: italic),
+  'Muli-Italic' : (family: 'Muli', file: 'Muli-Italic', weight: 400, style: italic),
+  'Muli-Light' : (family: 'Muli', file: 'Muli-Light', weight: 300, style: normal),
+  'Muli-LightItalic' : (family: 'Muli', file: 'Muli-LightItalic', weight: 300, style: italic),
+  'Muli' : (family: 'Muli', file: 'Muli', weight: 400, style: normal),
+  'Muli-ExtraLight' : (family: 'Muli', file: 'Muli-ExtraLight', weight: 200, style: normal),
+  'Muli-ExtraLightItalic' : (family: 'Muli', file: 'Muli-ExtraLightItalic', weight: 200, style: italic),
+  'Muli-SemiBold' : (family: 'Muli', file: 'Muli-SemiBold', weight: 600, style: normal),
+  'Muli-Semi-BoldItalic' : (family: 'Muli', file: 'Muli-Semi-BoldItalic', weight: 600, style: italic)
+);
+
+//font Satisfy
+$fonts_satisfy: (
+  'Satisfy-Regular' : (family: 'Satisfy', file: 'Satisfy-Regular', weight: 400, style: normal)
+);
+
 
 $font-weights: (
   'light': $font-weight-light,

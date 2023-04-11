@@ -96,5 +96,75 @@
   }
 }
 
+//font Cormorant Garamond
+@each $font-key, $font-item in $fonts_cormorant_garamond {
+  $font-family: map-get($font-item, 'family');
+  $font-weight: map-get($font-item, 'weight');
+  $font-style: map-get($font-item, 'style');
+  $font-file: map-get($font-item, 'file');
+  @font-face {
+    font-family: $font-family;
+    src: url('../fonts/Cormorant_Garamond/' + $font-file + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+//font Lato
+@each $font-key, $font-item in $fonts_lato {
+  $font-family: map-get($font-item, 'family');
+  $font-weight: map-get($font-item, 'weight');
+  $font-style: map-get($font-item, 'style');
+  $font-file: map-get($font-item, 'file');
+  @font-face {
+    font-family: $font-family;
+    src: url('../fonts/Lato/' + $font-file + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+//font Montserrat
+@each $font-key, $font-item in $fonts_montserrat {
+  $font-family: map-get($font-item, 'family');
+  $font-weight: map-get($font-item, 'weight');
+  $font-style: map-get($font-item, 'style');
+  $font-file: map-get($font-item, 'file');
+  @font-face {
+    font-family: $font-family;
+    src: url('../fonts/Montserrat/' + $font-file + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+//font Montserrat
+@each $font-key, $font-item in $fonts_muli {
+  $font-family: map-get($font-item, 'family');
+  $font-weight: map-get($font-item, 'weight');
+  $font-style: map-get($font-item, 'style');
+  $font-file: map-get($font-item, 'file');
+  @font-face {
+    font-family: $font-family;
+    src: url('../fonts/Muli/' + $font-file + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+//font Montserrat
+@each $font-key, $font-item in $fonts_satisfy {
+  $font-family: map-get($font-item, 'family');
+  $font-weight: map-get($font-item, 'weight');
+  $font-style: map-get($font-item, 'style');
+  $font-file: map-get($font-item, 'file');
+  @font-face {
+    font-family: $font-family;
+    src: url('../fonts/Satisfy/' + $font-file + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
 
 
