@@ -12,9 +12,12 @@ $custom_logo_id = get_theme_mod('custom_logo');
 $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 $header_btn = __get_field('goza_header_button', 'option');
 $icon_cart = __get_field('goza_enable_cart', 'option');
+$goza_enable_topbar = __get_field('goza_enable_topbar', 'option');
 ?>
 <header class="<?php echo implode(' ', $classes) ?>">
-   <?php do_action('goza_hook_topbar'); ?>
+   <!-- Topbar -->
+   <?php if ($goza_enable_topbar) do_action('goza_hook_topbar'); ?>
+
    <div class="container">
       <div class="goza-header-main">
          <div class="goza-header-main--logo">
@@ -39,7 +42,7 @@ $icon_cart = __get_field('goza_enable_cart', 'option');
                ?>
             </div>
             <div class="goza-header-main--cta">
-               <?php if ($icon_cart && class_exists( 'WooCommerce' )) { ?>
+               <?php if ($icon_cart && class_exists('WooCommerce')) { ?>
                   <div class="goza-header-cart-icon">
                      <i class="fa fa-shopping-basket"></i>
                      <span class="goza-total-cart"><?= WC()->cart->cart_contents_count ?></span>
