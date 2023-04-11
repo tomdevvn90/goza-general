@@ -1,18 +1,20 @@
 <?php
 
 /**
- * Header template transparent
+ * Header Ngo Dark
  */
 
 $classes = [
    'site-header',
-   'site-header-transparent',
    'site-header-ngo-dark'
 ];
 $custom_logo_id = get_theme_mod('custom_logo');
 $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 $header_btn = __get_field('goza_header_button', 'option');
 $icon_cart = __get_field('goza_enable_cart', 'option');
+$goza_phone_number = __get_field('goza_phone_number', 'option');
+$goza_email = __get_field('goza_email', 'option');
+$goza_openning = __get_field('goza_openning', 'option');
 ?>
 <header class="<?php echo implode(' ', $classes) ?>">
    <div class="container">
@@ -39,15 +41,25 @@ $icon_cart = __get_field('goza_enable_cart', 'option');
                ?>
             </div>
             <div class="goza-header-main--cta">
-               <?php if ($icon_cart && class_exists( 'WooCommerce' )) { ?>
-                  <div class="goza-header-cart-icon">
+               <?php if ($icon_cart && class_exists('WooCommerce')) { ?>
+                  <div class="d-block d-lg-none goza-header-cart-icon">
                      <i class="fa fa-shopping-basket"></i>
-                     <span class="goza-total-cart"><?= WC()->cart->cart_contents_count ?></span>
+                     <span class="goza-total-cart"><?= esc_attr(WC()->cart->cart_contents_count) ?></span>
                   </div>
                <?php   } ?>
-               <?php if ($header_btn) { ?>
-                  <a class="d-none d-lg-block goza-header-button" href="<?= esc_attr($header_btn['url']) ?>" target="<?= ($header_btn['target']) ? $header_btn['target'] : '' ?>"><?= esc_attr($header_btn['title']) ?></a>
-               <?php } ?>
+
+               <?php if (isset($goza_phone_number) && $goza_phone_number) { ?>
+                  <div class="d-none d-lg-block goza-header-info goza-header-phone">
+                     <a href="tel:<?= esc_attr($goza_phone_number) ?>"><i class="fa fa-volume-control-phone"></i><span><?= esc_attr($goza_phone_number) ?><span><?= esc_attr($goza_openning) ?></span></span></a>
+                  </div>
+               <?php  } ?>
+
+               <?php if (isset($goza_email) && $goza_email) { ?>
+                  <div class="d-none d-lg-block goza-header-info goza-header-email">
+                     <a href="mailto:<?= esc_attr($goza_email) ?>"><i class="fa fa-envelope-o"></i><span><?= esc_attr($goza_email) ?><span><?= esc_html__( 'online support', 'goza' ) ?></span></span></a>
+                  </div>
+               <?php  } ?>
+
                <div id="goza-hamberger" class="d-block d-lg-none"><i class="fa fa-reorder"></i></div>
             </div>
          </div>

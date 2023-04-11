@@ -15,6 +15,7 @@ echo "</div><!--End site wrap-->";
 do_action( 'goza_hook_footer' );
 do_action('goza_hook_preloader');
 do_action('goza_hook_menu_mobile');
+do_action('goza_hook_search');
 wp_footer();
 ?>
 </body>

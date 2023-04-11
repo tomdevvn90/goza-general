@@ -16,8 +16,7 @@ global.$ = global.jQuery = require('jquery');
             $(el).find('.handle-sub').toggleClass('active');
         });
 
-        const SITE_MOBILE = $('.site-menu-mobile'),
-            MENU_HAMBERGER = $('#goza-hamberger'),
+        const MENU_HAMBERGER = $('#goza-hamberger'),
             $body = $('body'),
             MENU_CLOSE = $('.off-canvas-menu-closed');
 

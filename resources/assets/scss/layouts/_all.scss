@@ -1,7 +1,10 @@
-@import "header_default";
-@import "header_transparent";
-@import "header_search";
-@import "header_menu_center";
+@import "header_general";
+@import "header_ngo";
+@import "header_water";
+@import "header_orgazination";
+@import "header_charity";
+@import "header_ngo_dark";
+@import "header_water_charity";
 @import "content";
 @import "footer";
 @import "form";
@@ -10,7 +13,7 @@
 @import "topbar_2"; 
 @import "topbar_3"; 
 @import "menu_mobile"; 
-@import "footer_default";
+@import "footer_general";
 @import "footer_ngo";
 @import "footer_water";
 @import "footer_organization";

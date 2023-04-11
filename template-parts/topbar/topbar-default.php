@@ -56,7 +56,7 @@ if ($goza_topbar_btn) {
                 <div class="goza-topbar-item goza-topbar-ep">
                     <a href="tel:<?= $goza_phone_number ?>"><i class="fa fa-phone" aria-hidden="true"></i>Call Us Now: <?= $goza_phone_number ?></a>
                 </div>
-            <?php  } ?>
+            <?php } ?>
         </div>
     </div>
 </div>

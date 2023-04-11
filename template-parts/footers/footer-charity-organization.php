@@ -37,7 +37,6 @@ if ($goza_sub_news_op) {
 //copyright
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
 
-
 ?>
 
 <footer id="site-footer" class="main-footer footer-charity-organization" style="<?= esc_attr($style) ?>">
