@@ -296,6 +296,255 @@
           }
           }
       }
-  }   
+    }   
+    &.is-style-2{
+        .be-give-slider-block-inner{
+            .item-give{
+                .featured-image {
+                    border-radius: 3px 3px 0 0;
+                    overflow: hidden;
+                    img{
+                    width: 100%;
+                    height: auto;
+                    }
+                }
+                .entry-content {
+                    padding: 20px;
+                    position: relative;
+                    .entry-content-inner{
+                    .extra-meta{
+                    .meta-item.meta-date{
+                        font-size: 16px;
+                        line-height: 1.6;
+                        letter-spacing: 0px;
+                        color: var(--link-color, #111);
+                        span{
+                          color: var(--link-color, #111);
+                          padding: 0 5px;
+                          margin-top: -3px;
+                          font-size: 17px;
+                        }
+                        }
+                    }
+                    .give-goal-progress-wrap{
+                      .progress{
+                        opacity: 1; 
+                        position: relative; 
+                        width: 100%; 
+                        height: 5px; 
+                        background-image: none; 
+                        background-color: #AAAAAA; 
+                        .bar { 
+                          width: 0;
+                          height: 100%; 
+                        }
+                      }
+                      .give-price-wrap{
+                      font-size: 16px;
+                      letter-spacing: 0px;
+                      color: var(--link-color, #111);
+                      font-weight: 600;
+                      }
+                      .bt-com {
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 2.14;
+                        letter-spacing: 0px;
+                        color: #555555;
+                        padding: 10px 0;
+                      }
+                    }
+                    .title-link{
+                      display: block;
+                      min-height: 56px;
+                      text-decoration: none;
+                      .title{
+                      color: #333333;
+                      font-size: 22px;
+                      line-height: 30px;
+                      letter-spacing: 0;
+                      }
+                    } 
+                    .entry-bot{
+                      border-top: #ebebeb solid 1px;
+                      overflow: hidden;
+                      .give-price-raised {
+                        width: 45%;
+                        float: left;
+                        text-align: center;
+                        font-size: 30px;
+                        line-height: 1;
+                        letter-spacing: 0;
+                        color: #303030;
+                        span{
+                          display: block;
+                          color:#777777;
+                          font-size: 16px;
+                          line-height: 2.14;
+                          letter-spacing: 0;
+                        }
+                        strong{
+                          font-weight: 400;
+                        }
+                      }
+                      .give-price-goal {
+                        width: 55%;
+                        float: left;
+                        text-align: center;
+                        border-left: #ebebeb solid 1px;
+                        font-size: 30px;
+                        line-height: 1;
+                        letter-spacing: 0;
+                        color: #303030;
+                        span{
+                          display: block;
+                          color:#777777;
+                          font-size: 16px;
+                          line-height: 2.14;
+                          letter-spacing: 0;
+                        }
+                        strong{
+                          font-weight: 400;
+                        }
+                      }
+                    }
+                    }
+                  }
+                  &:hover{
+                    .featured-image{
+                    img{
+                      transform: scale(1.05);
+                      -webkit-transform: scale(1.05);
+                    }
+                    }
+                }
+            }
+        }
+    }
+    &.is-style-3{
+        .be-give-slider-block-inner{
+            .item-give{
+                .featured-image{
+                    position: relative;
+                    overflow: hidden;
+                    height: 250px;
+                    &:before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 2;
+                        display: block;
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0,0,0,0.6);
+                      opacity: 0;
+                    }
+                    &:hover{
+                      &:before{
+                        opacity: 1;
+                        transition: all .4s ease;
+                        -webkit-transition: all .4s ease;
+                      }
+                    }
+                  }
+                  .entry-content {
+                    padding: 30px;
+                    position: relative;
+                    .entry-content-inner{
+                       .form-category{
+                        margin-bottom: 10px;
+                        a{
+                            color:var(--link-color, #ec5e87);
+                        }
+                       }
+                       .excerpt{
+                           margin-bottom: 35px;
+                           font-size: 16px;
+                           line-height: 26px;
+                           overflow: hidden;
+                            text-overflow: ellipsis;
+                            -webkit-line-clamp: 3;
+                            display: -webkit-box;
+                            height: 78px;
+                            -webkit-box-orient: vertical;
+                       }
+                      .give-goal-progress-wrap{
+                        .goal_progress_full {
+                            width: 100%;
+                            height: 16px;
+                            background: var(--heading-color , #ec5e87);
+                        }
+                        .progress{
+                            opacity: 1; 
+                            position: relative; 
+                            width: 100%; 
+                            height: 16px; 
+                            background-image: none; 
+                            .bar { 
+                              width: 0;
+                              height: 100%; 
+                            }
+                          }
+                        .give-price-wrap{
+                          font-size: 17px;
+                          letter-spacing: 0px;
+                          color: #333;
+                          font-weight: 600;
+                          position: relative;
+                          margin-top: 15px;
+                          padding-left: 65px;
+                          &:before{
+                              content: " ";
+                              position: absolute;
+                              left: 0px;
+                              top: 50%;
+                              transform: translateY(-50%);
+                              background-image: url(/wp-content/themes/goza-theme/resources/assets/images/love.svg);
+                              width: 50px;
+                              height: 50px;
+                              background-position: center;
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                          }
+                          .raised, .income{
+                              font-weight: 400;
+                              margin-left: 25px;
+                          }
+                        }
+                      }
+                      .title-link{
+                        display: block;
+                        min-height: 56px;
+                        text-decoration: none;
+                        .title{
+                          color: #333333;
+                          font-size: 24px;
+                          line-height: 28px;
+                          letter-spacing: 0px;
+                          text-transform: uppercase;
+                          font-weight: 700;
+                          margin-bottom: 20px;
+                          overflow: hidden; 
+                          text-overflow: ellipsis;
+                          -webkit-line-clamp: 2;
+                          display: -webkit-box;
+                          height: 56px;
+                          -webkit-box-orient: vertical;
+                        }
+                      }
+                    }
+                  }
+                  &:hover{
+                    .featured-image{
+                      img{
+                        transform: scale(1.05);
+                        -webkit-transform: scale(1.05);
+                      }
+                    }
+                  }
+            }
+        }
+    }
 
 }
