@@ -30,7 +30,7 @@ $icon_cart = __get_field('goza_enable_cart', 'option');
             <div class="d-none d-lg-block goza-header-main--menu">
                <?php
                wp_nav_menu([
-                  'theme_location' => 'main-menu',
+                  'theme_location' => 'main-menu', 
                   'menu_class' => 'main-menu',
                   'container_class' => 'menu-container',
                   'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
@@ -53,5 +53,4 @@ $icon_cart = __get_field('goza_enable_cart', 'option');
          </div>
       </div>
    </div>
-
 </header> <!-- #site-header -->

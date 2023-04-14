@@ -126,6 +126,26 @@
             "append": ""
         },
         {
+            "key": "field_643562f6afcd6",
+            "label": "Openning",
+            "name": "goza_openning",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Mon-Fri 9am-6pm",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_641475dfeeeeb",
             "label": "Social Network",
             "name": "goza_social_network",
@@ -1283,18 +1303,13 @@
                         "Exo 2": "Exo 2",
                         "Fira Sans": "Fira Sans",
                         "Roboto": "Roboto",
-                        "Calligraffitti": "Calligraffitti",
-                        "Cormorant Garamond": "Cormorant Garamond",
-                        "Lato": "Lato",
-                        "Montserrat": "Montserrat",
-                        "Muli": "Muli",
-                        "Satisfy": "Satisfy"
+                        "Calligraffitti": "Calligraffitti"
                     },
                     "default_value": false,
-                    "return_format": "value",
-                    "multiple": 0,
                     "allow_null": 0,
-                    "ui": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
                     "ajax": 0,
                     "placeholder": ""
                 },
@@ -1448,19 +1463,14 @@
                         "Exo 2": "Exo 2",
                         "Fira Sans": "Fira Sans",
                         "Roboto": "Roboto",
-                        "Calligraffitti": "Calligraffitti",
-                        "Cormorant Garamond": "Cormorant Garamond",
-                        "Lato": "Lato",
-                        "Montserrat": "Montserrat",
-                        "Muli": "Muli",
-                        "Satisfy": "Satisfy"
+                        "Calligraffitti": "Calligraffitti"
                     },
                     "default_value": false,
-                    "return_format": "value",
-                    "multiple": 0,
                     "allow_null": 0,
+                    "multiple": 0,
                     "ui": 1,
                     "ajax": 0,
+                    "return_format": "value",
                     "placeholder": ""
                 },
                 {
@@ -1929,5 +1939,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681183546
+    "modified": 1681220368
 }

@@ -127,6 +127,22 @@ import counterUp from 'counterup2'
         })
     }
 
+    const gozaSearch = () => {
+        $(document).on('click', '.goza-header-search', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const MODAL_SEARCH = $('#goza-modal-search');
+            MODAL_SEARCH.addClass('is-show');
+        });
+
+        $(document).on('click', '.goza-search-close', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const MODAL_SEARCH = $('#goza-modal-search');
+            MODAL_SEARCH.removeClass('is-show');
+        });
+    }
+
     $(window).on("scroll", function () {
 
     });
@@ -145,7 +161,12 @@ import counterUp from 'counterup2'
             $("html, body").animate({ scrollTop: 0 }, 1000);
         });
 
+        //Gallery on footer
         lightGalleryFooter();
+
+        //search
+        gozaSearch();
+
         bePopupsVideo()
         beCounter()
         beProgressbar()

@@ -63,6 +63,18 @@ function goza_preloader_template()
 }
 
 /**
+ * Search template
+ * @return void
+ */
+add_action('goza_hook_search', 'goza_search_template');
+function goza_search_template()
+{
+	$goza_header_search = __get_field('goza_header_search', 'option'); 
+	if (!isset($goza_header_search) || !$goza_header_search) return;
+	load_template(get_template_directory() . '/template-parts/modal-search.php', false);
+}
+
+/**
  * Menu Mobile template
  * @return void
  */
