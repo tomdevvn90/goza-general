@@ -1,5 +1,4 @@
 <?php 
-
 function be_item_event($block){
 
     $is_style = (isset($block['className']) && !empty($block['className'])) ? $block['className'] : "is-style-default";
@@ -64,7 +63,10 @@ function be_template_events_listing_style_2(){
 <?php }
 
 function be_template_events_listing_default(){ 
-    $ev_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+    $ev_img_url    = get_the_post_thumbnail_url(get_the_ID(),'full');
+    $general       = (!empty(get_field('general_events_listing'))) ? get_field('general_events_listing') : '';
+    $btn_animation = (!empty($general['animation_button'])) ? $general['animation_button'] : 'style_default';
+
     if(is_plugin_active('the-events-calendar/the-events-calendar.php')){
         $start_date = tribe_get_start_date( get_the_ID(), true, 'j M Y - G:i a, l');
     }
@@ -93,8 +95,13 @@ function be_template_events_listing_default(){
             </div>
             
             <div class="item-event-inner-right"> 
-                <div class="item-event--cta"> 
-                    <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"> Join Us </a>
+                <div class="item-event--cta be-button be-button-<?php echo $btn_animation ?>"> 
+                    <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"> 
+                        <?php if(!empty($btn_animation === 'style_2')): ?>
+                            <svg class="wgl-dashes inner-dashed-border animated-dashes"> <rect rx="0%" ry="0%">  </rect> </svg>
+                        <?php endif; ?>    
+                        Join Us 
+                    </a>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <?php
 
 // create id attribute for specific styling
-$id = 'be-icon-box-' . $block['id'];
+$id = 'be-events-listing-' . $block['id'];
 
 // create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
@@ -46,7 +46,5 @@ $the_query = new WP_Query($args);
    } 
    ?>   
 </div>
-
 <?php 
 wp_reset_postdata();
-// return ob_get_clean();

@@ -277,8 +277,8 @@ __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var lightgallery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lightgallery */ "./node_modules/lightgallery/lightgallery.es5.js");
 /* harmony import */ var lightgallery_plugins_video__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lightgallery/plugins/video */ "./node_modules/lightgallery/plugins/video/lg-video.es5.js");
 /* harmony import */ var lightgallery_plugins_autoplay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lightgallery/plugins/autoplay */ "./node_modules/lightgallery/plugins/autoplay/lg-autoplay.es5.js");
-/* harmony import */ var jquery_counter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery-counter */ "./node_modules/jquery-counter/dist/jquery.counter.min.js");
-/* harmony import */ var jquery_counter__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery_counter__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var counterup2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! counterup2 */ "./node_modules/counterup2/dist/index.js");
+/* harmony import */ var counterup2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(counterup2__WEBPACK_IMPORTED_MODULE_3__);
 //lightgallery
 
 
@@ -293,14 +293,27 @@ __webpack_require__.r(__webpack_exports__);
     });
   };
   var beCounter = function beCounter() {
-    var $isCounter = $('[data-counter]');
+    var $isCounter = document.querySelectorAll('[data-counter]');
     if ($isCounter.length === 0) return;
-    $isCounter.each(function () {
-      $(this).counter({
-        decimals: 0,
-        decPoint: ".",
-        thousandsSep: ","
+    var callback = function callback(entries) {
+      entries.forEach(function (entry) {
+        var el = entry.target;
+        if (entry.isIntersecting && !el.classList.contains('is-visible')) {
+          var $duration = $(el).data('duration') ? $(el).data('duration') : 1000;
+          var $delay = $(el).data('delay') ? $(el).data('delay') : 60;
+          counterup2__WEBPACK_IMPORTED_MODULE_3___default()(el, {
+            duration: $duration,
+            delay: $delay
+          });
+          el.classList.add('is-visible');
+        }
       });
+    };
+    var IO = new IntersectionObserver(callback, {
+      threshold: 1
+    });
+    $isCounter.forEach(function ($value, index) {
+      IO.observe($value);
     });
   };
   var bePopupsVideo = function bePopupsVideo() {

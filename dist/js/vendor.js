@@ -41,6 +41,17 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/counterup2/dist/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/counterup2/dist/index.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,t){ true?module.exports=t():undefined}(self,(function(){return(()=>{"use strict";var e={d:(t,n)=>{for(var o in n)e.o(n,o)&&!e.o(t,o)&&Object.defineProperty(t,o,{enumerable:!0,get:n[o]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t),r:e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})}},t={};e.r(t),e.d(t,{default:()=>n,divideNumbers:()=>r});const n=(e,t={})=>{const{action:n="start",duration:i=1e3,delay:u=16}=t;if("stop"===n)return void o(e);if(o(e),!/[0-9]/.test(e.innerHTML))return;const l=r(e.innerHTML,{duration:i||e.getAttribute("data-duration"),delay:u||e.getAttribute("data-delay")});e._countUpOrigInnerHTML=e.innerHTML,e.innerHTML=l[0]||"&nbsp;",e.style.visibility="visible";const c=function(){e.innerHTML=l.shift()||"&nbsp;",l.length?(clearTimeout(e.countUpTimeout),e.countUpTimeout=setTimeout(c,u)):e._countUpOrigInnerHTML=void 0};e.countUpTimeout=setTimeout(c,u)},o=e=>{clearTimeout(e.countUpTimeout),e._countUpOrigInnerHTML&&(e.innerHTML=e._countUpOrigInnerHTML,e._countUpOrigInnerHTML=void 0),e.style.visibility=""},r=(e,t={})=>{const{duration:n=1e3,delay:o=16}=t,r=n/o,i=e.toString().split(/(<[^>]+>|[0-9.][,.0-9]*[0-9]*)/),u=[];for(let e=0;e<r;e++)u.push("");for(let e=0;e<i.length;e++)if(/([0-9.][,.0-9]*[0-9]*)/.test(i[e])&&!/<[^>]+>/.test(i[e])){let t=i[e];const n=[...t.matchAll(/[.,]/g)].map((e=>({char:e[0],i:t.length-e.index-1}))).sort(((e,t)=>e.i-t.i));t=t.replace(/[.,]/g,"");let o=u.length-1;for(let e=r;e>=1;e--){let i=parseInt(t/r*e,10);i=n.reduce(((e,{char:t,i:n})=>e.length<=n?e:e.slice(0,-n)+t+e.slice(-n)),i.toString()),u[o--]+=i}}else for(let t=0;t<r;t++)u[t]+=i[e];return u[u.length]=e.toString(),u};return t})()}));
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/aos/dist/aos.css":
 /*!***********************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/aos/dist/aos.css ***!
@@ -210,18 +221,6 @@ module.exports = function escape(url) {
     return url
 }
 
-
-/***/ }),
-
-/***/ "./node_modules/jquery-counter/dist/jquery.counter.min.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/jquery-counter/dist/jquery.counter.min.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(jQuery) {!function(d){var l,f,h={init:function(t,e){l=t,f=e,h.bind()},bind:function(){d(window).scroll(function(){h.animate(l,f)}),d(window).trigger("scroll")},animate:function(t,e){var n=d(window).height(),u=d(window).scrollTop(),c=u+n;d.each(t,function(t){try{var e=d(this).offset().top}catch(t){return}var n=d(this),i=n.data("offset")||200,a=n.data("duration")||3e3,o=n.data("delay")||200,r=e+n.outerHeight();i&&(e+=i,r-=i),0<parseInt(n.text())&&n.attr("data-count-to",parseInt(n.text()));var s=parseInt(n.attr("data-count-to"))||0;n.text(0),u<=r&&e<=c&&(l.splice(t,1),setTimeout(function(){n.animate({counter:s},{duration:a,easing:"linear",step:function(){n.text(h.formatNumber(Math.floor(this.counter),f.decimals,f.decPoint,f.thousandsSep))},complete:function(){n.text(h.formatNumber(Math.floor(this.counter),f.decimals,f.decPoint,f.thousandsSep))}})},o))})},formatNumber:function(t,e,n,i){e=isNaN(e=Math.abs(e))?2:e;var a=null==a?".":a,o=(i=null==i?",":i,t<0?"-":""),r=String(parseInt(t=Math.abs(Number(t)||0).toFixed(e))),s=3<(s=r.length)?s%3:0;return o+(s?r.substr(0,s)+i:"")+r.substr(s).replace(/(\d{3})(?=\d)/g,"$1"+i)+(e?a+Math.abs(t-r).toFixed(e).slice(2):"")}};jQuery.fn.counter=function(t){if(!1===(t=d.extend({decimals:0,decPoint:".",thousandsSep:","},t)).mobile&&/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))return!1;h.init(this,t)}}(jQuery);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
