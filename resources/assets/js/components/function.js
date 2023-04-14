@@ -13,6 +13,54 @@ import counterUp from 'counterup2'
         });
     }
 
+    const beProgressbar = () =>{
+        const $isProgressbar = $('[data-progressbar]');
+        if ($isProgressbar.length === 0) return;
+
+        $isProgressbar.each(function() {
+            let $value         = $(this).data('progressbar') / 100,
+                $idProgressbar = $(this).attr('id'),
+                ProgressBar    = require('progressbar.js'),
+                $heading       = $(this).data('heading') ? $(this).data('heading') : '',
+                $duration      = $(this).data('duration'),
+                $trailwidth    = $(this).data('trailwidth'),
+                $trailcolor    = $(this).data('trailcolor'),
+                $strokecolor   = $(this).data('strokecolor'),
+                $strokewidth   = $(this).data('strokewidth');
+            
+            if($value && $idProgressbar){
+                let circle = new ProgressBar.Circle(`#${$idProgressbar}`, {
+                    
+                    strokeWidth: $strokewidth, 
+                    trailWidth: $trailwidth,
+                    trailColor: $trailcolor,
+                    easing: 'easeInOut',
+                    duration: $duration,
+                    text: {
+                        autoStyleContainer: false
+                    },
+                    from: { color: $strokecolor, width: $strokewidth},
+                    to:   { color: $strokecolor, width: $strokewidth },
+                    // Set default step function for all animate calls
+                    step: function(state, circle) {
+                        circle.path.setAttribute('stroke', state.color);
+                        circle.path.setAttribute('stroke-width', state.width);
+
+                        var value = Math.round(circle.value() * 100);
+                        if (value === 0) {
+                            circle.setText('');
+                        } else {
+                            circle.setText(`<span> ${value}<sup>%</sup> </span> <p> ${$heading} </p>`);
+                          
+                        }
+                    }
+                });
+
+                circle.animate($value); 
+            }
+        })
+    }
+
     const beCounter = () =>{
         const $isCounter = document.querySelectorAll('[data-counter]');
         if ($isCounter.length === 0) return;
@@ -100,6 +148,7 @@ import counterUp from 'counterup2'
         lightGalleryFooter();
         bePopupsVideo()
         beCounter()
+        beProgressbar()
     });
 
 })(jQuery);

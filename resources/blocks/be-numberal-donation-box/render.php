@@ -9,6 +9,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 // ACF field variables
 $general       = (!empty(get_field('general_numberal_donation_box'))) ? get_field('general_numberal_donation_box') : '';
 $counter       = (!empty(get_field('counter_numberal_donation_box'))) ? get_field('counter_numberal_donation_box') : '';
+$progressbar   = (!empty(get_field('progressbar_donation_box'))) ? get_field('progressbar_donation_box') : '';
 $list_items    = (!empty($counter['list_items'])) ? $counter['list_items'] : '';
 $button_one    = (!empty($general['button_one'])) ? $general['button_one'] : '';
 $button_two    = (!empty($general['button_one'])) ? $general['button_one'] : '';
@@ -69,4 +70,18 @@ $bg            = (!empty($general['bg_image'])) ? $general['bg_image'] : get_tem
 
       </div>
   </div>
+
+   <?php if(!empty($progressbar['value'])): ?>
+      <?php  $bg = (!empty($progressbar['bg'])) ? $progressbar['bg'] : get_template_directory_uri(). '/resources/assets/images/bg-progressbar_donation_box_default.png'; ?>
+      <div class="be-numberal-donation-box-progressbar" style="background-image:url('<?php echo $bg ?>')"> 
+         <div  class="be-numberal-donation-box-progressbar-inner"> 
+            <span id="be-progressbar" data-progressbar="<?php echo $progressbar['value'] ?>" data-heading="<?php echo $progressbar['desc'] ?>"
+                  data-strokewidth="<?php echo $progressbar['strokewidth'] ?>" data-strokecolor="<?php echo $progressbar['strokecolor'] ?>"
+                  data-trailwidth="<?php echo $progressbar['trailwidth'] ?>" data-trailcolor="<?php echo $progressbar['trailcolor'] ?>"
+                  data-duration=<?php echo $progressbar['duration'] ?>
+            > 
+         </span>
+         </div>
+      </div>
+   <?php endif; ?>
 </div>

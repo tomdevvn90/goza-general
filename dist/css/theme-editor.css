@@ -6559,6 +6559,7 @@
   width: 100%;
   max-width: 475px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .be-numberal-donation-box-inner {
@@ -6566,6 +6567,16 @@
   padding-right: 15%;
   padding-bottom: 90px;
   padding-left: 15%;
+}
+
+.be-numberal-donation-box-progressbar {
+  width: 200px;
+  position: absolute;
+  left: -100px;
+  top: 140px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
 }
 
 .be-numberal-donation-box--list-item .item-numberal-donation {
@@ -6601,6 +6612,17 @@
   margin-bottom: 30px;
 }
 
+.be-numberal-donation-box--buttons {
+  margin-top: 50px;
+}
+
+.be-numberal-donation-box--buttons .be-button {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
 .be-numberal-donation-box--buttons .be-button > a {
   font-size: 14px;
   line-height: 60px;
@@ -6632,6 +6654,10 @@
 .be-numberal-donation-box--buttons .be-button.be-button-style_5 > a::before,
 .be-numberal-donation-box--buttons .be-button.be-button-style_5 > a::after {
   transform: translate(-40%, -253%) rotate(-50deg);
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one {
+  margin-bottom: 10px;
 }
 
 .be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one > a {
@@ -6888,6 +6914,31 @@
 
 .be-button.be-button-style_5 > a:hover::after {
   transition-delay: 0.4s;
+}
+
+[data-progressbar] {
+  position: relative;
+}
+
+[data-progressbar] .progressbar-text {
+  font-size: 48px;
+  line-height: 50px;
+  color: #fff !important;
+  text-align: center;
+}
+
+[data-progressbar] .progressbar-text sup {
+  font-size: 25px;
+  color: #000 !important;
+}
+
+[data-progressbar] .progressbar-text p {
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
 }
 
 .block-editor-block-list__block .be-testominials-block-carousel {

@@ -225,6 +225,53 @@ __webpack_require__.r(__webpack_exports__);
       speed: 500
     });
   };
+  var beProgressbar = function beProgressbar() {
+    var $isProgressbar = $('[data-progressbar]');
+    if ($isProgressbar.length === 0) return;
+    $isProgressbar.each(function () {
+      var $value = $(this).data('progressbar') / 100,
+        $idProgressbar = $(this).attr('id'),
+        ProgressBar = __webpack_require__(/*! progressbar.js */ "./node_modules/progressbar.js/src/main.js"),
+        $heading = $(this).data('heading') ? $(this).data('heading') : '',
+        $duration = $(this).data('duration'),
+        $trailwidth = $(this).data('trailwidth'),
+        $trailcolor = $(this).data('trailcolor'),
+        $strokecolor = $(this).data('strokecolor'),
+        $strokewidth = $(this).data('strokewidth');
+      if ($value && $idProgressbar) {
+        var circle = new ProgressBar.Circle("#".concat($idProgressbar), {
+          strokeWidth: $strokewidth,
+          trailWidth: $trailwidth,
+          trailColor: $trailcolor,
+          easing: 'easeInOut',
+          duration: $duration,
+          text: {
+            autoStyleContainer: false
+          },
+          from: {
+            color: $strokecolor,
+            width: $strokewidth
+          },
+          to: {
+            color: $strokecolor,
+            width: $strokewidth
+          },
+          // Set default step function for all animate calls
+          step: function step(state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+            var value = Math.round(circle.value() * 100);
+            if (value === 0) {
+              circle.setText('');
+            } else {
+              circle.setText("<span> ".concat(value, "<sup>%</sup> </span> <p> ").concat($heading, " </p>"));
+            }
+          }
+        });
+        circle.animate($value);
+      }
+    });
+  };
   var beCounter = function beCounter() {
     var $isCounter = document.querySelectorAll('[data-counter]');
     if ($isCounter.length === 0) return;
@@ -298,6 +345,7 @@ __webpack_require__.r(__webpack_exports__);
     lightGalleryFooter();
     bePopupsVideo();
     beCounter();
+    beProgressbar();
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
@@ -411,9 +459,9 @@ aos__WEBPACK_IMPORTED_MODULE_2___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-module.exports = __webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+module.exports = __webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
 
 
 /***/ })
