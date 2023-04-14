@@ -5,7 +5,7 @@
             wp_nav_menu([
                 'theme_location' => 'mobile-menu',
                 'menu_class' => 'mobile-menu',
-                'container_class' => 'menu-container',
+                'container_class' => 'mobile-menu',
                 'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
                 'bootstrap' => false
             ]);

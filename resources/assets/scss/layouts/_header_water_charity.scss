@@ -1,0 +1,127 @@
+.site-header {
+    &.site-header-water-charity {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 9;
+        background: transparent !important;
+
+        .logged-in & {
+            top: 32px;
+
+            @media screen and (max-width: 782px) {
+                top: 46px;
+            }
+        }
+
+        .goza-header-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+
+            @include media-breakpoint-down(md) {
+                padding: 31px 0;
+            }
+            &--logo {
+                a {
+                    display: block;
+
+                    img {
+                        max-width: 170px;
+                    }
+                }
+            }
+
+            &--menus {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &--menu {
+                .navbar-nav {
+                    display: flex;
+                    align-items: center;
+                    padding: 0;
+                    margin: 0;
+                    list-style-type: none;
+                    gap: 35px;
+
+                    >li {
+                        >a {
+                            position: relative;
+                            display: block;
+                            text-decoration: none;
+                            color: var(--header-text-color, #FFF);
+                            font-size: 15px;
+                            letter-spacing: 0px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 80px;
+                            font-family: var(--heading-family, Poppins, sans-serif);
+                            -webkit-transition: 0.3s;
+                            transition: 0.3s;
+
+                            &:hover {
+                                color: var(--link-color-hover, #18b7d0);
+                            }
+
+                            &.dropdown-toggle {
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--cta {
+                margin-left: 35px;
+                display: flex;
+                align-items: center;
+                gap: 35px;
+
+                .goza-header-search{
+                    i{
+                        color: var(--header-text-color, #FFF);
+                        font-size: 120%;
+                    }
+                }
+
+                .goza-header-button {
+                    background: var(--link-color, #18b7d0);
+                    color: #fff;
+                    border: medium none;
+                    border-radius: 3px;
+                    transition: 0.3s;
+                    font-size: 16px;
+                    letter-spacing: 0px;
+                    padding: 13px 20px;
+                    line-height: 1.2;
+                    display: block;
+
+                    &:hover {
+                        background: var(--link-color-hover, #ed7a13);
+                        text-decoration: none;
+                    }
+                }
+
+                #goza-hamberger {
+                    display: block;
+                    cursor: pointer;
+
+                    i {
+                        color: var(--header-text-color, #FFF);
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

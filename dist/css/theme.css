@@ -14284,6 +14284,126 @@ h6 {
   top: 32px;
 }
 
+.goza-search {
+  color: #333;
+  background: rgba(255, 255, 255, 0.95);
+  background-size: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s cubic-bezier(0.91, -0.05, 0.53, 0.91);
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  overflow: auto;
+}
+
+.goza-search.is-show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.goza-search.is-show .goza-search-inner .group-wrap {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+}
+
+.logged-in .goza-search {
+  top: 32px;
+}
+
+.goza-search-close {
+  background: #fff none repeat scroll 0 0;
+  display: block;
+  height: 60px;
+  position: fixed;
+  right: 60px;
+  top: 60px;
+  width: 60px;
+  z-index: 5;
+  border-radius: 100px;
+  font-size: 40px;
+  box-shadow: 0px 0px 5px 0px rgba(1, 1, 1, 0.5);
+  cursor: pointer;
+}
+
+@media (max-width: 991.98px) {
+  .goza-search-close {
+    bottom: 50px;
+    left: calc(50% - 30px);
+    top: auto;
+    right: auto;
+  }
+}
+
+.goza-search-close i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  color: #333;
+}
+
+.goza-search-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.goza-search-inner form {
+  width: calc(100% - 40px);
+  max-width: 860px;
+}
+
+.goza-search-inner .group-wrap {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(0, 50px);
+  -webkit-transform: translate(0, 50px);
+  transition: 0.5s cubic-bezier(0.91, -0.05, 0.53, 0.91);
+  transition-delay: 0.3s;
+  -webkit-transition-delay: 0.3s;
+}
+
+.goza-search-inner .group-wrap input {
+  width: 100%;
+  padding: 20px 0;
+  border: none;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+  background: transparent;
+  display: block;
+  font-weight: 600;
+  color: #333;
+  -webkit-appearance: none;
+  font-size: 25px;
+  line-height: 30px;
+  transition: 0.5s cubic-bezier(0.91, -0.05, 0.53, 0.91);
+  outline: none;
+  box-shadow: none;
+}
+
+.goza-search-inner .group-wrap button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  z-index: 3;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  padding: 0;
+  padding-left: 4px;
+}
+
 .site-header .goza-header-main--menu .navbar-nav .menu-item .sub-menu {
   display: block;
   min-width: 200px;
@@ -14892,6 +15012,502 @@ h6 {
   display: none;
 }
 
+.site-header.site-header-charity {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  background: transparent !important;
+}
+
+.logged-in .site-header.site-header-charity {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .logged-in .site-header.site-header-charity {
+    top: 46px;
+  }
+}
+
+.site-header.site-header-charity .goza-header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33px 0;
+}
+
+.site-header.site-header-charity .goza-header-main--logo a {
+  display: block;
+}
+
+.site-header.site-header-charity .goza-header-main--logo a img {
+  max-width: 170px;
+}
+
+.site-header.site-header-charity .goza-header-main--menus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header.site-header-charity .goza-header-main--menu .navbar-nav {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  gap: 25px;
+}
+
+.site-header.site-header-charity .goza-header-main--menu .navbar-nav > li > a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--header-text-color, #FFF);
+  line-height: 50px;
+  font-size: 18px;
+  letter-spacing: 0px;
+  font-style: normal;
+  font-weight: 600;
+  font-family: var(--body-family, Montserrat, sans-serif);
+  transition: 0.3s;
+}
+
+.site-header.site-header-charity .goza-header-main--menu .navbar-nav > li > a:hover {
+  color: var(--link-color-hover, rgb(113, 182, 27));
+}
+
+.site-header.site-header-charity .goza-header-main--menu .navbar-nav > li > a.dropdown-toggle::after {
+  display: none;
+}
+
+.site-header.site-header-charity .goza-header-main--cta {
+  margin-left: 35px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.site-header.site-header-charity .goza-header-main--cta .goza-header-cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.site-header.site-header-charity .goza-header-main--cta .goza-header-cart-icon i {
+  color: var(--header-text-color, #FFF);
+  transition: 0.3s;
+}
+
+.site-header.site-header-charity .goza-header-main--cta .goza-header-cart-icon i:hover {
+  color: var(--link-color-hover, rgb(113, 182, 27));
+}
+
+.site-header.site-header-charity .goza-header-main--cta .goza-header-cart-icon .goza-total-cart {
+  right: -9px;
+  background: var(--link-color, rgb(113, 182, 27));
+  border-radius: 100%;
+  font-size: 11px;
+  font-weight: 600;
+  width: 16px;
+  color: var(--header-text-color, #FFF);
+  height: 16px;
+  padding: 0;
+  text-align: center;
+  font-family: sans-serif;
+  line-height: 1;
+  padding: 2.5px 0;
+  margin-right: 1px;
+  position: absolute;
+  top: -6px;
+}
+
+.site-header.site-header-charity .goza-header-main--cta .goza-header-button {
+  background: var(--link-color, rgb(113, 182, 27));
+  color: #fff;
+  border: medium none;
+  border-radius: 3px;
+  transition: 0.3s;
+  font-size: 16px;
+  letter-spacing: 0px;
+  padding: 13px 20px;
+  line-height: 1.2;
+  display: block;
+}
+
+.site-header.site-header-charity .goza-header-main--cta .goza-header-button:hover {
+  background: #000;
+  text-decoration: none;
+}
+
+.site-header.site-header-charity .goza-header-main--cta .goza-header-phone a {
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--header-text-color, #FFF);
+  line-height: 50px;
+}
+
+.site-header.site-header-charity .goza-header-main--cta .goza-header-phone a:hover {
+  color: var(--link-color-hover, rgb(113, 182, 27));
+}
+
+.site-header.site-header-charity .goza-header-main--cta .goza-header-phone a i {
+  margin-right: 10px;
+}
+
+.site-header.site-header-charity .goza-header-main--cta #goza-hamberger {
+  display: block;
+  cursor: pointer;
+}
+
+.site-header.site-header-charity .goza-header-main--cta #goza-hamberger i {
+  color: var(--header-text-color, #FFF);
+}
+
+.site-header.site-header-ngo-dark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  background: transparent !important;
+}
+
+.logged-in .site-header.site-header-ngo-dark {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .logged-in .site-header.site-header-ngo-dark {
+    top: 46px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-header.site-header-ngo-dark .container {
+    max-width: calc(100% - 30px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-header.site-header-ngo-dark .container {
+    max-width: calc(100% - 40px);
+  }
+}
+
+.site-header.site-header-ngo-dark .goza-header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 991.98px) {
+  .site-header.site-header-ngo-dark .goza-header-main {
+    padding: 31px 0;
+  }
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--logo a {
+  display: block;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--logo a img {
+  max-width: 170px;
+}
+
+@media (max-width: 1199.98px) {
+  .site-header.site-header-ngo-dark .goza-header-main--logo a img {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .site-header.site-header-ngo-dark .goza-header-main--logo a img {
+    max-width: 170px;
+  }
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--menus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--menu ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  gap: 35px;
+}
+
+@media (max-width: 1199.98px) {
+  .site-header.site-header-ngo-dark .goza-header-main--menu ul {
+    gap: 20px;
+  }
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--menu ul > li > a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--header-text-color, #FFF);
+  font-size: 15px;
+  letter-spacing: 0px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px;
+  font-family: var(--heading-family, Poppins, sans-serif);
+  transition: 0.3s;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--menu ul > li > a:hover {
+  color: var(--link-color-hover, #d94532);
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--menu ul > li > a.dropdown-toggle::after {
+  display: none;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--cta {
+  margin-left: 35px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+@media (max-width: 1199.98px) {
+  .site-header.site-header-ngo-dark .goza-header-main--cta {
+    gap: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .site-header.site-header-ngo-dark .goza-header-main--cta {
+    gap: 35px;
+  }
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-cart-icon i {
+  color: var(--header-text-color, #FFF);
+  transition: 0.3s;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-cart-icon i:hover {
+  color: var(--link-color-hover, #d94532);
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-cart-icon .goza-total-cart {
+  right: -9px;
+  background: var(--link-color, #d94532);
+  border-radius: 100%;
+  font-size: 11px;
+  font-weight: 600;
+  width: 16px;
+  color: var(--header-text-color, #FFF);
+  height: 16px;
+  padding: 0;
+  text-align: center;
+  font-family: sans-serif;
+  line-height: 1;
+  padding: 2.5px 0;
+  margin-right: 1px;
+  position: absolute;
+  top: -6px;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-info.goza-header-email a i::before {
+  content: url(../images/icon-mail.png?03eb8f39703f3613fc6355b4a6ddc708);
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-info.goza-header-email a span {
+  font-weight: 400;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-info a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-info a i::before {
+  content: url(../images/icon-phone.png?67fdad7731b6214e1e967df297a4d46e);
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-info a span {
+  display: block;
+  line-height: normal;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 700;
+  color: var(--header-text-color, #FFF);
+  font-family: var(--heading-family, Poppins, sans-serif);
+  transition: 0.3s;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-info a span:hover {
+  color: var(--link-color-hover, #d94532);
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-info a span span {
+  line-height: 20px;
+  text-align: left;
+  margin-bottom: 0px;
+  margin-top: 7px;
+  font-weight: 400;
+  color: #9f9e9e !important;
+  font-size: 12px;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--cta #goza-hamberger {
+  display: block;
+  cursor: pointer;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--cta #goza-hamberger i {
+  color: var(--header-text-color, #FFF);
+}
+
+@media (min-width: 992px) {
+  .site-header.site-header-ngo-dark .goza-header-main--cta #goza-hamberger {
+    display: none;
+  }
+}
+
+.site-header.site-header-water-charity {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  background: transparent !important;
+}
+
+.logged-in .site-header.site-header-water-charity {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .logged-in .site-header.site-header-water-charity {
+    top: 46px;
+  }
+}
+
+.site-header.site-header-water-charity .goza-header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+@media (max-width: 991.98px) {
+  .site-header.site-header-water-charity .goza-header-main {
+    padding: 31px 0;
+  }
+}
+
+.site-header.site-header-water-charity .goza-header-main--logo a {
+  display: block;
+}
+
+.site-header.site-header-water-charity .goza-header-main--logo a img {
+  max-width: 170px;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menu .navbar-nav {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  gap: 35px;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menu .navbar-nav > li > a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--header-text-color, #FFF);
+  font-size: 15px;
+  letter-spacing: 0px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px;
+  font-family: var(--heading-family, Poppins, sans-serif);
+  transition: 0.3s;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menu .navbar-nav > li > a:hover {
+  color: var(--link-color-hover, #18b7d0);
+}
+
+.site-header.site-header-water-charity .goza-header-main--menu .navbar-nav > li > a.dropdown-toggle::after {
+  display: none;
+}
+
+.site-header.site-header-water-charity .goza-header-main--cta {
+  margin-left: 35px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.site-header.site-header-water-charity .goza-header-main--cta .goza-header-search i {
+  color: var(--header-text-color, #FFF);
+  font-size: 120%;
+}
+
+.site-header.site-header-water-charity .goza-header-main--cta .goza-header-button {
+  background: var(--link-color, #18b7d0);
+  color: #fff;
+  border: medium none;
+  border-radius: 3px;
+  transition: 0.3s;
+  font-size: 16px;
+  letter-spacing: 0px;
+  padding: 13px 20px;
+  line-height: 1.2;
+  display: block;
+}
+
+.site-header.site-header-water-charity .goza-header-main--cta .goza-header-button:hover {
+  background: var(--link-color-hover, #ed7a13);
+  text-decoration: none;
+}
+
+.site-header.site-header-water-charity .goza-header-main--cta #goza-hamberger {
+  display: block;
+  cursor: pointer;
+}
+
+.site-header.site-header-water-charity .goza-header-main--cta #goza-hamberger i {
+  color: var(--header-text-color, #FFF);
+}
+
+@media (min-width: 992px) {
+  .site-header.site-header-water-charity .goza-header-main--cta #goza-hamberger {
+    display: none;
+  }
+}
+
 .main-footer {
   background-color: var(--footer-bg-color, #000);
   color: var(--footer-text-color, #FFF);
@@ -15172,7 +15788,7 @@ h6 {
 
 @media (min-width: 992px) {
   .goza-topbar.goza-topbar-layout3 .header-top-sidebar-item:last-child {
-    padding-right: calc((100vw - 1140px) / 2);
+    padding-right: calc((100vw - 930px) / 2);
   }
 }
 
@@ -15321,21 +15937,21 @@ h6 {
   transition: 0.6s ease;
 }
 
-.site-menu-mobile-wrap-menu .menu-container {
+.site-menu-mobile-wrap-menu .mobile-menu {
   margin-top: 50px;
 }
 
-.site-menu-mobile-wrap-menu .menu-container .navbar-nav {
+.site-menu-mobile-wrap-menu .mobile-menu ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.site-menu-mobile-wrap-menu .menu-container .navbar-nav li:not(:last-child) {
+.site-menu-mobile-wrap-menu .mobile-menu ul li:not(:last-child) {
   border-bottom: solid 1px rgba(40, 40, 40, 0.05);
 }
 
-.site-menu-mobile-wrap-menu .menu-container .navbar-nav li a.nav-link {
+.site-menu-mobile-wrap-menu .mobile-menu ul li a.nav-link {
   font-size: 15px;
   line-height: 30px;
   color: #282828;
@@ -15350,15 +15966,15 @@ h6 {
   font-weight: 500;
 }
 
-.site-menu-mobile-wrap-menu .menu-container .navbar-nav li a.nav-link:hover {
+.site-menu-mobile-wrap-menu .mobile-menu ul li a.nav-link:hover {
   color: var(--link-color, #d41b65);
 }
 
-.site-menu-mobile-wrap-menu .menu-container .navbar-nav li a.nav-link.dropdown-toggle::after {
+.site-menu-mobile-wrap-menu .mobile-menu ul li a.nav-link.dropdown-toggle::after {
   display: none;
 }
 
-.site-menu-mobile-wrap-menu .menu-container .navbar-nav li a.nav-link.dropdown-toggle .handle-sub {
+.site-menu-mobile-wrap-menu .mobile-menu ul li a.nav-link.dropdown-toggle .handle-sub {
   position: absolute;
   right: 0;
   top: 0;
@@ -15367,11 +15983,11 @@ h6 {
   z-index: 9;
 }
 
-.site-menu-mobile-wrap-menu .menu-container .navbar-nav li a.nav-link.dropdown-toggle .handle-sub.active::before {
+.site-menu-mobile-wrap-menu .mobile-menu ul li a.nav-link.dropdown-toggle .handle-sub.active::before {
   display: none;
 }
 
-.site-menu-mobile-wrap-menu .menu-container .navbar-nav li a.nav-link.dropdown-toggle .handle-sub::before {
+.site-menu-mobile-wrap-menu .mobile-menu ul li a.nav-link.dropdown-toggle .handle-sub::before {
   content: "";
   height: 10px;
   border-left: 1px solid;
@@ -15382,7 +15998,7 @@ h6 {
   -webkit-transform: translate(-50%, -50%);
 }
 
-.site-menu-mobile-wrap-menu .menu-container .navbar-nav li a.nav-link.dropdown-toggle .handle-sub::after {
+.site-menu-mobile-wrap-menu .mobile-menu ul li a.nav-link.dropdown-toggle .handle-sub::after {
   content: "";
   width: 10px;
   border-top: 1px solid;
@@ -15393,7 +16009,7 @@ h6 {
   -webkit-transform: translate(-50%, -50%);
 }
 
-.site-menu-mobile-wrap-menu .menu-container .navbar-nav li .sub-menu {
+.site-menu-mobile-wrap-menu .mobile-menu ul li .sub-menu {
   display: none;
   position: relative;
   top: 0;
@@ -15406,11 +16022,11 @@ h6 {
   background: rgba(242, 242, 242, 0.5);
 }
 
-.site-menu-mobile-wrap-menu .menu-container .navbar-nav li .sub-menu li:not(:last-child) {
+.site-menu-mobile-wrap-menu .mobile-menu ul li .sub-menu li:not(:last-child) {
   border-bottom: solid 1px rgba(40, 40, 40, 0.05);
 }
 
-.site-menu-mobile-wrap-menu .menu-container .navbar-nav li .sub-menu li a {
+.site-menu-mobile-wrap-menu .mobile-menu ul li .sub-menu li a {
   padding: 12px 20px;
   position: relative;
   display: block;
@@ -15418,7 +16034,7 @@ h6 {
   font-weight: 500;
 }
 
-.site-menu-mobile-wrap-menu .menu-container .navbar-nav li .sub-menu li a:hover {
+.site-menu-mobile-wrap-menu .mobile-menu ul li .sub-menu li a:hover {
   color: var(--link-color, #d41b65);
 }
 

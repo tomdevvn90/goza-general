@@ -24,7 +24,7 @@
                 width: calc(100% - 170px);
                 padding-left: 15px;
                 @include media-breakpoint-up(lg) {
-                    padding-right: calc((100vw - 1140px) / 2);
+                    padding-right: calc((100vw - 930px) / 2);
                 }
                 @include media-breakpoint-up(xl) {
                     padding-right: calc((100vw - 1140px) / 2);
