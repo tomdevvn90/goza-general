@@ -257,10 +257,10 @@
                 "ngo": "Header Ngo",
                 "charity": "Header Charity",
                 "water": "Header Water",
-                "orgazination": "Header Orgazination",
+                "organization": "Header Organization",
                 "ngo-dark": "Header Ngo Dark",
                 "water-charity": "Header Water Charity",
-                "charity-orgazination": "Header Charity Orgazination"
+                "charity-organization": "Header Charity Organization"
             },
             "default_value": false,
             "return_format": "value",
@@ -518,9 +518,9 @@
                 "general": "Footer General",
                 "water": "Footer Water",
                 "ngo": "Footer Ngo",
-                "organization": "Footer Orgazination",
+                "organization": "Footer Organization",
                 "water-charity": "Footer Water Charity",
-                "charity-organization": "Footer Charity Organiztion"
+                "charity-organization": "Footer Charity Organization"
             },
             "default_value": false,
             "return_format": "value",
@@ -1303,13 +1303,18 @@
                         "Exo 2": "Exo 2",
                         "Fira Sans": "Fira Sans",
                         "Roboto": "Roboto",
-                        "Calligraffitti": "Calligraffitti"
+                        "Calligraffitti": "Calligraffitti",
+                        "Cormorant Garamond": "Cormorant Garamond",
+                        "Lato": "Lato",
+                        "Montserrat": "Montserrat",
+                        "Muli": "Muli",
+                        "Satisfy": "Satisfy"
                     },
                     "default_value": false,
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
                     "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 1,
                     "ajax": 0,
                     "placeholder": ""
                 },
@@ -1463,14 +1468,19 @@
                         "Exo 2": "Exo 2",
                         "Fira Sans": "Fira Sans",
                         "Roboto": "Roboto",
-                        "Calligraffitti": "Calligraffitti"
+                        "Calligraffitti": "Calligraffitti",
+                        "Cormorant Garamond": "Cormorant Garamond",
+                        "Lato": "Lato",
+                        "Montserrat": "Montserrat",
+                        "Muli": "Muli",
+                        "Satisfy": "Satisfy"
                     },
                     "default_value": false,
-                    "allow_null": 0,
+                    "return_format": "value",
                     "multiple": 0,
+                    "allow_null": 0,
                     "ui": 1,
                     "ajax": 0,
-                    "return_format": "value",
                     "placeholder": ""
                 },
                 {
@@ -1939,5 +1949,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681220368
+    "modified": 1681395250
 }

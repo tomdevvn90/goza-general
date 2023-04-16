@@ -1,8 +1,8 @@
 <?php
 //Background footer
 $bg_footer = __get_field('goza_ft_bg_image', 'option');
-if ($bg_image) {
-    $style = 'background-image: url(' . $bg_image . ')';
+if ($bg_footer) {
+    $style = 'background-image: url(' . $bg_footer . ')';
 }
 //General
 $goza_ft_general_op = __get_field('goza_ft_general_op', 'option');
@@ -40,6 +40,7 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                     <div class='main-footer-content'><?= $goza_general_content ?></div>
                 <?php } ?>
             </div>
+            
             <div class="col-md-3 col-lg-2 main-footer-widget">
                 <?php if (isset($goza_ql_heading) && !empty($goza_ql_heading)) { ?>
                     <h3 class='main-footer-heading'><?= esc_attr($goza_ql_heading) ?></h3>
@@ -54,6 +55,7 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                 ]);
                 ?>
             </div>
+
             <div class="col-md-3 col-lg-2 main-footer-widget">
                 <?php if (isset($goza_social_heading) && !empty($goza_social_heading)) { ?>
                     <h3 class='main-footer-heading'><?= esc_attr($goza_social_heading) ?></h3>
@@ -70,6 +72,7 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                 endif;
                 ?>
             </div>
+
             <div class="col-md-3 col-lg-4 main-footer-widget">
                 <?php if (isset($goza_newsletter_heading) && !empty($goza_newsletter_heading)) { ?>
                     <h3 class='main-footer-heading'><?= esc_attr($goza_newsletter_heading) ?></h3>

@@ -1,19 +1,27 @@
 .site-header {
-    &.site-header-ngo {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    &.site-header-charity-organization {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         z-index: 9;
-        background: rgba(255, 255, 255, 0) !important;
-        @include media-breakpoint-down(md) {
-            border-bottom: 0px solid rgba(255, 255, 255, 0.2);
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 70px;
         }
+
         .logged-in & {
             top: 32px;
-            @media screen and (max-width: 782px){
+
+            @media screen and (max-width: 782px) {
                 top: 46px;
+            }
+        }
+
+        .container {
+            @include media-breakpoint-up(lg) {
+                width: 95%;
+                max-width: 1700px;
             }
         }
 
@@ -21,9 +29,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             @include media-breakpoint-down(md) {
-                padding: 20px 0;
+                padding: 16px 0;
             }
+
             &--logo {
                 a {
                     display: block;
@@ -47,7 +57,11 @@
                     padding: 0;
                     margin: 0;
                     list-style-type: none;
-                    gap: 35px;
+                    gap: 40px;
+
+                    @include media-breakpoint-down(xl) {
+                        gap: 23px;
+                    }
 
                     >li {
                         >a {
@@ -55,17 +69,17 @@
                             display: block;
                             text-decoration: none;
                             color: var(--header-text-color, #FFF);
-                            font-size: 15px;
                             letter-spacing: 0px;
                             font-style: normal;
-                            line-height: 80px;
-                            font-weight: 600;
-                            font-family: var(--heading-family, Poppins, sans-serif);
+                            line-height: 60px;
+                            font-size: 17px;
+                            font-weight: 400;
+                            font-family: var(--body-family, Poppins, sans-serif);
                             -webkit-transition: 0.3s;
                             transition: 0.3s;
 
                             &:hover {
-                                color: var(--link-color-hover, #ed9913);
+                                color: var(--link-color-hover, #32cbfe);
                             }
 
                             &.dropdown-toggle {
@@ -93,13 +107,13 @@
                         transition: 0.3s;
 
                         &:hover {
-                            color: var(--link-color-hover, #ed9913);
+                            color: var(--link-color-hover, #32cbfe);
                         }
                     }
 
                     .goza-total-cart {
                         right: -9px;
-                        background: var(--link-color, #ed9913);
+                        background: var(--link-color, #32cbfe);
                         border-radius: 100%;
                         font-size: 11px;
                         font-weight: 600;
@@ -117,8 +131,22 @@
                     }
                 }
 
+                .goza-header-search {
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 50px;
+                    border-radius: 50%;
+                    background-color: rgba(255, 255, 255, 0.34);
+
+                    i {
+                        font-size: 120%;
+                        color: var(--header-text-color, #FFF);
+                    }
+                }
+
                 .goza-header-button {
-                    background: var(--link-color, #ed9913);
+                    background: var(--link-color, #32cbfe);
                     color: #fff;
                     border: medium none;
                     border-radius: 3px;
@@ -130,7 +158,7 @@
                     display: block;
 
                     &:hover {
-                        background: var(--link-color-hover, #ed7a13);
+                        background: var(--link-color-hover, #32cbfe);
                         text-decoration: none;
                     }
                 }
@@ -138,9 +166,11 @@
                 #goza-hamberger {
                     display: block;
                     cursor: pointer;
-                    i{
+
+                    i {
                         color: var(--header-text-color, #FFF);
                     }
+
                     @include media-breakpoint-up(lg) {
                         display: none;
                     }
