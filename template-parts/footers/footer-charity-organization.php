@@ -21,13 +21,11 @@ if ($goza_ft_quick_links_op) {
     $goza_ql_heading = $goza_ft_quick_links_op['goza_ql_heading'];
 }
 
-//Gallery
-$goza_ft_gallery_op = __get_field('goza_ft_gallery_op', 'option');
-if ($goza_ft_gallery_op) {
-    $goza_gallery_heading = $goza_ft_gallery_op['goza_gallery_heading'];
-    $goza_ft_gallery = $goza_ft_gallery_op['goza_ft_gallery'];
+//Social
+$goza_ft_socials_op = __get_field('goza_ft_socials_op', 'option');
+if ($goza_ft_socials_op) {
+    $goza_social_heading = $goza_ft_socials_op['goza_social_heading'];
 }
-
 //newsletter
 $goza_sub_news_op = __get_field('goza_sub_news_op', 'option');
 if ($goza_sub_news_op) {
@@ -42,7 +40,7 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
 <footer id="site-footer" class="main-footer footer-charity-organization" style="<?= esc_attr($style) ?>">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-lg-3 main-footer-widget">
+            <div class="col-md-4 main-footer-widget">
                 <?php if (isset($goza_general_heading) && !empty($goza_general_heading)) { ?>
                     <h3 class="main-footer-title"><?= $goza_general_heading ?></h3>
                 <?php } ?>
@@ -60,26 +58,8 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                     <p class="main-footer-info"><i class="fa fa-map-marker"></i><span><?= esc_attr($goza_address) ?></span></p>
                 <?php } ?>
             </div>
-            <div class="col-md-6 col-lg-6 main-footer-widget">
-                <div class="main-footer-gallery">
-                    <?php if ($goza_ft_gallery) { ?>
-                        <div id="main-footer-gallery-list" class="main-footer-gallery-list">
-                            <?php foreach ($goza_ft_gallery as $item) { ?>
-                                <a class="main-footer-gallery-item" href="<?= esc_url($item['url']); ?>" title="<?= esc_attr($item['title']); ?>">
-                                    <img src="<?= esc_url($item['url']); ?>" alt="<?= esc_attr($item['alt']); ?>" />
-                                    <span class="main-footer-gallery-list-item-icon"><i class="icon ion-ios-plus-empty"></i></span>
-                                </a>
-                            <?php } ?>
-                        </div>
-                    <?php } ?>
-                </div>
-                <div class="main-footer-newsletter">
-                    <?php if (isset($goza_sc_sub_form) && !empty($goza_sc_sub_form)) { ?>
-                        <?= do_shortcode($goza_sc_sub_form) ?>
-                    <?php } ?>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 main-footer-widget">
+
+            <div class="col-md-5 main-footer-widget">
                 <?php if (isset($goza_ql_heading) && !empty($goza_ql_heading)) { ?>
                     <h3 class="main-footer-title"><?= $goza_ql_heading ?></h3>
                 <?php } ?>
@@ -94,6 +74,23 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                     ]);
                     ?>
                 </div>
+            </div>
+
+            <div class="col-md-3 main-footer-widget">
+                <?php if (isset($goza_social_heading) && !empty($goza_social_heading)) { ?>
+                    <h3 class='main-footer-title'><?= esc_attr($goza_social_heading) ?></h3>
+                <?php } ?>
+                <?php
+                if (have_rows('goza_social_network', 'option')) :
+                    echo '<ul class="main-footer-social">';
+                    while (have_rows('goza_social_network', 'option')) : the_row();
+                        $social_icon = get_sub_field('icon');
+                        $social_url = get_sub_field('url');
+                        echo '<li><a href="' . $social_url . '" target="_blank" rel="nofollow"><i class="fa fa-' . $social_icon['value'] . '" aria-hidden="true"></i></a></li>';
+                    endwhile;
+                    echo '</ul>';
+                endif;
+                ?>
             </div>
         </div>
     </div>
