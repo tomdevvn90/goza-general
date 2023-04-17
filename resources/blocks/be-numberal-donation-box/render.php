@@ -17,7 +17,22 @@ $btn_animation = (!empty($general['animation_button'])) ? $general['animation_bu
 $bg            = (!empty($general['bg_image'])) ? $general['bg_image'] : get_template_directory_uri(). '/resources/assets/images/bg-number-box-default.jpg';
 ?>
 <div id="<?php echo $id; ?>" class="be-numberal-donation-box <?php echo $align_class; ?>" style="background-image:url('<?php echo $bg ?>')"> 
-  <div class="be-numberal-donation-box-inner">
+   
+   <?php if(!empty($progressbar['value'])): ?>
+      <?php  $bg = (!empty($progressbar['bg'])) ? $progressbar['bg'] : get_template_directory_uri(). '/resources/assets/images/bg-progressbar_donation_box_default.png'; ?>
+      <div class="be-numberal-donation-box-progressbar" style="background-image:url('<?php echo $bg ?>')"> 
+         <div  class="be-numberal-donation-box-progressbar-inner"> 
+            <span id="be-progressbar" data-progressbar="<?php echo $progressbar['value'] ?>" data-heading="<?php echo $progressbar['desc'] ?>"
+                  data-strokewidth="<?php echo $progressbar['strokewidth'] ?>" data-strokecolor="<?php echo $progressbar['strokecolor'] ?>"
+                  data-trailwidth="<?php echo $progressbar['trailwidth'] ?>" data-trailcolor="<?php echo $progressbar['trailcolor'] ?>"
+                  data-duration=<?php echo $progressbar['duration'] ?>
+            > 
+         </span>
+         </div>
+      </div>
+   <?php endif; ?>
+
+   <div class="be-numberal-donation-box-inner">
       <?php if(!empty($list_items)): ?>
          <div class="be-numberal-donation-box--list-item"> 
             <?php 
@@ -70,18 +85,4 @@ $bg            = (!empty($general['bg_image'])) ? $general['bg_image'] : get_tem
 
       </div>
   </div>
-
-   <?php if(!empty($progressbar['value'])): ?>
-      <?php  $bg = (!empty($progressbar['bg'])) ? $progressbar['bg'] : get_template_directory_uri(). '/resources/assets/images/bg-progressbar_donation_box_default.png'; ?>
-      <div class="be-numberal-donation-box-progressbar" style="background-image:url('<?php echo $bg ?>')"> 
-         <div  class="be-numberal-donation-box-progressbar-inner"> 
-            <span id="be-progressbar" data-progressbar="<?php echo $progressbar['value'] ?>" data-heading="<?php echo $progressbar['desc'] ?>"
-                  data-strokewidth="<?php echo $progressbar['strokewidth'] ?>" data-strokecolor="<?php echo $progressbar['strokecolor'] ?>"
-                  data-trailwidth="<?php echo $progressbar['trailwidth'] ?>" data-trailcolor="<?php echo $progressbar['trailcolor'] ?>"
-                  data-duration=<?php echo $progressbar['duration'] ?>
-            > 
-         </span>
-         </div>
-      </div>
-   <?php endif; ?>
 </div>
