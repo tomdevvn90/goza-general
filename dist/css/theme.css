@@ -16963,13 +16963,28 @@ h6 {
   padding-top: 60px;
 }
 
+@media (min-width: 768px) {
+  .footer-charity-organization.main-footer .row {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-charity-organization.main-footer .main-footer-widget {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 .footer-charity-organization.main-footer .main-footer-widget:not(:last-child) {
   border-right: 1px dashed #4c4c4c;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 1399.98px) {
   .footer-charity-organization.main-footer .main-footer-widget:not(:last-child) {
     margin-bottom: 30px;
+    border: none;
   }
 }
 
@@ -16990,6 +17005,19 @@ h6 {
   position: relative;
 }
 
+@media (max-width: 991.98px) {
+  .footer-charity-organization.main-footer .main-footer-title {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .footer-charity-organization.main-footer .main-footer-title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
 .footer-charity-organization.main-footer .main-footer-title::before {
   content: " ";
   display: inline-block;
@@ -16999,12 +17027,6 @@ h6 {
   position: absolute;
   left: 0;
   bottom: 0;
-}
-
-@media (max-width: 767.98px) {
-  .footer-charity-organization.main-footer .main-footer-title {
-    margin-bottom: 8px;
-  }
 }
 
 .footer-charity-organization.main-footer .main-footer-desc {
@@ -17019,6 +17041,12 @@ h6 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 16px;
+}
+
+@media (max-width: 575.98px) {
+  .footer-charity-organization.main-footer .main-footer-menu ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .footer-charity-organization.main-footer .main-footer-menu ul li:not(:last-child) {
@@ -17067,6 +17095,9 @@ h6 {
   text-align: center;
   display: inline-block;
   transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-charity-organization.main-footer .main-footer-social li a:hover {
@@ -17081,6 +17112,7 @@ h6 {
   background-color: var(--socket-bg-color, #fff);
   padding-top: 20px;
   padding-bottom: 15px;
+  margin-top: 85px;
 }
 
 .footer-charity-organization.main-footer .main-footer-socket p {
