@@ -1,7 +1,9 @@
 <?php
-$bg_image = __get_field('goza_ft_bg_image', 'option');
-if ($bg_image) {
-    $style = 'background-image: url(' . $bg_image . ')';
+//background footer
+$bg_footer = __get_field('goza_ft_bg_image', 'option');
+$style = '';
+if ($bg_footer) {
+    $style = 'background-image: url(' . $bg_footer . ')';
 }
 //general
 $goza_ft_general_op = __get_field('goza_ft_general_op', 'option');
@@ -9,18 +11,6 @@ if ($goza_ft_general_op) {
     $goza_ft_logo = $goza_ft_general_op['goza_ft_logo'];
     $goza_general_heading = $goza_ft_general_op['goza_general_heading'];
     $goza_general_content = $goza_ft_general_op['goza_general_content'];
-}
-
-//quicklink
-$goza_ft_quick_links_op = __get_field('goza_ft_quick_links_op', 'option');
-if ($goza_ft_quick_links_op) {
-    $goza_ql_heading = $goza_ft_quick_links_op['goza_ql_heading'];
-}
-
-//Instagram
-$goza_ft_ig_op = __get_field('goza_ft_ig_op', 'option');
-if ($goza_ft_ig_op) {
-    $goza_ig_heading = $goza_ft_ig_op['goza_ig_heading'];
 }
 
 //newsletter
@@ -35,69 +25,48 @@ if ($goza_sub_news_op) {
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
 ?>
 
-<footer id="site-footer" class="main-footer footer-water-water" style="<?= esc_attr($style) ?>">
+<footer id="site-footer" class="main-footer footer-water-charity" style="<?= esc_attr($style) ?>">
     <div class="container">
-        <div class="row">
-            <div class="col-md-3 main-footer-widget">
-                <?php if ($goza_ft_logo) { ?>
-                    <a href="/" class="main-footer-logo">
-                        <img src="<?= esc_url($goza_ft_logo) ?>" alt="Logo" />
-                    </a>
-                <?php } ?>
-                <?php if (isset($goza_newsletter_heading) && !empty($goza_newsletter_heading)) { ?>
-                    <h3 class="main-footer-title"><?= $goza_newsletter_heading ?></h3>
-                <?php } ?>
-                <?php if (isset($goza_newsletter_desc) && !empty($goza_newsletter_desc)) { ?>
-                    <div class="main-footer-desc"><?= $goza_newsletter_desc ?></div>
-                <?php } ?>
-            </div>
-            <div class="col-md-3 main-footer-widget">
-                <?php if (isset($goza_ql_heading) && !empty($goza_ql_heading)) { ?>
-                    <h3 class="main-footer-title"><?= $goza_ql_heading ?></h3>
-                <?php } ?>
-                <div class="main-footer-menu">
-                    <?php
-                    wp_nav_menu([
-                        'theme_location' => 'quicklink-menu',
-                        'menu_class' => 'quicklinks-menu',
-                        'container_class' => 'menu-container',
-                        'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
-                        'bootstrap' => false
-                    ]);
-                    ?>
-                </div>
-            </div>
-            <div class="col-md-3 main-footer-widget">
-                <?php if (isset($goza_ig_heading) && !empty($goza_ig_heading)) { ?>
-                    <h3 class="main-footer-title"><?= $goza_ig_heading ?></h3>
-                <?php } ?>
+        <?php if (isset($goza_general_heading) && !empty($goza_general_heading)) { ?>
+            <h5 class="main-footer-subtitle text-center"><?= $goza_general_heading ?></h5>
+        <?php } ?>
 
+        <?php if (isset($goza_general_content) && !empty($goza_general_content)) { ?>
+            <div class="main-footer-title  text-center"><?= $goza_general_content ?></div>
+        <?php } ?>
+        <div class="row d-flex align-items-center flex-wrap main-footer-subsocial">
+            <div class="col-xl-8 col-lg-7 main-footer-newsletter">
+                <?php if (isset($goza_sc_sub_form) && !empty($goza_sc_sub_form)) { ?>
+                    <?= do_shortcode($goza_sc_sub_form) ?>
+                <?php } ?>
             </div>
-            <div class="col-md-3 main-footer-widget">
-                <?php if (isset($goza_general_heading) && !empty($goza_general_heading)) { ?>
-                    <h3 class="main-footer-title"><?= $goza_general_heading ?></h3>
-                <?php } ?>
-                <?php if (isset($goza_general_content) && !empty($goza_general_content)) { ?>
-                    <div class="main-footer-desc"><?= $goza_general_content ?></div>
-                <?php } ?>
-                <?php if (have_rows('goza_social_network', 'option')) { ?>
-                    <ul class="main-footer-social">
-                        <?php
-                        while (have_rows('goza_social_network', 'option')) : the_row();
-                            $icon = get_sub_field('icon');
-                            $url = get_sub_field('url');
-                            echo '<li><a href="' . esc_url($url) . '" target="_blank"><i class="fa fa-' . esc_attr($icon['value']) . '" aria-hidden="true"></i></a></li>';
-                        endwhile; ?>
-                    </ul>
-                <?php } ?>
+            <div class="col-xl-4 col-lg-5 main-footer-social">
+                <?php
+                if (have_rows('goza_social_network', 'option')) :
+                    echo '<ul class="main-footer-social-list">';
+                    while (have_rows('goza_social_network', 'option')) : the_row();
+                        $social_icon = get_sub_field('icon');
+                        $social_url = get_sub_field('url');
+                        echo '<li><a href="' . $social_url . '" target="_blank" class="social-'.$social_icon['value'].'" rel="nofollow"><i class="fa fa-' . $social_icon['value'] . '" aria-hidden="true"></i></a></li>';
+                    endwhile;
+                    echo '</ul>';
+                endif;
+                ?>
             </div>
         </div>
-        <div class="main-footer-socket">
-            <?php if (isset($goza_txt_copyright) && !empty($goza_txt_copyright)) { ?>
-                <p><?= $goza_txt_copyright ?></p>
-            <?php } ?>
-            <div id="back-to-top">Back to top <i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+        <?php if (isset($goza_txt_copyright) && !empty($goza_txt_copyright)) { ?>
+            <div class="main-footer-copyright"><?= $goza_txt_copyright ?></div>
+        <?php } ?>
+        <div class="main-footer-socket-menu">
+            <?php
+            wp_nav_menu([
+                'theme_location' => 'privacy-menu',
+                'menu_class' => 'privacy-menu',
+                'container_class' => 'menu-container',
+                'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
+                'bootstrap' => false
+            ]);
+            ?>
         </div>
     </div>
-
 </footer>
