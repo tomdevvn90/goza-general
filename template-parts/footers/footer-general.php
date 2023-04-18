@@ -77,7 +77,7 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                 <?php if (isset($goza_newsletter_heading) && !empty($goza_newsletter_heading)) { ?>
                     <h3 class='main-footer-heading'><?= esc_attr($goza_newsletter_heading) ?></h3>
                 <?php } ?>
-                <div>
+                <div class="main-footer-subscribe">
                     <?php echo do_shortcode($goza_sc_sub_form) ?>
                 </div>
             </div>
