@@ -21,6 +21,10 @@
         background-position: center !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
+
+        .be-progressbar-editor{
+            display: none;
+        }
     }
     
     &--list-item{

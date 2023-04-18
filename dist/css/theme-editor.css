@@ -6579,6 +6579,10 @@
   background-size: cover !important;
 }
 
+.be-numberal-donation-box-progressbar .be-progressbar-editor {
+  display: none;
+}
+
 .be-numberal-donation-box--list-item .item-numberal-donation {
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -7759,6 +7763,82 @@
 
 .block-editor-block-list__block .be-give-slider-block-inner .featured-image {
   max-height: 233px;
+}
+
+.is-root-container .be-numberal-donation-box-progressbar .be-progressbar-editor {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.is-root-container .be-numberal-donation-box-progressbar .be-progressbar-editor .__meta {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.is-root-container .be-numberal-donation-box-progressbar .be-progressbar-editor p {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.is-root-container .be-numberal-donation-box-progressbar .be-progressbar-editor span {
+  font-size: 48px;
+  line-height: 50px;
+  color: #fff !important;
+  text-align: center;
+}
+
+.is-root-container .be-numberal-donation-box-progressbar .be-progressbar-editor span sup {
+  font-size: 25px;
+  color: #000 !important;
+}
+
+.is-root-container .be-numberal-donation-box-progressbar .be-progressbar-editor svg {
+  height: 200px;
+  transform: rotate(-90deg);
+  width: 200px;
+}
+
+.is-root-container .be-numberal-donation-box-progressbar .be-progressbar-editor svg circle:first-child {
+  fill: none;
+  stroke: var(--trailcolor);
+  stroke-width: var(--trailwidth);
+}
+
+.is-root-container .be-numberal-donation-box-progressbar .be-progressbar-editor svg circle:last-child {
+  fill: none;
+  stroke: var(--trailcolor);
+  stroke: var(--strokecolor);
+  stroke-dasharray: 100 100;
+  stroke-dashoffset: 100;
+  stroke-linecap: inherit;
+  transition: stroke-dashoffset 1s ease-in-out;
+  stroke-dashoffset: calc(100px - var(--progressbar));
+  stroke-width: var(--strokewidth);
+}
+
+.is-root-container .be-numberal-donation-box--list-item .item-numberal-donation--number span {
+  font-size: 36px;
+  color: #ffffff;
+  line-height: 35px;
+  font-family: var(--heading-family);
+}
+
+.is-root-container .be-numberal-donation-box--list-item .item-numberal-donation--heading {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 15px;
+  font-weight: 400;
 }
 
 .is-root-container p,

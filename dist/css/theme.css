@@ -20684,6 +20684,10 @@ h6 {
   background-size: cover !important;
 }
 
+.be-numberal-donation-box-progressbar .be-progressbar-editor {
+  display: none;
+}
+
 .be-numberal-donation-box--list-item .item-numberal-donation {
   max-width: -moz-fit-content;
   max-width: fit-content;

@@ -27,6 +27,21 @@ $bg            = (!empty($general['bg_image'])) ? $general['bg_image'] : get_tem
                   data-trailwidth="<?php echo $progressbar['trailwidth'] ?>" data-trailcolor="<?php echo $progressbar['trailcolor'] ?>"
                   data-duration=<?php echo $progressbar['duration'] ?>
             > 
+
+            <div class="be-progressbar-editor" style="--progressbar:<?php echo $progressbar['value']?>px;"> 
+               <?php 
+                  $strokewidthEdit = $progressbar['strokewidth'] > 5.5 ? $progressbar['strokewidth'] - 5.5 : $progressbar['strokewidth'];
+                  $trailwidthEdit = $progressbar['trailwidth'] > 5.5 ? $progressbar['trailwidth'] - 5.5 : $progressbar['trailwidth'];
+               ?>
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
+                  <circle cx="16.1" cy="15.7" r="15.5" style="--trailwidth:<?php echo $trailwidthEdit ?>; --trailcolor:<?php echo $progressbar['trailcolor'] ?>"/>
+                  <circle cx="16.1" cy="15.7" r="15.5" style="--strokewidth:<?php echo $strokewidthEdit ?>; --strokecolor:<?php echo $progressbar['strokecolor'] ?>"/>
+               </svg>
+              <div class="__meta"> 
+                  <span> <?php echo $progressbar['value'] ?><sup>%</sup> </span>
+                  <p><?php echo $progressbar['desc'] ?></p>
+              </div>
+            </div>
          </span>
          </div>
       </div>
