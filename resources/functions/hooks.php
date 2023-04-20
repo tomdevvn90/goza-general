@@ -4,14 +4,16 @@
  * Hooks.
  */
 
-/**
- * Allow upload json file
- */
-add_filter('upload_mimes', function ($mime_types) {
-	$mime_types['json'] = 'application/json'; // Adding .json extension
+function add_file_types_to_uploads($file_types)
+{
+	$new_filetypes = array();
+	$new_filetypes['svg'] = 'image/svg+xml';
+	$new_filetypes['json'] = 'application/json';
+	$file_types = array_merge($file_types, $new_filetypes);
+	return $file_types;
+}
+add_filter('upload_mimes', 'add_file_types_to_uploads');
 
-	return $mime_types;
-}, 1);
 
 /**
  * Header template
@@ -69,7 +71,7 @@ function goza_preloader_template()
 add_action('goza_hook_search', 'goza_search_template');
 function goza_search_template()
 {
-	$goza_header_search = __get_field('goza_header_search', 'option'); 
+	$goza_header_search = __get_field('goza_header_search', 'option');
 	if (!isset($goza_header_search) || !$goza_header_search) return;
 	load_template(get_template_directory() . '/template-parts/modal-search.php', false);
 }
@@ -81,7 +83,7 @@ function goza_search_template()
 add_action('goza_hook_menu_mobile', 'goza_menu_mobile_template');
 function goza_menu_mobile_template()
 {
-	load_template(get_template_directory() . '/template-parts/menu-mobile.php', false); 
+	load_template(get_template_directory() . '/template-parts/menu-mobile.php', false);
 }
 
 /**
@@ -111,4 +113,6 @@ function goza_child_deregister_styles()
 {
 	wp_dequeue_style('classic-theme-styles');
 }
-add_action('wp_enqueue_scripts', 'goza_child_deregister_styles', 20); 
+add_action('wp_enqueue_scripts', 'goza_child_deregister_styles', 20);
+
+

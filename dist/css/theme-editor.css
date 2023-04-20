@@ -3029,6 +3029,25 @@
   clip: auto;
 }
 
+.btn {
+  display: inline-block;
+  font-family: var(--body-family, "Arimo", sans-serif);
+  font-weight: 700;
+  color: #FFF;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: var(--link-color, rgb(212, 27, 101));
+  border: 0px solid transparent;
+  padding: 16px 15px;
+  font-size: var(--body-font-size, 16px);
+  line-height: 1;
+  border-radius: 4px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
 .be-testominials-block {
   box-sizing: border-box;
 }
@@ -7502,6 +7521,69 @@
 .be-give-slider-block.is-style-3 .be-give-slider-block-inner .item-give:hover .featured-image img {
   transform: scale(1.05);
   -webkit-transform: scale(1.05);
+}
+
+.box-network-connect-block {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box-network-connect-block .block-box {
+  padding-top: 40px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  padding-left: 30px;
+  background-color: #000000;
+  border-radius: 3px;
+  max-width: 380px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .box-network-connect-block .block-box {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .box-network-connect-block .block-box {
+    max-width: 90%;
+  }
+}
+
+.box-network-connect-block .block-box img {
+  max-width: 60px;
+  margin-bottom: 18px;
+}
+
+.box-network-connect-block .block-box .bnc-title {
+  font-size: 24px;
+  line-height: 1.167;
+  color: #fff;
+}
+
+.box-network-connect-block .block-box .bnc-description {
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+  margin: 0;
+}
+
+.box-network-connect-block .block-box .btn {
+  border: #fff solid 2px;
+  color: #fff;
+  margin-top: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.box-network-connect-block .block-box .btn:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .block-editor-block-list__block .be-testominials-block-carousel {
