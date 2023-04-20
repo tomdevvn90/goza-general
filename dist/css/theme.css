@@ -21840,6 +21840,58 @@ h6 {
   -webkit-transform: scale(1.05);
 }
 
+.be-socials-block-inner {
+  display: flex;
+  align-items: center;
+}
+
+.be-socials-block--heading {
+  font-size: 14px;
+  line-height: 44px;
+  text-align: left;
+  color: var(--heading-color);
+  margin: 0 12px 0 0;
+  padding: 0;
+  font-weight: 600;
+}
+
+.be-socials-block--items {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.be-socials-block--items li {
+  list-style: none;
+}
+
+.be-socials-block--items li a {
+  width: 44px;
+  height: 44px;
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.be-socials-block--items li a:hover {
+  background-color: var(--bgHover);
+}
+
+.be-socials-block--items li img {
+  width: 100%;
+  height: auto;
+  max-width: 20px;
+}
+
+.be-socials-block--items li:not(:last-child) {
+  margin-right: 5px;
+}
+
 .tribe-common h1,
 .tribe-common h2,
 .tribe-common h3,

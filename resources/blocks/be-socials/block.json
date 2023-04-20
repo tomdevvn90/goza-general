@@ -1,0 +1,15 @@
+{
+    "name": "goza/be-socials",
+    "title": "Be Socials",
+    "category": "goza-theme",
+    "icon": "testimonial",
+    "keywords": ["icon", "socials"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "align": true
+    },
+    "align": "full"
+  }
