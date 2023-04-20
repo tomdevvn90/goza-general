@@ -127,7 +127,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -152,7 +152,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -170,7 +170,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -188,7 +188,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -206,13 +206,19 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "choices": {
                 "btn-default": "Button Default",
-                "btn-general: Button General": "btn-general: Button General"
+                "btn-general": "Button General",
+                "btn-water": "Button Water",
+                "btn-organization": "Button Organization",
+                "btn-outline": "Button Outline",
+                "btn-ngo-dark": "Button Ngo Dark",
+                "btn-water-charity": "Button Water Charity",
+                "btn-charity-organization": "Button Charity Organiation"
             },
             "default_value": false,
             "return_format": "value",
@@ -241,5 +247,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682000050
+    "modified": 1682007721
 }

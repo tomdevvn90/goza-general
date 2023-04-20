@@ -35,28 +35,3 @@ if (!function_exists('goza_load_fonts')) {
 }
 
 add_action('admin_enqueue_scripts', 'goza_load_fonts');
-
-
-if (!function_exists('goza_block_assets')) {
-	function goza_block_assets()
-	{
-		// Register block styles for both frontend + backend.
-		wp_register_style('goza-cgb-style-css',  get_template_directory_uri() . "/editor/dist/blocks.style.build.css", is_admin() ? array('wp-editor') : null, THEME_VERSION);
-
-		// Register block editor script for backend.
-		wp_register_script('goza-cgb-block-js', get_template_directory_uri() . "/editor/dist/blocks.build.js", array('wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor'), THEME_VERSION, true);
-
-		// Register block editor styles for backend.
-		wp_register_style('goza-cgb-block-editor-css', get_template_directory_uri() . "/editor/dist/blocks.editor.build.css", array('wp-edit-blocks'), THEME_VERSION);
-		register_block_type(
-			'cgb/block-goza',
-			array(
-				'style'         => 'goza-cgb-style-css',
-				'editor_script' => 'goza-cgb-block-js',
-				'editor_style'  => 'goza-cgb-block-editor-css'
-			)
-		);
-	}
-	// Hook: Block assets.
-	add_action('init', 'goza_block_assets');
-}
