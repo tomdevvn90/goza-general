@@ -248,8 +248,8 @@
                 },
                 {
                     "key": "field_6441579f2566e",
-                    "label": "Select Animation CTA",
-                    "name": "animation_cta",
+                    "label": "Style button",
+                    "name": "bnc_style_button",
                     "aria-label": "",
                     "type": "select",
                     "instructions": "",
@@ -261,11 +261,14 @@
                         "id": ""
                     },
                     "choices": {
-                        "style_default": "Default",
-                        "style_2": "Style 2",
-                        "style_3": "Style 3",
-                        "style_4": "Style 4",
-                        "style_5": "Style 5"
+                        "btn-default": "Button Default",
+                        "btn-general": "Button General",
+                        "btn-water": "Button Water",
+                        "btn-organization": "Button Organization",
+                        "btn-outline": "Button Outline",
+                        "btn-ngo-dark": "Button Ngo Dark",
+                        "btn-water-charity": "Button Water Charity",
+                        "btn-charity-organization": "Button Charity Organiation"
                     },
                     "default_value": "style_default",
                     "return_format": "value",
@@ -296,5 +299,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682082431
+    "modified": 1682086714
 }

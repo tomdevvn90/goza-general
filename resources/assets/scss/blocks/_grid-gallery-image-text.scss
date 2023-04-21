@@ -20,6 +20,11 @@
         &--left{
             padding-top: 90px;
             padding-bottom: 90px;
+            padding-left: calc(((100vw - 1170px) / 2) + 15px);
+            &__content{
+                max-width: 390px;
+                text-align: center;
+            }
         }
     }
 
@@ -34,5 +39,9 @@
         > strong{
             color: var(--link-color);
         }
+    }
+
+    &--cta{
+        margin-top: 32px;
     }
 }
