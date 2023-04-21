@@ -6,21 +6,30 @@
     max-width: 475px;
     box-sizing: border-box;
     position: relative;
+    padding-top: 90px;
+    padding-right: 15%;
+    padding-bottom: 90px;
+    padding-left: 15%;
     &-inner{
-        padding-top: 90px;
-        padding-right: 15%;
-        padding-bottom: 90px;
-        padding-left: 15%;
+
     }
 
     &-progressbar{
         width: 200px;
-        position: absolute;
-        left: -100px;
-        top: 140px;
         background-position: center !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
+
+        @media screen and (min-width: 1200px){
+            position: absolute;
+            left: -100px;
+            top: 140px;
+        }
+
+        @media screen and (max-width: 1199px){
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         .be-progressbar-editor{
             display: none;

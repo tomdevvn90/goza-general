@@ -279,7 +279,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lightgallery_plugins_autoplay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lightgallery/plugins/autoplay */ "./node_modules/lightgallery/plugins/autoplay/lg-autoplay.es5.js");
 /* harmony import */ var counterup2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! counterup2 */ "./node_modules/counterup2/dist/index.js");
 /* harmony import */ var counterup2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(counterup2__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var lightgallery_plugins_thumbnail__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lightgallery/plugins/thumbnail */ "./node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.es5.js");
+/* harmony import */ var lightgallery_plugins_zoom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lightgallery/plugins/zoom */ "./node_modules/lightgallery/plugins/zoom/lg-zoom.es5.js");
 //lightgallery
+
+
 
 
 
@@ -411,7 +415,13 @@ __webpack_require__.r(__webpack_exports__);
     });
   };
   $(window).on("scroll", function () {});
-  $(document).ready(function () {});
+  $(document).ready(function () {
+    Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(document.getElementById('be-gallery'), {
+      speed: 500,
+      plugins: [lightgallery_plugins_zoom__WEBPACK_IMPORTED_MODULE_5__["default"], lightgallery_plugins_thumbnail__WEBPACK_IMPORTED_MODULE_4__["default"]]
+    });
+    console.log("Aâ");
+  });
   $(window).on("load", function () {
     //preloader
     var $PRELOADER = $('.goza-preloader');

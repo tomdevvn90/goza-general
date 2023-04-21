@@ -12,7 +12,6 @@ $items   = get_field('list_items_bl_socials');
 $ctColor = get_field('custom_color_bl_socials');
 $bg      = (!empty(get_field('bg_bl_socials')) && $ctColor) ? get_field('bg_bl_socials') : "#fff";
 $bgHover = (!empty(get_field('bg_hover_bl_socials')) && $ctColor) ? get_field('bg_hover_bl_socials') : "";
-echo $bg;
 $is_style = isset($block['className']) ? $block['className'] : "is-style-default";
 
 ?>
