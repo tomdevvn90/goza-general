@@ -29,7 +29,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -54,27 +54,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "32.3333",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_643eb36ec5e22",
-            "label": "Description",
-            "name": "bnc_desc",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33.3333",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -94,11 +74,31 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "34.3333",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_643eb36ec5e22",
+            "label": "Description",
+            "name": "bnc_desc",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         },
         {
             "key": "field_643eb2cd46bcd",
@@ -127,7 +127,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -152,11 +152,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "#000000",
             "enable_opacity": 1,
             "return_format": "string"
         },
@@ -170,7 +170,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -188,11 +188,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "#FFF",
             "enable_opacity": 1,
             "return_format": "string"
         },
@@ -206,12 +206,19 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "Style 1": "Style 1"
+                "btn-default": "Button Default",
+                "btn-general": "Button General",
+                "btn-water": "Button Water",
+                "btn-organization": "Button Organization",
+                "btn-outline": "Button Outline",
+                "btn-ngo-dark": "Button Ngo Dark",
+                "btn-water-charity": "Button Water Charity",
+                "btn-charity-organization": "Button Charity Organiation"
             },
             "default_value": false,
             "return_format": "value",
@@ -240,5 +247,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681831720
+    "modified": 1682007721
 }
