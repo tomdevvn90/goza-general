@@ -155,7 +155,6 @@ import lgZoom from 'lightgallery/plugins/zoom'
             speed: 500, 
             plugins: [lgZoom, lgThumbnail]
         });
-        console.log("Aâ")
     })
 
     $(window).on("load", function () {
