@@ -453,7 +453,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": 4,
+                    "default_value": 8,
                     "min": 1,
                     "max": 100,
                     "placeholder": "",
@@ -493,7 +493,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": 4,
+                    "default_value": 8,
                     "min": 1,
                     "max": 100,
                     "placeholder": "",
@@ -540,5 +540,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681399652
+    "modified": 1682089374
 }

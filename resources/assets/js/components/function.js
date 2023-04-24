@@ -4,6 +4,9 @@ import lgVideo from 'lightgallery/plugins/video';
 import lgAutoplay from 'lightgallery/plugins/autoplay'
 import counterUp from 'counterup2'
 
+import lgThumbnail from 'lightgallery/plugins/thumbnail'
+import lgZoom from 'lightgallery/plugins/zoom'
+
 (function ($) {
     "use strict";
 
@@ -148,7 +151,10 @@ import counterUp from 'counterup2'
     });
 
     $(document).ready(function () {
-
+        lightGallery(document.getElementById('be-gallery'), {
+            speed: 500, 
+            plugins: [lgZoom, lgThumbnail]
+        });
     })
 
     $(window).on("load", function () {

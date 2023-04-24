@@ -265,6 +265,25 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 
 /***/ }),
 
+/***/ "./resources/assets/js/blocks/video-popup-actions.js":
+/*!***********************************************************!*\
+  !*** ./resources/assets/js/blocks/video-popup-actions.js ***!
+  \***********************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lightgallery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lightgallery */ "./node_modules/lightgallery/lightgallery.es5.js");
+/* harmony import */ var lightgallery_plugins_video__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lightgallery/plugins/video */ "./node_modules/lightgallery/plugins/video/lg-video.es5.js");
+
+
+Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(document.getElementById('block-video-action'), {
+  plugins: [lightgallery_plugins_video__WEBPACK_IMPORTED_MODULE_1__["default"]]
+});
+
+/***/ }),
+
 /***/ "./resources/assets/js/components/function.js":
 /*!****************************************************!*\
   !*** ./resources/assets/js/components/function.js ***!
@@ -279,7 +298,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lightgallery_plugins_autoplay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lightgallery/plugins/autoplay */ "./node_modules/lightgallery/plugins/autoplay/lg-autoplay.es5.js");
 /* harmony import */ var counterup2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! counterup2 */ "./node_modules/counterup2/dist/index.js");
 /* harmony import */ var counterup2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(counterup2__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var lightgallery_plugins_thumbnail__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lightgallery/plugins/thumbnail */ "./node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.es5.js");
+/* harmony import */ var lightgallery_plugins_zoom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lightgallery/plugins/zoom */ "./node_modules/lightgallery/plugins/zoom/lg-zoom.es5.js");
 //lightgallery
+
+
 
 
 
@@ -411,7 +434,12 @@ __webpack_require__.r(__webpack_exports__);
     });
   };
   $(window).on("scroll", function () {});
-  $(document).ready(function () {});
+  $(document).ready(function () {
+    Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(document.getElementById('be-gallery'), {
+      speed: 500,
+      plugins: [lightgallery_plugins_zoom__WEBPACK_IMPORTED_MODULE_5__["default"], lightgallery_plugins_thumbnail__WEBPACK_IMPORTED_MODULE_4__["default"]]
+    });
+  });
   $(window).on("load", function () {
     //preloader
     var $PRELOADER = $('.goza-preloader');
@@ -500,6 +528,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_posts_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/posts-slider */ "./resources/assets/js/blocks/posts-slider.js");
 /* harmony import */ var _blocks_events_listing__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/events-listing */ "./resources/assets/js/blocks/events-listing.js");
 /* harmony import */ var _blocks_gives_slider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blocks/gives-slider */ "./resources/assets/js/blocks/gives-slider.js");
+/* harmony import */ var _blocks_video_popup_actions__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./blocks/video-popup-actions */ "./resources/assets/js/blocks/video-popup-actions.js");
 
 
 
@@ -509,6 +538,7 @@ aos__WEBPACK_IMPORTED_MODULE_2___default.a.init({
   once: true,
   disable: 'mobile'
 });
+
 
 
 
@@ -546,9 +576,9 @@ aos__WEBPACK_IMPORTED_MODULE_2___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-module.exports = __webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! C:\Users\PC\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! C:\Users\PC\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+module.exports = __webpack_require__(/*! C:\Users\PC\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
 
 
 /***/ })
