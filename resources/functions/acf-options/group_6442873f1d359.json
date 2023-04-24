@@ -33,7 +33,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Give a Helping",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -53,7 +53,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Lorem ipsum dolor sit consectetur adiping elit.",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -214,7 +214,7 @@
         {
             "key": "field_644289b1ea3a0",
             "label": "Background Color",
-            "name": "box_bg_color",
+            "name": "gsb_bg_color",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
@@ -232,7 +232,7 @@
         {
             "key": "field_64428a15ea3a2",
             "label": "Box Color",
-            "name": "box_color",
+            "name": "gsb_box_color",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
@@ -250,7 +250,7 @@
         {
             "key": "field_64428a2eea3a3",
             "label": "Box Hover Color",
-            "name": "box_hover_color",
+            "name": "gsb_box_hover_color",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
@@ -268,7 +268,7 @@
         {
             "key": "field_64428a4fea3a4",
             "label": "Box Background Color",
-            "name": "box_bg_color",
+            "name": "gsb_box_bg_color",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
@@ -286,7 +286,7 @@
         {
             "key": "field_64428a73ea3a5",
             "label": "Box Background Hover Color",
-            "name": "box_bg_hover_color",
+            "name": "gsb_box_bg_hover_color",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
@@ -320,5 +320,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682082847
+    "modified": 1682344502
 }

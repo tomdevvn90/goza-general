@@ -28,50 +28,65 @@ if (!empty($block['align'])) {
 }
 
 // Load values and assign defaults.
-$gsb_heading         = __get_field('gsb_heading') ?: '';
-$gsb_subheading      = __get_field('gsb_subheading') ?: 'You May Volunteer to Help Other People';
-$gsb_bg_image            = __get_field('gsb_bg_image') ?: [];
-$gsb_heading_color             = __get_field('gsb_heading_color') ?: [];
-$box_bg_color          = __get_field('box_bg_color');
-$box_color        = __get_field('box_color') ?: '#fff';
-$box_hover_color    = __get_field('box_hover_color') ?: '#000';
-$box_bg_color       = __get_field('box_bg_color') ?: '#FFF';
-$box_bg_hover_color    = __get_field('box_bg_hover_color') ?: '';
+$gsb_heading               = __get_field('gsb_heading') ?: '';
+$gsb_subheading            = __get_field('gsb_subheading') ?: 'You May Volunteer to Help Other People';
+$gsb_bg_image              = __get_field('gsb_bg_image') ?: [];
+$gsb_box_services          = __get_field('gsb_box_services') ?: [];
+$gsb_heading_color         = __get_field('gsb_heading_color') ?: '#fff';
+$gsb_bg_color          = __get_field('gsb_bg_color');
+$gsb_box_color             = __get_field('gsb_box_color') ?: '#fff';
+$gsb_box_hover_color       = __get_field('gsb_box_hover_color') ?: '#000';
+$gsb_box_bg_color          = __get_field('gsb_box_bg_color') ?: '#FFF';
+$gsb_box_bg_hover_color    = __get_field('gsb_box_bg_hover_color') ?: '';
 
 // Build a valid style attribute for background and text colors.
-$styles = array('background-color: ' . $bnc_bg_color);
-if ($bnc_bg_img) {
-   $styles[] = 'background-image: url(' . esc_attr($bnc_bg_img['url']) . ')';
+$styles = array('background-color: ' . $gsb_bg_color);
+if ($gsb_bg_image) {
+   $styles[] = 'background-image: url(' . esc_attr($gsb_bg_image['url']) . ')';
 }
 $style  = implode('; ', $styles);
 
 ?>
 <div <?php echo $anchor; ?>class="<?php echo esc_attr($class_name); ?>" style="<?php echo esc_attr($style); ?>">
    <div class="container">
-      <div class="block-box" data-aos="fade-up" data-aos-duration="800">
-         <?php if ($bnc_icon) { ?>
-            <img src="<?= esc_attr($bnc_icon['url']) ?>" alt="<?= esc_attr($bnc_icon['alt']) ?>" />
-         <?php } ?>
+      <?php if ($gsb_heading) { ?>
+         <h2 class="gsb-heading" style="color: <?= esc_attr($gsb_heading_color) ?>"><?= esc_attr($gsb_heading) ?></h2>
+      <?php } ?>
 
-         <?php if ($bnc_title) { ?>
-            <h4 class="bnc-title" style="color: <?= esc_attr($bnc_txt_color) ?>"><?= esc_attr($bnc_title) ?></h4>
-         <?php } ?>
+      <?php if ($gsb_heading) { ?>
+         <p class="gsb-subheading" style="color: <?= esc_attr($gsb_heading_color) ?>"><?= esc_attr($gsb_subheading) ?></p>
+      <?php } ?>
 
-         <?php if ($bnc_desc) { ?>
-            <p class="bnc-description" style="color: <?= esc_attr($bnc_txt_color) ?>"><?= esc_attr($bnc_desc) ?></p>
-         <?php } ?>
-
-         <?php if ($bnc_cta) { ?>
-            <a href="<?= esc_url($bnc_cta['url']) ?>" target="<?= esc_attr($bnc_cta['target']) ?>" class="btn <?= esc_attr($bnc_style_button) ?>">
-               <?= esc_attr($bnc_cta['title']) ?>
-               <?php if ($bnc_style_button == 'btn-water') { ?>
-                  <svg class="wgl-dashes inner-dashed-border animated-dashes">
-                     <rect rx="0%" ry="0%"> </rect>
-                  </svg>
-               <?php } ?>
-            </a>
-         <?php } ?>
-
-      </div>
+      <?php
+      if ($gsb_box_services) {
+         echo '<div class="gsb-services-list">';
+         foreach ($gsb_box_services as $box_item) {
+            $icon    = $box_item['icon'];
+            $title   = $box_item['title'];
+            $desc    = $box_item['description'];
+      ?>
+            <div class="gsb-services-item" data-aos="fade-up" data-aos-duration="800" style="background-color: <?=$gsb_box_bg_color?>">
+               <div class="gsb-services-item__wrap">
+                  <?php if ($icon) { ?>
+                     <div class="gsb-services-item__wrap-icon"><img src="<?= esc_url($icon['url']) ?>" alt="<?= esc_attr($title) ?>" /></div>
+                  <?php } ?>
+                  <?php if ($title) { ?>
+                     <h4 class="gsb-services-item__wrap-title" style="color: <?= esc_attr($gsb_box_color) ?>"><?= esc_attr($title) ?></h4>
+                  <?php } ?>
+               </div>
+               <div class="gsb-services-item__wrap-hover" style="background-color: <?=$gsb_box_bg_hover_color?>">
+                  <?php if ($title) { ?>
+                     <h4 class="gsb-services-item__wrap-title" style="color: <?= esc_attr($gsb_box_hover_color) ?>"><?= esc_attr($title) ?></h4>
+                  <?php } ?>
+                  <?php if ($desc) { ?>
+                     <p class="gsb-services-item__wrap-desc" style="color: <?= esc_attr($gsb_box_hover_color) ?>"><?= esc_attr($desc) ?></p>
+                  <?php } ?>
+               </div>
+            </div>
+      <?php
+         }
+         echo '</div>';
+      }
+      ?>
    </div>
 </div>
