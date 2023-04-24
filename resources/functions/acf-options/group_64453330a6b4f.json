@@ -33,7 +33,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Your Heading Here",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -42,7 +42,7 @@
         {
             "key": "field_644538f9da96a",
             "label": "Format Video",
-            "name": "format_video",
+            "name": "vpa_format_video",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -263,5 +263,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682259007
+    "modified": 1682349276
 }

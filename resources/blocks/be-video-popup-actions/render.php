@@ -27,7 +27,7 @@ if (!empty($block['className'])) {
 // Load values and assign defaults.
 $vpa_heading            = __get_field('vpa_heading') ?: 'Your Heading Here';
 $vpa_link_video         = __get_field('vpa_link_video') ?: '';
-$format_video           = __get_field('format_video') ?: 'html';
+$vpa_format_video       = __get_field('vpa_format_video') ?: 'html';
 $vpa_bg_image           = __get_field('vpa_bg_image') ?: '';
 $vpa_width              = __get_field('vpa_width') ?: '90%';
 $vpa_height             = __get_field('vpa_height') ?: '160px';
@@ -41,6 +41,9 @@ $styles = array('background-color: ' . $vpa_bg_color);
 if ($vpa_bg_image) {
    $styles[] = 'background-image: url(' . esc_url($vpa_bg_image['url']) . ')';
 }
+$styles[] = 'border-radius: ' . $vpa_border_radius . 'px';
+$styles[] = 'height: ' . $vpa_height;
+$styles[] = 'max-width: ' . $vpa_width;
 $style  = implode('; ', $styles);
 
 ?>
@@ -50,39 +53,39 @@ $style  = implode('; ', $styles);
          <h5 class="block-inner__heading" style="color: <?= esc_attr($vpa_color_heading) ?>"><?= esc_attr($vpa_heading) ?></h5>
       <?php } ?>
       <div id="block-video-action">
-         <?php if ($format_video == 'youtube') {
+         <?php if ($vpa_format_video == 'youtube') {
             $vpa_link_video = $vpa_link_video ? $vpa_link_video . '&mute=0' : '//www.youtube.com/watch?v=EIUJfXk3_3w&mute=0';
          ?>
             <!-- YouTube Video --->
-            <a data-lg-size="1280-720" data-src="<?= esc_url($vpa_link_video) ?>">
+            <a data-lg-size="1280-720" data-src="<?= esc_url($vpa_link_video) ?>" style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
                <i class="fa fa-play-circle-o"></i>
             </a>
          <?php } ?>
 
          <?php
-         if ($format_video == 'vimeo') {
+         if ($vpa_format_video == 'vimeo') {
             $vpa_link_video = $vpa_link_video ? $vpa_link_video : '//vimeo.com/112836958';
          ?>
             <!-- Vimeo Video --->
-            <a data-lg-size="1280-720" data-src="<?= esc_url($vpa_link_video) ?>">
+            <a data-lg-size="1280-720" data-src="<?= esc_url($vpa_link_video) ?>" style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
                <i class="fa fa-play-circle-o"></i>
             </a>
          <?php } ?>
 
-         <?php if ($format_video == 'wistia') {
+         <?php if ($vpa_format_video == 'wistia') {
             $video_url = $vpa_link_video ? $vpa_link_video : 'https://private-sharing.wistia.com/medias/mwhrulrucj';
          ?>
             <!-- Wistia Video --->
-            <a data-lg-size="1280-720" data-src="<?= esc_url($video_url) ?>">
+            <a data-lg-size="1280-720" data-src="<?= esc_url($video_url) ?>" style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
                <i class="fa fa-play-circle-o"></i>
             </a>
          <?php } ?>
          <?php
-         if ($format_video == 'html') {
+         if ($vpa_format_video == 'html') {
             $video_url = $vpa_link_video ? $vpa_link_video : get_template_directory_uri() . '/resources/assets/videos/video-demo.mp4';
          ?>
             <!-- HTML5 Video --->
-            <a data-lg-size="1280-720" data-video='{"source": [{"src":"<?= esc_url($video_url) ?>", "type":"video/mp4"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}'>
+            <a data-lg-size="1280-720" data-video='{"source": [{"src":"<?= esc_url($video_url) ?>", "type":"video/mp4"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}' style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
                <i class="fa fa-play-circle-o"></i>
             </a>
          <?php } ?>

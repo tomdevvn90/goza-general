@@ -75,14 +75,3 @@ $style  = implode('; ', $styles);
       </div>
    </div>
 </div>
-
-<?php if ($bnc_cta) { ?>
-   <a href="<?= esc_url($bnc_cta['url']) ?>" target="<?= esc_attr($bnc_cta['target']) ?>" class="btn <?= esc_attr($bnc_style_button) ?>">
-      <?= esc_attr($bnc_cta['title']) ?>
-      <?php if ($bnc_style_button == 'btn-water') { ?>
-         <svg class="wgl-dashes inner-dashed-border animated-dashes">
-            <rect rx="0%" ry="0%"> </rect>
-         </svg>
-      <?php } ?>
-   </a>
-<?php } ?>
