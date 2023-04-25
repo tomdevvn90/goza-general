@@ -149,10 +149,10 @@ import lgZoom from 'lightgallery/plugins/zoom'
     const beLightGallery = () =>{
         const $lightGallery = $('[data-light-gallery]');
         if ($lightGallery.length === 0) return;
-        console.log("vvv")
+       
         $lightGallery.each(function() {
             let $id = $(this).attr('id');
-            console.log($id)
+           
             lightGallery(document.getElementById(`${$id}`), {
                 speed: 500, 
                 plugins: [lgZoom, lgThumbnail]
@@ -165,10 +165,7 @@ import lgZoom from 'lightgallery/plugins/zoom'
     });
 
     $(document).ready(function () {
-        // lightGallery(document.getElementById('be-gallery'), {
-        //     speed: 500, 
-        //     plugins: [lgZoom, lgThumbnail]
-        // });
+
     })
 
     $(window).on("load", function () {
@@ -186,7 +183,6 @@ import lgZoom from 'lightgallery/plugins/zoom'
 
         //search
         gozaSearch();
-
         bePopupsVideo()
         beCounter()
         beProgressbar()

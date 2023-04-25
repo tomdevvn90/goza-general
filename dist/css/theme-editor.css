@@ -6453,6 +6453,8 @@
 .be-ss-upcoming-event-video--content-event-list-inner .item-event--thumbnail img {
   height: 100%;
   border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .be-ss-upcoming-event-video--content-event-list-inner .item-event--meta {

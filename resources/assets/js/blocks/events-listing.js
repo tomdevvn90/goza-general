@@ -14,7 +14,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
         const $tplDefault = $('.be-events-listing-block.is-style-default');
 
-        if($tplDefault.length > -0){
+        if($tplDefault.length > 0){
            
             $tplDefault.find('.item-event').first().removeClass('__hide');
             $tplDefault.find('.item-event').first().find('.item-event--excerpt').show('1000')
