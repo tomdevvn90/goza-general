@@ -18735,13 +18735,14 @@ h6 {
 .be-post-slider-block-inner .item-post-thumbnail {
   position: relative;
   transition: visibility 0s 0.3s, opacity 0.3s linear;
+  overflow: hidden;
 }
 
 .be-post-slider-block-inner .item-post-thumbnail img {
   -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
+  -o-object-position: top;
+  object-position: top;
 }
 
 .be-post-slider-block-inner .item-post-thumbnail::after {
@@ -18921,10 +18922,15 @@ h6 {
 
 .be-post-slider-block.is-style-default .be-post-slider-block-inner .item-post-thumbnail {
   border-radius: 3px 3px 0 0;
+  height: 205px;
 }
 
 .be-post-slider-block.is-style-default .be-post-slider-block-inner .item-post-thumbnail img {
   border-radius: 3px 3px 0 0;
+  width: 100%;
+  height: 100%;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .be-post-slider-block.is-style-default .be-post-slider-block-inner .item-post-title {
@@ -18947,6 +18953,10 @@ h6 {
   padding: 20px;
 }
 
+.be-post-slider-block.is-style-2 .be-post-slider-block-inner .item-post-thumbnail {
+  height: 233px;
+}
+
 .be-post-slider-block.is-style-2 .be-post-slider-block-inner .item-post-date {
   right: 15px;
   position: absolute;
@@ -18963,6 +18973,7 @@ h6 {
   line-height: 20px;
   font-family: var(--heading-family);
   font-weight: 400;
+  height: auto;
 }
 
 .be-post-slider-block.is-style-2 .be-post-slider-block-inner .item-post-date > span {
@@ -21070,6 +21081,8 @@ h6 {
 .be-ss-upcoming-event-video--content-event-list-inner .item-event--thumbnail img {
   height: 100%;
   border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .be-ss-upcoming-event-video--content-event-list-inner .item-event--meta {
