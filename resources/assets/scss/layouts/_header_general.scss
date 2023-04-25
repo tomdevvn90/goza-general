@@ -1,10 +1,12 @@
 .site-header {
     .goza-header-main--menu {
+        #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link{
+            @include media-breakpoint-down(lg) {
+                padding: 0  10px;
+            }
+        }
         .navbar-nav {
             .menu-item {
-                a {
-                    &.dropdown-toggle {}
-                }
 
                 .sub-menu {
                     display: block;
@@ -58,7 +60,10 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 38px 0;
+            // padding: 38px 0;
+            @include media-breakpoint-down(lg) {
+                padding: 38px 0;
+            }
             &--logo {
                 a {
                     display: block;

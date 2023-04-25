@@ -14697,6 +14697,12 @@ h6 {
   padding-left: 4px;
 }
 
+@media (max-width: 1199.98px) {
+  .site-header .goza-header-main--menu #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
+    padding: 0 10px;
+  }
+}
+
 .site-header .goza-header-main--menu .navbar-nav .menu-item .sub-menu {
   display: block;
   min-width: 200px;
@@ -14741,7 +14747,12 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 38px 0;
+}
+
+@media (max-width: 1199.98px) {
+  .site-header.site-header-default .goza-header-main {
+    padding: 38px 0;
+  }
 }
 
 .site-header.site-header-default .goza-header-main--logo a {
