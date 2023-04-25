@@ -1,48 +1,25 @@
 @-webkit-keyframes pulse-border {
     0% {
-        -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-        opacity: 1;
-    }
-
+      -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+      opacity: 1; }
+  
     100% {
-        -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-        opacity: 0;
-    }
-}
-
-@keyframes pulse-border {
+      -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+      opacity: 0; } }
+  
+  @keyframes pulse-border {
     0% {
-        -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-        opacity: 1;
-    }
-
+      -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+      opacity: 1; }
+  
     100% {
-        -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-        opacity: 0;
-    }
-}
-
+      -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+      opacity: 0; } }
 .video-popup-actions-block {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-
-    @include media-breakpoint-down(sm) {
-        margin-left: calc(-50vw + 50%);
-        margin-right: calc(-50vw + 50%);
-        max-width: 100vw !important;
-        height: 300px !important;
-    }
-
     .block-inner {
         padding: 20px;
         text-align: center;
@@ -61,8 +38,7 @@
         #block-video-action {
             display: flex;
             justify-content: center;
-            align-items: center;
-
+            align-items: center; 
             a {
                 cursor: pointer;
                 background-color: #ed9913;
@@ -85,7 +61,7 @@
                     display: block;
                     width: 60px;
                     height: 60px;
-                    background: currentColor repeat scroll 0 0;
+                    background: #ed9913 repeat scroll 0 0;
                     -webkit-border-radius: 50%;
                     -moz-border-radius: 50%;
                     border-radius: 50%;
