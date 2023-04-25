@@ -1,0 +1,17 @@
+.goza-image-content-block {
+    .block-inner {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__col {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+
+            @include media-breakpoint-up(md) {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    }
+}
