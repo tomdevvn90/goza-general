@@ -1,4 +1,18 @@
 .is-root-container {
+    overflow: hidden;
+
+    .wp-block {
+        max-width: 1160px;
+    }
+
+    .wp-block[data-align="left"],
+    .wp-block[data-align="right"] {
+        height: auto;
+    }
+
+    .wp-block[data-align="full"] {
+        max-width: none;
+    }
 
     p,
     div,
@@ -10,9 +24,15 @@
         line-height: var(--body-line-height, 1.625);
         color: var(--body-color, #666);
     }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
 }
 
-.editor-styles-wrapper {
+.is-root-container {
 
     h1,
     h2,
