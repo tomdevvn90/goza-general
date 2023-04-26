@@ -1,0 +1,75 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * Container styles
+ * Loads on front end and back end
+ */
+.goza-block-container {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--paddingTop);
+  padding-bottom: var(--paddingBottom);
+  z-index: 1; }
+  @media (max-width: 991.98px) {
+    .goza-block-container {
+      padding-top: var(--paddingTopTablet);
+      padding-bottom: var(--paddingBottomTablet); } }
+  @media (max-width: 767.98px) {
+    .goza-block-container {
+      padding-top: var(--paddingTopMobile);
+      padding-bottom: var(--paddingBottomMobile); } }
+  .goza-block-container .goza-container-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+    .goza-block-container .goza-container-bg-overlay {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 85, 249, 0.2)), to(rgba(0, 85, 249, 0.2))), -webkit-gradient(linear, left bottom, left top, from(rgba(9, 7, 24, 0.85)), to(rgba(9, 7, 24, 0.85)));
+      background: -webkit-linear-gradient(bottom, rgba(0, 85, 249, 0.2), rgba(0, 85, 249, 0.2)), -webkit-linear-gradient(bottom, rgba(9, 7, 24, 0.85), rgba(9, 7, 24, 0.85));
+      background: -o-linear-gradient(bottom, rgba(0, 85, 249, 0.2), rgba(0, 85, 249, 0.2)), -o-linear-gradient(bottom, rgba(9, 7, 24, 0.85), rgba(9, 7, 24, 0.85));
+      background: linear-gradient(0deg, rgba(0, 85, 249, 0.2), rgba(0, 85, 249, 0.2)), linear-gradient(0deg, rgba(9, 7, 24, 0.85), rgba(9, 7, 24, 0.85));
+      background-blend-mode: color, normal, luminosity; }
+    .goza-block-container .goza-container-bg.goza-bg-video video {
+      position: absolute;
+      z-index: 0;
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+  .goza-block-container .container {
+    position: relative;
+    z-index: 2; }
+  .goza-block-container .goza-container-image-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    z-index: 0; }
+  .goza-block-container .goza-container-image {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease; }
