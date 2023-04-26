@@ -3169,6 +3169,13 @@
   font-style: var(--heading-font-style, normal);
 }
 
+.is-root-container mark,
+.is-root-container .mark {
+  padding: 0;
+  background: transparent;
+  color: var(--link-color, rgb(212, 27, 101));
+}
+
 @media (min-width: 1200px) {
   .editor-styles-wrapper .container-xl,
   .editor-styles-wrapper .container-lg,

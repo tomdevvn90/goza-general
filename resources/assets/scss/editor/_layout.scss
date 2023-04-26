@@ -35,7 +35,7 @@
 }
 
 .is-root-container {
-
+    
     h1,
     h2,
     h3,
@@ -139,6 +139,13 @@
         line-height: var(--h6-line-height, 26px);
         font-style: var(--heading-font-style, normal);
     }
+
+    mark, .mark {
+        padding: 0;
+        background: transparent;
+        color: var(--link-color, rgb(212,27,101));
+     }
+     
 }
 
 @media (min-width: 1200px) {
