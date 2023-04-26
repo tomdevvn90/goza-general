@@ -73,3 +73,17 @@
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     transition: 0.3s ease; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.goza-blocks.goza-block-spacer {
+  height: var(--size-default); }
+  @media (max-width: 991px) {
+    .goza-blocks.goza-block-spacer {
+      height: var(--size-tablet); } }
+  @media (max-width: 767px) {
+    .goza-blocks.goza-block-spacer {
+      height: var(--size-mobile); } }

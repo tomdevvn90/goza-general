@@ -12,3 +12,11 @@
  */
 .goza-block-container .goza-container-content {
   max-width: 1100px; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.goza-blocks.goza-block-spacer {
+  background: wheat; }

@@ -10,3 +10,4 @@
  */
 
 import './blocks/goza-container';
+import './blocks/goza-spacer';
