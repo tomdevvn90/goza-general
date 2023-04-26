@@ -188,7 +188,7 @@
             "max_size": "",
             "mime_types": "",
             "insert": "append",
-            "preview_size": "medium"
+            "preview_size": "thumbnail"
         },
         {
             "key": "field_6441566e0b6e7",
@@ -299,5 +299,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682086714
+    "modified": 1682432780
 }

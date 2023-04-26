@@ -11583,6 +11583,13 @@ img {
   max-width: 100%;
 }
 
+mark,
+.mark {
+  padding: 0;
+  background: transparent;
+  color: var(--link-color, rgb(212, 27, 101));
+}
+
 * {
   box-sizing: border-box;
 }
@@ -14749,7 +14756,7 @@ h6 {
   justify-content: space-between;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 991.98px) {
   .site-header.site-header-default .goza-header-main {
     padding: 38px 0;
   }
@@ -22749,6 +22756,24 @@ h6 {
   font-size: 16px;
   margin: 0;
   color: #ffffff;
+}
+
+.goza-image-content-block .block-inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goza-image-content-block .block-inner__col {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+}
+
+@media (min-width: 768px) {
+  .goza-image-content-block .block-inner__col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
 .tribe-common h1,

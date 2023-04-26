@@ -31,6 +31,11 @@ require get_template_directory() . '/resources/functions/template-func.php';
 require get_template_directory() . '/resources/functions/blocks.php'; 
 
 /**
+ * Theme block gutenberg
+ */
+require get_template_directory() . '/editor/editor.php'; 
+
+/**
  * Theme install
  */
 require get_template_directory() . '/install/plugin-required.php';

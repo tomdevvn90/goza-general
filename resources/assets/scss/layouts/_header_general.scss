@@ -61,7 +61,7 @@
             align-items: center;
             justify-content: space-between;
             // padding: 38px 0;
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(md) {
                 padding: 38px 0;
             }
             &--logo {
