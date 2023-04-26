@@ -3176,19 +3176,19 @@
   color: var(--link-color, rgb(212, 27, 101));
 }
 
-@media (min-width: 1200px) {
-  .editor-styles-wrapper .container-xl,
-  .editor-styles-wrapper .container-lg,
-  .editor-styles-wrapper .container-md,
-  .editor-styles-wrapper .container-sm,
-  .editor-styles-wrapper .container {
-    max-width: 1160px;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-  }
+.editor-styles-wrapper .container-xl,
+.editor-styles-wrapper .container-lg,
+.editor-styles-wrapper .container-md,
+.editor-styles-wrapper .container-sm,
+.editor-styles-wrapper .container {
+  max-width: 1160px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background: none;
+  border: none;
 }
 
 .btn {

@@ -1,7 +1,7 @@
 .is-root-container {
     overflow: hidden;
 
-    .wp-block { 
+    .wp-block {
         max-width: 1160px;
     }
 
@@ -35,7 +35,7 @@
 }
 
 .is-root-container {
-    
+
     h1,
     h2,
     h3,
@@ -140,26 +140,26 @@
         font-style: var(--heading-font-style, normal);
     }
 
-    mark, .mark {
+    mark,
+    .mark {
         padding: 0;
         background: transparent;
-        color: var(--link-color, rgb(212,27,101));
-     }
-     
+        color: var(--link-color, rgb(212, 27, 101));
+    }
+
 }
 
-@media (min-width: 1200px) {
-
-    .editor-styles-wrapper .container-xl,
-    .editor-styles-wrapper .container-lg,
-    .editor-styles-wrapper .container-md,
-    .editor-styles-wrapper .container-sm,
-    .editor-styles-wrapper .container {
-        max-width: 1160px;
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-    }
+.editor-styles-wrapper .container-xl,
+.editor-styles-wrapper .container-lg,
+.editor-styles-wrapper .container-md,
+.editor-styles-wrapper .container-sm,
+.editor-styles-wrapper .container {
+    max-width: 1160px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background: none;
+    border: none;
 }
