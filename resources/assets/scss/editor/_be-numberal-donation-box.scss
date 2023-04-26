@@ -42,7 +42,7 @@
                         &:first-child{
                             fill: none;
                             stroke: var(--trailcolor);
-                            stroke-width: var(--trailwidth);
+                            stroke-width: 2.5;
                         }
 
                         &:last-child{
@@ -54,7 +54,7 @@
                             stroke-linecap: inherit;
                             transition: stroke-dashoffset 1s ease-in-out;
                             stroke-dashoffset: calc(100px - var(--progressbar));
-                            stroke-width: var(--strokewidth);
+                            stroke-width: 2.5;
                         }
                     }
                 }

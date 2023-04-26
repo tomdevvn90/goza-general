@@ -440,28 +440,6 @@
                     "preview_size": "medium"
                 },
                 {
-                    "key": "field_643819d7abbbe",
-                    "label": "strokeWidth",
-                    "name": "strokewidth",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": 8,
-                    "min": 1,
-                    "max": 100,
-                    "placeholder": "",
-                    "step": 1,
-                    "prepend": "",
-                    "append": ""
-                },
-                {
                     "key": "field_64381a02abbbf",
                     "label": "strokeColor",
                     "name": "strokecolor",
@@ -478,28 +456,6 @@
                     "default_value": "#000",
                     "enable_opacity": 0,
                     "return_format": "string"
-                },
-                {
-                    "key": "field_64381a05abbc0",
-                    "label": "trailWidth",
-                    "name": "trailwidth",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": 8,
-                    "min": 1,
-                    "max": 100,
-                    "placeholder": "",
-                    "step": 1,
-                    "prepend": "",
-                    "append": ""
                 },
                 {
                     "key": "field_64381ab9abbc1",
@@ -540,5 +496,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682089374
+    "modified": 1682520103
 }

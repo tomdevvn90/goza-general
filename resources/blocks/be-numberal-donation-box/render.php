@@ -23,19 +23,13 @@ $bg            = (!empty($general['bg_image'])) ? $general['bg_image'] : get_tem
       <div class="be-numberal-donation-box-progressbar" style="background-image:url('<?php echo $bg ?>')"> 
          <div  class="be-numberal-donation-box-progressbar-inner"> 
             <span id="be-progressbar" data-progressbar="<?php echo $progressbar['value'] ?>" data-heading="<?php echo $progressbar['desc'] ?>"
-                  data-strokewidth="<?php echo $progressbar['strokewidth'] ?>" data-strokecolor="<?php echo $progressbar['strokecolor'] ?>"
-                  data-trailwidth="<?php echo $progressbar['trailwidth'] ?>" data-trailcolor="<?php echo $progressbar['trailcolor'] ?>"
+                  data-strokecolor="<?php echo $progressbar['strokecolor'] ?>" data-trailcolor="<?php echo $progressbar['trailcolor'] ?>"
                   data-duration=<?php echo $progressbar['duration'] ?>
             > 
-
             <div class="be-progressbar-editor" style="--progressbar:<?php echo $progressbar['value']?>px;"> 
-               <?php 
-                  $strokewidthEdit = $progressbar['strokewidth'] > 5.5 ? $progressbar['strokewidth'] - 5.5 : $progressbar['strokewidth'];
-                  $trailwidthEdit = $progressbar['trailwidth'] > 5.5 ? $progressbar['trailwidth'] - 5.5 : $progressbar['trailwidth'];
-               ?>
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
-                  <circle cx="16.1" cy="15.7" r="15.5" style="--trailwidth:<?php echo $trailwidthEdit ?>; --trailcolor:<?php echo $progressbar['trailcolor'] ?>"/>
-                  <circle cx="16.1" cy="15.7" r="15.5" style="--strokewidth:<?php echo $strokewidthEdit ?>; --strokecolor:<?php echo $progressbar['strokecolor'] ?>"/>
+                  <circle cx="16.1" cy="15.7" r="15.5" style=" --trailcolor:<?php echo $progressbar['trailcolor'] ?>"/>
+                  <circle cx="16.1" cy="15.7" r="15.5" style=" --strokecolor:<?php echo $progressbar['strokecolor'] ?>"/>
                </svg>
               <div class="__meta"> 
                   <span> <?php echo $progressbar['value'] ?><sup>%</sup> </span>
@@ -48,7 +42,7 @@ $bg            = (!empty($general['bg_image'])) ? $general['bg_image'] : get_tem
    <?php endif; ?>
 
    <div class="be-numberal-donation-box-inner">
-      <?php if(!empty($list_items)): ?>
+      <?php if(!empty($list_items)){ ?>
          <div class="be-numberal-donation-box--list-item"> 
             <?php 
                $st_counter = (!empty($counter['settings'])) ? $counter['settings'] : '';
@@ -73,7 +67,9 @@ $bg            = (!empty($general['bg_image'])) ? $general['bg_image'] : get_tem
             <?php endforeach; ?>
 
          </div>
-      <?php endif; ?>   
+      <?php }else{ ?>
+         <div class="be-numberal-donation-box--space" style="min-height:200px"> </div>
+      <?php } ?>   
 
       <div class="be-numberal-donation-box--buttons"> 
          <?php if(!empty($button_one['name']) && !empty($button_one['link'])): ?>

@@ -8635,7 +8635,7 @@
 .is-root-container .be-numberal-donation-box-progressbar .be-progressbar-editor svg circle:first-child {
   fill: none;
   stroke: var(--trailcolor);
-  stroke-width: var(--trailwidth);
+  stroke-width: 2.5;
 }
 
 .is-root-container .be-numberal-donation-box-progressbar .be-progressbar-editor svg circle:last-child {
@@ -8647,7 +8647,7 @@
   stroke-linecap: inherit;
   transition: stroke-dashoffset 1s ease-in-out;
   stroke-dashoffset: calc(100px - var(--progressbar));
-  stroke-width: var(--strokewidth);
+  stroke-width: 2.5;
 }
 
 .is-root-container .be-numberal-donation-box--list-item .item-numberal-donation--number span {
