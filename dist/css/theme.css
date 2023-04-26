@@ -11583,6 +11583,13 @@ img {
   max-width: 100%;
 }
 
+mark,
+.mark {
+  padding: 0;
+  background: transparent;
+  color: var(--link-color, rgb(212, 27, 101));
+}
+
 * {
   box-sizing: border-box;
 }
