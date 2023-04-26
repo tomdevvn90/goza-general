@@ -5,7 +5,7 @@
         margin-left: calc((-50vw + 50px) + 50%);
         margin-right: calc((-50vw + 50px) + 50%);
         max-width: calc(100vw - 100px);
-        margin-top: -100px;
+        margin-top: -150px;
         margin-bottom: 0;
         gap: 15px;
 
@@ -15,10 +15,6 @@
             margin-right: 0;
         }
 
-        @media (max-width: 767px) {
-            margin-top: -180px;
-        }
-
         &.wp-block-columns {
             flex-wrap: wrap !important;
 
@@ -26,6 +22,8 @@
                 @media (max-width: 991px) {
                     width: 100%;
                     max-width: calc(50% - 7.5px);
+                    flex-basis: auto;
+                    flex-grow: inherit;
                 }
 
                 @media (max-width: 767px) {
@@ -39,6 +37,20 @@
                     &-inner {
                         height: 100%;
                     }
+                }
+            }
+        }
+    }
+
+    .last-home-button {
+        .wp-block-column {
+            @media (max-width: 767px) {
+                justify-content: center;
+            }
+
+            .wp-block-buttons {
+                @media (max-width: 767px) {
+                    justify-content: center;
                 }
             }
         }
