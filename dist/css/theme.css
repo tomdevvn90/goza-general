@@ -20138,6 +20138,7 @@ h6 {
 .be-icon-box-block.is-style-3 .be-icon-box-block-inner {
   padding: 40px 20px;
   overflow: hidden;
+  min-height: 219px;
 }
 
 .be-icon-box-block.is-style-3 .be-icon-box-block-inner::after {

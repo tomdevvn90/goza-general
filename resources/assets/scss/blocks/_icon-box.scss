@@ -187,6 +187,7 @@
         .be-icon-box-block-inner{
             padding: 40px 20px;
             overflow: hidden;
+            min-height: 219px;
             &::after{
                 background: #fff;
                 content: "";
