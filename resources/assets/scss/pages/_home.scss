@@ -43,9 +43,15 @@
     }
 
     .last-home-button {
+        &.wp-block-columns{
+            @media (max-width: 767px) {
+                gap: 1em;
+            }
+        }
         .wp-block-column {
             @media (max-width: 767px) {
                 justify-content: center;
+                display: flex;
             }
 
             .wp-block-buttons {

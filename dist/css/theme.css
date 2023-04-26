@@ -17722,8 +17722,15 @@ h6 {
 }
 
 @media (max-width: 767px) {
+  .home-last-section .last-home-button.wp-block-columns {
+    gap: 1em;
+  }
+}
+
+@media (max-width: 767px) {
   .home-last-section .last-home-button .wp-block-column {
     justify-content: center;
+    display: flex;
   }
 }
 
