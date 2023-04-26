@@ -22264,6 +22264,7 @@ h6 {
   margin: 0 12px 0 0;
   padding: 0;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .be-socials-block--items {
@@ -22280,17 +22281,27 @@ h6 {
 .be-socials-block--items li a {
   width: 44px;
   height: 44px;
-  background-color: var(--bg);
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.be-socials-block--items li a i {
+  color: #000;
+  transition: 0.3s ease;
 }
 
 .be-socials-block--items li a:hover {
-  background-color: var(--bgHover);
+  background-color: var(--link-color);
+}
+
+.be-socials-block--items li a:hover i {
+  color: #fff;
 }
 
 .be-socials-block--items li img {

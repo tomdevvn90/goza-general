@@ -23,8 +23,8 @@
             "append": ""
         },
         {
-            "key": "field_643eb762477f3",
-            "label": "List Items",
+            "key": "field_64493efbd5e61",
+            "label": "Socials",
             "name": "list_items_bl_socials",
             "aria-label": "",
             "type": "repeater",
@@ -36,7 +36,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "row",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -45,42 +45,47 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_643eb788477f4",
+                    "key": "field_64493efbd5e62",
                     "label": "Icon",
                     "name": "icon",
                     "aria-label": "",
-                    "type": "image",
+                    "type": "select",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "url",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "medium",
-                    "parent_repeater": "field_643eb762477f3"
+                    "choices": {
+                        "facebook": "Facebook",
+                        "google-plus": "Google Plus",
+                        "twitter": "Twitter",
+                        "linkedin": "LinkedIn",
+                        "pinterest-p": "Pinterest",
+                        "youtube": "Youtube"
+                    },
+                    "default_value": false,
+                    "return_format": "array",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_64493efbd5e61"
                 },
                 {
-                    "key": "field_643eb79d477f5",
-                    "label": "Link",
-                    "name": "link",
+                    "key": "field_64493efbd5e63",
+                    "label": "Url",
+                    "name": "url",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
@@ -89,81 +94,9 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_643eb762477f3"
+                    "parent_repeater": "field_64493efbd5e61"
                 }
             ]
-        },
-        {
-            "key": "field_644146556c577",
-            "label": "Custom Color",
-            "name": "custom_color_bl_socials",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "100",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
-        },
-        {
-            "key": "field_6441469e93ec5",
-            "label": "Background Color",
-            "name": "bg_bl_socials",
-            "aria-label": "",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_644146556c577",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_6441470093ec6",
-            "label": "Background Color Hover",
-            "name": "bg_hover_bl_socials",
-            "aria-label": "",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_644146556c577",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
         }
     ],
     "location": [
@@ -184,5 +117,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681999647
+    "modified": 1682522951
 }
