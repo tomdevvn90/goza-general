@@ -9,9 +9,6 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 // ACF field variables
 $heading = get_field('heading_bl_socials');
 $items   = get_field('list_items_bl_socials');
-$ctColor = get_field('custom_color_bl_socials');
-$bg      = (!empty(get_field('bg_bl_socials')) && $ctColor) ? get_field('bg_bl_socials') : "#fff";
-$bgHover = (!empty(get_field('bg_hover_bl_socials')) && $ctColor) ? get_field('bg_hover_bl_socials') : "";
 $is_style = isset($block['className']) ? $block['className'] : "is-style-default";
 
 ?>
@@ -22,13 +19,12 @@ $is_style = isset($block['className']) ? $block['className'] : "is-style-default
       <?php endif; ?>   
 
       <?php if(!empty($items)): ?>
-         <ul class="be-socials-block--items" style="--bg:<?php echo $bg?>; --bgHover:<?php echo $bgHover ?>">
+         <ul class="be-socials-block--items">
             <?php foreach ($items as $key => $value) : ?>
-               <?php if(!empty($value['icon']) && !empty($value['link'])): ?>
+               <?php $icon = $value['icon']; ?>
+               <?php if(!empty($value['url'])): ?>
                   <li> 
-                     <a href="<?php echo $value['link'] ?>">
-                        <img src="<?php echo $value['icon'] ?>" alt="icon">
-                     </a>
+                     <a href="<?php echo $value['url'] ?>"> <i class="fa fa-<?php echo $icon['value'] ?>" aria-hidden="true"></i></a> </a> 
                   </li>
                <?php endif; ?>   
             <?php endforeach; ?>   
