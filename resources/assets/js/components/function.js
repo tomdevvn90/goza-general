@@ -26,24 +26,22 @@ import lgZoom from 'lightgallery/plugins/zoom'
                 ProgressBar    = require('progressbar.js'),
                 $heading       = $(this).data('heading') ? $(this).data('heading') : '',
                 $duration      = $(this).data('duration'),
-                $trailwidth    = $(this).data('trailwidth'),
                 $trailcolor    = $(this).data('trailcolor'),
-                $strokecolor   = $(this).data('strokecolor'),
-                $strokewidth   = $(this).data('strokewidth');
+                $strokecolor   = $(this).data('strokecolor')
             
             if($value && $idProgressbar){
                 let circle = new ProgressBar.Circle(`#${$idProgressbar}`, {
                     
-                    strokeWidth: $strokewidth, 
-                    trailWidth: $trailwidth,
+                    strokeWidth: 8, 
+                    trailWidth: 8,
                     trailColor: $trailcolor,
                     easing: 'easeInOut',
                     duration: $duration,
                     text: {
                         autoStyleContainer: false
                     },
-                    from: { color: $strokecolor, width: $strokewidth},
-                    to:   { color: $strokecolor, width: $strokewidth },
+                    from: { color: $strokecolor, width: 8},
+                    to:   { color: $strokecolor, width: 8 },
                     // Set default step function for all animate calls
                     step: function(state, circle) {
                         circle.path.setAttribute('stroke', state.color);
