@@ -8,7 +8,6 @@
         color: #FFF;
     }
 
-    &.btn-default {}
 
     &.btn-general {
         text-transform: uppercase;
@@ -262,11 +261,13 @@
         &:hover {
             opacity: 0.85;
             color: #fff !important;
+
             &::before,
             &::after {
                 transform: translate(0, 0);
                 z-index: -1;
             }
+
             &::after {
                 transition-delay: 0.4s;
             }
@@ -297,3 +298,4 @@
         }
     }
 }
+

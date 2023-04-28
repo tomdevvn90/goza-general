@@ -11600,6 +11600,10 @@ mark,
   max-width: 100vw;
 }
 
+.wp-block-button.btn.btn-general a {
+  padding: 0;
+}
+
 @font-face {
   font-family: "Arimo";
   src: url(../fonts/Arimo-Regular.ttf?f308213411bb2ec3d44a93563cf441c0) format("truetype");
@@ -16590,6 +16594,25 @@ h6 {
 
 .main-footer.footer-default .main-footer-widget form input.tnp-submit:hover {
   background-color: var(--link-color-hover, rgb(131, 61, 204));
+}
+
+.main-footer.footer-default .main-footer-widget form:hover:after {
+  left: 120%;
+  transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.main-footer.footer-default .main-footer-widget form:after {
+  background: #fff;
+  content: "";
+  height: 115px;
+  left: -75px;
+  opacity: 0.2;
+  position: absolute;
+  top: 40px;
+  transform: rotate(35deg);
+  transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 30px;
+  z-index: 1;
 }
 
 .main-footer.footer-default .main-footer-heading {
@@ -22949,6 +22972,55 @@ h6 {
 
 .goza-image-content-block .block-inner .block-inner__content-quote-author .quote-author-name-pos .quote-author-position {
   color: #000000;
+}
+
+.be-give-progress {
+  margin: 0;
+  padding: 0;
+}
+
+.be-give-progress .be-col-we-are-charity.wp-block-column {
+  padding-right: 10%;
+}
+
+.wp-block-button.btn-general a {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  background: var(--link-color, rgb(212, 27, 101));
+  padding: 18px 30px;
+  border-radius: 2px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  font-weight: bold;
+  border: none;
+  position: relative;
+}
+
+.wp-block-button.btn-general a:hover {
+  opacity: 0.85;
+}
+
+.wp-block-button.btn-general a:hover::after {
+  left: 120%;
+  transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.wp-block-button.btn-general a::after {
+  background: #fff;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.2;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 30px;
+  z-index: 1;
 }
 
 .tribe-common h1,
