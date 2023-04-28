@@ -22860,6 +22860,88 @@ h6 {
   }
 }
 
+.goza-image-content-block .block-inner__col.block-inner__content {
+  padding: 60px;
+}
+
+.goza-image-content-block .block-inner__col.block-inner__image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.goza-image-content-block .block-inner .block-inner__content-subheading {
+  font-size: 16px;
+  color: #444444;
+  line-height: 20px;
+  text-align: left;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.goza-image-content-block .block-inner .block-inner__content-heading {
+  font-size: 38px;
+  color: #222222;
+  line-height: 40px;
+  text-align: left;
+  letter-spacing: -0.5px;
+  margin-bottom: 25px;
+}
+
+.goza-image-content-block .block-inner .block-inner__content-quote-text {
+  font-size: 30px;
+  line-height: 45px;
+  text-align: left;
+  font-family: "Calligraffitti", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 40px;
+  border-left-width: 4px;
+  padding-left: 15px;
+  border-left-color: #ed9913;
+  border-left-style: solid;
+  letter-spacing: 0px;
+  color: #333;
+  margin-top: 35px;
+}
+
+.goza-image-content-block .block-inner .block-inner__content-quote-author {
+  display: flex;
+  align-items: center;
+}
+
+.goza-image-content-block .block-inner .block-inner__content-quote-author .quote-author-avatar {
+  width: 80px;
+}
+
+.goza-image-content-block .block-inner .block-inner__content-quote-author .quote-author-avatar img {
+  border-radius: 50%;
+}
+
+.goza-image-content-block .block-inner .block-inner__content-quote-author .quote-author-name-pos {
+  padding-left: 20px;
+  width: calc(100% - 80px);
+}
+
+.goza-image-content-block .block-inner .block-inner__content-quote-author .quote-author-name-pos .quote-author-name {
+  color: #000000;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  font-size: 22px;
+}
+
+.goza-image-content-block .block-inner .block-inner__content-quote-author .quote-author-name-pos .quote-author-position {
+  color: #000000;
+}
+
 .tribe-common h1,
 .tribe-common h2,
 .tribe-common h3,

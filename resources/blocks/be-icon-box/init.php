@@ -24,7 +24,7 @@ function be_item_icon_box($block){
 }
 
 function be_template_icon_box_style_3($heading, $icon, $button, $link){ ?>
-    <div class="be-icon-box-block-inner--content"  data-aos="zoom-in"> 
+    <div class="be-icon-box-block-inner--content"> 
         <div class="be-icon-box-block--icon"> 
             <img src="<?php echo $icon ?>" alt="icon">
         </div>

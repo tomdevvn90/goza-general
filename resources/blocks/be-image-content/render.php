@@ -49,7 +49,7 @@ $style  = implode('; ', $styles);
 <div <?php echo $anchor; ?>class="<?php echo esc_attr($class_name); ?>" style="<?php echo esc_attr($style); ?>">
    <div class="block-inner">
       <div class="block-inner__col block-inner__image">
-
+      <img src="<?= ($icb_image) ? esc_url($icb_image['url']) : 'https://via.placeholder.com/900x600?text=Image' ?>" alt="<?= ($icb_image) ? esc_attr($icb_image['alt']) : '' ?>" />
       </div>
       <div class="block-inner__col block-inner__content">
          <?php if ($icb_subheading) { ?>
@@ -60,8 +60,8 @@ $style  = implode('; ', $styles);
             <h2 class="block-inner__content-heading"><?= esc_attr($icb_heading) ?></h2>
          <?php } ?>
 
-         <?php if ($icb_heading) { ?>
-            <div class="block-inner__content-desc"><?= esc_attr($icb_desc) ?></div>
+         <?php if ($icb_desc) { ?>
+            <div class="block-inner__content-desc"><?= $icb_desc ?></div>
          <?php } ?>
 
          <?php if ($icb_quote_text) { ?>
@@ -70,7 +70,7 @@ $style  = implode('; ', $styles);
 
          <div class="block-inner__content-quote-author">
             <div class="quote-author-avatar">
-
+               <img src="<?= ($icb_avatar_author) ? esc_url($icb_avatar_author['url']) : 'https://via.placeholder.com/80x80?text=Avatar' ?>" alt="<?= esc_attr($icb_name_author) ?>" />
             </div>
             <div class="quote-author-name-pos">
                <?php if ($icb_name_author) { ?>
