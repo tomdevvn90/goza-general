@@ -49,7 +49,7 @@ $goza_enable_topbar = __get_field('goza_enable_topbar', 'option');
                   </div>
                <?php   } ?>
                <?php if ($header_btn) { ?>
-                  <a class="d-none d-lg-block goza-header-button" href="<?= esc_attr($header_btn['url']) ?>" target="<?= ($header_btn['target']) ? $header_btn['target'] : '' ?>"><?= esc_attr($header_btn['title']) ?></a>
+                  <a class="d-none d-lg-block goza-header-button btn btn-general" href="<?= esc_attr($header_btn['url']) ?>" target="<?= ($header_btn['target']) ? $header_btn['target'] : '' ?>"><?= esc_attr($header_btn['title']) ?></a>
                <?php } ?>
                <div id="goza-hamberger" class="d-block d-lg-none"><i class="fa fa-reorder"></i></div>
             </div>
