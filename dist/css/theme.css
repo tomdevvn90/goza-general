@@ -18404,12 +18404,12 @@ h6 {
   display: grid;
 }
 
-.grid-decktop-2 .be-give-grid-block-inner {
+.grid-tablet-2 .be-give-grid-block-inner {
   grid-template-columns: repeat(2, 1fr);
   display: grid;
 }
 
-.grid-decktop-1 .be-give-grid-block-inner {
+.grid-mobile-1 .be-give-grid-block-inner {
   grid-template-columns: repeat(1, 1fr);
   display: grid;
 }
