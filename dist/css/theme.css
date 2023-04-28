@@ -17742,6 +17742,11 @@ h6 {
 
 .be-give-progress {
   margin: 0;
+  padding: 0;
+}
+
+.be-give-progress .be-col-we-are-charity.wp-block-column {
+  padding-right: 10%;
 }
 
 .be-testominials-block {
