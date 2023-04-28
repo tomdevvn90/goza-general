@@ -80,7 +80,7 @@ function be_template_icon_box_style_2($heading, $icon, $button, $link){ ?>
 <?php }
 
 function be_template_icon_box_default($heading, $icon, $button, $link){ ?>
-    <div class="be-icon-box-block-warp"> 
+    <div class="be-icon-box-block-warp" data-aos="zoom-in"> 
         <div class="be-icon-box-block--icon"> 
             <img src="<?php echo $icon ?>" alt="icon">
         </div>

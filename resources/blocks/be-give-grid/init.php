@@ -3,7 +3,7 @@
 function be_item_give($block){
   $is_style     = isset($block['className']) ? $block['className'] : "is-style-default";
     ?>
-    <div class="item-inner give-forms-grid">
+    <div class="item-inner give-forms-grid" data-aos="fade-up" data-aos-duration="1000">
     <?php     
       switch ($is_style) {
         case "is-style-2":

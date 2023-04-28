@@ -26,7 +26,7 @@ function be_events_listing(){
     $the_query = new WP_Query($args); ?>
 
     <?php if ($the_query->have_posts()) { ?>
-        <div class="be-ss-upcoming-event-video--content-event-list"> 
+        <div class="be-ss-upcoming-event-video--content-event-list" data-aos="fade-up" data-aos-duration="1000"> 
             <div class="be-ss-upcoming-event-video--content-event-list-inner">
                 <?php while ($the_query->have_posts()) { 
                     $the_query->the_post(); 
