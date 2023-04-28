@@ -225,7 +225,7 @@
         },
         {
             "key": "field_6447e86349e63",
-            "label": "Text Color",
+            "label": "Heading Color",
             "name": "icb_textcolor",
             "aria-label": "",
             "type": "color_picker",
@@ -233,7 +233,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -251,11 +251,65 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "default_value": "#f8f8f8",
+            "enable_opacity": 1,
+            "return_format": "string"
+        },
+        {
+            "key": "field_644bef0340ac0",
+            "label": "Description Color",
+            "name": "icb_desc_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#666",
+            "enable_opacity": 1,
+            "return_format": "string"
+        },
+        {
+            "key": "field_644beeb440abd",
+            "label": "Quote Color",
+            "name": "icb_quote_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#000",
+            "enable_opacity": 1,
+            "return_format": "string"
+        },
+        {
+            "key": "field_644beed440abf",
+            "label": "Author Color",
+            "name": "icb_author_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#000",
             "enable_opacity": 1,
             "return_format": "string"
         }
@@ -278,5 +332,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682434533
+    "modified": 1682698086
 }

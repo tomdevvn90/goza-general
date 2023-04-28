@@ -22907,6 +22907,24 @@ h6 {
   padding: 60px;
 }
 
+@media (max-width: 991.98px) {
+  .goza-image-content-block .block-inner__col.block-inner__content {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .goza-image-content-block .block-inner__col.block-inner__content {
+    padding: 60px 15px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .goza-image-content-block .block-inner__col.block-inner__image {
+    height: 385px;
+  }
+}
+
 .goza-image-content-block .block-inner__col.block-inner__image img {
   height: 100%;
   width: 100%;
@@ -22938,6 +22956,12 @@ h6 {
   margin-bottom: 25px;
 }
 
+@media (max-width: 767.98px) {
+  .goza-image-content-block .block-inner .block-inner__content-heading {
+    font-size: 28px;
+  }
+}
+
 .goza-image-content-block .block-inner .block-inner__content-quote-text {
   font-size: 30px;
   line-height: 45px;
@@ -22953,6 +22977,13 @@ h6 {
   letter-spacing: 0px;
   color: #333;
   margin-top: 35px;
+}
+
+@media (max-width: 767.98px) {
+  .goza-image-content-block .block-inner .block-inner__content-quote-text {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .goza-image-content-block .block-inner .block-inner__content-quote-author {
