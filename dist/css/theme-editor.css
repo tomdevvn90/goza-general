@@ -4469,6 +4469,10 @@
   box-shadow: rgba(1, 1, 1, 0.2) 0px 0px 13px -2px;
 }
 
+.be-post-slider-block-inner .slick-dots li button {
+  display: none;
+}
+
 .be-post-slider-block.is-style-default .be-post-slider-block-inner .item-post-thumbnail {
   border-radius: 3px 3px 0 0;
   height: 205px;
@@ -6763,6 +6767,12 @@
 @media screen and (max-width: 1199px) {
   .be-numberal-donation-box {
     padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .be-numberal-donation-box {
+    max-width: 100%;
   }
 }
 

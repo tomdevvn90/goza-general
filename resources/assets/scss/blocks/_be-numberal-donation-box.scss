@@ -8,6 +8,9 @@
     @media screen and (max-width: 1199px){
         padding-top: 60px;
     }
+    @media screen and (max-width: 767px){
+        max-width: 100%;
+    }
     &-inner{
         box-sizing: border-box;
         position: relative;

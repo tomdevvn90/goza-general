@@ -200,6 +200,10 @@
                     background: var(--link-color);
                     box-shadow: rgba(1, 1, 1, 0.2) 0px 0px 13px -2px;
                 }
+
+                button{
+                    display: none;
+                }
             }
         }
     }
