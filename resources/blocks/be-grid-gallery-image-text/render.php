@@ -47,7 +47,7 @@ $bgImg_right  = $col_right['bg_img'] ? : '';
 
 
             <?php if(!empty($gallerys)): ?>
-                <div id="be-gallery-left-<?php echo $block['id'] ?>" class="be-grid-gallery-image-text-block--gallerys" data-light-gallery> 
+                <div id="be-gallery-left-<?php echo $block['id'] ?>" class="be-grid-gallery-image-text-block--gallerys" data-light-gallery > 
                     <?php foreach ($gallerys as $key => $value) : ?>
                        <a href="<?php echo $value ?>">
                             <img src="<?php echo $value ?>" />
