@@ -131,7 +131,32 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_6451214b80b87",
+            "label": "Signature Author",
+            "name": "icb_signature_author",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -222,6 +247,24 @@
             },
             "placement": "top",
             "endpoint": 0
+        },
+        {
+            "key": "field_64511f8c95a10",
+            "label": "SubHeading Color",
+            "name": "icb_subheading_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#444444",
+            "enable_opacity": 1,
+            "return_format": "string"
         },
         {
             "key": "field_6447e86349e63",
@@ -332,5 +375,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682698086
+    "modified": 1683038666
 }

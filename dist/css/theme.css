@@ -22885,15 +22885,35 @@ h6 {
   color: #ffffff;
 }
 
+.goza-image-content-block.alignfull .block-inner__col.block-inner__content {
+  padding: 60px;
+}
+
+@media (max-width: 991.98px) {
+  .goza-image-content-block.alignfull .block-inner__col.block-inner__content {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .goza-image-content-block.alignfull .block-inner__col.block-inner__content {
+    padding: 60px 15px;
+  }
+}
+
 .goza-image-content-block .block-inner {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .goza-image-content-block .block-inner__col {
   position: relative;
   width: 100%;
   min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media (min-width: 768px) {
@@ -22904,18 +22924,14 @@ h6 {
 }
 
 .goza-image-content-block .block-inner__col.block-inner__content {
-  padding: 60px;
-}
-
-@media (max-width: 991.98px) {
-  .goza-image-content-block .block-inner__col.block-inner__content {
-    padding: 60px 40px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @media (max-width: 767.98px) {
   .goza-image-content-block .block-inner__col.block-inner__content {
-    padding: 60px 15px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -22927,14 +22943,14 @@ h6 {
 
 .goza-image-content-block .block-inner__col.block-inner__image img {
   height: 100%;
-  width: 100%;
+  width: calc(100% - 30px);
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 15px;
 }
 
 .goza-image-content-block .block-inner .block-inner__content-subheading {
@@ -23014,6 +23030,36 @@ h6 {
 
 .goza-image-content-block .block-inner .block-inner__content-quote-author .quote-author-name-pos .quote-author-position {
   color: #000000;
+}
+
+.goza-image-content-block .block-inner .block-inner__content-bottom {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767.98px) {
+  .goza-image-content-block .block-inner .block-inner__content-bottom {
+    gap: 15px;
+  }
+}
+
+.goza-image-content-block .block-inner .block-inner__content-signature {
+  padding-left: 10px;
+  margin-left: 10px;
+  border-left: 1px solid #c9c9c9;
+}
+
+@media (max-width: 767.98px) {
+  .goza-image-content-block .block-inner .block-inner__content-signature {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+}
+
+.goza-image-content-block .block-inner .block-inner__content-signature img {
+  max-width: 180px;
 }
 
 .be-give-progress {
