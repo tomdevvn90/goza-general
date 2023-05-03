@@ -1,24 +1,23 @@
 <?php
 function be_events_listing(){
-    $events        = (!empty(get_field('events_listing_ss_up_ev_vd'))) ? get_field('events_listing_ss_up_ev_vd') : '';
-    $general       = (!empty(get_field('general_ss_up_ev_vd'))) ? get_field('general_ss_up_ev_vd') : '';
-    $btn_animation = (!empty($general['animation_button'])) ? $general['animation_button'] : 'style_default';
-  
+    $events_query  = (!empty(get_field('query_event_ss_up_ev_vd'))) ? get_field('query_event_ss_up_ev_vd') : '';
+    $cta_style     = get_field('bnc_style_ss_up_ev_vd') ?: 'btn-default';
+   
     $args = [
         'post_type'   => 'tribe_events',
         'post_status' => 'publish',
     ];
      
-    $args['posts_per_page']  = (!empty($events['posts_per_page'])) ? $events['posts_per_page'] : -1;
-    $args['post__in']        = (!empty($events['select_events'])) ? $events['select_events'] : [ ];
-    $args['order']           = (!empty($events['order'])) ? $events['order'] : 'ASC';
+    $args['posts_per_page']  = $events_query['posts_per_page'] ? : -1;
+    $args['post__in']        = $events_query['select_events'] ?: [ ];
+    $args['order']           = $events_query['order'] ?: 'ASC';
      
     if(!empty($events['categories'])){
         $args['tax_query'] = [
             array (
                 'taxonomy' => 'tribe_events_cat',
                 'field'    => 'term_id',
-                'terms'    => $events['categories'],
+                'terms'    => $events_query['categories'],
             )
         ];
     }
@@ -59,12 +58,14 @@ function be_events_listing(){
                             </div>
                             
                             <div class="item-event-inner-right"> 
-                                <div class="item-event--cta be-button be-button-<?php echo $btn_animation ?>"> 
-                                    <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"> 
-                                        <?php if(!empty($btn_animation === 'style_2')): ?>
-                                            <svg class="wgl-dashes inner-dashed-border animated-dashes"> <rect rx="0%" ry="0%">  </rect> </svg>
-                                        <?php endif; ?>    
+                                <div class="item-event--cta be-button"> 
+                                    <a href="<?php the_permalink() ?>" class="btn <?= esc_attr($cta_style) ?>">
                                         Join Us 
+                                        <?php if ($cta_style == 'btn-water') { ?>
+                                            <svg class="wgl-dashes inner-dashed-border animated-dashes">
+                                                <rect rx="0%" ry="0%"> </rect>
+                                            </svg>
+                                        <?php } ?>
                                     </a>
                                 </div>
                             </div>

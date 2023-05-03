@@ -21108,17 +21108,11 @@ h6 {
 }
 
 .be-ss-upcoming-event-video--content-event-list-inner .item-event--cta > a {
-  text-transform: uppercase;
-  font-weight: 700;
   font-size: 13px;
-  color: #fff;
-  text-decoration: none;
   background: #000;
   height: 50px;
   line-height: 50px;
   padding: 0 30px;
-  border-radius: 2px;
-  display: inline-block;
   font-family: var(--heading-family);
 }
 

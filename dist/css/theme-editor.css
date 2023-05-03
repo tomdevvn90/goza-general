@@ -6545,17 +6545,11 @@
 }
 
 .be-ss-upcoming-event-video--content-event-list-inner .item-event--cta > a {
-  text-transform: uppercase;
-  font-weight: 700;
   font-size: 13px;
-  color: #fff;
-  text-decoration: none;
   background: #000;
   height: 50px;
   line-height: 50px;
   padding: 0 30px;
-  border-radius: 2px;
-  display: inline-block;
   font-family: var(--heading-family);
 }
 
@@ -8849,6 +8843,30 @@
     font-size: 20px;
     line-height: 28px;
   }
+}
+
+.editor-styles-wrapper .block-editor-block-list__layout .be-ss-upcoming-event-video--content-event-list .item-event--cta > a {
+  color: #fff;
+  text-transform: uppercase;
+  opacity: 1;
+  font-weight: 700;
+}
+
+.editor-styles-wrapper .block-editor-block-list__layout .be-ss-upcoming-event-video--content-event-list .item-event--cta > a svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: dashed_border_running 20s linear infinite both;
+  animation-play-state: paused;
+  stroke-width: 2;
+  stroke-dasharray: 9, 5;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  fill: none;
+  transition: 0.4s;
 }
 
 .editor-styles-wrapper .block-editor-block-list__layout .be-ss-upcoming-event-video--content-cta .__icon-play {

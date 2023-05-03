@@ -265,7 +265,7 @@
         },
         {
             "key": "field_6441579f2566e",
-            "label": "Style button",
+            "label": "CTA Style",
             "name": "bnc_style_button_grid_gallery_image_text",
             "aria-label": "",
             "type": "select",
@@ -314,5 +314,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683080789
+    "modified": 1683096210
 }
