@@ -8,11 +8,13 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
 $general     = get_field('general_grid_gallery_image_text');
-$col_left    = $general['column_left'];
-$col_right   = $general['column_right'];
-$heading     = $general['heading'];
-$gallerys    = get_field('items_gallery__image_text');
-$cta         = get_field('cta_grid_gallery_image_text');
+$col_left    = get_field('column_left_grid_gallery_image_text') ? get_field('column_left_grid_gallery_image_text') : '';
+$col_right   = get_field('column_right__grid_gallery_image_text') ? get_field('column_right__grid_gallery_image_text') : '';
+$heading     = get_field('heading_grid_gallery_image_text') ? : '';
+$gallerys    = get_field('items_gallery__image_text') ? : '';
+$ctaName     = get_field('cta_name_grid_gallery_image_text') ?: '';
+$ctaLink     = get_field('cta_link_grid_gallery_image_text') ?: '';
+$cta_style   = get_field('bnc_style_button_grid_gallery_image_text') ?: 'btn-default';
 
 $bgCl_left   = $col_left['bg_color'] ? : '';
 $bgImg_left  = $col_left['bg_img'] ? : get_template_directory_uri(). '/resources/assets/images/bg-default-gallery.jpg';
@@ -31,20 +33,18 @@ $bgImg_right  = $col_right['bg_img'] ? : '';
                 <h2 class="be-grid-gallery-image-text-block--heading"> <?php echo $heading ?> </h2>
             <?php endif; ?>    
 
-            <?php if(!empty($cta['name']) && !empty($cta['link'])): ?>
-                    <?php $bnc_style_button= $cta['bnc_style_button'] ?: 'btn-default'; ?>
-                    <div class="be-grid-gallery-image-text-block--cta"> 
-                        <a href="<?= $cta['link'] ?>" class="btn <?= esc_attr($bnc_style_button) ?>">
-                            <?= esc_attr($cta['name']) ?>
-                            <?php if ($bnc_style_button == 'btn-water') { ?>
-                                <svg class="wgl-dashes inner-dashed-border animated-dashes">
-                                    <rect rx="0%" ry="0%"> </rect>
-                                </svg>
-                            <?php } ?>
-                        </a>
-                    </div>
+            <?php if(!empty($ctaName) && !empty($ctaLink)): ?>
+                <div class="be-grid-gallery-image-text-block--cta"> 
+                    <a href="<?= esc_url($ctaLink) ?>" class="btn <?= esc_attr($cta_style) ?>">
+                        <?= esc_attr($ctaName) ?>
+                        <?php if ($cta_style == 'btn-water') { ?>
+                            <svg class="wgl-dashes inner-dashed-border animated-dashes">
+                                <rect rx="0%" ry="0%"> </rect>
+                            </svg>
+                        <?php } ?>
+                    </a>
+                </div>
             <?php endif; ?> 
-
 
             <?php if(!empty($gallerys)): ?>
                 <div id="be-gallery-left-<?php echo $block['id'] ?>" class="be-grid-gallery-image-text-block--gallerys" data-light-gallery > 
