@@ -1,7 +1,7 @@
 <?php
 
 // create id attribute for specific styling
-$id = 'be-testominials-' . $block['id'];
+$id = 'be-posts-slider-' . $block['id'];
 
 // create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
@@ -25,11 +25,11 @@ $args['tag__in']         = (!empty($query['tags'])) ? $query['tags'] : [ ];
 $data_carousel = array(
     'slidesToShow'   =>  $slider_setting['slidesToShow'] ? intval($slider_setting['slidesToShow']) : 1,
     'slidesToScroll' =>  $slider_setting['slidesToScroll'] ? intval($slider_setting['slidesToScroll']) : 1,
-    'arrows'         =>  $slider_setting['arrows'] ? $slider_setting['arrows'] : false,
-    'dots'           =>  $slider_setting['dots'] ? $slider_setting['dots'] : false,
-    'autoplay'       =>  $slider_setting['autoplay'] ? $slider_setting['autoplay'] : false,
-    'loop'           =>  $slider_setting['loop'] ? $slider_setting['loop'] : false,
-    'fade'           =>  $slider_setting['fade'] ? $slider_setting['fade'] : false,
+    'arrows'         =>  $slider_setting['arrows'] ?: false,
+    'dots'           =>  $slider_setting['dots'] ?: false,
+    'autoplay'       =>  $slider_setting['autoplay'] ?: false,
+    'loop'           =>  $slider_setting['loop'] ?: false,
+    'fade'           =>  $slider_setting['fade'] ?: false,
 );
 
 $is_style = isset($block['className']) ? $block['className'] : "is-style-default";

@@ -3,6 +3,23 @@
     "title": "Posts Slider Block",
     "fields": [
         {
+            "key": "field_64520f9af53f9",
+            "label": "Posts",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_64146dada1bb6",
             "label": "Query",
             "name": "query_posts_slider_block",
@@ -17,11 +34,6 @@
                 "id": ""
             },
             "layout": "block",
-            "acfe_seamless_style": 0,
-            "acfe_group_modal": 0,
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large",
             "sub_fields": [
                 {
                     "key": "field_6414704fef631",
@@ -122,8 +134,25 @@
             ]
         },
         {
+            "key": "field_6452103ff53fb",
+            "label": "Slider Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_641473ba9fde0",
-            "label": "Slider Setting",
+            "label": "List Options",
             "name": "slider_setting_posts_slider_block",
             "aria-label": "",
             "type": "group",
@@ -136,11 +165,6 @@
                 "id": ""
             },
             "layout": "block",
-            "acfe_seamless_style": 0,
-            "acfe_group_modal": 0,
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large",
             "sub_fields": [
                 {
                     "key": "field_641473ba9fde1",
@@ -307,5 +331,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679668545
+    "modified": 1683099756
 }

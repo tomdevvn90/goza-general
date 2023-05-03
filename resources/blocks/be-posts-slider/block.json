@@ -1,7 +1,7 @@
 {
     "name": "goza/be-posts-slider",
-    "title": "Be Post Slider",
-    "description": "Display testimonials & gain instant credibility.",
+    "title": "Be Posts Slider",
+    "description": "Display posts slider block ",
     "category": "goza-theme",
     "icon": "slides",
     "keywords": ["carousel", "posts"],
