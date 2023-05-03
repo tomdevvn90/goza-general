@@ -30,7 +30,7 @@
         background-position: center !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
-
+        border-radius: 50%;
         @media screen and (min-width: 1200px){
             position: absolute;
             left: -100px;
@@ -40,6 +40,8 @@
         @media screen and (max-width: 1199px){
             margin-left: auto;
             margin-right: auto;
+            background-image: none !important;
+            background-color: transparent;
         }
 
         .be-progressbar-editor{
@@ -87,52 +89,52 @@
             margin: 0;
             padding: 0;
             > a{
-                font-size: 14px;
-                line-height: 60px;
-                font-weight: 700;
-                font-family: var(--heading-family);
-                height: 60px;
-                padding: 0 50px;
-                border-radius: 2px;
-                display: inline-block;
                 width: 100%;
-                text-transform: uppercase;
+                height: 60px;
+                line-height: 60px;
+                padding-top: 0;
+                padding-bottom: 0;
             }
 
-            &.be-button-style_2{
-                svg{
-                    rect{
-                        height: 48px;
-                        width: 95%;
-                        x: 8px;
-                        y: 6px;
-                    }
-                }
-            }
-
-            &.be-button-style_3{
+            &.be-numberal-donation-box--buttons-valunteer, &.be-numberal-donation-box--buttons-donation{
                 > a{
-                    &:hover{
-                        &::before{
-                            border-width: 200px 0 0 200px;
-                        }
+                    &.btn-outline,  &.btn-charity-organization{
+                        background-color: transparent;
+                    }
 
-                        &::after{
-                            border-width: 0 200px 200px 0;
+                    &.btn-outline, &.btn-organization{
+                        &::before, &::after{
+                            content: none;
                         }
                     }
-                }
-            }
 
-            &.be-button-style_5{
-                > a{
-                    &::before, &::after{
-                        transform: translate(-40%, -253%) rotate(-50deg);
+                    &.btn-ngo-dark{
+                        &:hover{
+                            &::before{
+                                border-width: 210px 0 0 210px
+                            }
+
+                            &::after{
+                                border-width: 0 210px 210px 0
+                            }
+                        }
+                    }
+
+                    &.btn-charity-organization{
+                        &::before, &::after{
+                            transform: translate(-25%, -315%) rotate(-50deg);
+                        }
+
+                        &:hover{
+                            &::before, &::after{
+                                transform: translate(0, 0);
+                            }
+                        }
                     }
                 }
             }
 
-            &.be-numberal-donation-box--buttons-one{
+            &.be-numberal-donation-box--buttons-donation{
                 margin-bottom: 10px;
                > a{
                     background-image: -webkit-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.1) 50%,rgba(0,0,0,.1));
@@ -140,73 +142,88 @@
                     background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.1) 50%,rgba(0,0,0,.1));
                     background-color: #fff;
                     color: var(--heading-color);
-               }
 
-               &.be-button-style_default{
-                > a{
-                    &:hover{
-                        background-color: #fff;
-                        color: var(--heading-color);
-                        opacity: 0.85;
-                    }
-                }
-               }
-
-               &.be-button-style_2{
-                > a{
-
-                    &:hover{
-                        background-color: #fff;
-                        color: var(--heading-color);
-                        svg{
-                            stroke: #000;
+                    &.btn-water{
+                        &:hover{
+                            svg{
+                                stroke:var(--link-color);
+                            }
                         }
                     }
-                }
-               }
 
-               &.be-button-style_3{
-                    > a{
+                    &.btn-outline{
+                        border-color: #fff;
+                        background-image:none;
+                        color: #fff;
+                        &:hover{
+                            background-color: #fff;
+                            color: #000;
+                        }
+                    }
+
+                    &.btn-organization{
+                        &:hover{
+                            background-color: #000;
+                            color: #fff;
+                        }
+                    }
+
+                    &.btn-ngo-dark{
                         &::before{
-                            border-color: transparent transparent transparent #000;
+                            border-color: transparent transparent transparent var(--heading-color);
                         }
 
                         &::after{
-                            border-color: transparent #000 transparent transparent;
+                            border-color: transparent var(--heading-color) transparent transparent;
                         }
 
                         &:hover{
                             color: #fff;
                         }
                     }
-                }
-                
-                &.be-button-style_4{
-                    > a{
 
+                    &.btn-water-charity{
+                        &::after{
+                            background: var(--heading-color, #000);
+                        }
                         &:hover{
                             color: #fff;
                         }
                     }
-                }
+
+                    &.btn-charity-organization{
+                        background-image:none;
+                        border-color: #fff;
+                        color: #fff;
+                        &:hover{
+                            border-color: #333333;
+                        }
+                    }
+               }
             }
 
-            &.be-numberal-donation-box--buttons-two{
+            &.be-numberal-donation-box--buttons-valunteer{
                 > a{
                     background-color: #000;
                     color: #fff;
-                }
 
-                &.be-button-style_default{
-                    > a{
+                    &.btn-outline{
+                        border-color: #000;
+                        color: #000;
                         &:hover{
                             background-color: #000;
+                            color: #fff;
                         }
                     }
-                }
 
-                &.be-button-style_3{
-                    > a{
+                    &.btn-organization{
+                        &:hover{
+                            background-color: #fff;
+                            color: #000;
+                        }
+                    }
+
+                    &.btn-ngo-dark{
                         &::before{
                             border-color: transparent transparent transparent #fff;
                         }
@@ -216,40 +233,37 @@
                         }
 
                         &:hover{
-                            color: #000;
+                            color: var(--heading-color);
                         }
                     }
-                }
 
-                &.be-button-style_4{
-                    > a{
+                    &.btn-water-charity{
                         &::after{
                             background: #fff;
                         }
-
                         &:hover{
-                            color: #000;
+                            color: var(--heading-color);
                         }
                     }
-                }
 
-                &.be-button-style_5{
-                    > a{
+                    &.btn-charity-organization{
+                        color: #000;
                         border-color: #000;
                         &::before{
-                            background-color: rgba(255, 255, 255, 0.6);
+                            background-color: rgba(255, 255, 255, 0.5);
                         }
 
                         &::after{
-                            background-color: rgba(255, 255, 255, 1);
+                            background-color: #fff;
                         }
 
                         &:hover{
-                            color: #000;
+                            border-color: #fff;
+                            color: #000 !important;
                         }
                     }
                 }
-             }
+            }
         }
     }
 }

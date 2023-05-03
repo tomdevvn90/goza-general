@@ -21360,6 +21360,7 @@ h6 {
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 1200px) {
@@ -21374,6 +21375,8 @@ h6 {
   .be-numberal-donation-box-progressbar {
     margin-left: auto;
     margin-right: auto;
+    background-image: none !important;
+    background-color: transparent;
   }
 }
 
@@ -21426,122 +21429,171 @@ h6 {
 }
 
 .be-numberal-donation-box--buttons .be-button > a {
-  font-size: 14px;
-  line-height: 60px;
-  font-weight: 700;
-  font-family: var(--heading-family);
-  height: 60px;
-  padding: 0 50px;
-  border-radius: 2px;
-  display: inline-block;
   width: 100%;
-  text-transform: uppercase;
+  height: 60px;
+  line-height: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.be-numberal-donation-box--buttons .be-button.be-button-style_2 svg rect {
-  height: 48px;
-  width: 95%;
-  x: 8px;
-  y: 6px;
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-outline,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-charity-organization,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-outline,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-charity-organization {
+  background-color: transparent;
 }
 
-.be-numberal-donation-box--buttons .be-button.be-button-style_3 > a:hover::before {
-  border-width: 200px 0 0 200px;
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-outline::before,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-outline::after,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-organization::before,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-organization::after,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-outline::before,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-outline::after,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-organization::before,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-organization::after {
+  content: none;
 }
 
-.be-numberal-donation-box--buttons .be-button.be-button-style_3 > a:hover::after {
-  border-width: 0 200px 200px 0;
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-ngo-dark:hover::before,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-ngo-dark:hover::before {
+  border-width: 210px 0 0 210px;
 }
 
-.be-numberal-donation-box--buttons .be-button.be-button-style_5 > a::before,
-.be-numberal-donation-box--buttons .be-button.be-button-style_5 > a::after {
-  transform: translate(-40%, -253%) rotate(-50deg);
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-ngo-dark:hover::after,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-ngo-dark:hover::after {
+  border-width: 0 210px 210px 0;
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one {
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-charity-organization::before,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-charity-organization::after,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-charity-organization::before,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-charity-organization::after {
+  transform: translate(-25%, -315%) rotate(-50deg);
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-charity-organization:hover::before,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-charity-organization:hover::after,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-charity-organization:hover::before,
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-charity-organization:hover::after {
+  transform: translate(0, 0);
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation {
   margin-bottom: 10px;
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one > a {
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1));
   background-color: #fff;
   color: var(--heading-color);
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one.be-button-style_default > a:hover {
-  background-color: #fff;
-  color: var(--heading-color);
-  opacity: 0.85;
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-water:hover svg {
+  stroke: var(--link-color);
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one.be-button-style_2 > a:hover {
-  background-color: #fff;
-  color: var(--heading-color);
-}
-
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one.be-button-style_2 > a:hover svg {
-  stroke: #000;
-}
-
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one.be-button-style_3 > a::before {
-  border-color: transparent transparent transparent #000;
-}
-
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one.be-button-style_3 > a::after {
-  border-color: transparent #000 transparent transparent;
-}
-
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one.be-button-style_3 > a:hover {
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-outline {
+  border-color: #fff;
+  background-image: none;
   color: #fff;
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-one.be-button-style_4 > a:hover {
-  color: #fff;
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-outline:hover {
+  background-color: #fff;
+  color: #000;
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two > a {
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-organization:hover {
   background-color: #000;
   color: #fff;
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_default > a:hover {
-  background-color: #000;
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-ngo-dark::before {
+  border-color: transparent transparent transparent var(--heading-color);
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_3 > a::before {
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-ngo-dark::after {
+  border-color: transparent var(--heading-color) transparent transparent;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-ngo-dark:hover {
+  color: #fff;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-water-charity::after {
+  background: var(--heading-color, #000);
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-water-charity:hover {
+  color: #fff;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-charity-organization {
+  background-image: none;
+  border-color: #fff;
+  color: #fff;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-donation > a.btn-charity-organization:hover {
+  border-color: #333333;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a {
+  background-color: #000;
+  color: #fff;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-outline {
+  border-color: #000;
+  color: #000;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-outline:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-organization:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-ngo-dark::before {
   border-color: transparent transparent transparent #fff;
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_3 > a::after {
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-ngo-dark::after {
   border-color: transparent #fff transparent transparent;
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_3 > a:hover {
-  color: #000;
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-ngo-dark:hover {
+  color: var(--heading-color);
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_4 > a::after {
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-water-charity::after {
   background: #fff;
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_4 > a:hover {
-  color: #000;
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-water-charity:hover {
+  color: var(--heading-color);
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_5 > a {
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-charity-organization {
+  color: #000;
   border-color: #000;
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_5 > a::before {
-  background-color: rgba(255, 255, 255, 0.6);
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-charity-organization::before {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_5 > a::after {
-  background-color: rgb(255, 255, 255);
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-charity-organization::after {
+  background-color: #fff;
 }
 
-.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-two.be-button-style_5 > a:hover {
-  color: #000;
+.be-numberal-donation-box--buttons .be-button.be-numberal-donation-box--buttons-valunteer > a.btn-charity-organization:hover {
+  border-color: #fff;
+  color: #000 !important;
 }
 
 .be-button > a {

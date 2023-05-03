@@ -80,5 +80,16 @@
                 }
             }
         }
+
+        &--buttons{
+            .be-button{
+                > a{
+                    font-size: 14px;
+                    font-weight: 700;
+                    font-family: var(--heading-family);
+                    text-transform: uppercase
+                }
+            }
+        }
     }
 }

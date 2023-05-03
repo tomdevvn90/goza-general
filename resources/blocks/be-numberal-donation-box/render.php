@@ -7,33 +7,37 @@ $id = 'be-numberal-donation-box-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$general       = (!empty(get_field('general_numberal_donation_box'))) ? get_field('general_numberal_donation_box') : '';
-$counter       = (!empty(get_field('counter_numberal_donation_box'))) ? get_field('counter_numberal_donation_box') : '';
-$progressbar   = (!empty(get_field('progressbar_donation_box'))) ? get_field('progressbar_donation_box') : '';
-$list_items    = (!empty($counter['list_items'])) ? $counter['list_items'] : '';
-$button_one    = (!empty($general['button_one'])) ? $general['button_one'] : '';
-$button_two    = (!empty($general['button_one'])) ? $general['button_one'] : '';
+$counters      = (!empty(get_field('counter_numberal_donation_box'))) ? get_field('counter_numberal_donation_box') : '';
+$pg_value      =  get_field('value_progressbar_donation_box') ?: '';
+$pg_desc       =  get_field('desc_progressbar_donation_box') ?: '';
+$strokecolor   =  get_field('strokecolor_progressbar_donation_box') ?: '#fff';
+$trailcolor    =  get_field('trailcolor_progressbar_donation_box') ?: '#000';
+$pg_duration   =  get_field('duration_progressbar_donation_box') ?: '1400';
+$pg_bg         =  get_field('bg_progressbar_donation_box') ?: get_template_directory_uri(). '/resources/assets/images/bg-progressbar_donation_box_default.png';
+$cta_donation  = (!empty(get_field('cta_donation_numberal_donation_box'))) ? get_field('cta_donation_numberal_donation_box') : '';
+$cta_valunteer = (!empty(get_field('cta_valunteer_numberal_donation_box'))) ? get_field('cta_valunteer_numberal_donation_box') : '';
+$cta_style     = get_field('style_cta_numberal_donation_box') ?: 'btn-default';
 $btn_animation = (!empty($general['animation_button'])) ? $general['animation_button'] : '';
-$bg            = (!empty($general['bg_image'])) ? $general['bg_image'] : get_template_directory_uri(). '/resources/assets/images/bg-number-box-default.jpg';
+$bg            = (!empty(get_field('bg_numberal_donation_box'))) ? get_field('bg_numberal_donation_box') : get_template_directory_uri(). '/resources/assets/images/bg-number-box-default.jpg';
 ?>
-<div id="<?php echo $id; ?>" class="be-numberal-donation-box <?php echo $align_class; ?>" style="background-image:url('<?php echo $bg ?>')"> 
-   
-   <?php if(!empty($progressbar['value'])): ?>
-      <?php  $bg = (!empty($progressbar['bg'])) ? $progressbar['bg'] : get_template_directory_uri(). '/resources/assets/images/bg-progressbar_donation_box_default.png'; ?>
-      <div class="be-numberal-donation-box-progressbar" style="background-image:url('<?php echo $bg ?>')"> 
-         <div  class="be-numberal-donation-box-progressbar-inner"> 
-            <span id="be-progressbar" data-progressbar="<?php echo $progressbar['value'] ?>" data-heading="<?php echo $progressbar['desc'] ?>"
-                  data-strokecolor="<?php echo $progressbar['strokecolor'] ?>" data-trailcolor="<?php echo $progressbar['trailcolor'] ?>"
-                  data-duration=<?php echo $progressbar['duration'] ?>
+
+<div id="<?php echo $id; ?>" class="be-numberal-donation-box <?php echo $align_class; ?>" style="background-image:url('<?php echo $bg ?>')">   
+  
+   <?php if(!empty($pg_value)): ?>
+      <div class="be-numberal-donation-box-progressbar" style="background-image:url('<?php echo $pg_bg ?>')"> 
+         <div class="be-numberal-donation-box-progressbar-inner"> 
+            <span id="be-progressbar" data-progressbar="<?php echo $pg_value ?>" data-heading="<?php echo $pg_desc ?>"
+                  data-strokecolor="<?php echo $strokecolor ?>" data-trailcolor="<?php echo $trailcolor ?>"
+                  data-duration=<?php echo $pg_duration ?>
             > 
-            <div class="be-progressbar-editor" style="--progressbar:<?php echo $progressbar['value']?>px;"> 
+            <div class="be-progressbar-editor" style="--progressbar:<?php echo $pg_value?>px;"> 
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
-                  <circle cx="16.1" cy="15.7" r="15.5" style=" --trailcolor:<?php echo $progressbar['trailcolor'] ?>"/>
-                  <circle cx="16.1" cy="15.7" r="15.5" style=" --strokecolor:<?php echo $progressbar['strokecolor'] ?>"/>
+                  <circle cx="16.1" cy="15.7" r="15.5" style=" --trailcolor:<?php echo $trailcolor ?>"/>
+                  <circle cx="16.1" cy="15.7" r="15.5" style=" --strokecolor:<?php echo $strokecolor ?>"/>
                </svg>
               <div class="__meta"> 
-                  <span> <?php echo $progressbar['value'] ?><sup>%</sup> </span>
-                  <p><?php echo $progressbar['desc'] ?></p>
+                  <span> <?php echo $pg_value ?><sup>%</sup> </span>
+                  <p><?php echo $pg_desc ?></p>
               </div>
             </div>
          </span>
@@ -42,17 +46,15 @@ $bg            = (!empty($general['bg_image'])) ? $general['bg_image'] : get_tem
    <?php endif; ?>
 
    <div class="be-numberal-donation-box-inner">
-      <?php if(!empty($list_items)){ ?>
+      <?php if(!empty($counters)){ ?>
          <div class="be-numberal-donation-box--list-item"> 
             <?php 
-               $st_counter = (!empty($counter['settings'])) ? $counter['settings'] : '';
-               $duration   = (!empty($st_counter['duration'])) ?  $st_counter['duration'] : 1000;
-               $delay      = (!empty($st_counter['delay'])) ?  $st_counter['delay'] : 800;
+               $st_counter = (!empty(get_field('settings_counter_numberal_donation_box'))) ? get_field('settings_counter_numberal_donation_box') : '';
+               $duration   =  $st_counter['duration'] ?: 1000;
+               $delay      =  $st_counter['delay'] ?: 800;
             ?>
-            <?php foreach ($list_items as $key => $value): ?>
-               <?php 
-                  $delay_item = (($key * 20) + $delay)
-               ?>
+            <?php foreach ($counters as $key => $value): ?>
+               <?php $delay_item = (($key * 20) + $delay)?>
                <div class="item-numberal-donation"> 
                      <div class="item-numberal-donation--number"> 
                         <?php if(!empty($value['numberal'])): ?>
@@ -61,7 +63,7 @@ $bg            = (!empty($general['bg_image'])) ? $general['bg_image'] : get_tem
                      </div>
 
                      <?php if(!empty($value['heading'])): ?>
-                        <h4 class="item-numberal-donation--heading"> <?php echo $value['heading'] ?> </h4>
+                        <h4 class="item-numberal-donation--heading">  <?= esc_attr($value['heading']) ?> </h4>
                      <?php endif; ?>
                </div>
             <?php endforeach; ?>
@@ -72,24 +74,28 @@ $bg            = (!empty($general['bg_image'])) ? $general['bg_image'] : get_tem
       <?php } ?>   
 
       <div class="be-numberal-donation-box--buttons"> 
-         <?php if(!empty($button_one['name']) && !empty($button_one['link'])): ?>
-            <div class="be-numberal-donation-box--buttons-one be-button be-button-<?php echo $btn_animation ?>"> 
-               <a href="<?php echo $button_one['link'] ?>"> 
-                     <?php if(!empty($btn_animation === 'style_2')): ?>
-                        <svg class="wgl-dashes inner-dashed-border animated-dashes"> <rect rx="0%" ry="0%">  </rect> </svg>
-                     <?php endif; ?>    
-                     <?php echo $button_one['name']; ?>
+         <?php if(!empty($cta_donation['name']) && !empty($cta_donation['link'])): ?>
+            <div class="be-numberal-donation-box--buttons-donation be-button"> 
+               <a href="<?= esc_url($cta_donation['link']) ?>" class="btn <?= esc_attr($cta_style) ?>">
+                  <?= esc_attr($cta_donation['name']) ?>
+                  <?php if ($cta_style == 'btn-water') { ?>
+                        <svg class="wgl-dashes inner-dashed-border animated-dashes">
+                           <rect rx="0%" ry="0%"> </rect>
+                        </svg>
+                  <?php } ?>
                </a>
             </div>
          <?php endif; ?>   
 
-         <?php if(!empty($button_two['name']) && !empty($button_two['link'])): ?>
-            <div class="be-numberal-donation-box--buttons-two be-button be-button-<?php echo $btn_animation ?>"> 
-               <a href="<?php echo $button_two['link'] ?>"> 
-                     <?php if(!empty($btn_animation === 'style_2')): ?>
-                        <svg class="wgl-dashes inner-dashed-border animated-dashes"> <rect rx="0%" ry="0%">  </rect> </svg>
-                     <?php endif; ?>    
-                     <?php echo $button_two['name']; ?>
+         <?php if(!empty($cta_valunteer['name']) && !empty($cta_valunteer['link'])): ?>
+            <div class="be-numberal-donation-box--buttons-valunteer be-button">
+               <a href="<?= esc_url($cta_valunteer['link']) ?>" class="btn <?= esc_attr($cta_style) ?>">
+                  <?= esc_attr($cta_valunteer['name']) ?>
+                  <?php if ($cta_style == 'btn-water') { ?>
+                        <svg class="wgl-dashes inner-dashed-border animated-dashes">
+                           <rect rx="0%" ry="0%"> </rect>
+                        </svg>
+                  <?php } ?>
                </a>
             </div>
          <?php endif; ?>   
