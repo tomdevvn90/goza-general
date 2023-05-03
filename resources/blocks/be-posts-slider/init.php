@@ -1,6 +1,6 @@
 <?php 
 function be_item_post($block){
-    $is_style     = isset($block['className']) ? $block['className'] : "is-style-default"; ?>
+    $is_style = isset($block['className']) ? $block['className'] : "is-style-default"; ?>
 
     <div class="item-post item post_recent"> 
         <div class="item-post-inner"> 

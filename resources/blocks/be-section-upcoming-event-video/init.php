@@ -1,7 +1,7 @@
 <?php
 function be_events_listing(){
     $events        = (!empty(get_field('events_listing_ss_up_ev_vd'))) ? get_field('events_listing_ss_up_ev_vd') : '';
-    $general        = (!empty(get_field('general_ss_up_ev_vd'))) ? get_field('general_ss_up_ev_vd') : '';
+    $general       = (!empty(get_field('general_ss_up_ev_vd'))) ? get_field('general_ss_up_ev_vd') : '';
     $btn_animation = (!empty($general['animation_button'])) ? $general['animation_button'] : 'style_default';
   
     $args = [
@@ -40,7 +40,7 @@ function be_events_listing(){
                             <div class="item-event-inner-left"> 
                                 <?php if(!empty($ev_img_url)): ?>
                                     <div class="item-event--thumbnail">  
-                                        <img src="<?php echo $ev_img_url ?>" alt="<?php the_title() ?>">
+                                        <img src="<?php echo esc_url( $ev_img_url )?>" alt="<?php the_title() ?>">
                                         <span class="item-event--icon-toggle"></span>
                                     </div>
                                 <?php endif; ?>    

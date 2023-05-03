@@ -7,8 +7,8 @@ $id = 'be-socials-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$heading = get_field('heading_bl_socials');
-$items   = get_field('list_items_bl_socials');
+$heading  = get_field('heading_bl_socials');
+$items    = get_field('list_items_bl_socials');
 $is_style = isset($block['className']) ? $block['className'] : "is-style-default";
 
 ?>
@@ -24,7 +24,7 @@ $is_style = isset($block['className']) ? $block['className'] : "is-style-default
                <?php $icon = $value['icon']; ?>
                <?php if(!empty($value['url'])): ?>
                   <li> 
-                     <a href="<?php echo $value['url'] ?>"> <i class="fa fa-<?php echo $icon['value'] ?>" aria-hidden="true"></i></a> </a> 
+                     <a href="<?php echo esc_url($value['url']) ?>"> <i class="fa fa-<?php echo $icon['value'] ?>" aria-hidden="true"></i></a> </a> 
                   </li>
                <?php endif; ?>   
             <?php endforeach; ?>   

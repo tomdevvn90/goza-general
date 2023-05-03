@@ -26,13 +26,13 @@ function be_item_icon_box($block){
 function be_template_icon_box_style_3($heading, $icon, $button, $link){ ?>
     <div class="be-icon-box-block-inner--content"> 
         <div class="be-icon-box-block--icon"> 
-            <img src="<?php echo $icon ?>" alt="icon">
+            <img src="<?php echo esc_url($icon) ?>" alt="icon">
         </div>
 
         <?php if(!empty($heading)): ?>
             <h3 class="be-icon-box-block--heading"> 
                 <?php if(!empty($link)){ ?>
-                    <a href="<?php echo $link ?>">  <?php echo $heading ?>  </a>
+                    <a href="<?php echo esc_url($link) ?>">  <?php echo $heading ?>  </a>
                 <?php }else{
                     echo $heading;
                 } ?>
@@ -44,13 +44,13 @@ function be_template_icon_box_style_3($heading, $icon, $button, $link){ ?>
 function be_template_icon_box_style_2($heading, $icon, $button, $link){ ?>
     <div class="be-icon-box-block-warp" data-aos="zoom-in"> 
         <div class="be-icon-box-block--icon"> 
-            <img src="<?php echo $icon ?>" alt="icon">
+            <img src="<?php echo esc_url($icon) ?>" alt="icon">
         </div>
 
         <?php if(!empty($heading)): ?>
             <h3 class="be-icon-box-block--heading"> 
                 <?php if(!empty($link)){ ?>
-                    <a href="<?php echo $link ?>">  <?php echo $heading ?>  </a>
+                    <a href="<?php echo esc_url($link) ?>">  <?php echo $heading ?>  </a>
                 <?php }else{
                     echo $heading;
                 } ?>
@@ -63,7 +63,7 @@ function be_template_icon_box_style_2($heading, $icon, $button, $link){ ?>
             <?php if(!empty($heading)): ?>
                 <h3 class="be-icon-box-block--heading"> 
                     <?php if(!empty($link)){ ?>
-                        <a href="<?php echo $link ?>">  <?php echo $heading ?>  </a>
+                        <a href="<?php echo esc_url($link) ?>">  <?php echo $heading ?>  </a>
                     <?php }else{
                         echo $heading;
                     } ?>
@@ -72,7 +72,7 @@ function be_template_icon_box_style_2($heading, $icon, $button, $link){ ?>
 
             <?php if(!empty($button['text']) && !empty($button['link'])): ?>
                 <div class="be-icon-box-block--button"> 
-                    <a href="<?php echo $button['link'] ?>"> <?php echo $button['text'] ?> </a>
+                    <a href="<?php echo esc_url($button['link']) ?>"> <?php echo $button['text'] ?> </a>
                 </div>
             <?php endif; ?>
         </div>
@@ -82,13 +82,13 @@ function be_template_icon_box_style_2($heading, $icon, $button, $link){ ?>
 function be_template_icon_box_default($heading, $icon, $button, $link){ ?>
     <div class="be-icon-box-block-warp" data-aos="zoom-in"> 
         <div class="be-icon-box-block--icon"> 
-            <img src="<?php echo $icon ?>" alt="icon">
+            <img src="<?php echo esc_url($icon) ?>" alt="icon">
         </div>
 
         <?php if(!empty($heading)): ?>
             <h3 class="be-icon-box-block--heading"> 
                 <?php if(!empty($link)){ ?>
-                    <a href="<?php echo $link ?>">  <?php echo $heading ?>  </a>
+                    <a href="<?php echo esc_url($link) ?>">  <?php echo $heading ?>  </a>
                 <?php }else{
                     echo $heading;
                 } ?>
@@ -99,7 +99,7 @@ function be_template_icon_box_default($heading, $icon, $button, $link){ ?>
     <div class="be-icon-box-block-hover"> 
         <?php if(!empty($button['text']) && !empty($button['link'])): ?>
             <div class="be-icon-box-block--button"> 
-                <a href="<?php echo $button['link'] ?>"> <?php echo $button['text'] ?> </a>
+                <a href="<?php echo esc_url($button['link']) ?>"> <?php echo $button['text'] ?> </a>
             </div>
         <?php endif; ?>
     </div>

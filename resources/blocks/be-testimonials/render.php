@@ -34,7 +34,7 @@ $is_style = isset($block['className']) ? $block['className'] : "is-style-default
                 <div class="item-testominial"> 
                     <div class="item-testominial-inner"> 
                         <div class="item-testominial-thumbnail"> 
-                            <img src="<?php echo $img_url ?>" alt="image">
+                            <img src="<?php echo esc_url($img_url) ?>" alt="image">
                         </div>
 
                         <div class="item-testominial-content"> 
