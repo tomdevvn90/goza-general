@@ -3,6 +3,23 @@
     "title": "Testimonials Block",
     "fields": [
         {
+            "key": "field_645212cda7c8a",
+            "label": "Testimonials",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_6409f874f2194",
             "label": "List Items",
             "name": "list_items",
@@ -120,8 +137,25 @@
             ]
         },
         {
+            "key": "field_645212e138de3",
+            "label": "Slider Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_640b3e1293e8b",
-            "label": "Slider Setting",
+            "label": "List Options",
             "name": "slider_setting",
             "aria-label": "",
             "type": "group",
@@ -134,8 +168,6 @@
                 "id": ""
             },
             "layout": "block",
-            "acfe_seamless_style": 0,
-            "acfe_group_modal": 0,
             "sub_fields": [
                 {
                     "key": "field_640b3e2793e8c",
@@ -281,10 +313,7 @@
                     "ui_off_text": "Disable",
                     "ui": 1
                 }
-            ],
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large"
+            ]
         }
     ],
     "location": [
@@ -305,12 +334,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "acfe_display_title": "",
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1679064849
+    "modified": 1683100425
 }

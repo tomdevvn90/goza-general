@@ -13,11 +13,11 @@ $carousel_setting = get_field('slider_setting');
 $data_carousel = array(
     'slidesToShow'   =>  $carousel_setting['slidesToShow'] ? intval($carousel_setting['slidesToShow']) : 1,
     'slidesToScroll' =>  $carousel_setting['slidesToScroll'] ? intval($carousel_setting['slidesToScroll']) : 1,
-    'arrows'         =>  $carousel_setting['arrows'] ? $carousel_setting['arrows'] : false,
-    'dots'           =>  $carousel_setting['dots'] ? $carousel_setting['dots'] : false,
-    'autoplay'       =>  $carousel_setting['autoplay'] ? $carousel_setting['autoplay'] : false,
-    'loop'           =>  $carousel_setting['loop'] ? $carousel_setting['loop'] : false,
-    'fade'           =>  $carousel_setting['fade'] ? $carousel_setting['fade'] : false,
+    'arrows'         =>  $carousel_setting['arrows'] ? : false,
+    'dots'           =>  $carousel_setting['dots'] ?: false,
+    'autoplay'       =>  $carousel_setting['autoplay'] ?: false,
+    'loop'           =>  $carousel_setting['loop'] ?: false,
+    'fade'           =>  $carousel_setting['fade'] ?: false,
 );
 
 $is_style = isset($block['className']) ? $block['className'] : "is-style-default";
@@ -27,10 +27,9 @@ $is_style = isset($block['className']) ? $block['className'] : "is-style-default
     <?php if(!empty($testominials)): ?>        
         <div class="be-testominials-block-carousel"> 
             <?php foreach ($testominials as $testominial): ?>
-                <?php 
-   
-                    $img_url = (!empty($testominial['image'])) ? $testominial['image'] : get_template_directory_uri(). '/resources/assets/images/image-default.jpg' ;    
-                ?>
+                
+                <?php $img_url = (!empty($testominial['image'])) ? $testominial['image'] : get_template_directory_uri(). '/resources/assets/images/image-default.jpg' ; ?>
+                
                 <div class="item-testominial"> 
                     <div class="item-testominial-inner"> 
                         <div class="item-testominial-thumbnail"> 
