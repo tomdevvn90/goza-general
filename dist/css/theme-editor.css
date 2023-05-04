@@ -8687,6 +8687,7 @@
 
 .be-ss-hero {
   position: relative;
+  min-height: 250px;
 }
 
 .be-ss-hero--bg img {
@@ -8711,19 +8712,28 @@
 }
 
 .be-ss-hero--icon img {
-  max-width: 100px;
+  max-width: 60px;
   width: 100%;
   height: auto;
 }
 
 .be-ss-hero--heading {
   color: #FFFFFF;
-  font-size: 36px;
+  font-size: 30px;
+  line-height: 1;
   margin-bottom: 10px;
+}
+
+.be-ss-hero--breadcrumb {
+  color: #d44e71;
 }
 
 .be-ss-hero--breadcrumb a {
   color: inherit;
+}
+
+.be-ss-hero--breadcrumb a:hover {
+  text-decoration: underline;
 }
 
 .be-ss-hero--breadcrumb span {

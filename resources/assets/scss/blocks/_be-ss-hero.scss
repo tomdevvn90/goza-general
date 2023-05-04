@@ -1,6 +1,7 @@
 .be-ss-hero{
     position: relative;
     min-height: 250px;
+    background-color: #e5e5e5;
     &--bg{
         img{
             width: 100%;
@@ -27,12 +28,17 @@
     }
     &--heading{
         color: #FFFFFF;
-        font-size: 36px;
+        font-size: 30px;
+        line-height: 1;
         margin-bottom: 10px;
     }
     &--breadcrumb{
+        color: #d44e71;
         a{
             color: inherit;
+            &:hover{
+                text-decoration: underline;
+            }
         }
         span{
             color: inherit;
