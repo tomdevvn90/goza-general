@@ -17,4 +17,5 @@ import './blocks/events-listing'
 import './blocks/gives-slider' 
 import './blocks/video-popup-actions'
 import './blocks/ss-upcoming-event-video'
+import './blocks/ss-text-tsm-video'
 

@@ -192,6 +192,51 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 
 /***/ }),
 
+/***/ "./resources/assets/js/blocks/ss-text-tsm-video.js":
+/*!*********************************************************!*\
+  !*** ./resources/assets/js/blocks/ss-text-tsm-video.js ***!
+  \*********************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(global, jQuery) {/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel/slick/slick.css */ "./node_modules/slick-carousel/slick/slick.css");
+/* harmony import */ var slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! slick-carousel/slick/slick-theme.css */ "./node_modules/slick-carousel/slick/slick-theme.css");
+/* harmony import */ var slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(slick_carousel_slick_slick_theme_css__WEBPACK_IMPORTED_MODULE_2__);
+global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+
+
+(function ($) {
+  "use strict";
+
+  var beTestimonialSlider = function beTestimonialSlider() {
+    var $testimonial = $('.be-ss-text-tsm-video .be-ss-text-tsm-video--testimonial-slider');
+    if ($testimonial.length === 0) return;
+    $testimonial.each(function () {
+      $(this).slick({
+        slidesToShow: 1,
+        infinite: false,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        dots: true
+      });
+    });
+  };
+  $(window).on("scroll", function () {});
+  $(document).ready(function () {
+    beTestimonialSlider();
+  });
+})(jQuery);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
 /***/ "./resources/assets/js/blocks/ss-upcoming-event-video.js":
 /*!***************************************************************!*\
   !*** ./resources/assets/js/blocks/ss-upcoming-event-video.js ***!
@@ -569,6 +614,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_video_popup_actions__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./blocks/video-popup-actions */ "./resources/assets/js/blocks/video-popup-actions.js");
 /* harmony import */ var _blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./blocks/ss-upcoming-event-video */ "./resources/assets/js/blocks/ss-upcoming-event-video.js");
 /* harmony import */ var _blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _blocks_ss_text_tsm_video__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./blocks/ss-text-tsm-video */ "./resources/assets/js/blocks/ss-text-tsm-video.js");
 
 
 
@@ -578,6 +624,7 @@ aos__WEBPACK_IMPORTED_MODULE_2___default.a.init({
   once: true,
   disable: 'mobile'
 });
+
 
 
 
