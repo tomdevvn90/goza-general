@@ -8717,6 +8717,7 @@
 }
 
 .be-ss-hero .be-ss-hero-inner__icon {
+  line-height: 0;
   margin-bottom: 10px;
 }
 

@@ -13,7 +13,6 @@ $heading = get_field('heading_ss_hero');
 $heading_color = get_field('heading_color_ss_hero');
 $heading_font_size = get_field('heading_font_size_ss_hero');
 $breadcrumb_color = get_field('breadcrumb_color_ss_hero');
-$breadcrumb_font_size = get_field('breadcrumb_font_size_ss_hero');
 
 $min_height_style = !empty( $min_height )? 'min-height: '.$min_height.'px;' : '';
 $bg_image_style = !empty( $bg['url'] )? 'background-image: url('.$bg['url'].');' : '';
@@ -24,7 +23,6 @@ $content_alignmnet_style = 'text-align:'.$content_alignmnet.';' ;
 $heading_color_style = !empty( $heading_color )? 'color:'.$heading_color.';' : '';
 $heading_font_size_style = !empty( $heading_font_size )? 'font-size:'.$heading_font_size.'px;' : '';
 $breadcrumb_color_style = !empty( $breadcrumb_color )? 'color:'.$breadcrumb_color.';' : '';
-$breadcrumb_font_size_style = !empty( $breadcrumb_font_size )? 'font-size:'.$breadcrumb_font_size.'px;' : '';
 
 ?>
 <section id="<?php echo $id ?>" class="be-ss-hero" style="<?php echo $min_height_style; ?><?php echo $bg_image_style; ?> <?php echo $bg_color_style; ?>">
@@ -43,7 +41,7 @@ $breadcrumb_font_size_style = !empty( $breadcrumb_font_size )? 'font-size:'.$bre
             <?php endif; ?>   
          
             <?php if ( function_exists( 'yoast_breadcrumb' ) ): ?>
-                <div class="be-ss-hero-inner__breadcrumb" style="<?php echo $breadcrumb_font_size_style; ?><?php echo $breadcrumb_color_style; ?>">
+                <div class="be-ss-hero-inner__breadcrumb" style="<?php echo $breadcrumb_color_style; ?>">
                     <?php yoast_breadcrumb(); ?>  
                 </div> 
             <?php endif; ?>   
