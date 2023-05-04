@@ -1,0 +1,67 @@
+.fkg-logo-carousel-block {
+    .fkg-logo {
+        &__item {
+            padding-left: 10px;
+            padding-right: 10px;
+
+            &-image {
+                background: #FFFFFF;
+                border: 1px solid #CBCCCE;
+                border-radius: 10px;
+                padding: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 141px;
+
+                img {
+                    max-height: 65px;
+                }
+            }
+        }
+    }
+    .slick-list{
+        padding: 0 70px !important;
+        @media (max-width: 1200px){
+            padding: 0 50px !important;
+        }
+        @media (max-width: 767px){
+            padding: 0 40px !important;
+        }
+        @media (max-width: 480px){
+            padding: 0 30px !important;
+        }
+    }
+    .slick-dots {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        margin-top: 32px;
+        li{
+            margin: 0 8px;
+            &.slick-active{
+                button {
+                    background-color: $primary-color;
+                }
+            }
+        }
+        button {
+            cursor: pointer;
+            -webkit-transition: 0.25s;
+            -o-transition: 0.25s;
+            transition: 0.25s;
+            vertical-align: middle;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(171, 171, 171, 0.5);
+            border: none;overflow: hidden;
+            text-indent: -1000px;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

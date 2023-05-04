@@ -4,6 +4,77 @@
  * Can include things like variables and mixins
  * that are used across the project.
 */
+.has-general-color {
+  color: #d41b65; }
+
+.has-general-background-color {
+  background-color: #d41b65; }
+
+.has-ngo-color {
+  color: #ed9913; }
+
+.has-ngo-background-color {
+  background-color: #ed9913; }
+
+.has-white-color {
+  color: #FFF; }
+
+.has-white-background-color {
+  background-color: #FFF; }
+
+.has-black-color {
+  color: #000; }
+
+.has-black-background-color {
+  background-color: #000; }
+
+.has-dream-color {
+  color: #2c9cf2; }
+
+.has-dream-background-color {
+  background-color: #2c9cf2; }
+
+.has-water-color {
+  color: #833dcc; }
+
+.has-water-background-color {
+  background-color: #833dcc; }
+
+.has-charity-color {
+  color: #4ca5ab; }
+
+.has-charity-background-color {
+  background-color: #4ca5ab; }
+
+.has-organization-color {
+  color: #ec5e87; }
+
+.has-organization-background-color {
+  background-color: #ec5e87; }
+
+.has-charity-green-color {
+  color: #71b61b; }
+
+.has-charity-green-background-color {
+  background-color: #71b61b; }
+
+.has-ngo-dark-color {
+  color: #d94532; }
+
+.has-ngo-dark-background-color {
+  background-color: #d94532; }
+
+.has-water-charity-color {
+  color: #18b7d0; }
+
+.has-water-charity-background-color {
+  background-color: #18b7d0; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
 /**
  * Container styles
  * Loads on front end and back end
