@@ -33,6 +33,7 @@ $video       = get_field('vd_ss_text_tsm_vd') ?: '';
                <?php if(!empty($testimonial)): ?>
                   <?php load_testimonial() ?>
                <?php endif; ?>   
+               
             </div>
 
             <div class="be-ss-text-tsm-video--inner-right"> 
