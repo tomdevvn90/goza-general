@@ -8689,23 +8689,32 @@
   position: relative;
   min-height: 250px;
   background-color: #e5e5e5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.be-ss-hero--bg img {
+.be-ss-hero--bg-overlay {
+  position: absolute;
   width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  opacity: 0;
+}
+
+.be-ss-hero--content {
+  position: relative;
 }
 
 .be-ss-hero .be-ss-hero-inner {
   text-align: center;
   padding: 15px;
   width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .be-ss-hero .be-ss-hero-inner__icon {

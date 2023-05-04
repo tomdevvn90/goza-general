@@ -2,21 +2,28 @@
     position: relative;
     min-height: 250px;
     background-color: #e5e5e5;
-    &--bg{
-        img{
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--bg-overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        opacity: 0;
+    }
+    &--content{
+        position: relative;
     }
     .be-ss-hero-inner{
         text-align: center;
         padding: 15px;
         width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         &__icon{
             margin-bottom: 10px;
             img{
