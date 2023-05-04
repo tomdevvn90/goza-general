@@ -8685,6 +8685,36 @@
   margin-top: 30px;
 }
 
+.be-ss-hero {
+  position: relative;
+}
+
+.be-ss-hero--bg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.be-ss-hero--icon {
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.be-ss-hero--icon img {
+  width: 100%;
+  height: auto;
+}
+
+.be-ss-hero--heading {
+  color: #FFFFFF;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
 .block-editor-block-list__block .be-testominials-block-carousel {
   display: flex;
   overflow: auto;

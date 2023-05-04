@@ -1,0 +1,29 @@
+.be-ss-hero{
+    position: relative;
+    &--bg{
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+    &--icon{
+        max-width: 200px;
+        margin-bottom: 10px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &--heading{
+        color: #FFFFFF;
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+    &--breadcrumb{
+        
+    }
+}
