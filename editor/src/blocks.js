@@ -9,5 +9,7 @@
  * Webpack is compiling as the input file.
  */
 
+import './blocks/global'
 import './blocks/goza-container';
 import './blocks/goza-spacer';
+import './blocks/goza-logo-carousel'

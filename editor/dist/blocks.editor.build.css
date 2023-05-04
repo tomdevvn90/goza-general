@@ -5,6 +5,12 @@
  * that are used across the project.
 */
 /**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
  * Editor styles for the admin
  */
 /**
@@ -20,3 +26,20 @@
 */
 .goza-blocks.goza-block-spacer {
   background: wheat; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.goza-logo-carousel-block .block-editor {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 20px; }
+  .goza-logo-carousel-block .block-editor .goza-logo__item {
+    padding: 0;
+    width: calc(100% / 5); }
+    .goza-logo-carousel-block .block-editor .goza-logo__item:nth-of-type(1n+6) {
+      display: none; }

@@ -1,0 +1,24 @@
+$colors: (
+	'general': #d41b65,
+	'ngo': #ed9913,
+	'white': #FFF,
+	'black': #000,
+	'dream': #2c9cf2,
+    'water': #833dcc,
+    'charity': #4ca5ab,
+    'organization': #ec5e87,
+    'charity-green': #71b61b,
+    'ngo-dark': #d94532,
+    'water-charity': #18b7d0,
+);
+
+@each $name,
+$color in $colors {
+	.has-#{$name}-color {
+		color: $color;
+	}
+
+	.has-#{$name}-background-color {
+		background-color: $color;
+	}
+}
