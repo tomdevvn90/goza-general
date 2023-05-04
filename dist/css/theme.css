@@ -23304,9 +23304,9 @@ h6 {
 }
 
 .be-ss-hero .be-ss-hero-inner__breadcrumb::before {
-  content: "f015";
-  font-family: "Aweasome";
-  margin-right: 5px;
+  content: "\F015";
+  font-family: "FontAwesome";
+  display: inline-block;
 }
 
 .be-ss-hero .be-ss-hero-inner__breadcrumb a {

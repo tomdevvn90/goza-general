@@ -43,9 +43,9 @@
             color: #d44e71;
             line-height: 1;
             &::before{
-                content: "f015";
-                font-family: "Aweasome";
-                margin-right: 5px;
+                content: "\f015";
+                font-family: "FontAwesome";
+                display: inline-block;
             }
             a{
                 color: inherit;
