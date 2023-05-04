@@ -34,9 +34,10 @@
             }
         }
         &__heading{
-            color: #FFFFFF;
+            color: #333;
             font-size: 30px;
             line-height: 1;
+            text-transform: capitalize;
             margin-bottom: 10px;
         }
         &__breadcrumb{
