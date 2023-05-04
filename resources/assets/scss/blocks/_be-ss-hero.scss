@@ -1,5 +1,6 @@
 .be-ss-hero{
     padding: 30px 0;
+    min-height: 300px;
     position: relative;
     background-color: #e5e5e5;
     background-position: center;
@@ -41,6 +42,11 @@
         &__breadcrumb{
             color: #d44e71;
             line-height: 1;
+            &::before{
+                content: "f015";
+                font-family: "Aweasome";
+                margin-right: 5px;
+            }
             a{
                 color: inherit;
                 &:hover{

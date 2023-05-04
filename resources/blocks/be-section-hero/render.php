@@ -1,6 +1,8 @@
 <?php
 // create id attribute for specific styling
 $id = 'be-ss-hero-'.$block['id'];
+// create align class ("alignwide") from block setting ("wide")
+$align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 $min_height = get_field('min_height_ss_hero');
 $bg = get_field('bg_ss_hero');
@@ -25,7 +27,7 @@ $heading_font_size_style = !empty( $heading_font_size )? 'font-size:'.$heading_f
 $breadcrumb_color_style = !empty( $breadcrumb_color )? 'color:'.$breadcrumb_color.';' : '';
 
 ?>
-<section id="<?php echo $id ?>" class="be-ss-hero" style="<?php echo $min_height_style; ?><?php echo $bg_image_style; ?> <?php echo $bg_color_style; ?>">
+<section id="<?php echo $id ?>" class="be-ss-hero <?php echo $align_class; ?>" style="<?php echo $min_height_style; ?><?php echo $bg_image_style; ?> <?php echo $bg_color_style; ?>">
     <div class="be-ss-hero--bg-overlay" style="<?php echo $bg_overlay_color_style; ?><?php echo $bg_overlay_opacity_style; ?>"></div>
     <div class="be-ss-hero--content container">
         <div class="be-ss-hero-inner" style="<?php echo $content_alignmnet_style; ?>">
