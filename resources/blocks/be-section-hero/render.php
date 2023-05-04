@@ -26,17 +26,17 @@ $breadcrumb_color_style = !empty( $breadcrumb_color )? 'color:'.$breadcrumb_colo
         <div class="be-ss-hero--inner <?php echo $align_class; ?>">
 
             <?php if ( !empty( $icon ) ): ?>
-                <div class="be-ss-hero--icon">
+                <div class="be-ss-hero--inner__icon">
                     <img src="<?php echo esc_url( $icon['url'] ); ?>" alt="<?php echo esc_attr( $icon['alt'] ); ?>">   
                 </div>
             <?php endif; ?>   
             
             <?php if ( !empty( $heading ) ): ?>
-                <h2 class="be-ss-hero--heading" style="<?php echo $heading_color_style; ?>"><?php echo $heading; ?></h2>
+                <h2 class="be-ss-hero--inner__heading" style="<?php echo $heading_color_style; ?>"><?php echo $heading; ?></h2>
             <?php endif; ?>   
          
             <?php if ( function_exists( 'yoast_breadcrumb' ) ): ?>
-                <div class="be-ss-hero--breadcrumb" style="<?php echo $breadcrumb_color_style; ?>">
+                <div class="be-ss-hero--inner__breadcrumb" style="<?php echo $breadcrumb_color_style; ?>">
                     <?php yoast_breadcrumb(); ?>  
                 </div> 
             <?php endif; ?>   
