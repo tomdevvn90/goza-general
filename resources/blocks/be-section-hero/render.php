@@ -13,7 +13,7 @@ $heading = get_field('heading_ss_hero');
 $heading_color = get_field('heading_color_ss_hero');
 $breadcrumb_color = get_field('breadcrumb_color_ss_hero');
 
-$bg_image_style = !empty( $min_height )? 'min-height: '.$min_height.';' : '';
+$min_height_style = !empty( $min_height )? 'min-height: '.$min_height.';' : '';
 $bg_image_style = !empty( $bg['url'] )? 'background-image: url('.$bg['url'].');' : '';
 $bg_color_style = !empty( $bg_color )? 'background-color:'.$bg_color.';' : '';
 $bg_overlay_color_style = !empty( $bg_overlay_color )? 'background-color:'.$bg_overlay_color.';' : '';
@@ -23,7 +23,7 @@ $heading_color_style = !empty( $heading_color )? 'color:'.$heading_color.';' : '
 $breadcrumb_color_style = !empty( $breadcrumb_color )? 'color:'.$breadcrumb_color.';' : '';
 
 ?>
-<section id="<?php echo $id ?>" class="be-ss-hero" style="<?php echo $bg_image_style; ?> <?php echo $bg_color_style; ?>">
+<section id="<?php echo $id ?>" class="be-ss-hero" style="<?php echo $min_height_style; ?><?php echo $bg_image_style; ?> <?php echo $bg_color_style; ?>">
     <div class="be-ss-hero--bg-overlay" style="<?php echo $bg_overlay_color_style; ?><?php echo $bg_overlay_opacity_style; ?>"></div>
     <div class="be-ss-hero--content container">
         <div class="be-ss-hero-inner" style="<?php echo $content_alignmnet_style; ?>">
