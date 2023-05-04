@@ -158,3 +158,69 @@
   @media (max-width: 767px) {
     .goza-blocks.goza-block-spacer {
       height: var(--size-mobile); } }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.goza-logo-carousel-block .goza-logo__item {
+  padding-left: 10px;
+  padding-right: 10px; }
+  .goza-logo-carousel-block .goza-logo__item-image {
+    background: #FFFFFF;
+    border: 1px solid #CBCCCE;
+    border-radius: 10px;
+    padding: 32px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    min-height: 141px; }
+    .goza-logo-carousel-block .goza-logo__item-image img {
+      max-height: 65px; }
+
+.goza-logo-carousel-block .slick-list {
+  padding: 0 70px !important; }
+  @media (max-width: 1200px) {
+    .goza-logo-carousel-block .slick-list {
+      padding: 0 50px !important; } }
+  @media (max-width: 767px) {
+    .goza-logo-carousel-block .slick-list {
+      padding: 0 40px !important; } }
+  @media (max-width: 480px) {
+    .goza-logo-carousel-block .slick-list {
+      padding: 0 30px !important; } }
+
+.goza-logo-carousel-block .slick-dots {
+  margin: 0;
+  padding: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  list-style-type: none;
+  margin-top: 32px; }
+  .goza-logo-carousel-block .slick-dots li {
+    margin: 0 8px; }
+    .goza-logo-carousel-block .slick-dots li.slick-active button {
+      background-color: var(--link-color, #d41b65); }
+  .goza-logo-carousel-block .slick-dots button {
+    cursor: pointer;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(171, 171, 171, 0.5);
+    border: none;
+    overflow: hidden;
+    text-indent: -1000px;
+    margin: 0;
+    padding: 0; }

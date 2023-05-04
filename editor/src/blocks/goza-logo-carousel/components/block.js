@@ -2,7 +2,7 @@
  * Logo Carousel Wrap
  */
 
-const FKGLogoCarousel = (props) => {
+const GozaLogoCarousel = (props) => {
 	// Setup the attributes
 	const { attributes, setAttributes, className } = props;
 	const { dots, infinite, speed, centerMode, autoplay, autoplaySpeed, slidesToShow, slidesToScroll } = attributes
@@ -17,10 +17,10 @@ const FKGLogoCarousel = (props) => {
 		autoplaySpeed: autoplaySpeed
 	}
 	return (
-		<div className={['fkg-logo-carousel-block', className].join(' ')} data-slider={JSON.stringify(dataSlider)}>
+		<div className={['goza-logo-carousel-block', className].join(' ')} data-slider={JSON.stringify(dataSlider)}>
 			{props.children}
 		</div>
 	)
 }
 
-export default FKGLogoCarousel;
+export default GozaLogoCarousel;

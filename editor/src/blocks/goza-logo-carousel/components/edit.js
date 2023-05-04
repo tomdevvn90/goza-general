@@ -1,5 +1,5 @@
-import FKGLogoCarousel from './block';
-import FKGBlockControl from './blockcontrol';
+import GozaLogoCarousel from './block';
+import GozaBlockControl from './blockcontrol';
 import { Fragment } from '@wordpress/element';
 import Inspector from './inspector';
 import { MediaPlaceholder } from '@wordpress/block-editor';
@@ -10,15 +10,15 @@ const Edit = (props) => {
 
     return (
         <Fragment>
-            <FKGBlockControl {...props} />
+            <GozaBlockControl {...props} />
             <Inspector {...props} />
-            <FKGLogoCarousel {...props}>
+            <GozaLogoCarousel {...props}>
                 <div className='block-inner block-editor'>
                     {images ? (
                         images.map((logo) => {
                             return (
-                                <div className='fkg-logo__item' key={logo.id}>
-                                    <div className='fkg-logo__item-image' >
+                                <div className='goza-logo__item' key={logo.id}>
+                                    <div className='goza-logo__item-image' >
                                         <img src={logo.url} alt={logo.alt} id={logo.id} />
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@ const Edit = (props) => {
                     )}
                 </div>
                 <ul class="slick-dots"><li><button type="button" id="slick-slide-control00"></button></li><li><button type="button" id="slick-slide-control01"></button></li></ul>
-            </FKGLogoCarousel>
+            </GozaLogoCarousel>
         </Fragment>
     )
 }

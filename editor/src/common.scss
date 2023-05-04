@@ -5,6 +5,7 @@
  * that are used across the project.
 */
 
+$primary-color : var(--link-color, #d41b65);
 @import "~bootstrap-scss/functions";
 @import "~bootstrap-scss/variables";
 @import "~bootstrap-scss/mixins";

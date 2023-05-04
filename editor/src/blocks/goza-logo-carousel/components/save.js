@@ -1,22 +1,22 @@
-import FKGLogoCarousel from './block'
+import GozaLogoCarousel from './block'
 const Save = (props) => {
 	const { attributes, setAttributes } = props
 	const { images } = attributes
 	return (
-		<FKGLogoCarousel {...props}>
-			<div className='block-inner fkg-logo'>
+		<GozaLogoCarousel {...props}>
+			<div className='block-inner goza-logo'>
 				{images &&
 					images.map((logo) => {
 						return (
-							<div className='fkg-logo__item' key={logo.id}>
-								<div className='fkg-logo__item-image' >
+							<div className='goza-logo__item' key={logo.id}>
+								<div className='goza-logo__item-image' >
 									<img src={logo.url} alt={logo.alt} id={logo.id} />
 								</div>
 							</div>
 						);
 					})}
 			</div>
-		</FKGLogoCarousel>
+		</GozaLogoCarousel>
 	)
 }
 

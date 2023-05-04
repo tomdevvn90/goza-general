@@ -1,9 +1,9 @@
-.fkg-logo-carousel-block {
+.goza-logo-carousel-block {
     .block-editor{
         display: flex;
         align-items: center;
         gap: 20px;
-        .fkg-logo__item{
+        .goza-logo__item{
             padding: 0;
             width: calc(100% / 5);
             &:nth-of-type(1n+6) {

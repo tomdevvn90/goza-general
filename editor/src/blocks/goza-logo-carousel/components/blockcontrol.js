@@ -2,7 +2,7 @@ import { MediaUpload, MediaUploadCheck, BlockControls, } from '@wordpress/block-
 import { ToolbarGroup, ToolbarButton, } from '@wordpress/components';
 import { Fragment } from '@wordpress/element';
 
-const FKGBlockControl = (props) => {
+const GozaBlockControl = (props) => {
     const { attributes, setAttributes } = props
     const { images } = attributes
 
@@ -40,4 +40,4 @@ const FKGBlockControl = (props) => {
     )
 }
 
-export default FKGBlockControl
+export default GozaBlockControl

@@ -53,11 +53,11 @@ const attr = {
 	},
 };
 
-export default registerBlockType("fkg-blocks/fkg-logo-carousel", {
-	title: __("FKG Logo Carousel"),
+export default registerBlockType("goza-blocks/goza-logo-carousel", {
+	title: __("Goza Logo Carousel"),
 	icon: "slides",
-	category: "fkg-blocks",
-	keywords: [__("logo"), __("carousel"), __("fkg"), __("slider")],
+	category: "goza-blocks",
+	keywords: [__("logo"), __("carousel"), __("goza"), __("slider")],
 	attributes: attr,
 	supports: {
 		// Declare support for specific alignment options.
