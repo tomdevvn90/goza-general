@@ -8686,8 +8686,8 @@
 }
 
 .be-ss-hero {
+  padding: 30px 0;
   position: relative;
-  min-height: 250px;
   background-color: #e5e5e5;
   background-position: center;
   background-repeat: no-repeat;
@@ -8713,7 +8713,6 @@
 
 .be-ss-hero .be-ss-hero-inner {
   text-align: center;
-  padding: 15px;
   width: 100%;
 }
 
@@ -8722,7 +8721,7 @@
 }
 
 .be-ss-hero .be-ss-hero-inner__icon img {
-  max-width: 60px;
+  max-width: 50px;
   width: 100%;
   height: auto;
 }
