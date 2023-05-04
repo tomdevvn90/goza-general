@@ -8757,6 +8757,80 @@
   margin-top: 30px;
 }
 
+.be-ss-hero {
+  padding: 30px 0;
+  min-height: 300px;
+  position: relative;
+  background-color: #e5e5e5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.be-ss-hero--bg-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  opacity: 0;
+}
+
+.be-ss-hero--content {
+  position: relative;
+}
+
+.be-ss-hero .be-ss-hero-inner {
+  text-align: center;
+  width: 100%;
+}
+
+.be-ss-hero .be-ss-hero-inner__icon {
+  line-height: 0;
+  margin-bottom: 10px;
+}
+
+.be-ss-hero .be-ss-hero-inner__icon img {
+  max-width: 50px;
+  width: 100%;
+  height: auto;
+}
+
+.be-ss-hero .be-ss-hero-inner__heading {
+  color: #333;
+  font-size: 30px;
+  line-height: 1;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.be-ss-hero .be-ss-hero-inner__breadcrumb {
+  color: #d44e71;
+  line-height: 1;
+}
+
+.be-ss-hero .be-ss-hero-inner__breadcrumb::before {
+  content: "\F015";
+  font-family: "FontAwesome";
+  display: inline-block;
+}
+
+.be-ss-hero .be-ss-hero-inner__breadcrumb a {
+  color: inherit;
+}
+
+.be-ss-hero .be-ss-hero-inner__breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.be-ss-hero .be-ss-hero-inner__breadcrumb span {
+  color: inherit;
+}
+
 .block-editor-block-list__block .be-testominials-block-carousel {
   display: flex;
   overflow: auto;
