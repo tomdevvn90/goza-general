@@ -137,7 +137,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": 48,
+                    "default_value": "48<span>%<\/span>",
                     "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
@@ -337,5 +337,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683125882
+    "modified": 1683161125
 }

@@ -7,8 +7,6 @@ $id = 'be-ss-ab-counter-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-// $heading  = get_field('heading_ss_up_ev_vd') ?: '';
-
 $bg        = get_field('bg_ss_ab_counter') ?: get_template_directory_uri(). '/resources/assets/images/bg-ss-ab-counter.jpg';
 $heading   = get_field('heading_ss_ab_counter') ?: '';
 $desc      = get_field('desc_ss_ab_counter') ?: '';
