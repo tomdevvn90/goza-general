@@ -11,16 +11,20 @@ $content_alignmnet = get_field('content_alignmnet_ss_hero');
 $icon = get_field('icon_ss_hero');
 $heading = get_field('heading_ss_hero');
 $heading_color = get_field('heading_color_ss_hero');
+$heading_font_size = get_field('heading_font_size_ss_hero');
 $breadcrumb_color = get_field('breadcrumb_color_ss_hero');
+$breadcrumb_font_size = get_field('breadcrumb_font_size_ss_hero');
 
-$min_height_style = !empty( $min_height )? 'min-height: '.$min_height.';' : '';
+$min_height_style = !empty( $min_height )? 'min-height: '.$min_height.'px;' : '';
 $bg_image_style = !empty( $bg['url'] )? 'background-image: url('.$bg['url'].');' : '';
 $bg_color_style = !empty( $bg_color )? 'background-color:'.$bg_color.';' : '';
 $bg_overlay_color_style = !empty( $bg_overlay_color )? 'background-color:'.$bg_overlay_color.';' : '';
 $bg_overlay_opacity_style = !empty( $bg_overlay_opacity )? 'opacity:'.$bg_overlay_opacity.';' : '';
 $content_alignmnet_style = 'text-align:'.$content_alignmnet.';' ;
 $heading_color_style = !empty( $heading_color )? 'color:'.$heading_color.';' : '';
+$heading_font_size_style = !empty( $heading_font_size )? 'font-size:'.$heading_font_size.'px;' : '';
 $breadcrumb_color_style = !empty( $breadcrumb_color )? 'color:'.$breadcrumb_color.';' : '';
+$breadcrumb_font_size_style = !empty( $breadcrumb_font_size )? 'font-size:'.$breadcrumb_font_size.'px;' : '';
 
 ?>
 <section id="<?php echo $id ?>" class="be-ss-hero" style="<?php echo $min_height_style; ?><?php echo $bg_image_style; ?> <?php echo $bg_color_style; ?>">
@@ -35,11 +39,11 @@ $breadcrumb_color_style = !empty( $breadcrumb_color )? 'color:'.$breadcrumb_colo
             <?php endif; ?>   
             
             <?php if ( !empty( $heading ) ): ?>
-                <h2 class="be-ss-hero-inner__heading" style="<?php echo $heading_color_style; ?>"><?php echo $heading; ?></h2>
+                <h2 class="be-ss-hero-inner__heading" style="<?php echo $heading_font_size_style; ?><?php echo $heading_color_style; ?>"><?php echo $heading; ?></h2>
             <?php endif; ?>   
          
             <?php if ( function_exists( 'yoast_breadcrumb' ) ): ?>
-                <div class="be-ss-hero-inner__breadcrumb" style="<?php echo $breadcrumb_color_style; ?>">
+                <div class="be-ss-hero-inner__breadcrumb" style="<?php echo $breadcrumb_font_size_style; ?><?php echo $breadcrumb_color_style; ?>">
                     <?php yoast_breadcrumb(); ?>  
                 </div> 
             <?php endif; ?>   
