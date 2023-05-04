@@ -23251,6 +23251,7 @@ h6 {
 .be-ss-hero {
   position: relative;
   min-height: 250px;
+  background-color: #e5e5e5;
 }
 
 .be-ss-hero--bg img {
