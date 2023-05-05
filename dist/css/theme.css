@@ -23333,6 +23333,86 @@ h6 {
   border: 0;
 }
 
+.be-infomation-section .be-infomation-box .be-infomation-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  padding: 20px 0;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.be-infomation-section .be-infomation-box .be-infomation-list.shadow {
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+.be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item {
+  padding: 40px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item:nth-child(3n-1) {
+  border-width: 0 1px;
+  border-color: #c9c9c9;
+  border-style: solid;
+}
+
+.be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item--icon-wrap {
+  width: 50px;
+}
+
+.be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item--icon-wrap img {
+  width: 100%;
+  height: auto;
+}
+
+.be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item--content-wrap {
+  width: 100%;
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+.be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item--heading {
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item--text {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (max-width: 991px) {
+  .be-infomation-section .be-infomation-box .be-infomation-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item:nth-child(3n-1) {
+    border-width: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .be-infomation-section .be-infomation-box .be-infomation-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 360px) {
+  .be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item {
+    padding: 10px 20px;
+  }
+}
+
 .tribe-common h1,
 .tribe-common h2,
 .tribe-common h3,
