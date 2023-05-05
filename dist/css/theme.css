@@ -23361,12 +23361,8 @@ h6 {
   border-style: solid;
 }
 
-.be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item--icon-wrap {
-  width: 50px;
-}
-
 .be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item--icon-wrap img {
-  width: 100%;
+  min-width: 50px;
   height: auto;
 }
 
@@ -23385,6 +23381,14 @@ h6 {
 .be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item--text {
   font-size: 16px;
   line-height: 22px;
+}
+
+.be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item--text a {
+  color: inherit;
+}
+
+.be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item--text a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 991px) {

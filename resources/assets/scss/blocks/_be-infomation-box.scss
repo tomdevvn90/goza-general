@@ -24,9 +24,8 @@
                     border-style: solid;
                 }
                 &--icon-wrap{
-                    width: 50px;
                     img{
-                        width: 100%;
+                        min-width: 50px;
                         height: auto;
                     }
                 }
@@ -43,6 +42,12 @@
                 &--text{
                     font-size: 16px;
                     line-height: 22px;
+                    a{
+                        color: inherit;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
                 }
             }
             @media(max-width: 991px){
