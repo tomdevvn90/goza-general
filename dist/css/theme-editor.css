@@ -9062,6 +9062,15 @@
   font-style: italic !important;
 }
 
+.be-google-map .be-google-map-box {
+  line-height: 0;
+}
+
+.be-google-map .be-google-map-box iframe {
+  width: 100%;
+  border: 0;
+}
+
 .block-editor-block-list__block .be-testominials-block-carousel {
   display: flex;
   overflow: auto;
