@@ -125,6 +125,67 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 
 /***/ }),
 
+/***/ "./resources/assets/js/blocks/logo-carousel.js":
+/*!*****************************************************!*\
+  !*** ./resources/assets/js/blocks/logo-carousel.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(jQuery) {jQuery(function ($) {
+  "use strict";
+
+  var GozaLogoCarousel = function GozaLogoCarousel() {
+    var GozaLogoCarouselBlock = $('.goza-logo-carousel-block');
+    if (!GozaLogoCarouselBlock.length) return;
+    GozaLogoCarouselBlock.each(function () {
+      var $self = $(this);
+      var $carouselWrap = $self.find(".block-inner");
+      var opt = $self.data("slider");
+      // console.log(opt)
+
+      var opt_df = {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: false,
+        autoplay: true,
+        arrows: false,
+        infinite: true,
+        prevArrow: "<button type='button' class='slick-arrows s-prev pull-left'></button>",
+        nextArrow: "<button type='button' class='slick-arrows s-next pull-right'></button>",
+        responsive: [{
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3
+          }
+        }, {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2
+          }
+        }, {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1
+          }
+        }]
+      };
+      $carouselWrap.slick(Object.assign({}, opt_df, opt));
+    });
+  };
+  $(document).ready(function () {
+    GozaLogoCarousel();
+  });
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
 /***/ "./resources/assets/js/blocks/posts-slider.js":
 /*!****************************************************!*\
   !*** ./resources/assets/js/blocks/posts-slider.js ***!
@@ -598,32 +659,38 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/navigation */ "./resources/assets/js/components/navigation.js");
-/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_navigation__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_function__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/function */ "./resources/assets/js/components/function.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
-/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _blocks_hero__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/hero */ "./resources/assets/js/blocks/hero.js");
-/* harmony import */ var _blocks_hero__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_blocks_hero__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _blocks_testimonials__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/testimonials */ "./resources/assets/js/blocks/testimonials.js");
-/* harmony import */ var _blocks_posts_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/posts-slider */ "./resources/assets/js/blocks/posts-slider.js");
-/* harmony import */ var _blocks_events_listing__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/events-listing */ "./resources/assets/js/blocks/events-listing.js");
-/* harmony import */ var _blocks_gives_slider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blocks/gives-slider */ "./resources/assets/js/blocks/gives-slider.js");
-/* harmony import */ var _blocks_video_popup_actions__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./blocks/video-popup-actions */ "./resources/assets/js/blocks/video-popup-actions.js");
-/* harmony import */ var _blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./blocks/ss-upcoming-event-video */ "./resources/assets/js/blocks/ss-upcoming-event-video.js");
-/* harmony import */ var _blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _blocks_ss_text_tsm_video__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./blocks/ss-text-tsm-video */ "./resources/assets/js/blocks/ss-text-tsm-video.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/navigation */ "./resources/assets/js/components/navigation.js");
+/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_navigation__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_function__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/function */ "./resources/assets/js/components/function.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _blocks_hero__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/hero */ "./resources/assets/js/blocks/hero.js");
+/* harmony import */ var _blocks_hero__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_blocks_hero__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _blocks_testimonials__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/testimonials */ "./resources/assets/js/blocks/testimonials.js");
+/* harmony import */ var _blocks_posts_slider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/posts-slider */ "./resources/assets/js/blocks/posts-slider.js");
+/* harmony import */ var _blocks_events_listing__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blocks/events-listing */ "./resources/assets/js/blocks/events-listing.js");
+/* harmony import */ var _blocks_gives_slider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./blocks/gives-slider */ "./resources/assets/js/blocks/gives-slider.js");
+/* harmony import */ var _blocks_video_popup_actions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./blocks/video-popup-actions */ "./resources/assets/js/blocks/video-popup-actions.js");
+/* harmony import */ var _blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./blocks/ss-upcoming-event-video */ "./resources/assets/js/blocks/ss-upcoming-event-video.js");
+/* harmony import */ var _blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _blocks_ss_text_tsm_video__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./blocks/ss-text-tsm-video */ "./resources/assets/js/blocks/ss-text-tsm-video.js");
+/* harmony import */ var _blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./blocks/logo-carousel */ "./resources/assets/js/blocks/logo-carousel.js");
+/* harmony import */ var _blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13__);
 
 
 
 
-aos__WEBPACK_IMPORTED_MODULE_2___default.a.init({
+
+aos__WEBPACK_IMPORTED_MODULE_3___default.a.init({
   duration: 1200,
   once: true,
   disable: 'mobile'
 });
+
 
 
 
@@ -664,9 +731,9 @@ aos__WEBPACK_IMPORTED_MODULE_2___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-module.exports = __webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+module.exports = __webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
 
 
 /***/ })

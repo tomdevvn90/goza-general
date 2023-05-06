@@ -90,9 +90,9 @@ const blockAttributes = {
 		type: 'number',
 	},
 	align: {
-        type: 'string',
-        default: 'full'
-    }
+		type: 'string',
+		default: 'full'
+	}
 };
 
 class EditContainerBlock extends Component {
@@ -104,10 +104,10 @@ class EditContainerBlock extends Component {
 
 		return [
 			// Show the block controls on focus
-			<Inspector key={ 'goza-container-inspector-' + this.props.clientId } { ...{ setAttributes, ...this.props } } />,
+			<Inspector key={'goza-container-inspector-' + this.props.clientId} {...{ setAttributes, ...this.props }} />,
 
 			// Show the container markup in the editor
-			<Container key={ 'goza-container-' + this.props.clientId } { ...this.props }>
+			<Container key={'goza-container-' + this.props.clientId} {...this.props}>
 				<InnerBlocks />
 			</Container>,
 		];
@@ -115,22 +115,19 @@ class EditContainerBlock extends Component {
 }
 
 // Register the block
-registerBlockType( 'goza-blocks/goza-container', {
-	title: __( 'Container', 'goza' ),
-	description: __(
-		'Add a container block to wrap several blocks in a parent container.',
-		'goza'
-	),
+registerBlockType('goza-blocks/goza-container', {
+	title: __('Container', 'goza'),
+	description: __('Add a container block to wrap several blocks in a parent container.', 'goza'),
 	icon: 'editor-table',
 	category: 'goza-theme',
 	keywords: [
-		__( 'container', 'goza' ),
-		__( 'section', 'goza' ),
-		__( 'bph', 'goza' ),
+		__('container', 'goza'),
+		__('section', 'goza'),
+		__('bph', 'goza'),
 	],
 
 	supports: {
-		align: ['full' ]
+		align: ['full']
 	},
 
 	attributes: blockAttributes,
@@ -139,12 +136,12 @@ registerBlockType( 'goza-blocks/goza-container', {
 	edit: EditContainerBlock,
 
 	// Save the attributes and markup
-	save( props ) {
+	save(props) {
 		// Save the block markup for the front end
 		return (
-			<Container { ...props }>
+			<Container {...props}>
 				<InnerBlocks.Content />
 			</Container>
 		);
 	}
-} );
+});

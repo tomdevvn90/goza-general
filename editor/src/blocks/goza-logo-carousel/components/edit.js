@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n'
 import GozaLogoCarousel from './block';
 import GozaBlockControl from './blockcontrol';
 import { Fragment } from '@wordpress/element';
@@ -18,9 +19,7 @@ const Edit = (props) => {
                         images.map((logo) => {
                             return (
                                 <div className='goza-logo__item' key={logo.id}>
-                                    <div className='goza-logo__item-image' >
-                                        <img src={logo.url} alt={logo.alt} id={logo.id} />
-                                    </div>
+                                    <img src={logo.url} alt={logo.alt} id={logo.id} />
                                 </div>
                             );
                         })
@@ -39,9 +38,7 @@ const Edit = (props) => {
                             }
                             onSelectURL={false}
                             allowedTypes={['image']}
-                            labels={{
-                                title: 'Add Logos',
-                            }}
+                            labels={__('Add Logos', 'goza')}
                         />
                     )}
                 </div>

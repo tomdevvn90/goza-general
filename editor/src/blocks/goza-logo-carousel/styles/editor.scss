@@ -2,7 +2,7 @@
     .block-editor{
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: calc(var(--gap, 20px));
         .goza-logo__item{
             padding: 0;
             width: calc(100% / 5);

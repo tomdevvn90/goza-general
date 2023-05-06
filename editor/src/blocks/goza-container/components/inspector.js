@@ -125,11 +125,11 @@ export default class Inspector extends Component {
 		return (
 			<InspectorControls key="inspector">
 				<PanelBody
-					title={__('Container Options', 'goza-blocks')}
+					title={__('Container Options', 'goza')}
 					initialOpen={true}
 				>
 					<TextControl
-						label={__('Padding Top')}
+						label={__('Padding Top', 'goza')}
 						value={containerPaddingTop.default}
 						onChange={(value) => {
 							onChangeSize('top', value, 'default')
@@ -137,8 +137,8 @@ export default class Inspector extends Component {
 					/>
 
 					<ToggleControl
-						label={__('Sync Padding Top')}
-						help={__('Disable to custom padding top for each screen (Desktop, Tablet, Mobile)')}
+						label={__('Sync Padding Top', 'goza')}
+						help={__('Disable to custom padding top for each screen (Desktop, Tablet, Mobile)', 'goza')}
 						checked={containerPaddingTop.sync}
 						onChange={onChangeSizeResponsiveTop}
 					/>
@@ -146,16 +146,16 @@ export default class Inspector extends Component {
 					{!containerPaddingTop.sync &&
 						<div>
 							<TextControl
-								label={__('on Tablet (≦992px)')}
-								help={__('Set padding top for tablet')}
+								label={__('on Tablet (≦992px)', 'goza')}
+								help={__('Set padding top for tablet', 'goza')}
 								value={containerPaddingTop.tablet}
 								onChange={(value) => {
 									onChangeSize('top', value, 'tablet')
 								}}
 							/>
 							<TextControl
-								label={__('on Mobile (≦767px)')}
-								help={__('Set padding top for mobile')}
+								label={__('on Mobile (≦767px)', 'goza')}
+								help={__('Set padding top for mobile', 'goza')}
 								value={containerPaddingTop.mobile}
 								onChange={(value) => {
 									onChangeSize('top', value, 'mobile')
@@ -166,7 +166,7 @@ export default class Inspector extends Component {
 					<hr />
 
 					<TextControl
-						label={__('Padding Bottom')}
+						label={__('Padding Bottom', 'goza')}
 						value={containerPaddingBottom.default}
 						onChange={(value) => {
 							onChangeSize('bottom', value, 'default')
@@ -174,8 +174,8 @@ export default class Inspector extends Component {
 					/>
 
 					<ToggleControl
-						label={__('Sync Padding Bottom')}
-						help={__('Disable to custom padding bottom for each screen (Desktop, Tablet, Mobile)')}
+						label={__('Sync Padding Bottom', 'goza')}
+						help={__('Disable to custom padding bottom for each screen (Desktop, Tablet, Mobile)', 'goza')}
 						checked={containerPaddingBottom.sync}
 						onChange={onChangeSizeResponsiveBottom}
 					/>
@@ -183,16 +183,16 @@ export default class Inspector extends Component {
 					{!containerPaddingBottom.sync &&
 						<div>
 							<TextControl
-								label={__('on Tablet (≦992px)')}
-								help={__('Set padding bottom for tablet')}
+								label={__('on Tablet (≦992px)', 'goza')}
+								help={__('Set padding bottom for tablet', 'goza')}
 								value={containerPaddingBottom.tablet}
 								onChange={(value) => {
 									onChangeSize('bottom', value, 'tablet')
 								}}
 							/>
 							<TextControl
-								label={__('on Mobile (≦767px)')}
-								help={__('Set padding bottom for mobile')}
+								label={__('on Mobile (≦767px)', 'goza')}
+								help={__('Set padding bottom for mobile', 'goza')}
 								value={containerPaddingBottom.mobile}
 								onChange={(value) => {
 									onChangeSize('bottom', value, 'mobile')
@@ -203,10 +203,7 @@ export default class Inspector extends Component {
 					<hr />
 
 					<RangeControl
-						label={__(
-							'Inside Container Max Width (px)',
-							'goza-blocks'
-						)}
+						label={__('Inside Container Max Width (px)', 'goza')}
 						value={containerMaxWidth}
 						onChange={(value) =>
 							this.props.setAttributes({
@@ -218,35 +215,28 @@ export default class Inspector extends Component {
 						step={1}
 					/>
 				</PanelBody>
-				<PanelBody title='Background Video'>
+				<PanelBody title={__('Background Video', 'goza')}>
 					<MediaUpload
 						allowedTypes={["video"]}
 						value={videoID}
 						onSelect={(video) => loadLocalVideo(video)}
 						render={({ open }) => (
-							<Button
-								className="button button-large is-primary"
-								onClick={open}
-								style={{ marginLeft: '5px' }}
-							>
+							<Button className="button button-large is-primary" onClick={open} style={{ marginLeft: '5px' }}>
 								Choose video
 							</Button>
 						)}
 					/>
 					<div style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
 						<span style={{ width: '25px', height: '25px', margin: '-1px 5px 0', }}> {videoHostIcon} </span>
-						<span id="title-video">{videoTitle || 'Not selected yet.'}</span>
+						<span id="title-video">{videoTitle || __('Not selected yet.', 'goza')}</span>
 					</div>
 				</PanelBody>
 				<PanelBody
-					title={__('Background Image', 'goza-blocks')}
+					title={__('Background Image', 'goza')}
 					initialOpen={false}
 				>
 					<p>
-						{__(
-							'Select a background image:',
-							'goza-blocks'
-						)}
+						{__('Select a background image:', 'goza')}
 					</p>
 					<MediaUpload
 						onSelect={onSelectImage}
@@ -256,34 +246,22 @@ export default class Inspector extends Component {
 							<div>
 								<Button
 									className="goza-container-inspector-media"
-									label={__(
-										'Edit image',
-										'goza-blocks'
-									)}
+									label={__('Edit image', 'goza')}
 									onClick={open}
 								>
 									<Icon icon="format-image" />
-									{__(
-										'Select Image',
-										'goza-blocks'
-									)}
+									{__('Select Image','goza')}
 								</Button>
 
 								{containerImgURL &&
 									!!containerImgURL.length && (
 										<Button
 											className="goza-container-inspector-media"
-											label={__(
-												'Remove Image',
-												'goza-blocks'
-											)}
+											label={__( 'Remove Image', 'goza' )}
 											onClick={onRemoveImage}
 										>
 											<Icon icon="dismiss" />
-											{__(
-												'Remove',
-												'goza-blocks'
-											)}
+											{__('Remove','goza')}
 										</Button>
 									)}
 							</div>
@@ -291,19 +269,19 @@ export default class Inspector extends Component {
 					></MediaUpload>
 				</PanelBody>
 				{containerImgURL && !!containerImgURL.length && (
-					<PanelBody title='Background Position'>
+					<PanelBody title={__('Background Position', 'goza')}>
 						<FocalPointPicker
-							label='Focal Point Picker'
+							label={__('Focal Point Picker', 'goza')}
 							url={containerImgURL}
 							value={focalPoint}
 							onChange={(value) => setAttributes({ focalPoint: value })}
 						/>
 					</PanelBody>
 				)}
-				<PanelBody title={__('Background Color', 'goza-blocks')}
+				<PanelBody title={__('Background Color', 'goza')}
 					initialOpen={false}>
 					<RangeControl
-						label={__('Opacity', 'goza-blocks')}
+						label={__('Opacity', 'goza')}
 						value={opacityBg}
 						onChange={(value) =>
 							this.props.setAttributes({
@@ -331,7 +309,7 @@ export default class Inspector extends Component {
 								slug: 'gradient-secondary',
 							}
 						]}
-						label={__("Choose a color or a gradient")}
+						label={__("Choose a color or a gradient", "goza")}
 						onColorChange={(vl) => setAttributes({ containerBackgroundColor: vl })}
 						onGradientChange={(vl) => setAttributes({ containerBgGradientColor: vl })}
 					/>

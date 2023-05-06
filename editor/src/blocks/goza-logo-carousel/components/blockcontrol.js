@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n'
 import { MediaUpload, MediaUploadCheck, BlockControls, } from '@wordpress/block-editor';
 import { ToolbarGroup, ToolbarButton, } from '@wordpress/components';
 import { Fragment } from '@wordpress/element';
@@ -25,7 +26,7 @@ const GozaBlockControl = (props) => {
                                 render={({ open }) => {
                                     return (
                                         <ToolbarButton
-                                            label='Edit Logos'
+                                            label={__('Edit Logos', 'goza')}
                                             onClick={open}
                                             icon="edit"
                                         />

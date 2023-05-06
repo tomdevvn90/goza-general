@@ -40,7 +40,7 @@ const Inspector = (props) => {
 		<InspectorControls>
 			<PanelBody title={__('Size')}>
 				<TextControl
-					help={__('Set size')}
+					help={__('Set size', 'goza')}
 					value={size.default}
 					onChange={(value) => {
 						onChangeSize(value, 'default')
@@ -52,16 +52,16 @@ const Inspector = (props) => {
 						return (
 							<div>
 								<TextControl
-									label={__('on Tablet (≦991px)')}
-									help={__('Set size for tablet')}
+									label={__('on Tablet (≦991px)', 'goza')}
+									help={__('Set size for tablet', 'goza')}
 									value={size.tablet}
 									onChange={(value) => {
 										onChangeSize(value, 'tablet')
 									}}
 								/>
 								<TextControl
-									label={__('on Mobile (≦767px)')}
-									help={__('Set size for mobile')}
+									label={__('on Mobile (≦767px)', 'goza')}
+									help={__('Set size for mobile', 'goza')}
 									value={size.mobile}
 									onChange={(value) => {
 										onChangeSize(value, 'mobile')
@@ -73,8 +73,8 @@ const Inspector = (props) => {
 
 				}
 				<ToggleControl
-					label={__('Sync')}
-					help={__('Disable to custom size for each screen (Desktop, Tablet, Mobile)')}
+					label={__('Sync', 'goza')}
+					help={__('Disable to custom size for each screen (Desktop, Tablet, Mobile)', 'goza')}
 					checked={size.sync}
 					onChange={onChangeSizeResponsive}
 				/>

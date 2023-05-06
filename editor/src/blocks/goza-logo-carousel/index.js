@@ -27,9 +27,13 @@ const attr = {
 		type: 'number',
 		default: 1
 	},
+	arrows: {
+		type: 'boolean',
+		default: false
+	},
 	dots: {
 		type: 'boolean',
-		default: true
+		default: false
 	},
 	infinite: {
 		type: 'boolean',
@@ -51,13 +55,17 @@ const attr = {
 		type: 'number',
 		default: 3000
 	},
+	gap: {
+		type: 'string',
+		default: '20px'
+	},
 };
 
 export default registerBlockType("goza-blocks/goza-logo-carousel", {
-	title: __("Goza Logo Carousel"),
+	title: __("Logo Carousel", "goza"),
 	icon: "slides",
 	category: "goza-blocks",
-	keywords: [__("logo"), __("carousel"), __("goza"), __("slider")],
+	keywords: [__("logo", "goza"), __("carousel", "goza"), __("goza", "goza"), __("slider", "goza")],
 	attributes: attr,
 	supports: {
 		// Declare support for specific alignment options.
