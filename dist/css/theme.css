@@ -23653,6 +23653,7 @@ h6 {
 }
 
 .be-google-map .be-google-map-box iframe {
+  height: var(--google-map-height, 400px);
   width: 100%;
   border: 0;
 }
