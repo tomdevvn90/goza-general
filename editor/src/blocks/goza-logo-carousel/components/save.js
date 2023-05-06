@@ -9,9 +9,7 @@ const Save = (props) => {
 					images.map((logo) => {
 						return (
 							<div className='goza-logo__item' key={logo.id}>
-								<div className='goza-logo__item-image' >
-									<img src={logo.url} alt={logo.alt} id={logo.id} />
-								</div>
+								<img src={logo.url} alt={logo.alt} id={logo.id} />
 							</div>
 						);
 					})}

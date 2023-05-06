@@ -1,4 +1,4 @@
-
+import 'slick-carousel';
 import './components/navigation';
 import './components/function';
 
@@ -10,12 +10,13 @@ AOS.init({
     disable: 'mobile', 
 });
 
-import './blocks/hero'
-import './blocks/testimonials'
-import './blocks/posts-slider'
-import './blocks/events-listing'
-import './blocks/gives-slider' 
-import './blocks/video-popup-actions'
-import './blocks/ss-upcoming-event-video'
-import './blocks/ss-text-tsm-video'
+import './blocks/hero';
+import './blocks/testimonials';
+import './blocks/posts-slider';
+import './blocks/events-listing';
+import './blocks/gives-slider';
+import './blocks/video-popup-actions';
+import './blocks/ss-upcoming-event-video';
+import './blocks/ss-text-tsm-video';
+import './blocks/logo-carousel';
 

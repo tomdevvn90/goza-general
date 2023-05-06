@@ -16,12 +16,12 @@ import { __ } from '@wordpress/i18n'
 import { registerBlockType } from '@wordpress/blocks'
 
 export default registerBlockType('goza-block/goza-spacer', {
-	title: __('Spacer'),
+	title: __('Spacer', 'goza'),
 	icon: 'image-flip-vertical',
 	category: 'goza-theme',
 	keywords: [
-		__('spacer'),
-		__('gap'),
+		__('spacer', 'goza'),
+		__('gap', 'goza'),
 	],
 	attributes: {
 		size: {
@@ -35,11 +35,11 @@ export default registerBlockType('goza-block/goza-spacer', {
 		}
 	},
 	/* Render the block in the editor. */
-	edit: ( props ) => {
-		return <Edit { ...props } />;
+	edit: (props) => {
+		return <Edit {...props} />;
 	},
 	/* Save the block markup. */
-	save: ( props ) => {
-		return <Save { ...props } />;
+	save: (props) => {
+		return <Save {...props} />;
 	},
 })
