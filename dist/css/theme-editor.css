@@ -9318,6 +9318,10 @@
   border-style: solid;
 }
 
+.be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item:last-child {
+  border-right-width: 0;
+}
+
 .be-infomation-section .be-infomation-box .be-infomation-list .be-infmation-item--icon-wrap img {
   min-width: 50px;
   height: auto;
