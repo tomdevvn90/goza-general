@@ -23,6 +23,9 @@
                     border-color: #c9c9c9;
                     border-style: solid;
                 }
+                &:last-child{
+                    border-right-width: 0;
+                }
                 &--icon-wrap{
                     img{
                         min-width: 50px;

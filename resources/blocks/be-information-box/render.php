@@ -26,6 +26,7 @@ $data_aos_animated = ($info_animation != 'none')? $info_animation : '';
     <div class="be-infomation-box container">
         <div data-aos="<?php echo $data_aos_animated; ?>" class="be-infomation-list <?php echo $shadow_class; ?>" style="<?php echo $info_bg_color_style; ?><?php echo $info_margin_top_style; ?>">
             <?php if ( !empty( $infomation_list ) ) {
+                
                 foreach ($infomation_list as $key => $value) {
                    ?>
                     <div class="be-infmation-item">
@@ -51,6 +52,8 @@ $data_aos_animated = ($info_animation != 'none')? $info_animation : '';
                     </div>
                    <?php
                 }
+            } else{
+                echo '<p>Please enter fields to show!</p>';
             } ?>
         </div>
     </div>
