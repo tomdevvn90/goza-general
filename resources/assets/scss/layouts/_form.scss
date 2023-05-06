@@ -17,6 +17,13 @@
             -webkit-transition: all 0.3s ease;
             transition: all 0.3s ease;
             max-width: 100%;
+            &:focus{
+                border: 1px solid rgba(212, 27, 101, 0.5);
+                -webkit-box-shadow: 0px 0px 5px rgba(212, 27, 101, 0.25);
+                -moz-box-shadow: 0px 0px 5px rgba(212, 27, 101, 0.25);
+                box-shadow: none;
+                outline: none;
+            }
         }
         input{
             font-size: 16px;
@@ -26,16 +33,22 @@
             line-height: 60px;
             width: 100%;
         }
-        textarea{
+        textarea.wpcf7-textarea{
             font-size: 16px;
+            padding: 10px;
             padding-left: 20px;
             background: #f6f6f6;
             height: 200px;
             width: 100%;
-            padding: 10px;
         }
     }
     p{
+        margin-bottom: 10px;
+        label{
+            width: 100%;
+            text-align: left;
+            margin-bottom: 0;
+        }
         input[type="submit"]{
             position: relative;
             text-transform: uppercase;

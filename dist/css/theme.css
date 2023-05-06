@@ -15744,6 +15744,21 @@ h6 {
   max-width: 100%;
 }
 
+.wpcf7-form .wpcf7-form-control-wrap input[type=text]:focus,
+.wpcf7-form .wpcf7-form-control-wrap input[type=password]:focus,
+.wpcf7-form .wpcf7-form-control-wrap input[type=number]:focus,
+.wpcf7-form .wpcf7-form-control-wrap input[type=email]:focus,
+.wpcf7-form .wpcf7-form-control-wrap input[type=date]:focus,
+.wpcf7-form .wpcf7-form-control-wrap input[type=color]:focus,
+.wpcf7-form .wpcf7-form-control-wrap input[type=tel]:focus,
+.wpcf7-form .wpcf7-form-control-wrap input[type=search]:focus,
+.wpcf7-form .wpcf7-form-control-wrap textarea:focus,
+.wpcf7-form .wpcf7-form-control-wrap select:focus {
+  border: 1px solid rgba(212, 27, 101, 0.5);
+  box-shadow: none;
+  outline: none;
+}
+
 .wpcf7-form .wpcf7-form-control-wrap input {
   font-size: 16px;
   padding-left: 20px;
@@ -15753,13 +15768,23 @@ h6 {
   width: 100%;
 }
 
-.wpcf7-form .wpcf7-form-control-wrap textarea {
+.wpcf7-form .wpcf7-form-control-wrap textarea.wpcf7-textarea {
   font-size: 16px;
+  padding: 10px;
   padding-left: 20px;
   background: #f6f6f6;
   height: 200px;
   width: 100%;
-  padding: 10px;
+}
+
+.wpcf7-form p {
+  margin-bottom: 10px;
+}
+
+.wpcf7-form p label {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0;
 }
 
 .wpcf7-form p input[type=submit] {
