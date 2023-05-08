@@ -2,7 +2,7 @@
     "name": "be-numberal-donation-box",
     "title": "Be Numberal Donation Box",
     "category": "goza-theme",
-    "icon": "testimonial",
+    "icon": "text-page",
     "keywords": ["numberal", "donation", "box"],
     "acf": {
         "mode": "preview",

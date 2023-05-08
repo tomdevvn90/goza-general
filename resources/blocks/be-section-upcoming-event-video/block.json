@@ -2,7 +2,7 @@
     "name": "be-section-upcoming-event-video",
     "title": "Be Section Upcoming Event + Video",
     "category": "goza-theme",
-    "icon": "testimonial",
+    "icon": "playlist-video",
     "keywords": ["event", "video", "upcoming"],
     "acf": {
         "mode": "preview",
