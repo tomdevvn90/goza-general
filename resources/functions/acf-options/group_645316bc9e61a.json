@@ -213,6 +213,24 @@
             "append": ""
         },
         {
+            "key": "field_6453177237c44",
+            "label": "Breadcrumb Color",
+            "name": "breadcrumb_color_ss_hero",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
             "key": "field_6453172837c43",
             "label": "Heading Color",
             "name": "heading_color_ss_hero",
@@ -222,7 +240,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
@@ -240,7 +258,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
@@ -250,24 +268,6 @@
             "step": 1,
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_6453177237c44",
-            "label": "Breadcrumb Color",
-            "name": "breadcrumb_color_ss_hero",
-            "aria-label": "",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
         }
     ],
     "location": [
@@ -288,5 +288,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683512749
+    "modified": 1683513489
 }

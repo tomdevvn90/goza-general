@@ -253,6 +253,26 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 
 /***/ }),
 
+/***/ "./resources/assets/js/blocks/projects-popup-action.js":
+/*!*************************************************************!*\
+  !*** ./resources/assets/js/blocks/projects-popup-action.js ***!
+  \*************************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lightgallery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lightgallery */ "./node_modules/lightgallery/lightgallery.es5.js");
+
+var be_projects_grid = document.querySelectorAll('.be-projects-grid');
+be_projects_grid.forEach(function (element) {
+  Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(document.getElementById(element.getAttribute('id')), {
+    selector: '.zoom-image'
+  });
+});
+
+/***/ }),
+
 /***/ "./resources/assets/js/blocks/ss-text-tsm-video.js":
 /*!*********************************************************!*\
   !*** ./resources/assets/js/blocks/ss-text-tsm-video.js ***!
@@ -680,6 +700,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_ss_text_tsm_video__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./blocks/ss-text-tsm-video */ "./resources/assets/js/blocks/ss-text-tsm-video.js");
 /* harmony import */ var _blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./blocks/logo-carousel */ "./resources/assets/js/blocks/logo-carousel.js");
 /* harmony import */ var _blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _blocks_projects_popup_action__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./blocks/projects-popup-action */ "./resources/assets/js/blocks/projects-popup-action.js");
 
 
 
@@ -690,6 +711,7 @@ aos__WEBPACK_IMPORTED_MODULE_3___default.a.init({
   once: true,
   disable: 'mobile'
 });
+
 
 
 
