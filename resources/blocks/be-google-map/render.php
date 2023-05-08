@@ -7,7 +7,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 $location = get_field('location_google_map_block');
 $height = get_field('height_google_map_block');
 
-$height_style = !empty( $height )? '--google-map-height'.$height.'px;' : '';
+$height_style = !empty( $height )? '--google-map-height:'.$height.'px;' : '';
 
 ?>
 <section id="<?php echo $id; ?>" class="be-google-map <?php echo $align_class; ?>">

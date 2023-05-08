@@ -28,6 +28,10 @@ $data_aos_animated = ($info_animation != 'none')? $info_animation : '';
             <?php if ( !empty( $infomation_list ) ) {
                 
                 foreach ($infomation_list as $key => $value) {
+                    $field_type = $value['field_type'];
+                    $phone_list = $value['phone'];
+                    $email_list = $value['email'];
+
                    ?>
                     <div class="be-infmation-item">
                         <?php if( !empty( $value['icon']['url'] ) ): ?>
@@ -35,16 +39,49 @@ $data_aos_animated = ($info_animation != 'none')? $info_animation : '';
                             <img src="<?php echo $value['icon']['url']; ?>" alt="<?php echo $value['icon']['alt'] ?>">
                         </div>
                         <?php endif; ?>
-                        <?php if( !empty( $value['heading'] ) || !empty( $value['text'] ) ): ?>
+                        <?php if( !empty( $value['heading'] ) || !empty( $value['text'] ) || !empty( $phone_list ) || !empty( $email_list ) ): ?>
                         <div class="be-infmation-item--content-wrap">
                             <?php if( !empty( $value['heading'] ) ): ?>
                                 <h4 class="be-infmation-item--heading" style="<?php echo $info_heading_color_style; ?>">
                                     <?php echo $value['heading']; ?>
                                 </h4>
                             <?php endif; ?>
-                            <?php if( !empty( $value['text'] ) ): ?>
+                            <?php if( $field_type == 'text' && !empty( $value['text'] ) ): ?>
                                 <div class="be-infmation-item--text" style="<?php echo $info_text_color_style; ?>">
-                                <?php echo $value['text']; ?>
+                                    <?php echo $value['text']; ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if( $field_type === 'phone' && !empty( $phone_list ) ): ?>
+                                <div class="be-infmation-item--text phone" style="<?php echo $info_text_color_style; ?>">
+                                    <?php if ( !empty( $phone_list ) ) {
+                                        $i = 0;
+                                        $total = count( $phone_list );
+                                        
+                                        foreach ($phone_list as $key => $phone) {
+                                            $format_phone = preg_replace('/[^A-Za-z0-9]/', '', $phone['phone_number']);
+                                            echo '<a href="tel:'.$format_phone.'">'.$phone['phone_number'].'</a>';
+                                            if ( $i != $total - 1 ) {
+                                               echo '<br>';
+                                            }
+                                            $i++;
+                                        }
+                                    } ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if( $field_type === 'email' && !empty( $email_list ) ): ?>
+                                <div class="be-infmation-item--text email" style="<?php echo $info_text_color_style; ?>">
+                                    <?php if ( !empty( $email_list ) ) {
+                                        $i = 0;
+                                        $total = count( $email_list );
+
+                                        foreach ($email_list as $key => $email) {
+                                            echo '<a href="mailto:'.$email['email_address'].'">'.$email['email_address'].'</a>';
+                                            if ( $i != $total - 1 ) {
+                                               echo '<br>';
+                                            }
+                                            $i++;
+                                        }
+                                    } ?>
                                 </div>
                             <?php endif; ?>
                         </div>
