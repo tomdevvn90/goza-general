@@ -45,63 +45,6 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_645316ed37c41",
-            "label": "Background Color",
-            "name": "bg_color_ss_hero",
-            "aria-label": "",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "40",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_645331610b3cc",
-            "label": "Background Overlay Color",
-            "name": "bg_overlay_color_ss_hero",
-            "aria-label": "",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "60",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_645331870b3cd",
-            "label": "Background Overlay Opacity",
-            "name": "bg_overlay_opacity_ss_hero",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "40",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": 0,
-            "max": 1,
-            "step": "0.1",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_6453169b37c3f",
             "label": "Icon",
             "name": "icon_ss_hero",
@@ -213,6 +156,63 @@
             "placeholder": ""
         },
         {
+            "key": "field_645316ed37c41",
+            "label": "Background Color",
+            "name": "bg_color_ss_hero",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_645331610b3cc",
+            "label": "Background Overlay Color",
+            "name": "bg_overlay_color_ss_hero",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_645331870b3cd",
+            "label": "Background Overlay Opacity",
+            "name": "bg_overlay_opacity_ss_hero",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 0,
+            "max": 1,
+            "step": "0.1",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6453172837c43",
             "label": "Heading Color",
             "name": "heading_color_ss_hero",
@@ -288,5 +288,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683253626
+    "modified": 1683512749
 }
