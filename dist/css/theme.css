@@ -543,6 +543,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 .lg-outer .lg-item.lg-complete.lg-zoomable .lg-img-wrap {
   transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -550,6 +551,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 .lg-outer .lg-item.lg-complete.lg-zoomable .lg-dummy-img {
   transform: scale3d(1, 1, 1);
   transition: transform 0.5s cubic-bezier(0.12, 0.415, 0.01, 1.19) 0s, opacity 0.15s !important;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -1287,6 +1289,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 .lg-css3.lg-use-css3 .lg-item {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -8232,6 +8235,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 .lg-css3.lg-use-css3 .lg-item {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -8342,6 +8346,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 .lg-outer .lg-item.lg-complete.lg-zoomable .lg-img-wrap {
   transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -8349,6 +8354,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 .lg-outer .lg-item.lg-complete.lg-zoomable .lg-dummy-img {
   transform: scale3d(1, 1, 1);
   transition: transform 0.5s cubic-bezier(0.12, 0.415, 0.01, 1.19) 0s, opacity 0.15s !important;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -23615,6 +23621,7 @@ h6 {
   background: var(--link-color);
   transition: 0.3s ease;
   margin: 0 8px;
+  background: var(--color-dots);
 }
 
 .be-ss-text-tsm-video--testimonial-slider .slick-dots li:first-child {
@@ -23742,10 +23749,6 @@ h6 {
   width: 100%;
   max-width: 20px;
   height: auto;
-}
-
-.be-ss-text-tsm-video--video-cta svg path {
-  fill: #fff;
 }
 
 .be-google-map .be-google-map-box {

@@ -279,14 +279,18 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
     var $testimonial = $('.be-ss-text-tsm-video .be-ss-text-tsm-video--testimonial-slider');
     if ($testimonial.length === 0) return;
     $testimonial.each(function () {
-      $(this).slick({
+      var $dataSlider = $(this).data('slider');
+      var opt_df = {
         slidesToShow: 1,
-        infinite: false,
         slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 2000,
-        dots: true
-      });
+        dots: false,
+        autoplay: true,
+        arrows: false,
+        adaptiveHeight: false,
+        fade: false,
+        cssEase: 'linear'
+      };
+      $(this).slick(Object.assign({}, opt_df, $dataSlider));
     });
   };
   $(window).on("scroll", function () {});
@@ -731,9 +735,9 @@ aos__WEBPACK_IMPORTED_MODULE_3___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-module.exports = __webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+module.exports = __webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
 
 
 /***/ })

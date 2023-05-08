@@ -13,14 +13,20 @@ import 'slick-carousel/slick/slick-theme.css';
 		if ($testimonial.length === 0) return;
 
         $testimonial.each(function () {
-            $(this).slick({
-                slidesToShow: 1,
-                infinite:false,
-                slidesToScroll: 1,
-                autoplay: false,
-                autoplaySpeed: 2000,
-                dots: true
-            });
+            const $dataSlider   = $(this).data('slider')
+
+            let opt_df = {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				dots: false,
+				autoplay: true,
+				arrows: false,
+                adaptiveHeight: false,
+                fade: false,
+                cssEase: 'linear',
+			};
+
+            $(this).slick(Object.assign({}, opt_df, $dataSlider));
         })
     }
 

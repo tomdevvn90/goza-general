@@ -9148,6 +9148,7 @@
   background: var(--link-color);
   transition: 0.3s ease;
   margin: 0 8px;
+  background: var(--color-dots);
 }
 
 .be-ss-text-tsm-video--testimonial-slider .slick-dots li:first-child {
@@ -9275,10 +9276,6 @@
   width: 100%;
   max-width: 20px;
   height: auto;
-}
-
-.be-ss-text-tsm-video--video-cta svg path {
-  fill: #fff;
 }
 
 .be-google-map .be-google-map-box {

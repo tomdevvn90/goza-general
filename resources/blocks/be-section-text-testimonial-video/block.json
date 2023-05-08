@@ -2,7 +2,7 @@
     "name": "be-section-text-testimonial-video",
     "title": "Be Section Text Testimonial Video",
     "category": "goza-theme",
-    "icon": "testimonial",
+    "icon": "playlist-video",
     "keywords": ["testimonial", "video", "text"],
     "acf": {
         "mode": "preview",
@@ -12,4 +12,4 @@
         "align": true
     },
     "align": "full"
-  }
+}

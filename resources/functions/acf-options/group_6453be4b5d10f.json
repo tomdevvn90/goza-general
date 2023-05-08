@@ -168,6 +168,104 @@
             ]
         },
         {
+            "key": "field_64584dcd5cda4",
+            "label": "Slider Settings",
+            "name": "slider_settings_ss_text_tsm_vd",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_64584dee5cda5",
+                    "label": "Dots",
+                    "name": "dots",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui_on_text": "Enable",
+                    "ui_off_text": "Disable",
+                    "ui": 1
+                },
+                {
+                    "key": "field_64584e2d5cda6",
+                    "label": "Autoplay",
+                    "name": "autoplay",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "Enable",
+                    "ui_off_text": "Disable",
+                    "ui": 1
+                },
+                {
+                    "key": "field_64584e655cda7",
+                    "label": "Loop",
+                    "name": "loop",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "Enable",
+                    "ui_off_text": "Disable",
+                    "ui": 1
+                },
+                {
+                    "key": "field_64584e755cda8",
+                    "label": "Fade",
+                    "name": "fade",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "Enable",
+                    "ui_off_text": "Disable",
+                    "ui": 1
+                }
+            ]
+        },
+        {
             "key": "field_6453c07036368",
             "label": "Video",
             "name": "",
@@ -244,6 +342,32 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_64585337ae239",
+                    "label": "Format Video",
+                    "name": "format_video",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "default": "Default",
+                        "html": "HTML 5"
+                    },
+                    "default_value": "default",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
                 }
             ]
         },
@@ -318,7 +442,7 @@
             "sub_fields": [
                 {
                     "key": "field_6454c6cd56788",
-                    "label": "Heading",
+                    "label": "Color Heading",
                     "name": "heading",
                     "aria-label": "",
                     "type": "color_picker",
@@ -326,7 +450,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "33.3",
                         "class": "",
                         "id": ""
                     },
@@ -336,7 +460,7 @@
                 },
                 {
                     "key": "field_6454c6da56789",
-                    "label": "Quocte",
+                    "label": "Color Quocte",
                     "name": "quocte",
                     "aria-label": "",
                     "type": "color_picker",
@@ -344,7 +468,25 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "33.3",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_64584f14b9094",
+                    "label": "Color Dots",
+                    "name": "dots",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.3",
                         "class": "",
                         "id": ""
                     },
@@ -384,7 +526,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
+                    "default_value": "#fff",
                     "enable_opacity": 1,
                     "return_format": "string"
                 },
@@ -427,5 +569,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683278723
+    "modified": 1683512070
 }
