@@ -7,13 +7,22 @@ $id = 'be-ss-ab-counter-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$bg        = get_field('bg_ss_ab_counter') ?: get_template_directory_uri(). '/resources/assets/images/bg-ss-ab-counter.jpg';
-$heading   = get_field('heading_ss_ab_counter') ?: '';
-$desc      = get_field('desc_ss_ab_counter') ?: '';
-$counters  = get_field('counters_ss_ab_counter') ?: '';
-$cta_name  = get_field('cta_name_ss_ab_counter') ?: '';
-$cta_link  = get_field('cta_link_ss_ab_counter') ?: '';
-$cta_style = get_field('cta_style_ss_ab_counter') ?: 'btn-default';
+$bg         = get_field('bg_ss_ab_counter') ?: get_template_directory_uri(). '/resources/assets/images/bg-ss-ab-counter.jpg';
+$heading    = get_field('heading_ss_ab_counter') ?: '';
+$desc       = get_field('desc_ss_ab_counter') ?: '';
+$counters   = get_field('counters_ss_ab_counter') ?: '';
+$cta_name   = get_field('cta_name_ss_ab_counter') ?: '';
+$cta_link   = get_field('cta_link_ss_ab_counter') ?: '';
+$cta_style  = get_field('cta_style_ss_ab_counter') ?: 'btn-default';
+$color_hd   = get_field('color_heading_ss_ab_counter') ?: '';
+$color_desc = get_field('color_desc_ss_ab_counter') ?: '';
+$color_ct   = get_field('color_ct_ss_ab_counter') ?: '';
+$cl_ct_hd   = $color_ct['heading'] ? : '';
+$cl_ct_nb   = $color_ct['numberal'] ? : '';
+// $link_op   = get_field('goza_link_color_op', 'option');
+// $link_cl   = $link_op['link_color'] ? : '';
+// $tg_hd     = get_field('typography_heading', 'option');
+
 ?>
 <section id="<?php echo $id; ?>" class="be-ss-ab-counter <?php echo $align_class; ?>"> 
    <div class="be-ss-ab-counter--bg"> 
@@ -24,11 +33,11 @@ $cta_style = get_field('cta_style_ss_ab_counter') ?: 'btn-default';
       <div class="container"> 
          <div class="be-ss-ab-counter--inner"> 
             <?php if(!empty($heading)): ?>
-               <h2 class="be-ss-ab-counter--heading"> <?= $heading ?> </h2>
+               <h2 class="be-ss-ab-counter--heading" style="color:<?= $color_hd ?>"> <?= esc_attr($heading) ?> </h2>
             <?php endif; ?>   
 
             <?php if(!empty($desc)): ?>
-               <p class="be-ss-ab-counter--desc"> <?= $desc ?> </p>
+               <p class="be-ss-ab-counter--desc" style="color:<?= $color_desc ?>"> <?= esc_attr($desc) ?> </p>
             <?php endif; ?>  
 
             <?php if(!empty($counters)): ?>
@@ -43,12 +52,12 @@ $cta_style = get_field('cta_style_ss_ab_counter') ?: 'btn-default';
                      <div class="item-counter"> 
                         <div class="item-counter--number"> 
                            <?php if(!empty($value['numberal'])): ?>
-                              <span data-counter  data-duration="<?php echo $duration ?>" data-delay="<?php echo $delay_item ?>"> <?php echo $value['numberal'] ?></span>
+                              <span data-counter data-duration="<?php echo $duration ?>" data-delay="<?php echo $delay_item ?>" style="color:<?= $cl_ct_nb ?>"> <?php echo $value['numberal'] ?></span>
                            <?php endif; ?>  
                         </div>
 
                         <?php if(!empty($value['heading'])): ?>
-                           <h4 class="item-counter--heading"> <?= esc_attr($value['heading']); ?> </h4>
+                           <h4 class="item-counter--heading" style="color:<?= $cl_ct_hd ?>"> <?= esc_attr($value['heading']); ?> </h4>
                         <?php endif; ?>
                      </div>
                   <?php endforeach; ?>   
