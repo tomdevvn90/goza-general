@@ -2,8 +2,8 @@
     "name": "be-section-about-counter",
     "title": "Be Section About Counter",
     "category": "goza-theme",
-    "icon": "testimonial",
-    "keywords": ["about", "about", "counter"],
+    "icon": "index-card",
+    "keywords": ["about", "counter"],
     "acf": {
         "mode": "preview",
         "renderTemplate": "render.php"

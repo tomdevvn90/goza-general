@@ -2,7 +2,7 @@
     "name": "goza/be-socials",
     "title": "Be Socials",
     "category": "goza-theme",
-    "icon": "testimonial",
+    "icon": "share",
     "keywords": ["icon", "socials"],
     "acf": {
         "mode": "preview",

@@ -25,11 +25,11 @@ $color_sb_hd = get_field('color_sub_heading_ss_text_tsm_vd') ?: '';
          <div class="be-ss-text-tsm-video--inner"> 
             <div class="be-ss-text-tsm-video--inner-left"> 
                <?php if(!empty($sub_heading)): ?>
-                  <p class="be-ss-text-tsm-video--sub-heading" style="color:<?= $color_sb_hd ?>"> <?= $sub_heading ?> </p>
+                  <p class="be-ss-text-tsm-video--sub-heading" style="color:<?= $color_sb_hd ?>"> <?= esc_attr($sub_heading) ?> </p>
                <?php endif; ?>   
 
                <?php if(!empty($heading)): ?>
-                  <h2 class="be-ss-text-tsm-video--heading" style="color:<?= $color_hd?>"> <?= $heading ?> </h2>
+                  <h2 class="be-ss-text-tsm-video--heading" style="color:<?= $color_hd?>"> <?= esc_attr($heading) ?> </h2>
                <?php endif; ?>  
 
                <?php if(!empty($testimonial)): ?>
