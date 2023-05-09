@@ -2,7 +2,7 @@
     "name": "be-projects-grid",
     "title": "Be Projects Grid",
     "category": "goza-theme",
-    "icon": "format-image",
+    "icon": "screenoptions",
     "keywords": ["be projects grid", "be", "projects"],
     "acf": {
         "mode": "preview",
