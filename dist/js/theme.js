@@ -253,22 +253,70 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 
 /***/ }),
 
-/***/ "./resources/assets/js/blocks/projects-popup-action.js":
-/*!*************************************************************!*\
-  !*** ./resources/assets/js/blocks/projects-popup-action.js ***!
-  \*************************************************************/
+/***/ "./resources/assets/js/blocks/projects-grid-action.js":
+/*!************************************************************!*\
+  !*** ./resources/assets/js/blocks/projects-grid-action.js ***!
+  \************************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var lightgallery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lightgallery */ "./node_modules/lightgallery/lightgallery.es5.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lightgallery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lightgallery */ "./node_modules/lightgallery/lightgallery.es5.js");
 
-var be_projects_grid = document.querySelectorAll('.be-projects-grid');
-be_projects_grid.forEach(function (element) {
-  Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(document.getElementById(element.getAttribute('id')), {
-    selector: '.zoom-image'
+
+var projectsGridLightGallery = function projectsGridLightGallery() {
+  var be_projects_grid = document.querySelectorAll('.be-projects-grid-section .be-projects-grid');
+  be_projects_grid.forEach(function (element) {
+    Object(lightgallery__WEBPACK_IMPORTED_MODULE_1__["default"])(document.getElementById(element.getAttribute('id')), {
+      selector: '.zoom-image'
+    });
   });
+};
+projectsGridLightGallery();
+var be_projects_grid_loadmore = document.querySelectorAll('.be-projects-grid-section .be-projects-grid__loadmore-btn');
+be_projects_grid_loadmore.forEach(function (element) {
+  element.onclick = function (event) {
+    event.preventDefault();
+    var button = this;
+    var page = parseInt(this.getAttribute('data-page'));
+    var max_page = parseInt(this.getAttribute('data-max-page'));
+    var settings = this.getAttribute('data-settings');
+    console.log(settings);
+    var data = {
+      action: 'loadmore_projects_grid',
+      page: page,
+      settings: settings
+    };
+    jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
+      type: "post",
+      url: php_data.ajax_url,
+      data: data,
+      dataType: "json",
+      beforeSend: function beforeSend() {
+        button.classList.add('loading');
+      },
+      success: function success(response) {
+        if (response.success) {
+          button.classList.remove('loading');
+          var loadmore = button.closest('.be-projects-grid__loadmore');
+          var projects_grid = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#block-projects-grid-action-' + loadmore.getAttribute('data-block-id'));
+          projects_grid.append(response.data);
+          page++;
+          button.setAttribute('data-page', page);
+          if (page == max_page) {
+            loadmore.classList.add('hide');
+          }
+          projectsGridLightGallery();
+        }
+      },
+      error: function error(jqXHR, textStatus, errorThrown) {
+        console.log('The following error occured: ' + textStatus, errorThrown);
+      }
+    });
+  };
 });
 
 /***/ }),
@@ -704,7 +752,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_ss_text_tsm_video__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./blocks/ss-text-tsm-video */ "./resources/assets/js/blocks/ss-text-tsm-video.js");
 /* harmony import */ var _blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./blocks/logo-carousel */ "./resources/assets/js/blocks/logo-carousel.js");
 /* harmony import */ var _blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _blocks_projects_popup_action__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./blocks/projects-popup-action */ "./resources/assets/js/blocks/projects-popup-action.js");
+/* harmony import */ var _blocks_projects_grid_action__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./blocks/projects-grid-action */ "./resources/assets/js/blocks/projects-grid-action.js");
 
 
 

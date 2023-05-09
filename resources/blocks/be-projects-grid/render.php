@@ -33,19 +33,24 @@ $button_color_style = !empty( $button_color )? '--btn-color-project-grid:'.$butt
 
 $color_variables = $bg_color_style.$title_color_style.$excerpt_color_style.$button_color_style;
 // option query fields
-$posts_per_page = !empty( get_field('posts_per_page_c_grid') )? get_field('posts_per_page_projects_grid') : get_option('posts_per_page');
+$posts_per_page = !empty( get_field('posts_per_page_projects_grid') )? get_field('posts_per_page_projects_grid') : get_option('posts_per_page');
 $order = get_field('order_projects_grid') ? get_field('order_projects_grid') : 'desc';
+$loadmore = get_field('loadmore_projects_grid') ? get_field('loadmore_projects_grid') : false;
+$loadmore_text = get_field('loadmore_text_projects_grid') ? get_field('loadmore_text_projects_grid') : __('View More', 'goza');
 
+$paged = get_query_var( 'paged' )? get_query_var( 'paged' ) : 1;
 
 $args = array(
     'post_type'   => 'fw-portfolio',
     'posts_per_page' => $posts_per_page,
     'post_status' => 'publish',
     'order' => $order,
+    'paged' => $paged
 );
 
 $the_query = new WP_Query($args);
 
+$max_num_pages = $the_query->max_num_pages;
 
 ?>
 <section id="<?php echo $id; ?>" class="be-projects-grid-section <?php echo $align_class; ?>">
@@ -65,6 +70,25 @@ $the_query = new WP_Query($args);
         </div>
     <?php else: ?>  
         <div class="not-found"><?php echo __('No results found.', 'goza'); ?></div> 
-    <?php endif; ?>   
+    <?php endif; ?>  
+    
+    <?php if ( $loadmore && $max_num_pages > 0 ) {
+        $setting_loadmore = array(
+            'posts_per_page' => $posts_per_page,
+            'order' => $order,
+        );
+
+        echo '<div class="be-projects-grid__loadmore" 
+                data-block-id="'.$block['id'].'"
+                data-aos="fade-up" data-aos-duration="1000">
+            <a href="#"
+               class="be-projects-grid__loadmore-btn"
+               data-page="1"
+               data-max-page="'.esc_attr( $max_num_pages ).'"
+               data-settings="'.esc_attr( json_encode($setting_loadmore) ).'" 
+               >'.$loadmore_text.'
+            </a>
+        </div>';
+    } ?>
     </div>
 </section>
