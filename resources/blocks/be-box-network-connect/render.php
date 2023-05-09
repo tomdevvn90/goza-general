@@ -29,13 +29,13 @@ if (!empty($block['align'])) {
 
 // Load values and assign defaults.
 $bnc_icon            = __get_field('bnc_icon') ?: '';
-$bnc_title           = __get_field('bnc_title') ?: 'You May Volunteer to Help Other People';
-$bnc_desc            = __get_field('bnc_desc') ?: 'Lorem ipsum dolor amet, consectetur adipisicing praesentium officia, fugit recusandae ipsa rem ip dolor amet, consectetur adipisicing.';
+$bnc_title           = __get_field('bnc_title') ?: '';
+$bnc_desc            = __get_field('bnc_desc') ?: '';
 $bnc_cta             = __get_field('bnc_cta') ?: [];
 $bnc_bg_img          = __get_field('bnc_bg_img');
-$bnc_bg_color        = __get_field('bnc_bg_color') ?: '#fff';
-$bnc_bg_color_box    = __get_field('bnc_bg_color_box') ?: '#000';
-$bnc_txt_color       = __get_field('bnc_txt_color') ?: '#FFF';
+$bnc_bg_color        = __get_field('bnc_bg_color') ?: '';
+$bnc_bg_color_box    = __get_field('bnc_bg_color_box') ?: '';
+$bnc_txt_color       = __get_field('bnc_txt_color') ?: '';
 $bnc_style_button    = __get_field('bnc_style_button') ?: 'btn-default';
 
 // Build a valid style attribute for background and text colors.

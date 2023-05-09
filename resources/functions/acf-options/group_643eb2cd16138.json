@@ -58,7 +58,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "You May Volunteer to Help Other People",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -94,7 +94,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Lorem ipsum dolor amet, consectetur adipisicing praesentium officia, fugit recusandae ipsa rem ip dolor amet, consectetur adipisicing.",
             "maxlength": "",
             "rows": "",
             "placeholder": "",
@@ -156,7 +156,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "#000000",
+            "default_value": "#FFF",
             "enable_opacity": 1,
             "return_format": "string"
         },
@@ -174,7 +174,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "#000",
             "enable_opacity": 1,
             "return_format": "string"
         },
@@ -247,5 +247,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682007721
+    "modified": 1683643745
 }

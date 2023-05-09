@@ -22216,7 +22216,7 @@ h6 {
 }
 
 .be-give-slider-block.is-style-2 .be-give-slider-block-inner .item-give .entry-content .entry-content-inner .entry-bot .give-price-raised {
-  width: 45%;
+  width: 50%;
   float: left;
   text-align: center;
   font-size: 30px;
@@ -22238,11 +22238,11 @@ h6 {
 }
 
 .be-give-slider-block.is-style-2 .be-give-slider-block-inner .item-give .entry-content .entry-content-inner .entry-bot .give-price-goal {
-  width: 55%;
+  width: 50%;
   float: left;
   text-align: center;
   border-left: #ebebeb solid 1px;
-  font-size: 30px;
+  font-size: 22px;
   line-height: 1;
   letter-spacing: 0;
   color: #303030;
