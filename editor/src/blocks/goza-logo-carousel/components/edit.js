@@ -17,7 +17,7 @@ const Edit = (props) => {
                 <div className='block-inner block-editor'>
                     {arrows &&
                         <button type="button" class="slick-arrows s-prev pull-left slick-arrow"></button>
-                    }
+                    } 
 
                     {images ? (
                         images.map((logo) => {
