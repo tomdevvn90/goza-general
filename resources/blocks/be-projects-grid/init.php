@@ -53,9 +53,12 @@ function loadmore_projects_grid_func()
     $settings = json_decode($settings);
     $posts_per_page = get_option('posts_per_page');
     $order = 'desc';
+    $orderby = 'date';
+
     if( $settings ){
         $posts_per_page = $settings->posts_per_page;
         $order = $settings->order;
+        $orderby = $settings->orderby;
     }
 
     $args = array(
@@ -63,6 +66,7 @@ function loadmore_projects_grid_func()
         'posts_per_page' => $posts_per_page,
         'post_status' => 'publish',
         'order' => $order,
+        'orderby' => $orderby,
         'paged' => $page
     );
 

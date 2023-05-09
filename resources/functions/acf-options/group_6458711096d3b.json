@@ -29,7 +29,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
@@ -51,7 +51,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "35",
                 "class": "",
                 "id": ""
             },
@@ -60,6 +60,35 @@
                 "asc": "ASC"
             },
             "default_value": "desc",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6459f01f7ce84",
+            "label": "OrderBy",
+            "name": "orderby_projects_grid",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "35",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "date": "Date",
+                "title": "Title",
+                "rand": "Random",
+                "comment_count": "Comment Count",
+                "menu_order": "Menu Order"
+            },
+            "default_value": "date",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -368,5 +397,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683614115
+    "modified": 1683616586
 }

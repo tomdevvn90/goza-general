@@ -35,6 +35,7 @@ $color_variables = $bg_color_style.$title_color_style.$excerpt_color_style.$butt
 // option query fields
 $posts_per_page = !empty( get_field('posts_per_page_projects_grid') )? get_field('posts_per_page_projects_grid') : get_option('posts_per_page');
 $order = get_field('order_projects_grid') ? get_field('order_projects_grid') : 'desc';
+$orderby = get_field('orderby_projects_grid') ? get_field('orderby_projects_grid') : 'date';
 $loadmore = get_field('loadmore_projects_grid') ? get_field('loadmore_projects_grid') : false;
 $loadmore_text = get_field('loadmore_text_projects_grid') ? get_field('loadmore_text_projects_grid') : __('View More', 'goza');
 
@@ -45,6 +46,7 @@ $args = array(
     'posts_per_page' => $posts_per_page,
     'post_status' => 'publish',
     'order' => $order,
+    'orderby' => $orderby,
     'paged' => $paged
 );
 
@@ -76,6 +78,7 @@ $max_num_pages = $the_query->max_num_pages;
         $setting_loadmore = array(
             'posts_per_page' => $posts_per_page,
             'order' => $order,
+            'orderby' => $orderby,
         );
 
         echo '<div class="be-projects-grid__loadmore" 
