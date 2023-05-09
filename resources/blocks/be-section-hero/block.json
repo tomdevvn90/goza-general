@@ -2,7 +2,7 @@
     "name": "be-section-hero",
     "title": "Be Section Hero",
     "category": "goza-theme",
-    "icon": "format-image",
+    "icon": "index-card",
     "keywords": ["hero", "breadcrumb", "image"],
     "acf": {
         "mode": "preview",
