@@ -1,15 +1,5 @@
 <?php
 /**
- * Enqueue scripts and styles.
- */
-function goza_events_scripts() {
-	wp_enqueue_style( 'goza-events-style', get_template_directory_uri() . '/css/events.css', array(), wp_get_theme()->get( 'Version' ) );
-
-	wp_add_inline_style( 'goza-events-style', goza_events_theme_custom_style() );
-}
-add_action( 'wp_enqueue_scripts', 'goza_events_scripts' );
-
-/**
  * Display custom style in customizer and on frontend.
  */
 function goza_events_theme_custom_style() {

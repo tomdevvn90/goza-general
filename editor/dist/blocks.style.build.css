@@ -239,10 +239,7 @@
   .goza-logo-carousel-block .slick-dots li {
     margin: 0 8px;
     width: auto;
-    height: auto; }
-    .goza-logo-carousel-block .slick-dots li.slick-active button {
-      background-color: var(--link-color, #d41b65); }
-  .goza-logo-carousel-block .slick-dots button {
+    height: auto;
     cursor: pointer;
     -webkit-transition: 0.25s;
     -o-transition: 0.25s;
@@ -255,5 +252,8 @@
     border: none;
     overflow: hidden;
     text-indent: -1000px;
-    margin: 0;
     padding: 0; }
+    .goza-logo-carousel-block .slick-dots li.slick-active {
+      background-color: var(--link-color, #d41b65); }
+    .goza-logo-carousel-block .slick-dots li button {
+      display: none; }
