@@ -23003,6 +23003,17 @@ h6 {
   align-items: center;
 }
 
+.video-popup-actions-block .block-inner #block-video-action a.liquid::before {
+  display: none;
+}
+
+.video-popup-actions-block .block-inner #block-video-action a.liquid i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .video-popup-actions-block .block-inner #block-video-action a::before {
   content: "";
   position: absolute;

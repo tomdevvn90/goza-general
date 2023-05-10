@@ -74,6 +74,18 @@
                 justify-content: center;
                 align-items: center;
 
+                &.liquid{
+                    &::before{
+                        display: none;
+                    }
+                    i{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
                 &::before {
                     content: "";
                     position: absolute;

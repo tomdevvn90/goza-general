@@ -35,6 +35,7 @@ $vpa_border_radius      = __get_field('vpa_border_radius') ?: '3px';
 $vpa_color_heading      = __get_field('vpa_color_heading') ?: '#000';
 $vpa_icon_video_color   = __get_field('vpa_icon_video_color') ?: '#ed9913';
 $vpa_bg_color           = __get_field('vpa_bg_color') ?: '#eee';
+$vpa_play_video_icon    = __get_field('vpa_play_video_icon') ?: 'default';
 
 // Build a valid style attribute for background and text colors.
 $styles = array('background-color: ' . $vpa_bg_color);
@@ -57,8 +58,18 @@ $style  = implode('; ', $styles);
             $vpa_link_video = $vpa_link_video ? $vpa_link_video . '&mute=0' : '//www.youtube.com/watch?v=EIUJfXk3_3w&mute=0';
          ?>
             <!-- YouTube Video --->
-            <a data-lg-size="1280-720" data-src="<?= esc_url($vpa_link_video) ?>" style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
-               <i class="fa fa-play-circle-o"></i>
+            <a class="<?php echo ( $vpa_play_video_icon != 'default')? 'liquid' : ''; ?>" data-lg-size="1280-720" data-src="<?= esc_url($vpa_link_video) ?>" style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
+               <?php if ( $vpa_play_video_icon == 'default' ) {
+                  ?>
+                  <i class="fa fa-play-circle-o"></i>
+                  <?php
+               }else{
+                  ?>
+                  <div class="liquid-svg-button"></div>
+                  <i class="fa fa-play" aria-hidden="true"></i>
+                  <?php
+               } ?>   
+            
             </a>
          <?php } ?>
 
@@ -67,8 +78,17 @@ $style  = implode('; ', $styles);
             $vpa_link_video = $vpa_link_video ? $vpa_link_video : '//vimeo.com/112836958';
          ?>
             <!-- Vimeo Video --->
-            <a data-lg-size="1280-720" data-src="<?= esc_url($vpa_link_video) ?>" style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
-               <i class="fa fa-play-circle-o"></i>
+            <a class="<?php echo ( $vpa_play_video_icon != 'default')? 'liquid' : ''; ?>" data-lg-size="1280-720" data-src="<?= esc_url($vpa_link_video) ?>" style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
+            <?php if ( $vpa_play_video_icon == 'default' ) {
+                  ?>
+                  <i class="fa fa-play-circle-o"></i>
+                  <?php
+               }else{
+                  ?>
+                  <div class="liquid-svg-button"></div>
+                  <i class="fa fa-play" aria-hidden="true"></i>
+                  <?php
+               } ?>   
             </a>
          <?php } ?>
 
@@ -76,8 +96,17 @@ $style  = implode('; ', $styles);
             $video_url = $vpa_link_video ? $vpa_link_video : 'https://private-sharing.wistia.com/medias/mwhrulrucj';
          ?>
             <!-- Wistia Video --->
-            <a data-lg-size="1280-720" data-src="<?= esc_url($video_url) ?>" style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
-               <i class="fa fa-play-circle-o"></i>
+            <a class="<?php echo ( $vpa_play_video_icon != 'default')? 'liquid' : ''; ?>" data-lg-size="1280-720" data-src="<?= esc_url($video_url) ?>" style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
+               <?php if ( $vpa_play_video_icon == 'default' ) {
+                  ?>
+                  <i class="fa fa-play-circle-o"></i>
+                  <?php
+               }else{
+                  ?>
+                  <div class="liquid-svg-button"></div>
+                  <i class="fa fa-play" aria-hidden="true"></i>
+                  <?php
+               } ?>   
             </a>
          <?php } ?>
          <?php
@@ -85,8 +114,17 @@ $style  = implode('; ', $styles);
             $video_url = $vpa_link_video ? $vpa_link_video : get_template_directory_uri() . '/resources/assets/videos/video-demo.mp4';
          ?>
             <!-- HTML5 Video --->
-            <a data-lg-size="1280-720" data-video='{"source": [{"src":"<?= esc_url($video_url) ?>", "type":"video/mp4"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}' style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
-               <i class="fa fa-play-circle-o"></i>
+            <a class="<?php echo ( $vpa_play_video_icon != 'default')? 'liquid' : ''; ?>" data-lg-size="1280-720" data-video='{"source": [{"src":"<?= esc_url($video_url) ?>", "type":"video/mp4"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}' style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
+               <?php if ( $vpa_play_video_icon == 'default' ) {
+                  ?>
+                  <i class="fa fa-play-circle-o"></i>
+                  <?php
+               }else{
+                  ?>
+                  <div class="liquid-svg-button"></div>
+                  <i class="fa fa-play" aria-hidden="true"></i>
+                  <?php
+               } ?>   
             </a>
          <?php } ?>
       </div>
