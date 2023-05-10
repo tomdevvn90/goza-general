@@ -273,6 +273,80 @@ be_projects_grid.forEach(function (element) {
 
 /***/ }),
 
+/***/ "./resources/assets/js/blocks/single-event.js":
+/*!****************************************************!*\
+  !*** ./resources/assets/js/blocks/single-event.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global, jQuery) {global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+(function ($) {
+  "use strict";
+
+  var beCountDownEvent = function beCountDownEvent() {
+    var $ev_cd = $('.be-single-event-inner--count-down');
+    if ($ev_cd.length === 0) return;
+    $ev_cd.each(function () {
+      var $dataCountDown = $(this).data('count-down');
+      var $result = $(this).find('#be-count-down');
+      if ($dataCountDown.length > 0) {
+        __renderCountDown($dataCountDown, $result);
+      }
+    });
+    function __renderCountDown($dataCountDown, $result) {
+      var countDownDate = new Date("".concat($dataCountDown)).getTime();
+      var x = setInterval(function () {
+        // Get todays date and time
+        var now = new Date().getTime();
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+        var minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+        var seconds = Math.floor(distance % (1000 * 60) / 1000);
+        $result.html("<div class='be-day'>" + days + "<span>Days</span>" + "</div>" + "<div class='be-hours'>" + hours + "<span>Hours</span>" + "</div>" + "<div class='be-min'>" + minutes + "<span>Minutes</span>" + "</div>" + "<div class='be-sec'>" + seconds + "<span>Seconds</span>" + "</div>");
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("be-count-down").innerHTML = "EXPIRED";
+          $result.html("EXPIRED");
+        }
+      }, 1000);
+    }
+
+    // var countDownDate = new Date("may 08, 2024 15:37:25").getTime();
+
+    // var x = setInterval(function() {
+    //     // Get todays date and time
+    //     var now = new Date().getTime();
+    //     // Find the distance between now and the count down date
+    //     var distance = countDownDate - now;
+    //     // Time calculations for days, hours, minutes and seconds
+    //     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    //     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    //     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    //     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    //     // Output the result in an element with id="demo"
+    //     document.getElementById("getting-started").innerHTML = "<div class='bt-day'>" + days + "<span>Days</span>" + "</div>" + "<div class='bt-hours'>" + hours + "<span>Hours</span>" + "</div>"
+    //     + "<div class='bt-min'>" + minutes + "<span>Minutes</span>" + "</div>" + "<div class='bt-sec'>" + seconds + "<span>Seconds</span>" + "</div>";
+    //     // If the count down is over, write some text
+    //     if (distance < 0) {
+    //     clearInterval(x);
+    //         document.getElementById("getting-started").innerHTML = "EXPIRED";
+    //     }
+    // }, 1000);
+  };
+
+  $(window).on("scroll", function () {});
+  $(document).ready(function () {
+    beCountDownEvent();
+  });
+})(jQuery);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
 /***/ "./resources/assets/js/blocks/ss-text-tsm-video.js":
 /*!*********************************************************!*\
   !*** ./resources/assets/js/blocks/ss-text-tsm-video.js ***!
@@ -705,6 +779,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./blocks/logo-carousel */ "./resources/assets/js/blocks/logo-carousel.js");
 /* harmony import */ var _blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _blocks_projects_popup_action__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./blocks/projects-popup-action */ "./resources/assets/js/blocks/projects-popup-action.js");
+/* harmony import */ var _blocks_single_event__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./blocks/single-event */ "./resources/assets/js/blocks/single-event.js");
+/* harmony import */ var _blocks_single_event__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_blocks_single_event__WEBPACK_IMPORTED_MODULE_15__);
 
 
 
@@ -715,6 +791,7 @@ aos__WEBPACK_IMPORTED_MODULE_3___default.a.init({
   once: true,
   disable: 'mobile'
 });
+
 
 
 
@@ -757,9 +834,9 @@ aos__WEBPACK_IMPORTED_MODULE_3___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-module.exports = __webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+module.exports = __webpack_require__(/*! C:\Users\HUNG MINH TECHNOLOGY\Local Sites\goza-theme\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
 
 
 /***/ })

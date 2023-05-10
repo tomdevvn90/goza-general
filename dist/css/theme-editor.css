@@ -9528,6 +9528,106 @@
   }
 }
 
+.be-single-event-inner--name {
+  font-size: 42px;
+  line-height: 48px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.be-single-event-inner--name > a {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.be-single-event-inner--heading {
+  color: var(--link-color);
+  font-size: 45px;
+  line-height: 53px;
+  text-align: center;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0 0 10px 0;
+}
+
+.be-single-event-inner--venue svg {
+  width: 100%;
+  max-width: 15px;
+  height: auto;
+}
+
+.be-single-event-inner--venue svg path {
+  fill: var(--link-color);
+}
+
+.be-single-event.is-style-default .be-single-event-inner {
+  display: flex;
+}
+
+.be-single-event.is-style-default .be-single-event-inner--thumbnail {
+  width: 40%;
+  position: relative;
+}
+
+.be-single-event.is-style-default .be-single-event-inner--thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.be-single-event.is-style-default .be-single-event-inner--content {
+  width: 60%;
+  background-color: #fff;
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.be-single-event.is-style-default .be-single-event-inner--name {
+  color: var(--heading-color);
+}
+
+.be-single-event.is-style-default .be-single-event-inner--date-start {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+  font-family: var(--heading-family);
+  color: var(--body-color);
+  margin: 20px 0 0 0;
+  width: 100%;
+}
+
+.be-single-event.is-style-default .be-single-event-inner--date-start > span {
+  color: var(--link-color);
+  font-weight: 700;
+}
+
+.be-single-event.is-style-default .be-single-event-inner--venue {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.be-single-event.is-style-default .be-single-event-inner--venue span {
+  font-size: 16px;
+  list-style: 26px;
+}
+
+.be-single-event.is-style-default .be-single-event-inner--button {
+  margin-top: 30px;
+}
+
 .block-editor-block-list__block .be-testominials-block-carousel {
   display: flex;
   overflow: auto;
@@ -9950,5 +10050,11 @@
 .editor-styles-wrapper .block-editor-block-list__layout .be-ss-text-tsm-video--testimonial .item-testimonial blockquote {
   margin: 0;
   padding: 0;
+}
+
+.editor-styles-wrapper .block-editor-block-list__layout .be-ss-text-tsm-video--video-cta .be-popup-video .__icon-play {
+  margin: 0;
+  height: auto;
+  display: flex;
 }
 
