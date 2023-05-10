@@ -543,7 +543,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 .lg-outer .lg-item.lg-complete.lg-zoomable .lg-img-wrap {
   transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -551,7 +550,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 .lg-outer .lg-item.lg-complete.lg-zoomable .lg-dummy-img {
   transform: scale3d(1, 1, 1);
   transition: transform 0.5s cubic-bezier(0.12, 0.415, 0.01, 1.19) 0s, opacity 0.15s !important;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -1289,7 +1287,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 .lg-css3.lg-use-css3 .lg-item {
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -8235,7 +8232,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 .lg-css3.lg-use-css3 .lg-item {
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -8346,7 +8342,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 .lg-outer .lg-item.lg-complete.lg-zoomable .lg-img-wrap {
   transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -8354,7 +8349,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 .lg-outer .lg-item.lg-complete.lg-zoomable .lg-dummy-img {
   transform: scale3d(1, 1, 1);
   transition: transform 0.5s cubic-bezier(0.12, 0.415, 0.01, 1.19) 0s, opacity 0.15s !important;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -24480,6 +24474,36 @@ h6 {
   outline: none;
   padding: 0.5em;
   width: 100%;
+}
+
+.be-counter-up .be-counter-up-box {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding: 30px;
+}
+
+.be-counter-up .be-counter-up-box__number {
+  display: flex;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px;
+  color: #333;
+}
+
+.be-counter-up .be-counter-up-box__number span {
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.be-counter-up .be-counter-up-box__heading {
+  font-size: 16px;
+  color: #d41b65;
+  line-height: 25px;
+  font-weight: 400;
+  margin-bottom: 0;
 }
 
 .tribe-common h1,

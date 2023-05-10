@@ -1,0 +1,15 @@
+{
+    "name": "be-counter-box",
+    "title": "Be Counter Box",
+    "category": "goza-theme",
+    "icon": "testimonial",
+    "keywords": ["be text counter", "counter", "be"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "align": true
+    },
+    "align": "full"
+}

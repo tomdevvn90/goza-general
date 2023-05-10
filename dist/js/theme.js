@@ -1,5 +1,54 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["/js/theme"],{
 
+/***/ "./resources/assets/js/blocks/counter-box.js":
+/*!***************************************************!*\
+  !*** ./resources/assets/js/blocks/counter-box.js ***!
+  \***************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var counterup2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! counterup2 */ "./node_modules/counterup2/dist/index.js");
+/* harmony import */ var counterup2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(counterup2__WEBPACK_IMPORTED_MODULE_0__);
+
+(function ($) {
+  "use strict";
+
+  var beCounterBox = function beCounterBox() {
+    var $isCounter = $('.be-counter-up .counter-up');
+    if ($isCounter.length === 0) return;
+    var callback = function callback(entries) {
+      entries.forEach(function (entry) {
+        var el = entry.target;
+        if (entry.isIntersecting && !el.classList.contains('is-visible')) {
+          var $duration = $(el).data('duration') ? $(el).data('duration') : 1000;
+          var $delay = $(el).data('delay') ? $(el).data('delay') : 60;
+          counterup2__WEBPACK_IMPORTED_MODULE_0___default()(el, {
+            duration: $duration,
+            delay: $delay
+          });
+          el.classList.add('is-visible');
+        }
+      });
+    };
+    var IO = new IntersectionObserver(callback, {
+      threshold: 1
+    });
+    $isCounter.forEach(function ($value, index) {
+      IO.observe($value);
+    });
+  };
+  $(window).on("scroll", function () {});
+  $(document).ready(function () {});
+  $(window).on("load", function () {
+    beCounterBox();
+  });
+})(jQuery);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
 /***/ "./resources/assets/js/blocks/events-listing.js":
 /*!******************************************************!*\
   !*** ./resources/assets/js/blocks/events-listing.js ***!
@@ -753,6 +802,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./blocks/logo-carousel */ "./resources/assets/js/blocks/logo-carousel.js");
 /* harmony import */ var _blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _blocks_projects_grid_action__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./blocks/projects-grid-action */ "./resources/assets/js/blocks/projects-grid-action.js");
+/* harmony import */ var _blocks_counter_box__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./blocks/counter-box */ "./resources/assets/js/blocks/counter-box.js");
 
 
 
@@ -763,6 +813,7 @@ aos__WEBPACK_IMPORTED_MODULE_3___default.a.init({
   once: true,
   disable: 'mobile'
 });
+
 
 
 
@@ -805,9 +856,9 @@ aos__WEBPACK_IMPORTED_MODULE_3___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-module.exports = __webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+module.exports = __webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
 
 
 /***/ })
