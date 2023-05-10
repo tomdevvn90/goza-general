@@ -65,7 +65,7 @@ $style  = implode('; ', $styles);
                   <?php
                }else{
                   ?>
-                  <div class="liquid-svg-button"></div>
+                  <div id="liquid-svg-button" class="liquid-svg-button"></div>
                   <i class="fa fa-play" aria-hidden="true"></i>
                   <?php
                } ?>   
@@ -85,7 +85,7 @@ $style  = implode('; ', $styles);
                   <?php
                }else{
                   ?>
-                  <div class="liquid-svg-button"></div>
+                  <div id="liquid-svg-button" class="liquid-svg-button"></div>
                   <i class="fa fa-play" aria-hidden="true"></i>
                   <?php
                } ?>   
@@ -103,7 +103,7 @@ $style  = implode('; ', $styles);
                   <?php
                }else{
                   ?>
-                  <div class="liquid-svg-button"></div>
+                  <div id="liquid-svg-button" class="liquid-svg-button"></div>
                   <i class="fa fa-play" aria-hidden="true"></i>
                   <?php
                } ?>   
@@ -121,7 +121,7 @@ $style  = implode('; ', $styles);
                   <?php
                }else{
                   ?>
-                  <div class="liquid-svg-button"></div>
+                  <div id="liquid-svg-button" class="liquid-svg-button"></div>
                   <i class="fa fa-play" aria-hidden="true"></i>
                   <?php
                } ?>   

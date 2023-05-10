@@ -581,7 +581,7 @@ var LiquidButton = /*#__PURE__*/function () {
     this.context = this.canvas.getContext('2d');
     this.wrapperElement = options.wrapperElement || document.body;
     if (!this.canvas.parentElement) {
-      document.querySelector('.liquid-svg-button').append(this.canvas);
+      document.getElementById('liquid-svg-button').append(this.canvas);
     }
     this.touches = [];
     this.noise = options.noise || 0;
