@@ -7,8 +7,6 @@ lightGallery(document.getElementById('block-video-action'), {
     plugins: [lgVideo],
 });
 
-const block_video_action = document.getElementById('block-video-action');
-
 const LiquidButton = class LiquidButton {
     constructor(optionsParam) {
       const options = optionsParam || {};
@@ -42,7 +40,7 @@ const LiquidButton = class LiquidButton {
       this.wrapperElement = options.wrapperElement || document.body;
       if (!this.canvas.parentElement) {
 
-        block_video_action.querySelector('.liquid-svg-button').append(this.canvas);
+        document.querySelector('.liquid-svg-button').append(this.canvas);
       }
       this.touches = [];
       this.noise = options.noise || 0;

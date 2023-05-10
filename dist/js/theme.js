@@ -548,7 +548,6 @@ var dat = __webpack_require__(/*! dat.gui */ "./node_modules/dat.gui/build/dat.g
 Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(document.getElementById('block-video-action'), {
   plugins: [lightgallery_plugins_video__WEBPACK_IMPORTED_MODULE_1__["default"]]
 });
-var block_video_action = document.getElementById('block-video-action');
 var LiquidButton = /*#__PURE__*/function () {
   function LiquidButton(optionsParam) {
     _classCallCheck(this, LiquidButton);
@@ -582,7 +581,7 @@ var LiquidButton = /*#__PURE__*/function () {
     this.context = this.canvas.getContext('2d');
     this.wrapperElement = options.wrapperElement || document.body;
     if (!this.canvas.parentElement) {
-      block_video_action.querySelector('.liquid-svg-button').append(this.canvas);
+      document.querySelector('.liquid-svg-button').append(this.canvas);
     }
     this.touches = [];
     this.noise = options.noise || 0;
