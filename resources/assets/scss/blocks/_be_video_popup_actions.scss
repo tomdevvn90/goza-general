@@ -75,6 +75,9 @@
                 align-items: center;
 
                 &.liquid{
+                    height: 100px;
+                    width: 100px;
+                    background-color: #e21da7;
                     &::before{
                         display: none;
                     }

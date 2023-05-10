@@ -47,6 +47,7 @@ $styles[] = 'height: ' . $vpa_height;
 $styles[] = 'max-width: ' . $vpa_width;
 $style  = implode('; ', $styles);
 
+$vpa_button_styles = 'color:'.esc_attr($vpa_icon_video_color).';background-color:'.esc_attr($vpa_icon_video_color).';';
 ?>
 <div <?php echo $anchor; ?>class="<?php echo esc_attr($class_name); ?>" style="<?php echo esc_attr($style); ?>">
    <div class="block-inner">
@@ -58,7 +59,8 @@ $style  = implode('; ', $styles);
             $vpa_link_video = $vpa_link_video ? $vpa_link_video . '&mute=0' : '//www.youtube.com/watch?v=EIUJfXk3_3w&mute=0';
          ?>
             <!-- YouTube Video --->
-            <a class="<?php echo ( $vpa_play_video_icon != 'default')? 'liquid' : ''; ?>" data-lg-size="1280-720" data-src="<?= esc_url($vpa_link_video) ?>" style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
+            <a class="<?php echo ( $vpa_play_video_icon != 'default')? 'liquid' : ''; ?>" data-lg-size="1280-720" data-src="<?= esc_url($vpa_link_video) ?>" 
+               style="<?php echo ( $vpa_play_video_icon == 'default' )? $vpa_button_styles : ''; ?>">
                <?php if ( $vpa_play_video_icon == 'default' ) {
                   ?>
                   <i class="fa fa-play-circle-o"></i>
@@ -78,7 +80,8 @@ $style  = implode('; ', $styles);
             $vpa_link_video = $vpa_link_video ? $vpa_link_video : '//vimeo.com/112836958';
          ?>
             <!-- Vimeo Video --->
-            <a class="<?php echo ( $vpa_play_video_icon != 'default')? 'liquid' : ''; ?>" data-lg-size="1280-720" data-src="<?= esc_url($vpa_link_video) ?>" style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
+            <a class="<?php echo ( $vpa_play_video_icon != 'default')? 'liquid' : ''; ?>" data-lg-size="1280-720" data-src="<?= esc_url($vpa_link_video) ?>" 
+               style="<?php echo ( $vpa_play_video_icon == 'default' )? $vpa_button_styles : ''; ?>">
             <?php if ( $vpa_play_video_icon == 'default' ) {
                   ?>
                   <i class="fa fa-play-circle-o"></i>
@@ -96,7 +99,8 @@ $style  = implode('; ', $styles);
             $video_url = $vpa_link_video ? $vpa_link_video : 'https://private-sharing.wistia.com/medias/mwhrulrucj';
          ?>
             <!-- Wistia Video --->
-            <a class="<?php echo ( $vpa_play_video_icon != 'default')? 'liquid' : ''; ?>" data-lg-size="1280-720" data-src="<?= esc_url($video_url) ?>" style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
+            <a class="<?php echo ( $vpa_play_video_icon != 'default')? 'liquid' : ''; ?>" data-lg-size="1280-720" data-src="<?= esc_url($video_url) ?>" 
+               style="<?php echo ( $vpa_play_video_icon == 'default' )? $vpa_button_styles : '' ; ?>">
                <?php if ( $vpa_play_video_icon == 'default' ) {
                   ?>
                   <i class="fa fa-play-circle-o"></i>
@@ -114,7 +118,8 @@ $style  = implode('; ', $styles);
             $video_url = $vpa_link_video ? $vpa_link_video : get_template_directory_uri() . '/resources/assets/videos/video-demo.mp4';
          ?>
             <!-- HTML5 Video --->
-            <a class="<?php echo ( $vpa_play_video_icon != 'default')? 'liquid' : ''; ?>" data-lg-size="1280-720" data-video='{"source": [{"src":"<?= esc_url($video_url) ?>", "type":"video/mp4"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}' style="color: <?= esc_attr($vpa_icon_video_color) ?>; background-color: <?= esc_attr($vpa_icon_video_color) ?>">
+            <a class="<?php echo ( $vpa_play_video_icon != 'default')? 'liquid' : ''; ?>" data-lg-size="1280-720" data-video='{"source": [{"src":"<?= esc_url($video_url) ?>", "type":"video/mp4"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}' 
+               style="<?php echo ( $vpa_play_video_icon == 'default' )? $vpa_button_styles : ''; ?>">
                <?php if ( $vpa_play_video_icon == 'default' ) {
                   ?>
                   <i class="fa fa-play-circle-o"></i>

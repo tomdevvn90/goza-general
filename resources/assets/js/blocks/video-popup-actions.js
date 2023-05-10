@@ -1,6 +1,6 @@
 import lightGallery from 'lightgallery'; 
 import lgVideo from 'lightgallery/plugins/video';
-const dat = require('dat.gui');
+import dat from 'dat.gui';
 
 
 lightGallery(document.getElementById('block-video-action'), {

@@ -24,8 +24,8 @@ $heading_color_style = !empty( $heading_color )? 'color:'.esc_attr( $number_colo
 <div id="<?php echo $id; ?>" class="be-counter-up <?php echo $align_class; ?>">
     <div class="be-counter-up-box" style="<?php echo $bg_img; ?>">
         <h2 class="be-counter-up-box__number" style="<?php echo $number_color_style; ?>">
-            <?php if( !empty( $counter_number_after ) ): ?>
-            <span class="counter-up-after"><?php echo __( $counter_number_after, 'goza'); ?></span>
+            <?php if( !empty( $counter_number_before ) ): ?>
+            <span class="counter-up-before"><?php echo __( $counter_number_before, 'goza' ); ?></span>
             <?php endif; ?>
             <span class="counter-up" 
                 data-counter="<?php echo esc_attr( $counter_number ); ?>"
@@ -33,8 +33,8 @@ $heading_color_style = !empty( $heading_color )? 'color:'.esc_attr( $number_colo
                 data-delay="<?php echo esc_attr( $counter_delay ); ?>">
                 <?php echo esc_attr( $counter_number ); ?>
             </span>
-            <?php if( !empty( $counter_number_before ) ): ?>
-            <span class="counter-up-before"><?php echo __( $counter_number_before, 'goza' ); ?></span>
+            <?php if( !empty( $counter_number_after ) ): ?>
+            <span class="counter-up-after"><?php echo __( $counter_number_after, 'goza'); ?></span>
             <?php endif; ?>
         </h2>
         <h5 class="be-counter-up-box__heading" style="<?php echo $heading_color_style; ?>">

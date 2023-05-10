@@ -67,9 +67,9 @@
             "append": ""
         },
         {
-            "key": "field_645b165c0286c",
-            "label": "After Number Counter",
-            "name": "after_number_counter_box",
+            "key": "field_645b16940286d",
+            "label": "Before Number Counter",
+            "name": "before_number_counter_box",
             "aria-label": "",
             "type": "text",
             "instructions": "Add character something like this: $,#,K...",
@@ -87,9 +87,9 @@
             "append": ""
         },
         {
-            "key": "field_645b16940286d",
-            "label": "Before Number Counter",
-            "name": "before_number_counter_box",
+            "key": "field_645b165c0286c",
+            "label": "After Number Counter",
+            "name": "after_number_counter_box",
             "aria-label": "",
             "type": "text",
             "instructions": "Add character something like this: $,#,K...",
@@ -259,5 +259,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683691738
+    "modified": 1683709059
 }

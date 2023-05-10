@@ -23003,6 +23003,12 @@ h6 {
   align-items: center;
 }
 
+.video-popup-actions-block .block-inner #block-video-action a.liquid {
+  height: 100px;
+  width: 100px;
+  background-color: #e21da7;
+}
+
 .video-popup-actions-block .block-inner #block-video-action a.liquid::before {
   display: none;
 }
@@ -24500,6 +24506,7 @@ h6 {
   font-size: 45px;
   line-height: 45px;
   color: #333;
+  margin-bottom: 10px;
 }
 
 .be-counter-up .be-counter-up-box__number span {
