@@ -81,6 +81,9 @@
                     &::before{
                         display: none;
                     }
+                    .liquid-svg-button{
+                        line-height: 0;
+                    }
                     i{
                         position: absolute;
                         top: 50%;

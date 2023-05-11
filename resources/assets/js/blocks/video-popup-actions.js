@@ -38,8 +38,8 @@ const LiquidButton = class LiquidButton {
       this.canvas  = options.canvas  || document.createElement('canvas');
       this.context = this.canvas.getContext('2d');
       this.wrapperElement = options.wrapperElement || document.body;
-      if (!this.canvas.parentElement) {
-
+      if (!this.canvas.parentElement && document.getElementById('liquid-svg-button') ) {
+        console.log(document.getElementById('liquid-svg-button') );
         document.getElementById('liquid-svg-button').append(this.canvas);
       }
       this.touches = [];

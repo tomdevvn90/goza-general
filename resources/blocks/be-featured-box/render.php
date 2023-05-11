@@ -43,26 +43,53 @@ $fb_btn_bg              = __get_field('fb_btn_bg') ?: '';
 $fb_btn_bg_hover        = __get_field('fb_btn_bg_hover') ?: '';
 
 // Build a valid style attribute for background and text colors.
-$styles = array('background-color: ' . $bnc_bg_color);
+$styles = [
+   '--bg-color: ' . $fb_bg_color,
+   '--title-color : ' . $fb_color_title,
+   '--text-color: ' . $fb_color_text,
+   '--btn-color: ' . $fb_button_color,
+   '--btn-color-hover: ' . $fb_button_color_hover,
+   '--btn-bg-color: ' . $fb_btn_bg,
+   '--btn-bg-color-hover: ' . $fb_btn_bg_hover,
+];
 $style  = implode('; ', $styles);
 
 ?>
 <div <?php echo $anchor; ?>class="<?php echo esc_attr($class_name); ?>" style="<?php echo esc_attr($style); ?>">
    <div class="inner-block">
-         <div class="block-col block-col-6">
-            <?php if ($fb_icon) { ?>
+      <div class="block-col block-col-6">
+         <?php if ($fb_icon) { ?>
+            <div class="icon-wrap">
                <img src="<?= esc_attr($fb_icon['url']) ?>" alt="<?= esc_attr($fb_icon['alt']) ?>" />
-            <?php } ?>
+            </div>
+         <?php } ?>
+         <div class="entry-box-wrap">
+            <h4 class="featured-box-title"><?= esc_attr($fb_heading) ?></h4>
+            <div class="featured-box-text"><?= esc_attr($fb_desc) ?></div>
          </div>
-         <div class="block-col block-col-4">
-            <?php if ($fb_icon) { ?>
-               <img src="<?= esc_attr($fb_icon['url']) ?>" alt="<?= esc_attr($fb_icon['alt']) ?>" />
-            <?php } ?>
-         </div>
-         <div class="block-col block-col-2">
-            <?php if ($fb_icon) { ?>
-               <img src="<?= esc_attr($fb_icon['url']) ?>" alt="<?= esc_attr($fb_icon['alt']) ?>" />
-            <?php } ?>
-         </div>
+
+      </div>
+      <div class="block-col block-col-4">
+         <?php
+         if (have_rows('fb_box_featured_list')) {
+            while (have_rows('fb_box_featured_list')) {
+               the_row();
+               $box_value = get_sub_field('box_value');
+               $box_text = get_sub_field('box_text');
+         ?>
+               <div class="box-item">
+                  <h4 class="featured-box-title"><?= esc_attr($box_value) ?></h4>
+                  <div class="featured-box-text"><?= esc_attr($box_text) ?></div>
+               </div>
+         <?php
+            }
+         }
+         ?>
+      </div>
+      <div class="block-col block-col-2">
+         <?php if ($fb_box_button) { ?>
+            <a class="featured-box-btn" href="<?= esc_url($fb_box_button['url']) ?>" target="<?= esc_url($fb_box_button['target']) ?>"><?= esc_attr($fb_box_button['title']) ?></a>
+         <?php } ?>
+      </div>
    </div>
 </div>
