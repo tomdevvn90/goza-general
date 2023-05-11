@@ -20,11 +20,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_644533646fac5",
-            "label": "Heading",
-            "name": "vpa_heading",
+            "key": "field_644533bd6fac8",
+            "label": "Background Image",
+            "name": "vpa_bg_image",
             "aria-label": "",
-            "type": "text",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -33,11 +33,56 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Your Heading Here",
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_644533646fac5",
+            "label": "Heading",
+            "name": "vpa_heading",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
             "maxlength": "",
+            "rows": 2,
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "new_lines": ""
+        },
+        {
+            "key": "field_6445337b6fac6",
+            "label": "Link Video",
+            "name": "vpa_link_video",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": ""
         },
         {
             "key": "field_644538f9da96a",
@@ -49,7 +94,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -68,26 +113,6 @@
             "placeholder": ""
         },
         {
-            "key": "field_6445337b6fac6",
-            "label": "Link Video",
-            "name": "vpa_link_video",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_645b3edae185d",
             "label": "Play Video Icon",
             "name": "vpa_play_video_icon",
@@ -97,13 +122,13 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "choices": {
                 "default": "Default",
-                "liquid": "Liquid SVG"
+                "liquid": "Liquid"
             },
             "default_value": "default",
             "return_format": "value",
@@ -129,31 +154,6 @@
             },
             "placement": "top",
             "endpoint": 0
-        },
-        {
-            "key": "field_644533bd6fac8",
-            "label": "Background Image",
-            "name": "vpa_bg_image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
         },
         {
             "key": "field_644533ee6fac9",
@@ -217,6 +217,24 @@
             "append": ""
         },
         {
+            "key": "field_64453693424fa",
+            "label": "Background Color",
+            "name": "vpa_bg_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string"
+        },
+        {
             "key": "field_644534866facc",
             "label": "Color Heading",
             "name": "vpa_color_heading",
@@ -259,24 +277,6 @@
             "default_value": "",
             "enable_opacity": 1,
             "return_format": "string"
-        },
-        {
-            "key": "field_64453693424fa",
-            "label": "Background Color",
-            "name": "vpa_bg_color",
-            "aria-label": "",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 1,
-            "return_format": "string"
         }
     ],
     "location": [
@@ -297,5 +297,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683705988
+    "modified": 1683766389
 }

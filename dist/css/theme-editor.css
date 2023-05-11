@@ -8371,6 +8371,10 @@
   display: none;
 }
 
+.video-popup-actions-block .block-inner #block-video-action a.liquid .liquid-svg-button {
+  line-height: 0;
+}
+
 .video-popup-actions-block .block-inner #block-video-action a.liquid i {
   position: absolute;
   top: 50%;
