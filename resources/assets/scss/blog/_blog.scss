@@ -81,7 +81,7 @@
             font-size: 22px;
             line-height: 30px;
             font-weight: 600;
-            color: var(--link-color, #333);
+            color:#333;
             transition: all 0.3s ease 0s;
         }
 
@@ -102,9 +102,10 @@
                 }
                 i{
                     margin-right: 3px;
-                    color: var(--link-color-hover, #d41b65);
+                    color: var(--link-color, #d41b65);
                 }
                 .link{
+                    color: #999;
                     transition: all 0.3s ease 0s;
                     &:hover{
                         color: var(--link-color-hover, #d41b65);

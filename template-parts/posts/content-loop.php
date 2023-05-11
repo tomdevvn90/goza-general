@@ -20,6 +20,8 @@
         <?php 
         global $wp_query;
 
+        $animation = 'data-aos="fade-up" data-aos-duration="1000"';
+
         $big = 999999999;
 
         $pre_text = '<i class="fa fa-angle-left"></i> <strong>Newer</strong>';
@@ -51,7 +53,7 @@
         }
 
         if ( $wp_query->max_num_pages > 1) {
-            echo '<div class="pagination loop-pagination">';
+            echo '<div class="pagination loop-pagination" '.$animation.'>';
             echo    $html;
             echo '</div>';
         }
