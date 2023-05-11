@@ -23,6 +23,9 @@ function be_single_ev_template_default(){
             $time_start  = tribe_get_start_date( get_the_ID(), true, 'G i a');
             $venue       = tribe_get_venue(get_the_ID());
             $count_down  = tribe_get_start_date( get_the_ID(), true, 'F d , Y G:i:s');
+            $time_now    = time();
+            $timestamp   = strtotime($count_down);
+            $distance    = $timestamp - $time_now;
         }
     ?>
    
@@ -53,6 +56,27 @@ function be_single_ev_template_default(){
         <?php endif; ?>  
 
         <div class="be-single-event-inner--count-down" data-count-down="<?= esc_attr($count_down) ?>"> 
+            <?php if(!empty($distance)): ?>
+                <?php 
+                    $days    = floor($distance / (60 * 60 * 24));
+                    $hours   = floor(($distance % (60 * 60 * 24)) / (60 * 60));
+                    $minutes = floor(($distance % (60 * 60)) / 60);
+                    $seconds = $distance % 60;    
+                ?>
+
+                <div id="be-count-down-edit">
+                    <?php if($days >= 0){ ?>
+                        <div class='be-day'> <?= $days ?> <span>Days</span> </div>
+                        <div class='be-hours'> <?= $hours ?> <span>Hours</span> </div>
+                        <div class='be-min'> <?= $minutes ?> <span>Minutes</span> </div>
+                        <div class='be-sec'> <?= $seconds ?><span>Seconds</span> </div>
+                    <?php }else{ ?>
+                        <span> EXPIRED </span>
+                    <?php } ?>
+
+                </div>
+            <?php endif; ?>    
+            
             <div id="be-count-down"> </div>
         </div>
         
