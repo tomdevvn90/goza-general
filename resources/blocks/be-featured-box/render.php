@@ -49,20 +49,39 @@ $style  = implode('; ', $styles);
 ?>
 <div <?php echo $anchor; ?>class="<?php echo esc_attr($class_name); ?>" style="<?php echo esc_attr($style); ?>">
    <div class="inner-block">
-         <div class="block-col block-col-6">
-            <?php if ($fb_icon) { ?>
+      <div class="block-col block-col-6">
+         <?php if ($fb_icon) { ?>
+            <div class="icon-wrap">
                <img src="<?= esc_attr($fb_icon['url']) ?>" alt="<?= esc_attr($fb_icon['alt']) ?>" />
-            <?php } ?>
+            </div>
+         <?php } ?>
+         <div class="entry-box-wrap">
+            <h4 class="featured-box-title"><?= esc_attr($fb_heading) ?></h4>
+            <div class="featured-box-text"><?= esc_attr($fb_desc) ?></div>
          </div>
-         <div class="block-col block-col-4">
-            <?php if ($fb_icon) { ?>
-               <img src="<?= esc_attr($fb_icon['url']) ?>" alt="<?= esc_attr($fb_icon['alt']) ?>" />
-            <?php } ?>
-         </div>
-         <div class="block-col block-col-2">
-            <?php if ($fb_icon) { ?>
-               <img src="<?= esc_attr($fb_icon['url']) ?>" alt="<?= esc_attr($fb_icon['alt']) ?>" />
-            <?php } ?>
-         </div>
+
+      </div>
+      <div class="block-col block-col-4">
+         <?php
+         if (have_rows('fb_box_featured_list')) {
+            while (have_rows('fb_box_featured_list')) {
+               the_row();
+               $box_value = get_sub_field('box_value');
+               $box_text = get_sub_field('box_text');
+         ?>
+               <div class="box-item">
+                  <h4 class="featured-box-title"><?= esc_attr($box_value) ?></h4>
+                  <div class="featured-box-text"><?= esc_attr($box_text) ?></div>
+               </div>
+         <?php
+            }
+         }
+         ?>
+      </div>
+      <div class="block-col block-col-2">
+         <?php if ($fb_box_button) { ?>
+            <a class="featured-box-btn" href="<?= esc_url($fb_box_button['url']) ?>" target="<?= esc_url($fb_box_button['target']) ?>"><?= esc_attr($fb_box_button['title']) ?></a>
+         <?php } ?>
+      </div>
    </div>
 </div>
