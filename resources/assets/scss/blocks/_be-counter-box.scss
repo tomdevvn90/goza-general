@@ -1,0 +1,31 @@
+.be-counter-up{
+    .be-counter-up-box{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        padding: 30px;
+        
+        &__number{
+            display: flex;
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 45px;
+            color: #333;
+            margin-bottom: 10px;
+            span{
+                font-size: inherit;
+                color: inherit;
+                font-weight: inherit;
+                line-height: inherit;
+            }
+        }
+        &__heading{
+            font-size: 16px;
+            color: #d41b65;
+            line-height: 25px;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+    }
+    
+}

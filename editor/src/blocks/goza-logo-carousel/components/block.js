@@ -5,10 +5,10 @@
 const GozaLogoCarousel = (props) => {
 	// Setup the attributes
 	const { attributes, setAttributes, className } = props;
-	const { arrows,dots, infinite, speed, centerMode, autoplay, autoplaySpeed, slidesToShow, slidesToScroll, gap } = attributes
+	const { arrows, dots, infinite, speed, centerMode, autoplay, autoplaySpeed, slidesToShow, slidesToScroll, gap } = attributes
 	let dataSlider = {
-		slidesToShow: slidesToShow, 
-		slidesToScroll: slidesToScroll, 
+		slidesToShow: slidesToShow,
+		slidesToScroll: slidesToScroll,
 		arrows: arrows,
 		dots: dots,
 		infinite: infinite,
@@ -17,9 +17,8 @@ const GozaLogoCarousel = (props) => {
 		autoplay: autoplay,
 		autoplaySpeed: autoplaySpeed
 	}
-	console.log(gap)
 	return (
-		<div className={['goza-logo-carousel-block', className].join(' ')} data-slider={JSON.stringify(dataSlider)} style={{'--gap': gap}}>
+		<div className={['goza-logo-carousel-block', className].join(' ')} data-slider={JSON.stringify(dataSlider)} style={{ '--gap': gap }}>
 			{props.children}
 		</div>
 	)

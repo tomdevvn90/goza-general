@@ -81,15 +81,6 @@
             margin: 0 8px;
             width: auto;
             height: auto;
-
-            &.slick-active {
-                button {
-                    background-color: $primary-color;
-                }
-            }
-        }
-
-        button {
             cursor: pointer;
             -webkit-transition: 0.25s;
             -o-transition: 0.25s;
@@ -102,8 +93,17 @@
             border: none;
             overflow: hidden;
             text-indent: -1000px;
-            margin: 0;
             padding: 0;
+
+            &.slick-active {
+                background-color: $primary-color;
+            }
+
+            button {
+                display: none;
+            }
         }
+
+
     }
 }

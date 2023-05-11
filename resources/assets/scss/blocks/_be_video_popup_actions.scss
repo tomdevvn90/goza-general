@@ -74,6 +74,21 @@
                 justify-content: center;
                 align-items: center;
 
+                &.liquid{
+                    height: 100px;
+                    width: 100px;
+                    background-color: #e21da7;
+                    &::before{
+                        display: none;
+                    }
+                    i{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
                 &::before {
                     content: "";
                     position: absolute;

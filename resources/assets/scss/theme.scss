@@ -25,7 +25,9 @@
 
 // font awesome
 @import '~font-awesome/scss/font-awesome';
-@import "~slick-carousel/slick/slick";
+@import '~slick-carousel/slick/slick-theme';
+@import '~slick-carousel/slick/slick';
+
 // Application
 @import "shared/all";
 @import "components/all";

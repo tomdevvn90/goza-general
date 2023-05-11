@@ -100,6 +100,16 @@
         }
     }
 
+    &.btn-style-custom{
+        background-image: -webkit-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.1) 50%,rgba(0,0,0,.1));
+        background-image: -o-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.1) 50%,rgba(0,0,0,.1));
+        background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.1) 50%,rgba(0,0,0,.1));
+        background-repeat: no-repeat;
+        background-repeat: repeat-x;
+        background-size: 200%;
+        background-position: 0 -100%;
+    }
+
     &.btn-organization {
         text-transform: uppercase;
         font-weight: 700;

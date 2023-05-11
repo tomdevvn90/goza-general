@@ -14,7 +14,7 @@ import Save from "./components/save";
 const attr = {
 	align: {
         type: 'string',
-        default: 'full'
+        default: ''
     },
 	images: {
 		"type": "array"

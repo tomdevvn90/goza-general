@@ -29,11 +29,11 @@ if (!empty($block['align'])) {
 
 // Load values and assign defaults.
 $gsb_heading               = __get_field('gsb_heading') ?: '';
-$gsb_subheading            = __get_field('gsb_subheading') ?: 'You May Volunteer to Help Other People';
+$gsb_subheading            = __get_field('gsb_subheading') ?: '';
 $gsb_bg_image              = __get_field('gsb_bg_image') ?: [];
 $gsb_box_services          = __get_field('gsb_box_services') ?: [];
 $gsb_heading_color         = __get_field('gsb_heading_color') ?: '#fff';
-$gsb_bg_color          = __get_field('gsb_bg_color');
+$gsb_bg_color              = __get_field('gsb_bg_color');
 $gsb_box_color             = __get_field('gsb_box_color') ?: '#fff';
 $gsb_box_hover_color       = __get_field('gsb_box_hover_color') ?: '#000';
 $gsb_box_bg_color          = __get_field('gsb_box_bg_color') ?: '#FFF';

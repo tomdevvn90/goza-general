@@ -7,7 +7,7 @@ import { MediaPlaceholder } from '@wordpress/block-editor';
 
 const Edit = (props) => {
     const { attributes, setAttributes } = props
-    const { images } = attributes
+    const { images, dots, arrows } = attributes
 
     return (
         <Fragment>
@@ -15,6 +15,10 @@ const Edit = (props) => {
             <Inspector {...props} />
             <GozaLogoCarousel {...props}>
                 <div className='block-inner block-editor'>
+                    {arrows &&
+                        <button type="button" class="slick-arrows s-prev pull-left slick-arrow"></button>
+                    } 
+
                     {images ? (
                         images.map((logo) => {
                             return (
@@ -41,8 +45,13 @@ const Edit = (props) => {
                             labels={__('Add Logos', 'goza')}
                         />
                     )}
+                    {arrows &&
+                        <button type="button" class="slick-arrows s-next pull-right slick-arrow"></button>
+                    }
                 </div>
-                <ul class="slick-dots"><li><button type="button" id="slick-slide-control00"></button></li><li><button type="button" id="slick-slide-control01"></button></li></ul>
+                {dots &&
+                    <ul class="slick-dots"><li><button type="button" id="slick-slide-control00"></button></li><li><button type="button" id="slick-slide-control01"></button></li></ul>
+                }
             </GozaLogoCarousel>
         </Fragment>
     )
