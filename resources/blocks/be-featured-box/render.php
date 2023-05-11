@@ -43,7 +43,15 @@ $fb_btn_bg              = __get_field('fb_btn_bg') ?: '';
 $fb_btn_bg_hover        = __get_field('fb_btn_bg_hover') ?: '';
 
 // Build a valid style attribute for background and text colors.
-$styles = array('background-color: ' . $bnc_bg_color);
+$styles = [
+   '--bg-color: ' . $fb_bg_color,
+   '--title-color : ' . $fb_color_title,
+   '--text-color: ' . $fb_color_text,
+   '--btn-color: ' . $fb_button_color,
+   '--btn-color-hover: ' . $fb_button_color_hover,
+   '--btn-bg-color: ' . $fb_btn_bg,
+   '--btn-bg-color-hover: ' . $fb_btn_bg_hover,
+];
 $style  = implode('; ', $styles);
 
 ?>

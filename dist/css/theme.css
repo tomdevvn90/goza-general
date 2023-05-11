@@ -24820,7 +24820,7 @@ h6 {
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #ed9913;
+  background-color: var(--bg-color, #ed9913);
 }
 
 @media (min-width: 992px) {
@@ -24890,13 +24890,13 @@ h6 {
   margin-bottom: 0;
   font-style: normal;
   font-weight: 500;
-  color: #000;
+  color: var(--title-color, #000);
 }
 
 .be-box-featured-block .inner-block .block-col .entry-box-wrap .featured-box-text {
   font-size: 16px;
   line-height: 22px;
-  color: #000;
+  color: var(--text-color, #000);
 }
 
 .be-box-featured-block .inner-block .block-col .box-item {
@@ -24907,7 +24907,7 @@ h6 {
 
 .be-box-featured-block .inner-block .block-col .box-item .featured-box-title {
   font-size: 30px;
-  color: #000000;
+  color: var(--title-color, #000);
   line-height: 30px;
   font-style: normal;
   font-weight: 600;
@@ -24916,16 +24916,16 @@ h6 {
 
 .be-box-featured-block .inner-block .block-col .box-item .featured-box-text {
   font-size: 16px;
-  color: #000000;
+  color: var(--text-color, #000);
   line-height: 18px;
   font-weight: 500;
   font-style: normal;
 }
 
 .be-box-featured-block .inner-block .block-col .featured-box-btn {
-  background-color: #ed7a13;
+  background-color: var(--btn-bg-color, #ed7a13);
   font-size: 16px;
-  color: #ffffff;
+  color: var(--btn-color, #ffffff);
   line-height: 20px;
   text-align: center;
   letter-spacing: 2px;
@@ -24946,7 +24946,8 @@ h6 {
 }
 
 .be-box-featured-block .inner-block .block-col .featured-box-btn:hover {
-  background-color: #ef862a;
+  background-color: var(--btn-bg-color-hover, #ed7a13);
+  color: var(--btn-color-hover, #ffffff);
 }
 
 .tribe-common h1,

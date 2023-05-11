@@ -18,7 +18,7 @@
             align-items: center;
             padding-top: 20px;
             padding-bottom: 20px;
-            background-color: #ed9913;
+            background-color: var(--bg-color, #ed9913);
 
             @include media-breakpoint-up(lg) {
                 flex: 0 0 50%;
@@ -78,13 +78,13 @@
                     margin-bottom: 0;
                     font-style: normal;
                     font-weight: 500;
-                    color: #000;
+                    color: var(--title-color, #000);
                 }
 
                 .featured-box-text {
                     font-size: 16px;
                     line-height: 22px;
-                    color: #000;
+                    color: var(--text-color, #000);
                 }
             }
 
@@ -95,7 +95,7 @@
 
                 .featured-box-title {
                     font-size: 30px;
-                    color: #000000;
+                    color: var(--title-color, #000);
                     line-height: 30px;
                     font-style: normal;
                     font-weight: 600;
@@ -104,7 +104,7 @@
 
                 .featured-box-text {
                     font-size: 16px;
-                    color: #000000;
+                    color: var(--text-color, #000);
                     line-height: 18px;
                     font-weight: 500;
                     font-style: normal;
@@ -112,9 +112,9 @@
             }
 
             .featured-box-btn {
-                background-color: #ed7a13;
+                background-color: var(--btn-bg-color, #ed7a13);
                 font-size: 16px;
-                color: #ffffff;
+                color: var(--btn-color, #ffffff);
                 line-height: 20px;
                 text-align: center;
                 letter-spacing: 2px;
@@ -132,7 +132,8 @@
                 }
 
                 &:hover {
-                    background-color: #ef862a;
+                    background-color: var(--btn-bg-color-hover, #ed7a13);
+                    color: var(--btn-color-hover, #ffffff);
                 }
             }
         }
