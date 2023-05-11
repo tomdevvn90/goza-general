@@ -1,0 +1,7 @@
+.be-box-featured-block {
+    margin-top: 40px;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: -40px;
+    }
+}

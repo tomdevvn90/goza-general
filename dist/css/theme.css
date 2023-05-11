@@ -18125,6 +18125,16 @@ h6 {
   padding-right: 10%;
 }
 
+.be-box-featured-block {
+  margin-top: 40px;
+}
+
+@media (min-width: 992px) {
+  .be-box-featured-block {
+    margin-top: -40px;
+  }
+}
+
 .be-testominials-block {
   box-sizing: border-box;
 }
