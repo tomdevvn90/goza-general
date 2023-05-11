@@ -3,7 +3,8 @@
     background: #ed9913;
     padding: 50px;
     border-radius: 4px;
-
+    max-width: 810px;
+    margin: 0 auto;
     .give-form-wrap {
         .give-goal-progress {
             margin-bottom: 25px;
@@ -148,8 +149,9 @@
             fieldset#give_purchase_submit {
                 display: inline-block;
                 #give-final-total-wrap{
+
                     .give-donation-total-label {
-                        background-color: #f2f2f2;
+                        background-color: #FFF;
                         border: 1px solid #ccc;
                         box-sizing: border-box;
                         color: #333;

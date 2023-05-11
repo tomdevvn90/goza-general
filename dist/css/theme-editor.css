@@ -7562,6 +7562,10 @@
   box-shadow: rgba(1, 1, 1, 0.2) 0px 0px 13px -2px;
 }
 
+.be-give-slider-block-inner .slick-dots li button {
+  display: none;
+}
+
 .be-give-slider-block.is-style-default .be-give-slider-block-inner .item-give .featured-image {
   min-height: 290px;
   position: relative;
@@ -8537,16 +8541,12 @@
 .goza-image-content-block .block-inner {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
 }
 
 .goza-image-content-block .block-inner__col {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 @media (min-width: 768px) {
@@ -8576,14 +8576,14 @@
 
 .goza-image-content-block .block-inner__col.block-inner__image img {
   height: 100%;
-  width: calc(100% - 30px);
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   position: absolute;
   top: 0;
-  left: 15px;
+  left: 0;
 }
 
 .goza-image-content-block .block-inner .block-inner__content-subheading {
@@ -9627,6 +9627,8 @@
   background: #ed9913;
   padding: 50px;
   border-radius: 4px;
+  max-width: 810px;
+  margin: 0 auto;
 }
 
 .btp-form-donate .give-form-wrap .give-goal-progress {
@@ -9771,7 +9773,7 @@
 }
 
 .btp-form-donate .give-form #give_purchase_form_wrap fieldset#give_purchase_submit #give-final-total-wrap .give-donation-total-label {
-  background-color: #f2f2f2;
+  background-color: #FFF;
   border: 1px solid #ccc;
   box-sizing: border-box;
   color: #333;
