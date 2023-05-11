@@ -50,10 +50,11 @@
             $html = $html . $next_button; 
         }
 
-        echo '<div class="pagination loop-pagination">';
-        echo    $html;
-        echo '</div>';
-    
+        if ( $wp_query->max_num_pages > 1) {
+            echo '<div class="pagination loop-pagination">';
+            echo    $html;
+            echo '</div>';
+        }
 
         ?>
     </div>
