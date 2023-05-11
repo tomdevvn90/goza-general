@@ -18125,12 +18125,12 @@ h6 {
   padding-right: 10%;
 }
 
-.be-box-featured-block {
+.be-box-featured-block.home-ngo {
   margin-top: 40px;
 }
 
 @media (min-width: 992px) {
-  .be-box-featured-block {
+  .be-box-featured-block.home-ngo {
     margin-top: -40px;
   }
 }

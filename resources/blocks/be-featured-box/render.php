@@ -55,7 +55,7 @@ $styles = [
 $style  = implode('; ', $styles);
 
 ?>
-<div <?php echo $anchor; ?>class="<?php echo esc_attr($class_name); ?>" style="<?php echo esc_attr($style); ?>">
+<div  data-aos="fade-up" <?php echo $anchor; ?>class="<?php echo esc_attr($class_name); ?>" style="<?php echo esc_attr($style); ?>">
    <div class="inner-block">
       <div class="block-col block-col-6">
          <?php if ($fb_icon) { ?>
