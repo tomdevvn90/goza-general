@@ -1,7 +1,13 @@
 {
     "/js/manifest.js": "/js/manifest.js?id=41f053ba9a94d81b39f8",
+<<<<<<< HEAD
     "/js/theme.js": "/js/theme.js?id=4b8f241e824277b8ae3b",
     "/css/theme.css": "/css/theme.css?id=565490a8e54f87ff2d6d",
     "/css/theme-editor.css": "/css/theme-editor.css?id=d5b23a571ddfea56a3fb",
+=======
+    "/js/theme.js": "/js/theme.js?id=34d223872e17d4abefd9",
+    "/css/theme.css": "/css/theme.css?id=f9dabea19bcc6bc15f2b",
+    "/css/theme-editor.css": "/css/theme-editor.css?id=5f1ebf89c0b5b35a1613",
+>>>>>>> de40c12289942f70a1d3c5aa9a82181b1420dc1d
     "/js/vendor.js": "/js/vendor.js?id=ee9f0301b80ed35ab56d"
 }
