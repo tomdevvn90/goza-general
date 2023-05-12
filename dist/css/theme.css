@@ -11905,6 +11905,60 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   bottom: 0px;
 }
 
+.has-sidebar .post-sidebar .wg-wrap .wp-block-search .wp-block-search__inside-wrapper {
+  position: relative;
+  height: 50px;
+}
+
+.has-sidebar .post-sidebar .wg-wrap .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input {
+  border-radius: 3px;
+  background-color: #FFF;
+  border: 1px solid rgba(53, 53, 53, 0.1);
+  transition: all 0.3s ease;
+  max-width: 100%;
+  height: 100%;
+  padding: 0 35px 0 10px;
+  color: #353535;
+  font-weight: 700;
+}
+
+.has-sidebar .post-sidebar .wg-wrap .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:focus {
+  border: 1px solid rgba(212, 27, 101, 0.5);
+  box-shadow: none;
+  outline: none;
+}
+
+.has-sidebar .post-sidebar .wg-wrap .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 50px;
+  height: calc(100% - 2px);
+  border: 0;
+  color: transparent;
+  background-color: transparent;
+}
+
+.has-sidebar .post-sidebar .wg-wrap .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 2px);
+  background: #FFF;
+  text-align: center;
+  line-height: 28px;
+  font-family: FontAwesome;
+  content: "\F002";
+  font-size: 16px;
+  font-weight: normal;
+  color: #353535;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  z-index: 1;
+}
+
 @media (max-width: 991px) {
   .has-sidebar .post-sidebar .post-sidebar-wrap {
     padding: 0 20px 0px;
