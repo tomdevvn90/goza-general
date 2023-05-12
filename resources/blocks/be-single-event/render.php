@@ -10,12 +10,20 @@ $is_style    = isset($block['className']) ? $block['className'] : "is-style-defa
 // $bg          = get_field('bg_ss_ab_counter') ?: get_template_directory_uri(). '/resources/assets/images/bg-ss-text-tsm-video.jpg';
 $ev_select = get_field('event_sg_ev') ?: '';
 
-$args = [
-   'post_type'      => 'tribe_events',
-   'post_status'    => 'publish',
+// $args = [
+//    'post_type'      => 'tribe_events',
+//    'post_status'    => 'publish',
+//    'posts_per_page' => 1,
+//    'order'          => 'DESC',
+// ];
+
+$args = array(
+   'post_type' => 'tribe_events',
    'posts_per_page' => 1,
-   'order'          => 'DESC',
-];
+   'orderby' => 'meta_value',
+   'meta_key' => '_EventStartDate',
+   'order' => 'ASC',
+);
 
 if(!empty($ev_select)){
    $args['post__in']  = array();
