@@ -17139,7 +17139,7 @@ h6 {
 
 .footer-ngo.main-footer form input.tnp-email {
   border: 1px solid rgba(53, 53, 53, 0.1);
-  width: calc(100% - 95px);
+  width: calc(100% - 101px);
   height: 40px;
   line-height: 40px;
   display: inline-block;
@@ -17153,7 +17153,7 @@ h6 {
 }
 
 .footer-ngo.main-footer form .tnp-submit {
-  border-radius: 3px;
+  border-radius: 0;
   border: none;
   color: #fff;
   padding: 8px 12px;
@@ -17163,7 +17163,7 @@ h6 {
   transition: 0.3s;
   display: inline-block;
   text-transform: uppercase;
-  width: 90px;
+  width: auto;
   font-weight: 600;
   height: 40px;
   background-color: var(--link-color, rgb(131, 61, 204));
@@ -18133,6 +18133,17 @@ h6 {
   .be-box-featured-block.home-ngo {
     margin-top: -40px;
   }
+}
+
+.home-ngo-styles .goza-topbar.goza-topbar-default .goza-topbar-item.goza-topbar-ep a i,
+.home-ngo-styles .site-header.site-header-default .goza-header-main--menu .navbar-nav > li > a:hover,
+.home-ngo-styles .site-header .goza-header-main--menu .navbar-nav .menu-item .sub-menu li a:hover {
+  color: #ed9913;
+}
+
+.home-ngo-styles .site-header.site-header-default .goza-header-main--cta .goza-header-cart-icon .goza-total-cart,
+.home-ngo-styles .site-header.site-header-default .goza-header-main--cta .goza-header-button {
+  background: #ed9913;
 }
 
 .be-testominials-block {
@@ -23387,6 +23398,7 @@ h6 {
 
 .grid-services-box-block .gsb-services-list .gsb-services-item:hover .gsb-services-item__wrap-hover {
   padding-top: 25px;
+  padding-bottom: 25px;
   opacity: 1;
   visibility: visible;
   background: #ed9913;
