@@ -64,7 +64,11 @@
                         "twitter": "Twitter",
                         "linkedin": "LinkedIn",
                         "pinterest-p": "Pinterest",
-                        "youtube": "Youtube"
+                        "youtube": "Youtube",
+                        "instagram": "Instagram",
+                        "tumblr": "Tumblr",
+                        "dribbble": "Dribbble",
+                        "flickr": "Flickr"
                     },
                     "default_value": false,
                     "return_format": "array",
@@ -117,5 +121,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682522951
+    "modified": 1683943103
 }

@@ -1,4 +1,54 @@
 .be-socials-block{
+    &.is-style-2{
+        .be-socials-block{
+            &--items{
+                li{
+                    a{
+                        border-radius: 3px;
+                        background-color: #f1f1f1;
+                        box-shadow: none;
+
+                        .fa-facebook{
+                            color: #3b5999;
+                        }
+                        .fa-twitter{
+                            color: #55acee;
+                        }
+                        .fa-google-plus{
+                            color: #dd4b39;
+                        }
+                        .fa-instagram{
+                            color: #fbad50;
+                        }
+                        .fa-linkedin{
+                            color: #0077b5;
+                        }
+                        .fa-pinterest{
+                            color: #bd081c;
+                        }
+                        .fa-tumblr{
+                            color: #34465d;
+                        }
+                        .fa-youtube{
+                            color: #cd201f;
+                        }
+                        .fa-dribbble{
+                            color: #ea4c89;
+                        }
+                        .fa-flickr{
+                            color: #ff0084;
+                        }
+                        &:hover{
+                            background-color: var(--link-color, #333);
+                            i{
+                                color: #fff;                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     &-inner{
         display: flex;
         align-items: center;
@@ -18,13 +68,16 @@
     &--items{
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         margin: 0;
         padding: 0;
         li{
             list-style: none;
+            margin: 0 5px 8px 0;
             a{
-                width: 44px;
-                height: 44px;
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
                 background-color: #fff;
                 display: flex;
                 align-items: center;
@@ -38,9 +91,11 @@
                     transition: 0.3s ease;
                 }
                 &:hover{
-                    background-color: var(--link-color);
+                    background-color: var(--link-color, #333);
+                    transform: translateY(-3px);
                     i{
                         color: #fff;
+                        transform: scale(1.1);
                     }
                 }
             }
