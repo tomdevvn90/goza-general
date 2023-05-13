@@ -7922,6 +7922,165 @@
   -webkit-transform: scale(1.05);
 }
 
+.be-socials-block.is-style-2 .be-socials-block--items li a {
+  border-radius: 3px;
+  background-color: #f1f1f1;
+  box-shadow: none;
+}
+
+.be-socials-block.is-style-2 .be-socials-block--items li a .fa-facebook {
+  color: #3b5999;
+}
+
+.be-socials-block.is-style-2 .be-socials-block--items li a .fa-twitter {
+  color: #55acee;
+}
+
+.be-socials-block.is-style-2 .be-socials-block--items li a .fa-google-plus {
+  color: #dd4b39;
+}
+
+.be-socials-block.is-style-2 .be-socials-block--items li a .fa-instagram {
+  color: #fbad50;
+}
+
+.be-socials-block.is-style-2 .be-socials-block--items li a .fa-linkedin {
+  color: #0077b5;
+}
+
+.be-socials-block.is-style-2 .be-socials-block--items li a .fa-pinterest {
+  color: #bd081c;
+}
+
+.be-socials-block.is-style-2 .be-socials-block--items li a .fa-tumblr {
+  color: #34465d;
+}
+
+.be-socials-block.is-style-2 .be-socials-block--items li a .fa-youtube {
+  color: #cd201f;
+}
+
+.be-socials-block.is-style-2 .be-socials-block--items li a .fa-dribbble {
+  color: #ea4c89;
+}
+
+.be-socials-block.is-style-2 .be-socials-block--items li a .fa-flickr {
+  color: #ff0084;
+}
+
+.be-socials-block.is-style-2 .be-socials-block--items li a:hover {
+  background-color: var(--link-color, #333);
+}
+
+.be-socials-block.is-style-2 .be-socials-block--items li a:hover i {
+  color: #fff;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .facebook {
+  border-color: #3b5999;
+  background-color: #3b5999;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .facebook:hover i {
+  color: #3b5999;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .twitter {
+  border-color: #55acee;
+  background-color: #55acee;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .twitter:hover i {
+  color: #55acee;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .google-plus {
+  border-color: #dd4b39;
+  background-color: #dd4b39;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .google-plus:hover i {
+  color: #dd4b39;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .instagram {
+  border-color: #fbad50;
+  background-color: #fbad50;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .instagram:hover i {
+  color: #fbad50;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .linkedin {
+  border-color: #0077b5;
+  background-color: #0077b5;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .linkedin:hover i {
+  color: #0077b5;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .pinterest-p {
+  border-color: #bd081c;
+  background-color: #bd081c;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .pinterest-p:hover i {
+  color: #bd081c;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .tumblr {
+  border-color: #34465d;
+  background-color: #34465d;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .tumblr:hover i {
+  color: #34465d;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .youtube {
+  border-color: #cd201f;
+  background-color: #cd201f;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .youtube:hover i {
+  color: #cd201f;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .dribbble {
+  border-color: #ea4c89;
+  background-color: #ea4c89;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .dribbble:hover i {
+  color: #ea4c89;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .flickr {
+  border-color: #ff0084;
+  background-color: #ff0084;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li .flickr:hover i {
+  color: #ff0084;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li a {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li a i {
+  color: #fff;
+}
+
+.be-socials-block.is-style-3 .be-socials-block--items li a:hover {
+  background-color: #fff;
+}
+
 .be-socials-block-inner {
   display: flex;
   align-items: center;
@@ -7941,17 +8100,22 @@
 .be-socials-block--items {
   display: flex;
   align-items: center;
-  margin: 0;
+  flex-wrap: wrap;
+  margin-left: -4px;
+  margin-right: -4px;
+  margin-bottom: 0;
   padding: 0;
 }
 
 .be-socials-block--items li {
   list-style: none;
+  margin: 0 4px 8px 4px;
 }
 
 .be-socials-block--items li a {
-  width: 44px;
-  height: 44px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -7968,21 +8132,19 @@
 }
 
 .be-socials-block--items li a:hover {
-  background-color: var(--link-color);
+  background-color: var(--link-color, #333);
+  transform: translateY(-3px);
 }
 
 .be-socials-block--items li a:hover i {
   color: #fff;
+  transform: scale(1.1);
 }
 
 .be-socials-block--items li img {
   width: 100%;
   height: auto;
   max-width: 20px;
-}
-
-.be-socials-block--items li:not(:last-child) {
-  margin-right: 5px;
 }
 
 .be-grid-gallery-image-text-block {
@@ -10320,6 +10482,8 @@
 
 .be-recent-posts .recent-posts-list .post-item__content {
   flex-grow: 1;
+  width: -moz-min-content;
+  width: min-content;
 }
 
 .be-recent-posts .recent-posts-list .post-item__title-link {
@@ -10347,10 +10511,11 @@
   line-height: 20px;
   margin-top: 10px;
   vertical-align: top;
+  margin-right: 20px;
 }
 
-.be-recent-posts .recent-posts-list .post-item__author:not(:last-child) {
-  margin-right: 30px;
+.be-recent-posts .recent-posts-list .post-item__author span {
+  line-height: inherit;
 }
 
 .be-recent-posts .recent-posts-list .post-item__author i {
@@ -10359,6 +10524,7 @@
 }
 
 .be-recent-posts .recent-posts-list .post-item__author .link {
+  line-height: inherit;
   color: #999;
   transition: all 0.3s ease 0s;
 }
@@ -10382,6 +10548,12 @@
   line-height: 20px;
   font-weight: 400;
   color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .block-editor-block-list__block .be-testominials-block-carousel {
