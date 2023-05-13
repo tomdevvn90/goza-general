@@ -35,12 +35,11 @@
         form {
             input.tnp-email {
                 border: 1px solid rgba(53, 53, 53, 0.1);
-                width: calc(100% - 95px);
+                width: calc(100% - 101px);
                 height: 40px;
                 line-height: 40px;
                 display: inline-block;
-                margin-right: 5px;
-                border-radius: 3px !important;
+                border-radius: 0 !important;
                 background-color: #f4f4f4;
                 color: #444;
                 font-size: 14px;
@@ -49,7 +48,7 @@
             }
 
             .tnp-submit {
-                border-radius: 3px;
+                border-radius: 0;
                 border: none;
                 color: #fff;
                 padding: 8px 12px;
@@ -60,7 +59,7 @@
                 transition: 0.3s;
                 display: inline-block;
                 text-transform: uppercase;
-                width: 90px;
+                width: auto;
                 font-weight: 600;
                 height: 40px;
                 background-color: var(--link-color, rgb(131, 61, 204));
