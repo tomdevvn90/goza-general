@@ -7,9 +7,10 @@ $id = 'be-socials-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$heading  = get_field('heading_bl_socials');
-$items    = get_field('list_items_bl_socials');
-$is_style = isset($block['className']) ? $block['className'] : "is-style-default";
+$heading      = get_field('heading_bl_socials');
+$open_new_tab = get_field('open_new_tab_bl_social');
+$items        = get_field('list_items_bl_socials');
+$is_style     = isset($block['className']) ? $block['className'] : "is-style-default";
 
 ?>
 <div id="<?php echo $id; ?>" class="be-socials-block <?php echo $align_class; ?> <?php echo $is_style?>"> 
@@ -24,7 +25,9 @@ $is_style = isset($block['className']) ? $block['className'] : "is-style-default
                <?php $icon = $value['icon']; ?>
                <?php if(!empty($value['url'])): ?>
                   <li> 
-                     <a href="<?php echo esc_url($value['url']) ?>"> <i class="fa fa-<?php echo $icon['value'] ?>" aria-hidden="true"></i></a> </a> 
+                     <a href="<?php echo esc_url($value['url']) ?>" class="<?php echo $icon['value']; ?>" target="<?php echo ($open_new_tab)? '_blank' : ''; ?>"> 
+                        <i class="fa fa-<?php echo $icon['value']; ?>" aria-hidden="true"></i>
+                     </a>
                   </li>
                <?php endif; ?>   
             <?php endforeach; ?>   

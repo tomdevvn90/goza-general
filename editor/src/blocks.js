@@ -12,4 +12,5 @@
 import './blocks/global'
 import './blocks/goza-container';
 import './blocks/goza-spacer';
-import './blocks/goza-logo-carousel'
+import './blocks/goza-logo-carousel';
+import './blocks/goza-buttons';

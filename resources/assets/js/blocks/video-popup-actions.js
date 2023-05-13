@@ -1,6 +1,5 @@
 import lightGallery from 'lightgallery'; 
 import lgVideo from 'lightgallery/plugins/video';
-import dat from 'dat.gui';
 
 
 lightGallery(document.getElementById('block-video-action'), {
@@ -39,7 +38,6 @@ const LiquidButton = class LiquidButton {
       this.context = this.canvas.getContext('2d');
       this.wrapperElement = options.wrapperElement || document.body;
       if (!this.canvas.parentElement && document.getElementById('liquid-svg-button') ) {
-        console.log(document.getElementById('liquid-svg-button') );
         document.getElementById('liquid-svg-button').append(this.canvas);
       }
       this.touches = [];
@@ -274,31 +272,4 @@ const LiquidButton = class LiquidButton {
   
   let button = new LiquidButton();
   
-  var gui = new dat.GUI();
-  gui.add(button, "debug");
-  gui.add(button, "text");
-  gui.add(button, "gap", 1, 20, 1).onChange(redraw);
-  gui.add(button, "width", 100, 500, 1).onChange(redraw);
-  gui.add(button, "height", 10, 100, 1).onChange(redraw);
-  gui.add(button, "margin", 10, 100, 1).onChange(redraw);
-  gui.add(button, "padding", 0, 30, 1);
-  gui.add(button, "tension", 0, 1, 0.01);
-  gui.add(button, "forceFactor", 0, 1, 0.01);
-  gui.add(button, "hoverFactor", -1, 1, 0.01);
-  gui.addColor(button, "color1");
-  gui.addColor(button, "color2");
-  gui.addColor(button, "color3");
-  gui.addColor(button, "textColor");
-  for (let layerIndex = 0; layerIndex < button.layers.length; layerIndex++) {
-    const layer = button.layers[layerIndex];
-    const folder = gui.addFolder('Layer ' + (layerIndex + 1));
-    folder.add(layer, "viscosity", 0, 1, 0.01);
-    folder.add(layer, "mouseForce", 0, 2000, 1);
-    folder.add(layer, "forceLimit", 0, 200, 0.1);
-    folder.open();
-  }
-  
-//   if (window.innerWidth < 1000) {
-    gui.close();
-//   }
   
