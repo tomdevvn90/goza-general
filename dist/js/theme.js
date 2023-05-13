@@ -536,7 +536,7 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lightgallery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lightgallery */ "./node_modules/lightgallery/lightgallery.es5.js");
 /* harmony import */ var lightgallery_plugins_video__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lightgallery/plugins/video */ "./node_modules/lightgallery/plugins/video/lg-video.es5.js");
-/* harmony import */ var dat_gui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dat.gui */ "./node_modules/dat.gui/build/dat.gui.module.js");
+!(function webpackMissingModule() { var e = new Error("Cannot find module 'dat.gui'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -798,7 +798,7 @@ var redraw = function redraw() {
   button.initOrigins();
 };
 var button = new LiquidButton();
-var gui = new dat_gui__WEBPACK_IMPORTED_MODULE_2__["default"].GUI();
+var gui = new !(function webpackMissingModule() { var e = new Error("Cannot find module 'dat.gui'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()).GUI();
 gui.add(button, "debug");
 gui.add(button, "text");
 gui.add(button, "gap", 1, 20, 1).onChange(redraw);
@@ -1140,9 +1140,9 @@ aos__WEBPACK_IMPORTED_MODULE_3___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\PC\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! C:\Users\PC\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-module.exports = __webpack_require__(/*! C:\Users\PC\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+module.exports = __webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
 
 
 /***/ })
