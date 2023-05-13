@@ -116,3 +116,15 @@ function goza_child_deregister_styles()
 add_action('wp_enqueue_scripts', 'goza_child_deregister_styles', 20);
 
 
+add_filter('previous_posts_link_attributes', 'prev_posts_link_attributes_func');
+function prev_posts_link_attributes_func() {
+	return 'class="prev page-button"';
+}
+
+add_filter('next_posts_link_attributes', 'next_posts_link_attributes_func');
+function next_posts_link_attributes_func() {
+  return 'class="next page-button"';
+}
+
+
+

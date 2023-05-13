@@ -17,5 +17,15 @@
                 }
             }
         }
+
+        &--video-cta{
+            .be-popup-video{
+                .__icon-play{
+                    margin: 0;
+                    height: auto;
+                    display: flex
+                }
+            }
+        }
     }
 }

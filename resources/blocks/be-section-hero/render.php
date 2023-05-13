@@ -11,6 +11,7 @@ $bg_overlay_color = get_field('bg_overlay_color_ss_hero');
 $bg_overlay_opacity = get_field('bg_overlay_opacity_ss_hero');
 $content_alignmnet = get_field('content_alignmnet_ss_hero');
 $icon = get_field('icon_ss_hero');
+$heading_archive = get_field('heading_archive_ss_hero');
 $heading = get_field('heading_ss_hero');
 $heading_color = get_field('heading_color_ss_hero');
 $heading_font_size = get_field('heading_font_size_ss_hero');
@@ -38,8 +39,13 @@ $breadcrumb_color_style = !empty( $breadcrumb_color )? 'color:'.$breadcrumb_colo
                 </div>
             <?php endif; ?>   
             
-            <?php if ( !empty( $heading ) ): ?>
+
+            <?php if ( !empty( $heading ) && ! is_archive() ): ?>
                 <h2 class="be-ss-hero-inner__heading" style="<?php echo $heading_font_size_style; ?><?php echo $heading_color_style; ?>"><?php echo $heading; ?></h2>
+            <?php endif; ?>   
+
+            <?php if ( is_archive() && $heading_archive ): ?>
+                <h2 class="be-ss-hero-inner__heading" style="<?php echo $heading_font_size_style; ?><?php echo $heading_color_style; ?>"><?php echo get_the_archive_title(); ?></h2>
             <?php endif; ?>   
          
             <?php if ( function_exists( 'yoast_breadcrumb' ) ): ?>

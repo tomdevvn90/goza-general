@@ -1,0 +1,151 @@
+.be-recent-posts{
+    .recent-posts-list{
+        .post-item{
+            padding-bottom: 15px;
+            &__inner{
+                display: flex;
+            }
+            &__featured-thumbnail{
+                width: 100%;
+                height: 70px;
+                max-width: 100px;
+                margin-right: 15px;
+                margin-bottom: 0;
+                display: inline-block;
+                text-decoration: none;
+                line-height: 0;
+                position: relative;
+                overflow: hidden;
+                border-radius: 4px;
+                transition: all 0.3s ease 0s;
+                &.medium{
+                    height: 200px;
+                    max-width: 300px;
+                }
+                &.large{
+                    height: auto;
+                    max-width: 56%;
+                    padding-bottom: 56%;
+                }
+                &::before{
+                    content: "\f178";
+                    display: inline-block;
+                    font-family: 'FontAwesome';
+                    font-style: normal;
+                    font-variant: normal;
+                    font-weight: normal;
+                    line-height: 1;
+                    text-rendering: auto;
+                    text-transform: none;
+                    position: absolute;
+                    left: 0%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 3;
+                    color: rgb(255, 255, 255);
+                    opacity: 0;
+                    transition: all 0.3s ease 0s;
+                    font-size: 24px;
+                }
+                &::after{
+                    background: #333;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: 1;
+                    transition: all 0.3s ease 0s;
+                }
+                img{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    max-width: 100%;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                &:hover{
+                    &::before{
+                        left: 50%;
+                        opacity: 1;
+                    }
+                    &::after{
+                        opacity: 0.5;
+                        visibility: visible;
+                    }
+                }
+            }
+
+            &__content{
+                flex-grow: 1;
+            }
+    
+            &__title-link{
+                text-decoration: none;
+                &:hover{
+                    .post-item__title{
+                        color: var(--link-color-hover, #d41b65);
+                    }
+                }
+            }
+    
+            &__title{
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 600;
+                color:var(--post-title-color, #333);
+                transition: all 0.3s ease 0s;
+            }
+    
+  
+            &__author{
+                color: #999;
+                display: inline-block;
+                font-size: 14px;
+                line-height: 20px;
+                margin-top: 10px;
+                vertical-align: top;
+                &:not(:last-child){
+                    margin-right: 30px;
+                }
+                i{
+                    margin-right: 3px;
+                    color: var(--link-color, #d41b65);
+                }
+                .link{
+                    color: #999;
+                    transition: all 0.3s ease 0s;
+                    &:hover{
+                        color: var(--link-color-hover, #d41b65);
+                    }
+                }
+            }
+
+            &__date{
+                color: var(--link-color-hover, #d41b65);
+                display: inline-block;
+                font-size: 14px;
+                line-height: 20px;
+                margin-top: 10px;
+                vertical-align: top;
+            }
+
+    
+            &__excerpt{
+                margin-top: 10px;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400;
+                color: #666;
+            }
+    
+        }
+    }
+}

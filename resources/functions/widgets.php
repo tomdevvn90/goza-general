@@ -18,5 +18,14 @@ function goza_widgets_init() {
 		'before_title'  => '<h2 class="wg-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => 'Blog Sidebar',
+		'id'            => 'blog-sidebar',
+		'before_widget' => '<div class="wg-wrap">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="wg-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 
