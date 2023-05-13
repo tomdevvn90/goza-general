@@ -113,14 +113,16 @@
                 line-height: 20px;
                 margin-top: 10px;
                 vertical-align: top;
-                &:not(:last-child){
-                    margin-right: 30px;
+                margin-right: 20px;
+                span{
+                    line-height: inherit;
                 }
                 i{
                     margin-right: 3px;
                     color: var(--link-color, #d41b65);
                 }
                 .link{
+                    line-height: inherit;
                     color: #999;
                     transition: all 0.3s ease 0s;
                     &:hover{
