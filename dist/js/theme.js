@@ -595,14 +595,12 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lightgallery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lightgallery */ "./node_modules/lightgallery/lightgallery.es5.js");
 /* harmony import */ var lightgallery_plugins_video__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lightgallery/plugins/video */ "./node_modules/lightgallery/plugins/video/lg-video.es5.js");
-/* harmony import */ var dat_gui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dat.gui */ "./node_modules/dat.gui/build/dat.gui.module.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
 
 
 Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(document.getElementById('block-video-action'), {
@@ -641,7 +639,6 @@ var LiquidButton = /*#__PURE__*/function () {
     this.context = this.canvas.getContext('2d');
     this.wrapperElement = options.wrapperElement || document.body;
     if (!this.canvas.parentElement && document.getElementById('liquid-svg-button')) {
-      console.log(document.getElementById('liquid-svg-button'));
       document.getElementById('liquid-svg-button').append(this.canvas);
     }
     this.touches = [];
@@ -857,33 +854,6 @@ var redraw = function redraw() {
   button.initOrigins();
 };
 var button = new LiquidButton();
-var gui = new dat_gui__WEBPACK_IMPORTED_MODULE_2__["default"].GUI();
-gui.add(button, "debug");
-gui.add(button, "text");
-gui.add(button, "gap", 1, 20, 1).onChange(redraw);
-gui.add(button, "width", 100, 500, 1).onChange(redraw);
-gui.add(button, "height", 10, 100, 1).onChange(redraw);
-gui.add(button, "margin", 10, 100, 1).onChange(redraw);
-gui.add(button, "padding", 0, 30, 1);
-gui.add(button, "tension", 0, 1, 0.01);
-gui.add(button, "forceFactor", 0, 1, 0.01);
-gui.add(button, "hoverFactor", -1, 1, 0.01);
-gui.addColor(button, "color1");
-gui.addColor(button, "color2");
-gui.addColor(button, "color3");
-gui.addColor(button, "textColor");
-for (var layerIndex = 0; layerIndex < button.layers.length; layerIndex++) {
-  var layer = button.layers[layerIndex];
-  var folder = gui.addFolder('Layer ' + (layerIndex + 1));
-  folder.add(layer, "viscosity", 0, 1, 0.01);
-  folder.add(layer, "mouseForce", 0, 2000, 1);
-  folder.add(layer, "forceLimit", 0, 200, 0.1);
-  folder.open();
-}
-
-//   if (window.innerWidth < 1000) {
-gui.close();
-//   }
 
 /***/ }),
 
