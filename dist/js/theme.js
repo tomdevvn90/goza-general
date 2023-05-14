@@ -393,6 +393,8 @@ be_projects_grid_loadmore.forEach(function (element) {
     });
     function __renderCountDown($dataCountDown, $result) {
       var countDownDate = new Date("".concat($dataCountDown)).getTime();
+      var $color_heading = $result.data('color-heading');
+      var $color_number = $result.data('color-number');
       var x = setInterval(function () {
         // Get todays date and time
         var now = new Date().getTime();
@@ -404,6 +406,12 @@ be_projects_grid_loadmore.forEach(function (element) {
         var minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
         var seconds = Math.floor(distance % (1000 * 60) / 1000);
         $result.html("<div class='be-day'>" + days + "<span>Days</span>" + "</div>" + "<div class='be-hours'>" + hours + "<span>Hours</span>" + "</div>" + "<div class='be-min'>" + minutes + "<span>Minutes</span>" + "</div>" + "<div class='be-sec'>" + seconds + "<span>Seconds</span>" + "</div>");
+        if ($color_number.length > 0) {
+          $result.find('> div').css("color", $color_number);
+        }
+        if ($color_heading.length > 0) {
+          $result.find('> div > span').css("color", $color_heading);
+        }
         if (distance < 0) {
           clearInterval(x);
           document.getElementById("be-count-down").innerHTML = "EXPIRED";

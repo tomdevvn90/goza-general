@@ -24964,6 +24964,20 @@ h6 {
   padding: 0;
 }
 
+@media (max-width: 1199.98px) {
+  .be-single-event-inner--name {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .be-single-event-inner--name {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
 .be-single-event-inner--name > a {
   color: inherit;
   font-size: inherit;
@@ -24977,10 +24991,23 @@ h6 {
   color: var(--link-color);
   font-size: 45px;
   line-height: 53px;
-  text-align: center;
   font-weight: 400;
   font-style: normal;
   margin: 0 0 10px 0;
+}
+
+@media (max-width: 991.98px) {
+  .be-single-event-inner--heading {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .be-single-event-inner--heading {
+    font-size: 34px;
+    line-height: 42px;
+  }
 }
 
 .be-single-event-inner--venue svg {
@@ -24995,7 +25022,6 @@ h6 {
 
 .be-single-event-inner--count-down #be-count-down,
 .be-single-event-inner--count-down #be-count-down-edit {
-  justify-content: space-between;
   box-sizing: border-box;
 }
 
@@ -25008,56 +25034,6 @@ h6 {
   color: var(--link-color);
   font-size: 18px;
   line-height: 120%;
-}
-
-.be-single-event-inner--count-down #be-count-down > div,
-.be-single-event-inner--count-down #be-count-down-edit > div {
-  border: 1px solid #cacaca;
-  border-radius: 8px;
-  position: relative;
-  width: 80px;
-  max-height: 80px;
-  height: 80px;
-  padding-bottom: 0px;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  justify-items: center;
-  vertical-align: middle;
-  text-align: center;
-  font-size: 26px;
-  line-height: 32px;
-  color: var(--link-color);
-  letter-spacing: 0;
-  font-weight: 700;
-}
-
-.be-single-event-inner--count-down #be-count-down > div::before,
-.be-single-event-inner--count-down #be-count-down-edit > div::before {
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 8px;
-  border-bottom: 1px solid #cacaca;
-  box-sizing: border-box;
-  border-radius: 8px;
-  left: 0px;
-  bottom: 3px;
-}
-
-.be-single-event-inner--count-down #be-count-down > div > span,
-.be-single-event-inner--count-down #be-count-down-edit > div > span {
-  color: var(--body-color);
-  font-size: 12px;
-  line-height: 28px;
-  border-bottom: 1px solid #cacaca;
-  margin: -12px 0px 5px 0px;
-  padding: 0px;
-  max-height: 28px;
-  min-height: 28px;
-  height: 25px;
-  letter-spacing: 0.64px;
-  box-sizing: border-box;
 }
 
 .be-single-event-inner--count-down #be-count-down-edit {
@@ -25080,21 +25056,39 @@ h6 {
   display: flex;
 }
 
+@media (max-width: 991.98px) {
+  .be-single-event.is-style-default .be-single-event-inner {
+    flex-wrap: wrap;
+  }
+}
+
 .be-single-event.is-style-default .be-single-event-inner--thumbnail {
   width: 45%;
   position: relative;
 }
 
+@media (max-width: 991.98px) {
+  .be-single-event.is-style-default .be-single-event-inner--thumbnail {
+    width: 100%;
+  }
+}
+
 .be-single-event.is-style-default .be-single-event-inner--thumbnail img {
   width: 100%;
-  height: 100%;
   -o-object-position: center;
   object-position: center;
   -o-object-fit: cover;
      object-fit: cover;
-  position: absolute;
-  left: 0;
-  top: 0;
+  height: auto;
+}
+
+@media (min-width: 992px) {
+  .be-single-event.is-style-default .be-single-event-inner--thumbnail img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
 }
 
 .be-single-event.is-style-default .be-single-event-inner--content {
@@ -25104,6 +25098,19 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  .be-single-event.is-style-default .be-single-event-inner--content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .be-single-event.is-style-default .be-single-event-inner--content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .be-single-event.is-style-default .be-single-event-inner--name {
@@ -25125,6 +25132,13 @@ h6 {
   font-weight: 700;
 }
 
+@media (max-width: 575.98px) {
+  .be-single-event.is-style-default .be-single-event-inner--date-start {
+    font-size: 14px;
+    line-height: 23px;
+  }
+}
+
 .be-single-event.is-style-default .be-single-event-inner--venue {
   margin-top: 15px;
   width: 100%;
@@ -25138,6 +25152,13 @@ h6 {
 .be-single-event.is-style-default .be-single-event-inner--count-down {
   width: 100%;
   margin-top: 50px;
+  justify-content: space-between;
+}
+
+@media (max-width: 991.98px) {
+  .be-single-event.is-style-default .be-single-event-inner--count-down {
+    margin-top: 32px;
+  }
 }
 
 .be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down,
@@ -25145,9 +25166,199 @@ h6 {
   width: 70%;
 }
 
+@media (max-width: 1199.98px) {
+  .be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down,
+  .be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down-edit {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+.be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down > div,
+.be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down-edit > div {
+  border: 1px solid #cacaca;
+  border-radius: 8px;
+  position: relative;
+  width: 80px;
+  max-height: 80px;
+  height: 80px;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  justify-items: center;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 26px;
+  line-height: 32px;
+  color: var(--link-color);
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+@media (max-width: 575.98px) {
+  .be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down > div,
+  .be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down-edit > div {
+    margin-right: 10px;
+    min-width: 58px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+.be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down > div::before,
+.be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down-edit > div::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 8px;
+  border-bottom: 1px solid #cacaca;
+  box-sizing: border-box;
+  border-radius: 8px;
+  left: 0px;
+  bottom: 3px;
+}
+
+.be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down > div > span,
+.be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down-edit > div > span {
+  color: var(--body-color);
+  font-size: 12px;
+  line-height: 28px;
+  border-bottom: 1px solid #cacaca;
+  margin: -12px 0px 5px 0px;
+  padding: 0px;
+  max-height: 28px;
+  min-height: 28px;
+  height: 25px;
+  letter-spacing: 0.64px;
+  box-sizing: border-box;
+}
+
 .be-single-event.is-style-default .be-single-event-inner--button {
   margin-top: 30px;
   width: 100%;
+}
+
+.be-single-event.is-style-2 {
+  position: relative;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  max-width: 100vw;
+  z-index: 9;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--bg {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  left: 0;
+  top: 0;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--bg::before {
+  content: " ";
+  display: inline-flex;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--bg img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s ease;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--content {
+  position: relative;
+  z-index: 9;
+  text-align: center;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--name {
+  color: #fff;
+  line-height: 53px;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--count-down {
+  margin-top: 20px;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--count-down #be-count-down,
+.be-single-event.is-style-2 .be-single-event-inner--count-down #be-count-down-edit {
+  justify-content: center;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--count-down #be-count-down > div,
+.be-single-event.is-style-2 .be-single-event-inner--count-down #be-count-down-edit > div {
+  display: inline-block;
+  width: 110px;
+  height: 100px;
+  text-align: center;
+  margin: 5px;
+  color: #fff;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 55px;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--count-down #be-count-down > div > span,
+.be-single-event.is-style-2 .be-single-event-inner--count-down #be-count-down-edit > div > span {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--meta {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--venue,
+.be-single-event.is-style-2 .be-single-event-inner--date-start {
+  color: #fff;
+  width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--venue svg,
+.be-single-event.is-style-2 .be-single-event-inner--date-start svg {
+  width: 100%;
+  max-width: 20px;
+  height: auto;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--venue svg path,
+.be-single-event.is-style-2 .be-single-event-inner--date-start svg path {
+  fill: var(--link-color);
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--date-start {
+  display: flex;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--date-start p {
+  margin: 0;
+}
+
+.be-single-event.is-style-2 .be-single-event-inner--date-start span {
+  font-weight: 700;
 }
 
 .tribe-common h1,
