@@ -116,6 +116,19 @@ function goza_child_deregister_styles()
 add_action('wp_enqueue_scripts', 'goza_child_deregister_styles', 20);
 
 
+/**
+ * blog hero section template
+ * @return void
+ */
+add_action( 'goza_hook_blog_hero_section', 'goza_blog_hero_section_template' );
+
+/**
+ * navigation template
+ * @return void
+ */
+add_action( 'goza_hook_the_posts_navigation', 'the_posts_navigation_template' );
+
+
 add_filter('previous_posts_link_attributes', 'prev_posts_link_attributes_func');
 function prev_posts_link_attributes_func() {
 	return 'class="prev page-button"';
@@ -125,6 +138,22 @@ add_filter('next_posts_link_attributes', 'next_posts_link_attributes_func');
 function next_posts_link_attributes_func() {
   return 'class="next page-button"';
 }
+
+// customize the archive title
+add_filter('get_the_archive_title', function ($title) {
+    if (is_category()) {
+        $title = single_cat_title('', false);
+    } elseif (is_tag()) {
+        $title = single_tag_title('', false);
+    } elseif (is_author()) {
+        $title = get_the_author();
+    } elseif (is_tax()) { //for custom post types
+        $title = sprintf(__('%1$s'), single_term_title('', false));
+    } elseif (is_post_type_archive()) {
+        $title = post_type_archive_title('', false);
+    }
+    return $title;
+});
 
 
 

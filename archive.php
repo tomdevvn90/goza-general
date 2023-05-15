@@ -12,13 +12,9 @@
 get_header();
 ?>
     <main id="primary" class="site-main">
-        <?php
-        $page_for_posts_id = get_option( 'page_for_posts' );
-        $page_for_posts_obj = get_post( $page_for_posts_id );
-        
-        echo apply_filters( 'the_content', $page_for_posts_obj->post_content );
 
-        ?>
+        <?php do_action( 'goza_hook_blog_hero_section' ); ?>
+
         <section class="goza-section section">
             <div class="post-container container">
             <?php
@@ -30,6 +26,7 @@ get_header();
             ?>
             </div>
         </section>
+
 	</main><!-- #main -->
 <?php
 get_footer();

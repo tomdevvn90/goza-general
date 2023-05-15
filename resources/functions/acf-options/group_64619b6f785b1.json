@@ -1,9 +1,9 @@
 {
-    "key": "group_645316bc9e61a",
-    "title": "Hero Section",
+    "key": "group_64619b6f785b1",
+    "title": "Archive Hero Section",
     "fields": [
         {
-            "key": "field_645465359cdbd",
+            "key": "field_64619b6f94bba",
             "label": "Content",
             "name": "",
             "aria-label": "",
@@ -20,9 +20,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_645316c637c40",
+            "key": "field_64619b6f985d5",
             "label": "Background Image",
-            "name": "bg_ss_hero",
+            "name": "archive_bg_ss_hero",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -45,9 +45,9 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6453169b37c3f",
+            "key": "field_64619b6f9c1fa",
             "label": "Icon",
-            "name": "icon_ss_hero",
+            "name": "archive_icon_ss_hero",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -70,27 +70,7 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6453171337c42",
-            "label": "Heading",
-            "name": "heading_ss_hero",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "This is hero section",
-            "maxlength": "",
-            "rows": 2,
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_645465509cdbe",
+            "key": "field_64619b6fa3613",
             "label": "Styles",
             "name": "",
             "aria-label": "",
@@ -107,9 +87,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_64534f1ced3e2",
+            "key": "field_64619b6fa7109",
             "label": "Min Height",
-            "name": "min_height_ss_hero",
+            "name": "archive_min_height_ss_hero",
             "aria-label": "",
             "type": "number",
             "instructions": "",
@@ -129,9 +109,9 @@
             "append": ""
         },
         {
-            "key": "field_645334e24117c",
+            "key": "field_64619b6faac5a",
             "label": "Content Alignmnet",
-            "name": "content_alignmnet_ss_hero",
+            "name": "archive_content_alignmnet_ss_hero",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -156,8 +136,8 @@
             "placeholder": ""
         },
         {
-            "key": "field_645316ed37c41",
-            "label": "Background Color",
+            "key": "field_64619b6fae8b4",
+            "label": "archive_Background Color",
             "name": "bg_color_ss_hero",
             "aria-label": "",
             "type": "color_picker",
@@ -174,9 +154,9 @@
             "return_format": "string"
         },
         {
-            "key": "field_645331610b3cc",
+            "key": "field_64619b6fb22da",
             "label": "Background Overlay Color",
-            "name": "bg_overlay_color_ss_hero",
+            "name": "archive_bg_overlay_color_ss_hero",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
@@ -192,9 +172,9 @@
             "return_format": "string"
         },
         {
-            "key": "field_645331870b3cd",
+            "key": "field_64619b6fb5ddb",
             "label": "Background Overlay Opacity",
-            "name": "bg_overlay_opacity_ss_hero",
+            "name": "archive_bg_overlay_opacity_ss_hero",
             "aria-label": "",
             "type": "range",
             "instructions": "",
@@ -213,9 +193,9 @@
             "append": ""
         },
         {
-            "key": "field_6453177237c44",
+            "key": "field_64619b6fb9a86",
             "label": "Breadcrumb Color",
-            "name": "breadcrumb_color_ss_hero",
+            "name": "archive_breadcrumb_color_ss_hero",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
@@ -231,9 +211,9 @@
             "return_format": "string"
         },
         {
-            "key": "field_6453172837c43",
+            "key": "field_64619b6fbd517",
             "label": "Heading Color",
-            "name": "heading_color_ss_hero",
+            "name": "archive_heading_color_ss_hero",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
@@ -249,9 +229,9 @@
             "return_format": "string"
         },
         {
-            "key": "field_64535347a1e90",
+            "key": "field_64619b6fc0f27",
             "label": "Heading Font Size",
-            "name": "heading_font_size_ss_hero",
+            "name": "archive_heading_font_size_ss_hero",
             "aria-label": "",
             "type": "range",
             "instructions": "",
@@ -275,7 +255,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/be-section-hero"
+                "value": "acf\/be-archive-section-hero"
             }
         ]
     ],
@@ -288,5 +268,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684114925
+    "modified": 1684118668
 }

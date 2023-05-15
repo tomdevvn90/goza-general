@@ -257,10 +257,10 @@
                 "ngo": "Header Ngo",
                 "charity": "Header Charity",
                 "water": "Header Water",
-                "organization": "Header Organization",
+                "orgazination": "Header Orgazination",
                 "ngo-dark": "Header Ngo Dark",
                 "water-charity": "Header Water Charity",
-                "charity-organization": "Header Charity Organization"
+                "charity-orgazination": "Header Charity Orgazination"
             },
             "default_value": false,
             "return_format": "value",
@@ -518,9 +518,9 @@
                 "general": "Footer General",
                 "water": "Footer Water",
                 "ngo": "Footer Ngo",
-                "organization": "Footer Organization",
+                "organization": "Footer Orgazination",
                 "water-charity": "Footer Water Charity",
-                "charity-organization": "Footer Charity Organization"
+                "charity-organization": "Footer Charity Organiztion"
             },
             "default_value": false,
             "return_format": "value",
@@ -1303,18 +1303,13 @@
                         "Exo 2": "Exo 2",
                         "Fira Sans": "Fira Sans",
                         "Roboto": "Roboto",
-                        "Calligraffitti": "Calligraffitti",
-                        "Cormorant Garamond": "Cormorant Garamond",
-                        "Lato": "Lato",
-                        "Montserrat": "Montserrat",
-                        "Muli": "Muli",
-                        "Satisfy": "Satisfy"
+                        "Calligraffitti": "Calligraffitti"
                     },
                     "default_value": false,
-                    "return_format": "value",
-                    "multiple": 0,
                     "allow_null": 0,
-                    "ui": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
                     "ajax": 0,
                     "placeholder": ""
                 },
@@ -1468,19 +1463,14 @@
                         "Exo 2": "Exo 2",
                         "Fira Sans": "Fira Sans",
                         "Roboto": "Roboto",
-                        "Calligraffitti": "Calligraffitti",
-                        "Cormorant Garamond": "Cormorant Garamond",
-                        "Lato": "Lato",
-                        "Montserrat": "Montserrat",
-                        "Muli": "Muli",
-                        "Satisfy": "Satisfy"
+                        "Calligraffitti": "Calligraffitti"
                     },
                     "default_value": false,
-                    "return_format": "value",
-                    "multiple": 0,
                     "allow_null": 0,
+                    "multiple": 0,
                     "ui": 1,
                     "ajax": 0,
+                    "return_format": "value",
                     "placeholder": ""
                 },
                 {
@@ -1929,6 +1919,93 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_6461a3b4eb15d",
+            "label": "Blog",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6461a3c2eb15e",
+            "label": "Heading",
+            "name": "blog_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6461a3dceb15f",
+            "label": "Icon",
+            "name": "blog_icon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_6461a3efeb160",
+            "label": "Background Image",
+            "name": "blog_bg_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -1949,5 +2026,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682521929
+    "modified": 1684121081
 }

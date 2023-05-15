@@ -155,3 +155,99 @@ function goza_check_variable_home()
 
 	return $classes;
 }
+
+// blog hero section template
+if ( !function_exists('goza_blog_hero_section_template') ) {
+	function goza_blog_hero_section_template()
+	{
+		$page_for_posts_id = get_option( 'page_for_posts' );
+		$page_for_posts_obj = get_post( $page_for_posts_id );
+
+		$heading_field_option = get_field('blog_heading', 'option');
+		$icon_field_option = get_field('blog_icon', 'option');
+		$bg_field_option = get_field('blog_bg_image', 'option');
+
+		$heading_blog = !empty( $heading_field_option )? $heading_field_option : $page_for_posts_obj->post_title;
+		$blog_heading = ( is_archive() )? get_the_archive_title() : $heading_blog;
+
+		$bg_image_style = !empty( $bg_field_option['url'] )? 'background-image: url('.$bg_field_option['url'].');' : '';
+		?>
+		<section class="blog-hero-section" style="<?php echo $bg_image_style; ?>">
+			<div class="blog-hero-section--bg-overlay"></div>
+			<div class="blog-hero-section--content container">
+				<div class="blog-hero-section-inner">
+
+					<?php if ( !empty( $icon_field_option ) ): ?>
+					<div class="blog-hero-section-inner__icon">
+						<img src="<?php echo esc_url( $icon_field_option['url'] ); ?>" alt="<?php echo esc_attr( $icon_field_option['alt'] ); ?>">   
+					</div>  
+					<?php endif; ?>  
+
+					<h2 class="blog-hero-section-inner__heading"><?php echo $blog_heading; ?></h2>
+				
+					<?php if ( function_exists( 'yoast_breadcrumb' ) ): ?>
+						<div class="blog-hero-section-inner__breadcrumb" style="<?php echo $breadcrumb_color_style; ?>">
+							<?php yoast_breadcrumb(); ?>  
+						</div> 
+					<?php endif; ?>   
+					
+				</div>       
+			</div>
+
+		</section>
+		<?php
+	}
+}
+
+// the posts navigation template
+if ( !function_exists('the_posts_navigation_template') ) {
+	function the_posts_navigation_template()
+	{
+		global $wp_query;
+
+		if ( $wp_query->max_num_pages > 1) {
+		?>
+		<div class="navigation paging-navigation">
+			<?php 
+			
+			$animation = 'data-aos="fade-up" data-aos-duration="1000"';
+
+			$pre_text = '<i class="fa fa-angle-left"></i> <strong>Newer</strong>';
+			$next_text = '<strong>Older</strong> <i class="fa fa-angle-right"></i>'; 
+
+			$args = array(
+				'format' => '/page/%#%',
+				'current' => max( 1, get_query_var('paged') ),
+				'total' => $wp_query->max_num_pages,
+				'prev_next'          => false,
+			);
+
+			$pre_button = '<a href="javascript:void(0)" class="prev page-button disabled">' . __( $pre_text, 'goza') . '</a>';
+			$next_button = '<a href="javascript:void(0)" class="next page-button disabled">' . __( $next_text, 'goza') . '</a>';
+
+			$html = get_previous_posts_link( $pre_text );
+			$html .= '<div class="pagination-numbers-wrap">'.paginate_links( $args ).'</div>';  
+			$html .= get_next_posts_link( $next_text );
+
+			$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+
+			if ( 1 === $paged) {
+				$html = $pre_button . $html;    
+			}
+
+			if ( $wp_query->max_num_pages ==  $paged   ) {
+				$html = $html . $next_button; 
+			}
+
+			echo '<div class="pagination loop-pagination" '.$animation.'>';
+			echo    $html;
+			echo '</div>';
+
+			?>
+		</div>
+		<?php
+
+		}
+	}
+}
+
