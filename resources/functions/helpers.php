@@ -163,14 +163,14 @@ if ( !function_exists('goza_blog_hero_section_template') ) {
 		$page_for_posts_id = get_option( 'page_for_posts' );
 		$page_for_posts_obj = get_post( $page_for_posts_id );
 
-		$heading_field_option = get_field('blog_heading', 'option');
-		$icon_field_option = get_field('blog_icon', 'option');
-		$bg_field_option = get_field('blog_bg_image', 'option');
+		$heading_field_option = get_field('goza_blog_heading', 'option');
+		$icon_field_option = get_field('goza_blog_icon', 'option')? get_field('goza_blog_icon', 'option') : get_template_directory_uri(). '/resources/assets/images/leaf-solid.jpg';
+		$bg_field_option = get_field('goza_blog_bg_image', 'option');
 
 		$heading_blog = !empty( $heading_field_option )? $heading_field_option : $page_for_posts_obj->post_title;
 		$blog_heading = ( is_archive() )? get_the_archive_title() : $heading_blog;
 
-		$bg_image_style = !empty( $bg_field_option['url'] )? 'background-image: url('.$bg_field_option['url'].');' : '';
+		$bg_image_style = !empty( $bg_field_option )? 'background-image: url('.$bg_field_option.');' : '';
 		?>
 		<section class="blog-hero-section" style="<?php echo $bg_image_style; ?>">
 			<div class="blog-hero-section--bg-overlay"></div>
@@ -179,7 +179,7 @@ if ( !function_exists('goza_blog_hero_section_template') ) {
 
 					<?php if ( !empty( $icon_field_option ) ): ?>
 					<div class="blog-hero-section-inner__icon">
-						<img src="<?php echo esc_url( $icon_field_option['url'] ); ?>" alt="<?php echo esc_attr( $icon_field_option['alt'] ); ?>">   
+						<img src="<?php echo esc_url( $icon_field_option ); ?>" alt="<?php echo __('icon', 'goza'); ?>">   
 					</div>  
 					<?php endif; ?>  
 

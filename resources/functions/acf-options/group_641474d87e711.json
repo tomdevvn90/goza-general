@@ -1940,7 +1940,7 @@
         {
             "key": "field_6461a3c2eb15e",
             "label": "Heading",
-            "name": "blog_heading",
+            "name": "goza_blog_heading",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -1960,7 +1960,7 @@
         {
             "key": "field_6461a3dceb15f",
             "label": "Icon",
-            "name": "blog_icon",
+            "name": "goza_blog_icon",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -1971,7 +1971,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "return_format": "url",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -1985,7 +1985,7 @@
         {
             "key": "field_6461a3efeb160",
             "label": "Background Image",
-            "name": "blog_bg_image",
+            "name": "goza_blog_bg_image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -1996,7 +1996,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "return_format": "url",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -2026,5 +2026,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684121081
+    "modified": 1684123061
 }

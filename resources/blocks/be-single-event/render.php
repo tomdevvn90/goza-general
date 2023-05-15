@@ -6,16 +6,9 @@ $id = 'be-single-event' . $block['id'];
 // create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 $is_style    = isset($block['className']) ? $block['className'] : "is-style-default";
-// ACF field variables
-// $bg          = get_field('bg_ss_ab_counter') ?: get_template_directory_uri(). '/resources/assets/images/bg-ss-text-tsm-video.jpg';
-$ev_select = get_field('event_sg_ev') ?: '';
 
-// $args = [
-//    'post_type'      => 'tribe_events',
-//    'post_status'    => 'publish',
-//    'posts_per_page' => 1,
-//    'order'          => 'DESC',
-// ];
+// ACF field variables
+$ev_select = get_field('event_sg_ev') ?: '';
 
 $args = array(
    'post_type' => 'tribe_events',

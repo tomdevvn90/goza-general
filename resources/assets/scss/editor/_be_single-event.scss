@@ -1,0 +1,25 @@
+.is-root-container{
+    .be-single-event{
+        &-inner{
+            &--name{
+                font-size: 42px;
+                line-height: 48px;
+                font-weight: 700;
+            }
+            
+            &--heading{
+                color: var(--link-color);
+                font-size: 45px;
+                line-height: 53px;
+            }       
+        }
+    }
+
+    &.is-style-default{
+        .be-single-event-inner{
+            &--name{
+                color: var(--heading-color);
+            }
+        }
+    }
+}

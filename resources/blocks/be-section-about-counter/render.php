@@ -19,9 +19,6 @@ $color_desc = get_field('color_desc_ss_ab_counter') ?: '';
 $color_ct   = get_field('color_ct_ss_ab_counter') ?: '';
 $cl_ct_hd   = $color_ct['heading'] ? : '';
 $cl_ct_nb   = $color_ct['numberal'] ? : '';
-// $link_op   = get_field('goza_link_color_op', 'option');
-// $link_cl   = $link_op['link_color'] ? : '';
-// $tg_hd     = get_field('typography_heading', 'option');
 
 ?>
 <section id="<?php echo $id; ?>" class="be-ss-ab-counter <?php echo $align_class; ?>"> 
