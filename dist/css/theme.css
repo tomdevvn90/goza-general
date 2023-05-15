@@ -12497,6 +12497,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 .single .single-post-related {
   margin-top: 45px;
+  clear: both;
 }
 
 .single .single-post-related .post-related-wrapper .post-related-title {
