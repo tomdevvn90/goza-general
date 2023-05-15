@@ -126,7 +126,7 @@ add_action( 'goza_hook_blog_hero_section', 'goza_blog_hero_section_template' );
  * navigation template
  * @return void
  */
-add_action( 'goza_hook_the_posts_navigation', 'the_posts_navigation_template' );
+add_action( 'goza_hook_blog_posts_navigation', 'goza_blog_posts_navigation' );
 
 
 add_filter('previous_posts_link_attributes', 'prev_posts_link_attributes_func');
@@ -155,5 +155,12 @@ add_filter('get_the_archive_title', function ($title) {
     return $title;
 });
 
+// single template
+add_action( 'goza_hook_single', 'goza_single_template' );
 
+// single post navigation
+add_action( 'goza_hook_single_post_navigation', 'goza_single_post_navigation' );
+
+// single post related
+add_action( 'goza_hook_single_post_related', 'goza_single_post_related' );
 

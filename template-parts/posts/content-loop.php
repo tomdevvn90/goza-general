@@ -18,7 +18,7 @@
         endwhile;
         ?>
         </div>
-        <?php do_action('goza_hook_the_posts_navigation'); ?>
+        <?php do_action('goza_hook_blog_posts_navigation'); ?>
     </div>
 
 <?php if ( is_active_sidebar('blog-sidebar') ):?>

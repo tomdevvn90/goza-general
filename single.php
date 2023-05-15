@@ -1,9 +1,16 @@
+<?php
+/**
+ * The template for displaying all single posts.
+ *
+ * @package goza
+ */
+?>
 <?php get_header();?>
 <main id="primary" class="site-main">
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> 
-        <div class="entry-content"> 
-            <?php the_content() ?>
-        </div>
-    </article>
+
+    <?php if ( have_posts() ) : ?>
+        <?php do_action( 'goza_hook_single' ); ?>
+    <?php endif;?>       
+
 </main>    
 <?php get_footer(); ?>

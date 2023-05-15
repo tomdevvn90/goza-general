@@ -156,52 +156,10 @@ function goza_check_variable_home()
 	return $classes;
 }
 
-// blog hero section template
-if ( !function_exists('goza_blog_hero_section_template') ) {
-	function goza_blog_hero_section_template()
-	{
-		$page_for_posts_id = get_option( 'page_for_posts' );
-		$page_for_posts_obj = get_post( $page_for_posts_id );
 
-		$heading_field_option = get_field('goza_blog_heading', 'option');
-		$icon_field_option = get_field('goza_blog_icon', 'option')? get_field('goza_blog_icon', 'option') : get_template_directory_uri(). '/resources/assets/images/leaf-solid.png';
-		$bg_field_option = get_field('goza_blog_bg_image', 'option');
-
-		$heading_blog = !empty( $heading_field_option )? $heading_field_option : $page_for_posts_obj->post_title;
-		$blog_heading = ( is_archive() )? get_the_archive_title() : $heading_blog;
-
-		$bg_image_style = !empty( $bg_field_option )? 'background-image: url('.$bg_field_option.');' : '';
-		?>
-		<section class="blog-hero-section" style="<?php echo $bg_image_style; ?>">
-			<div class="blog-hero-section--bg-overlay"></div>
-			<div class="blog-hero-section--content container">
-				<div class="blog-hero-section-inner">
-
-					<?php if ( !empty( $icon_field_option ) ): ?>
-					<div class="blog-hero-section-inner__icon">
-						<img src="<?php echo esc_url( $icon_field_option ); ?>" alt="<?php echo __('icon', 'goza'); ?>">   
-					</div>  
-					<?php endif; ?>  
-
-					<h2 class="blog-hero-section-inner__heading"><?php echo $blog_heading; ?></h2>
-				
-					<?php if ( function_exists( 'yoast_breadcrumb' ) ): ?>
-						<div class="blog-hero-section-inner__breadcrumb" style="<?php echo $breadcrumb_color_style; ?>">
-							<?php yoast_breadcrumb(); ?>  
-						</div> 
-					<?php endif; ?>   
-					
-				</div>       
-			</div>
-
-		</section>
-		<?php
-	}
-}
-
-// the posts navigation template
-if ( !function_exists('the_posts_navigation_template') ) {
-	function the_posts_navigation_template()
+// the blog posts navigation
+if ( ! function_exists( 'goza_blog_posts_navigation' ) ) {
+	function goza_blog_posts_navigation()
 	{
 		global $wp_query;
 
@@ -248,6 +206,114 @@ if ( !function_exists('the_posts_navigation_template') ) {
 		<?php
 
 		}
+	}
+}
+
+// the single posts navigation
+if ( ! function_exists( 'goza_single_post_navigation' ) ) {
+	function goza_single_post_navigation()
+	{
+		// previous single post
+		$prev_post = get_previous_post(); 
+        $prev_id = $prev_post->ID ;
+        $permalink_prev = get_permalink( $prev_id );
+
+		// next single post
+		$next_post = get_next_post();
+        $next_id = $next_post->ID ;
+        $permalink_next = get_permalink($next_id);
+
+		// print_r( $prev_post );
+		?>
+		<div class="single-post-navigation">
+			<div class="previous-next-link">
+				<div class="previous">
+					<a href="<?php echo esc_url( $permalink_prev ); ?>" class="post-nav-link" rel="prev">
+						<div class="post-nav-thumbnail">
+							<?php echo get_the_post_thumbnail( $prev_id, 'thumbnail' ); ?>
+						</div>
+						<div class="post-nav-title-box">
+							<div class="post-title">
+								<?php echo get_the_title( $prev_id ); ?>
+							</div>
+							<div class="post-date">
+								<?php echo get_the_date( 'j F, Y', $prev_id ); ?>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="next">
+					<a href="<?php echo esc_url( $permalink_next ); ?>" class="post-nav-link" rel="next">
+						<div class="post-nav-title-box">
+							<div class="post-title">
+								<?php echo get_the_title( $next_id ); ?>
+							</div>
+							<div class="post-date">
+								<?php echo get_the_date( 'j F, Y', $next_id ); ?>
+							</div>
+						</div>
+						<div class="post-nav-thumbnail">
+							<?php echo get_the_post_thumbnail( $next_id, 'thumbnail' ); ?>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+}
+
+// the single posts related
+if ( ! function_exists( 'goza_single_post_related' ) ) {
+	function goza_single_post_related()
+	{	
+		global $post;
+		$post_type = get_post_type( $post );
+
+		$tags =  wp_get_post_tags(  get_the_ID() );
+
+		$args = array(
+			'post_type' => $post_type,
+			'posts_per_page' => 3,
+			'post_status' => 'publish',
+			'post__not_in' => array( get_the_ID() ),
+			'tag__in' => $tags,
+			'tax_query' => array(),
+
+		);
+
+		$article_query = new WP_Query( $args );
+
+		if ( $article_query->have_posts() ) {
+			?>
+			<div class="single-post-related">
+				<div class="post-related-wrapper">
+					<h3 class="post-related-title"><?php echo __('Related Articles', 'goza'); ?></h3>
+					<div class="post-related-list">
+					<?php
+					while ( $article_query->have_posts() ) {
+						$article_query->the_post( );
+					}
+
+					?>
+						<div class="post-related-item">
+							<a href="<?php echo esc_url( get_the_permalink( ) ); ?>" class="post-related-item__thumbnail">
+								<?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
+							</a>
+							<a href="<?php echo esc_url( get_the_permalink( ) ); ?>" class="post-related-item__title-link">
+								<h3 class="post-related-item__title"><?php echo get_the_title( ); ?></h3>
+							</a>
+						</div>
+					<?php
+		
+					wp_reset_postdata( );
+					?>
+					</div>
+				</div>
+			</div>
+			<?php
+		}
+
 	}
 }
 
