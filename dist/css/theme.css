@@ -11894,7 +11894,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 .blog-hero-section .blog-hero-section-inner__breadcrumb {
-  color: #d44e71;
+  color: var(--link-color, #d44e71);
   line-height: 1;
 }
 
@@ -24430,6 +24430,7 @@ h6 {
 .be-ss-hero .be-ss-hero-inner__heading {
   color: #333;
   font-size: 30px;
+  font-weight: 600;
   line-height: 1;
   text-transform: capitalize;
   margin-bottom: 10px;

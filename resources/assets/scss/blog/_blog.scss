@@ -47,7 +47,7 @@
             margin-bottom: 10px;
         }
         &__breadcrumb{
-            color: #d44e71;
+            color: var(--link-color, #d44e71);
             line-height: 1;
             &::before{
                 content: "\f015";
