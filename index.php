@@ -13,7 +13,7 @@ get_header();
 ?>
     <main id="primary" class="site-main">
 
-        <?php do_action( 'goza_blog_hero_section' ); ?>
+        <?php do_action( 'goza_hook_blog_hero_section' ); ?>
 
         <section class="goza-section section">
             <div class="post-container container">
