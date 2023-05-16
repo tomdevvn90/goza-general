@@ -17,8 +17,8 @@
     }
 
     p,
-    div,
-    span:not(.dashicon),
+    div:not(.wp-block-goza-blocks-goza-button),
+    span:not(.dashicon, .wp-block-goza-button_link),
     a {
         font-family: var(--body-family, "Arimo", sans-serif);
         font-size: var(--body-font-size, 16px);

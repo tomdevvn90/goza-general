@@ -4,6 +4,10 @@ import { registerBlockType } from "@wordpress/blocks";
 import Edit from "./components/edit";
 import Save from "./components/save";
 
+//import styles
+import './styles/style.scss';
+import './styles/editor.scss';
+
 const buttonBlockIcon = (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="2 2 22 22">
         <path fill="none" d="M0 0h24v24H0V0z" />
@@ -31,6 +35,7 @@ const blockAttrs = {
     },
     bgColor: {
         type: 'string',
+
     },
     textColor: {
         type: 'string',
@@ -57,7 +62,7 @@ const blockAttrs = {
     },
     paddingTop: {
         type: 'number',
-        default: 10,
+        default: 15,
     },
     paddingRight: {
         type: 'number',
@@ -65,7 +70,7 @@ const blockAttrs = {
     },
     paddingBottom: {
         type: 'number',
-        default: 10,
+        default: 15,
     },
     paddingLeft: {
         type: 'number',
@@ -84,7 +89,7 @@ const blockAttrs = {
     },
     borderRadius: {
         type: 'number',
-        default: 50
+        default: 0
     },
     hoverTextColor: {
         type: 'string',
@@ -142,8 +147,11 @@ registerBlockType('goza-blocks/goza-button', {
     styles: [
         { name: 'default', label: __('Default', 'goza'), isDefault: true },
         { name: 'outlined', label: __('Outlined', 'goza') },
-        { name: 'squared', label: __('Squared', 'goza') },
-        { name: 'squared-outline', label: __('Squared Outline', 'goza') },
+        { name: 'general', label: __('General', 'goza') },
+        { name: 'water', label: __('Water', 'goza') },
+        { name: 'ngo-dark', label: __('Ngo Dark', 'goza') },
+        { name: 'wt-charity', label: __('Water Charity', 'goza') },
+        { name: 'charity-organization', label: __('Charity Organization', 'goza') }
     ],
     supports: {
         anchor: true,

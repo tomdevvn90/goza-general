@@ -3051,8 +3051,8 @@
 }
 
 .is-root-container p,
-.is-root-container div,
-.is-root-container span:not(.dashicon),
+.is-root-container div:not(.wp-block-goza-blocks-goza-button),
+.is-root-container span:not(.dashicon, .wp-block-goza-button_link),
 .is-root-container a {
   font-family: var(--body-family, "Arimo", sans-serif);
   font-size: var(--body-font-size, 16px);
