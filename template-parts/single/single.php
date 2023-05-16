@@ -77,6 +77,8 @@
 
                 <?php do_action( 'goza_hook_single_post_related' ); ?>
 
+                <?php comments_template(); ?>
+
             </div>
 
         <?php if ( is_active_sidebar('blog-sidebar') ):?>
