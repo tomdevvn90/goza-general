@@ -77,6 +77,14 @@
 
                 <?php do_action( 'goza_hook_single_post_related' ); ?>
 
+                <div id="comments" class="comments-area">
+
+                    <?php wp_list_comments(); ?>
+
+                    <?php comment_form( ); ?>
+
+                </div>
+
             </div>
 
         <?php if ( is_active_sidebar('blog-sidebar') ):?>
