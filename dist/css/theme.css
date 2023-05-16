@@ -12817,14 +12817,21 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 .single .comments-area .comment-respond form .comment-form-cookies-consent input[type=checkbox]:checked ~ label::before {
-  transform: scale(0.6);
+  content: "\F00C";
+  font-family: "FontAwesome";
   z-index: 2;
-  background-color: #ffffff;
-  border-color: #ffffff;
+  color: #ffffff;
+  font-size: 16px;
+  background-color: var(--link-color, #d41b65);
+  border-color: var(--link-color, #d41b65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .single .comments-area .comment-respond form .comment-form-cookies-consent input[type=checkbox]:checked ~ label::after {
   background-color: var(--link-color, #d41b65);
+  border-color: var(--link-color, #d41b65);
 }
 
 .single .comments-area .comment-respond form .form-submit {
