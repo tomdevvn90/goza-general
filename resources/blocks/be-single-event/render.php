@@ -15,7 +15,7 @@ $args = array(
    'posts_per_page' => 1,
    'orderby' => 'meta_value',
    'meta_key' => '_EventStartDate',
-   'order' => 'ASC',
+   'order' => 'DESC',
 );
 
 if(!empty($ev_select)){

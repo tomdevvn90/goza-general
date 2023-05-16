@@ -3,7 +3,7 @@ function single_ev_template($block){
     $is_style = isset($block['className']) ? $block['className'] : "is-style-default"; 
 
     switch ($is_style) {
-        case "is-style-2":
+        case "is-style-charity":
             be_single_ev_template_2();
             break;
 
@@ -109,6 +109,10 @@ function be_single_ev_template_2(){
     $color_cd     = get_field('cl_cd_sg_ev') ?: '';
     $cd_text      = $color_cd['heading'] ? : '';
     $cd_number    = $color_cd['number'] ? : '';
+    $author_id    = get_post_field('post_author', get_the_ID());
+    $author_name  = get_the_author_meta('display_name', $author_id);
+    $author_avta  = get_avatar($author_id);
+    $event_cate   = tribe_get_event_categories();
 
     if(is_plugin_active('the-events-calendar/the-events-calendar.php')){
         $date_start  = tribe_get_start_date( get_the_ID(), true, 'F d, Y');
@@ -170,9 +174,35 @@ function be_single_ev_template_2(){
                 <?php if(!empty($time_start) && !empty($date_start)): ?>
                     <div class="be-single-event-inner--date-start"> 
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m347.216 301.211-71.387-53.54V138.609c0-10.966-8.864-19.83-19.83-19.83-10.966 0-19.83 8.864-19.83 19.83v118.978c0 6.246 2.935 12.136 7.932 15.864l79.318 59.489a19.713 19.713 0 0 0 11.878 3.966c6.048 0 11.997-2.717 15.884-7.952 6.585-8.746 4.8-21.179-3.965-27.743z" fill="#000000" data-original="#000000" class=""></path><path d="M256 0C114.833 0 0 114.833 0 256s114.833 256 256 256 256-114.833 256-256S397.167 0 256 0zm0 472.341c-119.275 0-216.341-97.066-216.341-216.341S136.725 39.659 256 39.659c119.295 0 216.341 97.066 216.341 216.341S375.275 472.341 256 472.341z" fill="#000000" data-original="#000000" class=""></path></g></svg>
-                        <p> <span> STARTED </span> : <?= esc_attr($date_start)?> at <?= esc_attr($time_start)?> </p>
+                        <p> <span> STARTED </span> : <?= esc_attr($date_start)?> </p>
                     </div>
                 <?php endif; ?> 
+            </div>
+
+            <div class="be-single-event-inner--info"> 
+                <div class="be-single-event-inner--button be-button"> 
+                    <a href="<?php the_permalink() ?>" class="btn <?= esc_attr($cta_style) ?>">
+                        BUY TICKET
+                        <?php if ($cta_style == 'btn-water') { ?>
+                            <svg class="wgl-dashes inner-dashed-border animated-dashes">
+                                <rect rx="0%" ry="0%"> </rect>
+                            </svg>
+                        <?php } ?>
+                    </a>
+                </div>
+
+                <div class="be-single-event-inner--author"> 
+                    <div class="be-single-event-inner--author-avatar"> 
+                        <?= $author_avta ?>
+                    </div>
+
+                    <div class="be-single-event-inner--author-meta"> 
+                        <h4 class="be-single-event-inner--author-name"> <?=  esc_attr($author_name) ?> </h4>
+                        <div class="be-single-event-inner--author-cate"> 
+                            <?= $event_cate ?>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
