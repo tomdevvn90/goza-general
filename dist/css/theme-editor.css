@@ -10360,6 +10360,10 @@
   color: var(--btn-color-hover, #ffffff);
 }
 
+.be-single-event {
+  box-sizing: border-box;
+}
+
 .be-single-event-inner--name {
   font-size: 42px;
   line-height: 48px;
@@ -10567,13 +10571,12 @@
 
 .be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down,
 .be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down-edit {
-  width: 70%;
+  width: 100%;
 }
 
 @media (max-width: 1199.98px) {
   .be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down,
   .be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down-edit {
-    width: 100%;
     max-width: 400px;
   }
 }
@@ -10600,10 +10603,21 @@
   font-weight: 700;
 }
 
+.be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down > div:not(:last-child),
+.be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down-edit > div:not(:last-child) {
+  margin-right: 30px;
+}
+
+@media (max-width: 575.98px) {
+  .be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down > div:not(:last-child),
+  .be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down-edit > div:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
 @media (max-width: 575.98px) {
   .be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down > div,
   .be-single-event.is-style-default .be-single-event-inner--count-down #be-count-down-edit > div {
-    margin-right: 10px;
     min-width: 58px;
     font-size: 22px;
     line-height: 30px;
@@ -10643,7 +10657,7 @@
   width: 100%;
 }
 
-.be-single-event.is-style-2 {
+.be-single-event.is-style-charity {
   position: relative;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
@@ -10653,7 +10667,21 @@
   padding-bottom: 90px;
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--bg {
+@media (max-width: 991.98px) {
+  .be-single-event.is-style-charity {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .be-single-event.is-style-charity {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--bg {
   display: flex;
   position: absolute;
   width: 100%;
@@ -10663,7 +10691,7 @@
   top: 0;
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--bg::before {
+.be-single-event.is-style-charity .be-single-event-inner--bg::before {
   content: " ";
   display: inline-flex;
   background-color: rgba(0, 0, 0, 0.6);
@@ -10675,7 +10703,7 @@
   z-index: 1;
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--bg img {
+.be-single-event.is-style-charity .be-single-event-inner--bg img {
   -o-object-fit: cover;
   object-fit: cover;
   height: 100%;
@@ -10685,31 +10713,36 @@
   object-position: center;
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--content {
+.be-single-event.is-style-charity .be-single-event-inner--content {
   position: relative;
   z-index: 9;
   text-align: center;
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--name {
+.be-single-event.is-style-charity .be-single-event-inner--name {
   color: #fff;
-  line-height: 53px;
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--count-down {
+@media (min-width: 1200px) {
+  .be-single-event.is-style-charity .be-single-event-inner--name {
+    line-height: 53px;
+  }
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--count-down {
   margin-top: 20px;
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--count-down #be-count-down,
-.be-single-event.is-style-2 .be-single-event-inner--count-down #be-count-down-edit {
+.be-single-event.is-style-charity .be-single-event-inner--count-down #be-count-down,
+.be-single-event.is-style-charity .be-single-event-inner--count-down #be-count-down-edit {
   justify-content: center;
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--count-down #be-count-down > div,
-.be-single-event.is-style-2 .be-single-event-inner--count-down #be-count-down-edit > div {
+.be-single-event.is-style-charity .be-single-event-inner--count-down #be-count-down > div,
+.be-single-event.is-style-charity .be-single-event-inner--count-down #be-count-down-edit > div {
   display: inline-block;
   width: 110px;
-  height: 100px;
+  height: auto;
   text-align: center;
   margin: 5px;
   color: #fff;
@@ -10718,14 +10751,38 @@
   line-height: 55px;
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--count-down #be-count-down > div > span,
-.be-single-event.is-style-2 .be-single-event-inner--count-down #be-count-down-edit > div > span {
+@media (max-width: 767.98px) {
+  .be-single-event.is-style-charity .be-single-event-inner--count-down #be-count-down > div,
+  .be-single-event.is-style-charity .be-single-event-inner--count-down #be-count-down-edit > div {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .be-single-event.is-style-charity .be-single-event-inner--count-down #be-count-down > div,
+  .be-single-event.is-style-charity .be-single-event-inner--count-down #be-count-down-edit > div {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--count-down #be-count-down > div > span,
+.be-single-event.is-style-charity .be-single-event-inner--count-down #be-count-down-edit > div > span {
   display: block;
   font-size: 18px;
   font-weight: 400;
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--meta {
+@media (max-width: 575.98px) {
+  .be-single-event.is-style-charity .be-single-event-inner--count-down #be-count-down > div > span,
+  .be-single-event.is-style-charity .be-single-event-inner--count-down #be-count-down-edit > div > span {
+    font-size: 16px;
+  }
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--meta,
+.be-single-event.is-style-charity .be-single-event-inner--info {
   display: flex;
   width: 100%;
   max-width: 500px;
@@ -10733,36 +10790,190 @@
   margin-right: auto;
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--venue,
-.be-single-event.is-style-2 .be-single-event-inner--date-start {
+@media (max-width: 575.98px) {
+  .be-single-event.is-style-charity .be-single-event-inner--meta,
+  .be-single-event.is-style-charity .be-single-event-inner--info {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--info {
+  margin-top: 48px;
+}
+
+@media (max-width: 991.98px) {
+  .be-single-event.is-style-charity .be-single-event-inner--info {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .be-single-event.is-style-charity .be-single-event-inner--info {
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--meta {
+  margin-top: 32px;
+}
+
+@media (max-width: 991.98px) {
+  .be-single-event.is-style-charity .be-single-event-inner--meta {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .be-single-event.is-style-charity .be-single-event-inner--meta {
+    margin-top: 0;
+  }
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--venue,
+.be-single-event.is-style-charity .be-single-event-inner--date-start,
+.be-single-event.is-style-charity .be-single-event-inner--button,
+.be-single-event.is-style-charity .be-single-event-inner--author {
   color: #fff;
   width: 50%;
   padding-left: 15px;
   padding-right: 15px;
+  display: flex;
+  align-items: center;
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--venue svg,
-.be-single-event.is-style-2 .be-single-event-inner--date-start svg {
+@media (max-width: 575.98px) {
+  .be-single-event.is-style-charity .be-single-event-inner--venue,
+  .be-single-event.is-style-charity .be-single-event-inner--date-start,
+  .be-single-event.is-style-charity .be-single-event-inner--button,
+  .be-single-event.is-style-charity .be-single-event-inner--author {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 24px;
+  }
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--venue svg,
+.be-single-event.is-style-charity .be-single-event-inner--date-start svg {
   width: 100%;
   max-width: 20px;
   height: auto;
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--venue svg path,
-.be-single-event.is-style-2 .be-single-event-inner--date-start svg path {
+.be-single-event.is-style-charity .be-single-event-inner--venue svg path,
+.be-single-event.is-style-charity .be-single-event-inner--date-start svg path {
   fill: var(--link-color);
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--date-start {
-  display: flex;
-}
-
-.be-single-event.is-style-2 .be-single-event-inner--date-start p {
+.be-single-event.is-style-charity .be-single-event-inner--venue span,
+.be-single-event.is-style-charity .be-single-event-inner--venue p,
+.be-single-event.is-style-charity .be-single-event-inner--date-start span,
+.be-single-event.is-style-charity .be-single-event-inner--date-start p {
+  padding-left: 10px;
+  text-align: left;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
   margin: 0;
 }
 
-.be-single-event.is-style-2 .be-single-event-inner--date-start span {
+.be-single-event.is-style-charity .be-single-event-inner--venue p > span,
+.be-single-event.is-style-charity .be-single-event-inner--date-start p > span {
+  padding-left: 0;
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--date-start {
+  display: flex;
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--date-start p {
+  margin: 0;
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--date-start span {
   font-weight: 700;
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--author-meta {
+  padding-left: 20px;
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--author-avatar {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  min-width: 60px;
+  border-radius: 50%;
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--author-avatar > img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--author-name {
+  margin: 0;
+  line-height: 28px;
+  font-size: 22px;
+  text-align: left;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--author-cate > div {
+  display: none;
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--author-cate ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--author-cate ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--author-cate ul li a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  font-family: var(--body-family);
+  color: var(--link-color);
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--author-cate ul li:not(:first-child) {
+  padding-left: 10px;
+  position: relative;
+}
+
+.be-single-event.is-style-charity .be-single-event-inner--author-cate ul li:not(:first-child)::before {
+  content: ",";
+  display: inline-block;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  font-family: var(--body-family);
+  color: var(--link-color);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
 }
 
 .be-recent-posts .recent-posts-list .post-item {

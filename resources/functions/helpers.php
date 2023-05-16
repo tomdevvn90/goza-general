@@ -223,10 +223,10 @@ if ( ! function_exists( 'goza_single_post_navigation' ) ) {
         $next_id = $next_post->ID ;
         $permalink_next = get_permalink($next_id);
 
-		// print_r( $prev_post );
 		?>
-		<div class="single-post-navigation">
+		<div class="single-post-navigation post-navigation-skin--<?php echo get_post_type(); ?>">
 			<div class="previous-next-link">
+				<?php if( ! empty( $prev_post ) ): ?>
 				<div class="previous">
 					<a href="<?php echo esc_url( $permalink_prev ); ?>" class="post-nav-link" rel="prev">
 						<div class="post-nav-thumbnail">
@@ -242,6 +242,8 @@ if ( ! function_exists( 'goza_single_post_navigation' ) ) {
 						</div>
 					</a>
 				</div>
+				<?php endif; ?>
+				<?php if( ! empty( $next_post ) ): ?>
 				<div class="next">
 					<a href="<?php echo esc_url( $permalink_next ); ?>" class="post-nav-link" rel="next">
 						<div class="post-nav-title-box">
@@ -257,6 +259,7 @@ if ( ! function_exists( 'goza_single_post_navigation' ) ) {
 						</div>
 					</a>
 				</div>
+				<?php endif; ?>
 			</div>
 		</div>
 		<?php
@@ -270,16 +273,33 @@ if ( ! function_exists( 'goza_single_post_related' ) ) {
 		global $post;
 		$post_type = get_post_type( $post );
 
-		$tags =  wp_get_post_tags(  get_the_ID() );
+		$taxonomies = get_object_taxonomies( $post_type );
+		$taxs_query = array();
+		$taxs_query['relation'] = 'OR';
+		if ( ! empty( $taxonomies ) ) {
+			foreach ( $taxonomies as $key => $taxonomy ) {
+				$terms = get_the_terms( $post->ID, $taxonomy );
+				if ( ! empty( $terms ) ) {
+					$term_ids = array();
+					foreach ($terms as $i => $term) {
+						array_push( $term_ids, $term->term_id );
+					}
+					$item = array(
+						'taxonomy' => $taxonomy,
+						'field' => 'term_id',
+						'terms' => $term_ids,
+					);
+					array_push( $taxs_query, $item );
+				}	
+			}
+		}
 
 		$args = array(
 			'post_type' => $post_type,
 			'posts_per_page' => 3,
 			'post_status' => 'publish',
-			'post__not_in' => array( get_the_ID() ),
-			'tag__in' => $tags,
-			'tax_query' => array(),
-
+			'post__not_in' => array( $post->ID ),
+			'tax_query' => $taxs_query,
 		);
 
 		$article_query = new WP_Query( $args );
@@ -293,9 +313,8 @@ if ( ! function_exists( 'goza_single_post_related' ) ) {
 					<?php
 					while ( $article_query->have_posts() ) {
 						$article_query->the_post( );
-					}
-
-					?>
+						
+						?>
 						<div class="post-related-item">
 							<a href="<?php echo esc_url( get_the_permalink( ) ); ?>" class="post-related-item__thumbnail">
 								<?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
@@ -304,8 +323,10 @@ if ( ! function_exists( 'goza_single_post_related' ) ) {
 								<h3 class="post-related-item__title"><?php echo get_the_title( ); ?></h3>
 							</a>
 						</div>
-					<?php
-		
+						<?php
+
+					}
+
 					wp_reset_postdata( );
 					?>
 					</div>
