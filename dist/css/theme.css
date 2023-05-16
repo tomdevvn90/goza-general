@@ -12397,6 +12397,37 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   border-left: 5px solid #eee;
 }
 
+.single .entry-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.single .entry-content ul li::before {
+  content: "\F00C";
+  font-family: "FontAwesome";
+  color: var(--link-color, #d41b65);
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.single .entry-content ol {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: count_ol;
+}
+
+.single .entry-content ol li {
+  counter-increment: count_ol;
+}
+
+.single .entry-content ol li::before {
+  content: counter(count_ol) ". ";
+  color: var(--link-color, #d41b65);
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: 600;
+}
+
 .single .single-post-navigation {
   padding-top: 40px;
   width: 100%;
@@ -12417,7 +12448,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 .single .single-post-navigation .previous-next-link .next {
-  float: left;
+  float: right;
   width: 50%;
   text-align: right;
 }
@@ -12635,6 +12666,55 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   clear: both;
 }
 
+.single .comments-area .title-comments {
+  position: relative;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+}
+
+.single .comments-area .title-comments::after {
+  content: "";
+  height: 2px;
+  width: 50px;
+  left: 0px;
+  bottom: 0px;
+  background: var(--link-color, #d41b65);
+  position: absolute;
+}
+
+.single .comments-area .comment-list {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: count_ol;
+}
+
+.single .comments-area .comment-list .comment {
+  position: relative;
+  counter-increment: comment_ol;
+  padding-left: 25px;
+}
+
+.single .comments-area .comment-list .comment::before {
+  content: counter(comment_ol) ". ";
+  color: var(--link-color, #d41b65);
+  margin-right: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.single .comments-area .comment-list .comment .avatar {
+  border-radius: 4px;
+}
+
+.single .comments-area .comment-list .comment .comment-respond .comment-reply-title small {
+  margin-left: 10px;
+}
+
 .single .comments-area .comment-respond {
   padding: 30px;
   background: #f8f8f8;
@@ -12646,7 +12726,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   line-height: 26px;
   font-weight: 600;
   color: #333333;
-  text-decoration: underline;
 }
 
 .single .comments-area .comment-respond form p {

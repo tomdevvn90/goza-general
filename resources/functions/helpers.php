@@ -224,7 +224,7 @@ if ( ! function_exists( 'goza_single_post_navigation' ) ) {
         $permalink_next = get_permalink($next_id);
 
 		?>
-		<div class="single-post-navigation">
+		<div class="single-post-navigation post-navigation-skin--<?php echo get_post_type(); ?>">
 			<div class="previous-next-link">
 				<?php if( ! empty( $prev_post ) ): ?>
 				<div class="previous">
