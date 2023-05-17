@@ -8873,6 +8873,8 @@
   position: relative;
   width: 100%;
   min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media (min-width: 768px) {
@@ -8883,14 +8885,12 @@
 }
 
 .goza-image-content-block .block-inner__col.block-inner__content {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 30px 15px 30px 30px;
 }
 
 @media (max-width: 767.98px) {
   .goza-image-content-block .block-inner__col.block-inner__content {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 15px;
   }
 }
 

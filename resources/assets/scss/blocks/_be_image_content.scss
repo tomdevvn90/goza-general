@@ -23,25 +23,18 @@
             position: relative;
             width: 100%;
             min-height: 1px;
-
+            padding-left: 15px;
+            padding-right: 15px;
             @include media-breakpoint-up(md) {
                 flex: 0 0 50%;
                 max-width: 50%;
             }
 
             &.block-inner__content {
-                padding-top: 60px;
-                padding-bottom: 60px;
-                // @include media-breakpoint-down(md) {
-                //     padding: 60px 40px;
-                // }
-                // @include media-breakpoint-down(sm) {
-                //     padding: 60px 15px;
-                // }
+                padding: 30px 15px 30px 30px;
 
                 @include media-breakpoint-down(sm) {
-                    padding-top: 40px;
-                    padding-bottom: 40px;
+                    padding: 40px 15px;
                 }
             }
 
