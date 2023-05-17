@@ -43,3 +43,9 @@
     width: calc(100% / 5); }
     .goza-logo-carousel-block .block-editor .goza-logo__item:nth-of-type(1n+6) {
       display: none !important; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/

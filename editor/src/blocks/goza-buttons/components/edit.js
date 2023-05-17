@@ -16,16 +16,16 @@ const Edit = (props) => {
     } = attributes;
 
     useEffect(() => {
-        setAttributes({ id: 'advgbbtn-' + clientId });
+        setAttributes({ id: 'goza-btn-' + clientId });
     }, []);
+
+    const isStyleWater = className.indexOf('-water') > -1;
 
     return (
         <Fragment>
             <GozaBlockControl  {...props} />
             <Inspector  {...props} />
-            <span className={`${className} align${align}`}
-                style={{ display: 'inline-block' }}
-            >
+            <div className={`${className}  ${id} align${align}`}>
                 <RichText
                     tagName="span"
                     placeholder={__('Add text…', 'goza')}
@@ -33,29 +33,57 @@ const Edit = (props) => {
                     onChange={(value) => setAttributes({ text: value })}
                     allowedFormats={['bold', 'italic', 'strikethrough']}
                     isSelected={isSelected}
-                    className={`wp-block-goza-button_link ${id}`}
+                    className={`wp-block-goza-button_link`}
                     keepPlaceholderOnFocus
                 />
-            </span>
+                {!!isStyleWater &&
+                    <svg class="wgl-dashes inner-dashed-border animated-dashes"> <rect rx="0%" ry="0%">  </rect> </svg>
+                }
+
+            </div>
             <style>
                 {`.${id} {
-                        font-size: ${textSize}px;
-                        color: ${textColor} !important;
                         background-color: ${bgColor} !important;
                         margin: ${marginTop}px ${marginRight}px ${marginBottom}px ${marginLeft}px;
-                        padding: ${paddingTop}px ${paddingRight}px ${paddingBottom}px ${paddingLeft}px;
-                        border-width: ${borderWidth}px !important;
-                        border-color: ${borderColor} !important;
                         border-radius: ${borderRadius}px !important;
+                        border-color: ${borderColor} !important;              
+                        border-width: ${borderWidth}px !important;      
                         border-style: ${borderStyle} ${borderStyle !== 'none' && '!important'};
+                        transition: all ${transitionSpeed}ms ease;
                     }
-                    .${id}:hover {
-                        color: ${hoverTextColor} !important;
+                    .${id}:hover {                        
                         background-color: ${hoverBgColor} !important;
-                        box-shadow: ${hoverShadowH}px ${hoverShadowV}px ${hoverShadowBlur}px ${hoverShadowSpread}px ${hoverShadowColor};
-                        transition: all ${transitionSpeed}s ease;
+                        box-shadow: ${hoverShadowH}px ${hoverShadowV}px ${hoverShadowBlur}px ${hoverShadowSpread}px ${hoverShadowColor};                        
                         opacity: ${hoverOpacity / 100}
-                    }`}
+                    }
+                    .${id} .wp-block-goza-button_link{
+                        color: ${textColor} !important;
+                        padding: ${paddingTop}px ${paddingRight}px ${paddingBottom}px ${paddingLeft}px;                    
+                        font-size: ${textSize}px;                        
+                        transition: all ${transitionSpeed}ms ease;
+                    }
+                    .${id}:hover .wp-block-goza-button_link{
+                        color: ${hoverTextColor} !important;
+                    }
+                    .is-style-outlined.${id}{
+                        border-color: ${textColor} !important;    
+                    }
+                    .is-style-ngo-dark.${id}:before, .is-style-ngo-dark.${id}:after{
+                        transition: all ${transitionSpeed}ms ease;  
+                    }
+                    .is-style-wt-charity.${id}:after{
+                        border-radius: ${borderRadius}px !important; 
+                        background-color: ${hoverBgColor} !important;
+                    }
+                    .is-style-charity-organization.${id}:before, .is-style-charity-organization.${id}:after{
+                        background-color: ${hoverBgColor} !important;
+                        transition: all ${transitionSpeed}ms ease;  
+                    }
+                    .is-style-charity-organization.${id}:hover{
+                        background-color: ${bgColor} !important; 
+                    }
+                    `}
+                    
             </style>
         </Fragment>
     )

@@ -11841,6 +11841,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   padding-bottom: 100px;
 }
 
+@media (max-width: 991.98px) {
+  .goza-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 .goza-hero-section {
   padding: 30px 0;
   min-height: 350px;
@@ -12689,30 +12696,87 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 .single .comments-area .comment-list {
   list-style: none;
   padding-left: 0;
-  counter-reset: count_ol;
 }
 
 .single .comments-area .comment-list .comment {
   position: relative;
-  counter-increment: comment_ol;
-  padding-left: 25px;
+  padding-left: 64px;
+  margin-bottom: 15px;
 }
 
 .single .comments-area .comment-list .comment::before {
-  content: counter(comment_ol) ". ";
-  color: var(--link-color, #d41b65);
-  margin-right: 5px;
+  content: "";
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 57px;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  background: #f8f8f8;
+  border-style: solid;
+  border-width: 1px 0px 0 1px;
+  border-color: rgba(53, 53, 53, 0.1);
+  transform: rotate(-45deg);
 }
 
-.single .comments-area .comment-list .comment .avatar {
+.single .comments-area .comment-list .comment .comment-body {
+  padding: 25px 25px 15px;
+  background: #f8f8f8;
+  border: 1px solid rgba(53, 53, 53, 0.1);
   border-radius: 4px;
+}
+
+.single .comments-area .comment-list .comment .comment-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+}
+
+.single .comments-area .comment-list .comment .comment-meta .comment-author {
+  padding-right: 10px;
+  color: var(--link-color, #d41b65);
+}
+
+.single .comments-area .comment-list .comment .comment-meta .avatar {
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+.single .comments-area .comment-list .comment .comment-meta .says {
+  display: none;
+}
+
+.single .comments-area .comment-list .comment .comment-meta .comment-date {
+  padding-right: 10px;
+  color: var(--body-color, #666666);
+}
+
+.single .comments-area .comment-list .comment .comment-meta .comment-edit-link {
+  padding-right: 10px;
+}
+
+.single .comments-area .comment-list .comment .comment-details {
+  padding-top: 10px;
+}
+
+.single .comments-area .comment-list .comment .comment-details p {
+  margin-bottom: 10px;
+}
+
+.single .comments-area .comment-list .comment .comment-respond {
+  margin-top: 5px;
 }
 
 .single .comments-area .comment-list .comment .comment-respond .comment-reply-title small {
   margin-left: 10px;
+}
+
+.single .comments-area .comment-list .children {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
 }
 
 .single .comments-area .comment-respond {
@@ -12888,9 +12952,48 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .single .single-post-related .post-related-wrapper .post-related-list .post-related-item {
     width: 100%;
   }
+
+  .single .comments-area .comment-list .comment {
+    font-size: 14px;
+    padding-left: 0;
+  }
+
+  .single .comments-area .comment-list .comment::before {
+    display: none;
+  }
+
+  .single .comments-area .comment-list .comment.depth-2 {
+    padding-left: 25px;
+  }
+
+  .single .comments-area .comment-list .comment .comment-body {
+    padding: 20px 15px 10px;
+  }
+
+  .single .comments-area .comment-list .comment .comment-meta .avatar {
+    position: unset;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
 }
 
 @media (max-width: 480px) {
+  .single .single-post-navigation .previous-next-link .previous .post-nav-title-box {
+    padding-left: 6px;
+  }
+
+  .single .single-post-navigation .previous-next-link .next .post-nav-title-box {
+    padding-right: 6px;
+  }
+
+  .single .single-post-navigation .previous-next-link .post-nav-link .post-nav-thumbnail {
+    max-width: 40px;
+  }
+
+  .single .single-post-navigation .previous-next-link .post-nav-link .post-nav-title-box {
+    font-size: 13px;
+  }
+
   .single .comments-area .comment-respond {
     padding: 30px 20px;
   }
@@ -24765,6 +24868,8 @@ h6 {
   position: relative;
   width: 100%;
   min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media (min-width: 768px) {
@@ -24775,14 +24880,12 @@ h6 {
 }
 
 .goza-image-content-block .block-inner__col.block-inner__content {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 30px 15px 30px 30px;
 }
 
 @media (max-width: 767.98px) {
   .goza-image-content-block .block-inner__col.block-inner__content {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 15px;
   }
 }
 

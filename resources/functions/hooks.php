@@ -164,9 +164,9 @@ add_action( 'goza_hook_single_post_navigation', 'goza_single_post_navigation' );
 // single post related
 add_action( 'goza_hook_single_post_related', 'goza_single_post_related' );
 
-// single remove companies
-add_filter('wpseo_breadcrumb_single_link' ,'goza_remove_companies', 10 ,2);
-function goza_remove_companies( $link_output, $link ){
+// single seo breadcrumb single link
+add_filter('wpseo_breadcrumb_single_link' ,'goza_wpseo_breadcrumb_single_link', 10 ,2);
+function goza_wpseo_breadcrumb_single_link( $link_output, $link ){
 
 	if ( ! is_single() ) {
 		return $link_output;
@@ -174,11 +174,18 @@ function goza_remove_companies( $link_output, $link ){
 
 	$page_for_posts_id = get_option( 'page_for_posts' );
     $page_for_posts_obj = get_post( $page_for_posts_id );
-
-	if( $link['text'] == __( $page_for_posts_obj->post_title, 'goza') ) {
+	// remove blog link
+	if( $link['id'] && $link['id'] == $page_for_posts_id ) {
 
 		$link_output = '';
 	}
 
 	return $link_output;
+}
+
+// Filter the comment list arguments
+add_filter( 'wp_list_comments_args', 'goza_override_comment_list' );
+function goza_override_comment_list( $args ) {
+    $args[ 'callback' ] = 'goza_single_comment_list_template';
+	return $args;
 }

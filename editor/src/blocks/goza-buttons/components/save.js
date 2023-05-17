@@ -12,18 +12,23 @@ const Save = (props) => {
         text,
     } = attributes;
 
+    const isStyleWater = className.indexOf('-water') > -1;
+
     return (
         <Fragment>
-            <div className={`${className} align${align}`}>
-                <RichText.Content
+            <div className={`${className}  ${id} align${align}`}>
+                <RichText.Content 
                     tagName="a"
-                    className={`wp-block-goza-button_link ${id}`}
+                    className={`wp-block-goza-button_link`}
                     href={url || '#'}
                     title={title}
                     target={!urlOpenNewTab ? '_self' : '_blank'}
                     value={text}
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer" 
                 />
+                {!!isStyleWater &&
+                    <svg class="wgl-dashes inner-dashed-border animated-dashes"> <rect rx="0%" ry="0%">  </rect> </svg>
+                }
             </div>
         </Fragment>
     )

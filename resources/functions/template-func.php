@@ -22,3 +22,12 @@ if ( ! function_exists( 'goza_single_template' ) ) {
 		get_template_part( 'template-parts/single/single' );
 	}
 }
+
+if ( ! function_exists( 'goza_single_comment_list_template' ) ) {
+	/**
+	 * Single comment list template
+	 */
+	function goza_single_comment_list_template() {
+		get_template_part( 'template-parts/single/comment-list' );
+	}
+}

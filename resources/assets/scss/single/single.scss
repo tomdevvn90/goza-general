@@ -331,29 +331,76 @@
         .comment-list{
             list-style: none;
             padding-left: 0;
-            counter-reset: count_ol;
             .comment{
                 position: relative;
-                counter-increment: comment_ol;
-                padding-left: 25px;
+                padding-left: 64px;
+                margin-bottom: 15px;
                 &::before{
-                    content: counter(comment_ol) ". ";
-                    color: var(--link-color, #d41b65);
-                    margin-right: 5px;
+                    content: "";
                     position: absolute;
-                    left: 0;
-                    top: 0;
+                    left: 57px;
+                    top: 20px;
+                    width: 15px;
+                    height: 15px;
+                    background: #f8f8f8;
+                    border-style: solid;
+                    border-width: 1px 0px 0 1px;
+                    border-color: rgba(53, 53, 53, 0.1);
+                    transform: rotate(-45deg);
                 }
-                .avatar{
+                .comment-body{
+                    padding: 25px 25px 15px;
+                    background: #f8f8f8;
+                    border: 1px solid rgba(53, 53, 53, 0.1);
                     border-radius: 4px;
                 }
+                .comment-meta{
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    text-transform: uppercase;
+                    .comment-author{
+                        padding-right: 10px;
+                        color: var(--link-color, #d41b65);
+                    }
+                    .avatar{
+                        border-radius: 4px;
+                        position: absolute;
+                        left: 0;
+                        top: 10px;
+                    }
+                    .says{
+                        display: none;
+                    }
+                    .comment-date{
+                        padding-right: 10px;
+                        color: var(--body-color, #666666);
+                    }
+                    .comment-edit-link{
+                        padding-right: 10px;
+                    }
+                }
+
+                .comment-details{
+                    padding-top: 10px;
+                    p{
+                        margin-bottom: 10px;
+                    }
+                }
+
                 .comment-respond{
+                    margin-top: 5px;
                     .comment-reply-title{
                         small{
                             margin-left: 10px;
                         }
                     }
                 }
+            }
+            .children{
+                list-style: none;
+                padding-left: 0;
+                margin-top: 15px;
             }
         }
         .comment-respond{
@@ -545,9 +592,58 @@
             }
         }
 
+        .comments-area{
+            .comment-list{
+                .comment{
+                    font-size: 14px;
+                    padding-left: 0;
+                    &::before{
+                        display: none;
+                    }
+                    &.depth-2{
+                        padding-left: 25px;
+                    }
+                    .comment-body{
+                        padding: 20px 15px 10px;
+                    }
+                    .comment-meta{
+                        .avatar{
+                            position: unset;
+                            margin-right: 10px;
+                            margin-bottom: 5px;
+                        }
+                    }  
+                }
+            }
+        }
+
     }
 
     @media(max-width: 480px){
+
+        .single-post-navigation{
+            .previous-next-link{
+                .previous{
+                    .post-nav-title-box{
+                        padding-left: 6px;
+                    }
+                }
+                .next{
+                    .post-nav-title-box{
+                        padding-right: 6px;
+                    }
+                }
+                .post-nav-link{
+                    .post-nav-thumbnail{
+                        max-width: 40px;
+                    }
+                    .post-nav-title-box{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
         .comments-area{
             .comment-respond{
                 padding: 30px 20px;
