@@ -17,7 +17,7 @@ const listBorderStyles = [
 
 const Inspector = (props) => {
 
-    const { attributes, setAttributes } = props
+    const { attributes, setAttributes, className } = props
     const {
         id, align, url, urlOpenNewTab, title, text, bgColor, textColor, textSize,
         marginTop, marginRight, marginBottom, marginLeft,
@@ -27,23 +27,30 @@ const Inspector = (props) => {
         hoverOpacity, transitionSpeed
     } = attributes;
 
+    const isStyleOutlined = className.indexOf('-outlined') > -1;
+    const isStyleWater = className.indexOf('-water') > -1;
+
     const hoverColorSettings = [
         {
             label: __('Background Color', 'goza'),
             value: hoverBgColor,
-            onChange: (value) => setAttributes({ hoverBgColor: value === undefined ? '#2196f3' : value }),
+            onChange: (value) => setAttributes({ hoverBgColor: value }),
         },
         {
             label: __('Text Color', 'goza'),
             value: hoverTextColor,
-            onChange: (value) => setAttributes({ hoverTextColor: value === undefined ? '#fff' : value }),
+            onChange: (value) => setAttributes({ hoverTextColor: value }),
         },
         {
             label: __('Shadow Color', 'goza'),
             value: hoverShadowColor,
-            onChange: (value) => setAttributes({ hoverShadowColor: value === undefined ? '#ccc' : value }),
+            onChange: (value) => setAttributes({ hoverShadowColor: value }),
         },
     ];
+
+    if (isStyleOutlined) {
+        hoverColorSettings.shift();
+    }
 
     return (
         <InspectorControls>
@@ -81,54 +88,69 @@ const Inspector = (props) => {
                     allowReset
                 />
 
-                <ColorPalette
-                    label={__('Background Color', 'goza')}
-                    value={bgColor}
-                    onChange={(value) => setAttributes({ bgColor: value })}
-                />
-                <ColorPalette
-                    label={__('Text Color', 'goza')}
-                    value={textColor}
-                    onChange={(value) => setAttributes({ textColor: value })}
-                />
             </PanelBody>
-            <PanelBody title={__('Border', 'goza')} initialOpen={false} >
-                <RangeControl
-                    label={__('Border radius', 'goza')}
-                    value={borderRadius || ''}
-                    onChange={(value) => setAttributes({ borderRadius: value })}
-                    min={0}
-                    max={100}
+            {!isStyleOutlined && (
+                <PanelColorSettings
+                    title={__('Background Color', 'goza')}
+                    colorSettings={[
+                        {
+                            label: __('Background Color', 'goza'),
+                            value: bgColor,
+                            onChange: (value) => setAttributes({ bgColor: value }),
+                        }
+                    ]}
                 />
-                <SelectControl
-                    label={__('Border style', 'goza')}
-                    value={borderStyle}
-                    options={listBorderStyles}
-                    onChange={(value) => setAttributes({ borderStyle: value })}
-                />
-                {borderStyle !== 'none' && (
-                    <Fragment>
-                        <PanelColorSettings
-                            title={__('Border Color', 'goza')}
-                            initialOpen={false}
-                            colorSettings={[
-                                {
-                                    label: __('Border Color', 'goza'),
-                                    value: borderColor,
-                                    onChange: (value) => setAttributes({ borderColor: value === undefined ? '#2196f3' : value }),
-                                },
-                            ]}
-                        />
-                        <RangeControl
-                            label={__('Border width', 'goza')}
-                            value={borderWidth || ''}
-                            onChange={(value) => setAttributes({ borderWidth: value })}
-                            min={0}
-                            max={100}
-                        />
-                    </Fragment>
-                )}
-            </PanelBody>
+            )}
+            <PanelColorSettings
+                title={__('Text Color', 'goza')}
+                colorSettings={[
+                    {
+                        label: __('Text Color', 'goza'),
+                        value: textColor,
+                        onChange: (value) => setAttributes({ textColor: value }),
+                    }
+                ]}
+            />
+            {!isStyleWater &&
+                <PanelBody title={__('Border', 'goza')} initialOpen={false} >
+                    <RangeControl
+                        label={__('Border radius', 'goza')}
+                        value={borderRadius || ''}
+                        onChange={(value) => setAttributes({ borderRadius: value })}
+                        min={0}
+                        max={100}
+                    />
+                    <SelectControl
+                        label={__('Border style', 'goza')}
+                        value={borderStyle}
+                        options={listBorderStyles}
+                        onChange={(value) => setAttributes({ borderStyle: value })}
+                    />
+                    {borderStyle !== 'none' && (
+                        <Fragment>
+                            <PanelColorSettings
+                                title={__('Border Color', 'goza')}
+                                initialOpen={false}
+                                colorSettings={[
+                                    {
+                                        label: __('Border Color', 'goza'),
+                                        value: borderColor,
+                                        onChange: (value) => setAttributes({ borderColor: value === undefined ? '#2196f3' : value }),
+                                    },
+                                ]}
+                            />
+                            <RangeControl
+                                label={__('Border width', 'goza')}
+                                value={borderWidth || ''}
+                                onChange={(value) => setAttributes({ borderWidth: value })}
+                                min={0}
+                                max={100}
+                            />
+                        </Fragment>
+                    )}
+                </PanelBody>
+            }
+
             <PanelBody title={__('Margin', 'goza')} initialOpen={false} >
                 <RangeControl
                     label={__('Margin top', 'goza')}
