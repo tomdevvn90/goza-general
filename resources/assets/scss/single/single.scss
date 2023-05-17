@@ -331,29 +331,72 @@
         .comment-list{
             list-style: none;
             padding-left: 0;
-            counter-reset: count_ol;
             .comment{
                 position: relative;
-                counter-increment: comment_ol;
-                padding-left: 25px;
+                padding-left: 64px;
+                margin-bottom: 15px;
                 &::before{
-                    content: counter(comment_ol) ". ";
-                    color: var(--link-color, #d41b65);
-                    margin-right: 5px;
+                    content: "";
                     position: absolute;
-                    left: 0;
-                    top: 0;
+                    left: 57px;
+                    top: 20px;
+                    width: 15px;
+                    height: 15px;
+                    background: #f8f8f8;
+                    border-style: solid;
+                    border-width: 1px 0px 0 1px;
+                    border-color: rgba(53, 53, 53, 0.1);
+                    transform: rotate(-45deg);
                 }
-                .avatar{
-                    border-radius: 4px;
+                .comment-body{
+                    padding: 25px 25px 15px;
+                    background: #f8f8f8;
+                    border: 1px solid rgba(53, 53, 53, 0.1);
                 }
+                .comment-meta{
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    text-transform: uppercase;
+                    .comment-author{
+                        padding-right: 10px;
+                        color: var(--link-color, #d41b65);
+                    }
+                    .avatar{
+                        border-radius: 4px;
+                        position: absolute;
+                        left: 0;
+                        top: 10px;
+                    }
+                    .says{
+                        display: none;
+                    }
+                    .comment-date{
+                        padding-right: 10px;
+                        color: var(--body-color, #666666);
+                    }
+                    .comment-edit-link{
+                        padding-right: 10px;
+                    }
+                }
+
+                .comment-details{
+                    padding-top: 15px;
+                }
+
                 .comment-respond{
+                    margin-top: 5px;
                     .comment-reply-title{
                         small{
                             margin-left: 10px;
                         }
                     }
                 }
+            }
+            .children{
+                list-style: none;
+                padding-left: 0;
+                margin-top: 15px;
             }
         }
         .comment-respond{

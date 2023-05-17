@@ -12689,30 +12689,82 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 .single .comments-area .comment-list {
   list-style: none;
   padding-left: 0;
-  counter-reset: count_ol;
 }
 
 .single .comments-area .comment-list .comment {
   position: relative;
-  counter-increment: comment_ol;
-  padding-left: 25px;
+  padding-left: 64px;
+  margin-bottom: 15px;
 }
 
 .single .comments-area .comment-list .comment::before {
-  content: counter(comment_ol) ". ";
-  color: var(--link-color, #d41b65);
-  margin-right: 5px;
+  content: "";
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 57px;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  background: #f8f8f8;
+  border-style: solid;
+  border-width: 1px 0px 0 1px;
+  border-color: rgba(53, 53, 53, 0.1);
+  transform: rotate(-45deg);
 }
 
-.single .comments-area .comment-list .comment .avatar {
+.single .comments-area .comment-list .comment .comment-body {
+  padding: 25px 25px 15px;
+  background: #f8f8f8;
+  border: 1px solid rgba(53, 53, 53, 0.1);
+}
+
+.single .comments-area .comment-list .comment .comment-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+}
+
+.single .comments-area .comment-list .comment .comment-meta .comment-author {
+  padding-right: 10px;
+  color: var(--link-color, #d41b65);
+}
+
+.single .comments-area .comment-list .comment .comment-meta .avatar {
   border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+.single .comments-area .comment-list .comment .comment-meta .says {
+  display: none;
+}
+
+.single .comments-area .comment-list .comment .comment-meta .comment-date {
+  padding-right: 10px;
+  color: var(--body-color, #666666);
+}
+
+.single .comments-area .comment-list .comment .comment-meta .comment-edit-link {
+  padding-right: 10px;
+}
+
+.single .comments-area .comment-list .comment .comment-details {
+  padding-top: 15px;
+}
+
+.single .comments-area .comment-list .comment .comment-respond {
+  margin-top: 5px;
 }
 
 .single .comments-area .comment-list .comment .comment-respond .comment-reply-title small {
   margin-left: 10px;
+}
+
+.single .comments-area .comment-list .children {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
 }
 
 .single .comments-area .comment-respond {
