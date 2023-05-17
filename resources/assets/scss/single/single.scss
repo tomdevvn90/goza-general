@@ -352,6 +352,7 @@
                     padding: 25px 25px 15px;
                     background: #f8f8f8;
                     border: 1px solid rgba(53, 53, 53, 0.1);
+                    border-radius: 4px;
                 }
                 .comment-meta{
                     display: flex;
@@ -381,7 +382,10 @@
                 }
 
                 .comment-details{
-                    padding-top: 15px;
+                    padding-top: 10px;
+                    p{
+                        margin-bottom: 10px;
+                    }
                 }
 
                 .comment-respond{
@@ -588,9 +592,58 @@
             }
         }
 
+        .comments-area{
+            .comment-list{
+                .comment{
+                    font-size: 14px;
+                    padding-left: 0;
+                    &::before{
+                        display: none;
+                    }
+                    &.depth-2{
+                        padding-left: 25px;
+                    }
+                    .comment-body{
+                        padding: 20px 15px 10px;
+                    }
+                    .comment-meta{
+                        .avatar{
+                            position: unset;
+                            margin-right: 10px;
+                            margin-bottom: 5px;
+                        }
+                    }  
+                }
+            }
+        }
+
     }
 
     @media(max-width: 480px){
+
+        .single-post-navigation{
+            .previous-next-link{
+                .previous{
+                    .post-nav-title-box{
+                        padding-left: 6px;
+                    }
+                }
+                .next{
+                    .post-nav-title-box{
+                        padding-right: 6px;
+                    }
+                }
+                .post-nav-link{
+                    .post-nav-thumbnail{
+                        max-width: 40px;
+                    }
+                    .post-nav-title-box{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
         .comments-area{
             .comment-respond{
                 padding: 30px 20px;

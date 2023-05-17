@@ -53,7 +53,7 @@ switch ( $comment->comment_type ) :
         </div>
     </div>
     <?php
-    
+
     break;
 endswitch; 
 
