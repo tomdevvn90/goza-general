@@ -19037,6 +19037,33 @@ h6 {
   background: #ed9913;
 }
 
+.be-single-event.be-single-event-water {
+  display: inline-block;
+}
+
+.be-single-event.be-single-event-water .be-single-event-inner {
+  margin-top: -290px;
+}
+
+.wp-block-goza-blocks-goza-container.be-container-single-ev-water {
+  overflow: inherit;
+}
+
+.wp-block-goza-blocks-goza-container.be-container-single-ev-water .goza-logo-carousel-block .slick-list {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.wp-block-goza-blocks-goza-container.be-last-post-water > .goza-container-bg::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
 .be-single-post-block .be-single-post-inner {
   display: flex;
   align-items: center;
@@ -25355,7 +25382,7 @@ h6 {
 @media (min-width: 992px) {
   .be-ss-text-tsm-video--inner {
     margin-left: -15px;
-    margin-right: 15px;
+    margin-right: -15px;
   }
 }
 
@@ -25367,6 +25394,7 @@ h6 {
 
 .be-ss-text-tsm-video--inner-left,
 .be-ss-text-tsm-video--inner-right {
+  display: flex;
   width: 100%;
 }
 
@@ -25379,8 +25407,11 @@ h6 {
   }
 }
 
+.be-ss-text-tsm-video--inner-right {
+  justify-content: flex-end;
+}
+
 .be-ss-text-tsm-video--inner-left {
-  display: flex;
   flex-wrap: wrap;
   align-content: center;
 }
@@ -25532,6 +25563,13 @@ h6 {
 .be-ss-text-tsm-video--video {
   height: 100%;
   position: relative;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .be-ss-text-tsm-video--video {
+    max-width: 457px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -25572,7 +25610,6 @@ h6 {
 
 @media (min-width: 992px) {
   .be-ss-text-tsm-video--video-bg img {
-    max-width: 457px;
     height: 100%;
   }
 }

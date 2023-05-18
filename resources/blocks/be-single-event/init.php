@@ -4,7 +4,7 @@ function single_ev_template($block){
 
     switch ($is_style) {
         case "is-style-charity":
-            be_single_ev_template_2();
+            be_single_ev_template_charity();
             break;
 
         default:
@@ -100,7 +100,7 @@ function be_single_ev_template_default(){
    
 <?php }
 
-function be_single_ev_template_2(){       
+function be_single_ev_template_charity(){       
     $heading      = get_field('heading_sg_ev') ?: '';
     $post_img_url = get_the_post_thumbnail_url(get_the_ID(),'full') ? : 'https://picsum.photos/1920/900?1'; 
     $cta_style    = get_field('cta_style_sg_ev') ?: 'btn-default';
@@ -123,9 +123,9 @@ function be_single_ev_template_2(){
         $timestamp   = strtotime($count_down);
         $distance    = $timestamp - $time_now;
     }
-    ?>
+    ?> 
     <div class="be-single-event-inner--bg"> 
-        <img src="<?= esc_url($post_img_url) ?>" alt="bg imgage">
+        <img src="<?= esc_url($post_img_url) ?>" alt="bg image">
     </div>
 
     <div class="be-single-event-inner--content"> 
