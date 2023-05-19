@@ -8,8 +8,12 @@
     padding-top: 120px;
     padding-bottom: 120px;
     @include media-breakpoint-down(md){
-        padding-top: 90px;
-        padding-bottom: 90px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-down(sm){
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
     &--bg{
         display: flex;

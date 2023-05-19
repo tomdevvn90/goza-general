@@ -16185,7 +16185,7 @@ h6 {
 
 .site-header.site-header-search .goza-header-main {
   position: relative;
-  padding: 40px 0;
+  padding: 0px 0;
 }
 
 .site-header.site-header-search .goza-header-main::after {
@@ -16199,6 +16199,19 @@ h6 {
   left: 50%;
   bottom: -4px;
   transform: translatex(-50%);
+  z-index: 9;
+}
+
+@media (max-width: 1199.98px) {
+  .site-header.site-header-search .goza-header-main::after {
+    border-width: 4px 460px 0px 460px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .site-header.site-header-search .goza-header-main::after {
+    content: none;
+  }
 }
 
 .site-header.site-header-search .goza-header-main--logo a {
@@ -19042,7 +19055,7 @@ h6 {
 }
 
 .be-single-event.be-single-event-water .be-single-event-inner {
-  margin-top: -290px;
+  margin-top: -220px;
 }
 
 .wp-block-goza-blocks-goza-container.be-container-single-ev-water {
@@ -19054,14 +19067,50 @@ h6 {
   padding-right: 0 !important;
 }
 
-.wp-block-goza-blocks-goza-container.be-last-post-water > .goza-container-bg::before {
+.n2-ss-slider a.be-btn-slider-water {
+  position: relative;
+}
+
+.n2-ss-slider a.be-btn-slider-water svg {
   position: absolute;
-  content: " ";
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  left: 0px;
-  top: 0px;
-  background-color: rgba(255, 255, 255, 0.75);
+  pointer-events: none;
+  animation: dashed_border_running 20s linear infinite both;
+  animation-play-state: paused;
+  stroke-width: 2;
+  stroke-dasharray: 9, 5;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  fill: none;
+  transition: 0.4s;
+}
+
+.n2-ss-slider a.be-btn-slider-water svg rect {
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  x: 50%;
+  y: 50%;
+  transform: translate(calc(-50% + 5px), calc(-50% + 5px));
+}
+
+.n2-ss-slider a.be-btn-slider-water:hover svg {
+  animation-play-state: running;
+  stroke: #fff;
+}
+
+@media (max-width: 991.98px) {
+  .wp-block-heading.be-heading-goza-water {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .wp-block-heading.be-heading-goza-water {
+    font-size: 36px;
+  }
 }
 
 .be-single-post-block .be-single-post-inner {
@@ -19159,6 +19208,17 @@ h6 {
   margin: 0;
 }
 
+.be-single-post-block .be-single-post-inner--excerpt > p {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  height: auto;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .be-single-post-block .be-single-post-inner--meta {
   display: flex;
   align-items: center;
@@ -19197,20 +19257,35 @@ h6 {
   font-weight: 700;
 }
 
+.be-single-post-block.is-style-water {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
 .be-single-post-block.is-style-water .be-single-post-inner {
   box-sizing: border-box;
 }
 
 .be-single-post-block.is-style-water .be-single-post-inner--thumbnail {
   position: relative;
-  min-height: 500px;
+  min-height: 452px;
   box-sizing: border-box;
   cursor: pointer;
+  height: auto;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 1199.98px) {
   .be-single-post-block.is-style-water .be-single-post-inner--thumbnail {
-    min-height: 320px;
+    min-height: 402px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .be-single-post-block.is-style-water .be-single-post-inner--thumbnail {
+    min-height: 322px;
   }
 }
 
@@ -19260,14 +19335,13 @@ h6 {
   width: 450px;
   height: 450px;
   x: 65px;
-  y: 26px;
+  y: 1px;
 }
 
 @media (max-width: 1199.98px) {
   .be-single-post-block.is-style-water .be-single-post-inner--thumbnail svg rect {
     width: 400px;
     height: 400px;
-    y: 51px;
     x: 39px;
   }
 }
@@ -19276,7 +19350,6 @@ h6 {
   .be-single-post-block.is-style-water .be-single-post-inner--thumbnail svg rect {
     width: 320px;
     height: 320px;
-    y: 91px;
     x: 18px;
   }
 }
@@ -19384,17 +19457,6 @@ h6 {
 .be-single-post-block.is-style-ngo-dark .be-single-post-inner--thumbnail img {
   width: 100%;
   height: 100%;
-}
-
-.be-single-post-block.is-style-ngo-dark .be-single-post-inner--excerpt > p {
-  display: block;
-  display: -webkit-box;
-  max-width: 100%;
-  height: auto;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .be-testominials-block {
@@ -25103,10 +25165,17 @@ h6 {
   padding-bottom: 90px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .be-ss-ab-counter {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .be-ss-ab-counter {
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 }
 
@@ -25344,8 +25413,15 @@ h6 {
 
 @media (max-width: 991.98px) {
   .be-ss-text-tsm-video {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .be-ss-text-tsm-video {
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 }
 
@@ -26450,13 +26526,13 @@ h6 {
   }
 }
 
-.be-single-event-inner--venue svg {
+.be-single-event-inner--address svg {
   width: 100%;
   max-width: 15px;
   height: auto;
 }
 
-.be-single-event-inner--venue svg path {
+.be-single-event-inner--address svg path {
   fill: var(--link-color);
 }
 
@@ -26490,6 +26566,10 @@ h6 {
 
 .block-editor-block-list__block .be-single-event-inner--count-down #be-count-down {
   display: none;
+}
+
+.be-single-event.is-style-default {
+  width: 100%;
 }
 
 .be-single-event.is-style-default .be-single-event-inner {
@@ -26579,12 +26659,12 @@ h6 {
   }
 }
 
-.be-single-event.is-style-default .be-single-event-inner--venue {
+.be-single-event.is-style-default .be-single-event-inner--address {
   margin-top: 15px;
   width: 100%;
 }
 
-.be-single-event.is-style-default .be-single-event-inner--venue span {
+.be-single-event.is-style-default .be-single-event-inner--address span {
   font-size: 16px;
   list-style: 26px;
 }
@@ -26863,7 +26943,7 @@ h6 {
   }
 }
 
-.be-single-event.is-style-charity .be-single-event-inner--venue,
+.be-single-event.is-style-charity .be-single-event-inner--address,
 .be-single-event.is-style-charity .be-single-event-inner--date-start,
 .be-single-event.is-style-charity .be-single-event-inner--button,
 .be-single-event.is-style-charity .be-single-event-inner--author {
@@ -26876,7 +26956,7 @@ h6 {
 }
 
 @media (max-width: 575.98px) {
-  .be-single-event.is-style-charity .be-single-event-inner--venue,
+  .be-single-event.is-style-charity .be-single-event-inner--address,
   .be-single-event.is-style-charity .be-single-event-inner--date-start,
   .be-single-event.is-style-charity .be-single-event-inner--button,
   .be-single-event.is-style-charity .be-single-event-inner--author {
@@ -26889,20 +26969,20 @@ h6 {
   }
 }
 
-.be-single-event.is-style-charity .be-single-event-inner--venue svg,
+.be-single-event.is-style-charity .be-single-event-inner--address svg,
 .be-single-event.is-style-charity .be-single-event-inner--date-start svg {
   width: 100%;
   max-width: 20px;
   height: auto;
 }
 
-.be-single-event.is-style-charity .be-single-event-inner--venue svg path,
+.be-single-event.is-style-charity .be-single-event-inner--address svg path,
 .be-single-event.is-style-charity .be-single-event-inner--date-start svg path {
   fill: var(--link-color);
 }
 
-.be-single-event.is-style-charity .be-single-event-inner--venue span,
-.be-single-event.is-style-charity .be-single-event-inner--venue p,
+.be-single-event.is-style-charity .be-single-event-inner--address span,
+.be-single-event.is-style-charity .be-single-event-inner--address p,
 .be-single-event.is-style-charity .be-single-event-inner--date-start span,
 .be-single-event.is-style-charity .be-single-event-inner--date-start p {
   padding-left: 10px;
@@ -26913,7 +26993,7 @@ h6 {
   margin: 0;
 }
 
-.be-single-event.is-style-charity .be-single-event-inner--venue p > span,
+.be-single-event.is-style-charity .be-single-event-inner--address p > span,
 .be-single-event.is-style-charity .be-single-event-inner--date-start p > span {
   padding-left: 0;
 }
@@ -27172,6 +27252,16 @@ h6 {
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+.wp-block-goza-blocks-goza-container.be-last-post-water > .goza-container-bg::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .tribe-common h1,

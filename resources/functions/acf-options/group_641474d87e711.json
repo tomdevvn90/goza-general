@@ -257,10 +257,10 @@
                 "ngo": "Header Ngo",
                 "charity": "Header Charity",
                 "water": "Header Water",
-                "orgazination": "Header Orgazination",
+                "organization": "Header Orgazination",
                 "ngo-dark": "Header Ngo Dark",
                 "water-charity": "Header Water Charity",
-                "charity-orgazination": "Header Charity Orgazination"
+                "charity-organization": "Header Charity Orgazination"
             },
             "default_value": false,
             "return_format": "value",
@@ -2093,5 +2093,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684136759
+    "modified": 1684482007
 }
