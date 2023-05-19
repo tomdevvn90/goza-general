@@ -20,7 +20,8 @@ function be_single_post_template_water(){
     $cta_style    = get_field('cta_style_sg_p') ?: 'btn-default';
     $color_hd     = get_field('cta_style_sg_p') ?: '';
     ?>
-    <div class="be-single-post-inner--thumbnail"> 
+    <div class="be-single-post-inner--thumbnail">
+
         <?php if(!empty($post_img_url)): ?>
             <svg class="wgl-dashes inner-dashed-border animated-dashes"><rect rx="50%" ry="50%"> </rect></svg>
             <img src="<?= esc_url($post_img_url) ?>" alt="<?php the_title() ?>">
@@ -60,7 +61,6 @@ function be_single_post_template_water(){
 <?php }
 
 function be_single_post_ngo_dark(){
-    $post_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
     $post_date    = get_the_date('d M, Y');
     $comment      = get_comments_number();
     $cta_text     = get_field('cta_text_sg_p') ?: 'Read More';
@@ -68,8 +68,8 @@ function be_single_post_ngo_dark(){
     $color_hd     = get_field('color_hd_sg_p') ?: '';
     ?>
     <div class="be-single-post-inner--thumbnail"> 
-        <?php if(!empty($post_img_url)): ?>
-            <img src="<?= esc_url($post_img_url) ?>" alt="<?php the_title() ?>">
+        <?php if(has_post_thumbnail()): ?>
+            <?php the_post_thumbnail('full'); ?>
         <?php endif; ?>
     </div>
 

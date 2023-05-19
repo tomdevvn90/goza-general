@@ -462,7 +462,7 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
         dots: false,
         autoplay: true,
         arrows: false,
-        adaptiveHeight: false,
+        adaptiveHeight: true,
         fade: false,
         cssEase: 'linear'
       };
