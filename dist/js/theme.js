@@ -1015,6 +1015,13 @@ __webpack_require__.r(__webpack_exports__);
       });
     });
   };
+  var beBtnSliderWater = function beBtnSliderWater() {
+    var $btn = $('.n2-ss-slider .be-btn-slider-water');
+    if ($btn.length === 0) return;
+    $btn.each(function () {
+      $(this).append('<svg class="wgl-dashes inner-dashed-border animated-dashes"><rect > </rect></svg>');
+    });
+  };
   $(window).on("scroll", function () {});
   $(document).ready(function () {});
   $(window).on("load", function () {
@@ -1038,6 +1045,7 @@ __webpack_require__.r(__webpack_exports__);
     beCounter();
     beProgressbar();
     beLightGallery();
+    beBtnSliderWater();
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
