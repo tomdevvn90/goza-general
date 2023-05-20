@@ -28,7 +28,7 @@ $cl_ct_nb   = $color_ct['numberal'] ? : '';
 
    <div class="be-ss-ab-counter--content">  
       <div class="container"> 
-         <div class="be-ss-ab-counter--inner"> 
+         <div class="be-ss-ab-counter--inner" data-aos="zoom-in"> 
             <?php if(!empty($heading)): ?>
                <h2 class="be-ss-ab-counter--heading" style="color:<?= $color_hd ?>"> <?= esc_attr($heading) ?> </h2>
             <?php endif; ?>   

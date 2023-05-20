@@ -3052,7 +3052,6 @@
 
 .is-root-container p,
 .is-root-container div:not(.wp-block-goza-blocks-goza-button),
-.is-root-container span:not(.dashicon, .wp-block-goza-button_link),
 .is-root-container a {
   font-family: var(--body-family, "Arimo", sans-serif);
   font-size: var(--body-font-size, 16px);
@@ -3316,6 +3315,17 @@
   margin: 0;
 }
 
+.be-single-post-block .be-single-post-inner--excerpt > p {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  height: auto;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .be-single-post-block .be-single-post-inner--meta {
   display: flex;
   align-items: center;
@@ -3354,20 +3364,35 @@
   font-weight: 700;
 }
 
+.be-single-post-block.is-style-water {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
 .be-single-post-block.is-style-water .be-single-post-inner {
   box-sizing: border-box;
 }
 
 .be-single-post-block.is-style-water .be-single-post-inner--thumbnail {
   position: relative;
-  min-height: 500px;
+  min-height: 452px;
   box-sizing: border-box;
   cursor: pointer;
+  height: auto;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 1199.98px) {
   .be-single-post-block.is-style-water .be-single-post-inner--thumbnail {
-    min-height: 320px;
+    min-height: 402px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .be-single-post-block.is-style-water .be-single-post-inner--thumbnail {
+    min-height: 322px;
   }
 }
 
@@ -3417,14 +3442,13 @@
   width: 450px;
   height: 450px;
   x: 65px;
-  y: 26px;
+  y: 1px;
 }
 
 @media (max-width: 1199.98px) {
   .be-single-post-block.is-style-water .be-single-post-inner--thumbnail svg rect {
     width: 400px;
     height: 400px;
-    y: 51px;
     x: 39px;
   }
 }
@@ -3433,7 +3457,6 @@
   .be-single-post-block.is-style-water .be-single-post-inner--thumbnail svg rect {
     width: 320px;
     height: 320px;
-    y: 91px;
     x: 18px;
   }
 }
@@ -3541,17 +3564,6 @@
 .be-single-post-block.is-style-ngo-dark .be-single-post-inner--thumbnail img {
   width: 100%;
   height: 100%;
-}
-
-.be-single-post-block.is-style-ngo-dark .be-single-post-inner--excerpt > p {
-  display: block;
-  display: -webkit-box;
-  max-width: 100%;
-  height: auto;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .be-testominials-block {
@@ -7426,11 +7438,11 @@
   background-color: var(--link-color, #833dcc);
   border: 1px solid var(--link-color, #833dcc);
   border-radius: 0px;
+  font-size: 15px;
+  line-height: 25px;
   font-weight: 700;
-  font-size: 14px;
+  letter-spacing: 0;
   color: #fff;
-  line-height: 28px;
-  letter-spacing: -0.32px;
   text-transform: uppercase;
   padding: 14px 45px;
   position: relative;
@@ -9260,10 +9272,17 @@
   padding-bottom: 90px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .be-ss-ab-counter {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .be-ss-ab-counter {
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 }
 
@@ -9501,8 +9520,15 @@
 
 @media (max-width: 991.98px) {
   .be-ss-text-tsm-video {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .be-ss-text-tsm-video {
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 }
 
@@ -9529,11 +9555,15 @@
 .be-ss-text-tsm-video--content {
   position: relative;
   z-index: 9;
+  height: auto;
+  box-sizing: border-box;
 }
 
 .be-ss-text-tsm-video--inner {
   display: flex;
   min-height: 290px;
+  height: auto;
+  box-sizing: border-box;
 }
 
 @media (min-width: 992px) {
@@ -9553,6 +9583,8 @@
 .be-ss-text-tsm-video--inner-right {
   display: flex;
   width: 100%;
+  height: auto;
+  box-sizing: border-box;
 }
 
 @media (min-width: 992px) {
@@ -9586,6 +9618,7 @@
   font-family: var(--heading-family);
   margin: 0;
   padding: 0;
+  font-weight: 700;
 }
 
 .be-ss-text-tsm-video--heading {
@@ -9614,6 +9647,8 @@
   margin-top: 10px;
   width: 100%;
   overflow: hidden;
+  height: auto;
+  box-sizing: border-box;
 }
 
 .be-ss-text-tsm-video--testimonial-slider .item-testimonial--heading {
@@ -9674,6 +9709,7 @@
   margin-top: 30px;
   position: relative;
   border: 0;
+  min-height: 15px;
 }
 
 @media (max-width: 991.98px) {
@@ -9711,8 +9747,6 @@
 }
 
 .be-ss-text-tsm-video--testimonial-slider .slick-dots li.slick-active {
-  transform: scale(1);
-  -webkit-transform: scale(1);
   width: 15px;
   height: 15px;
 }
@@ -10607,13 +10641,13 @@
   }
 }
 
-.be-single-event-inner--venue svg {
+.be-single-event-inner--address svg {
   width: 100%;
   max-width: 15px;
   height: auto;
 }
 
-.be-single-event-inner--venue svg path {
+.be-single-event-inner--address svg path {
   fill: var(--link-color);
 }
 
@@ -10647,6 +10681,10 @@
 
 .block-editor-block-list__block .be-single-event-inner--count-down #be-count-down {
   display: none;
+}
+
+.be-single-event.is-style-default {
+  width: 100%;
 }
 
 .be-single-event.is-style-default .be-single-event-inner {
@@ -10736,12 +10774,12 @@
   }
 }
 
-.be-single-event.is-style-default .be-single-event-inner--venue {
+.be-single-event.is-style-default .be-single-event-inner--address {
   margin-top: 15px;
   width: 100%;
 }
 
-.be-single-event.is-style-default .be-single-event-inner--venue span {
+.be-single-event.is-style-default .be-single-event-inner--address span {
   font-size: 16px;
   list-style: 26px;
 }
@@ -11020,7 +11058,7 @@
   }
 }
 
-.be-single-event.is-style-charity .be-single-event-inner--venue,
+.be-single-event.is-style-charity .be-single-event-inner--address,
 .be-single-event.is-style-charity .be-single-event-inner--date-start,
 .be-single-event.is-style-charity .be-single-event-inner--button,
 .be-single-event.is-style-charity .be-single-event-inner--author {
@@ -11033,7 +11071,7 @@
 }
 
 @media (max-width: 575.98px) {
-  .be-single-event.is-style-charity .be-single-event-inner--venue,
+  .be-single-event.is-style-charity .be-single-event-inner--address,
   .be-single-event.is-style-charity .be-single-event-inner--date-start,
   .be-single-event.is-style-charity .be-single-event-inner--button,
   .be-single-event.is-style-charity .be-single-event-inner--author {
@@ -11046,20 +11084,20 @@
   }
 }
 
-.be-single-event.is-style-charity .be-single-event-inner--venue svg,
+.be-single-event.is-style-charity .be-single-event-inner--address svg,
 .be-single-event.is-style-charity .be-single-event-inner--date-start svg {
   width: 100%;
   max-width: 20px;
   height: auto;
 }
 
-.be-single-event.is-style-charity .be-single-event-inner--venue svg path,
+.be-single-event.is-style-charity .be-single-event-inner--address svg path,
 .be-single-event.is-style-charity .be-single-event-inner--date-start svg path {
   fill: var(--link-color);
 }
 
-.be-single-event.is-style-charity .be-single-event-inner--venue span,
-.be-single-event.is-style-charity .be-single-event-inner--venue p,
+.be-single-event.is-style-charity .be-single-event-inner--address span,
+.be-single-event.is-style-charity .be-single-event-inner--address p,
 .be-single-event.is-style-charity .be-single-event-inner--date-start span,
 .be-single-event.is-style-charity .be-single-event-inner--date-start p {
   padding-left: 10px;
@@ -11070,7 +11108,7 @@
   margin: 0;
 }
 
-.be-single-event.is-style-charity .be-single-event-inner--venue p > span,
+.be-single-event.is-style-charity .be-single-event-inner--address p > span,
 .be-single-event.is-style-charity .be-single-event-inner--date-start p > span {
   padding-left: 0;
 }
@@ -11329,6 +11367,16 @@
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+.wp-block-goza-blocks-goza-container.be-last-post-water > .goza-container-bg::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .block-editor-block-list__block .be-testominials-block-carousel {
@@ -11789,7 +11837,7 @@
   color: #fff;
 }
 
-.is-root-container .be-single-event.is-style-charity .be-single-event-inner--venue span {
+.is-root-container .be-single-event.is-style-charity .be-single-event-inner--address span {
   color: #fff;
 }
 

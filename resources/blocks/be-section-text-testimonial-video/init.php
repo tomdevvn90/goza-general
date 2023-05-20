@@ -45,7 +45,7 @@ function load_video($id){
     $color_icon = $color_vd['icon'] ?: ''; 
     $bg_icon    = $color_vd['bg'] ?: '';
     ?>
-    <div class="be-ss-text-tsm-video--video"> 
+    <div class="be-ss-text-tsm-video--video" data-aos="fade-left"> 
         <div class="be-ss-text-tsm-video--video-bg"> 
             <img src="<?= esc_url($bg) ?>" alt="image"> 
         </div>

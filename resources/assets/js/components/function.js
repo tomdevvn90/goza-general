@@ -158,6 +158,15 @@ import lgZoom from 'lightgallery/plugins/zoom'
         })
     }
 
+    const beBtnSliderWater = () =>{
+        const $btn = $('.n2-ss-slider .be-btn-slider-water');
+        if ($btn.length === 0) return;
+
+        $btn.each(function() {
+            $(this).append('<svg class="wgl-dashes inner-dashed-border animated-dashes"><rect > </rect></svg>')
+        })
+    }
+
     $(window).on("scroll", function () {
 
     });
@@ -185,6 +194,7 @@ import lgZoom from 'lightgallery/plugins/zoom'
         beCounter()
         beProgressbar()
         beLightGallery()
+        beBtnSliderWater()
     });
 
 })(jQuery);

@@ -8,7 +8,7 @@
     &.site-header-search {
         .goza-header-main {
             position: relative;
-            padding: 40px 0;
+            padding: 0px 0;
             &::after {
                 position: absolute;
                 content: " ";
@@ -20,6 +20,14 @@
                 left: 50%;
                 bottom: -4px;
                 transform: translatex(-50%);
+                z-index: 9;
+                @include media-breakpoint-down(lg) {
+                    border-width: 4px 460px 0px 460px;
+                }
+
+                @include media-breakpoint-down(md){
+                    content: none;
+                }
             }
 
             &--logo {

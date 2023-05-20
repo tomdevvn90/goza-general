@@ -21,6 +21,7 @@ if ($goza_ft_quick_links_op) {
 $goza_ft_ig_op = __get_field('goza_ft_ig_op', 'option');
 if ($goza_ft_ig_op) {
     $goza_ig_heading = $goza_ft_ig_op['goza_ig_heading'];
+    $goza_sc_ig      = $goza_ft_ig_op['goza_sc_ig'];
 }
 
 //newsletter
@@ -44,11 +45,17 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                         <img src="<?= esc_url($goza_ft_logo) ?>" alt="Logo" />
                     </a>
                 <?php } ?>
+
+                <?php if (isset($goza_newsletter_desc) && !empty($goza_newsletter_desc)) { ?>
+                    <div class="main-footer-desc"><?= $goza_newsletter_desc ?></div>
+                <?php } ?>
+
                 <?php if (isset($goza_newsletter_heading) && !empty($goza_newsletter_heading)) { ?>
                     <h3 class="main-footer-title"><?= $goza_newsletter_heading ?></h3>
                 <?php } ?>
-                <?php if (isset($goza_newsletter_desc) && !empty($goza_newsletter_desc)) { ?>
-                    <div class="main-footer-desc"><?= $goza_newsletter_desc ?></div>
+
+                <?php if (isset($goza_sc_sub_form) && !empty($goza_sc_sub_form)) { ?>
+                    <div class="main-footer--form-newsletter"><?= do_shortcode( $goza_sc_sub_form ) ?></div>
                 <?php } ?>
             </div>
             <div class="col-md-3 main-footer-widget">
@@ -58,7 +65,7 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                 <div class="main-footer-menu">
                     <?php
                     wp_nav_menu([
-                        'theme_location' => 'quicklink-menu',
+                        'theme_location' => 'quicklinks-menu',
                         'menu_class' => 'quicklinks-menu',
                         'container_class' => 'menu-container',
                         'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
@@ -71,6 +78,13 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                 <?php if (isset($goza_ig_heading) && !empty($goza_ig_heading)) { ?>
                     <h3 class="main-footer-title"><?= $goza_ig_heading ?></h3>
                 <?php } ?>
+
+
+                <?php if (isset($goza_sc_ig) && !empty($goza_sc_ig)) { ?>
+                    <div class="main-footer--instagram"> <?= do_shortcode( $goza_sc_ig ) ?></div>
+                <?php } ?>
+
+                
 
             </div>
             <div class="col-md-3 main-footer-widget">

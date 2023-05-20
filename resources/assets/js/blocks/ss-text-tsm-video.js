@@ -21,7 +21,7 @@ import 'slick-carousel/slick/slick-theme.css';
 				dots: false,
 				autoplay: true,
 				arrows: false,
-                adaptiveHeight: false,
+                adaptiveHeight: true,
                 fade: false,
                 cssEase: 'linear',
 			};

@@ -30,7 +30,7 @@ $the_query = new WP_Query($args);
          <div class="be-single-event-inner"> 
             <?php while ($the_query->have_posts()){
                  $the_query->the_post(); 
-                 single_ev_template($block);
+                 single_ev_template($is_style );
             } ?>
          </div>
          <?php wp_reset_postdata(); ?>

@@ -1,9 +1,7 @@
 <?php
-function single_ev_template($block){
-    $is_style = isset($block['className']) ? $block['className'] : "is-style-default"; 
-
+function single_ev_template($is_style ){
     switch ($is_style) {
-        case "is-style-charity":
+        case strpos($is_style, 'is-style-charity') !== false:
             be_single_ev_template_charity();
             break;
 
@@ -13,10 +11,8 @@ function single_ev_template($block){
     } 
 }
 
-
 function be_single_ev_template_default(){ 
         $heading      = get_field('heading_sg_ev') ?: '';
-        $post_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
         $cta_style    = get_field('cta_style_sg_ev') ?: 'btn-default';
         $color_hd     = get_field('cl_heading_sg_ev') ?: '';
         $color_name   = get_field('cl_name_sg_ev') ?: '';
@@ -27,7 +23,7 @@ function be_single_ev_template_default(){
         if(is_plugin_active('the-events-calendar/the-events-calendar.php')){
             $date_start  = tribe_get_start_date( get_the_ID(), true, 'F d, Y');
             $time_start  = tribe_get_start_date( get_the_ID(), true, 'G i a');
-            $venue       = tribe_get_venue(get_the_ID());
+            $address     = tribe_get_address(get_the_ID());
             $count_down  = tribe_get_start_date( get_the_ID(), true, 'F d , Y G:i:s');
             $time_now    = time();
             $timestamp   = strtotime($count_down);
@@ -35,13 +31,13 @@ function be_single_ev_template_default(){
         }
     ?>
    
-    <div class="be-single-event-inner--thumbnail"> 
-        <?php if(!empty($post_img_url)): ?>
-            <img src="<?= esc_url($post_img_url) ?>" alt="<?php the_title() ?>">
+    <div class="be-single-event-inner--thumbnail" data-aos="fade-right"> 
+        <?php if(has_post_thumbnail()): ?>
+            <?php the_post_thumbnail('full'); ?>
         <?php endif; ?>    
     </div>
 
-    <div class="be-single-event-inner--content"> 
+    <div class="be-single-event-inner--content" data-aos="fade-left"> 
         <?php if(!empty($heading)): ?>
             <h2 class="be-single-event-inner--heading" style="color:<?= $color_hd ?>"> <?= esc_attr($heading) ?> </h2>
         <?php endif; ?>
@@ -54,10 +50,10 @@ function be_single_ev_template_default(){
             <p class="be-single-event-inner--date-start"> <span> UPCOMING EVENT </span> : <?= esc_attr($date_start)?> at <?= esc_attr($time_start)?></p>
         <?php endif; ?>   
         
-        <?php if(!empty($venue)): ?>
-            <div class="be-single-event-inner--venue"> 
+        <?php if(!empty($address)): ?>
+            <div class="be-single-event-inner--address"> 
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M256 0C161.896 0 85.333 76.563 85.333 170.667c0 28.25 7.063 56.26 20.49 81.104L246.667 506.5c1.875 3.396 5.448 5.5 9.333 5.5s7.458-2.104 9.333-5.5l140.896-254.813c13.375-24.76 20.438-52.771 20.438-81.021C426.667 76.563 350.104 0 256 0zm0 256c-47.052 0-85.333-38.281-85.333-85.333S208.948 85.334 256 85.334s85.333 38.281 85.333 85.333S303.052 256 256 256z" fill="#000000" data-original="#000000" class=""></path></g></svg>
-                <span> <?= $venue ?> </span>
+                <span> <?= $address ?> </span>
             </div>
         <?php endif; ?>  
 
@@ -102,7 +98,6 @@ function be_single_ev_template_default(){
 
 function be_single_ev_template_charity(){       
     $heading      = get_field('heading_sg_ev') ?: '';
-    $post_img_url = get_the_post_thumbnail_url(get_the_ID(),'full') ? : 'https://picsum.photos/1920/900?1'; 
     $cta_style    = get_field('cta_style_sg_ev') ?: 'btn-default';
     $color_hd     = get_field('cl_heading_sg_ev') ?: '';
     $color_name   = get_field('cl_name_sg_ev') ?: '';
@@ -117,7 +112,7 @@ function be_single_ev_template_charity(){
     if(is_plugin_active('the-events-calendar/the-events-calendar.php')){
         $date_start  = tribe_get_start_date( get_the_ID(), true, 'F d, Y');
         $time_start  = tribe_get_start_date( get_the_ID(), true, 'G i a');
-        $venue       = tribe_get_venue(get_the_ID());
+        $address     = tribe_get_address(get_the_ID());
         $count_down  = tribe_get_start_date( get_the_ID(), true, 'F d , Y G:i:s');
         $time_now    = time();
         $timestamp   = strtotime($count_down);
@@ -125,7 +120,11 @@ function be_single_ev_template_charity(){
     }
     ?> 
     <div class="be-single-event-inner--bg"> 
-        <img src="<?= esc_url($post_img_url) ?>" alt="bg image">
+        <?php if (has_post_thumbnail()) {
+            the_post_thumbnail('full');
+        } else {
+            echo '<img src="https://picsum.photos/1920/900?1" alt="Default Thumbnail">';
+        } ?>
     </div>
 
     <div class="be-single-event-inner--content"> 
@@ -164,10 +163,10 @@ function be_single_ev_template_charity(){
             </div>
 
             <div class="be-single-event-inner--meta"> 
-                <?php if(!empty($venue)): ?>
-                    <div class="be-single-event-inner--venue"> 
+                <?php if(!empty($address)): ?>
+                    <div class="be-single-event-inner--address"> 
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M256 0C161.896 0 85.333 76.563 85.333 170.667c0 28.25 7.063 56.26 20.49 81.104L246.667 506.5c1.875 3.396 5.448 5.5 9.333 5.5s7.458-2.104 9.333-5.5l140.896-254.813c13.375-24.76 20.438-52.771 20.438-81.021C426.667 76.563 350.104 0 256 0zm0 256c-47.052 0-85.333-38.281-85.333-85.333S208.948 85.334 256 85.334s85.333 38.281 85.333 85.333S303.052 256 256 256z" fill="#000000" data-original="#000000" class=""></path></g></svg>
-                        <span> <?= $venue ?> </span>
+                        <span> <?= $address ?> </span>
                     </div>
                 <?php endif; ?>
 
