@@ -76,6 +76,12 @@
  * that are used across the project.
 */
 /**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
  * Container styles
  * Loads on front end and back end
  */
