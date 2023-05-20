@@ -106,7 +106,7 @@ function gozaAdvancedButtonStyles($blockAttrs)
 	}
 
 
-	$block_class    = esc_html($blockAttrs['id']);
+	$block_class    = esc_html($blockAttrs['id']) . ' .wp-block-goza-blocks-goza-button--inner';
 	$font_size      = isset($blockAttrs['textSize']) ? esc_html(intval($blockAttrs['textSize'])) : 18;
 	$color          = isset($blockAttrs['textColor']) ? esc_html($blockAttrs['textColor']) : '';
 	$bg_color       = isset($blockAttrs['bgColor']) ? esc_html($blockAttrs['bgColor']) : '';
@@ -160,7 +160,7 @@ function gozaAdvancedButtonStyles($blockAttrs)
 	$style_html .= '}';
 
 	$style_html .= '.is-style-outlined.' . $block_class . '{';
-	if ($enable_text_color == true) $style_html .= 'border-color:' . $color . ' !important;';
+	($enable_text_color == true) ? $style_html .= 'border-color:' . $color . ' !important;' : $style_html .= 'border-color:' . $border_color . ' !important;' ;
 	$style_html .= '}';
 
 	$style_html .= '.is-style-ngo-dark.' . $block_class . ':before, .is-style-ngo-dark.' . $block_class . ':after{';

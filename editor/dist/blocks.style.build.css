@@ -264,15 +264,38 @@
  * that are used across the project.
 */
 .wp-block-goza-blocks-goza-button {
-  text-transform: uppercase;
-  font-weight: 700;
-  background-color: var(--link-color, #d41b65);
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  display: inline-block;
-  position: relative;
-  overflow: hidden; }
+  display: -ms-flexbox;
+  display: flex; }
+  .wp-block-goza-blocks-goza-button--inner {
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: var(--link-color, #d41b65);
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+    position: relative;
+    overflow: hidden; }
+  .wp-block-goza-blocks-goza-button.aligncenter, .wp-block-goza-blocks-goza-button.alignleft, .wp-block-goza-blocks-goza-button.alignright {
+    width: 100%; }
+  .wp-block-goza-blocks-goza-button.aligncenter {
+    -ms-flex-pack: center;
+        justify-content: center; }
+  .wp-block-goza-blocks-goza-button.alignleft {
+    -ms-flex-pack: start;
+        justify-content: flex-start; }
+  .wp-block-goza-blocks-goza-button.alignright {
+    -ms-flex-pack: end;
+        justify-content: flex-end; }
+  .wp-block-goza-blocks-goza-button.alignfull {
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    width: 100%; }
+    .wp-block-goza-blocks-goza-button.alignfull .wp-block-goza-blocks-goza-button--inner {
+      width: 100%; }
+      .wp-block-goza-blocks-goza-button.alignfull .wp-block-goza-blocks-goza-button--inner > .wp-block-goza-button_link {
+        width: 100%;
+        text-align: center; }
   .wp-block-goza-blocks-goza-button .wp-block-goza-button_link {
     display: inline-block;
     padding: 15px 30px;
@@ -284,18 +307,18 @@
     transition: all .3s ease-in-out;
     z-index: 2;
     position: relative; }
-  .wp-block-goza-blocks-goza-button.is-style-outlined {
+  .wp-block-goza-blocks-goza-button.is-style-outlined .wp-block-goza-blocks-goza-button--inner {
     background-color: transparent !important;
     border-style: solid;
     border-color: var(--link-color, #d41b65); }
-    .wp-block-goza-blocks-goza-button.is-style-outlined .wp-block-goza-button_link {
+    .wp-block-goza-blocks-goza-button.is-style-outlined .wp-block-goza-blocks-goza-button--inner .wp-block-goza-button_link {
       color: var(--link-color, #d41b65); }
-  .wp-block-goza-blocks-goza-button.is-style-general:hover::after {
+  .wp-block-goza-blocks-goza-button.is-style-general .wp-block-goza-blocks-goza-button--inner:hover::after {
     left: 120%;
     -webkit-transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
     -o-transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
     transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1); }
-  .wp-block-goza-blocks-goza-button.is-style-general::after {
+  .wp-block-goza-blocks-goza-button.is-style-general .wp-block-goza-blocks-goza-button--inner::after {
     background: #fff;
     content: "";
     height: 155px;
@@ -311,37 +334,37 @@
     transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
     width: 30px;
     z-index: 1; }
-  .wp-block-goza-blocks-goza-button.is-style-water {
+  .wp-block-goza-blocks-goza-button.is-style-water .wp-block-goza-blocks-goza-button--inner {
     border-radius: 0 !important; }
-    .wp-block-goza-blocks-goza-button.is-style-water:hover svg {
+    .wp-block-goza-blocks-goza-button.is-style-water .wp-block-goza-blocks-goza-button--inner:hover svg {
       -webkit-animation-play-state: running;
               animation-play-state: running;
       stroke: #fff; }
-    .wp-block-goza-blocks-goza-button.is-style-water svg {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      -webkit-animation: dashed_border_running 20s linear infinite both;
-              animation: dashed_border_running 20s linear infinite both;
-      -webkit-animation-play-state: paused;
-              animation-play-state: paused;
-      stroke-width: 2;
-      stroke-dasharray: 9, 5;
-      stroke-dashoffset: 0;
-      stroke-linecap: round;
-      fill: none;
-      -webkit-transition: 0.4s;
-      -o-transition: 0.4s;
-      transition: 0.4s; }
-      .wp-block-goza-blocks-goza-button.is-style-water svg rect {
-        height: calc(100% - 6px);
-        width: calc(100% - 6px);
-        x: 3px;
-        y: 3px; }
-  .wp-block-goza-blocks-goza-button.is-style-ngo-dark::before {
+  .wp-block-goza-blocks-goza-button.is-style-water svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    -webkit-animation: dashed_border_running 20s linear infinite both;
+            animation: dashed_border_running 20s linear infinite both;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+    stroke-width: 2;
+    stroke-dasharray: 9, 5;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    fill: none;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s; }
+    .wp-block-goza-blocks-goza-button.is-style-water svg rect {
+      height: calc(100% - 6px);
+      width: calc(100% - 6px);
+      x: 3px;
+      y: 3px; }
+  .wp-block-goza-blocks-goza-button.is-style-ngo-dark .wp-block-goza-blocks-goza-button--inner::before {
     content: '';
     width: 0;
     height: 0;
@@ -356,7 +379,7 @@
     -o-transition: 0.5s;
     transition: 0.5s;
     border-color: transparent transparent transparent #d94532; }
-  .wp-block-goza-blocks-goza-button.is-style-ngo-dark::after {
+  .wp-block-goza-blocks-goza-button.is-style-ngo-dark .wp-block-goza-blocks-goza-button--inner::after {
     border-color: transparent #d94532 transparent transparent;
     content: '';
     width: 0;
@@ -371,11 +394,11 @@
     -o-transition: 0.5s;
     transition: 0.5s;
     z-index: 1; }
-  .wp-block-goza-blocks-goza-button.is-style-ngo-dark:hover::before {
+  .wp-block-goza-blocks-goza-button.is-style-ngo-dark .wp-block-goza-blocks-goza-button--inner:hover::before {
     border-width: 165px 0 0 165px; }
-  .wp-block-goza-blocks-goza-button.is-style-ngo-dark:hover::after {
+  .wp-block-goza-blocks-goza-button.is-style-ngo-dark .wp-block-goza-blocks-goza-button--inner:hover::after {
     border-width: 0 165px 165px 0; }
-  .wp-block-goza-blocks-goza-button.is-style-wt-charity::after {
+  .wp-block-goza-blocks-goza-button.is-style-wt-charity .wp-block-goza-blocks-goza-button--inner::after {
     content: '';
     position: absolute;
     z-index: 1;
@@ -388,12 +411,12 @@
     left: 50%;
     top: 50%;
     width: 0; }
-  .wp-block-goza-blocks-goza-button.is-style-wt-charity:hover::after {
+  .wp-block-goza-blocks-goza-button.is-style-wt-charity .wp-block-goza-blocks-goza-button--inner:hover::after {
     height: 100%;
     left: 0;
     top: 0;
     width: 100%; }
-  .wp-block-goza-blocks-goza-button.is-style-charity-organization::before, .wp-block-goza-blocks-goza-button.is-style-charity-organization::after {
+  .wp-block-goza-blocks-goza-button.is-style-charity-organization .wp-block-goza-blocks-goza-button--inner::before, .wp-block-goza-blocks-goza-button.is-style-charity-organization .wp-block-goza-blocks-goza-button--inner::after {
     content: '';
     position: absolute;
     top: 0;
@@ -410,18 +433,18 @@
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s; }
-  .wp-block-goza-blocks-goza-button.is-style-charity-organization::before {
+  .wp-block-goza-blocks-goza-button.is-style-charity-organization .wp-block-goza-blocks-goza-button--inner::before {
     background-color: #333333;
     opacity: 0.5; }
-  .wp-block-goza-blocks-goza-button.is-style-charity-organization::after {
+  .wp-block-goza-blocks-goza-button.is-style-charity-organization .wp-block-goza-blocks-goza-button--inner::after {
     background-color: #333333; }
-  .wp-block-goza-blocks-goza-button.is-style-charity-organization:hover {
+  .wp-block-goza-blocks-goza-button.is-style-charity-organization .wp-block-goza-blocks-goza-button--inner:hover {
     background-color: inherit; }
-    .wp-block-goza-blocks-goza-button.is-style-charity-organization:hover::before, .wp-block-goza-blocks-goza-button.is-style-charity-organization:hover::after {
+    .wp-block-goza-blocks-goza-button.is-style-charity-organization .wp-block-goza-blocks-goza-button--inner:hover::before, .wp-block-goza-blocks-goza-button.is-style-charity-organization .wp-block-goza-blocks-goza-button--inner:hover::after {
       -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0); }
-    .wp-block-goza-blocks-goza-button.is-style-charity-organization:hover::after {
+    .wp-block-goza-blocks-goza-button.is-style-charity-organization .wp-block-goza-blocks-goza-button--inner:hover::after {
       -webkit-transition-delay: 0.4s;
       -o-transition-delay: 0.4s;
          transition-delay: 0.4s; }
