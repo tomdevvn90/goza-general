@@ -34,6 +34,12 @@ if ($goza_sub_news_op) {
 
 //copyright
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
+
+
+// info
+$goza_address      = __get_field('goza_address', 'option');
+$goza_email        = __get_field('goza_email', 'option');
+$goza_phone_number = __get_field('goza_phone_number', 'option');
 ?>
 
 <footer id="site-footer" class="main-footer footer-water" style="<?= esc_attr($style) ?>">
@@ -74,6 +80,7 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                     ?>
                 </div>
             </div>
+
             <div class="col-md-3 main-footer-widget">
                 <?php if (isset($goza_ig_heading) && !empty($goza_ig_heading)) { ?>
                     <h3 class="main-footer-title"><?= $goza_ig_heading ?></h3>
@@ -83,17 +90,33 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                 <?php if (isset($goza_sc_ig) && !empty($goza_sc_ig)) { ?>
                     <div class="main-footer--instagram"> <?= do_shortcode( $goza_sc_ig ) ?></div>
                 <?php } ?>
-
-                
-
             </div>
+
             <div class="col-md-3 main-footer-widget">
                 <?php if (isset($goza_general_heading) && !empty($goza_general_heading)) { ?>
                     <h3 class="main-footer-title"><?= $goza_general_heading ?></h3>
                 <?php } ?>
-                <?php if (isset($goza_general_content) && !empty($goza_general_content)) { ?>
-                    <div class="main-footer-desc"><?= $goza_general_content ?></div>
-                <?php } ?>
+
+                <div class="main-footer--info"> 
+                    <?php if(!empty($goza_address) && isset($goza_address)): ?>
+                        <p class="main-footer--info-item __address">
+                            <span>Address:</span> <?= esc_attr($goza_address) ?>
+                        </p>
+                   <?php endif;?> 
+                   
+                   <?php if(!empty($goza_phone_number) && isset($goza_phone_number)): ?>
+                        <p class="main-footer--info-item __phone">
+                            <span>Phone:</span> <a href="tel:<?= esc_url($goza_phone_number) ?>"> <?= esc_attr($goza_phone_number) ?> </a>
+                        </p>
+                   <?php endif;?> 
+
+                   <?php if(!empty($goza_email) && isset($goza_email)): ?>
+                        <p class="main-footer--info-item __email">
+                            <span>Email:</span> <a href="maitol:<?= esc_url($goza_email) ?>"> <?= esc_attr($goza_email) ?> </a>
+                        </p>
+                   <?php endif;?> 
+                </div>
+                    
                 <?php if (have_rows('goza_social_network', 'option')) { ?>
                     <ul class="main-footer-social">
                         <?php
