@@ -23,7 +23,7 @@ $color_sb_hd = get_field('color_sub_heading_ss_text_tsm_vd') ?: '';
    <div class="be-ss-text-tsm-video--content">
       <div class="container"> 
          <div class="be-ss-text-tsm-video--inner"> 
-            <div class="be-ss-text-tsm-video--inner-left"> 
+            <div class="be-ss-text-tsm-video--inner-left" data-aos="fade-right"> 
                <?php if(!empty($sub_heading)): ?>
                   <p class="be-ss-text-tsm-video--sub-heading" style="color:<?= $color_sb_hd ?>"> <?= esc_attr($sub_heading) ?> </p>
                <?php endif; ?>   

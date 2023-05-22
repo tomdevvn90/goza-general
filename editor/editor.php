@@ -16,7 +16,18 @@ function goza_block_assets()
 }
 add_action('init', 'goza_block_assets');
 
-function addBlocksStyles($block)
+function gozaContentPreRender($block)
+{
+	// Search for needed blocks then add styles to it
+	$style = gozaAddBlocksStyles($block);
+	// print_r($block);
+	array_push($block['innerContent'], $style);
+	return $block;
+}
+
+add_filter('render_block_data', 'gozaContentPreRender');
+
+function gozaAddBlocksStyles($block)
 {
 	$style_html = '';
 	$blockName = $block['blockName'];
@@ -25,6 +36,12 @@ function addBlocksStyles($block)
 	if ($blockName) {
 		// Get styles for parent blocks
 		$style_html .= gozaSetStylesForBlocks($blockAttrs, $blockName);
+		global $wp_version;
+		if ($wp_version >= 5.5) {
+
+			// Check blocks in 2nd level and beyond
+			$style_html .= gozaGetNestedBlocksStyles($block);
+		}
 	}
 
 	$style_html = $style_html ? '<style type="text/css" class="goza-blocks-styles-renderer">' . $style_html . '</style>' : '';
@@ -32,15 +49,30 @@ function addBlocksStyles($block)
 	return preg_replace('/\s\s+/', '', $style_html);
 }
 
-function contentPreRender($block)
-{
-	// Search for needed blocks then add styles to it
-	$style = addBlocksStyles($block);
-	array_push($block['innerContent'], $style);
-	return $block;
-}
+function gozaGetNestedBlocksStyles($block, $level = 2, &$style_html = array()){
 
-add_filter('render_block_data', 'contentPreRender');
+	if(isset($block['innerBlocks'])){
+		foreach($block['innerBlocks'] as $key => $inner_block){
+
+			// Get styles
+			$new_style_html = gozaSetStylesForBlocks($inner_block['attrs'], $inner_block['blockName']);
+
+			// Add the styles to the array
+			$style_html[] = $new_style_html;
+			//echo str_repeat("--", $level) . $inner_block['blockName'] . ' [ ' . $level . ' ]<br>';
+
+			gozaGetNestedBlocksStyles($inner_block, $level + 1, $style_html);
+		}
+	}
+
+	$final_styles = $style_html;
+	if( ! is_string( $final_styles ) ) {
+		// Convert array to string
+		$final_styles = implode( '', array_unique( $style_html ) );
+	}
+
+	return $final_styles;
+}
 
 function gozaSetStylesForBlocks($blockAttrs, $blockName)
 {
@@ -74,7 +106,7 @@ function gozaAdvancedButtonStyles($blockAttrs)
 	}
 
 
-	$block_class    = esc_html($blockAttrs['id']);
+	$block_class    = esc_html($blockAttrs['id']) . ' .wp-block-goza-blocks-goza-button--inner';
 	$font_size      = isset($blockAttrs['textSize']) ? esc_html(intval($blockAttrs['textSize'])) : 18;
 	$color          = isset($blockAttrs['textColor']) ? esc_html($blockAttrs['textColor']) : '';
 	$bg_color       = isset($blockAttrs['bgColor']) ? esc_html($blockAttrs['bgColor']) : '';
@@ -128,7 +160,7 @@ function gozaAdvancedButtonStyles($blockAttrs)
 	$style_html .= '}';
 
 	$style_html .= '.is-style-outlined.' . $block_class . '{';
-	if ($enable_text_color == true) $style_html .= 'border-color:' . $color . ' !important;';
+	($enable_text_color == true) ? $style_html .= 'border-color:' . $color . ' !important;' : $style_html .= 'border-color:' . $border_color . ' !important;' ;
 	$style_html .= '}';
 
 	$style_html .= '.is-style-ngo-dark.' . $block_class . ':before, .is-style-ngo-dark.' . $block_class . ':after{';
@@ -146,7 +178,7 @@ function gozaAdvancedButtonStyles($blockAttrs)
 	$style_html .= '}';
 
 	$style_html .= '.is-style-charity-organization.' . $block_class . ':hover{';
-		$style_html .= 'background-color:' . $bg_color . ' !important;';
+	$style_html .= 'background-color:' . $bg_color . ' !important;';
 	$style_html .= '}';
 
 	return $style_html;

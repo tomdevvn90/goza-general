@@ -101,6 +101,24 @@
             "endpoint": 0
         },
         {
+            "key": "field_6464f5d37ea94",
+            "label": "Color Heading",
+            "name": "color_hd_sg_p",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string"
+        },
+        {
             "key": "field_645f055c91cc1",
             "label": "CTA Style",
             "name": "cta_style_sg_p",
@@ -110,7 +128,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -151,5 +169,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683949487
+    "modified": 1684338211
 }

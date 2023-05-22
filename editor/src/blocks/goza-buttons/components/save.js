@@ -17,18 +17,20 @@ const Save = (props) => {
     return (
         <Fragment>
             <div className={`${className}  ${id} align${align}`}>
-                <RichText.Content 
-                    tagName="a"
-                    className={`wp-block-goza-button_link`}
-                    href={url || '#'}
-                    title={title}
-                    target={!urlOpenNewTab ? '_self' : '_blank'}
-                    value={text}
-                    rel="noopener noreferrer" 
-                />
-                {!!isStyleWater &&
-                    <svg class="wgl-dashes inner-dashed-border animated-dashes"> <rect rx="0%" ry="0%">  </rect> </svg>
-                }
+                <div className='wp-block-goza-blocks-goza-button--inner'>
+                    <RichText.Content 
+                        tagName="a"
+                        className={`wp-block-goza-button_link`}
+                        href={url || '#'}
+                        title={title}
+                        target={!urlOpenNewTab ? '_self' : '_blank'}
+                        value={text}
+                        rel="noopener noreferrer" 
+                    />
+                    {!!isStyleWater &&
+                        <svg class="wgl-dashes inner-dashed-border animated-dashes"> <rect rx="0%" ry="0%">  </rect> </svg>
+                    }
+                </div>
             </div>
         </Fragment>
     )

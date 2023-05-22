@@ -462,7 +462,7 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
         dots: false,
         autoplay: true,
         arrows: false,
-        adaptiveHeight: false,
+        adaptiveHeight: true,
         fade: false,
         cssEase: 'linear'
       };
@@ -1015,6 +1015,13 @@ __webpack_require__.r(__webpack_exports__);
       });
     });
   };
+  var beBtnSliderWater = function beBtnSliderWater() {
+    var $btn = $('.n2-ss-slider .be-btn-slider-water');
+    if ($btn.length === 0) return;
+    $btn.each(function () {
+      $(this).append('<svg class="wgl-dashes inner-dashed-border animated-dashes"><rect > </rect></svg>');
+    });
+  };
   $(window).on("scroll", function () {});
   $(document).ready(function () {});
   $(window).on("load", function () {
@@ -1038,6 +1045,7 @@ __webpack_require__.r(__webpack_exports__);
     beCounter();
     beProgressbar();
     beLightGallery();
+    beBtnSliderWater();
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
@@ -1172,9 +1180,15 @@ aos__WEBPACK_IMPORTED_MODULE_3___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
 __webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
 module.exports = __webpack_require__(/*! D:\laragon\www\gaza-theme\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+=======
+__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+module.exports = __webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+>>>>>>> 83575a1aaa55e87da8ba3eae332ae9622881da90
 
 
 /***/ })

@@ -44,7 +44,7 @@
             }
         }
 
-        &--venue{
+        &--address{
             svg{
                 width: 100%;
                 max-width: 15px;
@@ -88,6 +88,7 @@
     }
 
     &.is-style-default{
+        width: 100%;
         .be-single-event-inner{
             display: flex;
             @include media-breakpoint-down(md) {
@@ -154,7 +155,7 @@
                 }
             }
 
-            &--venue{
+            &--address{
                 margin-top: 15px;
                 width: 100%;
                 span{
@@ -378,7 +379,7 @@
                 }
             }
 
-            &--venue, &--date-start, &--button, &--author{
+            &--address, &--date-start, &--button, &--author{
                 color: #fff;
                 width: 50%;
                 padding-left: 15px;
@@ -395,7 +396,7 @@
                 }
             }
 
-            &--venue, &--date-start{
+            &--address, &--date-start{
                 svg{
                     width: 100%;
                     max-width: 20px;

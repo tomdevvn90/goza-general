@@ -53,11 +53,11 @@
         background-color: var(--link-color, #833dcc);
         border: 1px solid var(--link-color, #833dcc);
         border-radius: 0px;
+        font-size: 15px;
+        line-height: 25px;
         font-weight: 700;
-        font-size: 14px;
+        letter-spacing: 0;
         color: #fff;
-        line-height: 28px;
-        letter-spacing: -0.32px;
         text-transform: uppercase;
         padding: 14px 45px;
         position: relative;
@@ -150,7 +150,7 @@
 
     &.btn-ngo-dark {
         color: #fff;
-        background-color: var(--link-color, #d94532);
+        background-color: var(--heading-color, #2d2e40);
         font-weight: 700;
         font-size: 13px;
         display: inline-block;

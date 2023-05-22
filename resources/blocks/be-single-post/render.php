@@ -28,7 +28,7 @@ $the_query = new WP_Query($args);
 ?>
 <div id="<?php echo $id; ?>" class="be-single-post-block <?php echo $align_class; ?> <?php echo esc_attr($is_style) ?>"> 
     <?php if ($the_query->have_posts()){ ?>
-        <div class="be-single-post-inner <?= esc_attr($reverse) ?>"> 
+        <div class="be-single-post-inner <?= esc_attr($reverse) ?>" data-aos="zoom-in"> 
             <?php while ($the_query->have_posts()){
                 $the_query->the_post(); 
                 single_post_template($is_style );

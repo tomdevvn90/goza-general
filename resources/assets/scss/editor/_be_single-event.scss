@@ -13,12 +13,40 @@
                 line-height: 53px;
             }       
         }
-    }
 
-    &.is-style-default{
-        .be-single-event-inner{
-            &--name{
-                color: var(--heading-color);
+        &.is-style-default{
+            box-sizing: border-box;
+            .be-single-event-inner{
+                &--name{
+                    color: var(--heading-color);
+                }
+            }
+        }
+    
+        &.is-style-charity{
+            box-sizing: border-box;
+            .be-single-event-inner{
+                &--count-down{
+                   #be-count-down-edit{
+                    > div{
+                        span{
+                            color: #fff;
+                        }
+                    }
+                   }
+                }
+    
+                &--address{
+                    span{
+                        color: #fff;
+                    }
+                }
+    
+                &--date-start{
+                    p, span{
+                        color: #fff;
+                    }
+                }
             }
         }
     }
