@@ -22,10 +22,12 @@
 
 <article <?php echo $animation; ?> <?php post_class('post-item') ?>>
 	<div class="post-inner">
+        <?php if( !empty( $thumbnail ) ): ?>
         <a href="<?php echo esc_url( $post_link ); ?>" class="post-item__featured-thumbnail">
             <?php echo $thumbnail; ?>
         </a>
-        <div class=post-item__content>
+        <?php endif; ?>
+        <div class="post-item__content">
             <a href="<?php echo esc_url( $post_link ); ?>" class="post-item__title-link">
                 <h3 class="post-item__title"><?php echo __( $title, 'goza'); ?></h3>
             </a>

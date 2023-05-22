@@ -1,0 +1,138 @@
+.post-type-archive{
+    &-give_forms{
+        .posts-list{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 30px;
+            .post-item{
+                padding-bottom: 0;
+                .post-inner{
+                    height: 100%;
+                }
+                &__featured-thumbnail{
+                    display: flex;
+                    border-radius: 0;
+                    margin-bottom: 0;
+                    &:hover{
+                        .post-item__date{
+                            transform: translateY(-140%);
+                            -webkit-transform: translateY(-140%);
+                            opacity: 0;
+                        }
+                    }
+                }
+                &__extra-meta{
+                    border-bottom: 0;
+                    margin: 0px;
+                    padding: 0px;
+                    overflow: hidden;
+                    left: 10px;
+                    position: absolute;
+                    top: 10px;
+                    z-index: 1;
+                    > *{
+                        display: inline-block;
+                        margin-right: 10px;
+                        -webkit-transition: 0.5s ease;
+                        transition: 0.5s ease;
+                        transition-delay: 0.1s;
+                        -webkit-transition-delay: 0.1s;
+                        opacity: 1;
+                    }
+                }
+                &__date{
+                    background: var(--color-link,#d41b65);
+                    border-radius: 3px;
+                    color: #fff;
+                    font-size: 13px;
+                    letter-spacing: 0px;
+                    line-height: normal;
+                    padding: 5px 10px;
+                    text-transform: uppercase;
+                }
+                &__content{
+                    padding: 30px;
+                    border: solid #f5f5f5;
+                    border-width: 0 1px 1px;
+                    border-radius: 0 0 3px 3px;
+                    &.not-thumb{
+                        border-width: 1px;
+                    }
+                }
+                &__give-goal-progress{
+                    .give-goal-raised{
+                        font-size: 16px;
+                        line-height: 26px;
+                        font-weight: 400;
+                        color: #666666;
+                        .give-price-raised{
+                            font-size: 150%;
+                            letter-spacing: -1px;
+                            line-height: 48px;
+                            color: #333333;
+                        }
+                    }
+                    .give-goal-progress{
+                        background: none;
+                        padding-bottom: 10px;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 12px;
+                        line-height: 20px;
+                        color: #fff;
+                        text-align: center;
+                        -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+                        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+                        -webkit-transition: width .6s ease;
+                        -o-transition: width .6s ease;
+                        transition: width .6s ease;
+                        .progress-bar{
+                            background: #eee;
+                            border-radius: 25px;
+                            height: 8px;
+                            overflow: hidden;
+                            position: relative;
+                            width: 100%;
+                        }
+                        .bar{
+                            background: none;
+                            border-radius: 20px;
+                            display: block;
+                            height: 100%;
+                            overflow: hidden;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                }
+                &__title{
+                    font-family: $font-poppins;
+                }
+                &__readmore-btn{
+                    margin-top: 25px;
+                    .readmore-btn-icon{
+                        font-size: 20px;
+                        margin-left: 4px;
+                        vertical-align: middle;
+                    }
+                }
+
+            }
+        }
+        @media(max-width: 991px){
+            .posts-list{
+                grid-template-columns: repeat(2,1fr);
+                .post-item{
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+        @media(max-width: 600px){
+            .posts-list{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+    }
+}
