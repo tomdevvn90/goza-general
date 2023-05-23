@@ -20,7 +20,7 @@
     $post_author_url = get_author_posts_url( $post_author_id );
 ?>
 
-<article <?php echo $animation; ?> <?php post_class('post-item') ?>>
+<article <?php echo $animation; ?> <?php post_class('post-item'); ?>>
 	<div class="post-inner">
         <?php if( !empty( $thumbnail ) ): ?>
         <a href="<?php echo esc_url( $post_link ); ?>" class="post-item__featured-thumbnail">

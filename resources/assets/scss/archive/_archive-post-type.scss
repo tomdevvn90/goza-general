@@ -4,6 +4,7 @@
             display: grid;
             grid-template-columns: repeat(3,1fr);
             grid-gap: 30px;
+            padding-bottom: 40px ;
             .post-item{
                 padding-bottom: 0;
                 .post-inner{
@@ -11,7 +12,7 @@
                 }
                 &__featured-thumbnail{
                     display: flex;
-                    border-radius: 0;
+                    border-radius: 3px 3px 0 0;
                     margin-bottom: 0;
                     &:hover{
                         .post-item__date{
@@ -41,7 +42,7 @@
                     }
                 }
                 &__date{
-                    background: var(--color-link,#d41b65);
+                    background: var(--link-color,#d41b65);
                     border-radius: 3px;
                     color: #fff;
                     font-size: 13px;
@@ -95,7 +96,7 @@
                             width: 100%;
                         }
                         .bar{
-                            background: none;
+                            background-blend-mode: multiply;
                             border-radius: 20px;
                             display: block;
                             height: 100%;
@@ -110,6 +111,7 @@
                     font-family: $font-poppins;
                 }
                 &__readmore-btn{
+                    padding: 11px 20px;
                     margin-top: 25px;
                     .readmore-btn-icon{
                         font-size: 20px;
@@ -129,7 +131,16 @@
                 }
             }
         }
-        @media(max-width: 600px){
+        @media(max-width: 767px){
+            .posts-list{
+                .post-item{
+                    &__content{
+                        padding: 25px 20px;
+                    }
+                }
+            }
+        }
+        @media(max-width: 540px){
             .posts-list{
                 grid-template-columns: repeat(1,1fr);
             }

@@ -12221,26 +12221,26 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (max-width: 991px) {
-  .posts-list {
+  .posts-list.type-post {
     display: flex;
     flex-wrap: wrap;
     width: calc(100% + 30px);
     margin: 0 -15px;
   }
 
-  .posts-list .post-item {
+  .posts-list.type-post .post-item {
     width: calc(50% - 30px);
     margin: 0 15px;
   }
 }
 
 @media (max-width: 767px) {
-  .posts-list {
+  .posts-list.type-post {
     width: 100%;
     margin: 0;
   }
 
-  .posts-list .post-item {
+  .posts-list.type-post .post-item {
     width: 100%;
     margin: 0;
     padding-bottom: 30px;
@@ -12344,6 +12344,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+  padding-bottom: 40px;
 }
 
 .post-type-archive-give_forms .posts-list .post-item {
@@ -12356,7 +12357,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 .post-type-archive-give_forms .posts-list .post-item__featured-thumbnail {
   display: flex;
-  border-radius: 0;
+  border-radius: 3px 3px 0 0;
   margin-bottom: 0;
 }
 
@@ -12387,7 +12388,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 .post-type-archive-give_forms .posts-list .post-item__date {
-  background: var(--color-link, #d41b65);
+  background: var(--link-color, #d41b65);
   border-radius: 3px;
   color: #fff;
   font-size: 13px;
@@ -12445,7 +12446,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 .post-type-archive-give_forms .posts-list .post-item__give-goal-progress .give-goal-progress .bar {
-  background: none;
+  background-blend-mode: multiply;
   border-radius: 20px;
   display: block;
   height: 100%;
@@ -12460,6 +12461,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 .post-type-archive-give_forms .posts-list .post-item__readmore-btn {
+  padding: 11px 20px;
   margin-top: 25px;
 }
 
@@ -12480,7 +12482,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
+  .post-type-archive-give_forms .posts-list .post-item__content {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 540px) {
   .post-type-archive-give_forms .posts-list {
     grid-template-columns: repeat(1, 1fr);
   }

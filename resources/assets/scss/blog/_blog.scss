@@ -358,23 +358,28 @@
 
     }
     @media(max-width: 991px){
-        display: flex;
-        flex-wrap: wrap;
-        width: calc(100% + 30px);
-        margin: 0 -15px;
-        .post-item{
-            width: calc(50% - 30px);
-            margin: 0 15px;
+        &.type-post{
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(100% + 30px);
+            margin: 0 -15px;
+            .post-item{
+                width: calc(50% - 30px);
+                margin: 0 15px;
+            }
         }
+
     }
 
     @media(max-width: 767px){
-        width: 100%;
-        margin: 0;
-        .post-item{
+        &.type-post{
             width: 100%;
-            margin: 0 ;
-            padding-bottom: 30px;
+            margin: 0;
+            .post-item{
+                width: 100%;
+                margin: 0 ;
+                padding-bottom: 30px;
+            }
         }
     }
 }

@@ -41,7 +41,7 @@
 
 ?>
 
-<article <?php echo $animation; ?> <?php post_class('post-item') ?>>
+<article <?php echo $animation; ?> <?php post_class('post-item'); ?>>
 	<div class="post-inner">
         <?php if( !empty( $thumbnail ) ): ?>
         <a href="<?php echo esc_url( $post_link ); ?>" class="post-item__featured-thumbnail">
@@ -67,7 +67,10 @@
                 </div>         
                 <div class="give-goal-progress">
                     <div class="progress-bar">
-                        <div class="bar" style="background-color:<?php echo $color; ?>;width: <?php echo $progress; ?>%;" ></div>
+                        <div class="bar" 
+                        style="background: linear-gradient(180deg,<?php echo $color; ?> 0%, <?php echo $color; ?> 100%),
+                            linear-gradient(180deg, #fff 0%, #ccc 100%);width: <?php echo $progress; ?>%;" >
+                        </div>
                     </div>
                 </div>
             </div>
