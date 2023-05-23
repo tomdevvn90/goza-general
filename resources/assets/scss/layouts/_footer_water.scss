@@ -33,6 +33,16 @@
             font-style: normal;
             margin-bottom: 45px;
             letter-spacing: 0.32px;
+
+            @include media-breakpoint-down(md){
+                margin-bottom: 24px;
+            }
+
+            @include media-breakpoint-down(sm){
+                margin-bottom: 16px;
+                font-size: 20px;
+                line-height: 30px;
+            }
         }
 
         .main-footer--info{
@@ -96,7 +106,9 @@
                         color: #fff;
                         border: none;
                         width: 100%;
-
+                        @include media-breakpoint-down(md){
+                            max-width: 100%;
+                        }
                         &:focus{
                             border: none !important;
                         }
@@ -191,7 +203,7 @@
                         line-height: 28px;
                         color: var(--footer-text-color, #FFF);
                         &:hover {
-                            color: var(--link-color-hover, inherit);
+                            color: #fff;
                         }
 
                         &::before {
@@ -218,12 +230,12 @@
                     color: var(--footer-text-color, #FFF);
                     i{
                         font-size: 23px;
-                        color: var(--footer-text-color, #FFF);
+                        color:#464646
                     }
                     &:hover {
                         color: var(--link-color-hover, inherit);
                         i{
-                            color: var(--link-color-hover, inherit);
+                            color: #8799a3;
                         }
                     }
                 }
@@ -240,7 +252,13 @@
             justify-content: space-between;
 
             @include media-breakpoint-down(md) {
-                margin-top: 40px;
+                margin-top: 30px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                > p{
+                    max-width: 75%;
+                }
             }
 
             p {
@@ -267,7 +285,11 @@
                 letter-spacing: 0;
                 cursor: pointer;
                 transition: 0.4s;
-
+                @include media-breakpoint-down(sm) {
+                    span{
+                        display: none;
+                    }
+                }
                 i {
                     margin-left: 15px;
                 }

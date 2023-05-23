@@ -45,7 +45,7 @@ $goza_phone_number = __get_field('goza_phone_number', 'option');
 <footer id="site-footer" class="main-footer footer-water" style="<?= esc_attr($style) ?>">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 main-footer-widget">
+            <div class="col-md-6 col-lg-3 main-footer-widget">
                 <?php if ($goza_ft_logo) { ?>
                     <a href="/" class="main-footer-logo">
                         <img src="<?= esc_url($goza_ft_logo) ?>" alt="Logo" />
@@ -64,7 +64,7 @@ $goza_phone_number = __get_field('goza_phone_number', 'option');
                     <div class="main-footer--form-newsletter"><?= do_shortcode( $goza_sc_sub_form ) ?></div>
                 <?php } ?>
             </div>
-            <div class="col-md-3 main-footer-widget">
+            <div class="col-md-6 col-lg-3 main-footer-widget">
                 <?php if (isset($goza_ql_heading) && !empty($goza_ql_heading)) { ?>
                     <h3 class="main-footer-title"><?= $goza_ql_heading ?></h3>
                 <?php } ?>
@@ -81,7 +81,7 @@ $goza_phone_number = __get_field('goza_phone_number', 'option');
                 </div>
             </div>
 
-            <div class="col-md-3 main-footer-widget">
+            <div class="col-md-6 col-lg-3 main-footer-widget">
                 <?php if (isset($goza_ig_heading) && !empty($goza_ig_heading)) { ?>
                     <h3 class="main-footer-title"><?= $goza_ig_heading ?></h3>
                 <?php } ?>
@@ -92,7 +92,7 @@ $goza_phone_number = __get_field('goza_phone_number', 'option');
                 <?php } ?>
             </div>
 
-            <div class="col-md-3 main-footer-widget">
+            <div class="col-md-6 col-lg-3 main-footer-widget">
                 <?php if (isset($goza_general_heading) && !empty($goza_general_heading)) { ?>
                     <h3 class="main-footer-title"><?= $goza_general_heading ?></h3>
                 <?php } ?>
@@ -133,7 +133,7 @@ $goza_phone_number = __get_field('goza_phone_number', 'option');
             <?php if (isset($goza_txt_copyright) && !empty($goza_txt_copyright)) { ?>
                 <p><?= $goza_txt_copyright ?></p>
             <?php } ?>
-            <div id="back-to-top">Back to top <i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+            <div id="back-to-top"><span>Back to top</span> <i class="fa fa-chevron-up" aria-hidden="true"></i></div>
         </div>
     </div>
 
