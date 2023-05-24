@@ -9,7 +9,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 // ACF field variables
 $query = (!empty(get_field('query_events_listing'))) ? get_field('query_events_listing') : '';
 
-$is_style = isset($block['className']) ? $block['className'] : "is-style-default";
+$is_style = (isset($block['className']) && !empty($block['className'])) ? $block['className'] : "is-style-default";
 
 $args = [
    'post_type'   => 'tribe_events',
@@ -38,7 +38,7 @@ $the_query = new WP_Query($args);
       <div class="be-events-listing-block-inner"> 
          <?php while ($the_query->have_posts()) {
             $the_query->the_post(); 
-            be_item_event($block);
+            be_item_event($is_style);
          } ?>
       </div>
    <?php }else{

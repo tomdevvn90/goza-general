@@ -4416,6 +4416,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  text-align: left;
 }
 
 .is-style-2 .be-give-grid-block-inner .give-forms-grid .entry-content .extra-meta.bt-extra-meta-style1 {
@@ -4425,6 +4426,7 @@
 .is-style-2 .be-give-grid-block-inner .give-forms-grid .entry-content .extra-meta.bt-extra-meta-style1 .give-price-wrap p {
   font-size: 31px;
   line-height: 38px;
+  text-align: left;
 }
 
 .is-style-2 .be-give-grid-block-inner .give-forms-grid .entry-content .extra-meta.bt-extra-meta-style1 .give-price-wrap sup {

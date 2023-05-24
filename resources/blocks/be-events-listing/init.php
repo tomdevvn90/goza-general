@@ -1,22 +1,20 @@
 <?php 
-function be_item_event($block){
+function be_item_event($is_style){
 
-    $is_style = (isset($block['className']) && !empty($block['className'])) ? $block['className'] : "is-style-default";
-  
     switch ($is_style) {
-        case "is-style-2":
+        case strpos($is_style, 'is-style-2') !== false:    
             be_template_events_listing_style_2();
             break;
 
-        case "is-style-3":
+        case strpos($is_style, 'is-style-3') !== false:    
             be_template_events_listing_style_3();
             break; 
 
-        case "is-style-4":
+        case strpos($is_style, 'is-style-4') !== false:
             be_template_events_listing_style_4();
             break;     
 
-        case "is-style-5":
+        case strpos($is_style, 'is-style-5') !== false:
             be_template_events_listing_style_5();
             break;  
 
@@ -24,6 +22,7 @@ function be_item_event($block){
             be_template_events_listing_default();
             break; 
     } 
+    
 }
 
 function be_template_events_listing_style_2(){ 

@@ -1,7 +1,7 @@
 <?php
 function single_post_template($is_style){
     switch ($is_style) {
-        case "is-style-ngo-dark":
+        case strpos($is_style, 'is-style-ngo-dark') !== false:
             be_single_post_ngo_dark();
             break;
 
@@ -19,12 +19,14 @@ function be_single_post_template_water(){
     $cta_text     = get_field('cta_text_sg_p') ?: 'Read More';
     $cta_style    = get_field('cta_style_sg_p') ?: 'btn-default';
     $color_hd     = get_field('cta_style_sg_p') ?: '';
+    $thumbnail_id = get_post_thumbnail_id(get_the_ID());
+    $srcset       = wp_get_attachment_image_srcset( $thumbnail_id, array( 100, 100 ) );
+
     ?>
     <div class="be-single-post-inner--thumbnail">
-
         <?php if(!empty($post_img_url)): ?>
             <svg class="wgl-dashes inner-dashed-border animated-dashes"><rect rx="50%" ry="50%"> </rect></svg>
-            <img src="<?= esc_url($post_img_url) ?>" alt="<?php the_title() ?>">
+            <img src="<?= esc_url($post_img_url) ?>" srcset="<?= esc_attr($srcset) ?>" alt="<?php the_title() ?>" />
         <?php endif; ?>
     </div>
 

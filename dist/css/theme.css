@@ -19473,18 +19473,6 @@ h6 {
   stroke: #fff;
 }
 
-@media (max-width: 991.98px) {
-  .wp-block-heading.be-heading-goza-water {
-    font-size: 48px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .wp-block-heading.be-heading-goza-water {
-    font-size: 36px;
-  }
-}
-
 .be-single-post-block .be-single-post-inner {
   display: flex;
   align-items: center;
@@ -20681,6 +20669,7 @@ h6 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  text-align: left;
 }
 
 .is-style-2 .be-give-grid-block-inner .give-forms-grid .entry-content .extra-meta.bt-extra-meta-style1 {
@@ -20690,6 +20679,7 @@ h6 {
 .is-style-2 .be-give-grid-block-inner .give-forms-grid .entry-content .extra-meta.bt-extra-meta-style1 .give-price-wrap p {
   font-size: 31px;
   line-height: 38px;
+  text-align: left;
 }
 
 .is-style-2 .be-give-grid-block-inner .give-forms-grid .entry-content .extra-meta.bt-extra-meta-style1 .give-price-wrap sup {
