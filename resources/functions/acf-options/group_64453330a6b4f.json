@@ -49,7 +49,7 @@
             "label": "Heading",
             "name": "vpa_heading",
             "aria-label": "",
-            "type": "textarea",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -58,31 +58,31 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Our Story Play Video",
             "maxlength": "",
-            "rows": 2,
             "placeholder": "",
-            "new_lines": ""
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_6445337b6fac6",
             "label": "Link Video",
             "name": "vpa_link_video",
             "aria-label": "",
-            "type": "textarea",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33.3333",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "maxlength": "",
-            "rows": 2,
             "placeholder": "",
-            "new_lines": ""
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_644538f9da96a",
@@ -94,7 +94,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33.3333",
                 "class": "",
                 "id": ""
             },
@@ -122,7 +122,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33.3333",
                 "class": "",
                 "id": ""
             },
@@ -297,5 +297,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683766389
+    "modified": 1684935352
 }

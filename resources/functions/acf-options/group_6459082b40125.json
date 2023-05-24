@@ -194,7 +194,7 @@
                 "btn-outline": "Button Outline",
                 "btn-ngo-dark": "Button Ngo Dark",
                 "btn-water-charity": "Button Water Charity",
-                "btn-charity-organization": "Button Charity Organiation"
+                "btn-charity-organization": "Button Charity Organization"
             },
             "default_value": "style_default",
             "return_format": "value",
@@ -223,5 +223,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684243617
+    "modified": 1684937051
 }
