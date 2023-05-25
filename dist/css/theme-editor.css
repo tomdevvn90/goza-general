@@ -11498,6 +11498,10 @@
   line-height: 1.25;
 }
 
+.be-column-image-text-video-block .block-grid .block-col a {
+  text-decoration: none;
+}
+
 .be-column-image-text-video-block .block-grid .block-col__heading {
   font-size: 38px;
   color: #FFF;
@@ -11518,6 +11522,10 @@
 .be-column-image-text-video-block .block-grid .block-col__desc {
   color: #FFF;
   margin-bottom: 35px;
+}
+
+.be-column-image-text-video-block .block-grid .block-col__desc p {
+  color: inherit;
 }
 
 .be-column-image-text-video-block .block-grid .block-col__desc p:last-child {

@@ -107,6 +107,9 @@
                 color: var(--link-color, rgb(76, 165, 171));
                 line-height: 1.25;
             }
+            a{
+                text-decoration: none;
+            }
 
             &__heading {
                 font-size: 38px;
@@ -126,6 +129,7 @@
                 margin-bottom: 35px;
 
                 p {
+                    color: inherit;
                     &:last-child {
                         margin-bottom: 0;
                     }
