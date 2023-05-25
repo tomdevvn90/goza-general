@@ -153,7 +153,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33.3333",
                 "class": "",
                 "id": ""
             },
@@ -175,7 +175,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33.3333",
                 "class": "",
                 "id": ""
             },
@@ -184,6 +184,26 @@
             "max": "",
             "placeholder": "",
             "step": 10,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_646f7f4bd7c7b",
+            "label": "Element Padding (1px 1px 1px 1px)",
+            "name": "ctb_ele_padding",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
             "prepend": "",
             "append": ""
         },
@@ -259,5 +279,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683709059
+    "modified": 1685029043
 }
