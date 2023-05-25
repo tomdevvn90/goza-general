@@ -37,8 +37,8 @@ $citv_position_person      = __get_field('citv_position_person') ?: '';
 $citv_type_video           = __get_field('citv_type_video') ?: '';
 $citv_link_video           = __get_field('citv_link_video') ?: '';
 $citv_link_video_local     = __get_field('citv_link_video_local') ?: '';
-$citv_bg_img_content       = __get_field('citv_bg_img_content') ?: 'https://picsum.photos/1000/500';
-$citv_bg_img_video         = __get_field('citv_bg_img_video') ?: 'https://picsum.photos/1000/500';
+$citv_bg_img_content       = __get_field('citv_bg_img_content') ?: '';
+$citv_bg_img_video         = __get_field('citv_bg_img_video') ?: '';
 $citv_subheading_color     = __get_field('citv_subheading_color') ?: '';
 $citv_heading_color        = __get_field('citv_heading_color') ?: '';
 $citv_desc_color           = __get_field('citv_desc_color') ?: '';
@@ -58,6 +58,8 @@ $style  = implode('; ', $styles);
          <div class="block-col__bg">
             <?php if (isset($citv_bg_img_content) && $citv_bg_img_content) { ?>
                <img src="<?= esc_url($citv_bg_img_content['url']) ?>" alt="<?= esc_attr($citv_bg_img_content['alt']) ?>" />
+            <?php } else { ?>
+               <img src="https://picsum.photos/1000/500" alt="placeholder image" />
             <?php } ?>
          </div>
          <div class="block-col__content">
@@ -66,7 +68,7 @@ $style  = implode('; ', $styles);
             <?php } ?>
 
             <?php if (isset($citv_heading) && !empty($citv_heading)) { ?>
-               <h2 class="block-col__heading" style="color: <?= $citv_heading_color ?>"  data-aos="fade-up" data-aos-duration="800"><?= $citv_heading ?></h2>
+               <h2 class="block-col__heading" style="color: <?= $citv_heading_color ?>" data-aos="fade-up" data-aos-duration="800"><?= $citv_heading ?></h2>
             <?php } ?>
 
             <?php if (isset($citv_description) && !empty($citv_description)) { ?>
@@ -74,7 +76,7 @@ $style  = implode('; ', $styles);
             <?php } ?>
 
             <?php if (isset($citv_button) && $citv_button) { ?>
-               <a href="<?= esc_url($citv_button['url']) ?>" target="<?= esc_attr($citv_button['target']) ?>" class="btn <?= esc_attr($citv_button_style) ?>"  data-aos="fade-up" data-aos-duration="800">
+               <a href="<?= esc_url($citv_button['url']) ?>" target="<?= esc_attr($citv_button['target']) ?>" class="btn <?= esc_attr($citv_button_style) ?>" data-aos="fade-up" data-aos-duration="800">
                   <?= esc_attr($citv_button['title']) ?>
                   <?php if ($citv_button_style == 'btn-water') { ?>
                      <svg class="wgl-dashes inner-dashed-border animated-dashes">
@@ -90,9 +92,11 @@ $style  = implode('; ', $styles);
          <div class="block-col__bg">
             <?php if (isset($citv_bg_img_video) && $citv_bg_img_video) { ?>
                <img src="<?= esc_url($citv_bg_img_video['url']) ?>" alt="<?= esc_attr($citv_bg_img_video['alt']) ?>" />
+            <?php } else { ?>
+               <img src="https://picsum.photos/1000/500" alt="placeholder image" />
             <?php } ?>
          </div>
-         <div class="block-col__content block-col__box"  data-aos="fade-up" data-aos-duration="800">
+         <div class="block-col__content block-col__box" data-aos="fade-up" data-aos-duration="800">
             <div class="block-col__box-content">
                <?php if (isset($citv_name_person) && !empty($citv_name_person)) { ?>
                   <h5 class="block-col__name"><?= esc_attr($citv_name_person) ?></h5>
