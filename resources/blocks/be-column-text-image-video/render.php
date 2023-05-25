@@ -53,71 +53,69 @@ $style  = implode('; ', $styles);
 
 ?>
 <div <?php echo $anchor; ?>class="<?php echo esc_attr($class_name); ?>" style="<?php echo esc_attr($style); ?>">
-      <div class="block-grid">
+   <div class="block-grid">
+      <div class="block-col block-col-content">
+         <div class="block-col__bg">
+            <?php if (isset($citv_bg_img_content) && $citv_bg_img_content) { ?>
+               <img src="<?= esc_url($citv_bg_img_content['url']) ?>" alt="<?= esc_attr($citv_bg_img_content['alt']) ?>" />
+            <?php } ?>
+         </div>
+         <div class="block-col__content">
+            <?php if (isset($citv_subheading) && !empty($citv_subheading)) { ?>
+               <h6 class="block-col__subheading" style="color: <?= $citv_subheading_color ?>" data-aos="fade-up" data-aos-duration="800"><?= esc_attr($citv_subheading) ?></h6>
+            <?php } ?>
 
-         <div class="block-col block-col-content">
-            <div class="block-col__bg">
-               <?php if (isset($citv_bg_img_content) && $citv_bg_img_content) { ?>
-                  <img src="<?= esc_url($citv_bg_img_content['url']) ?>" alt="<?= esc_attr($citv_bg_img_content['alt']) ?>" />
+            <?php if (isset($citv_heading) && !empty($citv_heading)) { ?>
+               <h2 class="block-col__heading" style="color: <?= $citv_heading_color ?>"  data-aos="fade-up" data-aos-duration="800"><?= $citv_heading ?></h2>
+            <?php } ?>
+
+            <?php if (isset($citv_description) && !empty($citv_description)) { ?>
+               <div class="block-col__desc" style="color: <?= $citv_desc_color ?>" data-aos="fade-up" data-aos-duration="800"><?= $citv_description ?></div>
+            <?php } ?>
+
+            <?php if (isset($citv_button) && $citv_button) { ?>
+               <a href="<?= esc_url($citv_button['url']) ?>" target="<?= esc_attr($citv_button['target']) ?>" class="btn <?= esc_attr($citv_button_style) ?>"  data-aos="fade-up" data-aos-duration="800">
+                  <?= esc_attr($citv_button['title']) ?>
+                  <?php if ($citv_button_style == 'btn-water') { ?>
+                     <svg class="wgl-dashes inner-dashed-border animated-dashes">
+                        <rect rx="0%" ry="0%"> </rect>
+                     </svg>
+                  <?php } ?>
+               </a>
+            <?php } ?>
+         </div>
+      </div>
+
+      <div class="block-col block-col-video">
+         <div class="block-col__bg">
+            <?php if (isset($citv_bg_img_video) && $citv_bg_img_video) { ?>
+               <img src="<?= esc_url($citv_bg_img_video['url']) ?>" alt="<?= esc_attr($citv_bg_img_video['alt']) ?>" />
+            <?php } ?>
+         </div>
+         <div class="block-col__content block-col__box"  data-aos="fade-up" data-aos-duration="800">
+            <div class="block-col__box-content">
+               <?php if (isset($citv_name_person) && !empty($citv_name_person)) { ?>
+                  <h5 class="block-col__name"><?= esc_attr($citv_name_person) ?></h5>
+               <?php } ?>
+               <?php if (isset($citv_position_person) && !empty($citv_position_person)) { ?>
+                  <p class="block-col__position"><?= esc_attr($citv_position_person) ?></p>
                <?php } ?>
             </div>
-            <div class="block-col__content">
-               <?php if (isset($citv_subheading) && !empty($citv_subheading)) { ?>
-                  <h6 class="block-col__subheading"><?= esc_attr($citv_subheading) ?></h6>
-               <?php } ?>
-
-               <?php if (isset($citv_heading) && !empty($citv_heading)) { ?>
-                  <h2 class="block-col__heading"><?= esc_attr($citv_heading) ?></h2>
-               <?php } ?>
-
-               <?php if (isset($citv_description) && !empty($citv_description)) { ?>
-                  <div class="block-col__desc"><?= $citv_description ?></div>
-               <?php } ?>
-
-               <?php if (isset($citv_button) && $citv_button) { ?>
-                  <a href="<?= esc_url($citv_button['url']) ?>" target="<?= esc_attr($citv_button['target']) ?>" class="btn <?= esc_attr($citv_button_style) ?>">
-                     <?= esc_attr($citv_button['title']) ?>
-                     <?php if ($citv_button_style == 'btn-water') { ?>
-                        <svg class="wgl-dashes inner-dashed-border animated-dashes">
-                           <rect rx="0%" ry="0%"> </rect>
-                        </svg>
-                     <?php } ?>
+            <div id="goza-citv-action" class="block-col__box-action">
+               <?php if ($citv_type_video == 'local') { ?>
+                  <?php $video_url = $citv_link_video_local ? $citv_link_video_local : ''; ?>
+                  <!-- HTML5 Video --->
+                  <a data-lg-size="1280-720" data-video='{"source": [{"src":"<?= esc_url($video_url) ?>", "type":"video/mp4"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}'>
+                     <i class="fa fa-play-circle-o"></i>
+                  </a>
+               <?php } else { ?>
+                  <?php $video_url = $citv_link_video ? $citv_link_video : ''; ?>
+                  <a data-lg-size="1280-720" data-src="<?= esc_url($video_url) ?>">
+                     <i class="fa fa-play-circle-o"></i>
                   </a>
                <?php } ?>
             </div>
          </div>
-
-         <div class="block-col block-col-video">
-            <div class="block-col__bg">
-               <?php if (isset($citv_bg_img_video) && $citv_bg_img_video) { ?>
-                  <img src="<?= esc_url($citv_bg_img_video['url']) ?>" alt="<?= esc_attr($citv_bg_img_video['alt']) ?>" />
-               <?php } ?>
-
-               <div class="block-col__box">
-                  <div class="block-col__box-content">
-                     <?php if (isset($citv_name_person) && !empty($citv_name_person)) { ?>
-                        <h5 class="block-col__name"><?= esc_attr($citv_name_person) ?></h5>
-                     <?php } ?>
-                     <?php if (isset($citv_position_person) && !empty($citv_position_person)) { ?>
-                        <h5 class="block-col__position"><?= esc_attr($citv_position_person) ?></h5>
-                     <?php } ?>
-                  </div>
-                  <div class="block-col__box-action">
-                     <?php if ($citv_type_video == 'local') { ?>
-                        <?php $video_url = $citv_link_video_local ? $citv_link_video_local : ''; ?>
-                        <!-- HTML5 Video --->
-                        <a data-lg-size="1280-720" data-video='{"source": [{"src":"<?= esc_url($video_url) ?>", "type":"video/mp4"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}'>
-                           <i class="fa fa-play-circle-o"></i>
-                        </a>
-                     <?php } else { ?>
-                        <?php $video_url = $citv_link_video ? $citv_link_video : ''; ?>
-                        <a data-lg-size="1280-720" data-src="<?= esc_url($video_url) ?>">
-                           <i class="fa fa-play-circle-o"></i>
-                        </a>
-                     <?php } ?>
-                  </div>
-               </div>
-            </div>
-         </div>
       </div>
+   </div>
 </div>

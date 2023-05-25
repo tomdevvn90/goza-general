@@ -606,6 +606,11 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(document.getElementById('block-video-action'), {
   plugins: [lightgallery_plugins_video__WEBPACK_IMPORTED_MODULE_1__["default"]]
 });
+
+// Block Column Image Text Video
+Object(lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(document.getElementById('goza-citv-action'), {
+  plugins: [lightgallery_plugins_video__WEBPACK_IMPORTED_MODULE_1__["default"]]
+});
 var LiquidButton = /*#__PURE__*/function () {
   function LiquidButton(optionsParam) {
     _classCallCheck(this, LiquidButton);
@@ -1180,9 +1185,9 @@ aos__WEBPACK_IMPORTED_MODULE_3___default.a.init({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\PC\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! C:\Users\PC\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-module.exports = __webpack_require__(/*! C:\Users\PC\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+module.exports = __webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
 
 
 /***/ })

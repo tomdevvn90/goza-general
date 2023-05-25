@@ -6,6 +6,13 @@ lightGallery(document.getElementById('block-video-action'), {
     plugins: [lgVideo],
 });
 
+// Block Column Image Text Video
+lightGallery(document.getElementById('goza-citv-action'), { 
+  plugins: [lgVideo],
+});
+
+
+
 const LiquidButton = class LiquidButton {
     constructor(optionsParam) {
       const options = optionsParam || {};
