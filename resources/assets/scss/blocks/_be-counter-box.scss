@@ -1,4 +1,10 @@
 .be-counter-up{
+    &.aligncenter{
+        text-align: center;
+    }
+    &.alignright{
+        text-align: right;
+    }
     .be-counter-up-box{
         background-position: center;
         background-repeat: no-repeat;
@@ -6,7 +12,7 @@
         padding: 30px;
         
         &__number{
-            display: flex;
+            // display: flex;
             font-weight: 700;
             font-size: 45px;
             line-height: 45px;

@@ -9,7 +9,7 @@
         "renderTemplate": "render.php"
     },
     "supports": {
-        "align": true
+        "align": ["left", "center", "right"]
     },
-    "align": "full"
+    "align": "left"
 }

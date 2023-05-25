@@ -26662,6 +26662,14 @@ h6 {
   width: 100%;
 }
 
+.be-counter-up.aligncenter {
+  text-align: center;
+}
+
+.be-counter-up.alignright {
+  text-align: right;
+}
+
 .be-counter-up .be-counter-up-box {
   background-position: center;
   background-repeat: no-repeat;
@@ -26670,7 +26678,6 @@ h6 {
 }
 
 .be-counter-up .be-counter-up-box__number {
-  display: flex;
   font-weight: 700;
   font-size: 45px;
   line-height: 45px;
@@ -27760,6 +27767,12 @@ h6 {
   color: #FFF;
   line-height: 1.05;
   margin-bottom: 25px;
+}
+
+.be-column-image-text-video-block .block-grid .block-col__heading b,
+.be-column-image-text-video-block .block-grid .block-col__heading strong {
+  color: var(--link-color, rgb(76, 165, 171));
+  font-weight: bold;
 }
 
 @media (max-width: 767px) {
