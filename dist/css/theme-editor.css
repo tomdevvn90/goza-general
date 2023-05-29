@@ -3179,7 +3179,6 @@
 .is-root-container .mark {
   padding: 0;
   background: transparent;
-  color: var(--link-color, rgb(212, 27, 101));
 }
 
 .editor-styles-wrapper .container-xl,
