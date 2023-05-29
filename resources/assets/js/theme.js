@@ -10,9 +10,11 @@ AOS.init({
     disable: 'mobile', 
 });
 
-$( window ).load(function() {
+
+$(document).ready(function() {
     AOS.refresh();
 });
+
 
 import './blocks/hero';
 import './blocks/testimonials';

@@ -1141,7 +1141,7 @@ aos__WEBPACK_IMPORTED_MODULE_3___default.a.init({
   once: true,
   disable: 'mobile'
 });
-$(window).load(function () {
+$(document).ready(function () {
   aos__WEBPACK_IMPORTED_MODULE_3___default.a.refresh();
 });
 
