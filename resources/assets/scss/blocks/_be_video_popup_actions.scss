@@ -65,7 +65,7 @@
 
             a {
                 cursor: pointer;
-                background-color: #ed9913;
+                background-color: var(--link-color, #ed9913);
                 border-radius: 50%;
                 height: 60px;
                 width: 60px;

@@ -25127,7 +25127,7 @@ h6 {
 
 .video-popup-actions-block .block-inner #block-video-action a {
   cursor: pointer;
-  background-color: #ed9913;
+  background-color: var(--link-color, #ed9913);
   border-radius: 50%;
   height: 60px;
   width: 60px;
@@ -25239,7 +25239,7 @@ h6 {
   padding-bottom: 25px;
   opacity: 1;
   visibility: visible;
-  background: #ed9913;
+  background: var(--link-color, #ed9913);
 }
 
 .grid-services-box-block .gsb-services-list .gsb-services-item__wrap-icon {
@@ -25394,7 +25394,7 @@ h6 {
   margin-bottom: 40px;
   border-left-width: 4px;
   padding-left: 15px;
-  border-left-color: #ed9913;
+  border-left-color: var(--link-color, #ed9913);
   border-left-style: solid;
   letter-spacing: 0px;
   color: #333;
