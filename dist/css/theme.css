@@ -24286,6 +24286,7 @@ h6 {
 .be-give-slider-block.is-style-2 .be-give-slider-block-inner .item-give .featured-image img {
   width: 100%;
   height: auto;
+  transition: all 0.3s ease-in;
 }
 
 .be-give-slider-block.is-style-2 .be-give-slider-block-inner .item-give .entry-content {
