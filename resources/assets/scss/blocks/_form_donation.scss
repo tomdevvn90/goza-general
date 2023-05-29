@@ -1,10 +1,11 @@
 .btp-form-donate {
     text-align: center;
-    background: #ed9913;
+    background: var(--link-color, #ed9913);
     padding: 50px;
     border-radius: 4px;
     max-width: 810px;
     margin: 0 auto;
+
     .give-form-wrap {
         .give-goal-progress {
             margin-bottom: 25px;
@@ -137,6 +138,7 @@
             &:after {
                 clear: both;
             }
+
             fieldset#give_checkout_user_info {
                 margin-bottom: 20px;
 
@@ -146,9 +148,11 @@
                     border-bottom: none;
                 }
             }
+
             fieldset#give_purchase_submit {
                 display: inline-block;
-                #give-final-total-wrap{
+
+                #give-final-total-wrap {
 
                     .give-donation-total-label {
                         background-color: #FFF;
@@ -162,6 +166,7 @@
                         margin: 0;
                         padding: 0 12px;
                     }
+
                     .give-final-total-amount {
                         background: #fff;
                         border: 1px solid #ccc;
@@ -176,8 +181,10 @@
                         padding: 0 12px;
                     }
                 }
+
                 .give-submit-button-wrap {
                     text-align: center;
+
                     input#give-purchase-button {
                         height: 48px;
                         line-height: 44px;
@@ -192,6 +199,7 @@
                         text-transform: uppercase;
                         color: #fff;
                         border-radius: 3px;
+
                         &:hover {
                             background: #000;
                         }
@@ -216,7 +224,7 @@
             margin-right: 0;
         }
 
-        
+
 
         .form-row {
             label.give-label {

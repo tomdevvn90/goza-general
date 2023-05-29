@@ -10176,7 +10176,7 @@
 
 .btp-form-donate {
   text-align: center;
-  background: #ed9913;
+  background: var(--link-color, #ed9913);
   padding: 50px;
   border-radius: 4px;
   max-width: 810px;
