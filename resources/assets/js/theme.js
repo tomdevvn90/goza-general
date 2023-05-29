@@ -10,6 +10,12 @@ AOS.init({
     disable: 'mobile', 
 });
 
+
+$(document).ready(function() {
+    AOS.refresh();
+});
+
+
 import './blocks/hero';
 import './blocks/testimonials';
 import './blocks/posts-slider';
