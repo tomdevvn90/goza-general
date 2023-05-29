@@ -21,17 +21,17 @@ add_action('wp_enqueue_scripts', function () {
 	}
 });
 
-if (!function_exists('goza_load_fonts')) {
+if (!function_exists('goza_load_css_editor')) {
 	/**
 	 * Load assets backend
 	 */
-	function goza_load_fonts()
+	function goza_load_css_editor()
 	{
 		$upload_dir = wp_upload_dir();
-		wp_enqueue_style('awesome-font', get_template_directory_uri() . '/dist/css/theme-editor.css', [], THEME_VERSION);
-		wp_enqueue_style('admin-font', get_template_directory_uri() . '/resources/assets/fonts/fonts.css', [], THEME_VERSION);
 		wp_enqueue_style('goza-theme-general-styles', $upload_dir['baseurl'] . '/styles_uploads/variable-css.css', [], THEME_VERSION);
+		wp_enqueue_style('admin-font', get_template_directory_uri() . '/resources/assets/fonts/fonts.css', [], THEME_VERSION);
+		wp_enqueue_style('theme-css', get_template_directory_uri() . '/dist/css/theme-editor.css', [], THEME_VERSION);
 	}
 }
 
-add_action('admin_enqueue_scripts', 'goza_load_fonts');
+add_action('admin_enqueue_scripts', 'goza_load_css_editor');

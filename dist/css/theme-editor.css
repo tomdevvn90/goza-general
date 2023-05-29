@@ -3060,6 +3060,11 @@
   color: var(--body-color, #666);
 }
 
+.is-root-container a {
+  color: var(--link-color, #666);
+  text-decoration: none;
+}
+
 .is-root-container *,
 .is-root-container *::before,
 .is-root-container *::after {
@@ -3201,7 +3206,7 @@
   color: var(--heading-color);
 }
 
-.btn {
+.is-root-container .btn {
   display: inline-block;
   font-family: var(--body-family, "Arimo", sans-serif);
   font-weight: 700;
