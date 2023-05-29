@@ -10176,7 +10176,7 @@
 
 .btp-form-donate {
   text-align: center;
-  background: #ed9913;
+  background: var(--link-color, #ed9913);
   padding: 50px;
   border-radius: 4px;
   max-width: 810px;
@@ -10223,7 +10223,7 @@
 
 .btp-form-donate .give-form-wrap .give_warning {
   display: none;
-  background: #ffba00;
+  background: var(--link-color, #ed9913);
   padding: 10px 15px;
   font-size: 14px;
   border-radius: 3px;
@@ -10364,7 +10364,7 @@
   letter-spacing: 0;
   float: none;
   border: #fff solid 2px;
-  background: #ed9913;
+  background: var(--link-color, #ed9913);
   transition: 0.3s;
   text-transform: uppercase;
   color: #fff;
