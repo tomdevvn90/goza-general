@@ -51,7 +51,7 @@ function goza_theme_options_styles()
 
     //typo body
     $typography_body = __get_field('typography_body', 'option');
-    $body_font_family = $typography_body['body_font_family'] . ', sans-serif';
+    $body_font_family = '"' . $typography_body['body_font_family'] . '", sans-serif';
     $body_font_weight = $typography_body['body_font_weight'];
     $body_font_size = $typography_body['body_font_size'];
     $body_line_height = $typography_body['body_line_height'];
