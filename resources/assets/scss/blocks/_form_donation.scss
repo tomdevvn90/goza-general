@@ -106,6 +106,9 @@
                 display: grid;
                 gap: 5px;
                 grid-template-columns: repeat(2, 1fr);
+                &::before{
+                    display: none;
+                }
             }
 
             li {

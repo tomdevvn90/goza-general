@@ -10290,6 +10290,10 @@
     gap: 5px;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .btp-form-donate .give-form #give-donation-level-button-wrap::before {
+    display: none;
+  }
 }
 
 .btp-form-donate .give-form #give-donation-level-button-wrap li {
