@@ -9102,12 +9102,14 @@
 }
 
 .goza-image-content-block .block-inner__col.block-inner__content {
-  padding: 30px 15px 30px 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 @media (max-width: 767.98px) {
   .goza-image-content-block .block-inner__col.block-inner__content {
-    padding: 40px 15px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -9119,14 +9121,14 @@
 
 .goza-image-content-block .block-inner__col.block-inner__image img {
   height: 100%;
-  width: 100%;
+  width: calc(100% - 30px);
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 15px;
 }
 
 .goza-image-content-block .block-inner .block-inner__content-subheading {
