@@ -2,30 +2,30 @@
 function be_item_event($is_style){
 
     switch ($is_style) {
-        case strpos($is_style, 'is-style-2') !== false:    
-            be_template_events_listing_style_2();
+        case strpos($is_style, 'is-style-ev-list') !== false:    
+            be_template_ev_list();
             break;
 
-        case strpos($is_style, 'is-style-3') !== false:    
-            be_template_events_listing_style_3();
+        case strpos($is_style, 'is-style-ev-fill') !== false:    
+            be_template_ev_fill();
             break; 
 
-        case strpos($is_style, 'is-style-4') !== false:
-            be_template_events_listing_style_4();
+        case strpos($is_style, 'is-style-ev-outline') !== false:
+            be_template_ev_outline();
             break;     
 
-        case strpos($is_style, 'is-style-5') !== false:
-            be_template_events_listing_style_5();
+        case strpos($is_style, 'is-style-ev-special') !== false:
+            be_template_ev_special();
             break;  
 
         default:
-            be_template_events_listing_default();
+            be_template_ev_default();
             break; 
     } 
     
 }
 
-function be_template_events_listing_style_2(){ 
+function be_template_ev_list(){ 
         $day         = tribe_get_start_date( get_the_ID(), true, 'j');
         $month       = tribe_get_start_date( get_the_ID(), true, 'F');
         $time        = tribe_get_start_date( get_the_ID(), true, 'G:i a');
@@ -61,7 +61,7 @@ function be_template_events_listing_style_2(){
     </div>    
 <?php }
 
-function be_template_events_listing_default(){ 
+function be_template_ev_default(){ 
     $ev_img_url    = get_the_post_thumbnail_url(get_the_ID(),'full');
     $general       = (!empty(get_field('general_events_listing'))) ? get_field('general_events_listing') : '';
     $btn_animation = (!empty($general['animation_button'])) ? $general['animation_button'] : 'style_default';
@@ -108,7 +108,7 @@ function be_template_events_listing_default(){
 <?php 
 }
 
-function be_template_events_listing_style_3(){
+function be_template_ev_fill(){
     if(is_plugin_active('the-events-calendar/the-events-calendar.php')){
         $day         = tribe_get_start_date( get_the_ID(), true, 'j F');
         $time        = tribe_get_start_date( get_the_ID(), true, 'G:i a');
@@ -144,7 +144,7 @@ function be_template_events_listing_style_3(){
     </div>    
 <?php }
 
-function be_template_events_listing_style_4(){ 
+function be_template_ev_outline(){ 
         $ev_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
         if(is_plugin_active('the-events-calendar/the-events-calendar.php')){
             $day   = tribe_get_start_date( get_the_ID(), true, 'j');
@@ -193,7 +193,7 @@ function be_template_events_listing_style_4(){
 <?php }
 
 
-function be_template_events_listing_style_5(){ 
+function be_template_ev_special(){ 
         $ev_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
         if(is_plugin_active('the-events-calendar/the-events-calendar.php')){
             $day        = tribe_get_start_date( get_the_ID(), true, 'j F Y,');

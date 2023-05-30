@@ -14,6 +14,8 @@ $is_style = (isset($block['className']) && !empty($block['className'])) ? $block
 $args = [
    'post_type'   => 'tribe_events',
    'post_status' => 'publish',
+   'orderby' => 'meta_value',
+   'meta_key' => '_EventStartDate',
 ];
 
 $args['posts_per_page']  = (!empty($query['posts_per_page'])) ? $query['posts_per_page'] : -1;

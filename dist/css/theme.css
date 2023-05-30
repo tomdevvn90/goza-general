@@ -22513,40 +22513,40 @@ h6 {
   line-height: 9px;
 }
 
-.be-events-listing-block.is-style-2 .item-event {
+.be-events-listing-block.is-style-ev-list .item-event {
   margin: 0;
 }
 
-.be-events-listing-block.is-style-2 .item-event-inner {
+.be-events-listing-block.is-style-ev-list .item-event-inner {
   display: flex;
   align-items: center;
 }
 
-.be-events-listing-block.is-style-2 .item-event--meta {
+.be-events-listing-block.is-style-ev-list .item-event--meta {
   padding-left: 20px;
 }
 
-.be-events-listing-block.is-style-2 .item-event--name {
+.be-events-listing-block.is-style-ev-list .item-event--name {
   font-size: 24px;
   line-height: 26px;
   margin: 5px 0 0 0;
 }
 
 @media screen and (max-width: 991px) {
-  .be-events-listing-block.is-style-2 .item-event--name {
+  .be-events-listing-block.is-style-ev-list .item-event--name {
     font-size: 20px;
     line-height: 24px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .be-events-listing-block.is-style-2 .item-event--name {
+  .be-events-listing-block.is-style-ev-list .item-event--name {
     font-size: 16px;
     line-height: 18px;
   }
 }
 
-.be-events-listing-block.is-style-2 .item-event--start-date {
+.be-events-listing-block.is-style-ev-list .item-event--start-date {
   display: inline-block;
   text-transform: uppercase;
   text-align: center;
@@ -22561,14 +22561,14 @@ h6 {
 }
 
 @media screen and (max-width: 767px) {
-  .be-events-listing-block.is-style-2 .item-event--start-date {
+  .be-events-listing-block.is-style-ev-list .item-event--start-date {
     width: 80px;
     min-width: 80px;
   }
 }
 
-.be-events-listing-block.is-style-2 .item-event--start-date__day,
-.be-events-listing-block.is-style-2 .item-event--start-date__month {
+.be-events-listing-block.is-style-ev-list .item-event--start-date__day,
+.be-events-listing-block.is-style-ev-list .item-event--start-date__month {
   display: inline-block;
   width: 100%;
   font-weight: 700;
@@ -22576,37 +22576,37 @@ h6 {
   color: #fff;
 }
 
-.be-events-listing-block.is-style-2 .item-event--start-date__month {
+.be-events-listing-block.is-style-ev-list .item-event--start-date__month {
   font-size: 16px;
   line-height: 26px;
 }
 
 @media screen and (max-width: 767px) {
-  .be-events-listing-block.is-style-2 .item-event--start-date__month {
+  .be-events-listing-block.is-style-ev-list .item-event--start-date__month {
     font-size: 15px;
     line-height: 25px;
   }
 }
 
-.be-events-listing-block.is-style-2 .item-event--start-date__day {
+.be-events-listing-block.is-style-ev-list .item-event--start-date__day {
   font-size: 30px;
   line-height: 100%;
 }
 
 @media screen and (max-width: 767px) {
-  .be-events-listing-block.is-style-2 .item-event--start-date__day {
+  .be-events-listing-block.is-style-ev-list .item-event--start-date__day {
     font-size: 25px;
   }
 }
 
-.be-events-listing-block.is-style-2 .item-event--time,
-.be-events-listing-block.is-style-2 .item-event--venue {
+.be-events-listing-block.is-style-ev-list .item-event--time,
+.be-events-listing-block.is-style-ev-list .item-event--venue {
   font-size: 16px;
   color: var(--link-color);
 }
 
-.be-events-listing-block.is-style-2 .item-event--time svg,
-.be-events-listing-block.is-style-2 .item-event--venue svg {
+.be-events-listing-block.is-style-ev-list .item-event--time svg,
+.be-events-listing-block.is-style-ev-list .item-event--venue svg {
   width: 100%;
   max-width: 15px;
   -o-object-fit: cover;
@@ -22615,22 +22615,22 @@ h6 {
   object-position: center;
 }
 
-.be-events-listing-block.is-style-2 .item-event--time svg path,
-.be-events-listing-block.is-style-2 .item-event--venue svg path {
+.be-events-listing-block.is-style-ev-list .item-event--time svg path,
+.be-events-listing-block.is-style-ev-list .item-event--venue svg path {
   stroke: var(--link-color);
 }
 
-.be-events-listing-block.is-style-2 .item-event--time {
+.be-events-listing-block.is-style-ev-list .item-event--time {
   font-weight: 700;
   display: flex;
   align-items: center;
 }
 
-.be-events-listing-block.is-style-2 .item-event--time svg path {
+.be-events-listing-block.is-style-ev-list .item-event--time svg path {
   fill: var(--link-color);
 }
 
-.be-events-listing-block.is-style-2 .item-event--venue {
+.be-events-listing-block.is-style-ev-list .item-event--venue {
   margin: 8px 0 0 0;
   font-weight: 400;
   display: flex;
@@ -22638,20 +22638,20 @@ h6 {
 }
 
 @media screen and (max-width: 767px) {
-  .be-events-listing-block.is-style-2 .item-event--venue {
+  .be-events-listing-block.is-style-ev-list .item-event--venue {
     margin-top: 5px;
   }
 }
 
-.be-events-listing-block.is-style-2 .item-event:not(:last-child) {
+.be-events-listing-block.is-style-ev-list .item-event:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.be-events-listing-block.is-style-3 .item-event-inner {
+.be-events-listing-block.is-style-ev-fill .item-event-inner {
   text-align: center;
 }
 
-.be-events-listing-block.is-style-3 .item-event--date {
+.be-events-listing-block.is-style-ev-fill .item-event--date {
   display: flex;
   align-items: center;
   text-transform: uppercase;
@@ -22668,13 +22668,13 @@ h6 {
   margin-right: auto;
 }
 
-.be-events-listing-block.is-style-3 .item-event--date > span,
-.be-events-listing-block.is-style-3 .item-event--date i {
+.be-events-listing-block.is-style-ev-fill .item-event--date > span,
+.be-events-listing-block.is-style-ev-fill .item-event--date i {
   color: inherit;
 }
 
-.be-events-listing-block.is-style-3 .item-event--date > span,
-.be-events-listing-block.is-style-3 .item-event--date p {
+.be-events-listing-block.is-style-ev-fill .item-event--date > span,
+.be-events-listing-block.is-style-ev-fill .item-event--date p {
   font-size: inherit;
   font-family: inherit;
   font-weight: inherit;
@@ -22684,25 +22684,25 @@ h6 {
   color: inherit;
 }
 
-.be-events-listing-block.is-style-3 .item-event--date > span {
+.be-events-listing-block.is-style-ev-fill .item-event--date > span {
   margin: 0 5px;
 }
 
-.be-events-listing-block.is-style-3 .item-event--date-time {
+.be-events-listing-block.is-style-ev-fill .item-event--date-time {
   display: flex !important;
   align-items: center;
 }
 
-.be-events-listing-block.is-style-3 .item-event--date-time p {
+.be-events-listing-block.is-style-ev-fill .item-event--date-time p {
   margin: 0;
   padding: 0;
 }
 
-.be-events-listing-block.is-style-3 .item-event--date-time svg path {
+.be-events-listing-block.is-style-ev-fill .item-event--date-time svg path {
   fill: #fff;
 }
 
-.be-events-listing-block.is-style-3 .item-event--name {
+.be-events-listing-block.is-style-ev-fill .item-event--name {
   font-size: 24px;
   line-height: 26px;
   color: var(--heading-color);
@@ -22710,33 +22710,33 @@ h6 {
 }
 
 @media screen and (max-width: 991px) {
-  .be-events-listing-block.is-style-3 .item-event--name {
+  .be-events-listing-block.is-style-ev-fill .item-event--name {
     font-size: 20px;
     line-height: 24px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .be-events-listing-block.is-style-3 .item-event--name {
+  .be-events-listing-block.is-style-ev-fill .item-event--name {
     font-size: 18px;
     line-height: 22px;
   }
 }
 
-.be-events-listing-block.is-style-3 .item-event--venue {
+.be-events-listing-block.is-style-ev-fill .item-event--venue {
   color: var(--link-color);
   margin-top: 8px;
 }
 
-.be-events-listing-block.is-style-3 .item-event--venue svg path {
+.be-events-listing-block.is-style-ev-fill .item-event--venue svg path {
   stroke: var(--link-color);
 }
 
-.be-events-listing-block.is-style-3 .item-event:not(:last-child) {
+.be-events-listing-block.is-style-ev-fill .item-event:not(:last-child) {
   padding-bottom: 30px;
 }
 
-.be-events-listing-block.is-style-4 .item-event {
+.be-events-listing-block.is-style-ev-outline .item-event {
   padding: 35px 35px 0 35px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -22744,64 +22744,64 @@ h6 {
 }
 
 @media screen and (max-width: 600px) {
-  .be-events-listing-block.is-style-4 .item-event {
+  .be-events-listing-block.is-style-ev-outline .item-event {
     padding: 30px 15px;
     margin-bottom: 30px;
   }
 }
 
-.be-events-listing-block.is-style-4 .item-event-inner {
+.be-events-listing-block.is-style-ev-outline .item-event-inner {
   text-align: center;
   background: #fff;
   display: flex;
 }
 
 @media screen and (max-width: 600px) {
-  .be-events-listing-block.is-style-4 .item-event-inner {
+  .be-events-listing-block.is-style-ev-outline .item-event-inner {
     flex-wrap: wrap;
   }
 }
 
-.be-events-listing-block.is-style-4 .item-event--thumbnail {
+.be-events-listing-block.is-style-ev-outline .item-event--thumbnail {
   width: 200px;
   height: auto;
   min-width: 200px;
 }
 
 @media screen and (max-width: 600px) {
-  .be-events-listing-block.is-style-4 .item-event--thumbnail {
+  .be-events-listing-block.is-style-ev-outline .item-event--thumbnail {
     width: 100%;
     margin-bottom: 20px;
   }
 }
 
-.be-events-listing-block.is-style-4 .item-event--thumbnail img {
+.be-events-listing-block.is-style-ev-outline .item-event--thumbnail img {
   height: 210px;
   border-radius: 4px;
   margin-bottom: -35px;
 }
 
 @media screen and (max-width: 600px) {
-  .be-events-listing-block.is-style-4 .item-event--thumbnail img {
+  .be-events-listing-block.is-style-ev-outline .item-event--thumbnail img {
     margin-bottom: 0;
   }
 }
 
 @media screen and (max-width: 991px) {
-  .be-events-listing-block.is-style-4 .item-event--name {
+  .be-events-listing-block.is-style-ev-outline .item-event--name {
     font-size: 20px;
     line-height: 28px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .be-events-listing-block.is-style-4 .item-event--name {
+  .be-events-listing-block.is-style-ev-outline .item-event--name {
     font-size: 18x;
     line-height: 24px;
   }
 }
 
-.be-events-listing-block.is-style-4 .item-event--meta {
+.be-events-listing-block.is-style-ev-outline .item-event--meta {
   padding-left: 30px;
   padding-bottom: 10px;
   text-align: left;
@@ -22809,12 +22809,12 @@ h6 {
 }
 
 @media screen and (max-width: 600px) {
-  .be-events-listing-block.is-style-4 .item-event--meta {
+  .be-events-listing-block.is-style-ev-outline .item-event--meta {
     padding: 0;
   }
 }
 
-.be-events-listing-block.is-style-4 .item-event--venue {
+.be-events-listing-block.is-style-ev-outline .item-event--venue {
   font-size: 15px;
   line-height: 19px;
   color: #888;
@@ -22827,7 +22827,7 @@ h6 {
   align-content: center;
 }
 
-.be-events-listing-block.is-style-4 .item-event--venue::before {
+.be-events-listing-block.is-style-ev-outline .item-event--venue::before {
   content: " ";
   display: inline-block;
   width: 70px;
@@ -22839,15 +22839,15 @@ h6 {
   z-index: 1;
 }
 
-.be-events-listing-block.is-style-4 .item-event--venue svg path {
+.be-events-listing-block.is-style-ev-outline .item-event--venue svg path {
   stroke: #888;
 }
 
-.be-events-listing-block.is-style-4 .item-event--start-date {
+.be-events-listing-block.is-style-ev-outline .item-event--start-date {
   margin-top: 20px;
 }
 
-.be-events-listing-block.is-style-4 .item-event--start-date b {
+.be-events-listing-block.is-style-ev-outline .item-event--start-date b {
   font-size: inherit;
   font-family: inherit;
   font-weight: inherit;
@@ -22855,24 +22855,24 @@ h6 {
   text-transform: inherit;
 }
 
-.be-events-listing-block.is-style-4 .item-event--start-date-day,
-.be-events-listing-block.is-style-4 .item-event--start-date-time {
+.be-events-listing-block.is-style-ev-outline .item-event--start-date-day,
+.be-events-listing-block.is-style-ev-outline .item-event--start-date-time {
   font-size: 16px;
   line-height: 19px;
   font-weight: 700;
   display: inline-block;
 }
 
-.be-events-listing-block.is-style-4 .item-event--start-date-time,
-.be-events-listing-block.is-style-4 .item-event--start-date b {
+.be-events-listing-block.is-style-ev-outline .item-event--start-date-time,
+.be-events-listing-block.is-style-ev-outline .item-event--start-date b {
   color: var(--link-color);
 }
 
-.be-events-listing-block.is-style-4 .item-event--cta {
+.be-events-listing-block.is-style-ev-outline .item-event--cta {
   text-align: right;
 }
 
-.be-events-listing-block.is-style-4 .item-event--cta > a {
+.be-events-listing-block.is-style-ev-outline .item-event--cta > a {
   padding: 0;
   font-size: 14px;
   color: #646464;
@@ -22881,25 +22881,25 @@ h6 {
   height: auto;
 }
 
-.be-events-listing-block.is-style-4 .item-event--cta > a:hover {
+.be-events-listing-block.is-style-ev-outline .item-event--cta > a:hover {
   background-color: transparent;
   color: var(--link-color);
   text-decoration: underline;
 }
 
-.be-events-listing-block.is-style-5 .item-event-inner {
+.be-events-listing-block.is-style-ev-special .item-event-inner {
   display: flex;
   align-items: center;
   min-height: 150px;
 }
 
 @media screen and (max-width: 600px) {
-  .be-events-listing-block.is-style-5 .item-event-inner {
+  .be-events-listing-block.is-style-ev-special .item-event-inner {
     flex-wrap: wrap;
   }
 }
 
-.be-events-listing-block.is-style-5 .item-event--thumbnail {
+.be-events-listing-block.is-style-ev-special .item-event--thumbnail {
   z-index: 9;
   width: 150px;
   height: 150px;
@@ -22907,14 +22907,14 @@ h6 {
 }
 
 @media screen and (max-width: 600px) {
-  .be-events-listing-block.is-style-5 .item-event--thumbnail {
+  .be-events-listing-block.is-style-ev-special .item-event--thumbnail {
     width: 100%;
     text-align: center;
     margin-bottom: -35px;
   }
 }
 
-.be-events-listing-block.is-style-5 .item-event--thumbnail img {
+.be-events-listing-block.is-style-ev-special .item-event--thumbnail img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -22922,13 +22922,13 @@ h6 {
 }
 
 @media screen and (max-width: 600px) {
-  .be-events-listing-block.is-style-5 .item-event--thumbnail img {
+  .be-events-listing-block.is-style-ev-special .item-event--thumbnail img {
     margin-bottom: 0;
     max-width: 150px;
   }
 }
 
-.be-events-listing-block.is-style-5 .item-event--meta {
+.be-events-listing-block.is-style-ev-special .item-event--meta {
   background-color: var(--link-color);
   padding: 25px 20px 25px 75px;
   color: #fff;
@@ -22942,7 +22942,7 @@ h6 {
 }
 
 @media screen and (max-width: 600px) {
-  .be-events-listing-block.is-style-5 .item-event--meta {
+  .be-events-listing-block.is-style-ev-special .item-event--meta {
     width: 100%;
     margin-left: 0;
     padding-left: 15px;
@@ -22952,35 +22952,35 @@ h6 {
   }
 }
 
-.be-events-listing-block.is-style-5 .item-event--name,
-.be-events-listing-block.is-style-5 .item-event--start-time,
-.be-events-listing-block.is-style-5 .item-event-venue {
+.be-events-listing-block.is-style-ev-special .item-event--name,
+.be-events-listing-block.is-style-ev-special .item-event--start-time,
+.be-events-listing-block.is-style-ev-special .item-event-venue {
   color: #fff;
   width: 100%;
 }
 
-.be-events-listing-block.is-style-5 .item-event--start-time span {
+.be-events-listing-block.is-style-ev-special .item-event--start-time span {
   color: var(--heading-color);
 }
 
-.be-events-listing-block.is-style-5 .item-event--start-time,
-.be-events-listing-block.is-style-5 .item-event-venue {
+.be-events-listing-block.is-style-ev-special .item-event--start-time,
+.be-events-listing-block.is-style-ev-special .item-event-venue {
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
 }
 
-.be-events-listing-block.is-style-5 .item-event-venue {
+.be-events-listing-block.is-style-ev-special .item-event-venue {
   margin-top: 10px;
 }
 
-.be-events-listing-block.is-style-5 .item-event--info {
+.be-events-listing-block.is-style-ev-special .item-event--info {
   margin-top: 10px;
   padding-left: 20px;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.be-events-listing-block.is-style-5 .item-event:not(:last-child) {
+.be-events-listing-block.is-style-ev-special .item-event:not(:last-child) {
   margin-bottom: 25px;
 }
 

@@ -1,5 +1,4 @@
 .be-events-listing-block{
-
     .item-event{
         &-inner{
             position: relative;
@@ -241,7 +240,7 @@
         }
     }
 
-    &.is-style-2{
+    &.is-style-ev-list{
         .item-event{
             margin: 0;
             &-inner{
@@ -355,7 +354,7 @@
         }
     }
 
-    &.is-style-3{
+    &.is-style-ev-fill{
         .item-event{
             &-inner{
                 text-align: center;
@@ -442,7 +441,7 @@
     }
 
 
-    &.is-style-4{
+    &.is-style-ev-outline{
         .item-event{
             padding: 35px 35px 0 35px;
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
@@ -573,7 +572,7 @@
         }
     }
 
-    &.is-style-5{
+    &.is-style-ev-special{
         .item-event{
             &-inner{
                 display: flex;
