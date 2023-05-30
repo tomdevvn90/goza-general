@@ -26437,6 +26437,12 @@ h6 {
   margin: 0 auto;
 }
 
+@media (max-width: 767px) {
+  .btp-form-donate {
+    padding: 20px;
+  }
+}
+
 .btp-form-donate .give-form-wrap .give-goal-progress {
   margin-bottom: 25px;
 }
@@ -26536,6 +26542,12 @@ h6 {
   margin: 0 5px 5px 0;
 }
 
+@media (max-width: 767px) {
+  .btp-form-donate .give-form #give-donation-level-button-wrap li {
+    width: calc(50% - 5px);
+  }
+}
+
 .btp-form-donate .give-form #give-donation-level-button-wrap li button {
   background: #fff;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
@@ -26549,6 +26561,12 @@ h6 {
   border: medium none;
   border-radius: 3px;
   -webkit-appearance: button;
+}
+
+@media (max-width: 767px) {
+  .btp-form-donate .give-form #give-donation-level-button-wrap li button {
+    width: 100%;
+  }
 }
 
 .btp-form-donate .give-form #give-donation-level-button-wrap:before {
