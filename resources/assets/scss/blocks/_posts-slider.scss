@@ -197,7 +197,7 @@
                 margin: 0px 8px;
                 &.slick-active{
                     transform: scale(3);
-                    background: var(--link-color);
+                    background: var(--link-color, rgb(212, 27, 101));
                     box-shadow: rgba(1, 1, 1, 0.2) 0px 0px 13px -2px;
                 }
 
@@ -243,7 +243,9 @@
         }
     }
 
-    &.is-style-2{
+    &.is-style-goza-dream{
+        box-sizing: border-box;
+        margin: 0;
         .be-post-slider-block-inner{
             .item-post{
                 &-content{
@@ -307,7 +309,7 @@
     } 
     
     
-    &.is-style-3{
+    &.is-style-goza-fill{
         .be-post-slider-block-inner{
             .item-post{
                 &-meta{
@@ -365,7 +367,7 @@
         }
     }    
 
-    &.is-style-4{
+    &.is-style-goza-outline{
         .be-post-slider-block-inner{
             .item-post{
                 &-content{
@@ -473,7 +475,7 @@
         }
     }
 
-    &.is-style-5{
+    &.is-style-goza-charity{
         .be-post-slider-block-inner{
             .item-post{
                 &-content{
