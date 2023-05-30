@@ -21076,7 +21076,7 @@ h6 {
 
 .be-post-slider-block-inner .slick-dots li.slick-active {
   transform: scale(3);
-  background: var(--link-color);
+  background: var(--link-color, rgb(212, 27, 101));
   box-shadow: rgba(1, 1, 1, 0.2) 0px 0px 13px -2px;
 }
 
@@ -24167,7 +24167,7 @@ h6 {
 
 .be-give-slider-block-inner .slick-dots li.slick-active {
   transform: scale(3);
-  background: rgb(212, 27, 101);
+  background: var(--link-color, rgb(212, 27, 101));
   box-shadow: rgba(1, 1, 1, 0.2) 0px 0px 13px -2px;
 }
 
@@ -26437,6 +26437,12 @@ h6 {
   margin: 0 auto;
 }
 
+@media (max-width: 767px) {
+  .btp-form-donate {
+    padding: 20px;
+  }
+}
+
 .btp-form-donate .give-form-wrap .give-goal-progress {
   margin-bottom: 25px;
 }
@@ -26527,6 +26533,18 @@ h6 {
   margin-bottom: 10px;
 }
 
+@media (max-width: 767px) {
+  .btp-form-donate .give-form #give-donation-level-button-wrap {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .btp-form-donate .give-form #give-donation-level-button-wrap::before {
+    display: none;
+  }
+}
+
 .btp-form-donate .give-form #give-donation-level-button-wrap li {
   margin-bottom: 5px;
   margin-right: 15px;
@@ -26534,6 +26552,12 @@ h6 {
   list-style-image: none;
   list-style-type: none;
   margin: 0 5px 5px 0;
+}
+
+@media (max-width: 767px) {
+  .btp-form-donate .give-form #give-donation-level-button-wrap li {
+    width: 100%;
+  }
 }
 
 .btp-form-donate .give-form #give-donation-level-button-wrap li button {
@@ -26549,6 +26573,13 @@ h6 {
   border: medium none;
   border-radius: 3px;
   -webkit-appearance: button;
+}
+
+@media (max-width: 767px) {
+  .btp-form-donate .give-form #give-donation-level-button-wrap li button {
+    width: 100%;
+    padding: 13px 15px;
+  }
 }
 
 .btp-form-donate .give-form #give-donation-level-button-wrap:before {
