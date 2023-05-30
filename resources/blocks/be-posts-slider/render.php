@@ -41,7 +41,7 @@ $the_query = new WP_Query($args);
         <div class="be-post-slider-block-inner"> 
             <?php while ($the_query->have_posts()) {
                 $the_query->the_post(); 
-                be_item_post($block);
+                be_item_post($is_style);
             } ?>
         </div>
     <?php }else{

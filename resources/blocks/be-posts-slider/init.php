@@ -1,25 +1,24 @@
 <?php 
-function be_item_post($block){
-    $is_style = isset($block['className']) ? $block['className'] : "is-style-default"; ?>
-
+function be_item_post($is_style){
+?>
     <div class="item-post item post_recent"> 
         <div class="item-post-inner"> 
             <?php     
             switch ($is_style) {
-                case "is-style-2":
-                    be_template_post_style_2();
+                case strpos($is_style, 'is-style-goza-dream') !== false:     
+                    be_template_post_goza_dream();
                     break;
 
-                case "is-style-3":
-                    be_template_post_style_3();
+                case strpos($is_style, 'is-style-goza-fill') !== false:         
+                    be_template_post_goza_fill();
                     break; 
                     
-                case "is-style-4":
-                    be_template_post_style_4();
+                case strpos($is_style, 'is-style-goza-outline') !== false:     
+                    be_template_post_goza_outline();
                     break; 
                     
-                case "is-style-5":
-                    be_template_post_style_5();
+                case strpos($is_style, 'is-style-goza-charity') !== false:     
+                    be_template_post_goza_charity();
                     break;     
 
                 default:
@@ -31,15 +30,16 @@ function be_item_post($block){
     <?php
 }
 
-function be_template_post_style_5(){ 
-    $post_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+function be_template_post_goza_charity(){ 
     $comment      = get_comments_number();
     $post_date    = get_the_date('d M, Y');
     $categories   = get_the_category();
 ?>
 
     <div class="item-post-thumbnail"> 
-        <img src="<?php echo esc_url($post_img_url) ?>" alt="<?php the_title() ?>"/>
+        <?php if(has_post_thumbnail()): ?>
+            <?php the_post_thumbnail('full'); ?>
+        <?php endif; ?>
     </div>
 
     <div class="item-post-content post-caption">
@@ -72,14 +72,14 @@ function be_template_post_style_5(){
 
 <?php }
 
-function be_template_post_style_4(){ 
-    $post_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+function be_template_post_goza_outline(){ 
     $categories   = get_the_category();
-    
 ?>
 
     <div class="item-post-thumbnail"> 
-        <img src="<?php echo esc_url($post_img_url) ?>" alt="<?php the_title() ?>"/>
+        <?php if(has_post_thumbnail()): ?>
+            <?php the_post_thumbnail('full'); ?>
+        <?php endif; ?>
 
         <a href="<?php the_permalink() ?>" class="item-post-button"> <i class="fa fa-angle-right" aria-hidden="true"></i> </a>
     </div>
@@ -104,14 +104,15 @@ function be_template_post_style_4(){
 
 <?php }
 
-function be_template_post_style_3(){ 
-    $post_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+function be_template_post_goza_fill(){ 
     $comment      = get_comments_number();
     $post_date    = get_the_date('d M, Y');
 ?>
 
     <div class="item-post-thumbnail"> 
-        <img src="<?php echo esc_url($post_img_url) ?>" alt="<?php the_title() ?>"/>
+        <?php if(has_post_thumbnail()): ?>
+            <?php the_post_thumbnail('full'); ?>
+        <?php endif; ?>
     </div>
 
     <div class="item-post-content post-caption"> 
@@ -132,8 +133,7 @@ function be_template_post_style_3(){
     </div>
 <?php }
 
-function be_template_post_style_2(){ 
-    $post_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+function be_template_post_goza_dream(){ 
     $post_date    = get_the_date('d M, Y');
     $comment      = get_comments_number();
     $categories   = get_the_category();
@@ -142,7 +142,9 @@ function be_template_post_style_2(){
 ?>
 
     <div class="item-post-thumbnail"> 
-        <img src="<?php echo esc_url($post_img_url) ?>" alt="<?php the_title() ?>"/>
+        <?php if(has_post_thumbnail()): ?>
+            <?php the_post_thumbnail('full'); ?>
+        <?php endif; ?>
     </div>
 
     <div class="item-post-content post-caption"> 
@@ -180,13 +182,14 @@ function be_template_post_style_2(){
 
 function be_template_post_default(){ 
     $is_style     = isset($block['className']) ? $block['className'] : "is-style-default";
-    $post_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
     $post_date    = get_the_date('d M, Y');
     $comment      = get_comments_number();
     ?>
 
     <div class="item-post-thumbnail"> 
-        <img src="<?php echo esc_url($post_img_url) ?>" alt="<?php the_title() ?>"/>
+        <?php if(has_post_thumbnail()): ?>
+            <?php the_post_thumbnail('full'); ?>
+        <?php endif; ?>
     </div>
 
     <div class="item-post-content post-caption"> 

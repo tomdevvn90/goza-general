@@ -243,7 +243,9 @@
         }
     }
 
-    &.is-style-2{
+    &.is-style-goza-dream{
+        box-sizing: border-box;
+        margin: 0;
         .be-post-slider-block-inner{
             .item-post{
                 &-content{
@@ -307,7 +309,7 @@
     } 
     
     
-    &.is-style-3{
+    &.is-style-goza-fill{
         .be-post-slider-block-inner{
             .item-post{
                 &-meta{
@@ -365,7 +367,7 @@
         }
     }    
 
-    &.is-style-4{
+    &.is-style-goza-outline{
         .be-post-slider-block-inner{
             .item-post{
                 &-content{
@@ -473,7 +475,7 @@
         }
     }
 
-    &.is-style-5{
+    &.is-style-goza-charity{
         .be-post-slider-block-inner{
             .item-post{
                 &-content{
