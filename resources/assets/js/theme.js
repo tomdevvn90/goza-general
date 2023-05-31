@@ -16,6 +16,7 @@ $(document).ready(function() {
 });
 
 
+import './blocks/events-carousel';
 import './blocks/hero';
 import './blocks/testimonials';
 import './blocks/posts-slider';

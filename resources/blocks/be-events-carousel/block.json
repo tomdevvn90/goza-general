@@ -1,0 +1,15 @@
+{
+    "name": "goza/be-events-carousel",
+    "title": "Be Events Carousel",
+    "category": "goza-theme",
+    "icon": "embed-post",
+    "keywords": ["event", "carousel", "goza"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "align": true
+    },
+    "align": "full"
+  }
