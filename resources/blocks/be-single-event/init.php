@@ -79,7 +79,7 @@ function be_single_ev_template_default(){
                 </div>
             <?php endif; ?>    
             
-            <div id="be-count-down" data-color-heading="<?= $cd_text ?>" data-color-number="<?= $cd_number ?>"> </div>
+            <div id="be-count-down--result" data-color-heading="<?= $cd_text ?>" data-color-number="<?= $cd_number ?>"> </div>
         </div>
         
         <div class="be-single-event-inner--button be-button"> 
@@ -159,7 +159,7 @@ function be_single_ev_template_charity(){
                     </div>
                 <?php endif; ?>    
                 
-                <div id="be-count-down" data-color-heading="<?= $cd_text ?>" data-color-number="<?= $cd_number ?>"> </div>
+                <div id="be-count-down--result" data-color-heading="<?= $cd_text ?>" data-color-number="<?= $cd_number ?>"> </div>
             </div>
 
             <div class="be-single-event-inner--meta"> 
