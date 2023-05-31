@@ -144,6 +144,24 @@ import lgZoom from 'lightgallery/plugins/zoom'
         });
     }
 
+    const gozaModalFormDonation = () => {
+        $(document).on('click', '.btn-donation-form', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const MODAL_FORM_DN = $('#goza-modal-donation-form');
+            MODAL_FORM_DN.addClass('is-show');
+            $('body').css('overflow', 'hidden');
+        });
+
+        $(document).on('click', '.goza-form-close', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const MODAL_FORM_DN = $('#goza-modal-donation-form');
+            MODAL_FORM_DN.removeClass('is-show');
+            $('body').css('overflow', 'visible');
+        });
+    }
+
     const beLightGallery = () =>{
         const $lightGallery = $('[data-light-gallery]');
         if ($lightGallery.length === 0) return;
@@ -190,11 +208,12 @@ import lgZoom from 'lightgallery/plugins/zoom'
 
         //search
         gozaSearch();
-        bePopupsVideo()
-        beCounter()
-        beProgressbar()
-        beLightGallery()
-        beBtnSliderWater()
+        gozaModalFormDonation();
+        bePopupsVideo();
+        beCounter();
+        beProgressbar();
+        beLightGallery();
+        beBtnSliderWater();
     });
 
 })(jQuery);
