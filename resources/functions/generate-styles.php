@@ -51,7 +51,7 @@ function goza_theme_options_styles()
 
     //typo body
     $typography_body = __get_field('typography_body', 'option');
-    $body_font_family = $typography_body['body_font_family'] . ', sans-serif';
+    $body_font_family = '"' . $typography_body['body_font_family'] . '", sans-serif';
     $body_font_weight = $typography_body['body_font_weight'];
     $body_font_size = $typography_body['body_font_size'];
     $body_line_height = $typography_body['body_line_height'];
@@ -60,7 +60,7 @@ function goza_theme_options_styles()
 
     //type heading
     $typography_heading = __get_field('typography_heading', 'option');
-    $heading_font_family = $typography_heading['heading_font_family'] . ', sans-serif';
+    $heading_font_family = '"' . $typography_heading['heading_font_family'] . '", sans-serif';
     $heading_font_weight = $typography_heading['heading_font_weight'];
     $heading_font_style = $typography_heading['heading_font_style'];
     $heading_letter_spacing = $typography_heading['heading_letter_spacing'];
@@ -157,7 +157,7 @@ function goza_theme_options_styles()
         "--socket-bg-color" => $socket_bg_color,
         "--topbar-text-color" => $topbar_text_color,
         "--topbar-bg-color" => $topbar_bg_color,
-        
+
     ];
 
     $custom_css .= render_custom_css($var_styles);
