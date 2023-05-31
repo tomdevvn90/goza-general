@@ -28464,6 +28464,96 @@ h6 {
   margin-bottom: 0;
 }
 
+.goza-box-featured-grid-block .goza-box-featured-grid-notify {
+  padding: 50px 40px;
+  margin: 0 auto;
+  text-align: center;
+  background: #ededed;
+}
+
+.goza-box-featured-grid-block .block-inner-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .goza-box-featured-grid-block .block-inner-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .goza-box-featured-grid-block .block-inner-grid {
+    grid-template-columns: repeat(var(--col, 4), 1fr);
+  }
+}
+
+.goza-box-featured-grid-block .block-inner-grid-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.goza-box-featured-grid-block .block-inner-grid-box__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.goza-box-featured-grid-block .block-inner-grid-box__bg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.goza-box-featured-grid-block .block-inner-grid-box__bg-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.goza-box-featured-grid-block .block-inner-grid-box__content {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+}
+
+.goza-box-featured-grid-block .block-inner-grid-box__content img {
+  max-width: 65px;
+  margin-bottom: 20px;
+}
+
+.goza-box-featured-grid-block .block-inner-grid-box__content-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  letter-spacing: 0;
+  color: #ffffff;
+  line-height: 28px;
+  font-style: normal;
+}
+
+.goza-box-featured-grid-block .block-inner-grid-box__content-text {
+  color: #ffffff;
+}
+
+.goza-box-featured-grid-block .block-inner-grid-box__content-link {
+  margin-top: 15px;
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
 .tribe-common h1,
 .tribe-common h2,
 .tribe-common h3,
