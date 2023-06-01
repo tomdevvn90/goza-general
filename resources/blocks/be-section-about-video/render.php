@@ -35,11 +35,6 @@ $cta_style = get_field('cta_style_ss_ab_vd') ? : 'style_default';
 $color_hd     = get_field('color_hd_ss_ab_vd') ? : '';
 $color_sub_hd = get_field('color_sub_hd_ss_ab_vd') ? : '';
 
-
-
-// echo "<pre>";
-// echo print_r($img);
-// echo "</pre>";
 ?>
 <section id="<?php echo $id; ?>" class="be-ss-ab-vd <?php echo $align_class; ?>"> 
    <div class="be-ss-ab-vd--inner">

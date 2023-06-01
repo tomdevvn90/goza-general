@@ -56,7 +56,7 @@
         }
 
         &--count-down{
-            #be-count-down, #be-count-down-edit{
+            #be-count-down--result, #be-count-down-edit{
                 box-sizing: border-box;
                 > span{
                     font-weight: 700;
@@ -77,7 +77,7 @@
                 }
             }
 
-            #be-count-down{
+            #be-count-down--result{
                 display: flex;
                 
                 .block-editor-block-list__block &{
@@ -173,7 +173,7 @@
                     margin-top: 32px;
                 }
 
-                #be-count-down, #be-count-down-edit{
+                #be-count-down--result, #be-count-down-edit{
                     width: 100%;
                     @include media-breakpoint-down(lg) {
                         max-width: 400px;
@@ -310,7 +310,7 @@
 
             &--count-down{
                 margin-top: 20px;
-                #be-count-down, #be-count-down-edit{
+                #be-count-down--result, #be-count-down-edit{
                     justify-content: center;
                     > div{
                         display: inline-block;

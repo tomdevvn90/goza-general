@@ -77,6 +77,19 @@ function goza_search_template()
 }
 
 /**
+ * Search template
+ * @return void
+ */
+add_action('goza_hook_donation_form', 'goza_donation_form_template');
+function goza_donation_form_template()
+{
+	$goza_button_type = __get_field('goza_button_type', 'option'); 
+	$goza_form_donation = __get_field('goza_form_donation', 'option'); 
+	if (!isset($goza_form_donation) || !$goza_form_donation || $goza_button_type != 'form_popup') return;
+	load_template(get_template_directory() . '/template-parts/modal-donation-form.php', false);
+}
+
+/**
  * Menu Mobile template
  * @return void
  */

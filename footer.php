@@ -16,6 +16,7 @@ do_action( 'goza_hook_footer' );
 do_action('goza_hook_preloader');
 do_action('goza_hook_menu_mobile');
 do_action('goza_hook_search');
+do_action('goza_hook_donation_form');
 wp_footer();
 ?>
 </body>
