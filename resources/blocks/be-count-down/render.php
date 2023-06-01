@@ -4,15 +4,26 @@ $id = 'be-count-down-' . $block['id'];
 // create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
+// ACF field
+$link_op = get_field('goza_link_color_op', 'option') ? : '';
+if(!empty($link_op) && isset($link_op)){
+    $link_color = $link_op['link_color'];
+}
+
 // ACF field tab General
 $count_down = get_field('time_count_down_bl') ? : '';
 $bg         = get_field('bg_count_down_bl') ? : 'https://picsum.photos/1920/900?1';
-$time_now    = time();
-$timestamp   = strtotime($count_down);
-$distance    = $timestamp - $time_now;
+$time_now   = time();
+$timestamp  = strtotime($count_down);
+$distance   = $timestamp - $time_now;
+
+// ACF field tab Styles
+$color_heading = get_field('color_hd_count_down_bl') ? : '#000';
+$color_number  = get_field('color_nb_count_down_bl') ? : $link_color;
+$height        = get_field('height_count_down_bl') ? : '';
 ?>
 
-<div id="<?php echo $id; ?>" class="be-count-down <?php echo $align_class; ?>">
+<div id="<?php echo $id; ?>" class="be-count-down <?php echo $align_class; ?>" style="min-height:<?= $height ?>">
     <div class="be-count-down--inner"> 
         <div class="be-count-down--bg"> 
             <?php if(is_array($bg)){
@@ -27,7 +38,7 @@ $distance    = $timestamp - $time_now;
         <div class="be-count-down--content"> 
             <?php if(!empty($count_down)): ?>
                 <div class="be-count-down--time" data-count-down="<?= esc_attr($count_down) ?>"> 
-                    <div id="be-count-down--result" class="be-count-down--result"> </div>
+                    <div id="be-count-down--result" class="be-count-down--result" style="--color-heading:<?= $color_heading ?>; --color-number:<?= $color_number ?>; "> </div>
 
                     <?php if(!empty($distance)): ?>
                         <?php 
@@ -37,10 +48,10 @@ $distance    = $timestamp - $time_now;
                             $seconds = $distance % 60;    
                         ?>
 
-                        <div id="be-count-down-edit" class="be-count-down--result">
+                        <div id="be-count-down-edit" class="be-count-down--result" style="--color-heading:<?= $color_heading ?>; --color-number:<?= $color_number ?>; ">
                             <?php if($days >= 0){ ?>
                                 <div class='be-day' >   <?= $days ?>    <span >Days</span> </div>
-                                <div class='be-hours' > <?= $hours ?>   <span >Hours</span> </div>
+                                <div class='be-hours'>  <?= $hours ?>   <span >Hours</span> </div>
                                 <div class='be-min' >   <?= $minutes ?> <span>Minutes</span> </div>
                                 <div class='be-sec' >   <?= $seconds ?> <span>Seconds</span> </div>
                             <?php }else{ ?>
