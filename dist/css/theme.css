@@ -26959,6 +26959,96 @@ h6 {
   margin-bottom: 0;
 }
 
+.be-counter-up.is-style-ngo-dark .be-counter-up-box {
+  cursor: pointer;
+}
+
+.be-counter-up.is-style-ngo-dark .be-counter-up-box__number {
+  font-size: 93px;
+  color: #e5e5e5;
+  line-height: 105%;
+  text-align: left;
+  font-family: var(--body-family);
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 1199.98px) {
+  .be-counter-up.is-style-ngo-dark .be-counter-up-box__number {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .be-counter-up.is-style-ngo-dark .be-counter-up-box__number {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .be-counter-up.is-style-ngo-dark .be-counter-up-box__number {
+    font-size: 55px;
+  }
+}
+
+.be-counter-up.is-style-ngo-dark .be-counter-up-box__heading {
+  font-style: normal;
+  font-weight: 600;
+  font-family: var(--heading-family);
+  font-size: 25px;
+  color: var(--heading-color);
+  line-height: 31px;
+  text-align: left;
+  text-transform: uppercase;
+  margin: -40px 0 0 0;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 1199.98px) {
+  .be-counter-up.is-style-ngo-dark .be-counter-up-box__heading {
+    margin-top: -35px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .be-counter-up.is-style-ngo-dark .be-counter-up-box__heading {
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: -30px;
+  }
+}
+
+.be-counter-up.is-style-ngo-dark .be-counter-up-box__heading::before,
+.be-counter-up.is-style-ngo-dark .be-counter-up-box__heading::after {
+  content: " ";
+  display: inline-block;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  background: var(--link-color);
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.be-counter-up.is-style-ngo-dark .be-counter-up-box__heading::before {
+  width: 25px;
+  left: 0;
+  transition: all 0.25s;
+}
+
+.be-counter-up.is-style-ngo-dark .be-counter-up-box__heading::after {
+  width: 50px;
+  left: 40px;
+  transition: all 0.5s;
+}
+
+.be-counter-up.is-style-ngo-dark .be-counter-up-box:hover .be-counter-up-box__heading::before,
+.be-counter-up.is-style-ngo-dark .be-counter-up-box:hover .be-counter-up-box__heading::after {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .be-box-featured-block .inner-block {
   display: flex;
   flex-wrap: wrap;
