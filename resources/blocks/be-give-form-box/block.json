@@ -16,15 +16,8 @@
         "align": true
     },
     "styles": [
-        {
-            "name": "default",
-            "label": "Default",
-            "isDefault": true
-        },
-        {
-            "name": "other",
-            "label": "Other"
-        }
+        { "name": "default", "label": "Default", "isDefault": true },
+        { "name": "2", "label": "Style 2" }
     ],
     "align": "full"
 }

@@ -36,7 +36,7 @@ function be_item_give_form_box($block){
 
     switch ($is_style) {
         case "is-style-2":
-            be_template_give_form_box_style_2();
+            be_template_give_form_box_style_2($be_heading_form, $be_description_form,$progress,$goal,$income,$be_donation_form);
             break;
 
         default:
@@ -90,6 +90,30 @@ function be_template_give_form_box_default($be_sub_heading, $be_heading_form, $b
                 <?php endforeach; ?>
             </ul>
             <?php endif; ?>
+        </div>
+    </div>  
+  </div>
+<?php }
+function be_template_give_form_box_style_2($be_heading_form, $be_description_form,$progress,$goal,$income,$be_donation_form){ ?>
+  <div class="give-form-box">
+    <div class="give-box-content">
+        <h2 class="give-box-heading"><?php echo $be_heading_form; ?></h4>
+        <p class="give-box-description"><?php echo $be_description_form; ?></p>
+    </div>
+    <div class="give-box-button">
+        <div class="give-box-button-popup">
+            <?php
+            $atts = array(
+                'id' => $be_donation_form,  // integer.
+                'show_title' => false, // boolean.
+                'show_goal' => false, // boolean.
+                'show_content' => 'none', //above, below, or none
+                'display_style' => 'modal', //modal, button, and reveal
+                'continue_button_title' => '' //string
+
+            );
+            echo give_get_donation_form( $atts );
+            ?>
         </div>
     </div>  
   </div>
