@@ -7,9 +7,13 @@ $id = 'be-events-listing-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$query = (!empty(get_field('query_events_listing'))) ? get_field('query_events_listing') : '';
+$ev_posts_per_page = __get_field('ev_posts_per_page') ?: 3;
+$ev_select_events = __get_field('ev_select_events') ?: [];
+$ev_taxonomy = __get_field('ev_taxonomy') ?: [];
+$ev_order = __get_field('ev_order') ?: 'ASC';
+$ev_heading_color = __get_field('ev_heading_color') ?: '#333';
 
-$is_style = (isset($block['className']) && !empty($block['className'])) ? $block['className'] : "is-style-default";
+$classes = !empty($block['className']) ? $block['className'] : "is-style-default";
 
 $args = [
    'post_type'   => 'tribe_events',
@@ -18,16 +22,16 @@ $args = [
    'meta_key' => '_EventStartDate',
 ];
 
-$args['posts_per_page']  = (!empty($query['posts_per_page'])) ? $query['posts_per_page'] : -1;
-$args['post__in']        = (!empty($query['select_events'])) ? $query['select_events'] : [ ];
-$args['order']           = (!empty($query['order'])) ? $query['order'] : 'ASC';
+$args['posts_per_page']  = $ev_posts_per_page;
+$args['post__in']        = $ev_select_events;
+$args['order']           = $ev_order;
 
-if(!empty($query['categories'])){
+if (!empty($ev_taxonomy)) {
    $args['tax_query'] = [
-      array (
+      array(
          'taxonomy' => 'tribe_events_cat',
          'field'    => 'term_id',
-         'terms'    => $query['categories'],
+         'terms'    => $ev_taxonomy,
       )
    ];
 }
@@ -35,18 +39,18 @@ ob_start();
 $the_query = new WP_Query($args);
 ?>
 
-<div id="<?php echo $id; ?>" class="be-events-listing-block <?php echo $align_class?> <?php echo $is_style?>"> 
+<div id="<?php echo $id; ?>" class="be-events-listing-block <?php echo $align_class ?> <?php echo $classes ?>" style="--title-color:<?= esc_attr($ev_heading_color) ?>">
    <?php if ($the_query->have_posts()) { ?>
-      <div class="be-events-listing-block-inner"> 
+      <div class="be-events-listing-block-inner">
          <?php while ($the_query->have_posts()) {
-            $the_query->the_post(); 
-            be_item_event($is_style);
+            $the_query->the_post();
+            be_item_event($classes);
          } ?>
       </div>
-   <?php }else{
+   <?php } else {
       echo '<div class="be-not-found">No results found.</div>';
-   } 
-   ?>   
+   }
+   ?>
 </div>
-<?php 
+<?php
 wp_reset_postdata();
