@@ -22817,6 +22817,7 @@ h6 {
   font-weight: 600;
   margin: 0;
   padding: 0;
+  color: var(--title-color, --heading-color, #333);
 }
 
 @media screen and (max-width: 767px) {
