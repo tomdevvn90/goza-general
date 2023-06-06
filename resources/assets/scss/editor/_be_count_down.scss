@@ -9,22 +9,24 @@
         }
     
         &--result{
-            > div{
-                text-align: center;
-                font-size: 26px;
-                line-height: 32px;
-                color: var(--link-color);
-                letter-spacing: 0;
-                font-family: var(--heading-family);
-                font-weight: 700;
-                span{
-                    color: #000;
-                    border-bottom: 1px solid var(--link-color);
-                    text-transform: uppercase;
-                    font-size: 11px;
-                    letter-spacing: 0.64px;
+            .be-count-down &{
+                > div{
+                    text-align: center;
+                    font-size: 26px;
+                    line-height: 32px;
+                    color: var(--link-color);
+                    letter-spacing: 0;
+                    font-family: var(--heading-family);
                     font-weight: 700;
-                    font-family: var(--body-family);
+                    span{
+                        color: #000;
+                        border-bottom: 1px solid var(--link-color);
+                        text-transform: uppercase;
+                        font-size: 11px;
+                        letter-spacing: 0.64px;
+                        font-weight: 700;
+                        font-family: var(--body-family);
+                    }
                 }
             }
         }

@@ -1,0 +1,340 @@
+.be-give-form-box-block.is-style-default{
+  .be-give-form-box-block-inner{
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .give-form-box{
+    padding: 0px;
+    padding-bottom: 30px;
+    .give-box-content{
+      display: flex;
+      .give-box-content-left{
+        width: 50%;
+        padding:30px 50px;
+        h4.give-box-sub-heading{
+          font-style: normal;
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 40px;
+          color: #fff;
+        }
+        h2.give-box-heading{
+          font-weight: 700;
+          font-size: 50px;
+          line-height: 60px;
+          color: #fff;
+        }
+        p.give-box-description{
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 30px;
+          color: #fff;
+        }
+      }
+      .give-box-content-right{
+        width: 50%;
+        padding:30px 50px;
+        .progress {
+          opacity: 1; 
+          width: 100%; 
+          height: 15px; 
+          background-image: none; 
+          background-color: #222; 
+          position: relative;
+          margin-top: 40px;
+          border-radius: 5px;
+            .form-percent {
+              position: absolute;
+              font-size: 12px;
+              padding: 3px 6px;
+              border-radius: 3px;
+              color: #fff;
+              line-height: 20px;
+              top: -35px;
+              background: #222;
+                span.bt-arrow{
+                  bottom: -7px;
+                  left: calc(50% - 5px);
+                  position: absolute;
+                  width: 0px;
+                  height: 0px;
+                  border-left: 7px solid transparent;
+                  border-right: 7px solid transparent;
+                  border-top: 7px solid #222;
+                }
+            }
+        }
+        .progress .bar { 
+          width: 0;
+          height: 100%;
+          background: #fff; 
+          border-radius: 5px;
+        }
+        .entry-bot {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 20px;
+          .give-price-raised{
+            font-size: 26px;
+            color: #fff;
+            font-weight: 700;
+            span{
+              display: block;
+              color: #fff;
+              font-size: 14px;
+              text-transform: uppercase;
+            }
+          }
+          .give-price-goal{
+            font-size: 26px;
+            color: #fff;
+            font-weight: 700;
+            span{
+              display: block;
+              color: #fff;
+              font-size: 14px;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+    .give-box-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.2);
+      .give-box-button-popup{
+        width: 50%;
+        button.give-btn.give-btn-modal {
+          width: 100%;
+          background: #222222;
+          font-weight: 700;
+          font-size: 20px;
+          text-transform: uppercase;
+          color: #FFFFFF;
+          padding: 30px 10px;
+          border: none;
+        }
+      }
+      .give-box-button-social{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span{
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 22px;
+          color: #FFFFFF;
+        }
+        ul.list-social-share{
+          display: inline-block;
+          list-style-type: none;
+          margin-bottom: 0;
+          li{
+            display: inline-block;
+            a{
+              width: 34px;
+              height: 34px;
+              background: #222222;
+              border-radius: 5px;
+              display: inline-block;
+              text-align: center;
+              line-height: 34px;
+              i{
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                color: #fff;
+              }
+              i.face::before{
+                content: "\F09A";
+              }
+              i.twitter::before{
+                content: "\f099";
+              }
+              i.vimeo::before{
+                content: "\f27d";
+              }
+              i.linkedin::before{
+                content: "\f0e1";
+              }
+              i.instagram::before{
+                content: "\f16d";
+              }
+              &:hover{
+                background: #28C77B;
+                color: #222;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    .give-form-box{
+      .give-box-content {
+        display: block;
+        .give-box-content-left,.give-box-content-right{
+          width: 100%;
+        }
+      }
+      .give-box-button {
+        display: block;
+        .give-box-button-popup,.give-box-button-social{
+          width: 100%;
+          min-height: 80px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .give-form-box{
+      .give-box-content {
+        h2.give-box-heading{
+          font-size: 40px !important;
+        }
+        p.give-box-description {
+          margin-bottom: 0 !important;
+        }
+        .give-box-content-left,.give-box-content-right{
+          padding: 20px;
+          .give-price-raised,.give-price-goal{
+            font-size: 22px !important;
+          }
+        }
+      }
+      .give-box-button {
+        display: block;
+        .give-box-button-social{
+          ul.list-social-share{
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+.be-give-form-box-block.is-style-2{
+  .be-give-form-box-block-inner{
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .give-form-box{
+    padding: 40px;
+    .give-box-content{
+      h2.give-box-heading{
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 60px;
+        color: #fff;
+        text-transform:uppercase;
+      }
+      p.give-box-description{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: #fff;
+      }
+    }
+    .give-box-button {
+      .give-box-button-popup{
+        .give_error.give_warning{
+          display: none;
+        }
+        button.give-btn.give-btn-modal {
+          width: 100%;
+          background: #222222;
+          font-weight: 700;
+          font-size: 20px;
+          text-transform: uppercase;
+          color: #FFFFFF;
+          padding: 22px 10px;
+          border: none;
+          border-radius: 10px;
+          margin-bottom: 0;
+        }
+        form.give-form{
+          margin-bottom: 0;
+          ul#give-donation-level-button-wrap{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            grid-gap: 10px;
+            &::before{
+              content:none;
+            }
+            &:after{
+              content:none;
+            }
+            li{
+              margin: 0;
+            }
+            button.give-btn{
+              width: 100%;
+              display: flex;
+              height: 56px;
+              align-items: center;
+              justify-content: center;
+              background: #fff;
+              border: none;
+              border-radius: 5px;
+              font-size: 18px;
+              font-weight: 700;
+              color: #222;
+            }
+          }
+          .give-total-wrap{
+            .give-donation-amount.form-row-wide {
+              display: flex;
+
+              input#give-amount {
+                height: 56px !important;
+                line-height: 56px !important;
+                border: none !important;
+                width: 100%;
+              }
+              span.give-currency-symbol.give-currency-position-before {
+                height: 56px !important;
+                line-height: 56px !important; 
+                border: none !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    .give-form-box{
+      .give-box-content {
+        display: block;
+        
+      }
+      .give-box-button {
+        display: block;
+        
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .give-form-box{
+      .give-box-content {
+        h2.give-box-heading{
+          font-size: 40px !important;
+        }
+        p.give-box-description {
+          margin-bottom: 0 !important;
+        }
+      }
+      .give-box-button {
+        display: block;
+      }
+    }
+  }
+}
+

@@ -1,8 +1,10 @@
 .be-single-event{
     &.be-single-event-water{
-        display: inline-block;
-        .be-single-event-inner{
-            margin-top: -220px;
+        &:not(.is-style-charity){
+            display: inline-block;
+            .be-single-event-inner{
+                margin-top: -220px;
+            }
         }
     }
 }

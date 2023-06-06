@@ -56,8 +56,16 @@
         }
 
         &--count-down{
-            #be-count-down--result, #be-count-down-edit{
+            .be-count-down--result{
                 box-sizing: border-box;
+
+                > div{
+                    color: var(--color-number);
+                    span{
+                        color: var(--color-heading, #666);
+                    }
+                }
+
                 > span{
                     font-weight: 700;
                     display: inline-block;
@@ -71,7 +79,6 @@
 
             #be-count-down-edit{
                 display: none;
-
                 .block-editor-block-list__block &{
                     display: flex;
                 }
@@ -173,7 +180,7 @@
                     margin-top: 32px;
                 }
 
-                #be-count-down--result, #be-count-down-edit{
+                .be-count-down--result{
                     width: 100%;
                     @include media-breakpoint-down(lg) {
                         max-width: 400px;
@@ -195,7 +202,6 @@
                         text-align: center;
                         font-size: 26px;
                         line-height: 32px;
-                        color: var(--link-color);
                         letter-spacing: 0;
                         font-weight: 700;
                         &:not(:last-child){
@@ -222,7 +228,6 @@
                         }
     
                         > span{
-                            color: var(--body-color);
                             font-size: 12px;
                             line-height: 28px;
                             border-bottom: 1px solid #cacaca;
@@ -310,7 +315,7 @@
 
             &--count-down{
                 margin-top: 20px;
-                #be-count-down--result, #be-count-down-edit{
+                .be-count-down--result{
                     justify-content: center;
                     > div{
                         display: inline-block;
@@ -318,7 +323,6 @@
                         height: auto;
                         text-align: center;
                         margin: 5px;
-                        color: #fff;
                         font-size: 44px;
                         font-weight: 900;
                         line-height: 55px;

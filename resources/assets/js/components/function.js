@@ -200,9 +200,7 @@ import lgZoom from 'lightgallery/plugins/zoom'
 
         function __renderCountDown ($dataCountDown, $result){
             var countDownDate = new Date(`${$dataCountDown}`).getTime();
-            const $color_heading = $result.data('color-heading')
-            const $color_number  = $result.data('color-number')
-
+        
             var x = setInterval(function() {
                 // Get todays date and time
                 var now = new Date().getTime();
@@ -218,23 +216,12 @@ import lgZoom from 'lightgallery/plugins/zoom'
                 
                 $result.html("<div class='be-day'>" + days + "<span>Days</span>" + "</div>" + "<div class='be-hours'>" + hours + "<span>Hours</span>" + "</div>"
                 + "<div class='be-min'>" + minutes + "<span>Minutes</span>" + "</div>" + "<div class='be-sec'>" + seconds + "<span>Seconds</span>" + "</div>");
-                
-                if($color_number){
-                    if($color_number.length > 0){
-                        $result.find('> div').css("color", $color_number)
-                    }
-                }
-
-                if($color_heading){
-                    if($color_heading.length > 0){
-                        $result.find('> div > span').css("color", $color_heading)
-                    }
-                }
-                
+                                
                 if (distance < 0) {
                 clearInterval(x);
                     $result.html("<span>EXPIRED</span>");
                 }
+                
             }, 1000);
         }
     }   

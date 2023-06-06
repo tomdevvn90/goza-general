@@ -17,18 +17,23 @@ function be_single_ev_template_default(){
         $color_hd     = get_field('cl_heading_sg_ev') ?: '';
         $color_name   = get_field('cl_name_sg_ev') ?: '';
         $color_cd     = get_field('cl_cd_sg_ev') ?: '';
-        $cd_text      = $color_cd['heading'] ? : '';
-        $cd_number    = $color_cd['number'] ? : '';
 
-        if(is_plugin_active('the-events-calendar/the-events-calendar.php')){
-            $date_start  = tribe_get_start_date( get_the_ID(), true, 'F d, Y');
-            $time_start  = tribe_get_start_date( get_the_ID(), true, 'G i a');
-            $address     = tribe_get_address(get_the_ID());
-            $count_down  = tribe_get_start_date( get_the_ID(), true, 'F d , Y G:i:s');
-            $time_now    = time();
-            $timestamp   = strtotime($count_down);
-            $distance    = $timestamp - $time_now;
+        $link_op = get_field('goza_link_color_op', 'option') ? : '';
+        if(!empty($link_op) && isset($link_op)){
+            $link_color = $link_op['link_color'];
         }
+        $color_heading  = $color_cd['heading'] ? : '#666';
+        $color_number   = $color_cd['number'] ? : $link_color;
+
+        // meta events
+        $date_start  = tribe_get_start_date( get_the_ID(), true, 'F d, Y');
+        $time_start  = tribe_get_start_date( get_the_ID(), true, 'G i a');
+        $address     = tribe_get_address(get_the_ID());
+        $count_down  = tribe_get_start_date( get_the_ID(), true, 'F d , Y G:i:s');
+        $time_now    = time();
+        $timestamp   = strtotime($count_down);
+        $distance    = $timestamp - $time_now;
+        
     ?>
    
     <div class="be-single-event-inner--thumbnail" data-aos="fade-right"> 
@@ -66,20 +71,22 @@ function be_single_ev_template_default(){
                     $seconds = $distance % 60;    
                 ?>
 
-                <div id="be-count-down-edit">
+                <div id="be-count-down-edit" class="be-count-down--result" style="--color-heading:<?= $color_heading ?>; --color-number:<?= $color_number ?>; ">
                     <?php if($days >= 0){ ?>
-                        <div class='be-day' style="color:<?= $cd_number ?>">   <?= $days ?>    <span style="color:<?= $cd_text ?>">Days</span> </div>
-                        <div class='be-hours' style="color:<?= $cd_number ?>"> <?= $hours ?>   <span style="color:<?= $cd_text ?>">Hours</span> </div>
-                        <div class='be-min' style="color:<?= $cd_number ?>">   <?= $minutes ?> <span style="color:<?= $cd_text ?>">Minutes</span> </div>
-                        <div class='be-sec' style="color:<?= $cd_number ?>">   <?= $seconds ?> <span style="color:<?= $cd_text ?>">Seconds</span> </div>
+
+                        <div class='be-day'>   <?= $days ?>    <span>Days</span> </div>
+                        <div class='be-hours'> <?= $hours ?>   <span>Hours</span> </div>
+                        <div class='be-min'>   <?= $minutes ?> <span>Minutes</span> </div>
+                        <div class='be-sec'>   <?= $seconds ?> <span>Seconds</span> </div>
+
                     <?php }else{ ?>
-                        <span style="color:<?= $cd_text ?>"> EXPIRED </span>
+                        <span style="color:<?= $color_heading ?>"> EXPIRED </span>
                     <?php } ?>
 
                 </div>
             <?php endif; ?>    
             
-            <div id="be-count-down--result" data-color-heading="<?= $cd_text ?>" data-color-number="<?= $cd_number ?>"> </div>
+            <div id="be-count-down--result" class="be-count-down--result" style="--color-heading:<?= $color_heading ?>; --color-number:<?= $color_number ?>; "> </div>
         </div>
         
         <div class="be-single-event-inner--button be-button"> 
@@ -102,22 +109,23 @@ function be_single_ev_template_charity(){
     $color_hd     = get_field('cl_heading_sg_ev') ?: '';
     $color_name   = get_field('cl_name_sg_ev') ?: '';
     $color_cd     = get_field('cl_cd_sg_ev') ?: '';
-    $cd_text      = $color_cd['heading'] ? : '';
-    $cd_number    = $color_cd['number'] ? : '';
     $author_id    = get_post_field('post_author', get_the_ID());
     $author_name  = get_the_author_meta('display_name', $author_id);
     $author_avta  = get_avatar($author_id);
     $event_cate   = tribe_get_event_categories();
 
-    if(is_plugin_active('the-events-calendar/the-events-calendar.php')){
-        $date_start  = tribe_get_start_date( get_the_ID(), true, 'F d, Y');
-        $time_start  = tribe_get_start_date( get_the_ID(), true, 'G i a');
-        $address     = tribe_get_address(get_the_ID());
-        $count_down  = tribe_get_start_date( get_the_ID(), true, 'F d , Y G:i:s');
-        $time_now    = time();
-        $timestamp   = strtotime($count_down);
-        $distance    = $timestamp - $time_now;
-    }
+    $color_heading  = $color_cd['heading'] ? : '#fff';
+    $color_number   = $color_cd['number'] ? : '#fff';
+
+    // meta event
+    $date_start  = tribe_get_start_date( get_the_ID(), true, 'F d, Y');
+    $time_start  = tribe_get_start_date( get_the_ID(), true, 'G i a');
+    $address     = tribe_get_address(get_the_ID());
+    $count_down  = tribe_get_start_date( get_the_ID(), true, 'F d , Y G:i:s');
+    $time_now    = time();
+    $timestamp   = strtotime($count_down);
+    $distance    = $timestamp - $time_now;
+    
     ?> 
     <div class="be-single-event-inner--bg"> 
         <?php if (has_post_thumbnail()) {
@@ -146,20 +154,20 @@ function be_single_ev_template_charity(){
                         $seconds = $distance % 60;    
                     ?>
 
-                    <div id="be-count-down-edit">
+                    <div id="be-count-down-edit" class="be-count-down--result" style="--color-heading:<?= $color_heading ?>; --color-number:<?= $color_number ?>; ">
                         <?php if($days >= 0){ ?>
-                            <div class='be-day' style="color:<?= $cd_number ?>">   <?= $days ?>    <span style="color:<?= $cd_text ?>">Days</span> </div>
-                            <div class='be-hours' style="color:<?= $cd_number ?>"> <?= $hours ?>   <span style="color:<?= $cd_text ?>">Hours</span> </div>
-                            <div class='be-min' style="color:<?= $cd_number ?>">   <?= $minutes ?> <span style="color:<?= $cd_text ?>">Minutes</span> </div>
-                            <div class='be-sec' style="color:<?= $cd_number ?>">   <?= $seconds ?> <span style="color:<?= $cd_text ?>">Seconds</span> </div>
+                            <div class='be-day'>   <?= $days ?>    <span>Days</span> </div>
+                            <div class='be-hours'> <?= $hours ?>   <span>Hours</span> </div>
+                            <div class='be-min'>   <?= $minutes ?> <span>Minutes</span> </div>
+                            <div class='be-sec'>   <?= $seconds ?> <span>Seconds</span> </div>
                         <?php }else{ ?>
-                            <span style="color:<?= $cd_text ?>"> EXPIRED </span>
+                            <span style="color:<?= $color_heading ?>"> EXPIRED </span>
                         <?php } ?>
 
                     </div>
                 <?php endif; ?>    
                 
-                <div id="be-count-down--result" data-color-heading="<?= $cd_text ?>" data-color-number="<?= $cd_number ?>"> </div>
+                <div id="be-count-down--result" class="be-count-down--result" style="--color-heading:<?= $color_heading ?>; --color-number:<?= $color_number ?>; "> </div>
             </div>
 
             <div class="be-single-event-inner--meta"> 
