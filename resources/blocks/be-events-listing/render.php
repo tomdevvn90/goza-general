@@ -45,7 +45,6 @@ $the_query = new WP_Query($args);
          <?php while ($the_query->have_posts()) {
             $the_query->the_post();
             be_item_event($classes);
-            
          } ?>
       </div>
    <?php } else {
