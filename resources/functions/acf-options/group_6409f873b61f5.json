@@ -22,7 +22,7 @@
         {
             "key": "field_6409f874f2194",
             "label": "List Items",
-            "name": "list_items",
+            "name": "items_tm_bl",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -33,7 +33,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_repeater_stylised_button": 0,
             "layout": "block",
             "pagination": 0,
             "min": 0,
@@ -156,7 +155,7 @@
         {
             "key": "field_640b3e1293e8b",
             "label": "List Options",
-            "name": "slider_setting",
+            "name": "slider_setting_tm_bl",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -314,6 +313,257 @@
                     "ui": 1
                 }
             ]
+        },
+        {
+            "key": "field_647fdef9c9e68",
+            "label": "Styles",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_647fdf08c9e69",
+            "label": "Color Name",
+            "name": "color_name_tm_bl",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string"
+        },
+        {
+            "key": "field_647fdf36c9e6a",
+            "label": "Color Position",
+            "name": "color_position_tm_bl",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string"
+        },
+        {
+            "key": "field_647fdf55c9e6b",
+            "label": "Color Description",
+            "name": "color_description_tm_bl",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string"
+        },
+        {
+            "key": "field_647fdf87c9e6c",
+            "label": "Background Color",
+            "name": "bg_item_tm_bl",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string"
+        },
+        {
+            "key": "field_647fdfdfdf826",
+            "label": "Sliders",
+            "name": "sliders_color_tm_bl",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_647fe00bdf827",
+                    "label": "Color Dots",
+                    "name": "dots",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_647fe01edf828",
+                            "label": "Default",
+                            "name": "default",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_647fe0bddf829",
+                            "label": "Active",
+                            "name": "active",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_647fe0ed70969",
+                    "label": "Color Arrow",
+                    "name": "arrow",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_647fe0ed7096a",
+                            "label": "Color Default",
+                            "name": "color_default",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_647fe0ed7096b",
+                            "label": "Color Hover",
+                            "name": "color_hover",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "rgba(255, 255, 255, 0)",
+                            "enable_opacity": 1,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_64802a4977018",
+                            "label": "Background Default",
+                            "name": "bg_default",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string"
+                        },
+                        {
+                            "key": "field_64802a6277019",
+                            "label": "Background Hover",
+                            "name": "bg_hover",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "rgba(255, 255, 255, 0)",
+                            "enable_opacity": 1,
+                            "return_format": "string"
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "location": [
@@ -334,5 +584,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683100425
+    "modified": 1686121542
 }

@@ -530,11 +530,11 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 (function ($) {
   "use strict";
 
-  var beTestominialCarousel = function beTestominialCarousel() {
-    var $block = $('.be-testominials-block');
+  var beTestimonialCarousel = function beTestimonialCarousel() {
+    var $block = $('.be-testimonials-block');
     if ($block.length === 0) return;
     $block.each(function () {
-      var $carousel = $(this).find('.be-testominials-block-carousel'),
+      var $carousel = $(this).find('.be-testimonials-block-carousel'),
         $dataCarousel = $(this).data('carousel'),
         $style = $(this).data('style'),
         $arrowTablet = true,
@@ -574,7 +574,7 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
   };
   $(window).on("scroll", function () {});
   $(document).ready(function () {
-    beTestominialCarousel();
+    beTestimonialCarousel();
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
