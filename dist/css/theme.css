@@ -19705,6 +19705,89 @@ h6 {
   animation-name: be-animation-wobble-top;
 }
 
+.wp-block-column.be-column-count-down {
+  align-self: auto;
+}
+
+.wp-block-goza-blocks-goza-container.be-ss-about-ngo-dark {
+  overflow: inherit;
+}
+
+.wp-block-goza-blocks-goza-container.be-ss-about-ngo-dark::after,
+.wp-block-goza-blocks-goza-container.be-ss-about-ngo-dark::before {
+  content: " ";
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0px;
+  z-index: 1;
+}
+
+.wp-block-goza-blocks-goza-container.be-ss-about-ngo-dark::before {
+  width: 100px;
+  top: -140px;
+  height: 264px;
+  background-image: url(../images/icon-gz-ngo-dark-001.png?159fd5daff470e66a22ea3a8617f34ef);
+}
+
+.wp-block-goza-blocks-goza-container.be-ss-about-ngo-dark::after {
+  bottom: 90px;
+  width: 100px;
+  height: 120px;
+  background-image: url(../images/icon-gz-ngo-dark-002.png?86776dbe1d01a6865d39388ccd6bea8f);
+}
+
+.wp-block-goza-blocks-goza-container.be-ss-count-down-ngo-dark {
+  overflow: inherit;
+}
+
+.wp-block-goza-blocks-goza-container.be-ss-count-down-ngo-dark::before {
+  content: " ";
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 0;
+  transform: rotate(180deg);
+  z-index: 1;
+  width: 100px;
+  top: -140px;
+  height: 264px;
+  background-image: url(../images/icon-gz-ngo-dark-001.png?159fd5daff470e66a22ea3a8617f34ef);
+}
+
+.wp-block-goza-blocks-goza-container.be-ss-single-post-ngo-dark {
+  overflow: inherit;
+}
+
+.wp-block-goza-blocks-goza-container.be-ss-single-post-ngo-dark::after,
+.wp-block-goza-blocks-goza-container.be-ss-single-post-ngo-dark::before {
+  content: " ";
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.wp-block-goza-blocks-goza-container.be-ss-single-post-ngo-dark::before {
+  width: 100px;
+  top: 0px;
+  height: 264px;
+  left: 0;
+  background-image: url(../images/icon-gz-ngo-dark-001.png?159fd5daff470e66a22ea3a8617f34ef);
+}
+
+.wp-block-goza-blocks-goza-container.be-ss-single-post-ngo-dark::after {
+  bottom: 90px;
+  width: 100px;
+  height: 120px;
+  right: 0;
+  background-image: url(../images/icon-gz-ngo-dark-002.png?86776dbe1d01a6865d39388ccd6bea8f);
+  transform: rotate(180deg);
+}
+
 .be-gallery-block {
   height: auto;
   position: relative;

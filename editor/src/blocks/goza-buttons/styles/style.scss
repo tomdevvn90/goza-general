@@ -124,6 +124,25 @@
 
     &.is-style-ngo-dark {
         .wp-block-goza-blocks-goza-button--inner{
+            color: #fff;
+            background-color: #2d2e40;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px !important;
+            .wp-block-goza-button_link{
+                font-weight: 700;
+                font-size: 13px;
+                display: inline-block;
+                line-height: 23px;
+                padding: 16px 48px;
+                position: relative;
+                z-index: 0;
+                text-transform: uppercase;
+                overflow: hidden;
+                transition: 0.5s;
+                z-index: 2;
+            }
             &::before {
                 content: '';
                 width: 0;
@@ -155,7 +174,7 @@
             }
     
             &:hover {
-    
+                box-shadow: none !important;
                 &::before {
                     border-width: 165px 0 0 165px;
                 }
