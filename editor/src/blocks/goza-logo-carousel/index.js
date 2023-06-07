@@ -64,7 +64,7 @@ const attr = {
 export default registerBlockType("goza-blocks/goza-logo-carousel", {
 	title: __("Logo Carousel", "goza"),
 	icon: "slides",
-	category: "goza-blocks",
+	category: "goza-theme",
 	keywords: [__("logo", "goza"), __("carousel", "goza"), __("goza", "goza"), __("slider", "goza")],
 	attributes: attr,
 	supports: {

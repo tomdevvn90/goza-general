@@ -9,15 +9,21 @@
 	overflow: hidden;
 	padding-top: var(--paddingTop);
 	padding-bottom: var(--paddingBottom);
+	padding-left: var(--paddingLeft);
+	padding-right: var(--paddingRight);
 	z-index: 1;
 	@include media-breakpoint-down("lg") {
 		padding-top: var(--paddingTopTablet);
 		padding-bottom: var(--paddingBottomTablet);
+		padding-left: var(--paddingLeftTablet);
+		padding-right: var(--paddingRightTablet);
 	}
 
 	@include media-breakpoint-down("md") {
 		padding-top: var(--paddingTopMobile);
 		padding-bottom: var(--paddingBottomMobile);
+		padding-left: var(--paddingLeftMobile);
+		padding-right: var(--paddingRightMobile);
 	}
 
 	.goza-container-bg {

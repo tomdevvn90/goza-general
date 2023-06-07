@@ -118,7 +118,7 @@ if (!function_exists('goza_the_posts_navigation')) {
 				<span class="screen-reader-text"><?= $args['screen_reader_text']; ?></span>
 				<?php echo '<div class="pagination loop-pagination">' . $links . '</div><!-- .pagination -->' ?>
 			</nav><!-- .navigation -->
-<?php
+		<?php
 		endif;
 	}
 }
@@ -158,51 +158,51 @@ function goza_check_variable_home()
 
 
 // the blog posts navigation
-if ( ! function_exists( 'goza_blog_posts_navigation' ) ) {
+if (!function_exists('goza_blog_posts_navigation')) {
 	function goza_blog_posts_navigation()
 	{
 		global $wp_query;
 
-		if ( $wp_query->max_num_pages > 1) {
+		if ($wp_query->max_num_pages > 1) {
 		?>
-		<div class="navigation paging-navigation">
-			<?php 
-			
-			$animation = 'data-aos="fade-up" data-aos-duration="1000"';
+			<div class="navigation paging-navigation">
+				<?php
 
-			$pre_text = '<i class="fa fa-angle-left"></i> <strong>Newer</strong>';
-			$next_text = '<strong>Older</strong> <i class="fa fa-angle-right"></i>'; 
+				$animation = 'data-aos="fade-up" data-aos-duration="1000"';
 
-			$args = array(
-				'format' => '/page/%#%',
-				'current' => max( 1, get_query_var('paged') ),
-				'total' => $wp_query->max_num_pages,
-				'prev_next'          => false,
-			);
+				$pre_text = '<i class="fa fa-angle-left"></i> <strong>Newer</strong>';
+				$next_text = '<strong>Older</strong> <i class="fa fa-angle-right"></i>';
 
-			$pre_button = '<a href="javascript:void(0)" class="prev page-button disabled">' . __( $pre_text, 'goza') . '</a>';
-			$next_button = '<a href="javascript:void(0)" class="next page-button disabled">' . __( $next_text, 'goza') . '</a>';
+				$args = array(
+					'format' => '/page/%#%',
+					'current' => max(1, get_query_var('paged')),
+					'total' => $wp_query->max_num_pages,
+					'prev_next'          => false,
+				);
 
-			$html = get_previous_posts_link( $pre_text );
-			$html .= '<div class="pagination-numbers-wrap">'.paginate_links( $args ).'</div>';  
-			$html .= get_next_posts_link( $next_text );
+				$pre_button = '<a href="javascript:void(0)" class="prev page-button disabled">' . __($pre_text, 'goza') . '</a>';
+				$next_button = '<a href="javascript:void(0)" class="next page-button disabled">' . __($next_text, 'goza') . '</a>';
 
-			$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+				$html = get_previous_posts_link($pre_text);
+				$html .= '<div class="pagination-numbers-wrap">' . paginate_links($args) . '</div>';
+				$html .= get_next_posts_link($next_text);
 
-			if ( 1 === $paged) {
-				$html = $pre_button . $html;    
-			}
+				$paged = get_query_var('paged') ? absint(get_query_var('paged')) : 1;
 
-			if ( $wp_query->max_num_pages ==  $paged   ) {
-				$html = $html . $next_button; 
-			}
+				if (1 === $paged) {
+					$html = $pre_button . $html;
+				}
 
-			echo '<div class="pagination loop-pagination" '.$animation.'>';
-			echo    $html;
-			echo '</div>';
+				if ($wp_query->max_num_pages ==  $paged) {
+					$html = $html . $next_button;
+				}
 
-			?>
-		</div>
+				echo '<div class="pagination loop-pagination" ' . $animation . '>';
+				echo    $html;
+				echo '</div>';
+
+				?>
+			</div>
 		<?php
 
 		}
@@ -210,55 +210,55 @@ if ( ! function_exists( 'goza_blog_posts_navigation' ) ) {
 }
 
 // the single posts navigation
-if ( ! function_exists( 'goza_single_post_navigation' ) ) {
+if (!function_exists('goza_single_post_navigation')) {
 	function goza_single_post_navigation()
 	{
 		// previous single post
-		$prev_post = get_previous_post(); 
-        $prev_id = $prev_post->ID ;
-        $permalink_prev = get_permalink( $prev_id );
+		$prev_post = get_previous_post();
+		$prev_id = $prev_post->ID;
+		$permalink_prev = get_permalink($prev_id);
 
 		// next single post
 		$next_post = get_next_post();
-        $next_id = $next_post->ID ;
-        $permalink_next = get_permalink($next_id);
+		$next_id = $next_post->ID;
+		$permalink_next = get_permalink($next_id);
 
 		?>
 		<div class="single-post-navigation post-navigation-skin--<?php echo get_post_type(); ?>">
 			<div class="previous-next-link">
-				<?php if( ! empty( $prev_post ) ): ?>
-				<div class="previous">
-					<a href="<?php echo esc_url( $permalink_prev ); ?>" class="post-nav-link" rel="prev">
-						<div class="post-nav-thumbnail">
-							<?php echo get_the_post_thumbnail( $prev_id, 'thumbnail' ); ?>
-						</div>
-						<div class="post-nav-title-box">
-							<div class="post-title">
-								<?php echo get_the_title( $prev_id ); ?>
+				<?php if (!empty($prev_post)) : ?>
+					<div class="previous">
+						<a href="<?php echo esc_url($permalink_prev); ?>" class="post-nav-link" rel="prev">
+							<div class="post-nav-thumbnail">
+								<?php echo get_the_post_thumbnail($prev_id, 'thumbnail'); ?>
 							</div>
-							<div class="post-date">
-								<?php echo get_the_date( 'j F, Y', $prev_id ); ?>
+							<div class="post-nav-title-box">
+								<div class="post-title">
+									<?php echo get_the_title($prev_id); ?>
+								</div>
+								<div class="post-date">
+									<?php echo get_the_date('j F, Y', $prev_id); ?>
+								</div>
 							</div>
-						</div>
-					</a>
-				</div>
+						</a>
+					</div>
 				<?php endif; ?>
-				<?php if( ! empty( $next_post ) ): ?>
-				<div class="next">
-					<a href="<?php echo esc_url( $permalink_next ); ?>" class="post-nav-link" rel="next">
-						<div class="post-nav-title-box">
-							<div class="post-title">
-								<?php echo get_the_title( $next_id ); ?>
+				<?php if (!empty($next_post)) : ?>
+					<div class="next">
+						<a href="<?php echo esc_url($permalink_next); ?>" class="post-nav-link" rel="next">
+							<div class="post-nav-title-box">
+								<div class="post-title">
+									<?php echo get_the_title($next_id); ?>
+								</div>
+								<div class="post-date">
+									<?php echo get_the_date('j F, Y', $next_id); ?>
+								</div>
 							</div>
-							<div class="post-date">
-								<?php echo get_the_date( 'j F, Y', $next_id ); ?>
+							<div class="post-nav-thumbnail">
+								<?php echo get_the_post_thumbnail($next_id, 'thumbnail'); ?>
 							</div>
-						</div>
-						<div class="post-nav-thumbnail">
-							<?php echo get_the_post_thumbnail( $next_id, 'thumbnail' ); ?>
-						</div>
-					</a>
-				</div>
+						</a>
+					</div>
 				<?php endif; ?>
 			</div>
 		</div>
@@ -267,30 +267,30 @@ if ( ! function_exists( 'goza_single_post_navigation' ) ) {
 }
 
 // the single posts related
-if ( ! function_exists( 'goza_single_post_related' ) ) {
+if (!function_exists('goza_single_post_related')) {
 	function goza_single_post_related()
-	{	
+	{
 		global $post;
-		$post_type = get_post_type( $post );
+		$post_type = get_post_type($post);
 
-		$taxonomies = get_object_taxonomies( $post_type );
+		$taxonomies = get_object_taxonomies($post_type);
 		$taxs_query = array();
 		$taxs_query['relation'] = 'OR';
-		if ( ! empty( $taxonomies ) ) {
-			foreach ( $taxonomies as $key => $taxonomy ) {
-				$terms = get_the_terms( $post->ID, $taxonomy );
-				if ( ! empty( $terms ) ) {
+		if (!empty($taxonomies)) {
+			foreach ($taxonomies as $key => $taxonomy) {
+				$terms = get_the_terms($post->ID, $taxonomy);
+				if (!empty($terms)) {
 					$term_ids = array();
 					foreach ($terms as $i => $term) {
-						array_push( $term_ids, $term->term_id );
+						array_push($term_ids, $term->term_id);
 					}
 					$item = array(
 						'taxonomy' => $taxonomy,
 						'field' => 'term_id',
 						'terms' => $term_ids,
 					);
-					array_push( $taxs_query, $item );
-				}	
+					array_push($taxs_query, $item);
+				}
 			}
 		}
 
@@ -298,43 +298,59 @@ if ( ! function_exists( 'goza_single_post_related' ) ) {
 			'post_type' => $post_type,
 			'posts_per_page' => 3,
 			'post_status' => 'publish',
-			'post__not_in' => array( $post->ID ),
+			'post__not_in' => array($post->ID),
 			'tax_query' => $taxs_query,
 		);
 
-		$article_query = new WP_Query( $args );
+		$article_query = new WP_Query($args);
 
-		if ( $article_query->have_posts() ) {
-			?>
+		if ($article_query->have_posts()) {
+		?>
 			<div class="single-post-related">
 				<div class="post-related-wrapper">
 					<h3 class="post-related-title"><?php echo __('Related Articles', 'goza'); ?></h3>
 					<div class="post-related-list">
-					<?php
-					while ( $article_query->have_posts() ) {
-						$article_query->the_post( );
-						
+						<?php
+						while ($article_query->have_posts()) {
+							$article_query->the_post();
+
 						?>
-						<div class="post-related-item">
-							<a href="<?php echo esc_url( get_the_permalink( ) ); ?>" class="post-related-item__thumbnail">
-								<?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
-							</a>
-							<a href="<?php echo esc_url( get_the_permalink( ) ); ?>" class="post-related-item__title-link">
-								<h3 class="post-related-item__title"><?php echo get_the_title( ); ?></h3>
-							</a>
-						</div>
+							<div class="post-related-item">
+								<a href="<?php echo esc_url(get_the_permalink()); ?>" class="post-related-item__thumbnail">
+									<?php echo get_the_post_thumbnail(get_the_ID(), 'full'); ?>
+								</a>
+								<a href="<?php echo esc_url(get_the_permalink()); ?>" class="post-related-item__title-link">
+									<h3 class="post-related-item__title"><?php echo get_the_title(); ?></h3>
+								</a>
+							</div>
 						<?php
 
-					}
+						}
 
-					wp_reset_postdata( );
-					?>
+						wp_reset_postdata();
+						?>
 					</div>
 				</div>
 			</div>
-			<?php
+<?php
 		}
-
 	}
 }
 
+function goza_expandable_excerpt($excerpt)
+{
+	$split = explode(" ", $excerpt); //convert string to array
+	$len = count($split); //get number of words
+	$words_to_show_first = 29; //Word to be dsiplayed first
+	if ($len > $words_to_show_first) { //check if it's longer the than first part
+
+		$firsthalf = array_slice($split, 0, $words_to_show_first);
+		$secondhalf = array_slice($split, $words_to_show_first, $len - 1);
+		$output = '<p class="event-excerpt" >';
+		$output .= implode(' ', $firsthalf) . '...';
+		$output .= '</p>';
+	} else {
+		$output = '<p class="event-excerpt">'  .   $excerpt . '</p>';
+	}
+	return $output;
+}

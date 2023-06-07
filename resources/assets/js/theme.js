@@ -26,6 +26,5 @@ import './blocks/video-popup-actions';
 import './blocks/ss-upcoming-event-video';
 import './blocks/ss-text-tsm-video';
 import './blocks/logo-carousel';
-import './blocks/single-event';
 import './blocks/projects-grid-action';
 import './blocks/counter-box';
