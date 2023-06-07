@@ -91,15 +91,21 @@
   overflow: hidden;
   padding-top: var(--paddingTop);
   padding-bottom: var(--paddingBottom);
+  padding-left: var(--paddingLeft);
+  padding-right: var(--paddingRight);
   z-index: 1; }
   @media (max-width: 991.98px) {
     .goza-block-container {
       padding-top: var(--paddingTopTablet);
-      padding-bottom: var(--paddingBottomTablet); } }
+      padding-bottom: var(--paddingBottomTablet);
+      padding-left: var(--paddingLeftTablet);
+      padding-right: var(--paddingRightTablet); } }
   @media (max-width: 767.98px) {
     .goza-block-container {
       padding-top: var(--paddingTopMobile);
-      padding-bottom: var(--paddingBottomMobile); } }
+      padding-bottom: var(--paddingBottomMobile);
+      padding-left: var(--paddingLeftMobile);
+      padding-right: var(--paddingRightMobile); } }
   .goza-block-container .goza-container-bg {
     position: absolute;
     height: 100%;

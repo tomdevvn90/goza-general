@@ -14,7 +14,7 @@
                 &--name{
                     font-size: 24px;
                     line-height: 26px;
-                    color: var(--heading-color);
+                    color: var(--title-color, --heading-color, #333);
                     margin-top: 10px;
                 }
             }

@@ -25,6 +25,8 @@ export default class Container extends Component {
 				containerAlignment,
 				containerPaddingTop,
 				containerPaddingBottom,
+				containerPaddingLeft,
+				containerPaddingRight,
 				containerMaxWidth,
 				containerImgURL,
 				focalPoint,
@@ -44,6 +46,12 @@ export default class Container extends Component {
 			'--paddingTop': containerPaddingTop.default,
 			'--paddingTopTablet': containerPaddingTop.tablet,
 			'--paddingTopMobile': containerPaddingTop.mobile,
+			'--paddingLeft': containerPaddingLeft.default,
+			'--paddingLeftTablet': containerPaddingLeft.tablet,
+			'--paddingLeftMobile': containerPaddingLeft.mobile,
+			'--paddingRight': containerPaddingRight.default,
+			'--paddingRightTablet': containerPaddingRight.tablet,
+			'--paddingRightMobile': containerPaddingRight.mobile,
 			backgroundColor: containerBgGradientColor ? '#FFF' : ''
 		};
 

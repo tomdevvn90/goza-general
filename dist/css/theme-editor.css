@@ -6372,6 +6372,7 @@
   font-weight: 600;
   margin: 0;
   padding: 0;
+  color: var(--title-color, --heading-color, #333);
 }
 
 @media screen and (max-width: 767px) {
@@ -6810,6 +6811,47 @@
 
 .be-events-listing-block.is-style-ev-fill .item-event--venue svg path {
   stroke: var(--link-color);
+}
+
+.be-events-listing-block.is-style-ev-fill .item-event--excerpt {
+  margin-top: 20px;
+  color: var(--desc-color, #333);
+}
+
+.be-events-listing-block.is-style-ev-fill .item-event--excerpt p {
+  color: var(--desc-color, #333);
+}
+
+.be-events-listing-block.is-style-ev-fill .item-event--count-down {
+  margin-top: 40px;
+}
+
+.be-events-listing-block.is-style-ev-fill .item-event--count-down .be-count-down--result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.be-events-listing-block.is-style-ev-fill .item-event--count-down .be-count-down--result > div {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  background: var(--link-color, #2c9cf2);
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 23px;
+  border-radius: 4px;
+  line-height: 25px;
+}
+
+.be-events-listing-block.is-style-ev-fill .item-event--count-down .be-count-down--result > div span {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
 }
 
 .be-events-listing-block.is-style-ev-fill .item-event:not(:last-child) {
@@ -13220,7 +13262,7 @@
 .editor-styles-wrapper .block-editor-block-list__layout .be-events-listing-block.is-style-ev-fill .item-event--name {
   font-size: 24px;
   line-height: 26px;
-  color: var(--heading-color);
+  color: var(--title-color, --heading-color, #333);
   margin-top: 10px;
 }
 

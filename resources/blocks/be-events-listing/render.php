@@ -12,14 +12,13 @@ $ev_select_events = __get_field('ev_select_events') ?: [];
 $ev_taxonomy = __get_field('ev_taxonomy') ?: [];
 $ev_order = __get_field('ev_order') ?: 'ASC';
 $ev_heading_color = __get_field('ev_heading_color') ?: '#333';
+$ev_desc_color = __get_field('ev_desc_color') ?: '#333';
 
 $classes = !empty($block['className']) ? $block['className'] : "is-style-default";
 
 $args = [
    'post_type'   => 'tribe_events',
-   'post_status' => 'publish',
-   'orderby' => 'meta_value',
-   'meta_key' => '_EventStartDate',
+   'post_status' => 'publish'
 ];
 
 $args['posts_per_page']  = $ev_posts_per_page;
@@ -35,11 +34,12 @@ if (!empty($ev_taxonomy)) {
       )
    ];
 }
+
 ob_start();
 $the_query = new WP_Query($args);
 ?>
 
-<div id="<?php echo $id; ?>" class="be-events-listing-block <?php echo $align_class ?> <?php echo $classes ?>" style="--title-color:<?= esc_attr($ev_heading_color) ?>">
+<div id="<?php echo $id; ?>" class="be-events-listing-block <?php echo $align_class ?> <?php echo $classes ?>" style="--title-color:<?= esc_attr($ev_heading_color) ?>; --desc-color : <?= esc_attr($ev_desc_color) ?>">
    <?php if ($the_query->have_posts()) { ?>
       <div class="be-events-listing-block-inner">
          <?php while ($the_query->have_posts()) {

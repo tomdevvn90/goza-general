@@ -38,8 +38,8 @@ function be_template_ev_list()
     <div class="item-event">
         <div class="item-event-inner">
             <div class="item-event--start-date">
-                <span class="item-event--start-date__day"> <?php echo $day ?> </span>
-                <span class="item-event--start-date__month"> <?php echo $month ?> </span>
+                <span class="item-event--start-date__day"> <?php echo esc_attr($day) ?> </span>
+                <span class="item-event--start-date__month"> <?php echo esc_attr($month) ?> </span>
             </div>
 
             <div class="item-event--meta">
@@ -50,7 +50,7 @@ function be_template_ev_list()
                             <path d="M235.5 83.118h-27.706v144.265l87.176 87.176 19.589-19.589-79.059-79.059z" fill="#000000" data-original="#000000" class=""></path>
                         </g>
                     </svg>
-                    <span><?php echo $time ?> - By <?php echo $author_name ?></span>
+                    <span><?php echo esc_attr($time) ?> - By <?php echo esc_attr($author_name) ?></span>
                 </div>
 
                 <h3 class="item-event--name">
@@ -72,7 +72,7 @@ function be_template_ev_list()
                                 </g>
                             </g>
                         </svg>
-                        <span><?php echo $venue ?></span>
+                        <span><?php echo esc_attr($venue) ?></span>
                     </div>
                 <?php endif; ?>
             </div>
@@ -93,7 +93,9 @@ function be_template_ev_default()
             <div class="item-event-inner-left">
                 <?php if (!empty($ev_img_url)) : ?>
                     <div class="item-event--thumbnail">
-                        <img src="<?php echo $ev_img_url ?>" alt="<?php the_title() ?>">
+                        <?php if ($ev_img_url) { ?>
+                            <img src="<?php echo esc_url($ev_img_url) ?>" alt="<?php the_title() ?>">
+                        <?php } ?>
                         <span class="item-event--icon-toggle"></span>
                     </div>
                 <?php endif; ?>
@@ -104,7 +106,7 @@ function be_template_ev_default()
                     </h3>
 
                     <?php if (!empty($start_date)) : ?>
-                        <span class="item-event--start-date"> <?php echo $start_date ?> </span>
+                        <span class="item-event--start-date"> <?php echo esc_attr($start_date) ?> </span>
                     <?php endif; ?>
 
                     <div class="item-event--excerpt"> <?php the_excerpt() ?> </div>
@@ -132,21 +134,17 @@ function be_template_ev_fill()
 {
     if (is_plugin_active('the-events-calendar/the-events-calendar.php')) {
         $day         = tribe_get_start_date(get_the_ID(), true, 'j F');
-        $count_down  = tribe_get_start_date( get_the_ID(), true, 'd-m-Y G:i:s');
+        $count_down  = tribe_get_start_date(get_the_ID(), true, 'm-d-Y G:i:s');
         $time        = tribe_get_start_date(get_the_ID(), true, 'G:i a');
-        $venue       = tribe_get_venue();
-        $getaddress = tribe_get_address();
-        $getcity    = tribe_get_city();
-        $getstate    = tribe_get_state();
-        $getzip        = tribe_get_zip();
-        $getexcerpt = tribe_events_get_the_excerpt();
+        $venue       = tribe_get_venue(get_the_ID());
+        $excerpt  = get_the_excerpt(get_the_ID());
     }
 ?>
     <div class="item-event">
         <div class="item-event-inner">
             <div class="item-event--date">
                 <?php if (!empty($day)) : ?>
-                    <span class="item-event--date-day"> <?php echo $day ?> </span>
+                    <span class="item-event--date-day"> <?php echo esc_attr($day) ?> </span>
                 <?php endif; ?>
 
                 <?php if (!empty($time)) : ?>
@@ -157,7 +155,7 @@ function be_template_ev_fill()
                                 <path d="M235.5 83.118h-27.706v144.265l87.176 87.176 19.589-19.589-79.059-79.059z" fill="#000000" data-original="#000000" class=""></path>
                             </g>
                         </svg>
-                        <p><?php echo $time ?></p>
+                        <p><?php echo esc_attr($time) ?></p>
                     </span>
                 <?php endif; ?>
             </div>
@@ -165,37 +163,6 @@ function be_template_ev_fill()
             <h3 class="item-event--name">
                 <a href="<?php the_permalink() ?>"> <?php the_title() ?> </a>
             </h3>
-
-            <div class="item-event--excerpt">
-                <?= $getexcerpt ?>
-            </div>
-
-            <div class="be-single-event-inner--count-down" data-count-down="<?= esc_attr($count_down) ?>">
-                <?php if (!empty($distance)) : ?>
-                    <?php
-                    $days    = floor($distance / (60 * 60 * 24));
-                    $hours   = floor(($distance % (60 * 60 * 24)) / (60 * 60));
-                    $minutes = floor(($distance % (60 * 60)) / 60);
-                    $seconds = $distance % 60;
-                    ?>
-
-                    <div id="be-count-down-edit" class="be-count-down--result">
-                        <?php if ($days >= 0) { ?>
-
-                            <div class='be-day'> <?= $days ?> <span>Days</span> </div>
-                            <div class='be-hours'> <?= $hours ?> <span>Hours</span> </div>
-                            <div class='be-min'> <?= $minutes ?> <span>Minutes</span> </div>
-                            <div class='be-sec'> <?= $seconds ?> <span>Seconds</span> </div>
-
-                        <?php } else { ?>
-                            <span> EXPIRED </span>
-                        <?php } ?>
-
-                    </div>
-                <?php endif; ?>
-
-                <div id="be-count-down--result" class="be-count-down--result"> </div>
-            </div>
             <?php if (!empty($venue)) : ?>
                 <div class="item-event--venue">
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 682.667 682.667" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
@@ -211,9 +178,18 @@ function be_template_ev_fill()
                             </g>
                         </g>
                     </svg>
-                    <span> <?php echo $venue ?> </span>
+                    <span> <?php echo esc_attr($venue) ?> </span>
                 </div>
             <?php endif; ?>
+
+            <div class="item-event--excerpt">
+                <?php echo goza_expandable_excerpt($excerpt); ?>
+            </div>
+
+            <div class="item-event--count-down" data-count-down="<?= esc_attr($count_down) ?>">
+                <div id="be-count-down--result" class="be-count-down--result"> </div>
+            </div>
+
         </div>
     </div>
 <?php }
@@ -231,7 +207,9 @@ function be_template_ev_outline()
     <div class="item-event">
         <div class="item-event-inner">
             <div class="item-event--thumbnail">
-                <img src="<?php echo $ev_img_url ?>" alt="<?php the_title() ?>" />
+                <?php if ($ev_img_url) { ?>
+                    <img src="<?php echo esc_url($ev_img_url) ?>" alt="<?php the_title() ?>" />
+                <?php } ?>
             </div>
 
             <div class="item-event--meta">
@@ -254,17 +232,17 @@ function be_template_ev_outline()
                                 </g>
                             </g>
                         </svg>
-                        <span> <?php echo $venue ?> </span>
+                        <span> <?php echo esc_attr($venue) ?> </span>
                     </div>
                 <?php endif; ?>
 
                 <div class="item-event--start-date">
                     <?php if (!empty($day)) : ?>
-                        <span class="item-event--start-date-day"> <b><?php echo $day ?></b> <?php echo $month ?> </span>
+                        <span class="item-event--start-date-day"> <b><?php echo esc_attr($day) ?></b> <?php echo esc_attr($month) ?> </span>
                     <?php endif; ?>
 
                     <?php if (!empty($time)) : ?>
-                        <span class="item-event--start-date-time"> <?php echo $time ?> </span>
+                        <span class="item-event--start-date-time"> <?php echo esc_attr($time) ?> </span>
                     <?php endif; ?>
                 </div>
 
@@ -293,7 +271,9 @@ function be_template_ev_special()
     <div class="item-event">
         <div class="item-event-inner">
             <div class="item-event--thumbnail">
-                <img src="<?php echo $ev_img_url ?>" alt="<?php the_title() ?>" />
+                <?php if ($ev_img_url) { ?>
+                    <img src="<?php echo esc_url($ev_img_url) ?>" alt="<?php the_title() ?>" />
+                <?php } ?>
             </div>
 
             <div class="item-event--meta">
@@ -304,12 +284,12 @@ function be_template_ev_special()
                 <div class="item-event--info">
                     <?php if (!empty($day)) : ?>
                         <div class="item-event--start-time">
-                            <?php echo $day ?> <span><?php echo $time ?></span>
+                            <?php echo esc_attr($day) ?> <span><?php echo esc_attr($time) ?></span>
                         </div>
                     <?php endif; ?>
 
                     <?php if (!empty($venue)) : ?>
-                        <div class="item-event-venue"><?php echo $venue ?></div>
+                        <div class="item-event-venue"><?php echo esc_attr($venue) ?></div>
                     <?php endif; ?>
                 </div>
             </div>

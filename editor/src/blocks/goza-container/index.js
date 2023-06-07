@@ -41,7 +41,24 @@ const blockAttributes = {
 			sync: true,
 		}
 	},
-
+	containerPaddingLeft: {
+		type: 'Object',
+		default: {
+			default: '',
+			tablet: '',
+			mobile: '',
+			sync: true,
+		}
+	},
+	containerPaddingRight: {
+		type: 'Object',
+		default: {
+			default: '',
+			tablet: '',
+			mobile: '',
+			sync: true,
+		}
+	},
 	containerWidth: {
 		type: 'string',
 	},
