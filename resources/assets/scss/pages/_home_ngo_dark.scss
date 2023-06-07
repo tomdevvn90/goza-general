@@ -1,0 +1,14 @@
+.wp-block-image{
+    &.be-gz-ngo-dark-img-service{
+        img{
+            cursor: pointer;
+            transition-duration: .3s;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            &:hover{
+                animation-name: be-animation-wobble-top;
+            }
+        }
+    }
+}

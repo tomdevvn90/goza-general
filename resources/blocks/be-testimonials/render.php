@@ -20,10 +20,10 @@ $data_carousel = array(
     'fade'           =>  $carousel_setting['fade'] ?: false,
 );
 
-$is_style = isset($block['className']) ? $block['className'] : "is-style-default";
+$classes = isset($block['className']) ? $block['className'] : "is-style-default";
 
 ?>
-<div id="<?php echo $id; ?>" class="be-testominials-block <?php echo $align_class; ?> <?php echo $is_style?>" data-style="<?php echo $is_style?>"  data-carousel='<?= json_encode($data_carousel) ?>'> 
+<div id="<?php echo $id; ?>" class="be-testominials-block <?php echo $align_class; ?> <?php echo $classes?>" data-style="<?php echo $classes?>"  data-carousel='<?= json_encode($data_carousel) ?>'> 
     <?php if(!empty($testominials)): ?>        
         <div class="be-testominials-block-carousel"> 
             <?php foreach ($testominials as $testominial): ?>

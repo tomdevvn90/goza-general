@@ -19693,6 +19693,18 @@ h6 {
   stroke: #fff;
 }
 
+.wp-block-image.be-gz-ngo-dark-img-service img {
+  cursor: pointer;
+  transition-duration: 0.3s;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.wp-block-image.be-gz-ngo-dark-img-service img:hover {
+  animation-name: be-animation-wobble-top;
+}
+
 .be-gallery-block {
   height: auto;
   position: relative;
@@ -20918,6 +20930,7 @@ h6 {
 
 .be-testominials-block.is-style-4 .be-testominials-block-carousel .item-testominial-content {
   padding: 35px 50px 0 50px;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 1199px) {
@@ -20936,6 +20949,7 @@ h6 {
 .be-testominials-block.is-style-4 .be-testominials-block-carousel .item-testominial-desc {
   font-weight: 600;
   text-align: center;
+  color: #d4cdcd;
 }
 
 .be-testominials-block.is-style-4 .be-testominials-block-carousel .item-testominial-info {
@@ -20945,6 +20959,9 @@ h6 {
 .be-testominials-block.is-style-4 .be-testominials-block-carousel .item-testominial-name {
   font-size: 19px;
   line-height: 28px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: inherit;
 }
 
 .be-testominials-block.is-style-4 .be-testominials-block-carousel .item-testominial-position {
@@ -22482,6 +22499,7 @@ h6 {
 
 .be-testominials-block.is-style-4 .be-testominials-block-carousel .item-testominial-content {
   padding: 35px 50px 0 50px;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 1199px) {
@@ -22500,6 +22518,7 @@ h6 {
 .be-testominials-block.is-style-4 .be-testominials-block-carousel .item-testominial-desc {
   font-weight: 600;
   text-align: center;
+  color: #d4cdcd;
 }
 
 .be-testominials-block.is-style-4 .be-testominials-block-carousel .item-testominial-info {
@@ -22509,6 +22528,9 @@ h6 {
 .be-testominials-block.is-style-4 .be-testominials-block-carousel .item-testominial-name {
   font-size: 19px;
   line-height: 28px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: inherit;
 }
 
 .be-testominials-block.is-style-4 .be-testominials-block-carousel .item-testominial-position {
@@ -30544,6 +30566,32 @@ h6 {
 @keyframes dashed_border_running {
   100% {
     stroke-dashoffset: -1000;
+  }
+}
+
+@keyframes be-animation-wobble-top {
+  16.65% {
+    transform: skew(-12deg);
+  }
+
+  33.3% {
+    transform: skew(10deg);
+  }
+
+  49.95% {
+    transform: skew(-6deg);
+  }
+
+  66.6% {
+    transform: skew(4deg);
+  }
+
+  83.25% {
+    transform: skew(-2deg);
+  }
+
+  100% {
+    transform: skew(0);
   }
 }
 
