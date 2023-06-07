@@ -15,7 +15,7 @@ $(document).ready(function() {
     AOS.refresh();
 });
 
-
+import './blocks/team-carousel';
 import './blocks/events-carousel';
 import './blocks/hero';
 import './blocks/testimonials';
