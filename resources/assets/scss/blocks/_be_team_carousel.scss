@@ -1,8 +1,9 @@
 .be-team-carousel{
     .slick-list{
+        margin-left: -10px;
+        margin-right: -10px;
+        box-sizing: border-box;
         .slick-track{
-            margin-left: -10px;
-            margin-right: -10px;
             .slick-slide{
                 padding-left: 10px;
                 padding-right: 10px;
@@ -89,9 +90,91 @@
                     transform: translateY(100px);
                     i{
                         font-size: 24px;
-                        color: #000;
+                        color: var(--color-social)
                     }
                 }
+            }
+        }
+
+        .slick-arrow {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--bg-ar-df);
+            z-index: 9;
+            transition: 0.2s ease-in-out;
+            color: var(--color-ar-df);
+            opacity: 0;
+            &::before {
+                font-size: 20px;
+                transition: 0.2s ease-in-out;
+                color: var(--color-ar-df);
+                display: inline-block;
+                font: normal normal normal 18px/1 FontAwesome;
+                opacity: 1;
+            }
+
+            &.slick-next {
+                right: -40px;
+                &::before{
+                    content: "\f061";
+                }
+                @media (max-width: 1299px) {
+                    right: 0;
+                }
+            }
+
+            &.slick-prev {
+                left: -40px;
+                &::before{
+                    content: "\f060";
+                }
+                @media (max-width: 1299px) {
+                    left: 0;
+                }
+            }
+
+            &:hover, &:focus{
+                background-color: var(--bg-ar-hv);
+                color: var(--color-ar-hv);
+                &::before{
+                    color: var(--color-ar-hv);
+                }
+            }
+        }
+
+        .slick-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: var(--color-dots-df);
+                opacity: 1;
+                position: relative;
+                transition: opacity 0.2s ease-in-out;
+
+                &.slick-active {
+                    width: 12px;
+                    height: 12px;
+                    background-color: var(--color-dots-at);
+                }
+
+                button{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    z-index: -1;
+                }
+            }
+        }
+
+        &:hover{
+            .slick-arrow {
+                opacity: 1;
             }
         }
     }

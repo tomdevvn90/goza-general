@@ -19788,9 +19788,10 @@ h6 {
   transform: rotate(180deg);
 }
 
-.be-team-carousel .slick-list .slick-track {
+.be-team-carousel .slick-list {
   margin-left: -10px;
   margin-right: -10px;
+  box-sizing: border-box;
 }
 
 .be-team-carousel .slick-list .slick-track .slick-slide {
@@ -19877,7 +19878,100 @@ h6 {
 
 .be-team-carousel-inner .item-team--social li i {
   font-size: 24px;
-  color: #000;
+  color: var(--color-social);
+}
+
+.be-team-carousel-inner .slick-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--bg-ar-df);
+  z-index: 9;
+  transition: 0.2s ease-in-out;
+  color: var(--color-ar-df);
+  opacity: 0;
+}
+
+.be-team-carousel-inner .slick-arrow::before {
+  font-size: 20px;
+  transition: 0.2s ease-in-out;
+  color: var(--color-ar-df);
+  display: inline-block;
+  font: normal normal normal 18px/1 FontAwesome;
+  opacity: 1;
+}
+
+.be-team-carousel-inner .slick-arrow.slick-next {
+  right: -40px;
+}
+
+.be-team-carousel-inner .slick-arrow.slick-next::before {
+  content: "\F061";
+}
+
+@media (max-width: 1299px) {
+  .be-team-carousel-inner .slick-arrow.slick-next {
+    right: 0;
+  }
+}
+
+.be-team-carousel-inner .slick-arrow.slick-prev {
+  left: -40px;
+}
+
+.be-team-carousel-inner .slick-arrow.slick-prev::before {
+  content: "\F060";
+}
+
+@media (max-width: 1299px) {
+  .be-team-carousel-inner .slick-arrow.slick-prev {
+    left: 0;
+  }
+}
+
+.be-team-carousel-inner .slick-arrow:hover,
+.be-team-carousel-inner .slick-arrow:focus {
+  background-color: var(--bg-ar-hv);
+  color: var(--color-ar-hv);
+}
+
+.be-team-carousel-inner .slick-arrow:hover::before,
+.be-team-carousel-inner .slick-arrow:focus::before {
+  color: var(--color-ar-hv);
+}
+
+.be-team-carousel-inner .slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.be-team-carousel-inner .slick-dots li {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-dots-df);
+  opacity: 1;
+  position: relative;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.be-team-carousel-inner .slick-dots li.slick-active {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-dots-at);
+}
+
+.be-team-carousel-inner .slick-dots li button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.be-team-carousel-inner:hover .slick-arrow {
+  opacity: 1;
 }
 
 .be-gallery-block {

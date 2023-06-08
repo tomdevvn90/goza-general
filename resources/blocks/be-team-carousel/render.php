@@ -18,18 +18,14 @@ $color_sc    = get_field('color_social_team_carousel_bl') ? : '#000';
 $color_dots  = get_field('color_dots_team_carousel_bl') ? : ''; 
 $color_arrow = get_field('color_arrow_team_carousel_bl') ? : ''; 
 
-echo "<pre>";
-echo print_r($color_dots);
-echo "</pre>";
-
 $color_dots_df = $color_dots['default'] ? : "#000";
 $color_dots_at = $color_dots['active'] ? : $link_color;
 
-$color_arrow_df = $color_arrow['cl_df'] ? : '#fff';
-$color_arrow_hv = $color_arrow['cl_df'] ? : '#fff';
+$color_arrow_df = $color_arrow['cl_df'] ? : '#000';
+$color_arrow_hv = $color_arrow['cl_df'] ? : $link_color;
 
-$bg_arrow_df = $color_arrow['bg_df'] ? : '#000';
-$bg_arrow_hv = $color_arrow['bg_hv'] ? : $link_color;
+$bg_arrow_df = $color_arrow['bg_df'] ? : 'transparent';
+$bg_arrow_hv = $color_arrow['bg_hv'] ? : 'transparent';
 
 
 if(!empty($carousel_st) && isset($carousel_st)){
@@ -67,7 +63,7 @@ if(!empty($carousel_st) && isset($carousel_st)){
                             <?php } ?>
 
                             <?php if(!empty($socials)): ?>
-                                <ul class="item-team--social" style="--color:<?= $color_sc ?>"> 
+                                <ul class="item-team--social" style="--color-social:<?= $color_sc ?>"> 
                                     <?php foreach ($socials as $key => $social) : ?>
                                         <?php 
                                             $social_icon = $social['icon'];
