@@ -19621,6 +19621,14 @@ h6 {
   padding-right: 10%;
 }
 
+.section-charity-upcoming {
+  gap: 0;
+}
+
+.section-charity-upcoming .goza-block-container {
+  height: 100%;
+}
+
 .be-box-featured-block.home-ngo {
   margin-top: 40px;
 }

@@ -99,7 +99,7 @@ const blockAttrs = {
     },
     hoverShadowColor: {
         type: 'string',
-        default: '#ccc'
+        default: ''
     },
     hoverShadowH: {
         type: 'number',
