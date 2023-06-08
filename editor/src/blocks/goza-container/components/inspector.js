@@ -48,6 +48,8 @@ export default class Inspector extends Component {
 		const {
 			containerPaddingTop,
 			containerPaddingBottom,
+			containerPaddingLeft,
+			containerPaddingRight,
 			containerMaxWidth,
 			focalPoint,
 			containerBackgroundColor,
@@ -86,7 +88,30 @@ export default class Inspector extends Component {
 				}
 
 				setAttributes({ containerPaddingTop: newSize })
-			} else {
+			}
+			if (position === 'left') {
+				let newSize = { ...containerPaddingLeft }
+				newSize[screen] = value
+				if (screen == 'default' && containerPaddingLeft.sync == true) {
+					newSize.tablet = value
+					newSize.mobile = value
+				}
+
+				setAttributes({ containerPaddingLeft: newSize })
+			}
+
+			if (position === 'right') {
+				let newSize = { ...containerPaddingRight }
+				newSize[screen] = value
+				if (screen == 'default' && containerPaddingRight.sync == true) {
+					newSize.tablet = value
+					newSize.mobile = value
+				}
+
+				setAttributes({ containerPaddingRight: newSize })
+			}
+
+			if (position === 'bottom') {
 				let newSize = { ...containerPaddingBottom }
 				newSize[screen] = value
 				if (screen == 'default' && containerPaddingBottom.sync == true) {
@@ -98,16 +123,32 @@ export default class Inspector extends Component {
 			}
 		}
 
-		const onChangeSizeResponsiveTop = (value) => {
-			let newSize = { ...containerPaddingTop }
-			newSize.sync = value
-			setAttributes({ containerPaddingTop: newSize })
-		}
+		const onChangeSizeResponsive = (pos, value) => {
 
-		const onChangeSizeResponsiveBottom = (value) => {
-			let newSize = { ...containerPaddingBottom }
-			newSize.sync = value
-			setAttributes({ containerPaddingBottom: newSize })
+			if (pos === 'top') {
+				let newSize = { ...containerPaddingTop }
+				newSize.sync = value
+				setAttributes({ containerPaddingTop: newSize })
+			}
+
+			if (pos === 'bottom') {
+				let newSize = { ...containerPaddingBottom }
+				newSize.sync = value
+				setAttributes({ containerPaddingBottom: newSize })
+			}
+
+			if (pos === 'left') {
+				let newSize = { ...containerPaddingLeft }
+				newSize.sync = value
+				setAttributes({ containerPaddingLeft: newSize })
+			}
+
+			if (pos === 'right') {
+				let newSize = { ...containerPaddingRight }
+				newSize.sync = value
+				setAttributes({ containerPaddingRight: newSize })
+			}
+
 		}
 
 		const loadLocalVideo = (video) => {
@@ -140,7 +181,7 @@ export default class Inspector extends Component {
 						label={__('Sync Padding Top', 'goza')}
 						help={__('Disable to custom padding top for each screen (Desktop, Tablet, Mobile)', 'goza')}
 						checked={containerPaddingTop.sync}
-						onChange={onChangeSizeResponsiveTop}
+						onChange={(value) => { onChangeSizeResponsive('top', value) }}
 					/>
 
 					{!containerPaddingTop.sync &&
@@ -177,7 +218,7 @@ export default class Inspector extends Component {
 						label={__('Sync Padding Bottom', 'goza')}
 						help={__('Disable to custom padding bottom for each screen (Desktop, Tablet, Mobile)', 'goza')}
 						checked={containerPaddingBottom.sync}
-						onChange={onChangeSizeResponsiveBottom}
+						onChange={(value) => { onChangeSizeResponsive('bottom', value) }}
 					/>
 
 					{!containerPaddingBottom.sync &&
@@ -196,6 +237,80 @@ export default class Inspector extends Component {
 								value={containerPaddingBottom.mobile}
 								onChange={(value) => {
 									onChangeSize('bottom', value, 'mobile')
+								}}
+							/>
+						</div>
+					}
+					<hr />
+
+					<TextControl
+						label={__('Padding Left', 'goza')}
+						value={containerPaddingLeft.default}
+						onChange={(value) => {
+							onChangeSize('left', value, 'default')
+						}}
+					/>
+
+					<ToggleControl
+						label={__('Sync Padding Left', 'goza')}
+						help={__('Disable to custom padding bottom for each screen (Desktop, Tablet, Mobile)', 'goza')}
+						checked={containerPaddingLeft.sync}
+						onChange={(value) => { onChangeSizeResponsive('left', value) }}
+					/>
+
+					{!containerPaddingLeft.sync &&
+						<div>
+							<TextControl
+								label={__('on Tablet (≦992px)', 'goza')}
+								help={__('Set padding left for tablet', 'goza')}
+								value={containerPaddingLeft.tablet}
+								onChange={(value) => {
+									onChangeSize('left', value, 'tablet')
+								}}
+							/>
+							<TextControl
+								label={__('on Mobile (≦767px)', 'goza')}
+								help={__('Set padding left for mobile', 'goza')}
+								value={containerPaddingLeft.mobile}
+								onChange={(value) => {
+									onChangeSize('left', value, 'mobile')
+								}}
+							/>
+						</div>
+					}
+					<hr />
+
+					<TextControl
+						label={__('Padding Right', 'goza')}
+						value={containerPaddingRight.default}
+						onChange={(value) => {
+							onChangeSize('right', value, 'default')
+						}}
+					/>
+
+					<ToggleControl
+						label={__('Sync Padding Right', 'goza')}
+						help={__('Disable to custom padding right for each screen (Desktop, Tablet, Mobile)', 'goza')}
+						checked={containerPaddingRight.sync}
+						onChange={(value) => { onChangeSizeResponsive('right', value) }}
+					/>
+
+					{!containerPaddingRight.sync &&
+						<div>
+							<TextControl
+								label={__('on Tablet (≦992px)', 'goza')}
+								help={__('Set padding right for tablet', 'goza')}
+								value={containerPaddingRight.tablet}
+								onChange={(value) => {
+									onChangeSize('right', value, 'tablet')
+								}}
+							/>
+							<TextControl
+								label={__('on Mobile (≦767px)', 'goza')}
+								help={__('Set padding right for mobile', 'goza')}
+								value={containerPaddingRight.mobile}
+								onChange={(value) => {
+									onChangeSize('right', value, 'mobile')
 								}}
 							/>
 						</div>
@@ -250,18 +365,18 @@ export default class Inspector extends Component {
 									onClick={open}
 								>
 									<Icon icon="format-image" />
-									{__('Select Image','goza')}
+									{__('Select Image', 'goza')}
 								</Button>
 
 								{containerImgURL &&
 									!!containerImgURL.length && (
 										<Button
 											className="goza-container-inspector-media"
-											label={__( 'Remove Image', 'goza' )}
+											label={__('Remove Image', 'goza')}
 											onClick={onRemoveImage}
 										>
 											<Icon icon="dismiss" />
-											{__('Remove','goza')}
+											{__('Remove', 'goza')}
 										</Button>
 									)}
 							</div>

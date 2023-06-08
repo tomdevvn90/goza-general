@@ -1,0 +1,97 @@
+.wp-block-image{
+    &.be-gz-ngo-dark-img-service{
+        img{
+            cursor: pointer;
+            transition-duration: .3s;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            &:hover{
+                animation-name: be-animation-wobble-top;
+            }
+        }
+    }
+}
+
+
+.wp-block-column{
+    &.be-column-count-down{
+        align-self: auto;
+    }
+}
+
+.wp-block-goza-blocks-goza-container{
+    &.be-ss-about-ngo-dark{
+        overflow: inherit;
+        &::after, &::before{
+            content: " ";
+            position: absolute;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: 0px;
+            z-index: 1;
+        }
+
+        &::before{
+            width: 100px;    
+            top: -140px;
+            height: 264px;
+            background-image: url('../resources/assets/images/home-ngo-dark/icon-gz-ngo-dark-001.png');
+        }
+
+        &::after{
+            bottom: 90px;
+            width: 100px;
+            height: 120px;
+            background-image: url('../resources/assets/images/home-ngo-dark/icon-gz-ngo-dark-002.png');
+        }
+    }
+
+    &.be-ss-count-down-ngo-dark{
+        overflow: inherit;
+        &::before{
+            content: " ";
+            position: absolute;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            right: 0;
+            transform: rotate(180deg);
+            z-index: 1;
+            width: 100px;    
+            top: -140px;
+            height: 264px;
+            background-image: url('../resources/assets/images/home-ngo-dark/icon-gz-ngo-dark-001.png');
+        }
+    }
+
+    &.be-ss-single-post-ngo-dark{
+        overflow: inherit;
+        &::after, &::before{
+            content: " ";
+            position: absolute;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 1;
+        }
+
+        &::before{
+            width: 100px;    
+            top: 0px;
+            height: 264px;
+            left: 0;
+            background-image: url('../resources/assets/images/home-ngo-dark/icon-gz-ngo-dark-001.png');
+        }
+
+        &::after{
+            bottom: 90px;
+            width: 100px;
+            height: 120px;
+            right: 0;
+            background-image: url('../resources/assets/images/home-ngo-dark/icon-gz-ngo-dark-002.png');
+            transform: rotate(180deg);
+        }
+    }
+}

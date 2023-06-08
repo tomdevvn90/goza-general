@@ -31,6 +31,7 @@ if (!function_exists('goza_load_css_editor')) {
 		wp_enqueue_style('goza-theme-general-styles', $upload_dir['baseurl'] . '/styles_uploads/variable-css.css', [], THEME_VERSION);
 		wp_enqueue_style('admin-font', get_template_directory_uri() . '/resources/assets/fonts/fonts.css', [], THEME_VERSION);
 		wp_enqueue_style('theme-css', get_template_directory_uri() . '/dist/css/theme-editor.css', [], THEME_VERSION);
+		wp_enqueue_script('admin-theme-scripts', get_template_directory_uri() . '/resources/assets/js/editor/function.js', ['jquery'], THEME_VERSION, true);
 	}
 }
 
