@@ -1,10 +1,9 @@
 .goza-image-content-block {
     &.alignfull {
         .block-inner {
-            @include media-breakpoint-up(md) {
-                margin-left: 0;
-                margin-right: 0;
-            }
+            margin-left: 0;
+            margin-right: 0;
+
             .block-inner__col {
                 &.block-inner__content {
                     padding: 60px;
@@ -19,7 +18,7 @@
                 }
 
                 &.block-inner__image {
-                    img { 
+                    img {
                         width: 100%;
                         left: 0;
                     }
@@ -31,11 +30,8 @@
     .block-inner {
         display: flex;
         flex-wrap: wrap;
-
-        @include media-breakpoint-up(md) {
-            margin-left: -15px;
-            margin-right: -15px;
-        }
+        margin-left: -15px;
+        margin-right: -15px;
 
         &__col {
             position: relative;
