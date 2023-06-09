@@ -25,6 +25,14 @@
             }
         }
 
+        #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item h4.mega-block-title{
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 110%;
+            color: var(--heading-color, #3a3736);
+            margin-bottom: 10px;
+        }
+
         .goza-header-main {
             display: flex;
             align-items: center;
@@ -59,6 +67,10 @@
             }
 
             &--menu {
+                #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-megamenu > ul.mega-sub-menu{
+                    min-width: 660px;
+                }
+
                 ul {
                     display: flex;
                     align-items: center;
@@ -76,7 +88,7 @@
                             position: relative;
                             display: block;
                             text-decoration: none;
-                            color: var(--header-text-color, #FFF);
+                            color: var(--heading-color, #3a3736);
                             font-size: 15px;
                             letter-spacing: 0px;
                             font-style: normal;
@@ -93,6 +105,26 @@
                             &.dropdown-toggle {
                                 &::after {
                                     display: none;
+                                }
+                            }
+                        }
+
+                        .mega-sub-menu{
+                            ul{
+                                flex-wrap: wrap;
+                                gap: 10px;
+                                li{
+                                    width: 100%;
+                                    a{
+                                        line-height: 110%;
+                                    }
+
+                                    .product_list_widget{
+                                        img{
+                                            min-width: 60px;
+                                            margin-left: 15px;
+                                        }
+                                    }
                                 }
                             }
                         }
