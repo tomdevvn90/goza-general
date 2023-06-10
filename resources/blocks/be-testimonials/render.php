@@ -50,7 +50,7 @@ $classes = isset($block['className']) ? $block['className'] : "is-style-default"
 ?>
 <div id="<?php echo $id; ?>" class="be-testimonials-block <?php echo $align_class; ?> <?php echo $classes?>" data-style="<?php echo $classes?>"  data-carousel='<?= json_encode($data_carousel) ?>'> 
     <?php if(!empty($testimonials) && isset($testimonials)): ?>        
-        <div class="be-testimonials-block-carousel" 
+        <div class="be-testimonials-block-carousel"  data-aos="fade-up"
             style="--bg-ar-df:<?= $bg_arrow_df ?>; --bg-ar-hv:<?= $bg_arrow_hv ?>;
             --color-arrow-hv:<?= $color_arrow_hv ?> ; --color-arrow-df:<?= $color_arrow_df ?> ; 
             --color-dot-df:<?= $color_dots_df ?>; --color-dot-at:<?= $color_dots_at ?>";

@@ -15,6 +15,8 @@
     }
 
     &--top{
+        z-index: 9;
+        position: relative;
         &-left, &-right{
             width: 100%;
         }

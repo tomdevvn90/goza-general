@@ -31,6 +31,9 @@
             background-size: cover;
             left: 0px;
             z-index: 1;
+            @include media-breakpoint-down(md) { 
+                content: none;
+            }
         }
 
         &::before{
@@ -38,6 +41,10 @@
             top: -140px;
             height: 264px;
             background-image: url('../resources/assets/images/home-ngo-dark/icon-gz-ngo-dark-001.png');
+            @include media-breakpoint-down(lg) {
+                width: 80px;
+                height: 220px;
+            }
         }
 
         &::after{
@@ -45,6 +52,11 @@
             width: 100px;
             height: 120px;
             background-image: url('../resources/assets/images/home-ngo-dark/icon-gz-ngo-dark-002.png');
+            @include media-breakpoint-down(lg) {
+                bottom: 0px;
+                width: 80px;
+                height: 100px;
+            }
         }
     }
 
@@ -63,6 +75,15 @@
             top: -140px;
             height: 264px;
             background-image: url('../resources/assets/images/home-ngo-dark/icon-gz-ngo-dark-001.png');
+            @include media-breakpoint-down(lg) {
+                width: 80px;
+                height: 220px;
+                top: -35%;
+            }
+
+            @include media-breakpoint-down(md) { 
+                content: none;
+            }
         }
     }
 
@@ -75,23 +96,134 @@
             background-repeat: no-repeat;
             background-size: cover;
             z-index: 1;
+            @include media-breakpoint-down(md) { 
+                content: none;
+            }
         }
 
         &::before{
             width: 100px;    
-            top: 0px;
+            top: -20px;
             height: 264px;
             left: 0;
             background-image: url('../resources/assets/images/home-ngo-dark/icon-gz-ngo-dark-001.png');
+            @include media-breakpoint-down(lg) {
+                width: 80px;
+                height: 220px;
+                top:-10%;
+            }
         }
 
         &::after{
-            bottom: 90px;
+            bottom: 0px;
             width: 100px;
             height: 120px;
             right: 0;
-            background-image: url('../resources/assets/images/home-ngo-dark/icon-gz-ngo-dark-002.png');
-            transform: rotate(180deg);
+            background-image: url('../resources/assets/images/home-ngo-dark/icon-gz-ngo-dark-003.png');
+            @include media-breakpoint-down(lg) {
+                width: 80px;
+                height: 100px;
+                bottom:-10%;
+            }
+        }
+    }
+}
+
+.n2-ss-slider{
+    .n2-ss-button-container{
+        a.be-cta-slider-gz-ngo-dark{
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+            z-index: 9;
+            &::before{
+                content: " ";
+                display: inline-block;
+                width: 0;
+                height: 0;
+                -webkit-transform: rotate(360deg);
+                border-style: solid;
+                border-width: 0 0 0 0;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                transition: 0.5s;
+                border-color: transparent transparent transparent #2d2e40;
+            }
+
+            &::after{
+                content: " ";
+                display: inline-block;
+                width: 0;
+                height: 0;
+                -webkit-transform: rotate(360deg);
+                border-style: solid;
+                border-width: 0 0 0 0;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transition: 0.5s;
+                z-index: -1;
+                border-color: transparent #2d2e40 transparent transparent;
+            }
+
+            &:hover{
+                &::after{
+                    border-width: 0 165px 165px 0;
+                }
+
+                &::before{
+                    border-width: 165px 0 0 165px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.wp-block-columns{
+    &.be-row-services-gz-ngo-dark{
+        @include media-breakpoint-only(md){
+            flex-wrap: nowrap !important;
+        }
+    }
+
+    &.be-row-counter-gz-ngo-dark{
+        @include media-breakpoint-only(md){
+            gap: 2em 0;
+            flex-wrap: wrap !important
+        }
+
+        @include media-breakpoint-only(sm) {
+            gap: 2em 0;
+            flex-wrap: wrap !important
+        }
+        
+        .be-counter-up.is-style-ngo-dark .be-counter-up-box__heading{
+            @include media-breakpoint-only(lg) {
+                font-size: 20px;
+                line-height: 110%;
+                margin-top: -30px;
+            }
+        }
+
+        > .wp-block-column{
+            @include media-breakpoint-only(md) {
+                flex-basis: 50%!important;
+                width: 50%;
+            }
+
+            @include media-breakpoint-only(sm) {
+                flex-basis: 50%!important;
+                width: 50%;
+            }
+
+            @include media-breakpoint-only(xs) { 
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 }

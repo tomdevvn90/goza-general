@@ -62,7 +62,7 @@ $color_sub_hd = get_field('color_sub_hd_ss_ab_vd') ? : '';
 
       <div class="be-ss-ab-vd--row be-ss-ab-vd--bottom"> 
          <div class="be-ss-ab-vd--bottom-left"> 
-            <div class="be-ss-ab-vd--image"> 
+            <div class="be-ss-ab-vd--image" data-aos="fade-up"> 
                <?php if(is_array($img)){
                   $srcset = wp_get_attachment_image_srcset($img['id']) ? : '';
                   ?>
