@@ -226,10 +226,6 @@ import lgZoom from 'lightgallery/plugins/zoom'
         }
     }   
 
-    $(window).on("scroll", function () {
-
-    });
-
     $(document).ready(function () {
 
     })

@@ -1072,7 +1072,6 @@ __webpack_require__.r(__webpack_exports__);
       }, 1000);
     }
   };
-  $(window).on("scroll", function () {});
   $(document).ready(function () {});
   $(window).on("load", function () {
     //preloader

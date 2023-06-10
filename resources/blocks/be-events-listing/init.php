@@ -137,7 +137,7 @@ function be_template_ev_fill()
         $count_down  = tribe_get_start_date(get_the_ID(), true, 'm-d-Y G:i:s');
         $time        = tribe_get_start_date(get_the_ID(), true, 'G:i a');
         $venue       = tribe_get_venue(get_the_ID());
-        $excerpt  = get_the_excerpt(get_the_ID());
+        $excerpt = goza_expandable_excerpt(get_the_excerpt(get_the_ID()))
     }
 ?>
     <div class="item-event">
@@ -183,7 +183,7 @@ function be_template_ev_fill()
             <?php endif; ?>
 
             <div class="item-event--excerpt">
-                <?php echo goza_expandable_excerpt($excerpt); ?>
+                <?php echo esc_attr($excerpt); ?>
             </div>
 
             <div class="item-event--count-down" data-count-down="<?= esc_attr($count_down) ?>">
