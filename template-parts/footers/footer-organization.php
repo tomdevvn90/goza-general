@@ -68,7 +68,7 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                             <?php foreach ($goza_ft_gallery as $item) { ?>
                                 <a class="main-footer-gallery-item" href="<?= esc_url($item['url']); ?>" title="<?= esc_attr($item['title']); ?>">
                                     <img src="<?= esc_url($item['url']); ?>" alt="<?= esc_attr($item['alt']); ?>" />
-                                    <span class="main-footer-gallery-list-item-icon"><i class="icon ion-ios-plus-empty"></i></span>
+                                    <span class="main-footer-gallery-list-item-icon"><i class="fa fa-plus" aria-hidden="true"></i></span>
                                 </a>
                             <?php } ?>
                         </div>

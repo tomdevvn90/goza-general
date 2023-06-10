@@ -19033,6 +19033,14 @@ h6 {
   position: relative;
 }
 
+.main-footer.footer-organization .main-footer-widget .main-footer-gallery-list .main-footer-gallery-item i {
+  box-sizing: border-box;
+}
+
+.main-footer.footer-organization .main-footer-widget .main-footer-gallery-list .main-footer-gallery-item i::before {
+  content: "+";
+}
+
 .main-footer.footer-organization .main-footer-widget .main-footer-gallery-list .main-footer-gallery-item:hover .main-footer-gallery-list-item-icon {
   visibility: visible;
   opacity: 1;
@@ -19064,6 +19072,10 @@ h6 {
   border-radius: 40px;
   box-shadow: 0 0 23px 3px rgba(1, 1, 1, 0.2);
   font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .main-footer.footer-organization .main-footer-widget .main-footer-gallery-list .main-footer-gallery-item .main-footer-gallery-list-item-icon:hover {
