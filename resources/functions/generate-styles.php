@@ -45,55 +45,65 @@ function render_custom_css($var_styles)
 }
 
 
+function goza_theme_ngo_options_styles(){
+
+    $var_styles = [
+        "--link-color" => '#ed9913',
+        "--link-color-hover" => '#ed7a13'
+    ];
+
+    return $var_styles;
+}
+
 function goza_theme_options_styles()
 {
     $custom_css = '';
 
     //typo body
     $typography_body = __get_field('typography_body', 'option');
-    $body_font_family = '"' . $typography_body['body_font_family'] . '", sans-serif';
-    $body_font_weight = $typography_body['body_font_weight'];
-    $body_font_size = $typography_body['body_font_size'];
-    $body_line_height = $typography_body['body_line_height'];
-    $body_letter_spacing = $typography_body['body_letter_spacing'];
-    $body_color = $typography_body['body_color'];
+    $body_font_family = isset($typography_body['body_font_family']) ? '"' . $typography_body['body_font_family'] . '", sans-serif' : '"Poppins", sans-serif';
+    $body_font_weight = isset($typography_body['body_font_weight']) ? $typography_body['body_font_weight'] : '400';
+    $body_font_size = isset($typography_body['body_font_size']) ? $typography_body['body_font_size'] : '16px';
+    $body_line_height = isset($typography_body['body_line_height']) ? $typography_body['body_line_height'] : '1.625';
+    $body_letter_spacing = isset($typography_body['body_letter_spacing']) ? $typography_body['body_letter_spacing'] : 'normal';
+    $body_color = isset($typography_body['body_color']) ? $typography_body['body_color'] : '#666';
 
     //type heading
     $typography_heading = __get_field('typography_heading', 'option');
-    $heading_font_family = '"' . $typography_heading['heading_font_family'] . '", sans-serif';
-    $heading_font_weight = $typography_heading['heading_font_weight'];
-    $heading_font_style = $typography_heading['heading_font_style'];
-    $heading_letter_spacing = $typography_heading['heading_letter_spacing'];
-    $heading_color = $typography_heading['heading_color'];
+    $heading_font_family = isset($typography_heading['heading_font_family']) ? '"' . $typography_heading['heading_font_family'] . '", sans-serif' : '"Poppins", sans-serif';
+    $heading_font_weight = isset($typography_heading['heading_font_weight']) ? $typography_heading['heading_font_weight'] : '700';
+    $heading_font_style = isset($typography_heading['heading_font_style']) ? $typography_heading['heading_font_style'] : 'normal';
+    $heading_letter_spacing = isset($typography_heading['heading_letter_spacing']) ? $typography_heading['heading_letter_spacing'] : '1.1';
+    $heading_color = isset($typography_heading['heading_color']) ? $typography_heading['heading_color'] : '#333';
 
     $h1_font_style = __get_field('h1_font_style', 'option');
-    $h1_font_size = $h1_font_style['font_size'];
-    $h1_line_height = $h1_font_style['line_height'];
+    $h1_font_size = isset($h1_font_style['font_size']) ? $h1_font_style['font_size'] : '55px';
+    $h1_line_height = isset($h1_font_style['line_height']) ? $h1_font_style['line_height'] : '1.18';
 
     $h2_font_style = __get_field('h2_font_style', 'option');
-    $h2_font_size = $h2_font_style['font_size'];
-    $h2_line_height = $h2_font_style['line_height'];
+    $h2_font_size = isset($h2_font_style['font_size']) ? $h2_font_style['font_size'] : '40px';
+    $h2_line_height = isset($h2_font_style['line_height']) ? $h2_font_style['line_height'] : '1.4';
 
     $h3_font_style = __get_field('h3_font_style', 'option');
-    $h3_font_size = $h3_font_style['font_size'];
-    $h3_line_height = $h3_font_style['line_height'];
+    $h3_font_size = isset($h3_font_style['font_size']) ? $h3_font_style['font_size'] : '36px';
+    $h3_line_height = isset($h3_font_style['line_height']) ? $h3_font_style['line_height'] : '1.3';
 
     $h4_font_style = __get_field('h4_font_style', 'option');
-    $h4_font_size = $h4_font_style['font_size'];
-    $h4_line_height = $h4_font_style['line_height'];
+    $h4_font_size = isset($h4_font_style['font_size']) ? $h4_font_style['font_size'] : '28px';
+    $h4_line_height = isset($h4_font_style['line_height']) ? $h4_font_style['line_height'] : '1.23';
 
     $h5_font_style = __get_field('h5_font_style', 'option');
-    $h5_font_size = $h5_font_style['font_size'];
-    $h5_line_height = $h5_font_style['line_height'];
+    $h5_font_size = isset($h5_font_style['font_size']) ? $h5_font_style['font_size'] : '24px';
+    $h5_line_height = isset($h5_font_style['line_height']) ? $h5_font_style['line_height'] : '1.2';
 
     $h6_font_style = __get_field('h6_font_style', 'option');
-    $h6_font_size = $h6_font_style['font_size'];
-    $h6_line_height = $h6_font_style['line_height'];
+    $h6_font_size = isset($h6_font_style['font_size']) ? $h6_font_style['font_size'] : '20px';
+    $h6_line_height = isset($h6_font_style['line_height']) ? $h6_font_style['line_height'] : '1.2';
 
     //var color
     $link_op = __get_field('goza_link_color_op', 'option');
-    $link_color = $link_op['link_color'];
-    $link_hover_color = $link_op['link_hover_color'];
+    $link_color = isset($link_op['link_color']) ? $link_op['link_color'] : '#d41b65';
+    $link_hover_color = isset($link_op['link_hover_color']) ? $link_op['link_hover_color'] : '#dd548b';
 
     //preloader
     $enable_preloader = __get_field('goza_enable_preloader', 'option');
@@ -103,22 +113,22 @@ function goza_theme_options_styles()
 
     //header color
     $header_color_op = __get_field('goza_header_color_op', 'option');
-    $header_bg_color = $header_color_op['goza_header_bg_color'];
-    $header_txt_color = $header_color_op['goza_header_txt_color'];
-    $header_bg_menu_color = $header_color_op['goza_bg_menu'];
+    $header_bg_color = isset($header_color_op['goza_header_bg_color']) ? $header_color_op['goza_header_bg_color'] : '#FFF';
+    $header_txt_color = isset($header_color_op['goza_header_txt_color']) ? $header_color_op['goza_header_txt_color'] : 'rgb(40,40,40)';
+    $header_bg_menu_color = isset($header_color_op['goza_bg_menu']) ? $header_color_op['goza_bg_menu'] : '#213e8c';
 
     //footer color
     $footer_color_op = __get_field('goza_ft_color_op', 'option');
-    $footer_heading_color = $footer_color_op['goza_ft_heading_color'];
-    $footer_text_color = $footer_color_op['goza_ft_txt_color'];
-    $footer_bg_color = $footer_color_op['goza_ft_bg_color'];
-    $socket_bg_color = $footer_color_op['goza_socket_bg_color'];
-    $socket_txt_color = $footer_color_op['goza_socket_txt_color'];
+    $footer_heading_color = isset($footer_color_op['goza_ft_heading_color']) ? $footer_color_op['goza_ft_heading_color'] : '#FFF';
+    $footer_text_color = isset($footer_color_op['goza_ft_txt_color']) ? $footer_color_op['goza_ft_txt_color'] : 'rgb(196,196,196)';
+    $footer_bg_color = isset($footer_color_op['goza_ft_bg_color']) ? $footer_color_op['goza_ft_bg_color'] : 'rgb(10,10,10)';
+    $socket_bg_color = isset($footer_color_op['goza_socket_bg_color']) ? $footer_color_op['goza_socket_bg_color'] : 'rgb(48,54,204)';
+    $socket_txt_color = isset($footer_color_op['goza_socket_txt_color']) ? $footer_color_op['goza_socket_txt_color'] : '#FFF';
 
     //topbar color
     $topbar_color_op = __get_field('goza_topbar_color_op', 'option');
-    $topbar_bg_color = $topbar_color_op['goza_topbar_bg_color'];
-    $topbar_text_color = $topbar_color_op['goza_topbar_text_color'];
+    $topbar_bg_color = isset($topbar_color_op['goza_topbar_bg_color']) ? $topbar_color_op['goza_topbar_bg_color'] : '#FFF';
+    $topbar_text_color = isset($topbar_color_op['goza_topbar_text_color']) ? $topbar_color_op['goza_topbar_text_color'] : '#d41b65';
 
     $var_styles = [
         "--body-family" => $body_font_family,
@@ -157,10 +167,15 @@ function goza_theme_options_styles()
         "--socket-bg-color" => $socket_bg_color,
         "--topbar-text-color" => $topbar_text_color,
         "--topbar-bg-color" => $topbar_bg_color,
-
     ];
 
-    $custom_css .= render_custom_css($var_styles);
+    if($_GET['home'] == 'ngo'){
+        $var_styles_home_ngo = goza_theme_ngo_options_styles();
+    }
+
+    $global_var_styles = array_replace_recursive($var_styles, $var_styles_home_ngo);
+
+    $custom_css .= render_custom_css($global_var_styles);
 
     return $custom_css;
 }
