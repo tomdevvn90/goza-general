@@ -23,6 +23,11 @@
                     object-fit: cover;
                     -o-object-position: center;
                     object-position: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                    @include media-breakpoint-down(lg) {
+                        max-width: 360px;
+                    }
                 }
 
                 &::before{
@@ -119,8 +124,12 @@
                 &::before{
                     content: "\f061";
                 }
-                @media (max-width: 1299px) {
-                    right: 0;
+                @include media-breakpoint-down(lg) { 
+                    right: -20px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    right: -40px;
                 }
             }
 
@@ -129,8 +138,13 @@
                 &::before{
                     content: "\f060";
                 }
-                @media (max-width: 1299px) {
-                    left: 0;
+   
+                @include media-breakpoint-down(lg) { 
+                    left: -20px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    left: -40px;
                 }
             }
 

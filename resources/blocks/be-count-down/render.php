@@ -24,7 +24,7 @@ $height        = get_field('height_count_down_bl') ? : '';
 ?>
 
 <div id="<?php echo $id; ?>" class="be-count-down <?php echo $align_class; ?>" style="min-height:<?= $height ?>">
-    <div class="be-count-down--inner"> 
+    <div class="be-count-down--inner" data-aos="fade-up"> 
         <div class="be-count-down--bg"> 
             <?php if(is_array($bg)){
                 $srcset = wp_get_attachment_image_srcset($bg['id']) ? : '';

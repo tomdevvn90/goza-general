@@ -3286,6 +3286,14 @@
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1199.98px) {
+  .be-team-carousel-inner .item-team--avatar img {
+    max-width: 360px;
+  }
 }
 
 .be-team-carousel-inner .item-team--avatar::before {
@@ -3384,9 +3392,15 @@
   content: "\F061";
 }
 
-@media (max-width: 1299px) {
+@media (max-width: 1199.98px) {
   .be-team-carousel-inner .slick-arrow.slick-next {
-    right: 0;
+    right: -20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .be-team-carousel-inner .slick-arrow.slick-next {
+    right: -40px;
   }
 }
 
@@ -3398,9 +3412,15 @@
   content: "\F060";
 }
 
-@media (max-width: 1299px) {
+@media (max-width: 1199.98px) {
   .be-team-carousel-inner .slick-arrow.slick-prev {
-    left: 0;
+    left: -20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .be-team-carousel-inner .slick-arrow.slick-prev {
+    left: -40px;
   }
 }
 
@@ -5231,7 +5251,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border-bottom: 2px solid var(--heading-color);
+  border-bottom: 2px solid var(--link-color);
   margin: 0 auto;
 }
 
@@ -6883,16 +6903,34 @@
   cursor: pointer;
   background-color: var(--link-color-hover);
   transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.be-ss-upcoming-event-video--content-event-list-inner .item-event--icon-toggle::before,
+.be-ss-upcoming-event-video--content-event-list-inner .item-event--icon-toggle::after {
+  background: white;
+  content: "";
+  height: 2px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  width: 14px;
+  transition: transform 500ms ease;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  transform: translate(-50%, -50%);
+  display: inline-block;
 }
 
 .be-ss-upcoming-event-video--content-event-list-inner .item-event--icon-toggle::before {
-  content: "+";
-  position: absolute;
-  color: #fff;
-  left: calc(50% - 6px);
-  line-height: 30px;
-  font-size: 23px;
-  font-weight: 100;
+  transform: translate(-50%, -50%) rotate(270deg);
+}
+
+.be-ss-upcoming-event-video--content-event-list-inner .item-event--icon-toggle::after {
+  transform-origin: center;
 }
 
 .be-ss-upcoming-event-video--content-event-list-inner .item-event--icon-toggle:hover {
@@ -6976,8 +7014,7 @@
 }
 
 .be-ss-upcoming-event-video--content-event-list-inner .item-event:not(.__hide) .item-event--icon-toggle::before {
-  content: "_";
-  line-height: 9px;
+  transform: translate(-50%, -50%);
 }
 
 .be-ss-upcoming-event-video--content-cta {
@@ -7046,6 +7083,7 @@
   background: #d41b65 repeat scroll 0 0;
   border-radius: 50%;
   animation: pulse-border 1500ms ease-out infinite;
+  z-index: -1;
 }
 
 .be-numberal-donation-box {
@@ -11638,6 +11676,11 @@
   }
 }
 
+.be-ss-ab-vd--top {
+  z-index: 9;
+  position: relative;
+}
+
 .be-ss-ab-vd--top-left,
 .be-ss-ab-vd--top-right {
   width: 100%;
@@ -11832,6 +11875,12 @@
 
 .be-events-carousel-inner {
   padding-bottom: 70px;
+}
+
+@media (max-width: 991.98px) {
+  .be-events-carousel-inner {
+    padding-bottom: 79px;
+  }
 }
 
 .be-events-carousel-inner .item-event--sub-heading {

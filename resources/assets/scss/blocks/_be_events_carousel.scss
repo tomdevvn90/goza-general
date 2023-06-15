@@ -1,6 +1,9 @@
 .be-events-carousel{
     &-inner{
         padding-bottom: 70px;
+        @include media-breakpoint-down(md){
+            padding-bottom: 79px;
+        }
         .item-event{
             &--sub-heading{
                 font-size: 21px;

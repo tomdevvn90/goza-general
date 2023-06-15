@@ -50,7 +50,7 @@
                         max-width: 170px;
 
                         @include media-breakpoint-down(lg) {
-                            max-width: 80px;
+                            max-width: 115px;
                         }
 
                         @include media-breakpoint-down(md) {
@@ -217,6 +217,11 @@
                             font-family: var(--heading-family, Poppins, sans-serif);
                             -webkit-transition: 0.3s;
                             transition: 0.3s;
+
+                            @include media-breakpoint-down(lg) {
+                                font-size: 14px;
+                                line-height: 100%;
+                            }
 
                             &:hover {
                                 color: var(--link-color-hover, #d94532);

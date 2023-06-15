@@ -1,7 +1,7 @@
 <?php
-function load_template_gallerys($is_style){
-    switch ($is_style) {
-        case strpos($is_style, 'is-style-ngo-dark') !== false:
+function load_template_gallerys($classes){
+    switch ($classes) {
+        case strpos($classes, 'is-style-ngo-dark') !== false:
             be_tempplate_gallery_default();
             break;
 

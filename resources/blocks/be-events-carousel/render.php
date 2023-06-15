@@ -59,7 +59,7 @@ if (is_plugin_active('the-events-calendar/the-events-calendar.php')) {
 
    <div id="<?php echo $id; ?>" class="be-events-carousel <?php echo $align_class?>"> 
       <?php if ($the_query->have_posts()) { ?>
-         <div class="be-events-carousel-inner" data-carousel='<?= json_encode($data_carousel) ?>'> 
+         <div class="be-events-carousel-inner" data-carousel='<?= json_encode($data_carousel) ?>' data-aos="fade-up"> 
             <?php while ($the_query->have_posts()) {
                   $the_query->the_post(); 
                   $event_date = tribe_get_start_date( get_the_ID(), true, 'j M Y');

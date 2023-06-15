@@ -6,12 +6,24 @@ function goza_block_assets()
 	wp_register_style('goza-block-editor-css', get_template_directory_uri() . '/editor/dist/blocks.editor.build.css', array('wp-edit-blocks'), null);
 
 	register_block_type(
-		'goza/block-my-block',
+		'goza/goza-blocks',
 		array(
 			'style'         => 'goza-block-style-css',
 			'editor_script' => 'goza-block-js',
 			'editor_style'  => 'goza-block-editor-css',
 		)
+	);
+
+	$user_data = wp_get_current_user();
+	unset( $user_data->user_pass, $user_data->user_email );
+
+	// WP Localized globals. Use dynamic PHP stuff in JavaScript via `cgbGlobal` object.
+	wp_localize_script(
+		'goza-block-js',
+		'goza_blocks_globals', // Array containing dynamic data for a JS Global.
+		[
+			'user_data'              => $user_data,
+		]
 	);
 }
 add_action('init', 'goza_block_assets');

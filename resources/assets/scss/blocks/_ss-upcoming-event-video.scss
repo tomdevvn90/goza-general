@@ -190,14 +190,31 @@
                         cursor: pointer;
                         background-color: var(--link-color-hover);
                         transition: all 0.3s ease;
-                        &::before{
-                            content: "+";
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        align-content: center;
+                        &::before, &::after{
+                            background: #Ffff;
+                            content: "";
+                            height: 2px;
+                            left: 50%;
+                            top: 50%;
                             position: absolute;
-                            color: #fff;
-                            left: calc(50% - 6px);
-                            line-height: 30px;
-                            font-size: 23px;
-                            font-weight: 100;
+                            width: 14px;
+                            transition: transform 500ms ease;
+                            border-radius: 3px;
+                            -webkit-border-radius: 3px;
+                            transform: translate(-50%, -50%);
+                            display: inline-block;
+                        }
+
+                        &::before{
+                            transform: translate(-50%, -50%) rotate(270deg);
+                        }
+
+                        &::after{
+                            transform-origin: center;
                         }
         
                         &:hover{
@@ -283,8 +300,7 @@
                     &:not(.__hide){
                         .item-event--icon-toggle{
                             &::before{
-                                content: "_";
-                                line-height: 9px;
+                                transform: translate(-50%, -50%);
                             }
                         }
                     }
@@ -350,6 +366,7 @@
                     border-radius: 50%;
                     -webkit-animation: pulse-border 1500ms ease-out infinite;
                     animation: pulse-border 1500ms ease-out infinite;
+                    z-index: -1;
                 }
             }
         }

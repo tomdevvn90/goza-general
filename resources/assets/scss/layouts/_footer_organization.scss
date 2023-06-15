@@ -117,7 +117,12 @@
                         overflow: hidden;
                         display: block;
                         position: relative;
-
+                        i{
+                            box-sizing: border-box;
+                            &::before{
+                                content: "+";
+                            }
+                        }
                         &:hover {
                             .main-footer-gallery-list-item-icon {
                                 visibility: visible;
@@ -152,7 +157,10 @@
                             border-radius: 40px;
                             box-shadow: 0 0 23px 3px rgba(1, 1, 1, .2);
                             font-size: 30px;
-
+                            display: flex;
+                            justify-content: center;
+                            align-content: center;
+                            align-items: center;
                             &:hover {
                                 background: var(--link-color-hover, #e94776);
 
