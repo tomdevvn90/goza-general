@@ -23,9 +23,8 @@ if (!defined('ABSPATH')) {
 	<?php wp_head(); ?>
 </head>
 
-<?php $classes = goza_check_variable_home() ?>
-<body <?php body_class($classes); ?>>
 
+<body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 
 	<!--Start site wrap -->

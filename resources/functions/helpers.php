@@ -64,6 +64,21 @@ if (!function_exists('goza_svg_icon')) {
 	}
 }
 
+if (!function_exists('goza_variable_style_home')) {
+
+	/**
+	 * @param $icon
+	 *
+	 * @return mixed|string
+	 */
+	function goza_variable_style_home($var_name)
+	{
+		$variable = require(__DIR__ . '/variables/' . $var_name . '.php');
+
+		return $variable ? $variable : [];
+	}
+}
+
 if (!function_exists('goza_the_posts_navigation')) {
 	function goza_the_posts_navigation($args = array(), $base = false, $query = false)
 	{
@@ -142,18 +157,6 @@ if (!function_exists('__get_fields')) {
 
 		return [];
 	}
-}
-
-
-//check home by variable GET
-function goza_check_variable_home()
-{
-	$classes = '';
-	if (isset($_GET['h']) && $_GET['h'] == 'ngo') {
-		$classes = 'home-ngo-styles';
-	}
-
-	return $classes;
 }
 
 
@@ -337,36 +340,42 @@ if (!function_exists('goza_single_post_related')) {
 	}
 }
 
-function goza_expandable_excerpt($excerpt)
-{
-	$split = explode(" ", $excerpt); //convert string to array
-	$len = count($split); //get number of words
-	$words_to_show_first = 29; //Word to be dsiplayed first
-	if ($len > $words_to_show_first) { //check if it's longer the than first part
+if (!function_exists('goza_expandable_excerpt')) {
+	function goza_expandable_excerpt($excerpt)
+	{
+		$split = explode(" ", $excerpt); //convert string to array
+		$len = count($split); //get number of words
+		$words_to_show_first = 29; //Word to be dsiplayed first
+		if ($len > $words_to_show_first) { //check if it's longer the than first part
 
-		$firsthalf = array_slice($split, 0, $words_to_show_first);
-		$secondhalf = array_slice($split, $words_to_show_first, $len - 1);
-		$output = '<p class="event-excerpt" >';
-		$output .= implode(' ', $firsthalf) . '...';
-		$output .= '</p>';
-	} else {
-		$output = '<p class="event-excerpt">'  .   $excerpt . '</p>';
+			$firsthalf = array_slice($split, 0, $words_to_show_first);
+			$secondhalf = array_slice($split, $words_to_show_first, $len - 1);
+			$output = '<p class="event-excerpt" >';
+			$output .= implode(' ', $firsthalf) . '...';
+			$output .= '</p>';
+		} else {
+			$output = '<p class="event-excerpt">'  .   $excerpt . '</p>';
+		}
+		return $output;
 	}
-	return $output;
 }
 
 /**
  * Gets the SVG code for a given icon.
  */
-function goza_get_icon_svg( $icon, $size = 24 ) {
-	return Goza_SVG_Icons::get_svg( 'ui', $icon, $size );
+if (!function_exists('goza_get_icon_svg')) {
+	function goza_get_icon_svg($icon, $size = 24)
+	{
+		return Goza_SVG_Icons::get_svg('ui', $icon, $size);
+	}
 }
 
 /**
  * Gets the SVG code for a given social icon.
  */
-function goza_get_social_icon_svg( $icon, $size = 24 ) {
-	return Goza_SVG_Icons::get_svg( 'social', $icon, $size );
+if (!function_exists('goza_get_social_icon_svg')) {
+	function goza_get_social_icon_svg($icon, $size = 24)
+	{
+		return Goza_SVG_Icons::get_svg('social', $icon, $size);
+	}
 }
-
-

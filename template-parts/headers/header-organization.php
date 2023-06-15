@@ -10,6 +10,7 @@ $classes = [
 ];
 $custom_logo_id = get_theme_mod('custom_logo');
 $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+$goza_enable_topbar = __get_field('goza_enable_topbar', 'option');
 $header_btn = __get_field('goza_header_button', 'option');
 $icon_cart = __get_field('goza_enable_cart', 'option');
 $goza_header_search = __get_field('goza_header_search', 'option');

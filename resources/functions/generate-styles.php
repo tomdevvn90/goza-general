@@ -45,16 +45,6 @@ function render_custom_css($var_styles)
 }
 
 
-function goza_theme_ngo_options_styles(){
-
-    $var_styles = [
-        "--link-color" => '#ed9913',
-        "--link-color-hover" => '#ed7a13'
-    ];
-
-    return $var_styles;
-}
-
 function goza_theme_options_styles()
 {
     $custom_css = '';
@@ -169,13 +159,12 @@ function goza_theme_options_styles()
         "--topbar-bg-color" => $topbar_bg_color,
     ];
 
-    if($_GET['home'] == 'ngo'){
-        $var_styles_home_ngo = goza_theme_ngo_options_styles();
+    if(isset($_GET['home']) && $_GET['home'] == 'ngo'){
+        $var_styles_home_ngo = goza_variable_style_home('home-ngo');
+        $var_styles = array_replace_recursive($var_styles, $var_styles_home_ngo);
     }
 
-    $global_var_styles = array_replace_recursive($var_styles, $var_styles_home_ngo);
-
-    $custom_css .= render_custom_css($global_var_styles);
+    $custom_css .= render_custom_css($var_styles);
 
     return $custom_css;
 }
