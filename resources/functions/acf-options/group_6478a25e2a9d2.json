@@ -1,10 +1,10 @@
 {
-    "key": "group_6409f873b61f5",
-    "title": "Testimonials Block",
+    "key": "group_6478a25e2a9d2",
+    "title": "Be Team Carousel",
     "fields": [
         {
-            "key": "field_645212cda7c8a",
-            "label": "Testimonials",
+            "key": "field_6478a260e0315",
+            "label": "General",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -20,9 +20,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_6409f874f2194",
-            "label": "List Items",
-            "name": "items_tm_bl",
+            "key": "field_6478a2ebe0316",
+            "label": "List Team",
+            "name": "items_team_carousel_bl",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -38,90 +38,25 @@
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Add Row",
+            "button_label": "Add Team",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_6409fbb82b49f",
-                    "label": "User Name",
-                    "name": "user_name",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "Your Name",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_6409f874f2194"
-                },
-                {
-                    "key": "field_6409fde3c0574",
-                    "label": "Position",
-                    "name": "position",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "Position",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_6409f874f2194"
-                },
-                {
-                    "key": "field_6409fdbdc0573",
-                    "label": "Description",
-                    "name": "description",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "I am test text block one. Click edit button to change this text.",
-                    "acfe_textarea_code": 0,
-                    "maxlength": "",
-                    "rows": 4,
-                    "placeholder": "",
-                    "new_lines": "",
-                    "parent_repeater": "field_6409f874f2194"
-                },
-                {
-                    "key": "field_6409fdfdc0575",
-                    "label": "Image",
-                    "name": "image",
+                    "key": "field_6478a3d5e0317",
+                    "label": "Avatar",
+                    "name": "avatar",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "uploader": "",
-                    "return_format": "url",
-                    "acfe_thumbnail": 0,
+                    "return_format": "array",
+                    "library": "all",
                     "min_width": "",
                     "min_height": "",
                     "min_size": "",
@@ -130,14 +65,131 @@
                     "max_size": "",
                     "mime_types": "",
                     "preview_size": "medium",
-                    "library": "all",
-                    "parent_repeater": "field_6409f874f2194"
+                    "parent_repeater": "field_6478a2ebe0316"
+                },
+                {
+                    "key": "field_6478a3f9e0318",
+                    "label": "Name",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Veronica Cooper",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6478a2ebe0316"
+                },
+                {
+                    "key": "field_6478a412e0319",
+                    "label": "Postion",
+                    "name": "postion",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Volunteers",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6478a2ebe0316"
+                },
+                {
+                    "key": "field_6478a546df7ff",
+                    "label": "Social Network",
+                    "name": "social",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_6478a546df800",
+                            "label": "Icon",
+                            "name": "icon",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "facebook": "Facebook",
+                                "google-plus": "Google Plus",
+                                "twitter": "Twitter",
+                                "linkedin": "LinkedIn",
+                                "pinterest-p": "Pinterest",
+                                "youtube": "Youtube"
+                            },
+                            "default_value": false,
+                            "return_format": "array",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "parent_repeater": "field_6478a546df7ff"
+                        },
+                        {
+                            "key": "field_6478a546df801",
+                            "label": "Url",
+                            "name": "url",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_6478a546df7ff"
+                        }
+                    ],
+                    "parent_repeater": "field_6478a2ebe0316"
                 }
             ]
         },
         {
-            "key": "field_645212e138de3",
-            "label": "Slider Settings",
+            "key": "field_6478b050bc23e",
+            "label": "Carousel Settings",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -153,9 +205,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_640b3e1293e8b",
+            "key": "field_6478b025ded78",
             "label": "List Options",
-            "name": "slider_setting_tm_bl",
+            "name": "setting_team_carousel_bl",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -169,7 +221,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_640b3e2793e8c",
+                    "key": "field_6478b025ded79",
                     "label": "Number slide to show",
                     "name": "slidesToShow",
                     "aria-label": "",
@@ -182,7 +234,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": 2,
+                    "default_value": 3,
                     "min": "",
                     "max": "",
                     "placeholder": "",
@@ -191,7 +243,7 @@
                     "append": ""
                 },
                 {
-                    "key": "field_640b3e5893e8d",
+                    "key": "field_6478b025ded7a",
                     "label": "Number slides to scroll",
                     "name": "slidesToScroll",
                     "aria-label": "",
@@ -213,7 +265,7 @@
                     "append": ""
                 },
                 {
-                    "key": "field_640b3eb9e55fe",
+                    "key": "field_6478b025ded7b",
                     "label": "Arrows",
                     "name": "arrows",
                     "aria-label": "",
@@ -233,7 +285,7 @@
                     "ui": 1
                 },
                 {
-                    "key": "field_640b3eebe55ff",
+                    "key": "field_6478b025ded7c",
                     "label": "Dots",
                     "name": "dots",
                     "aria-label": "",
@@ -253,7 +305,7 @@
                     "ui": 1
                 },
                 {
-                    "key": "field_640b3f6df06f7",
+                    "key": "field_6478b025ded7d",
                     "label": "Autoplay",
                     "name": "autoplay",
                     "aria-label": "",
@@ -273,7 +325,7 @@
                     "ui": 1
                 },
                 {
-                    "key": "field_640b3f86f06f8",
+                    "key": "field_6478b025ded7e",
                     "label": "Loop",
                     "name": "loop",
                     "aria-label": "",
@@ -293,7 +345,7 @@
                     "ui": 1
                 },
                 {
-                    "key": "field_64147f0420661",
+                    "key": "field_6478b025ded7f",
                     "label": "Fade",
                     "name": "fade",
                     "aria-label": "",
@@ -315,7 +367,7 @@
             ]
         },
         {
-            "key": "field_647fdef9c9e68",
+            "key": "field_648096ab4959c",
             "label": "Styles",
             "name": "",
             "aria-label": "",
@@ -332,81 +384,63 @@
             "endpoint": 0
         },
         {
-            "key": "field_647fdf08c9e69",
+            "key": "field_648096c54959d",
             "label": "Color Name",
-            "name": "color_name_tm_bl",
+            "name": "color_name_team_carousel_bl",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33.3",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "enable_opacity": 1,
+            "enable_opacity": 0,
             "return_format": "string"
         },
         {
-            "key": "field_647fdf36c9e6a",
-            "label": "Color Position",
-            "name": "color_position_tm_bl",
+            "key": "field_6480976b4959e",
+            "label": "Color Postion",
+            "name": "color_postion_team_carousel_bl",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33.3",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "enable_opacity": 1,
+            "enable_opacity": 0,
             "return_format": "string"
         },
         {
-            "key": "field_647fdf55c9e6b",
-            "label": "Color Description",
-            "name": "color_description_tm_bl",
+            "key": "field_648097964959f",
+            "label": "Color Socials",
+            "name": "color_social_team_carousel_bl",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33.3",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "enable_opacity": 1,
+            "enable_opacity": 0,
             "return_format": "string"
         },
         {
-            "key": "field_647fdf87c9e6c",
-            "label": "Background Color",
-            "name": "bg_item_tm_bl",
-            "aria-label": "",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 1,
-            "return_format": "string"
-        },
-        {
-            "key": "field_647fdfdfdf826",
-            "label": "Sliders",
-            "name": "sliders_color_tm_bl",
+            "key": "field_648097c4637b8",
+            "label": "Color Dots",
+            "name": "color_dots_team_carousel_bl",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -420,148 +454,130 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_647fe00bdf827",
-                    "label": "Color Dots",
-                    "name": "dots",
+                    "key": "field_64809814637b9",
+                    "label": "Color Default",
+                    "name": "default",
                     "aria-label": "",
-                    "type": "group",
+                    "type": "color_picker",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
-                    "layout": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_647fe01edf828",
-                            "label": "Default",
-                            "name": "default",
-                            "aria-label": "",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "enable_opacity": 1,
-                            "return_format": "string"
-                        },
-                        {
-                            "key": "field_647fe0bddf829",
-                            "label": "Active",
-                            "name": "active",
-                            "aria-label": "",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "enable_opacity": 1,
-                            "return_format": ""
-                        }
-                    ]
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": ""
                 },
                 {
-                    "key": "field_647fe0ed70969",
-                    "label": "Color Arrow",
-                    "name": "arrow",
+                    "key": "field_64809825637ba",
+                    "label": "Color Active",
+                    "name": "active",
                     "aria-label": "",
-                    "type": "group",
+                    "type": "color_picker",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
-                    "layout": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_647fe0ed7096a",
-                            "label": "Color Default",
-                            "name": "color_default",
-                            "aria-label": "",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "enable_opacity": 1,
-                            "return_format": "string"
-                        },
-                        {
-                            "key": "field_647fe0ed7096b",
-                            "label": "Color Hover",
-                            "name": "color_hover",
-                            "aria-label": "",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "rgba(255, 255, 255, 0)",
-                            "enable_opacity": 1,
-                            "return_format": "string"
-                        },
-                        {
-                            "key": "field_64802a4977018",
-                            "label": "Background Default",
-                            "name": "bg_default",
-                            "aria-label": "",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "enable_opacity": 1,
-                            "return_format": "string"
-                        },
-                        {
-                            "key": "field_64802a6277019",
-                            "label": "Background Hover",
-                            "name": "bg_hover",
-                            "aria-label": "",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "rgba(255, 255, 255, 0)",
-                            "enable_opacity": 1,
-                            "return_format": "string"
-                        }
-                    ]
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": ""
+                }
+            ]
+        },
+        {
+            "key": "field_648098545d899",
+            "label": "Color Arrow",
+            "name": "color_arrow_team_carousel_bl",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_648098545d89a",
+                    "label": "Color Default",
+                    "name": "cl_df",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_648098545d89b",
+                    "label": "Color Active",
+                    "name": "cl_at",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_6480986e5d89c",
+                    "label": "Background Default",
+                    "name": "bg_df",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_648098895d89d",
+                    "label": "Background Hover",
+                    "name": "bg_hv",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
                 }
             ]
         }
@@ -571,18 +587,18 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "goza\/be-testimonials"
+                "value": "acf\/be-team-carousel"
             }
         ]
     ],
     "menu_order": 0,
     "position": "normal",
     "style": "default",
-    "label_placement": "left",
+    "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1686121542
+    "modified": 1686150989
 }

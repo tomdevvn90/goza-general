@@ -7,13 +7,13 @@ import 'slick-carousel/slick/slick-theme.css';
 (function ($) {
     "use strict";
 
-    const beTestominialCarousel = () =>{
+    const beTestimonialCarousel = () =>{
 
-        const $block = $('.be-testominials-block');
+        const $block = $('.be-testimonials-block');
 		if ($block.length === 0) return;
 
         $block.each(function () {
-            let $carousel     = $(this).find('.be-testominials-block-carousel'),
+            let $carousel     = $(this).find('.be-testimonials-block-carousel'),
                 $dataCarousel = $(this).data('carousel'),
                 $style        = $(this).data('style'),
                 $arrowTablet  = true,
@@ -64,7 +64,7 @@ import 'slick-carousel/slick/slick-theme.css';
     });
 
     $(document).ready(function () {
-        beTestominialCarousel()
+        beTestimonialCarousel()
     })
 
 })(jQuery);

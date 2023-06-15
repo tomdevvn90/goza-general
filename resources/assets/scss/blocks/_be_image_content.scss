@@ -1,15 +1,27 @@
 .goza-image-content-block {
     &.alignfull {
-        .block-inner__col {
-            &.block-inner__content {
-                padding: 60px;
+        .block-inner {
+            margin-left: 0;
+            margin-right: 0;
 
-                @include media-breakpoint-down(md) {
-                    padding: 60px 40px;
+            .block-inner__col {
+                &.block-inner__content {
+                    padding: 60px;
+
+                    @include media-breakpoint-down(md) {
+                        padding: 60px 40px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        padding: 60px 15px;
+                    }
                 }
 
-                @include media-breakpoint-down(sm) {
-                    padding: 60px 15px;
+                &.block-inner__image {
+                    img {
+                        width: 100%;
+                        left: 0;
+                    }
                 }
             }
         }
@@ -18,6 +30,8 @@
     .block-inner {
         display: flex;
         flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
 
         &__col {
             position: relative;

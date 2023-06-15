@@ -1369,13 +1369,14 @@
                         "Exo 2": "Exo 2",
                         "Fira Sans": "Fira Sans",
                         "Roboto": "Roboto",
-                        "Calligraffitti": "Calligraffitti"
+                        "Calligraffitti": "Calligraffitti",
+                        "Muli": "Muli"
                     },
                     "default_value": false,
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
                     "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
                     "ajax": 0,
                     "placeholder": ""
                 },
@@ -1529,14 +1530,15 @@
                         "Exo 2": "Exo 2",
                         "Fira Sans": "Fira Sans",
                         "Roboto": "Roboto",
-                        "Calligraffitti": "Calligraffitti"
+                        "Calligraffitti": "Calligraffitti",
+                        "Muli": "Muli"
                     },
                     "default_value": false,
-                    "allow_null": 0,
+                    "return_format": "value",
                     "multiple": 0,
+                    "allow_null": 0,
                     "ui": 1,
                     "ajax": 0,
-                    "return_format": "value",
                     "placeholder": ""
                 },
                 {
@@ -2159,5 +2161,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685498151
+    "modified": 1686230483
 }

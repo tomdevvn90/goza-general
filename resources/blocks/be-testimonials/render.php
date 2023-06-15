@@ -1,43 +1,72 @@
 <?php
 
 // create id attribute for specific styling
-$id = 'be-testominials-' . $block['id'];
+$id = 'be-testimonials-' . $block['id'];
 
 // create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$testominials     = get_field('list_items');
-$carousel_setting = get_field('slider_setting');
+$testimonials     = get_field('items_tm_bl') ? : '';
+$carousel_setting = get_field('slider_setting_tm_bl') ? : '';
+$color_name       = get_field('color_name_tm_bl') ? : '';
+$color_position   = get_field('color_position_tm_bl') ? : '';
+$color_desc       = get_field('color_description_tm_bl') ? : '';
+$bg_item          = get_field('bg_item_tm_bl') ? : '';
+$slider_color     = get_field('sliders_color_tm_bl') ? : '';
 
-$data_carousel = array(
-    'slidesToShow'   =>  $carousel_setting['slidesToShow'] ? intval($carousel_setting['slidesToShow']) : 1,
-    'slidesToScroll' =>  $carousel_setting['slidesToScroll'] ? intval($carousel_setting['slidesToScroll']) : 1,
-    'arrows'         =>  $carousel_setting['arrows'] ? : false,
-    'dots'           =>  $carousel_setting['dots'] ?: false,
-    'autoplay'       =>  $carousel_setting['autoplay'] ?: false,
-    'loop'           =>  $carousel_setting['loop'] ?: false,
-    'fade'           =>  $carousel_setting['fade'] ?: false,
-);
+$link_op = get_field('goza_link_color_op', 'option') ? : '';
+if(!empty($link_op) && isset($link_op)){
+    $link_color = $link_op['link_color'];
+}
 
-$is_style = isset($block['className']) ? $block['className'] : "is-style-default";
+if(!empty($slider_color) && isset($slider_color)){
+    $color_dots    = $slider_color['dots'] ? : '';
+    $color_dots_df = $color_dots['default'] ? : '#fff';
+    $color_dots_at = $color_dots['active'] ? : $link_color;
+
+    $color_arrow    = $slider_color['arrow'] ? : '';
+    $color_arrow_df = $color_arrow['color_default'] ? : '#fff';
+    $color_arrow_hv = $color_arrow['color_hover'] ? : $link_color;
+
+    $bg_arrow_df = $color_arrow['bg_default'] ? : '#fff';
+    $bg_arrow_hv = $color_arrow['bg_hover'] ? : $link_color;
+}
+
+if(!empty($carousel_setting) && isset($carousel_setting)){
+    $data_carousel = array(
+        'slidesToShow'   =>  $carousel_setting['slidesToShow'] ? intval($carousel_setting['slidesToShow']) : 1,
+        'slidesToScroll' =>  $carousel_setting['slidesToScroll'] ? intval($carousel_setting['slidesToScroll']) : 1,
+        'arrows'         =>  $carousel_setting['arrows'] ? : false,
+        'dots'           =>  $carousel_setting['dots'] ?: false,
+        'autoplay'       =>  $carousel_setting['autoplay'] ?: false,
+        'loop'           =>  $carousel_setting['loop'] ?: false,
+        'fade'           =>  $carousel_setting['fade'] ?: false,
+    );
+}
+
+$classes = isset($block['className']) ? $block['className'] : "is-style-default";
 
 ?>
-<div id="<?php echo $id; ?>" class="be-testominials-block <?php echo $align_class; ?> <?php echo $is_style?>" data-style="<?php echo $is_style?>"  data-carousel='<?= json_encode($data_carousel) ?>'> 
-    <?php if(!empty($testominials)): ?>        
-        <div class="be-testominials-block-carousel"> 
-            <?php foreach ($testominials as $testominial): ?>
+<div id="<?php echo $id; ?>" class="be-testimonials-block <?php echo $align_class; ?> <?php echo $classes?>" data-style="<?php echo $classes?>"  data-carousel='<?= json_encode($data_carousel) ?>'> 
+    <?php if(!empty($testimonials) && isset($testimonials)): ?>        
+        <div class="be-testimonials-block-carousel" 
+            style="--bg-ar-df:<?= $bg_arrow_df ?>; --bg-ar-hv:<?= $bg_arrow_hv ?>;
+            --color-arrow-hv:<?= $color_arrow_hv ?> ; --color-arrow-df:<?= $color_arrow_df ?> ; 
+            --color-dot-df:<?= $color_dots_df ?>; --color-dot-at:<?= $color_dots_at ?>";
+        > 
+            <?php foreach ($testimonials as $testimonial): ?>
                 
-                <?php $img_url = (!empty($testominial['image'])) ? $testominial['image'] : get_template_directory_uri(). '/resources/assets/images/image-default.jpg' ; ?>
+                <?php $img_url = (!empty($testimonial['image'])) ? $testimonial['image'] : get_template_directory_uri(). '/resources/assets/images/image-default.jpg' ; ?>
                 
-                <div class="item-testominial"> 
-                    <div class="item-testominial-inner"> 
-                        <div class="item-testominial-thumbnail"> 
+                <div class="item-testimonial"> 
+                    <div class="item-testimonial-inner"> 
+                        <div class="item-testimonial-thumbnail"> 
                             <img src="<?php echo esc_url($img_url) ?>" alt="image">
                         </div>
 
-                        <div class="item-testominial-content"> 
-                            <div class="item-testominial--icon-quocte"> 
+                        <div class="item-testimonial-content" style="background-color:<?= $bg_item ?>"> 
+                            <div class="item-testimonial--icon-quocte"> 
                                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="64.000000pt" height="57.000000pt" viewBox="0 0 64.000000 57.000000" preserveAspectRatio="xMidYMid meet">
                                     <g transform="translate(0.000000,57.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                                         <path d="M20 550 c-17 -17 -20 -33 -20 -113 0 -121 10 -137 87 -137 l56 0 -6
@@ -60,17 +89,23 @@ $is_style = isset($block['className']) ? $block['className'] : "is-style-default
                                 </svg>
                             </div>
                             
-                            <?php if(!empty($testominial['description'])): ?>
-                                <p class="item-testominial-desc"> <?php echo $testominial['description'] ?> </p>
+                            <?php if(!empty($testimonial['description'])): ?>
+                                <p class="item-testimonial-desc" style="color:<?= $color_desc ?>"> 
+                                    <?php echo $testimonial['description'] ?> 
+                                </p>
                             <?php endif; ?> 
                             
-                            <div class="item-testominial-info">
-                                <?php if(!empty($testominial['user_name'])): ?>
-                                    <h3 class="item-testominial-name"> <?php echo $testominial['user_name'] ?> </h3>
+                            <div class="item-testimonial-info">
+                                <?php if(!empty($testimonial['user_name'])): ?>
+                                    <h3 class="item-testimonial-name" style="color:<?= $color_name ?>"> 
+                                        <?php echo $testimonial['user_name'] ?> 
+                                    </h3>
                                 <?php endif; ?>
                                 
-                                <?php if(!empty($testominial['position'])): ?>
-                                    <p class="item-testominial-position"> <?php echo $testominial['position'] ?> </p>
+                                <?php if(!empty($testimonial['position'])): ?>
+                                    <p class="item-testimonial-position" style="color:<?= $color_position ?>"> 
+                                        <?php echo $testimonial['position'] ?> 
+                                    </p>
                                 <?php endif; ?>
                             </div>   
                         </div>

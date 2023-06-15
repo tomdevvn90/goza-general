@@ -1,9 +1,9 @@
 {
-    "name": "be-count-down",
-    "title": "Be Count Down",
+    "name": "be-team-carousel",
+    "title": "Be Team Carousel",
     "category": "goza-theme",
-    "icon": "tide",
-    "keywords": ["count down", "count", "be"],
+    "icon": "groups",
+    "keywords": ["team", "carousel", "be"],
     "acf": {
         "mode": "preview",
         "renderTemplate": "render.php"
