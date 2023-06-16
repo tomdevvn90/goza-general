@@ -1,6 +1,4 @@
-import jquery from 'jquery';
 import lightGallery from 'lightgallery'; 
-
 
 var projectsGridLightGallery = function () {  
     var be_projects_grid = document.querySelectorAll('.be-projects-grid-section .be-projects-grid');

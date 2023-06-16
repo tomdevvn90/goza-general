@@ -11,8 +11,6 @@ lightGallery(document.getElementById('goza-citv-action'), {
   plugins: [lgVideo],
 });
 
-
-
 const LiquidButton = class LiquidButton {
     constructor(optionsParam) {
       const options = optionsParam || {};

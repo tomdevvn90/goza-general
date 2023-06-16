@@ -17,7 +17,6 @@ $(document).ready(function() {
 
 import './blocks/team-carousel';
 import './blocks/events-carousel';
-import './blocks/hero';
 import './blocks/testimonials';
 import './blocks/posts-slider';
 import './blocks/events-listing';
