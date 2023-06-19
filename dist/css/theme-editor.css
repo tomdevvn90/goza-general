@@ -3263,6 +3263,49 @@
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.be-progressbar-block {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.be-progressbar-block .be-progressbar-block-warp.__editor {
+  display: none;
+}
+
+.block-editor-block-list__block .be-progressbar-block .be-progressbar-block-warp.__editor {
+  display: block;
+}
+
+.be-progressbar-block svg {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 30px;
+}
+
+.be-progressbar-block svg path {
+  width: 100%;
+}
+
+.be-progressbar-block.circle {
+  text-align: center;
+}
+
+.be-progressbar-block.circle .be-progressbar-block-warp {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.be-progressbar-block.circle .be-progressbar-block-warp svg {
+  height: 100%;
+}
+
 .be-team-carousel .slick-list {
   margin-left: -10px;
   margin-right: -10px;

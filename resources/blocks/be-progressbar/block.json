@@ -1,0 +1,15 @@
+{
+    "name": "be-progressbar",
+    "title": "Be Progressbar",
+    "category": "goza-theme",
+    "icon": "tide",
+    "keywords": ["progressbar", "be"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "align": ["left", "center", "right"]
+    },
+    "align": "left"
+}

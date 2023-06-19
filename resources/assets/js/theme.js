@@ -15,6 +15,7 @@ $(document).ready(function() {
     AOS.refresh();
 });
 
+import './blocks/progressbar-block';
 import './blocks/team-carousel';
 import './blocks/events-carousel';
 import './blocks/hero';
