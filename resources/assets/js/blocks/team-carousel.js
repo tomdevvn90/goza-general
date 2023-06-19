@@ -1,8 +1,3 @@
-global.$ = global.jQuery = require('jquery');
-
-import 'slick-carousel';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 (function ($) {
     "use strict";
@@ -45,11 +40,6 @@ import 'slick-carousel/slick/slick-theme.css';
 			$slider.slick(Object.assign({}, opt_df, $dataSlider));
         })
     }
-
-
-    $(window).on("scroll", function () {
-
-    });
 
     $(document).ready(function () {
         beEventsCarousel()

@@ -1,5 +1,3 @@
-global.$ = global.jQuery = require('jquery');
-
 
 (function ($) {
     "use strict";
@@ -22,11 +20,6 @@ global.$ = global.jQuery = require('jquery');
             $(this).parents('.item-event').find('.item-event--excerpt').show('1000')
         })
     }
-
-
-    $(window).on("scroll", function () {
-
-    });
 
     $(document).ready(function () {
         beHanldeEvent()

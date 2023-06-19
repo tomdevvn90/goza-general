@@ -1,5 +1,3 @@
-global.$ = global.jQuery = require('jquery');
-
 (function ($) {
     "use strict";
 
