@@ -8,8 +8,8 @@ $classes = [
    'site-header',
    'site-header-water-charity'
 ];
-$custom_logo_id = get_theme_mod('custom_logo');
-$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+
+$logo = goza_get_logo_header_site();
 $header_btn = __get_field('goza_header_button', 'option');
 $goza_header_search = __get_field('goza_header_search', 'option');
 $goza_enable_topbar = __get_field('goza_enable_topbar', 'option');
@@ -22,8 +22,8 @@ $goza_enable_topbar = __get_field('goza_enable_topbar', 'option');
       <div class="goza-header-main">
          <div class="goza-header-main--logo">
             <?php
-            if (has_custom_logo()) {
-               echo '<a href="/"><img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '"></a>';
+            if ($logo) {
+               echo '<a href="/"><img src="' . esc_url($logo) . '" alt="' . get_bloginfo('name') . '"></a>';
             } else {
                echo '<h1><a href="' . get_site_url() . '">' . get_bloginfo('name') . '</a></h1>';
             }

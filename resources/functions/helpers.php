@@ -74,7 +74,6 @@ if (!function_exists('goza_variable_style_home')) {
 	function goza_variable_style_home($var_name)
 	{
 		$variable = require(__DIR__ . '/variables/' . $var_name . '.php');
-
 		return $variable ? $variable : [];
 	}
 }
@@ -349,7 +348,6 @@ if (!function_exists('goza_expandable_excerpt')) {
 		if ($len > $words_to_show_first) { //check if it's longer the than first part
 
 			$firsthalf = array_slice($split, 0, $words_to_show_first);
-			$secondhalf = array_slice($split, $words_to_show_first, $len - 1);
 			$output = '<p class="event-excerpt" >';
 			$output .= implode(' ', $firsthalf) . '...';
 			$output .= '</p>';
@@ -377,5 +375,48 @@ if (!function_exists('goza_get_social_icon_svg')) {
 	function goza_get_social_icon_svg($icon, $size = 24)
 	{
 		return Goza_SVG_Icons::get_svg('social', $icon, $size);
+	}
+}
+
+/**
+ * Gets the logo for header.
+ */
+if (!function_exists('goza_get_logo_header_site')) {
+	function goza_get_logo_header_site()
+	{
+		$logos = require(__DIR__ . '/logo-header.php');
+		if (isset($_GET['home'])) {
+			foreach ($logos as $key => $logo) {
+				if ($key == $_GET['home']) {
+					return $logo;
+				}
+			}
+		} else {
+			if (has_custom_logo()) {
+				$custom_logo_id = get_theme_mod('custom_logo');
+				$logo_custom = wp_get_attachment_image_src($custom_logo_id, 'full');
+				return $logo_custom[0];
+			}
+		}
+
+		return null;
+	}
+}
+
+/**
+ * Gets the logo for footer.
+ */
+if (!function_exists('goza_get_logo_footer_site')) {
+	function goza_get_logo_footer_site()
+	{
+		$logos = require(__DIR__ . '/logo-footer.php');
+		if (isset($_GET['home'])) {
+			foreach ($logos as $key => $logo) {
+				if ($key == 'ft-' . $_GET['home']) {
+					return $logo;
+				}
+			}
+		} 
+		return null;
 	}
 }

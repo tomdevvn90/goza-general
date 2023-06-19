@@ -1,11 +1,4 @@
 <?php
-$bg_image = __get_field('goza_ft_bg_image', 'option');
-if ($bg_image) {
-    $style = 'background-image: url(' . $bg_image . ')';
-}
-$goza_phone_number = __get_field('goza_phone_number', 'option');
-$goza_email = __get_field('goza_email', 'option');
-$goza_address = __get_field('goza_address', 'option');
 
 //general
 $goza_ft_general_op = __get_field('goza_ft_general_op', 'option');
@@ -35,28 +28,24 @@ if ($goza_sub_news_op) {
 //copyright
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
 
+//logo
+$logo = goza_get_logo_footer_site();
+if ($logo) $goza_ft_logo = $logo;
 ?>
 
-<footer id="site-footer" class="main-footer footer-charity-organization" style="<?= esc_attr($style) ?>">
+<footer id="site-footer" class="main-footer footer-charity-organization">
     <div class="container">
         <div class="row">
             <div class="col-md-4 main-footer-widget">
-                <?php if (isset($goza_general_heading) && !empty($goza_general_heading)) { ?>
-                    <h3 class="main-footer-title"><?= $goza_general_heading ?></h3>
+                <?php if ($goza_ft_logo) { ?>
+                    <a href="/" class="main-footer-logo">
+                        <img src="<?= esc_url($goza_ft_logo) ?>" alt="Logo" />
+                    </a>
                 <?php } ?>
                 <?php if (isset($goza_general_content) && !empty($goza_general_content)) { ?>
                     <div class="main-footer-desc"><?= $goza_general_content ?></div>
                 <?php } ?>
 
-                <?php if (isset($goza_email) && !empty($goza_email)) { ?>
-                    <p class="main-footer-info"><a href="mailto:<?= esc_attr($goza_email) ?>"><i class="fa fa-envelope-open-o"></i><span><?= esc_attr($goza_email) ?></span></a></p>
-                <?php } ?>
-                <?php if (isset($goza_phone_number) && !empty($goza_phone_number)) { ?>
-                    <p class="main-footer-info"><a href="tel:<?= esc_attr($goza_phone_number) ?>"><i class="fa fa-phone"></i><span><?= esc_attr($goza_phone_number) ?></span></a></p>
-                <?php } ?>
-                <?php if (isset($goza_address) && !empty($goza_address)) { ?>
-                    <p class="main-footer-info"><i class="fa fa-map-marker"></i><span><?= esc_attr($goza_address) ?></span></p>
-                <?php } ?>
             </div>
 
             <div class="col-md-5 main-footer-widget">

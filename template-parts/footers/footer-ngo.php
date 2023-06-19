@@ -1,8 +1,4 @@
 <?php
-$bg_image = __get_field('goza_ft_bg_image', 'option');
-if ($bg_image) {
-    $style = 'background-image: url(' . $bg_image . ')';
-}
 
 //general
 $goza_ft_general_op = __get_field('goza_ft_general_op', 'option');
@@ -11,11 +7,13 @@ if ($goza_ft_general_op) {
     $goza_general_heading = $goza_ft_general_op['goza_general_heading'];
     $goza_general_content = $goza_ft_general_op['goza_general_content'];
 }
+
 //quicklink
 $goza_ft_quick_links_op = __get_field('goza_ft_quick_links_op', 'option');
 if ($goza_ft_quick_links_op) {
     $goza_ql_heading = $goza_ft_quick_links_op['goza_ql_heading'];
 }
+
 //newsletter
 $goza_sub_news_op = __get_field('goza_sub_news_op', 'option');
 if ($goza_sub_news_op) {
@@ -33,9 +31,13 @@ if ($goza_ft_gallery_op) {
 
 //copyright
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
+
+//logo
+$logo = goza_get_logo_footer_site();
+if ($logo) $goza_ft_logo = $logo;
 ?>
 
-<footer id="site-footer" class="main-footer footer-ngo" style="<?= esc_attr($style) ?>">
+<footer id="site-footer" class="main-footer footer-ngo">
     <div class="container">
         <div class="row">
             <div class="col-md-3 main-footer-widget">
@@ -43,9 +45,6 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                     <a href="/" class="main-footer-logo">
                         <img src="<?= esc_url($goza_ft_logo) ?>" alt="Logo" />
                     </a>
-                <?php } ?>
-                <?php if (isset($goza_general_heading) && !empty($goza_general_heading)) { ?>
-                    <h3 class="main-footer-title"><?= $goza_general_heading ?></h3>
                 <?php } ?>
                 <?php if (isset($goza_general_content) && !empty($goza_general_content)) { ?>
                     <div class="main-footer-desc"><?= $goza_general_content ?></div>
