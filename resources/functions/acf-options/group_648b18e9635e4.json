@@ -174,11 +174,11 @@
             "return_format": "string"
         },
         {
-            "key": "field_649066763c457",
-            "label": "Styles",
-            "name": "",
+            "key": "field_6491b8147c15d",
+            "label": "Duration",
+            "name": "duration_pb_bl",
             "aria-label": "",
-            "type": "tab",
+            "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -187,8 +187,13 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
-            "endpoint": 0
+            "default_value": 1400,
+            "min": 100,
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -209,5 +214,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687185733
+    "modified": 1687271502
 }

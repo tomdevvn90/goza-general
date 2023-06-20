@@ -19995,6 +19995,15 @@ h6 {
   position: relative;
 }
 
+.be-progressbar-block--heading {
+  font-size: 18px;
+  line-height: 115%;
+  font-weight: 400;
+  color: var(--heading-color);
+  margin: 16px 0 0 0;
+  text-align: center;
+}
+
 .be-progressbar-block .be-progressbar-block-warp.__editor {
   display: none;
 }

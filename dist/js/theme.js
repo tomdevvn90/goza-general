@@ -319,27 +319,30 @@ __webpack_require__.r(__webpack_exports__);
         $value = $(this).data('value') / 100,
         $height = $(this).data('height'),
         $strokeColor = $(this).data('stroke-color'),
-        $trailColor = $(this).data('trail-color');
-      if ($shape == 'circle') {
-        var cirle = new ProgressBar.Circle("#".concat($idProgressbar), {
-          strokeWidth: $height,
-          easing: 'easeInOut',
-          duration: 1400,
-          color: $strokeColor,
-          trailColor: $trailColor,
-          trailWidth: $height,
-          svgStyle: null
-        });
-        cirle.animate($value);
-      } else {
-        var line = new ProgressBar.Line("#".concat($idProgressbar), {
-          easing: 'easeInOut',
-          duration: 1400,
-          color: "".concat($strokeColor),
-          trailColor: "".concat($trailColor)
-        });
-        line.animate($value);
-        $(this).find('.be-progressbar-block-warp svg').css("height", $height);
+        $trailColor = $(this).data('trail-color'),
+        $duration = $(this).data('duration');
+      if ($value > 0) {
+        if ($shape == 'circle') {
+          var cirle = new ProgressBar.Circle("#".concat($idProgressbar), {
+            strokeWidth: $height,
+            easing: 'easeInOut',
+            duration: $duration,
+            color: $strokeColor,
+            trailColor: $trailColor,
+            trailWidth: $height,
+            svgStyle: null
+          });
+          cirle.animate($value);
+        } else {
+          var line = new ProgressBar.Line("#".concat($idProgressbar), {
+            easing: 'easeInOut',
+            duration: $duration,
+            color: "".concat($strokeColor),
+            trailColor: "".concat($trailColor)
+          });
+          line.animate($value);
+          $(this).find('.be-progressbar-block-warp svg').css("height", $height);
+        }
       }
     });
   };
