@@ -239,4 +239,85 @@
             }
         }
     }
+
+    &.is-style-4{
+        .be-icon-box-block-inner{
+            padding: 40px 0px;
+            overflow: hidden;
+            min-height: 219px;
+            &::after{
+                background: #fff;
+                content: "";
+                height: 350px;
+                left: -160px;
+                opacity: 0.2;
+                position: absolute;
+                top: -50px;
+                transform: rotate(35deg);
+                transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
+                width: 50px;
+                z-index: 1;
+            }
+            @media screen and (max-width: 767px){
+                padding-bottom: 0;
+            }
+
+            .be-icon-box-block-inner--content{
+                border: 2px solid #E7E7E7;
+                border-radius: 20px;
+                position: relative;
+                padding: 30px 90px 30px 30px;
+            }
+
+            .be-icon-box-block--heading{
+                font-size: 22px;
+                color: #222222;
+                line-height: 28px;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-align: left;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+            .be-icon-box-block--subheading{
+                font-size: 18px;
+                color: #555;
+                line-height: 28px;
+                margin-bottom: 0;
+            }
+
+            .be-icon-box-block--icon{
+                position: absolute;
+                right: 15px;
+                top: -20px;
+                img{
+                    -webkit-animation-delay: 0s, 0.3s;
+                    animation-delay: 0s, 0.3s;
+                    -webkit-animation-direction: normal, alternate;
+                    animation-direction: normal, alternate;
+                    -webkit-animation-duration: 0.3s, 1.5s;
+                    animation-duration: 0.3s, 1.5s;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                    -webkit-animation-iteration-count: 1, infinite;
+                    animation-iteration-count: 1, infinite;
+                    -webkit-animation-timing-function: ease-out, ease-in-out;
+                    animation-timing-function: ease-out, ease-in-out;
+                }
+            }
+
+            &:hover{
+                &::after{
+                    left: 130%;
+                    transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
+                }
+                .be-icon-box-block--icon{
+                    img{
+                        -webkit-animation-name: hvr-bob-float, hvr-bob;
+                        animation-name: hvr-bob-float, hvr-bob;
+                    }
+                }
+            }
+        }
+    }
 }

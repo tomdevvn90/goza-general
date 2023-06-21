@@ -17,7 +17,8 @@
         { "name": "goza-dream", "label": "Goza Dream" },
         { "name": "goza-charity", "label": "Goza Charity" },
         { "name": "goza-fill", "label": "Goza Fill" },
-        { "name": "goza-outline", "label": "Goza Outline" }
+        { "name": "goza-outline", "label": "Goza Outline" },
+        { "name": "goza-earthquake", "label": "Goza Earthquake" }
     ],
     "align": "full"
   }
