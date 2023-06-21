@@ -159,8 +159,40 @@ function goza_theme_options_styles()
         "--topbar-bg-color" => $topbar_bg_color,
     ];
 
-    if(isset($_GET['home']) && $_GET['home'] == 'ngo'){
-        $var_styles_home_ngo = goza_variable_style_home('home-ngo');
+    if (isset($_GET['home'])) {
+        switch ($_GET['home']) {
+            case 'ngo':
+                $var_styles_home_ngo = goza_variable_style_home('home-ngo');
+                break;
+            case 'dream':
+                $var_styles_home_ngo = goza_variable_style_home('home-dream');
+                break;
+            case 'charity':
+                $var_styles_home_ngo = goza_variable_style_home('home-charity');
+                break;
+            case 'charity-new':
+                $var_styles_home_ngo = goza_variable_style_home('home-charity-new');
+                break;
+            case 'water':
+                $var_styles_home_ngo = goza_variable_style_home('home-water');
+                break;
+            case 'organization':
+                $var_styles_home_ngo = goza_variable_style_home('home-organization');
+                break;
+            case 'ngo-dark':
+                $var_styles_home_ngo = goza_variable_style_home('home-ngo-dark');
+                break;
+            case 'water-charity':
+                $var_styles_home_ngo = goza_variable_style_home('home-water-charity');
+                break;
+            case 'charity-organization':
+                $var_styles_home_ngo = goza_variable_style_home('home-charity-organization');
+                break;
+            default:
+                $var_styles_home_ngo = [];
+                break;
+        }
+
         $var_styles = array_replace_recursive($var_styles, $var_styles_home_ngo);
     }
 

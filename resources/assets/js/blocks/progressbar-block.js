@@ -13,32 +13,35 @@
                 $value         = $(this).data('value') / 100,
                 $height        = $(this).data('height'),
                 $strokeColor   = $(this).data('stroke-color'),
-                $trailColor    = $(this).data('trail-color');
+                $trailColor    = $(this).data('trail-color'),
+                $duration      = $(this).data('duration');
 
-            if($shape == 'circle'){
-                var cirle = new ProgressBar.Circle(`#${$idProgressbar}`, {
-                    strokeWidth: $height,
-                    easing: 'easeInOut',
-                    duration: 1400,
-                    color: $strokeColor,
-                    trailColor: $trailColor,
-                    trailWidth: $height,
-                    svgStyle: null
-                  });
-                  
-                  cirle.animate($value);
-
-            }else{
-                var line = new ProgressBar.Line(`#${$idProgressbar}`, {             
-                    easing: 'easeInOut',
-                    duration: 1400,
-                    color: `${$strokeColor}`,
-                    trailColor: `${$trailColor}`,
-                });
-                line.animate($value);
-
-                $(this).find('.be-progressbar-block-warp svg').css("height", $height);
-            }
+            if($value > 0){
+                if($shape == 'circle'){
+                    var cirle = new ProgressBar.Circle(`#${$idProgressbar}`, {
+                        strokeWidth: $height,
+                        easing: 'easeInOut',
+                        duration: $duration,
+                        color: $strokeColor,
+                        trailColor: $trailColor,
+                        trailWidth: $height,
+                        svgStyle: null
+                      });
+                      
+                      cirle.animate($value);
+    
+                }else{
+                    var line = new ProgressBar.Line(`#${$idProgressbar}`, {             
+                        easing: 'easeInOut',
+                        duration: $duration,
+                        color: `${$strokeColor}`,
+                        trailColor: `${$trailColor}`,
+                    });
+                    line.animate($value);
+    
+                    $(this).find('.be-progressbar-block-warp svg').css("height", $height);
+                }
+            }    
         })
 
     }
