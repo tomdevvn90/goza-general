@@ -269,6 +269,12 @@
                 padding: 30px 90px 30px 30px;
             }
 
+            @media only screen and (min-width: 768px) and (max-width: 992px)  {
+                .be-icon-box-block-inner--content{
+                    padding: 60px 20px 20px 20px;
+                }
+            }
+
             .be-icon-box-block--heading{
                 font-size: 22px;
                 color: #222222;
