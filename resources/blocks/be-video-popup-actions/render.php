@@ -25,7 +25,7 @@ if (!empty($block['className'])) {
 }
 
 // Load values and assign defaults.
-$vpa_heading            = __get_field('vpa_heading') ?: 'Your Heading Here';
+$vpa_heading            = __get_field('vpa_heading') ?: '';
 $vpa_link_video         = __get_field('vpa_link_video') ?: '';
 $vpa_format_video       = __get_field('vpa_format_video') ?: 'html';
 $vpa_bg_image           = __get_field('vpa_bg_image') ?: '';
@@ -51,7 +51,7 @@ $vpa_button_styles = 'color:'.esc_attr($vpa_icon_video_color).';background-color
 ?>
 <div <?php echo $anchor; ?>class="<?php echo esc_attr($class_name); ?>" style="<?php echo esc_attr($style); ?>">
    <div class="block-inner">
-      <?php if ($vpa_heading) { ?>
+      <?php if (!empty($vpa_heading)) { ?>
          <h5 class="block-inner__heading" style="color: <?= esc_attr($vpa_color_heading) ?>"><?= esc_attr($vpa_heading) ?></h5>
       <?php } ?>
       <div id="block-video-action">

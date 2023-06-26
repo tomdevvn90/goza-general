@@ -34,7 +34,7 @@ $duration = get_field('duration_pb_bl') ? : 1200;
                 </svg>
             <? }else{ ?>
                 <?php $line = 100 - $value; ?>
-                <?php if($line > 0){ ?>
+                <?php if($line >= 0){ ?>
                     <svg viewBox="0 0 100 1" preserveAspectRatio="none" style="display: block; width: 100%; height: <?=$height?>px;">
                         <path d="M 0,0.5 L 100,0.5" stroke="<?= $trailCl ?>" stroke-width="1" fill-opacity="0"></path>
                         <path d="M 0,0.5 L 100,0.5" stroke="<?= $strokeCl ?>" stroke-width="1" fill-opacity="0" style="stroke-dasharray: 100, 100; stroke-dashoffset: <?= $line ?>;"></path>
