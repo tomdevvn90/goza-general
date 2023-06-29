@@ -260,7 +260,8 @@
                 "organization": "Header Orgazination",
                 "ngo-dark": "Header Ngo Dark",
                 "water-charity": "Header Water Charity",
-                "charity-organization": "Header Charity Orgazination"
+                "charity-organization": "Header Charity Orgazination",
+                "earthquake": "Header Earthquake"
             },
             "default_value": false,
             "return_format": "value",
@@ -473,7 +474,8 @@
                     "choices": {
                         "default": "Default",
                         "layout-2": "Layout 2",
-                        "layout-3": "Layout 3"
+                        "layout-3": "Layout 3",
+                        "layout-4": "Layout 4"
                     },
                     "default_value": false,
                     "return_format": "value",
@@ -2161,5 +2163,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1686230483
+    "modified": 1688049307
 }

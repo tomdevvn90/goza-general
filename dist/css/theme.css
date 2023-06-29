@@ -17609,6 +17609,182 @@ h6 {
   }
 }
 
+.site-header.site-header-earthquake {
+  position: relative;
+}
+
+.site-header.site-header-earthquake .site-header-inner {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  height: 98px;
+  bottom: -49px;
+  z-index: 9999;
+}
+
+.site-header.site-header-earthquake .site-header-inner > .container {
+  padding-left: 0;
+  background-color: var(--header-bg-color, #fff);
+  border-radius: 10px;
+}
+
+@media (min-width: 1508px) {
+  .site-header.site-header-earthquake .site-header-inner > .container {
+    max-width: 1508px;
+  }
+}
+
+.site-header.site-header-earthquake .goza-header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1508px) {
+  .site-header.site-header-earthquake .goza-header-main {
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .site-header.site-header-earthquake .goza-header-main {
+    padding: 38px 0;
+  }
+}
+
+.site-header.site-header-earthquake .goza-header-main--logo a {
+  display: block;
+}
+
+.site-header.site-header-earthquake .goza-header-main--logo a img {
+  width: 100%;
+  height: auto;
+  max-width: 215px;
+}
+
+.site-header.site-header-earthquake .goza-header-main--menus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 247px;
+}
+
+.site-header.site-header-earthquake .goza-header-main--menus .goza-header-button {
+  color: #FFF;
+  text-align: center;
+  font-size: 18px;
+  font-family: var(--heading-family);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160.2%;
+  text-transform: uppercase;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  right: -15px;
+  width: 100%;
+  max-width: 225px;
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-header.site-header-earthquake .goza-header-main--menu .navbar-nav {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  gap: 35px;
+}
+
+.site-header.site-header-earthquake .goza-header-main--menu .navbar-nav > li > a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--header-text-color, #FFF);
+  font-size: 15px;
+  transition: 0.3s;
+  letter-spacing: 0px;
+  line-height: 80px;
+  font-style: normal;
+  font-weight: 600;
+  font-family: var(--heading-family, Poppins, sans-serif);
+}
+
+.site-header.site-header-earthquake .goza-header-main--menu .navbar-nav > li > a:hover {
+  color: var(--link-color, #d41b65);
+}
+
+.site-header.site-header-earthquake .goza-header-main--menu .navbar-nav > li > a.dropdown-toggle::after {
+  display: none;
+}
+
+.site-header.site-header-earthquake .goza-header-main--cta {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 0 10px 10px 0;
+}
+
+.site-header.site-header-earthquake .goza-header-main--cta .goza-header-cart-icon {
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid #222;
+  padding: 19px;
+  box-sizing: border-box;
+  width: 60px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-header.site-header-earthquake .goza-header-main--cta .goza-header-cart-icon i {
+  color: #282828;
+  transition: 0.3s;
+}
+
+.site-header.site-header-earthquake .goza-header-main--cta .goza-header-cart-icon i:hover {
+  color: var(--link-color-hover, #d41b65);
+}
+
+.site-header.site-header-earthquake .goza-header-main--cta .goza-header-cart-icon .goza-total-cart {
+  color: #FFF;
+  font-size: 14px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--link-color, #28C77B);
+  position: absolute;
+  right: -15px;
+  top: -10px;
+  border-radius: 50%;
+}
+
+.site-header.site-header-earthquake .goza-header-main--cta #goza-hamberger {
+  display: block;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .site-header.site-header-earthquake .goza-header-main--cta #goza-hamberger {
+    display: none;
+  }
+}
+
 .main-footer {
   background-color: var(--footer-bg-color, #000);
   color: var(--footer-text-color, #FFF);
@@ -18078,6 +18254,53 @@ h6 {
   margin-right: 7px;
   font-size: 14px;
   color: var(--link-color, #18b7d0);
+}
+
+.goza-topbar.goza-topbar-layout4 {
+  background: var(--topbar-bg-color, #222);
+  color: var(--topbar-text-color, #FFF);
+  padding-bottom: 46px;
+}
+
+.goza-topbar.goza-topbar-layout4 .goza-topbar-link a {
+  text-decoration: none;
+  font-family: var(--heading-family);
+  font-size: 15px;
+  line-height: 50px;
+  letter-spacing: 0px;
+  color: var(--topbar-text-color, #FFF);
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.goza-topbar.goza-topbar-layout4 .goza-topbar-link a i {
+  color: var(--link-color, #2c9cf2);
+  margin-right: 7px;
+}
+
+.goza-topbar.goza-topbar-layout4 .goza-topbar-inner-info {
+  gap: 20px;
+}
+
+.goza-topbar.goza-topbar-layout4 .goza-topbar-inner-info .goza-topbar-ep a {
+  text-decoration: none;
+  font-family: var(--heading-family);
+  font-size: 15px;
+  line-height: 50px;
+  letter-spacing: 0px;
+  color: var(--topbar-text-color, #FFF);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.goza-topbar.goza-topbar-layout4 .goza-topbar-inner-info .goza-topbar-ep a > span {
+  text-transform: uppercase;
+}
+
+.goza-topbar.goza-topbar-layout4 .goza-topbar-inner-info .goza-topbar-ep a i {
+  color: var(--link-color, #2c9cf2);
+  margin-right: 7px;
 }
 
 .site-menu-mobile {
