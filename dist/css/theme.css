@@ -28775,6 +28775,12 @@ h6 {
   box-sizing: border-box;
 }
 
+.wp-block-columns.be-gz-orgazination-row-button > .wp-block-column {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
 .be-column-image-text-video-block .block-grid {
   display: flex;
   flex-wrap: wrap;

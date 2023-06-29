@@ -53,6 +53,14 @@
             }
         }
     }
+
+    &.be-gz-orgazination-row-button{
+        > .wp-block-column {
+            display: flex;
+            align-items: center;
+            align-content: center;
+        }
+    }
 }
 
 // end css for home orgazination
