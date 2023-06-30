@@ -588,7 +588,8 @@
                 "ngo": "Footer Ngo",
                 "organization": "Footer Orgazination",
                 "water-charity": "Footer Water Charity",
-                "charity-organization": "Footer Charity Organiztion"
+                "charity-organization": "Footer Charity Organiztion",
+                "earthquake": "Footer Earthquake"
             },
             "default_value": false,
             "return_format": "value",
@@ -2163,5 +2164,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688049307
+    "modified": 1688087720
 }
