@@ -17626,7 +17626,12 @@ h6 {
 .site-header.site-header-earthquake .site-header-inner > .container {
   padding-left: 0;
   background-color: var(--header-bg-color, #fff);
-  border-radius: 10px;
+  border-radius: 15px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 25px 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 25px 100%);
+  box-sizing: border-box;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 45px;
 }
 
 @media (min-width: 1508px) {
@@ -17691,6 +17696,7 @@ h6 {
   display: flex !important;
   align-items: center;
   justify-content: center;
+  border-radius: 0 15px 15px 0;
 }
 
 .site-header.site-header-earthquake .goza-header-main--menu .navbar-nav {
