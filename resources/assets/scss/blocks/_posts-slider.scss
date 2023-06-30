@@ -526,4 +526,101 @@
             }
         }
     }
+    &.is-style-goza-earthquake{
+        .be-post-slider-block-inner{
+            .item-post{
+                .item-post-inner{
+                    border-radius: 20px;
+                    overflow: hidden;
+                }
+                .item-post-thumbnail{
+                    position: relative;
+                    overflow: hidden;
+                    padding-bottom: 110%;
+                    background: #e7e6e4;
+                    z-index: 1;
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        -webkit-transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
+                        transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
+                    }
+                    .item-post-inner-cat {
+                        position: absolute;
+                        bottom: 0;
+                        padding: 30px;
+                        z-index: 1;
+                        h2.item-post-title{
+                            font-weight: 600;
+                            font-size: 20px;
+                            line-height: 30px;
+                            color: #fff;
+                            margin-bottom: 15px;
+                        }
+                        .item-post-category.post-term-list {
+                            font-size: 16px;
+                            color: #fff;
+                            padding-right: 90px;
+                            a {
+                                color: #fff;
+                            }
+                        }
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.5);
+                        z-index: 0;
+                        opacity: 1;
+                        transition: visibility 0s 0.3s, opacity 0.3s linear;
+                    }
+                }
+                .item-post-content{
+                    background: #28C77B;
+                    position: relative;
+                    padding: 20px 30px;
+                    .item-post-meta{
+                        span.item-post-date{
+                            width: 104px;
+                            height: 104px;
+                            background: #FFFFFF;
+                            border: 5px solid #28C77B;
+                            border-radius: 10px;
+                            position: absolute;
+                            right: 15px;
+                            bottom: 15px;
+                            z-index: 2;
+                            padding: 10px;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 27px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            align-items: center;
+                            color: #28C77B;
+                            span{
+                                font-size: 30px;
+                                display: block;
+                                font-weight: 700;
+                                color: #222;
+                            }
+                        } 
+                        span.item-post-author{
+                            font-size:16px;
+                            color: #FFFFFF;
+                        }    
+                    }
+                }
+            }
+        }
+    }
 }

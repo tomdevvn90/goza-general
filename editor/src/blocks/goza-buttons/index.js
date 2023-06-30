@@ -151,7 +151,8 @@ registerBlockType('goza-blocks/goza-button', {
         { name: 'water', label: __('Water', 'goza') },
         { name: 'ngo-dark', label: __('Ngo Dark', 'goza') },
         { name: 'wt-charity', label: __('Water Charity', 'goza') },
-        { name: 'charity-organization', label: __('Charity Organization', 'goza') }
+        { name: 'charity-organization', label: __('Charity Organization', 'goza') },
+        { name: 'orgazination', label: __('Orgazination', 'goza') }
     ],
     supports: {
         anchor: true,

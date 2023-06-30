@@ -1,0 +1,15 @@
+{
+    "name": "goza/be-services-box-section",
+    "title": "Be Services Box Circle - Section",
+    "category": "goza-theme",
+    "icon": "networking",
+    "keywords": ["services", "box", "circle"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true
+    }
+  }

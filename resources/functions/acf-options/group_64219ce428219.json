@@ -149,6 +149,26 @@
                     "append": ""
                 }
             ]
+        },
+        {
+            "key": "field_64916bb3d64b3",
+            "label": "Sub heading",
+            "name": "subheading_icon_box",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -169,5 +189,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680103566
+    "modified": 1687252217
 }

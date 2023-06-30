@@ -13,3 +13,46 @@
         }
     }
 }
+
+
+// start css for home orgazination
+.wp-block-columns{
+    &.be-gz-orgazination-row-our{
+        gap: 0;
+        > .wp-block-column{
+            > p{
+                margin: 0;
+            }
+        }
+    }
+
+    &.be-gz-orgazination-item-progressbar{
+        > .wp-block-column{
+            &:first-child{
+                p{
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &.be-gz-orgazination-row-counter{
+        gap: 10px;
+        > .wp-block-column{
+            .be-counter-up{
+                .be-counter-up-box__number{
+                    font-size: 40px;
+                    line-height: 110%;
+                }
+            }
+
+            &:nth-child(2){
+                border-left: 1px dashed #b0b0b0;
+                border-right: 1px dashed #b0b0b0;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+// end css for home orgazination

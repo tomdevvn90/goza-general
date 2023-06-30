@@ -253,4 +253,36 @@
             }
         }
     }
+
+    &.is-style-orgazination{
+        box-sizing: border-box;
+        overflow:inherit;
+        .wp-block-goza-blocks-goza-button--inner{
+            background:var(--link-color, #d41b65);
+            border-radius: 30px !important;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 14.5px 0px;
+            transition: all 0.3s ease 0s;
+            .wp-block-goza-button_link{
+                font-weight: 700;
+                padding: 0px 40px;
+                text-transform: uppercase;
+                color: rgb(255, 255, 255);
+                font-size: 16px;
+                border-radius: 30px;
+                height: 57px;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+            &:hover{
+                background: #fff;
+                border-color: #fff;
+                .wp-block-goza-button_link{
+                    color:var(--heading-color, #333);
+                }
+            }
+        }
+    }
 }

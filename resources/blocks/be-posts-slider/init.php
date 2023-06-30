@@ -19,7 +19,11 @@ function be_item_post($is_style){
                     
                 case strpos($is_style, 'is-style-goza-charity') !== false:     
                     be_template_post_goza_charity();
-                    break;     
+                    break;  
+                
+                case strpos($is_style, 'is-style-goza-earthquake') !== false:     
+                    be_template_post_goza_earthquake();
+                    break;
 
                 default:
                     be_template_post_default();
@@ -29,6 +33,45 @@ function be_item_post($is_style){
     </div>
     <?php
 }
+function be_template_post_goza_earthquake(){ 
+    $comment      = get_comments_number();
+    $post_date    = get_the_date('<\s\p\a\n>d<\/\s\p\a\n> M');
+    $categories   = get_the_category();
+?>
+
+    <div class="item-post-thumbnail"> 
+        <?php if(has_post_thumbnail()): ?>
+            <?php the_post_thumbnail('full'); ?>
+        <?php endif; ?>
+        
+        <div class="item-post-inner-cat"> 
+            <h2 class="item-post-title"> 
+                <a href="<?php the_permalink() ?>"> <?php the_title() ?> </a>
+            </h2>
+            <?php if(!empty($categories)): ?>
+                <?php $num_of_items = count($categories); ?>
+                <div class="item-post-category post-term-list"> 
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                    <?php foreach ($categories as $key => $value) : ?>
+                        <?php $comma = $key + 1 < $num_of_items ? ',' : ''; ?>
+                            <a class="item-category" href="<?php echo esc_url(get_category_link($value->term_id)) ?>">
+                                <?php echo $value->name ?><?php echo $comma; echo " ";?>
+                            </a>
+                    <?php endforeach; ?>    
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+
+    <div class="item-post-content post-caption">
+        <div class="item-post-meta"> 
+            <span class="item-post-author"><i class="fa fa-user-o" aria-hidden="true"></i> by: <?php echo get_the_author_meta('display_name', get_the_author_ID()); echo " " ?></span>
+            <span class="item-post-date"> <?php echo $post_date ?> </span>
+        </div>
+            
+    </div>    
+
+<?php }
 
 function be_template_post_goza_charity(){ 
     $comment      = get_comments_number();
