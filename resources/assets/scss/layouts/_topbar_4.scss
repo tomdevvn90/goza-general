@@ -1,0 +1,50 @@
+.goza-topbar {
+    &.goza-topbar-layout4 {
+        background: var(--topbar-bg-color, #222);
+        color: var(--topbar-text-color, #FFF);
+        padding-bottom: 46px;
+        .goza-topbar-link{
+            a{
+                text-decoration: none;
+                font-family: var(--heading-family);
+                font-size: 15px;
+                line-height: 50px;
+                letter-spacing: 0px;
+                color: var(--topbar-text-color, #FFF);
+                font-style: normal;
+                font-weight: 400;
+                text-transform: uppercase;
+                i {
+                    color: var(--link-color, #2c9cf2);
+                    margin-right: 7px;
+                }
+            }
+        }
+
+        .goza-topbar-inner {
+            &-info {
+                gap: 20px;
+
+                .goza-topbar-ep {
+                    a {
+                        text-decoration: none;
+                        font-family: var(--heading-family);
+                        font-size: 15px;
+                        line-height: 50px;
+                        letter-spacing: 0px;
+                        color: var(--topbar-text-color, #FFF);
+                        font-style: normal;
+                        font-weight: 400;
+                        > span{
+                            text-transform: uppercase;
+                        }
+                        i {
+                            color: var(--link-color, #2c9cf2);
+                            margin-right: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

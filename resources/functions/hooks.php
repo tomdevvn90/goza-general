@@ -40,6 +40,9 @@ function goza_header_template()
 			case "charity-organization":
 				$template_name = 'charity-organization';
 				break;
+			case "earthquake":
+				$template_name = 'earthquake';
+				break;	
 			default:
 				$template_name = 'general';
 		}
@@ -100,6 +103,9 @@ function goza_topbar_template()
 			case "water-charity":
 				$template_name = 'layout-3';
 				break;
+			case "earthquake":
+				$template_name = 'layout-4';
+				break;	
 			default:
 				$template_name = 'default';
 		}

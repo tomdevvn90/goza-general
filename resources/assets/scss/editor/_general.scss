@@ -9,6 +9,15 @@
                 }
             }
         }
+
+        &.be-gz-orgazination-row-button{
+            > .wp-block-column {
+                > .block-editor-block-list__block{
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
     } 
 }
 // end css for home orgazination
