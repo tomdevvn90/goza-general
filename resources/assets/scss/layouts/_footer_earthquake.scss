@@ -20,10 +20,10 @@
               position: relative;
 
               input.tnp-email {
-                  height: 60px;
+                  height: 45px;
                   margin-bottom: 10px;
                   border-radius: 2px !important;
-                  text-align: center;
+                  text-align: left;
                   width: 100%;
                   box-sizing: border-box;
                   padding: 10px;
@@ -37,7 +37,7 @@
               }
 
               input.tnp-submit {
-                  height: 60px;
+                  height: 45px;
                   border-radius: 2px;
                   font-weight: 500;
                   font-size: 14px;
@@ -45,11 +45,7 @@
                   box-sizing: border-box;
                   -webkit-appearance: button;
                   cursor: pointer;
-                  background-color: var(--link-color, rgb(131, 61, 204));
-
-                  &:hover {
-                      background-color: var(--link-color-hover, rgb(131, 61, 204));
-                  }
+                  background-color: #000;
               }
 
               &:hover {
@@ -76,18 +72,28 @@
       }
 
       .main-footer-heading {
-          font-size: 18px;
-          color: #e1e1e1;
-          line-height: 21px;
-          text-align: left;
-          font-style: normal;
-          font-weight: 600;
-          letter-spacing: 0px;
-          margin-bottom: 30px;
-
+        color: #28C77B;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 15px;
           @include media-breakpoint-down(sm) {
               margin-bottom: 20px;
           }
+      }
+      .main-footer-content{
+        color: #FFF;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 36px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #7C7C7C;
+        margin-bottom: 30px;
+        span{
+            color:#28C77B;
+        }
       }
 
       .heading-general {
@@ -96,63 +102,104 @@
       }
 
       .quicklinks-menu {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-
-          li {
-              padding-bottom: 8px;
-
-              a {
-                  font-weight: 400;
-                  color: #c3c3c3;
-                  font-size: 17px;
-                  line-height: 26px;
-                  transition: all 0.3s ease;
-
-                  &:hover {
-                      color: var(--link-color-hover, #d41b65);
-
-                      &::before {
-                          color: var(--link-color-hover, #d41b65);
-                      }
-                  }
-
-                  &::before {
-                      content: "\f061";
-                      font: normal normal normal 14px/1 FontAwesome;
-                      color: #c3c3c3;
-                      margin-right: 10px;
-                      font-size: 12px;
-                      bottom: 2px;
-                      display: inline-block;
-                      position: relative;
-                  }
-              }
-
-          }
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-column-gap: 20px;
+                grid-row-gap: 0px;
+                li {
+                  list-style-type: none;
+                    padding-bottom: 8px;
+      
+                    a {
+                        font-weight: 400;
+                        color: #fff;
+                        font-size: 18px;
+                        line-height: 26px;
+                        transition: all 0.3s ease;
+      
+                        &:hover {
+                            color: var(--link-color-hover, #d41b65);
+      
+                            &::before {
+                                color: var(--link-color-hover, #d41b65);
+                            }
+                        }
+                    }
+      
+            }
+          
+        }
       }
 
       .main-footer-social {
           list-style-type: none;
           margin: 0;
           padding: 0;
-
-          li {
-              padding-bottom: 8px;
-
-              a {
-                  font-weight: 400;
-                  color: #c3c3c3;
-                  font-size: 17px;
-                  line-height: 26px;
-                  text-decoration: underline;
-
-                  &:hover {
-                      color: var(--link-color-hover, #d41b65);
+          margin-top: 20px;
+          li{
+            display: inline-block;
+            a{
+                width: 40px;
+                height: 40px;
+                background: #222222;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 40px !important;
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                color: #fff;
+                margin-right: 5px;
+              &.Facebook{
+                background: #186CB0;
+                &::before{
+                    content: "\F09A";
                   }
               }
-
+              
+              &.Google.Plus
+              {
+                background: #E22E04;
+                &::before{
+                    content: "\f0d5";
+                }
+              }
+              &.Twitter{
+                background: #00B3D3;
+                &::before{
+                    content: "\f099";
+                }
+              }
+              &.LinkedIn{
+                background: #074682;
+                &::before{
+                    content: "\f0e1";
+                }
+              }
+              &.Youtube{
+                background: #f70000;
+                &::before{
+                    content: "\f167";
+                }
+              }
+              &.Pinterest{
+                background: #9a1020;
+                &::before{
+                    content: "\f231";
+                }
+              }
+              &:hover{
+                background: #28C77B !important;
+                color: #fff;
+              }
+            }
           }
       }
       .newsletter-form-box {
@@ -160,6 +207,22 @@
         margin-top: -115px;
         padding: 30px;
         border-radius: 10px;
+        margin-bottom: 30px;
+        h3.main-footer-heading{
+            color: #FFF;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 33px;
+            margin-bottom: 15px;
+        }
+        .main-footer-desc{
+            color: #FFF;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
       }
       .main-footer-socket {
           display: flex;
@@ -174,8 +237,8 @@
           }
 
           &-copyright {
-              font-size: 17px;
-              color: #c3c3c3;
+              font-size: 16px;
+              color: #fff;
               line-height: 28px;
               text-align: left;
 
@@ -215,6 +278,32 @@
                   }
               }
           }
+      }
+      @include media-breakpoint-down(md) {
+        .row{
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .main-footer-widget{
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+            .newsletter-form-box {
+                margin-top: 10px;
+            }
+            @include media-breakpoint-down(sm) {
+                .quicklinks-menu {
+                    ul{
+                        grid-template-columns: repeat(1,1fr);
+                        grid-column-gap: 20px;
+                        grid-row-gap: 0px;
+                        
+                    }
+                  
+                }
+            }
+        }
       }
   }
 }

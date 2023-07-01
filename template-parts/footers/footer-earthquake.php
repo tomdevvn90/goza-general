@@ -26,6 +26,7 @@ $goza_sub_news_op = __get_field('goza_sub_news_op', 'option');
 if ($goza_sub_news_op) {
     $goza_newsletter_heading = $goza_sub_news_op['goza_newsletter_heading'];
     $goza_sc_sub_form = $goza_sub_news_op['goza_sc_sub_form'];
+    $goza_newsletter_desc = $goza_sub_news_op['goza_newsletter_desc'];
 }
 //
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
@@ -53,8 +54,8 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
             </div>
             
             <div class="col-md-6 col-lg-6 main-footer-widget">
-                <?php if (isset($goza_general_heading) && !empty($goza_general_heading)) { ?>
-                    <h3 class='main-footer-heading heading-general'><?= esc_attr($goza_general_heading) ?></h3>
+                <?php if (isset($goza_general_content) && !empty($goza_general_content)) { ?>
+                    <div class='main-footer-content'><?= $goza_general_content ?></div>
                 <?php } ?>
                 <?php if (isset($goza_ql_heading) && !empty($goza_ql_heading)) { ?>
                     <h3 class='main-footer-heading'><?= esc_attr($goza_ql_heading) ?></h3>
@@ -74,6 +75,9 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
               <div class="newsletter-form-box">
                 <?php if (isset($goza_newsletter_heading) && !empty($goza_newsletter_heading)) { ?>
                     <h3 class='main-footer-heading'><?= esc_attr($goza_newsletter_heading) ?></h3>
+                <?php } ?>
+                <?php if (isset($goza_newsletter_desc) && !empty($goza_newsletter_desc)) { ?>
+                    <div class="main-footer-desc"><?= $goza_newsletter_desc ?></div>
                 <?php } ?>
                 <div class="main-footer-subscribe">
                     <?php echo do_shortcode($goza_sc_sub_form) ?>
