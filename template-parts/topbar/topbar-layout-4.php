@@ -13,7 +13,7 @@ if ($goza_topbar_btn) {
 ?>
 <div class="goza-topbar goza-topbar-layout4">
     <div class="container">
-        <div class="d-none d-lg-flex justify-content-between align-items-center goza-topbar-inner">
+        <div class="d-flex justify-content-between align-items-center goza-topbar-inner">
             <div class="d-flex align-items-center flex-wrap goza-topbar-inner-info">
                 <?php if (isset($goza_email) && $goza_email) { ?>
                     <div class="goza-topbar-ep">
@@ -29,19 +29,7 @@ if ($goza_topbar_btn) {
 
             <?php if (isset($goza_topbar_btn) && !empty($goza_topbar_btn)) { ?>
                 <div class="goza-topbar-item goza-topbar-ep goza-topbar-link">
-                    <a href="<?= $goza_url_button_url ?>" target="<?= $goza_url_button_target ?>"><i class="fa fa-heart" aria-hidden="true"></i><?= $goza_url_button_title ?></a>
-                </div>
-            <?php  } ?>
-        </div>
-        <div class="d-flex align-items-center justify-content-center flex-wrap d-lg-none goza-topbar-inner goza-topbar-mobile">
-            <?php if (isset($goza_email) && $goza_email) { ?>
-                <div class="goza-topbar-item goza-topbar-ep">
-                    <a href="mailto:<?= $goza_email ?>"><i class="fa fa-envelope" aria-hidden="true"></i><span>Email:</span> <?= $goza_email ?></a>
-                </div>
-            <?php  } ?>
-            <?php if (isset($goza_phone_number) && $goza_phone_number) { ?>
-                <div class="goza-topbar-item goza-topbar-ep">
-                    <a href="tel:<?= $goza_phone_number ?>"><i class="fa fa-phone" aria-hidden="true"></i><span>In Emergency:</span> <?= $goza_phone_number ?></a>
+                    <a href="<?= $goza_url_button_url ?>" target="<?= $goza_url_button_target ?>"><i class="fa fa-user" aria-hidden="true"></i><?= $goza_url_button_title ?></a>
                 </div>
             <?php  } ?>
         </div>
