@@ -1,9 +1,9 @@
 {
-    "name": "goza/be-services-box-section",
-    "title": "Be Services Box Circle - Section",
+    "name": "goza/be-grid-post",
+    "title": "Be Grid Post",
     "category": "goza-theme",
-    "icon": "networking",
-    "keywords": ["services", "box", "circle"],
+    "icon": "grid-view",
+    "keywords": ["grid", "box", "post"],
     "acf": {
         "mode": "preview",
         "renderTemplate": "render.php"

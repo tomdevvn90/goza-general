@@ -1,8 +1,5 @@
 <?php
-$bg_image = __get_field('goza_ft_bg_image', 'option');
-if ($bg_image) {
-    $style = 'background-image: url(' . $bg_image . ')';
-}
+
 $goza_phone_number = __get_field('goza_phone_number', 'option');
 $goza_email = __get_field('goza_email', 'option');
 $goza_address = __get_field('goza_address', 'option');
@@ -36,11 +33,9 @@ if ($goza_sub_news_op) {
 
 //copyright
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
-
-
 ?>
 
-<footer id="site-footer" class="main-footer footer-organization" style="<?= esc_attr($style) ?>">
+<footer id="site-footer" class="main-footer footer-organization">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-3 main-footer-widget">

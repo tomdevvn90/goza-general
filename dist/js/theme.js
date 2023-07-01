@@ -346,8 +346,6 @@ __webpack_require__.r(__webpack_exports__);
       }
     });
   };
-  $(window).on("scroll", function () {});
-  $(document).ready(function () {});
   $(window).on("load", function () {
     beProgressbarBlock();
   });

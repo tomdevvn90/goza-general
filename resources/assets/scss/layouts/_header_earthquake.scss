@@ -28,7 +28,12 @@
             left: 0;
             height: 98px;  
             bottom: -49px;
-            z-index: 9999;
+            z-index: 99;
+            @include media-breakpoint-down(xs) { 
+                width: calc(100% - 30px);
+                left: 50%;
+                transform: translateX(-50%);
+            }
             > .container{
                 padding-left: 0px;
                 background-color: var(--header-bg-color, #fff);
@@ -78,7 +83,14 @@
             @include media-breakpoint-down(md) {
                 padding: 38px 0;
             }
+
+            @include media-breakpoint-down(sm){
+                padding: 25px 0;
+            }
             &--logo {
+                @include media-breakpoint-down(md) { 
+                    padding-left: 35px;
+                }
                 a {
                     display: block;
                     img {
@@ -87,6 +99,13 @@
                         max-width: 215px;
                         @media (max-width: 1199.98px){
                             max-width: 180px;
+                        }
+                        @include media-breakpoint-down(sm){
+                            max-width: 180px;
+                        }
+
+                        @include media-breakpoint-down(xs) { 
+                            max-width: 150px;
                         }
                     }
                 }
@@ -104,6 +123,10 @@
                 @media (max-width: 1199.98px){
                     padding-right: 170px;
                 }
+                
+                @include media-breakpoint-down(md) { 
+                    padding-right: 0;
+                }
                 .goza-header-button {
                     color: #FFF;
                     text-align: center;
@@ -120,7 +143,6 @@
                     width: 100%;
                     max-width: 225px;
                     height: 100%;
-                    display: flex !important;
                     align-items: center;
                     justify-content: center;
                     border-radius: 0 15px 15px 0;
@@ -131,6 +153,10 @@
                     @media (max-width: 1199.98px){
                         max-width: 150px;
                         font-size: 16px;
+                    }
+                    
+                    @include media-breakpoint-up(lg){ 
+                        display: flex !important;
                     }
                 }
             }
@@ -188,13 +214,26 @@
                     cursor: pointer;
                     border-radius: 10px;
                     border: 2px solid #222;
-                    padding: 19px;
+                    padding: 0px;
                     box-sizing: border-box;
                     width: 60px;
                     height: 58px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    @include media-breakpoint-down(sm){ 
+                        width: 50px;
+                        height: 48px;
+                    }
+                    svg{
+                        width: 100%;
+                        max-width: 24px;
+                        height: auto;
+
+                        @include media-breakpoint-down(sm) { 
+                            max-width: 20px;
+                        }
+                    }
                     i {
                         color: #282828;
                         transition: 0.3s;
@@ -221,12 +260,29 @@
                         right: -15px;
                         top: -10px;
                         border-radius: 50%;
+                        @include media-breakpoint-down(sm){ 
+                            width: 25px;
+                            height: 25px;
+                            font-size: 13px;
+                        }
                     }
                 }
 
                 #goza-hamberger {
                     display: block;
                     cursor: pointer;
+
+                    @include media-breakpoint-down(md) { 
+                        margin-left: 33px;
+                        i{
+                            font-size: 30px;
+                            color: var(--link-color);
+                        }
+                    }
+
+                    @include media-breakpoint-down(xs) { 
+                        margin-left: 20px;
+                    }
 
                     @include media-breakpoint-up(lg) {
                         display: none;

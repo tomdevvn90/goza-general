@@ -1,10 +1,5 @@
 <?php
-//background footer
-$bg_footer = __get_field('goza_ft_bg_image', 'option');
-$style = '';
-if ($bg_footer) {
-    $style = 'background-image: url(' . $bg_footer . ')';
-}
+
 //general
 $goza_ft_general_op = __get_field('goza_ft_general_op', 'option');
 if ($goza_ft_general_op) {
@@ -25,7 +20,7 @@ if ($goza_sub_news_op) {
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
 ?>
 
-<footer id="site-footer" class="main-footer footer-water-charity" style="<?= esc_attr($style) ?>">
+<footer id="site-footer" class="main-footer footer-water-charity">
     <div class="container">
         <?php if (isset($goza_general_heading) && !empty($goza_general_heading)) { ?>
             <h5 class="main-footer-subtitle text-center"><?= $goza_general_heading ?></h5>

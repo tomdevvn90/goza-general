@@ -4,7 +4,6 @@
     const beProgressbarBlock = () =>{
         const $progressbar = $('.be-progressbar-block')
         if ($progressbar.length === 0) return;
-
         let ProgressBar = require('progressbar.js')
 
         $progressbar.each(function() {
@@ -43,16 +42,7 @@
                 }
             }    
         })
-
     }
-
-    $(window).on("scroll", function () {
-
-    });
-
-    $(document).ready(function () {
-
-    })
 
     $(window).on("load", function () {
         beProgressbarBlock();

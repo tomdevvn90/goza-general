@@ -35,11 +35,14 @@ if ($goza_sub_news_op) {
 //copyright
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
 
-
 // info
 $goza_address      = __get_field('goza_address', 'option');
 $goza_email        = __get_field('goza_email', 'option');
 $goza_phone_number = __get_field('goza_phone_number', 'option');
+
+//logo
+$logo = goza_get_logo_footer_site();
+if ($logo) $goza_ft_logo = $logo;
 ?>
 
 <footer id="site-footer" class="main-footer footer-water" style="<?= esc_attr($style) ?>">
@@ -54,10 +57,6 @@ $goza_phone_number = __get_field('goza_phone_number', 'option');
 
                 <?php if (isset($goza_newsletter_desc) && !empty($goza_newsletter_desc)) { ?>
                     <div class="main-footer-desc"><?= $goza_newsletter_desc ?></div>
-                <?php } ?>
-
-                <?php if (isset($goza_newsletter_heading) && !empty($goza_newsletter_heading)) { ?>
-                    <h3 class="main-footer-title"><?= $goza_newsletter_heading ?></h3>
                 <?php } ?>
 
                 <?php if (isset($goza_sc_sub_form) && !empty($goza_sc_sub_form)) { ?>

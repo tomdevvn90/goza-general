@@ -96,6 +96,7 @@ function goza_topbar_template()
 	$template_name = isset($goza_layout_topbar['goza_layout_top_bar']) ? $goza_layout_topbar['goza_layout_top_bar'] : 'default';
 	if (isset($_GET['home'])) {
 		switch ($_GET['home']) {
+			case "dream":
 			case "organization":
 				$template_name = 'layout-2';
 				break;
