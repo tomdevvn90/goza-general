@@ -17613,6 +17613,24 @@ h6 {
   position: relative;
 }
 
+@media (max-width: 1507px) {
+  .site-header.site-header-earthquake #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .site-header.site-header-earthquake #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+.site-header.site-header-earthquake #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item:last-child > a.mega-menu-link {
+  padding-right: 0 !important;
+}
+
 .site-header.site-header-earthquake .site-header-inner {
   width: 100%;
   height: auto;
@@ -17624,19 +17642,45 @@ h6 {
 }
 
 .site-header.site-header-earthquake .site-header-inner > .container {
-  padding-left: 0;
+  padding-left: 0px;
   background-color: var(--header-bg-color, #fff);
-  border-radius: 15px;
+  border-radius: 0 15px 15px 0;
+  box-sizing: border-box;
+  position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 25px 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 25px 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 16px 100%);
   box-sizing: border-box;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 45px;
 }
 
+.site-header.site-header-earthquake .site-header-inner > .container::before {
+  content: " ";
+  width: 60px;
+  height: 100%;
+  background-image: url(../images/icon-polygon-header-earthquake.png?2cc8d2dc6e60b5186c2b66580ac0fb12);
+  background-position: left center;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 @media (min-width: 1508px) {
   .site-header.site-header-earthquake .site-header-inner > .container {
     max-width: 1508px;
+  }
+}
+
+@media (max-width: 1507px) {
+  .site-header.site-header-earthquake .site-header-inner > .container {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .site-header.site-header-earthquake .site-header-inner > .container {
+    padding-left: 20px;
   }
 }
 
@@ -17670,11 +17714,29 @@ h6 {
   max-width: 215px;
 }
 
+@media (max-width: 1199.98px) {
+  .site-header.site-header-earthquake .goza-header-main--logo a img {
+    max-width: 180px;
+  }
+}
+
 .site-header.site-header-earthquake .goza-header-main--menus {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-right: 247px;
+}
+
+@media (max-width: 1507px) {
+  .site-header.site-header-earthquake .goza-header-main--menus {
+    padding-right: 208px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .site-header.site-header-earthquake .goza-header-main--menus {
+    padding-right: 170px;
+  }
 }
 
 .site-header.site-header-earthquake .goza-header-main--menus .goza-header-button {
@@ -17697,6 +17759,19 @@ h6 {
   align-items: center;
   justify-content: center;
   border-radius: 0 15px 15px 0;
+}
+
+@media (max-width: 1507px) {
+  .site-header.site-header-earthquake .goza-header-main--menus .goza-header-button {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .site-header.site-header-earthquake .goza-header-main--menus .goza-header-button {
+    max-width: 150px;
+    font-size: 16px;
+  }
 }
 
 .site-header.site-header-earthquake .goza-header-main--menu .navbar-nav {
@@ -17736,6 +17811,13 @@ h6 {
   align-items: center;
   box-sizing: border-box;
   border-radius: 0 10px 10px 0;
+  margin-left: 58px;
+}
+
+@media (max-width: 1507px) {
+  .site-header.site-header-earthquake .goza-header-main--cta {
+    margin-left: 30px;
+  }
 }
 
 .site-header.site-header-earthquake .goza-header-main--cta .goza-header-cart-icon {

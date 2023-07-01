@@ -2,6 +2,25 @@
     &.site-header-earthquake {
         position: relative;
 
+        #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item{
+            > a{
+                @media (max-width: 1507px){
+                    padding-left: 15px !important;
+                    padding-right: 15px !important;
+                }
+
+                @media (max-width: 1199.98px){
+                    padding-left: 10px !important;
+                    padding-right: 10px !important;
+                }
+            }
+            &:last-child{
+                > a.mega-menu-link{
+                    padding-right: 0 !important;
+                }
+            }
+        }
+
         .site-header-inner{
             width: 100%;
             height: auto;
@@ -11,15 +30,37 @@
             bottom: -49px;
             z-index: 9999;
             > .container{
-                padding-left: 0;
+                padding-left: 0px;
                 background-color: var(--header-bg-color, #fff);
-                border-radius: 15px;
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 25px 100%);
+                border-radius: 0 15px 15px 0;
+                box-sizing: border-box;
+                position: relative;
+                -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 25px 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 16px 100%);
                 box-sizing: border-box;
                 border-top-left-radius: 30px;
                 border-bottom-left-radius: 45px;
+                &::before{
+                    content: " ";
+                    width: 60px;
+                    height: 100%;
+                    background-image: url(../images/home-earthquake/icon-polygon-header-earthquake.png);
+                    background-position: left center;
+                    background-size: cover;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
                 @media (min-width: 1508px){
                     max-width: 1508px;
+                }
+
+                @media (max-width: 1507px){
+                    padding-left: 30px;
+                }
+
+                @media (max-width: 1199.98px){
+                    padding-left: 20px;
                 }
             }
         }
@@ -44,6 +85,9 @@
                         width: 100%;
                         height: auto;
                         max-width: 215px;
+                        @media (max-width: 1199.98px){
+                            max-width: 180px;
+                        }
                     }
                 }
             }
@@ -53,6 +97,13 @@
                 align-items: center;
                 justify-content: space-between;
                 padding-right: 247px;
+                @media (max-width: 1507px){
+                    padding-right: 208px;
+                }
+
+                @media (max-width: 1199.98px){
+                    padding-right: 170px;
+                }
                 .goza-header-button {
                     color: #FFF;
                     text-align: center;
@@ -73,6 +124,14 @@
                     align-items: center;
                     justify-content: center;
                     border-radius: 0 15px 15px 0;
+                    @media (max-width: 1507px){
+                        max-width: 180px;
+                    }
+
+                    @media (max-width: 1199.98px){
+                        max-width: 150px;
+                        font-size: 16px;
+                    }
                 }
             }
 
@@ -120,6 +179,10 @@
                 align-items: center;
                 box-sizing: border-box;
                 border-radius: 0 10px 10px 0;
+                margin-left: 58px;
+                @media (max-width: 1507px){
+                    margin-left: 30px;
+                }
                 .goza-header-cart-icon {
                     position: relative;
                     cursor: pointer;
