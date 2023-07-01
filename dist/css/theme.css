@@ -31174,6 +31174,99 @@ div[id*=give-form].give-display-reveal .give-btn {
   }
 }
 
+.be-grid-post-block .be-grid-post-wrap .be-grid-post__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.be-grid-post-block .be-grid-post-wrap .be-grid-post__list .be-grid-post__item {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .be-grid-post-block .be-grid-post-wrap .be-grid-post__list .be-grid-post__item {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .be-grid-post-block .be-grid-post-wrap .be-grid-post__list .be-grid-post__item {
+    max-width: 25%;
+  }
+}
+
+.be-grid-post-block .be-grid-post-wrap .be-grid-post__list .be-grid-post__item:nth-child(even) {
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .be-grid-post-block .be-grid-post-wrap .be-grid-post__list .be-grid-post__item:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+}
+
+.be-grid-post-block .be-grid-post-wrap .be-grid-post__list .be-grid-post__item-image {
+  height: 230px;
+  display: block;
+  overflow: hidden;
+}
+
+.be-grid-post-block .be-grid-post-wrap .be-grid-post__list .be-grid-post__item-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.be-grid-post-block .be-grid-post-wrap .be-grid-post__list .be-grid-post__item-content {
+  background-color: #fff;
+  padding: 20px 20px 50px 20px;
+  min-height: 230px;
+  position: relative;
+}
+
+.be-grid-post-block .be-grid-post-wrap .be-grid-post__list .be-grid-post__item-date {
+  font-size: 15px;
+  line-height: 24px;
+  color: #999990;
+  letter-spacing: 0.16px;
+  font-weight: 400;
+}
+
+.be-grid-post-block .be-grid-post-wrap .be-grid-post__list .be-grid-post__item-title {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 0.16px;
+  margin: 15px 0 0px 0;
+}
+
+.be-grid-post-block .be-grid-post-wrap .be-grid-post__list .be-grid-post__item-title a {
+  color: inherit;
+}
+
+.be-grid-post-block .be-grid-post-wrap .be-grid-post__list .be-grid-post__item-meta {
+  position: absolute;
+  bottom: 20px;
+}
+
+.be-grid-post-block .be-grid-post-wrap .be-grid-post__list .be-grid-post__item-meta span {
+  font-size: 15px;
+  line-height: 25px;
+  color: #999990;
+  letter-spacing: 0.16px;
+}
+
+.be-grid-post-block .be-grid-post-wrap .be-grid-post__list .be-grid-post__item-meta span:first-child {
+  margin-right: 10px;
+}
+
 .tribe-common h1,
 .tribe-common h2,
 .tribe-common h3,

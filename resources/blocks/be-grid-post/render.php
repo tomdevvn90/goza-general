@@ -42,6 +42,7 @@ $gp_categories     = __get_field('gp_categories') ?: '';
          'order'           => $gp_order,
          'orderby'         => $gp_orderby,
          'posts_per_page'  => $gp_ppp,
+         'post_status'  => 'publish',
       ];
 
       if ($gp_categories) {
@@ -66,11 +67,11 @@ $gp_categories     = __get_field('gp_categories') ?: '';
                </a>
                <div class="be-grid-post__item-content">
                   <span class="be-grid-post__item-date"><?php esc_attr_e(get_the_date('d M, Y')) ?></span>
-               </div>
-               <h4 class="be-grid-post__item-title"><?php echo esc_html(get_the_title()) ?></h4>
-               <div class="be-grid-post__item-meta">
-                  <span><?php esc_html_e('by ' . get_the_author()) ?></span>
-                  <span><i class="fa fa-comment" aria-hidden="true"></i> <?php esc_attr_e(get_comments_number()) ?></span>
+                  <h4 class="be-grid-post__item-title"><a href="<?php echo esc_url(get_permalink()) ?>"><?php echo esc_html(get_the_title()) ?></a></h4>
+                  <div class="be-grid-post__item-meta">
+                     <span><?php esc_html_e('by ' . get_the_author()) ?></span>
+                     <span><i class="fa fa-comment" aria-hidden="true"></i> <?php esc_attr_e(get_comments_number()) ?></span>
+                  </div>
                </div>
             </div>
       <?php
