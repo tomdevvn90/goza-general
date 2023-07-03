@@ -350,9 +350,10 @@
   .be-give-form-box-block-inner{
     background-size: cover;
     border-radius: 20px;
+    background: var(--link-color, #28C77B);
   }
   .give-form-box{
-    padding: 40px 40px 30px 150px;
+    padding: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -389,7 +390,7 @@
   }
   @media only screen and (max-width: 1200px) {
     .give-form-box{
-      padding: 30px 30px 25px 120px;
+      padding: 30px;
     }
   }
   @media only screen and (max-width: 992px) {

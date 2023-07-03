@@ -20107,7 +20107,7 @@ h6 {
 }
 
 .main-footer.footer-earthquake .main-footer-heading {
-  color: #28C77B;
+  color: var(--link-color, #28C77B);
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -20133,7 +20133,7 @@ h6 {
 }
 
 .main-footer.footer-earthquake .main-footer-content span {
-  color: #28C77B;
+  color: var(--link-color, #28C77B);
 }
 
 .main-footer.footer-earthquake .heading-general {
@@ -20141,7 +20141,7 @@ h6 {
   line-height: 36px;
 }
 
-.main-footer.footer-earthquake .quicklinks-menu ul {
+.main-footer.footer-earthquake .quicklinks-menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -20151,12 +20151,12 @@ h6 {
   grid-row-gap: 0px;
 }
 
-.main-footer.footer-earthquake .quicklinks-menu ul li {
+.main-footer.footer-earthquake .quicklinks-menu li {
   list-style-type: none;
   padding-bottom: 8px;
 }
 
-.main-footer.footer-earthquake .quicklinks-menu ul li a {
+.main-footer.footer-earthquake .quicklinks-menu li a {
   font-weight: 400;
   color: #fff;
   font-size: 18px;
@@ -20164,11 +20164,11 @@ h6 {
   transition: all 0.3s ease;
 }
 
-.main-footer.footer-earthquake .quicklinks-menu ul li a:hover {
+.main-footer.footer-earthquake .quicklinks-menu li a:hover {
   color: var(--link-color-hover, #d41b65);
 }
 
-.main-footer.footer-earthquake .quicklinks-menu ul li a:hover::before {
+.main-footer.footer-earthquake .quicklinks-menu li a:hover::before {
   color: var(--link-color-hover, #d41b65);
 }
 
@@ -20254,7 +20254,7 @@ h6 {
 }
 
 .main-footer.footer-earthquake .newsletter-form-box {
-  background: #28C77B;
+  background: var(--link-color, #28C77B);
   margin-top: -115px;
   padding: 30px;
   border-radius: 10px;
@@ -20310,28 +20310,6 @@ h6 {
   text-decoration: underline;
 }
 
-.main-footer.footer-earthquake .main-footer-socket-menu ul {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.main-footer.footer-earthquake .main-footer-socket-menu ul li:not(:last-child) {
-  margin-right: 20px;
-}
-
-.main-footer.footer-earthquake .main-footer-socket-menu ul li a {
-  font-weight: 400 !important;
-  color: #c3c3c3;
-  font-size: 17px;
-}
-
-.main-footer.footer-earthquake .main-footer-socket-menu ul li a:hover {
-  color: var(--link-color-hover, #d41b65);
-}
-
 @media (max-width: 991.98px) {
   .main-footer.footer-earthquake .row {
     flex-direction: column;
@@ -20351,7 +20329,7 @@ h6 {
 }
 
 @media (max-width: 991.98px) and (max-width: 767.98px) {
-  .main-footer.footer-earthquake .main-footer-widget .quicklinks-menu ul {
+  .main-footer.footer-earthquake .main-footer-widget .quicklinks-menu {
     grid-template-columns: repeat(1, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 0px;
@@ -22638,7 +22616,7 @@ h6 {
 }
 
 .be-post-slider-block.is-style-goza-earthquake .be-post-slider-block-inner .item-post .item-post-content {
-  background: #28C77B;
+  background: var(--link-color, #28C77B);
   position: relative;
   padding: 20px 30px;
 }
@@ -22647,7 +22625,7 @@ h6 {
   width: 104px;
   height: 104px;
   background: #FFFFFF;
-  border: 5px solid #28C77B;
+  border: 5px solid var(--link-color, #28C77B);
   border-radius: 10px;
   position: absolute;
   right: 15px;
@@ -22661,7 +22639,7 @@ h6 {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  color: #28C77B;
+  color: var(--link-color, #28C77B);
 }
 
 .be-post-slider-block.is-style-goza-earthquake .be-post-slider-block-inner .item-post .item-post-content .item-post-meta span.item-post-date span {
@@ -23372,7 +23350,7 @@ h6 {
 .be-testimonials-block.is-style-5 .be-testimonials-block-carousel .item-testimonial .item-testimonial-inner {
   display: flex;
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
   margin-top: 80px;
 }
 
@@ -23415,7 +23393,7 @@ h6 {
   padding-left: calc(10% + 70px) !important;
   padding: 70px;
   text-align: center;
-  bottom: -35px;
+  bottom: -55px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
 }
@@ -23435,16 +23413,16 @@ h6 {
 }
 
 .be-testimonials-block.is-style-5 .be-testimonials-block-carousel .item-testimonial-content .item-testimonial--icon-quocte {
-  width: 98px;
-  height: 98px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  top: -49px;
+  top: -45px;
   left: 50%;
-  border: 3px solid #28C77B;
+  border: 3px solid var(--link-color, #28C77B);
 }
 
 .be-testimonials-block.is-style-5 .be-testimonials-block-carousel .item-testimonial-content .item-testimonial--icon-quocte svg {
@@ -23463,7 +23441,7 @@ h6 {
 }
 
 .be-testimonials-block.is-style-5 .be-testimonials-block-carousel .item-testimonial-info p.item-testimonial-position {
-  color: #28C77B;
+  color: var(--link-color, #28C77B);
   font-weight: 400;
   text-transform: none;
 }
@@ -26160,7 +26138,7 @@ h6 {
 .be-give-slider-block.is-style-4 .be-give-slider-block-inner .item-give .entry-content .entry-content-inner .give-goal-progress-wrap .progress .bar {
   width: 0;
   height: 100%;
-  background: #28C77B;
+  background: var(--link-color, #28C77B);
 }
 
 .be-give-slider-block.is-style-4 .be-give-slider-block-inner .item-give .entry-content .entry-content-inner .give-goal-progress-wrap .give-price-wrap {
@@ -26175,7 +26153,7 @@ h6 {
   font-weight: bold;
   line-height: 26px;
   letter-spacing: 0px;
-  color: #28C77B;
+  color: var(--link-color, #28C77B);
   text-transform: uppercase;
   padding: 10px 0;
 }
@@ -26255,13 +26233,13 @@ h6 {
   border: 2px solid #F8F8F8;
   bottom: -20px;
   right: 30px;
-  color: #28C77B;
+  color: var(--link-color, #28C77B);
   font-size: 17px;
   border-radius: 10px;
 }
 
 .be-give-slider-block.is-style-4 .be-give-slider-block-inner .item-give .entry-content a.more-link:hover {
-  background: #28C77B;
+  background: var(--link-color, #28C77B);
   color: #fff;
 }
 
@@ -30739,10 +30717,11 @@ h6 {
 .be-give-form-box-block.is-style-3 .be-give-form-box-block-inner {
   background-size: cover;
   border-radius: 20px;
+  background: var(--link-color, #28C77B);
 }
 
 .be-give-form-box-block.is-style-3 .give-form-box {
-  padding: 40px 40px 30px 150px;
+  padding: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30779,7 +30758,7 @@ h6 {
 
 @media only screen and (max-width: 1200px) {
   .be-give-form-box-block.is-style-3 .give-form-box {
-    padding: 30px 30px 25px 120px;
+    padding: 30px;
   }
 }
 

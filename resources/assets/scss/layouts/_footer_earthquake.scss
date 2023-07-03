@@ -72,7 +72,7 @@
       }
 
       .main-footer-heading {
-        color: #28C77B;
+        color: var(--link-color, #28C77B);
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -92,7 +92,7 @@
         border-bottom: 1px solid #7C7C7C;
         margin-bottom: 30px;
         span{
-            color:#28C77B;
+            color: var(--link-color, #28C77B);
         }
       }
 
@@ -102,8 +102,7 @@
       }
 
       .quicklinks-menu {
-            ul{
-                list-style-type: none;
+            list-style-type: none;
                 margin: 0;
                 padding: 0;
                 display: grid;
@@ -130,9 +129,7 @@
                         }
                     }
       
-            }
-          
-        }
+                }
       }
 
       .main-footer-social {
@@ -203,7 +200,7 @@
           }
       }
       .newsletter-form-box {
-        background: #28C77B;
+        background: var(--link-color, #28C77B);
         margin-top: -115px;
         padding: 30px;
         border-radius: 10px;
@@ -253,31 +250,6 @@
               }
           }
 
-          &-menu {
-              ul {
-                  display: flex;
-                  align-items: center;
-                  list-style-type: none;
-                  padding: 0;
-                  margin: 0;
-
-                  li {
-                      &:not(:last-child) {
-                          margin-right: 20px;
-                      }
-
-                      a {
-                          font-weight: 400 !important;
-                          color: #c3c3c3;
-                          font-size: 17px;
-
-                          &:hover {
-                              color: var(--link-color-hover, #d41b65);
-                          }
-                      }
-                  }
-              }
-          }
       }
       @include media-breakpoint-down(md) {
         .row{
@@ -294,13 +266,9 @@
             }
             @include media-breakpoint-down(sm) {
                 .quicklinks-menu {
-                    ul{
-                        grid-template-columns: repeat(1,1fr);
-                        grid-column-gap: 20px;
-                        grid-row-gap: 0px;
-                        
-                    }
-                  
+                    grid-template-columns: repeat(1,1fr);
+                    grid-column-gap: 20px;
+                    grid-row-gap: 0px; 
                 }
             }
         }

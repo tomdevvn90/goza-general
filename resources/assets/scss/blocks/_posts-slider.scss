@@ -584,7 +584,7 @@
                     }
                 }
                 .item-post-content{
-                    background: #28C77B;
+                    background: var(--link-color, #28C77B);
                     position: relative;
                     padding: 20px 30px;
                     .item-post-meta{
@@ -592,7 +592,7 @@
                             width: 104px;
                             height: 104px;
                             background: #FFFFFF;
-                            border: 5px solid #28C77B;
+                            border: 5px solid var(--link-color, #28C77B);
                             border-radius: 10px;
                             position: absolute;
                             right: 15px;
@@ -606,7 +606,7 @@
                             flex-direction: column;
                             justify-content: space-around;
                             align-items: center;
-                            color: #28C77B;
+                            color: var(--link-color, #28C77B);
                             span{
                                 font-size: 30px;
                                 display: block;
