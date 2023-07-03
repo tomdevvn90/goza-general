@@ -12899,6 +12899,7 @@
 .be-give-form-box-block.is-style-default .be-give-form-box-block-inner {
   background-size: cover;
   border-radius: 20px;
+  background-position: center;
 }
 
 .be-give-form-box-block.is-style-default .give-form-box {
