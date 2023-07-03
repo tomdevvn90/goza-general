@@ -735,5 +735,11 @@
                 }
             }
         }
+        @media (max-width: 1200px) {
+            .be-testimonials-block-carousel{
+                max-width: 960px;
+                margin: 0 auto;
+            }
+        }
     }
 }

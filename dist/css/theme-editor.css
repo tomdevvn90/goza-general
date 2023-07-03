@@ -6001,6 +6001,13 @@
   text-transform: none;
 }
 
+@media (max-width: 1200px) {
+  .be-testimonials-block.is-style-5 .be-testimonials-block-carousel {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
 .be-icon-box-block--icon {
   text-align: center;
 }
@@ -13338,7 +13345,6 @@
 @media only screen and (max-width: 767px) {
   .be-give-form-box-block.is-style-3 .give-form-box {
     padding: 40px 20px;
-    background: #28C77B;
     border-radius: 15px;
   }
 }
