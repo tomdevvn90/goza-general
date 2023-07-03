@@ -266,7 +266,7 @@
                 border: 2px solid #E7E7E7;
                 border-radius: 20px;
                 position: relative;
-                padding: 30px 90px 30px 30px;
+                padding: 30px;
             }
 
             @media only screen and (min-width: 768px) and (max-width: 992px)  {
@@ -284,6 +284,12 @@
                 text-align: left;
                 margin-top: 0;
                 margin-bottom: 10px;
+                padding-right: 55px;
+            }
+            @media (max-width: 1200px) {
+                .be-icon-box-block--heading{
+                    padding-right: 0px;
+                }
             }
             .be-icon-box-block--subheading{
                 font-size: 18px;

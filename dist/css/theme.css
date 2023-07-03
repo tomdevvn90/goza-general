@@ -23714,7 +23714,7 @@ h6 {
   border: 2px solid #E7E7E7;
   border-radius: 20px;
   position: relative;
-  padding: 30px 90px 30px 30px;
+  padding: 30px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -23732,6 +23732,13 @@ h6 {
   text-align: left;
   margin-top: 0;
   margin-bottom: 10px;
+  padding-right: 55px;
+}
+
+@media (max-width: 1200px) {
+  .be-icon-box-block.is-style-4 .be-icon-box-block-inner .be-icon-box-block--heading {
+    padding-right: 0px;
+  }
 }
 
 .be-icon-box-block.is-style-4 .be-icon-box-block-inner .be-icon-box-block--subheading {
@@ -30373,6 +30380,13 @@ h6 {
   font-size: 20px;
   line-height: 30px;
   color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .be-give-form-box-block.is-style-default .give-form-box .give-box-content .give-box-content-left h2.give-box-heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
 }
 
 .be-give-form-box-block.is-style-default .give-form-box .give-box-content .give-box-content-right {
