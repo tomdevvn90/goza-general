@@ -23315,7 +23315,7 @@ ul.be-list-ul li {
   content: " ";
   position: absolute;
   width: 10px;
-  background-color: var(--heading-color);
+  background-color: #213e8c;
   right: -5px;
   height: 60px;
   z-index: 9;
@@ -23341,7 +23341,7 @@ ul.be-list-ul li {
   content: " ";
   position: absolute;
   width: 10px;
-  background-color: var(--heading-color);
+  background-color: #213e8c;
   left: -5px;
   height: 60px;
   z-index: 9;
@@ -23399,9 +23399,25 @@ ul.be-list-ul li {
   position: inherit;
   width: 100%;
   text-align: center;
+  height: 52px;
+}
+
+.be-testimonials-block.is-style-3 .be-testimonials-block-carousel .item-testimonial--icon-quocte::before {
+  content: "\F10E";
+  display: block;
+  font-family: FontAwesome;
+  text-align: center;
+  font-size: 45px;
+  color: #ec5e87;
+  z-index: 9999;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .be-testimonials-block.is-style-3 .be-testimonials-block-carousel .item-testimonial--icon-quocte svg {
+  display: none;
   max-width: 50px;
 }
 
@@ -23468,18 +23484,18 @@ ul.be-list-ul li {
   transition: opacity 0.2s ease-in-out;
 }
 
-.be-testimonials-block.is-style-3 .be-testimonials-block-carousel .slick-arrow::before.slick-prev {
-  left: -40px;
+.be-testimonials-block.is-style-3 .be-testimonials-block-carousel .slick-arrow.slick-prev {
+  left: -30px;
 }
 
-.be-testimonials-block.is-style-3 .be-testimonials-block-carousel .slick-arrow::before.slick-next {
-  right: -15px;
+.be-testimonials-block.is-style-3 .be-testimonials-block-carousel .slick-arrow.slick-next {
+  right: -20px;
 }
 
-.be-testimonials-block.is-style-3 .be-testimonials-block-carousel .slick-arrow::before:hover::before {
-  background-color: var(--heading-color);
-  color: #fff;
-  border-color: var(--heading-color);
+.be-testimonials-block.is-style-3 .be-testimonials-block-carousel .slick-arrow:hover::before {
+  background-color: var(--bg-ar-hv);
+  color: var(--color-arrow-hv);
+  border-color: var(--bg-ar-hv);
 }
 
 .be-testimonials-block.is-style-3 .be-testimonials-block-carousel .slick-slide {
@@ -29712,6 +29728,52 @@ ul.be-list-ul li {
   display: flex;
   align-items: center;
   align-content: center;
+}
+
+@media (max-width: 1199.98px) {
+  .grid-services-box-block.be-gz-orgazination-services-box {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .grid-services-box-block.be-gz-orgazination-services-box {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+.grid-services-box-block.be-gz-orgazination-services-box .gsb-heading {
+  width: 100%;
+  max-width: 555px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 45px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1199.98px) {
+  .grid-services-box-block.be-gz-orgazination-services-box .gsb-heading {
+    font-size: 36px;
+    list-style: 41px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .grid-services-box-block.be-gz-orgazination-services-box .gsb-heading {
+    font-size: 30px;
+    list-style: 35px;
+  }
+}
+
+.be-events-listing-block.is-style-ev-fill.be-gz-orgazination-events-listing .item-event--date {
+  background: rgba(44, 73, 151, 0.7);
+}
+
+.be-events-listing-block.is-style-ev-fill.be-gz-orgazination-events-listing .item-event--count-down .be-count-down--result > div {
+  background: rgba(44, 73, 151, 0.7);
 }
 
 .be-column-image-text-video-block .block-grid {
