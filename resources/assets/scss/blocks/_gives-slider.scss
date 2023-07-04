@@ -613,13 +613,15 @@
       }
     }
   }
+
   &.is-style-4 {
     .be-give-slider-block-inner {
       .item-give {
-        .item-give-inner{
+        .item-give-inner {
           border-radius: 20px;
           margin-bottom: 40px;
         }
+
         .featured-image {
           border-radius: 20px 20px 0 0;
           overflow: hidden;
@@ -627,6 +629,7 @@
           padding-bottom: 70%;
           background: #e7e6e4;
           z-index: 1;
+
           img {
             position: absolute;
             top: 0;
@@ -758,6 +761,7 @@
               }
             }
           }
+
           a.more-link {
             position: absolute;
             width: 40px;
@@ -771,8 +775,9 @@
             right: 30px;
             color: var(--link-color, #28C77B);
             font-size: 17px;
-            border-radius:10px;
-            &:hover{
+            border-radius: 10px;
+
+            &:hover {
               background: var(--link-color, #28C77B);
               color: #fff;
             }
@@ -791,4 +796,147 @@
     }
   }
 
+  &.is-style-5 {
+    .be-give-slider-block-inner {
+      .item-give {
+        .item-give-inner {
+          box-shadow: none;
+            &:hover{
+              .featured-image{
+                .bt-overlay {
+                  opacity: 1;
+                }
+              } 
+            }
+          .featured-image {
+            width: 100%;
+            min-height: 220px;
+            position: relative;
+            overflow: hidden;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .bt-icon-give_forms {
+              width: 50px;
+              height: 50px;
+              background-color: #000;
+              position: absolute;
+              bottom: 10px;
+              right: 10px;
+              opacity: 1;
+              -webkit-transition: 0.4s ease;
+              transition: 0.4s ease;
+              background-size: initial;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAYAAAAVibZIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6M0JCM0JBN0Y2Q0FFMTFFQUFFQkVBQ0JFOTY5QkE2NDUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6M0JCM0JBODA2Q0FFMTFFQUFFQkVBQ0JFOTY5QkE2NDUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozQkIzQkE3RDZDQUUxMUVBQUVCRUFDQkU5NjlCQTY0NSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozQkIzQkE3RTZDQUUxMUVBQUVCRUFDQkU5NjlCQTY0NSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuIeMe4AAAFgSURBVHjaYvj//z8DHhwLxKeA+B0QXwfiIiS5BCA+D5W7DMT5MDl8Bhb+xw5ygTgSh9xEkF5GsMmYQAqInzKQB0yZcEiEMpAPYnAZqkaBoYq4DH1LgaEfcBm6iQJDt+CL/YP/SQcPCCUpUSD+TqKhWoQMBWFjEgz0Jybxw7AlEP8gYGAAsh5iDGWAeus1FsN+A7EzunpiDQVhSSC+hmTgGyDWxaYWVzYFAVBy+4cmxgHEZ4BYAIjNgPgZVp1YbPIG4u1A/BiaRFYBsQWRvlHD5v1WPJHRBsTZQByBw8AeqLq9MAFhIJ5NQvI5jWZgNbIkSOAiEH8jMZEfQTIwFU0ujvE/npiCgnYg3ofE/wnEh6FsX7RyYgkQx4Js+kTAVSlAzIOEeaHpFr1meIicpD4BTedloBxoAfF1WFqkBsiEGQhLp5SCmejJiwVo7iVQFUCiy34D8W0gngnE89ElAQIMALefJYmn12/TAAAAAElFTkSuQmCC');
+            }
+
+            .bt-overlay {
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.4);
+              position: absolute;
+              left: 0;
+              top: 0;
+              opacity: 0;
+              -webkit-transition: 0.4s ease;
+              transition: 0.4s ease;
+
+              .bt-content-overlay {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                left: 0;
+                bottom: 10px;
+
+                .bt-meta-give-forms {
+                  margin-bottom: 10px;
+                  padding: 0 10px;
+
+                  .give-goal-progress {
+                    margin-bottom: 0;
+                    .raised {
+                      color: #fff;
+                      font-size: 20px;
+                      font-weight: 400;
+                      line-height: 30px;
+                      letter-spacing: 0.32px;
+                      margin-bottom: 1px;
+
+                      .income {
+                        color: #fff;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 30px;
+                        letter-spacing: 0.32px;
+                      }
+
+                    }
+
+                    .progress-bar {
+                      padding-bottom: 0;
+                      .give-progress-bar {
+                        background: #eee;
+                        border-radius: 0;
+                        height: 10px;
+                        overflow: hidden;
+                        position: relative;
+                        width: 100%;
+
+                        >span {
+                          border-radius: 0;
+                          display: block;
+                          height: 100%;
+                          overflow: hidden;
+                          position: relative;
+                          background: #333 !important;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .give-button-donate{
+                  text-align: right;
+                  padding: 0 10px;
+                }
+              }
+            }
+          }
+        }
+
+        .entry-content {
+          margin: 20px 0 0 0;
+
+          .title {
+            margin: 0 0 5px 0;
+            font-size: 22px;
+            line-height: 32px;
+            letter-spacing: 0.16px;
+            font-weight: 700;
+            color: #333;
+
+            a {
+              color: inherit;
+            }
+          }
+
+          .be-category,
+          .be-date {
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 400;
+            margin-top: 5px;
+            letter-spacing: 0.32px;
+
+            strong {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
 }

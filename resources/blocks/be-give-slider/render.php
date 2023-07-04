@@ -44,9 +44,9 @@ $the_query = new WP_Query($args);
                 be_item_give_slider($block);
             } ?>
         </div>
-    <?php }else{
-        echo '<div class="be-not-found">No results found.</div>';
-    } ?>      
+    <?php }else{?>
+        <div class="be-not-found"><?php esc_html_e('No results found.', 'goza') ?></div>
+    <?php } ?>      
 </div>
 <?php 
 
