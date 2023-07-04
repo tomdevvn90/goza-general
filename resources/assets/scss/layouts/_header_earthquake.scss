@@ -51,7 +51,7 @@
                     height: 100%;
                     background-image: url(../images/home-earthquake/icon-polygon-header-earthquake.png);
                     background-position: left center;
-                    background-size: cover;
+                    background-size: 100% 100%;
                     position: absolute;
                     left: 0;
                     top: 0;
@@ -81,15 +81,18 @@
             }
             
             @include media-breakpoint-down(md) {
-                padding: 38px 0;
+                padding: 20px 0;
             }
 
             @include media-breakpoint-down(sm){
-                padding: 25px 0;
+                padding: 20px 0;
             }
             &--logo {
                 @include media-breakpoint-down(md) { 
                     padding-left: 35px;
+                }
+                @include media-breakpoint-down(xs) { 
+                    padding-left: 15px;
                 }
                 a {
                     display: block;
@@ -157,6 +160,9 @@
 
                     @include media-breakpoint-up(lg){ 
                         display: flex !important;
+                    }
+                    &:after{
+                        top: -35px;
                     }
                 }
             }

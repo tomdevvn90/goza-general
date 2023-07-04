@@ -672,7 +672,7 @@
                 .bar {
                   width: 0;
                   height: 100%;
-                  background: #28C77B;
+                  background: var(--link-color, #28C77B);
                 }
               }
 
@@ -688,7 +688,7 @@
                 font-weight: bold;
                 line-height: 26px;
                 letter-spacing: 0px;
-                color: #28C77B;
+                color: var(--link-color, #28C77B);
                 text-transform: uppercase;
                 padding: 10px 0;
               }
@@ -769,11 +769,11 @@
             border: 2px solid #F8F8F8;
             bottom: -20px;
             right: 30px;
-            color: #28C77B;
+            color: var(--link-color, #28C77B);
             font-size: 17px;
             border-radius:10px;
             &:hover{
-              background: #28C77B;
+              background: var(--link-color, #28C77B);
               color: #fff;
             }
           }

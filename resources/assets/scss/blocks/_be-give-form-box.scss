@@ -2,6 +2,7 @@
   .be-give-form-box-block-inner{
     background-size: cover;
     border-radius: 20px;
+    background-position: center;
   }
   .give-form-box{
     padding: 0px;
@@ -29,6 +30,12 @@
           font-size: 20px;
           line-height: 30px;
           color: #fff;
+        }
+        @media (max-width: 1200px) {
+          h2.give-box-heading{
+            font-size: 40px;
+            line-height: 50px;
+          }
         }
       }
       .give-box-content-right{
@@ -241,6 +248,12 @@
         line-height: 30px;
         color: #fff;
       }
+      @media (max-width: 1200px) {
+        h2.give-box-heading{
+          font-size: 40px;
+          line-height: 50px;
+        }
+      }
     }
     .give-box-button {
       .give-box-button-popup{
@@ -350,9 +363,10 @@
   .be-give-form-box-block-inner{
     background-size: cover;
     border-radius: 20px;
+    background: var(--link-color, #28C77B);
   }
   .give-form-box{
-    padding: 40px 40px 30px 150px;
+    padding: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -389,7 +403,7 @@
   }
   @media only screen and (max-width: 1200px) {
     .give-form-box{
-      padding: 30px 30px 25px 120px;
+      padding: 30px;
     }
   }
   @media only screen and (max-width: 992px) {
@@ -410,7 +424,6 @@
   @media only screen and (max-width: 767px) {
     .give-form-box{
       padding: 40px 20px;
-      background: #28C77B;
       border-radius: 15px;
     }
   }
