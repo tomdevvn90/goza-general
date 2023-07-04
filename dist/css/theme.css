@@ -20837,7 +20837,7 @@ h2.be-heading-has-line {
   margin-top: -70px;
 }
 
-.be-list-ul ul li {
+ul.be-list-ul li {
   font-size: 20px;
   color: #555;
 }
