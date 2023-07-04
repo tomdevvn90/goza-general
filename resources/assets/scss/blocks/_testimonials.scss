@@ -741,5 +741,13 @@
                 margin: 0 auto;
             }
         }
+        @media (max-width: 1200px) {
+            .be-testimonials-block-carousel{
+                max-width: 720px;
+                margin: 0 auto;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
     }
 }

@@ -6008,6 +6008,15 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .be-testimonials-block.is-style-5 .be-testimonials-block-carousel {
+    max-width: 720px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .be-icon-box-block--icon {
   text-align: center;
 }
@@ -13186,6 +13195,13 @@
   font-size: 20px;
   line-height: 30px;
   color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .be-give-form-box-block.is-style-2 .give-form-box .give-box-content h2.give-box-heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
 }
 
 .be-give-form-box-block.is-style-2 .give-form-box .give-box-button .give-box-button-popup .give_error.give_warning {

@@ -248,6 +248,12 @@
         line-height: 30px;
         color: #fff;
       }
+      @media (max-width: 1200px) {
+        h2.give-box-heading{
+          font-size: 40px;
+          line-height: 50px;
+        }
+      }
     }
     .give-box-button {
       .give-box-button-popup{
