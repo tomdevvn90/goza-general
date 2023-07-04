@@ -17724,6 +17724,12 @@ h6 {
   }
 }
 
+@media (max-width: 575.98px) {
+  .site-header.site-header-earthquake .goza-header-main--logo {
+    padding-left: 15px;
+  }
+}
+
 .site-header.site-header-earthquake .goza-header-main--logo a {
   display: block;
 }
@@ -23613,8 +23619,8 @@ h2.be-heading-has-line {
   .be-testimonials-block.is-style-5 .be-testimonials-block-carousel {
     max-width: 540px;
     margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 

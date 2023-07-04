@@ -91,6 +91,9 @@
                 @include media-breakpoint-down(md) { 
                     padding-left: 35px;
                 }
+                @include media-breakpoint-down(xs) { 
+                    padding-left: 15px;
+                }
                 a {
                     display: block;
                     img {
