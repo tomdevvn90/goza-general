@@ -20750,8 +20750,8 @@ h6 {
 }
 
 .play-video-home-earthquake .block-inner #block-video-action a {
-  height: 80px;
-  width: 80px;
+  height: 80px !important;
+  width: 80px !important;
   background-color: #28C77B !important;
   color: #28C77B !important;
 }
@@ -20761,8 +20761,8 @@ h6 {
 }
 
 .play-video-home-earthquake .block-inner #block-video-action a::before {
-  width: 80px;
-  height: 80px;
+  width: 80px !important;
+  height: 80px !important;
 }
 
 .give-block-hero {
@@ -20835,6 +20835,11 @@ h2.be-heading-has-line {
 
 .be-box-mgt .goza-block-layout-column-inner {
   margin-top: -70px;
+}
+
+.be-list-ul ul li {
+  font-size: 20px;
+  color: #555;
 }
 
 @media only screen and (max-width: 1200px) {
