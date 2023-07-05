@@ -49,7 +49,7 @@
                     },
                   ]
 			};
-            console.log($dataCarousel)
+            
 			$carousel.slick(Object.assign({}, opt_df, $dataCarousel));
         })
     }
