@@ -14,7 +14,7 @@
                 $strokeColor   = $(this).data('stroke-color'),
                 $trailColor    = $(this).data('trail-color'),
                 $duration      = $(this).data('duration');
-
+                
             if($value > 0){
                 if($shape == 'circle'){
                     var cirle = new ProgressBar.Circle(`#${$idProgressbar}`, {

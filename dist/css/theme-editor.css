@@ -4261,6 +4261,7 @@
 
 .is-style-default .be-give-grid-block-inner .give-forms-grid .entry-content {
   padding: 30px;
+  background-color: #fff;
 }
 
 .is-style-default .be-give-grid-block-inner .give-forms-grid .entry-content .form-category {
@@ -9517,6 +9518,10 @@
   margin-top: 20px;
   font-weight: 700;
   text-decoration: none;
+}
+
+.box-network-connect-block .block-box .btn.btn-organization {
+  border-color: var(--link-color, #ec5e87);
 }
 
 .box-network-connect-block .block-box .btn:hover {

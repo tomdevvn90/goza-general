@@ -16,13 +16,14 @@ $strokeCl = get_field('stroke_color_pb_bl') ? : $link_color;
 $trailCl  = get_field('trail_color_pb_bl') ? : '#000';
 $size     = get_field('size_pb_bl') ? : '';
 $duration = get_field('duration_pb_bl') ? : 1200;
+$pgID     = uniqid();
 ?>
 
 <div id="<?= $id; ?>" class="be-progressbar-block <?= $shape; ?>" data-shape="<?= $shape ?>" data-value="<?= $value ?>" 
     data-height="<?= $height ?>" data-stroke-color="<?= $strokeCl ?>" data-trail-color="<?= $trailCl ?>" data-duration= <?= $duration ?>
     style="--size:<?= $size ?>">
 
-    <div id="be-progressbar-block-warp-<?= $block['id'] ?>" class="be-progressbar-block-warp"> </div>
+    <div id="be-progressbar-<?= $block['id'] ?>-<?= $pgID ?>" class="be-progressbar-block-warp"> </div>
     <div class="be-progressbar-block-warp __editor"> 
         <?php if($value > 0): ?>
             <?php if($shape == 'circle'){?>
