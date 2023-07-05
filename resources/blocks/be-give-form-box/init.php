@@ -65,6 +65,16 @@ function be_template_give_form_box_default($be_sub_heading, $be_heading_form, $b
                 <div class="give-price-goal"><span><?php echo __( 'Donation Goal', 'goza'); ?></span>$<?php echo $goal ?></div>
             </div>
         </div>
+        <style>
+            @keyframes progressAnimation {
+            0%   { width: 5%; background-color: #fff;}
+            100% { width: <?php echo $progress ?>%; background-color: #fff; }
+            }
+            .give-box-content-right .progress .bar{
+                width: <?php echo $progress ?>%; 
+                animation: progressAnimation 6s;
+            }
+        </style>
     </div>
     <div class="give-box-button">
         <div class="give-box-button-popup">
