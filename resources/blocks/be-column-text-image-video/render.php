@@ -42,7 +42,7 @@ $citv_bg_img_video         = __get_field('citv_bg_img_video') ?: '';
 $citv_subheading_color     = __get_field('citv_subheading_color') ?: '';
 $citv_heading_color        = __get_field('citv_heading_color') ?: '';
 $citv_desc_color           = __get_field('citv_desc_color') ?: '';
-$citv_button_style          = __get_field('citv_button_style') ?: 'btn-default';
+$citv_button_style         = __get_field('citv_button_style') ?: 'btn-default';
 
 // Build a valid style attribute for background and text colors.
 $styles = array('background-color: ' . $bnc_bg_color);

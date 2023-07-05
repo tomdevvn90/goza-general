@@ -44,11 +44,6 @@
         })
     }
 
-
-    $(window).on("scroll", function () {
-
-    });
-
     $(document).ready(function () {
         bePostsSlider()
     })

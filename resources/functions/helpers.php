@@ -334,7 +334,7 @@ if (!function_exists('goza_single_post_related')) {
 					</div>
 				</div>
 			</div>
-<?php
+		<?php
 		}
 	}
 }
@@ -416,7 +416,29 @@ if (!function_exists('goza_get_logo_footer_site')) {
 					return $logo;
 				}
 			}
-		} 
+		}
 		return null;
+	}
+}
+
+
+/**
+ * Render Button Template
+ */
+if (!function_exists('goza_button_render')) {
+	function goza_button_render($button, $style_button = 'btn-default')
+	{
+		ob_start();
+		?>
+		<a href="<?= esc_url($button['url']) ?>" target="<?= esc_attr($button['target']) ?>" class="btn <?= esc_attr($style_button) ?>">
+			<?= esc_attr($button['title']) ?>
+			<?php if ($style_button == 'btn-water') { ?>
+				<svg class="wgl-dashes inner-dashed-border animated-dashes">
+					<rect rx="0%" ry="0%"> </rect>
+				</svg>
+			<?php } ?>
+		</a>
+<?php
+		echo ob_get_clean();
 	}
 }

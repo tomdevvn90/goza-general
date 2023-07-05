@@ -1,9 +1,11 @@
 import 'slick-carousel';
+import counterUp from 'counterup2';
+
 import './components/navigation';
 import './components/function';
-
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+
 AOS.init({
     duration: 1200,
     once: true,
@@ -13,6 +15,12 @@ AOS.init({
 
 $(document).ready(function() {
     AOS.refresh();
+
+    const el = document.querySelector( '.counterUp' )
+    counterUp( el, {
+    duration: 2000,
+    delay: 100,
+    } )
 });
 
 import './blocks/progressbar-block';

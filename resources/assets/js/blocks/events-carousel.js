@@ -32,11 +32,6 @@
         })
     }
 
-
-    $(window).on("scroll", function () {
-
-    });
-
     $(document).ready(function () {
         beEventsCarousel()
     })

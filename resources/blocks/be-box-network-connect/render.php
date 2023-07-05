@@ -41,7 +41,7 @@ $bnc_style_button    = __get_field('bnc_style_button') ?: 'btn-default';
 // Build a valid style attribute for background and text colors.
 $styles = array('background-color: ' . $bnc_bg_color);
 if ($bnc_bg_img) {
-   $styles[] = 'background-image: url(' . esc_attr($bnc_bg_img['url']) . ')';
+   $styles[] = 'background-image: url(' . esc_url($bnc_bg_img['url']) . ')';
 }
 $style  = implode('; ', $styles);
 

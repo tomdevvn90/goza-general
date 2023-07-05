@@ -1,6 +1,6 @@
 {
     "key": "group_647def9e8db3c",
-    "title": "Button Syle",
+    "title": "Button Style",
     "fields": [
         {
             "key": "field_647def9f82fae",
@@ -53,5 +53,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685977262
+    "modified": 1688566083
 }
