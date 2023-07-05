@@ -28,7 +28,7 @@
 				dots: false,
 				autoplay: true,
 				arrows: false,
-                adaptiveHeight: true,
+                adaptiveHeight: false,
                 fade: false,
                 cssEase: 'linear',
                 responsive: [
@@ -49,6 +49,7 @@
                     },
                   ]
 			};
+            console.log($dataCarousel)
 			$carousel.slick(Object.assign({}, opt_df, $dataCarousel));
         })
     }

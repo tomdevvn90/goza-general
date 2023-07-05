@@ -43,11 +43,12 @@
     }
 
     .last-home-button {
-        &.wp-block-columns{
+        &.wp-block-columns {
             @media (max-width: 767px) {
                 gap: 1em;
             }
         }
+
         .wp-block-column {
             @media (max-width: 767px) {
                 justify-content: center;
@@ -63,17 +64,62 @@
     }
 }
 
-.be-give-progress{
+.be-give-progress {
     margin: 0;
     padding: 0;
+
     .be-col-we-are-charity.wp-block-column {
         padding-right: 10%;
     }
 }
 
-.section-charity-upcoming{
+.section-charity-upcoming {
     gap: 0;
-    .goza-block-container{
+
+    .goza-block-container {
         height: 100%;
+    }
+}
+
+
+.charity-or-newsletter {
+    .tnp {
+        form {
+            position: relative;
+            .tnp-email {
+                height: 80px;
+                box-sizing: border-box;
+                border: 1px solid #f2f2f2;
+                padding: 0 210px 0 30px;
+                font-size: 18px;
+                line-height: 80px;
+                color: #999999;
+                max-width: 100%;
+                letter-spacing: 0.16px;
+                width: 100%;
+                border-radius: 0;
+                background-color: #fff;
+                outline: none;
+            }
+
+            .tnp-submit {
+                font-size: 16px;
+                line-height: 60px;
+                height: 60px;
+                font-weight: 700;
+                letter-spacing: 0.16px;
+                text-transform: uppercase;
+                padding: 0;
+                width: 180px;
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+                background-color: #000;
+                border-radius: 0;
+                color: #fff;
+            }
+        }
     }
 }

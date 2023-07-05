@@ -63,4 +63,49 @@
     }
 }
 
+
+.grid-services-box-block{
+    &.be-gz-orgazination-services-box{
+        @include media-breakpoint-down(lg){
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+
+        .gsb-heading{
+            width: 100%;
+            max-width: 555px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 45px;
+            line-height: 50px;
+            text-transform: uppercase;
+            @include media-breakpoint-down(lg){
+                font-size: 36px;
+                list-style: 41px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 30px;
+                list-style: 35px;
+            }
+        }
+    }
+}
+
+.be-events-listing-block.is-style-ev-fill {
+    &.be-gz-orgazination-events-listing{
+        .item-event--date{
+            background: rgba(44, 73, 151, 0.7);
+        }
+
+        .item-event--count-down .be-count-down--result > div{
+            background: rgba(44, 73, 151, 0.7);
+        }
+    }
+}
 // end css for home orgazination

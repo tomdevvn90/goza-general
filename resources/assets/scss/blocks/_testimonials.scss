@@ -460,7 +460,7 @@
             content: " ";
             position: absolute;
             width: 10px;
-            background-color: var(--heading-color);
+            background-color: #213e8c;
             right: -5px;
             height: 60px;
             z-index: 9;
@@ -483,7 +483,7 @@
                 content: " ";
                 position: absolute;
                 width: 10px;
-                background-color: var(--heading-color);
+                background-color: #213e8c;
                 left: -5px;
                 height: 60px;
                 z-index: 9;
@@ -536,7 +536,22 @@
                     position: inherit;
                     width: 100%;
                     text-align: center;
+                    height: 52px;
+                    &::before{
+                        content: '\f10e';
+                        display: block;
+                        font-family: FontAwesome;
+                        text-align: center;
+                        font-size: 45px;
+                        color: #ec5e87;
+                        z-index: 9999;
+                        position: absolute;
+                        top: 0px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
                     svg {
+                        display: none;
                         max-width: 50px;
                         @media screen and (max-width: 540px) {
                             max-width: 40px;
@@ -592,21 +607,22 @@
                     border: 1px solid #cecece;
                     border-radius: 30px;
                     transition: opacity 0.2s ease-in-out;
-                    &.slick-prev {
-                        left: -40px;
-                    }
+                }
 
-                    &.slick-next {
-                        right: -15px;
-                    }
+                &.slick-prev {
+                    left: -30px;
+                }
 
-                    &:hover{
-                        &::before {
-                            background-color: var(--heading-color);
-                            color: #fff;
-                            border-color: var(--heading-color);
-                        }
-                    }
+                &.slick-next {
+                    right: -20px;
+                }
+
+                &:hover{
+                   &::before{
+                        background-color: var(--bg-ar-hv);
+                        color: var(--color-arrow-hv);
+                        border-color: var(--bg-ar-hv);
+                   }
                 }
             }
 
