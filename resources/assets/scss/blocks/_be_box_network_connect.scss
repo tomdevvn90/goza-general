@@ -48,6 +48,9 @@
             margin-top: 20px;
             font-weight: 700;
             text-decoration: none;
+            &.btn-organization{
+                border-color:var(--link-color, #ec5e87)
+            }
             &:hover{
                 background-color: #fff;
                 color: #000;

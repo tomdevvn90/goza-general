@@ -1,6 +1,79 @@
 .wp-block-columns{
     &.be-gz-orgazination-row-our{
         margin-top: -149px;
+        > .wp-block-column{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        @media (min-width: 768px) and (max-width: 781px){
+            flex-wrap: nowrap!important;
+        }
+    }
+
+    &.be-organization-ss-ev-coming{
+        margin-bottom: 0;
+    }
+
+    &.be-gz-orgazination-row-counter{
+        @media (min-width: 414px) and (max-width: 781px){
+            flex-wrap: nowrap !important;
+        } 
+
+        > .wp-block-column{
+            @media (max-width: 413px){
+                text-align: center;
+                border:none !important;
+                padding-bottom: 16px;
+                padding-top: 8px;
+                .be-counter-up{
+                    width: 100%;
+                    &.alignright{
+                        text-align: center;
+                        margin-inline-start: 0;
+                    }
+                }
+
+                &:not(:last-child){
+                    border-bottom: 1px dashed #b0b0b0 !important;
+                }
+
+                &:last-child{
+                    padding-bottom: 0;
+                }
+
+                &:first-child{
+                    padding-top: 0;
+                }
+            }
+            .be-counter-up .be-counter-up-box__number {
+                @include media-breakpoint-down(md) {
+                    font-size: 30px !important;
+                }
+            }
+        }
+    }
+
+    &.be-gz-orgazination-row-button{
+        @include media-breakpoint-down(md) {
+            padding-bottom: 10px;
+        }
+
+        @include media-breakpoint-down(xs) { 
+            > .wp-block-column{
+                flex-wrap: wrap;
+                .wp-block-goza-blocks-goza-button{
+                    width: 100%;
+                    &--inner{
+                        width: 100%;
+                        margin: 0 !important;
+                    }
+
+                    &:not(:last-child){
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
     }
 }
 
