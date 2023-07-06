@@ -1153,6 +1153,24 @@
                     "default_value": "#FFF",
                     "enable_opacity": 1,
                     "return_format": "string"
+                },
+                {
+                    "key": "field_64a6dfff5fb38",
+                    "label": "Top bar icon color",
+                    "name": "goza_topbar_icon_color",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#FFF",
+                    "enable_opacity": 0,
+                    "return_format": "string"
                 }
             ]
         },
@@ -2164,5 +2182,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688087720
+    "modified": 1688657967
 }
