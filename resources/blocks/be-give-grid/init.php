@@ -14,6 +14,10 @@ function be_item_give($block){
           be_template_give_grid_style_3();
         break; 
 
+        case "is-style-4":
+          be_template_give_grid_style_4();
+        break;
+
         default:
           be_template_give_grid_default();
         break; 
@@ -22,6 +26,70 @@ function be_item_give($block){
     </div>
     <?php
 }
+
+function be_template_give_grid_style_4(){ 
+  $form_id = get_the_ID() ;
+    
+    $goal_option = get_post_meta( $form_id, '_give_goal_option', true );
+    $form        = new Give_Donate_Form( $form_id );
+    $goal        = $form->goal;
+    $goal_format = get_post_meta( $form_id, '_give_goal_format', true );
+    $income      = $form->get_earnings();
+    $color       = get_post_meta( $form_id, '_give_goal_color', true );
+    $give_forms_category = (wp_get_post_terms( $form_id, 'give_forms_category'));
+
+    foreach($give_forms_category as $give_forms_category1) {
+        $give_forms_category_name = $give_forms_category1->name; //do something here
+        $give_forms_category_link = get_term_link($give_forms_category1->slug, 'give_forms_category'); //do something here
+        //var_dump($give_forms_category_link );
+        }
+        if (empty($give_forms_category_name)) {
+          $give_forms_category_name = '';
+        }
+      // set color if empty
+      if(empty($color)) $color = '#01FFCC';
+      $progress = ($goal === 0) ? 0 : round( ( $income / $goal ) * 100, 2 );
+
+      if ( $income >= $goal ) { $progress = 100; }
+      $class_none = '';
+      if ( $goal_option == 'disabled' ) { $class_none = 'class-none'; }
+      // Get formatted amount.
+      $income = give_human_format_large_amount( give_format_amount( $income ) );
+      $goal = give_human_format_large_amount( give_format_amount( $goal ) );
+
+      //var_dump($progress);
+      $button_donate = implode('', array(
+        '<div class="give-button-donate">',
+          do_shortcode('[give_form id="'. $form_id .'" show_title="true" show_goal="false" show_content="none" display_style="button"]'),
+        '</div>',
+      ));
+
+    $post_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+  ?>
+
+    <div class="featured-image">
+      <a href="<?php echo get_permalink($form_id) ?>">
+        <img src="<?php echo esc_url($post_img_url) ?>" alt="#">
+      </a>
+      <div class="form-category form-category-style1"><a style="background-color:<?php echo $color ?>" href="<?php echo $give_forms_category_link ?>"><?php echo $give_forms_category_name ?></a></div>
+    </div>
+    <div class="give-goal-progress-wrap">
+        <div class="progress"><div class="bar" style="background-color:<?php echo $color ?>;width: <?php echo $progress ?>%;" ></div></div>
+    </div>
+    <div class="entry-content ">
+      <div class="entry-content-inner">
+			  <div class="extra-meta">
+          <div class="meta-item meta-date"><span class="ion-android-calendar"></span><?php echo get_the_date('d M, Y',$form_id) ?></div>
+        </div>
+			  <a href="<?php echo get_permalink($form_id) ?>" class="title-link"><h4 class="title"><?php echo get_the_title($form_id) ?></h4></a>
+        <div class="entry-bot">
+          <div class="bt-com"><?php echo __('Collected', 'goza'); ?> </div>
+          <div class="give-price-goal"><span><?php echo __('Group Goal', 'goza'); ?></span><strong>$</strong><?php echo $goal ?></div>
+        </div>
+      </div>
+    </div>
+
+<?php }
 
 function be_template_give_grid_style_3(){ 
   $form_id = get_the_ID() ;
@@ -76,11 +144,11 @@ function be_template_give_grid_style_3(){
 			  <a href="<?php echo get_permalink($form_id) ?>" class="title-link"><h4 class="title"><?php echo get_the_title($form_id) ?></h4></a>
         <div class="give-goal-progress-wrap">
           <div class="progress"><div class="bar" style="background-color:<?php echo $color ?>;width: <?php echo $progress ?>%;" ></div></div>
-            <div class="bt-com">Donation Completed</div>
+            <div class="bt-com"><?php echo __('Donation Completed', 'goza'); ?></div>
         </div>
         <div class="entry-bot">
-          <div class="give-price-raised"><span>Raised</span><strong>$</strong><?php echo $income ?></div>
-          <div class="give-price-goal"><span>Group Goal</span><strong>$</strong><?php echo $goal ?></div>
+          <div class="give-price-raised"><span><?php echo __('Raised', 'goza'); ?></span><strong>$</strong><?php echo $income ?></div>
+          <div class="give-price-goal"><span><?php echo __('Group Goal', 'goza'); ?></span><strong>$</strong><?php echo $goal ?></div>
         </div>
       </div>
     </div>
@@ -134,7 +202,7 @@ function be_template_give_grid_style_2(){
       <a href="<?php echo get_permalink($form_id) ?>" class="title-link"><h4 class="title bt-title-style1"><?php echo get_the_title($form_id) ?></h4></a>
       <div class="extra-meta bt-extra-meta-style1">
         <div class="give-price-wrap">
-          <p style="color:<?php echo $color ?>"> <sup>$</sup><?php echo $goal ?> <span>Collected</span> </p>
+          <p style="color:<?php echo $color ?>"> <sup>$</sup><?php echo $goal ?> <span><?php echo __('Collected', 'goza'); ?></span> </p>
         </div>
       </div>
         <div class="give-goal-progress-wrap">
@@ -193,7 +261,7 @@ function be_template_give_grid_default(){
       <a href="<?php echo get_permalink($form_id) ?>" class="title-link"><h4 class="title"><?php echo get_the_title($form_id) ?></h4></a>
       <div class="extra-meta">
         <div class="meta-item meta-author">By <?php echo get_the_author($form_id) ?></div>
-        <div class="give-price-wrap"><sup>$</sup><?php echo $goal ?> <span>Collected</span></div>
+        <div class="give-price-wrap"><sup>$</sup><?php echo $goal ?> <span><?php echo __('Collected', 'goza'); ?></span></div>
       </div>
     </div>
     <div class="progress">

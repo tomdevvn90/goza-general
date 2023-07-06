@@ -67,7 +67,7 @@ function be_template_give_form_box_default($be_sub_heading, $be_heading_form, $b
         </div>
         <style>
             @keyframes progressAnimation {
-            0%   { width: 5%; background-color: #fff;}
+            0%   { width: 1%; background-color: #fff;}
             100% { width: <?php echo $progress ?>%; background-color: #fff; }
             }
             .give-box-content-right .progress .bar{

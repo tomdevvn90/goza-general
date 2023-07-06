@@ -22,11 +22,36 @@ function be_item_icon_box($block){
             be_template_icon_box_style_4($heading, $icon, $subheading, $link);
             break;
 
+        case "is-style-5":
+            be_template_icon_box_style_4($heading, $icon, $subheading, $link);
+            break;
+
         default:
             be_template_icon_box_default($heading, $icon, $button, $link);
             break; 
     } 
 }
+
+function be_template_icon_box_style_5($heading, $icon, $subheading, $link){ ?>
+    <div class="be-icon-box-block-inner--content"> 
+        <div class="be-icon-box-block--icon"> 
+            <img src="<?php echo esc_url($icon) ?>" alt="icon">
+        </div>
+
+        <?php if(!empty($heading)): ?>
+            <h3 class="be-icon-box-block--heading"> 
+                <?php if(!empty($link)){ ?>
+                    <a href="<?php echo esc_url($link) ?>">  <?php echo $heading ?>  </a>
+                <?php }else{
+                    echo $heading;
+                } ?>
+            </h3>
+        <?php endif; ?>  
+        <?php if(!empty($subheading)): ?>
+            <p class="be-icon-box-block--subheading"> <?php echo $subheading; ?> </p>
+        <?php endif; ?> 
+    </div>
+<?php }
 
 function be_template_icon_box_style_4($heading, $icon, $subheading, $link){ ?>
     <div class="be-icon-box-block-inner--content"> 
