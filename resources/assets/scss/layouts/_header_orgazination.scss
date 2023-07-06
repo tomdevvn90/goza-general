@@ -154,4 +154,17 @@
             }
         }
     }
+
+    &-organization{
+        .goza-header-main{
+            @include media-breakpoint-down(md) {
+                background-color: var(--header-bg-color, #fff) !important;
+            }
+        }
+
+        #goza-hamberger i {
+            font-size: 30px;
+            color: var(--link-color);
+        }
+    }
 }

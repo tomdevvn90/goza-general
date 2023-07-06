@@ -7,13 +7,14 @@
 $classes = [
    'site-header',
    'site-header-menu-center',
+   'site-header-organization',
 ];
 
-$logo = goza_get_logo_header_site();
-$goza_enable_topbar = __get_field('goza_enable_topbar', 'option');
-$header_btn = __get_field('goza_header_button', 'option');
-$icon_cart = __get_field('goza_enable_cart', 'option');
-$goza_header_search = __get_field('goza_header_search', 'option');
+$logo                = goza_get_logo_header_site();
+$goza_enable_topbar  = __get_field('goza_enable_topbar', 'option');
+$header_btn          = __get_field('goza_header_button', 'option');
+$icon_cart           = __get_field('goza_enable_cart', 'option');
+$goza_header_search  = __get_field('goza_header_search', 'option');
 $goza_topbar_options = __get_field('goza_topbar_options', 'option');
 if ($goza_topbar_options) {
    $goza_topbar_btn = $goza_topbar_options['goza_topbar_btn'];
