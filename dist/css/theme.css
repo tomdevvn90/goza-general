@@ -18204,7 +18204,7 @@ h6 {
 }
 
 .goza-topbar.goza-topbar-default .goza-topbar-item.goza-topbar-ep a i {
-  color: var(--link-color-hover, #d41b65);
+  color: var(--topbar-icon-color, #d41b65);
   margin-right: 7px;
 }
 
@@ -18256,7 +18256,7 @@ h6 {
 }
 
 .goza-topbar.goza-topbar-layout2 .goza-topbar-inner-info .goza-topbar-ep a i {
-  color: var(--link-color, #2c9cf2);
+  color: var(--topbar-icon-color, #2c9cf2);
   margin-right: 7px;
 }
 
@@ -18432,7 +18432,7 @@ h6 {
 .goza-topbar.goza-topbar-layout3 .header-top-sidebar-item .goza-topbar-inner-info .goza-topbar-ep a i {
   margin-right: 7px;
   font-size: 14px;
-  color: var(--link-color, #18b7d0);
+  color: var(--topbar-icon-color, #18b7d0);
 }
 
 .goza-topbar.goza-topbar-layout3 .header-top-sidebar-item .goza-choose-country a {
@@ -18539,7 +18539,7 @@ h6 {
 }
 
 .goza-topbar.goza-topbar-layout4 .goza-topbar-inner-info .goza-topbar-ep a i {
-  color: var(--link-color, #2c9cf2);
+  color: var(--topbar-icon-color, #2c9cf2);
   margin-right: 7px;
 }
 
