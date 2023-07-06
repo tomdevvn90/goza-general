@@ -1,10 +1,26 @@
 .wp-block-columns{
+    &.be-gz-orgazination-item-progressbar{
+        @media (max-width: 781px){
+            gap: 0;
+            margin-top: 10px;
+        }
+    }
+
     &.be-gz-orgazination-row-our{
-        margin-top: -149px;
+        margin-top: -156px;
         > .wp-block-column{
             padding-left: 10px;
             padding-right: 10px;
         }
+
+        @include media-breakpoint-down(md) {
+            margin-top: -175px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 48px;
+        }
+
         @media (min-width: 768px) and (max-width: 781px){
             flex-wrap: nowrap!important;
         }
@@ -80,5 +96,29 @@
 .wp-block-goza-blocks-goza-container{
     &.be-gz-orgazination-ss-our{
         overflow: inherit;
+    }
+}
+
+.video-popup-actions-block{
+    &.be-orgazination-ac-vd{
+        @include media-breakpoint-down(sm) {
+            max-width: 100% !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    }
+}
+
+.be-testimonials-block{
+    &.be-gz-organization-testimonials{
+        .be-testimonials-block-carousel{
+            @include media-breakpoint-down(sm){
+                margin-bottom: 0;
+                padding-bottom: 80px !important;
+                .slick-dots{
+                    bottom: 24px;
+                }
+            }
+        }
     }
 }
