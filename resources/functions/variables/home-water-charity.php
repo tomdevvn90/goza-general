@@ -31,4 +31,5 @@ return [
 	"--footer-heading-color" => '#a52f2a',
 	"--footer-text-color" => '#999',
 	"--footer-bg-color" => '#fff',
+	"--topbar-icon-color" => '#18b7d0',
 ];

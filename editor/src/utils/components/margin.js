@@ -60,7 +60,7 @@ export default function Margin( props ) {
 					label={
 						marginTopLabel
 							? marginTopLabel
-							: __( 'Margin Top', 'genesis-blocks' )
+							: __( 'Margin Top', 'goza' )
 					}
 					value={ marginTop }
 					min={ marginTopMin }
@@ -73,7 +73,7 @@ export default function Margin( props ) {
 					label={
 						marginRightLabel
 							? marginRightLabel
-							: __( 'Margin Right', 'genesis-blocks' )
+							: __( 'Margin Right', 'goza' )
 					}
 					value={ marginRight }
 					min={ marginRightMin }
@@ -86,7 +86,7 @@ export default function Margin( props ) {
 					label={
 						marginBottomLabel
 							? marginBottomLabel
-							: __( 'Margin Bottom', 'genesis-blocks' )
+							: __( 'Margin Bottom', 'goza' )
 					}
 					value={ marginBottom }
 					min={ marginBottomMin }
@@ -99,7 +99,7 @@ export default function Margin( props ) {
 					label={
 						marginLeftLabel
 							? marginLeftLabel
-							: __( 'Margin Left', 'genesis-blocks' )
+							: __( 'Margin Left', 'goza' )
 					}
 					value={ marginLeft }
 					min={ marginLeftMin }
@@ -112,7 +112,7 @@ export default function Margin( props ) {
 					label={
 						marginVerticalLabel
 							? marginVerticalLabel
-							: __( 'Margin Vertical', 'genesis-blocks' )
+							: __( 'Margin Vertical', 'goza' )
 					}
 					value={ marginVertical }
 					min={ marginVerticalMin }
@@ -125,7 +125,7 @@ export default function Margin( props ) {
 					label={
 						marginHorizontalLabel
 							? marginHorizontalLabel
-							: __( 'Margin Horizontal', 'genesis-blocks' )
+							: __( 'Margin Horizontal', 'goza' )
 					}
 					value={ marginHorizontal }
 					min={ marginHorizontalMin }

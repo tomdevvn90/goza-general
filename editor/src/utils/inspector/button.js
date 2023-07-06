@@ -30,36 +30,36 @@ export default function ButtonSettings( props ) {
 	// Button size values
 	const buttonSizeOptions = [
 		{
-			value: 'gb-button-size-small',
-			label: __( 'Small', 'genesis-blocks' ),
+			value: 'goza-button-size-small',
+			label: __( 'Small', 'goza' ),
 		},
 		{
-			value: 'gb-button-size-medium',
-			label: __( 'Medium', 'genesis-blocks' ),
+			value: 'goza-button-size-medium',
+			label: __( 'Medium', 'goza' ),
 		},
 		{
-			value: 'gb-button-size-large',
-			label: __( 'Large', 'genesis-blocks' ),
+			value: 'goza-button-size-large',
+			label: __( 'Large', 'goza' ),
 		},
 		{
-			value: 'gb-button-size-extralarge',
-			label: __( 'Extra Large', 'genesis-blocks' ),
+			value: 'goza-button-size-extralarge',
+			label: __( 'Extra Large', 'goza' ),
 		},
 	];
 
 	// Button shape
 	const buttonShapeOptions = [
 		{
-			value: 'gb-button-shape-square',
-			label: __( 'Square', 'genesis-blocks' ),
+			value: 'goza-button-shape-square',
+			label: __( 'Square', 'goza' ),
 		},
 		{
-			value: 'gb-button-shape-rounded',
-			label: __( 'Rounded Square', 'genesis-blocks' ),
+			value: 'goza-button-shape-rounded',
+			label: __( 'Rounded Square', 'goza' ),
 		},
 		{
-			value: 'gb-button-shape-circular',
-			label: __( 'Circular', 'genesis-blocks' ),
+			value: 'goza-button-shape-circular',
+			label: __( 'Circular', 'goza' ),
 		},
 	];
 
@@ -70,7 +70,7 @@ export default function ButtonSettings( props ) {
 					<ToggleControl
 						label={ __(
 							'Open link in new window',
-							'genesis-blocks'
+							'goza'
 						) }
 						checked={ buttonTarget }
 						onChange={ onChangeButtonTarget }
@@ -79,7 +79,7 @@ export default function ButtonSettings( props ) {
 				{ false !== enableButtonSize && (
 					<SelectControl
 						selected={ buttonSize }
-						label={ __( 'Button Size', 'genesis-blocks' ) }
+						label={ __( 'Button Size', 'goza' ) }
 						value={ buttonSize }
 						options={ buttonSizeOptions.map(
 							( { value, label } ) => ( {
@@ -92,7 +92,7 @@ export default function ButtonSettings( props ) {
 				) }
 				{ false !== enableButtonShape && (
 					<SelectControl
-						label={ __( 'Button Shape', 'genesis-blocks' ) }
+						label={ __( 'Button Shape', 'goza' ) }
 						value={ buttonShape }
 						options={ buttonShapeOptions.map(
 							( { value, label } ) => ( {
@@ -105,20 +105,20 @@ export default function ButtonSettings( props ) {
 				) }
 				{ false !== enableButtonBackgroundColor && (
 					<PanelColorSettings
-						title={ __( 'Button Color', 'genesis-blocks' ) }
+						title={ __( 'Button Color', 'goza' ) }
 						initialOpen={ false }
 						colorSettings={ [
 							{
 								value: buttonBackgroundColor,
 								onChange: onChangeButtonColor,
-								label: __( 'Button Color', 'genesis-blocks' ),
+								label: __( 'Button Color', 'goza' ),
 							},
 						] }
 					></PanelColorSettings>
 				) }
 				{ false !== enableButtonTextColor && (
 					<PanelColorSettings
-						title={ __( 'Button Text Color', 'genesis-blocks' ) }
+						title={ __( 'Button Text Color', 'goza' ) }
 						initialOpen={ false }
 						colorSettings={ [
 							{
@@ -126,7 +126,7 @@ export default function ButtonSettings( props ) {
 								onChange: onChangeButtonTextColor,
 								label: __(
 									'Button Text Color',
-									'genesis-blocks'
+									'goza'
 								),
 							},
 						] }

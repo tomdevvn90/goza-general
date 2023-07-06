@@ -11,6 +11,7 @@
 	position: relative;
 }
 
+
 .goza-layout-column-wrap {
 	display: -ms-grid;
 	display: grid;
@@ -43,8 +44,8 @@
 }
 
 .goza-block-layout-column-inner,
-.goza-layout-column-wrap > .goza-block-layout-column-inner,
-.goza-has-background-dim > * {
+.goza-layout-column-wrap>.goza-block-layout-column-inner,
+.goza-has-background-dim>* {
 	position: relative;
 	z-index: 1;
 }
@@ -160,7 +161,7 @@
 
 /* One column grid. */
 
-.goza-layout-columns-1 > .goza-layout-column-wrap {
+.goza-layout-columns-1>.goza-layout-column-wrap {
 	-ms-grid-columns: 1fr;
 	grid-template-columns: 1fr;
 	grid-template-areas: "col1";
@@ -168,7 +169,7 @@
 
 /* Two column grid. */
 
-.goza-layout-columns-2 > .goza-layout-column-wrap {
+.goza-layout-columns-2>.goza-layout-column-wrap {
 	-ms-grid-columns: 1fr 1fr;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas: "col1 col2";
@@ -185,19 +186,19 @@
 	}
 }
 
-.goza-2-col-wideleft > .goza-layout-column-wrap {
+.goza-2-col-wideleft>.goza-layout-column-wrap {
 	-ms-grid-columns: 2fr 1fr;
 	grid-template-columns: 2fr 1fr;
 }
 
-.goza-2-col-wideright > .goza-layout-column-wrap {
+.goza-2-col-wideright>.goza-layout-column-wrap {
 	-ms-grid-columns: 1fr 2fr;
 	grid-template-columns: 1fr 2fr;
 }
 
 /* Three column grid. */
 
-.goza-layout-columns-3 > .goza-layout-column-wrap {
+.goza-layout-columns-3>.goza-layout-column-wrap {
 	-ms-grid-columns: 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas: "col1 col2 col3";
@@ -215,7 +216,7 @@
 	}
 }
 
-.goza-3-col-widecenter > .goza-layout-column-wrap {
+.goza-3-col-widecenter>.goza-layout-column-wrap {
 	-ms-grid-columns: 1fr 2fr 1fr;
 	grid-template-columns: 1fr 2fr 1fr;
 
@@ -228,7 +229,7 @@
 	}
 }
 
-.goza-3-col-wideleft > .goza-layout-column-wrap {
+.goza-3-col-wideleft>.goza-layout-column-wrap {
 	-ms-grid-columns: 2fr 1fr 1fr;
 	grid-template-columns: 2fr 1fr 1fr;
 
@@ -241,7 +242,7 @@
 	}
 }
 
-.goza-3-col-wideright > .goza-layout-column-wrap {
+.goza-3-col-wideright>.goza-layout-column-wrap {
 	-ms-grid-columns: 1fr 1fr 2fr;
 	grid-template-columns: 1fr 1fr 2fr;
 
@@ -256,7 +257,7 @@
 
 /* Four column grid. */
 
-.goza-layout-columns-4 > .goza-layout-column-wrap {
+.goza-layout-columns-4>.goza-layout-column-wrap {
 	-ms-grid-columns: 1fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-areas: "col1 col2 col3 col4";
@@ -284,19 +285,19 @@
 	}
 }
 
-.goza-4-col-wideleft > .goza-layout-column-wrap {
+.goza-4-col-wideleft>.goza-layout-column-wrap {
 	-ms-grid-columns: 2fr 1fr 1fr 1fr;
 	grid-template-columns: 2fr 1fr 1fr 1fr;
 }
 
-.goza-4-col-wideright > .goza-layout-column-wrap {
+.goza-4-col-wideright>.goza-layout-column-wrap {
 	-ms-grid-columns: 1fr 1fr 1fr 2fr;
 	grid-template-columns: 1fr 1fr 1fr 2fr;
 }
 
 /* Five column grid. */
 
-.goza-layout-columns-5 > .goza-layout-column-wrap {
+.goza-layout-columns-5>.goza-layout-column-wrap {
 	-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-areas: "col1 col2 col3 col4 col5";
@@ -316,7 +317,7 @@
 	}
 }
 
-.goza-layout-columns-6 > .goza-layout-column-wrap {
+.goza-layout-columns-6>.goza-layout-column-wrap {
 	-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-areas: "col1 col2 col3 col4 col5 col6";

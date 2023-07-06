@@ -63,7 +63,7 @@ export default function Padding( props ) {
 					label={
 						paddingTitle
 							? paddingTitle
-							: __( 'Padding', 'genesis-blocks' )
+							: __( 'Padding', 'goza' )
 					}
 					help={ paddingHelp ? paddingHelp : null }
 					value={ padding }
@@ -74,7 +74,7 @@ export default function Padding( props ) {
 			) }
 			{ paddingEnableTop && (
 				<RangeControl
-					label={ __( 'Padding Top', 'genesis-blocks' ) }
+					label={ __( 'Padding Top', 'goza' ) }
 					value={ paddingTop }
 					min={ paddingTopMin }
 					max={ paddingTopMax }
@@ -83,7 +83,7 @@ export default function Padding( props ) {
 			) }
 			{ paddingEnableRight && (
 				<RangeControl
-					label={ __( 'Padding Right', 'genesis-blocks' ) }
+					label={ __( 'Padding Right', 'goza' ) }
 					value={ paddingRight }
 					min={ paddingRightMin }
 					max={ paddingRightMax }
@@ -92,7 +92,7 @@ export default function Padding( props ) {
 			) }
 			{ paddingEnableBottom && (
 				<RangeControl
-					label={ __( 'Padding Bottom', 'genesis-blocks' ) }
+					label={ __( 'Padding Bottom', 'goza' ) }
 					value={ paddingBottom }
 					min={ paddingBottomMin }
 					max={ paddingBottomMax }
@@ -101,7 +101,7 @@ export default function Padding( props ) {
 			) }
 			{ paddingEnableLeft && (
 				<RangeControl
-					label={ __( 'Padding Left', 'genesis-blocks' ) }
+					label={ __( 'Padding Left', 'goza' ) }
 					value={ paddingLeft }
 					min={ paddingLeftMin }
 					max={ paddingLeftMax }
@@ -110,7 +110,7 @@ export default function Padding( props ) {
 			) }
 			{ paddingEnableVertical && (
 				<RangeControl
-					label={ __( 'Padding Vertical', 'genesis-blocks' ) }
+					label={ __( 'Padding Vertical', 'goza' ) }
 					value={ paddingVertical }
 					min={ paddingVerticalMin }
 					max={ paddingVerticalMax }
@@ -119,7 +119,7 @@ export default function Padding( props ) {
 			) }
 			{ paddingEnableHorizontal && (
 				<RangeControl
-					label={ __( 'Padding Horizontal', 'genesis-blocks' ) }
+					label={ __( 'Padding Horizontal', 'goza' ) }
 					value={ paddingHorizontal }
 					min={ paddingHorizontalMin }
 					max={ paddingHorizontalMax }

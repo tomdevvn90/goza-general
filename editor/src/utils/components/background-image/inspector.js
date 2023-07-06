@@ -21,22 +21,22 @@ class BackgroundImagePanel extends Component {
 		const { attributes, setAttributes } = this.props;
 
 		const backgroundRepeatOptions = [
-			{ value: 'no-repeat', label: __( 'No Repeat', 'genesis-blocks' ) },
-			{ value: 'repeat', label: __( 'Repeat', 'genesis-blocks' ) },
+			{ value: 'no-repeat', label: __( 'No Repeat', 'goza' ) },
+			{ value: 'repeat', label: __( 'Repeat', 'goza' ) },
 			{
 				value: 'repeat-x',
-				label: __( 'Repeat Horizontally', 'genesis-blocks' ),
+				label: __( 'Repeat Horizontally', 'goza' ),
 			},
 			{
 				value: 'repeat-y',
-				label: __( 'Repeat Vertically', 'genesis-blocks' ),
+				label: __( 'Repeat Vertically', 'goza' ),
 			},
 		];
 
 		const backgroundSizeOptions = [
-			{ value: 'auto', label: __( 'Auto', 'genesis-blocks' ) },
-			{ value: 'cover', label: __( 'Cover', 'genesis-blocks' ) },
-			{ value: 'contain', label: __( 'Contain', 'genesis-blocks' ) },
+			{ value: 'auto', label: __( 'Auto', 'goza' ) },
+			{ value: 'cover', label: __( 'Cover', 'goza' ) },
+			{ value: 'contain', label: __( 'Contain', 'goza' ) },
 		];
 
 		let backgroundSizeHelp;
@@ -44,26 +44,26 @@ class BackgroundImagePanel extends Component {
 		if ( 'cover' === attributes.backgroundSize ) {
 			backgroundSizeHelp = __(
 				'Scales the image as large as possible without stretching the image. Cropped either vertically or horizontally so that no empty space remains.',
-				'genesis-blocks'
+				'goza'
 			);
 		}
 		if ( 'contain' === attributes.backgroundSize ) {
 			backgroundSizeHelp = __(
 				'Scales the image as large as possible without cropping or stretching the image.',
-				'genesis-blocks'
+				'goza'
 			);
 		}
 		if ( 'auto' === attributes.backgroundSize ) {
 			backgroundSizeHelp = __(
 				'Scales the background image in the corresponding direction such that its intrinsic proportions are maintained.',
-				'genesis-blocks'
+				'goza'
 			);
 		}
 
 		return (
 			<Fragment>
 				<PanelBody
-					title={ __( 'Background Image', 'genesis-blocks' ) }
+					title={ __( 'Background Image', 'goza' ) }
 					initialOpen={ false }
 				>
 					<MediaUploadCheck>
@@ -77,28 +77,28 @@ class BackgroundImagePanel extends Component {
 							value={ attributes.backgroundImgURL }
 							render={ ( { open } ) => (
 								<div>
-									<ButtonGroup className="gb-background-button-group">
+									<ButtonGroup className="goza-background-button-group">
 										<Button
-											className="gb-inspector-icon-button gb-background-add-button is-button is-default"
+											className="goza-inspector-icon-button goza-background-add-button is-button is-default"
 											label={ __(
 												'Edit image',
-												'genesis-blocks'
+												'goza'
 											) }
 											onClick={ open }
 										>
 											<Icon icon="format-image" />
 											{ __(
 												'Select Image',
-												'genesis-blocks'
+												'goza'
 											) }
 										</Button>
 
 										{ attributes.backgroundImgURL && (
 											<Button
-												className="gb-inspector-icon-button gb-background-remove-button is-button is-default"
+												className="goza-inspector-icon-button goza-background-remove-button is-button is-default"
 												label={ __(
 													'Remove Image',
-													'genesis-blocks'
+													'goza'
 												) }
 												onClick={ () =>
 													setAttributes( {
@@ -109,7 +109,7 @@ class BackgroundImagePanel extends Component {
 												<Icon icon="dismiss" />
 												{ __(
 													'Remove',
-													'genesis-blocks'
+													'goza'
 												) }
 											</Button>
 										) }
@@ -122,7 +122,7 @@ class BackgroundImagePanel extends Component {
 					{ attributes.backgroundImgURL && (
 						<Fragment>
 							<FocalPointPicker
-								label={ __( 'Focal Point', 'genesis-blocks' ) }
+								label={ __( 'Focal Point', 'goza' ) }
 								url={ attributes.backgroundImgURL }
 								value={ attributes.focalPoint }
 								onChange={ ( value ) =>
@@ -133,7 +133,7 @@ class BackgroundImagePanel extends Component {
 							<RangeControl
 								label={ __(
 									'Image Opacity',
-									'genesis-blocks'
+									'goza'
 								) }
 								value={ attributes.backgroundDimRatio }
 								onChange={ ( value ) =>
@@ -149,7 +149,7 @@ class BackgroundImagePanel extends Component {
 							<ToggleControl
 								label={ __(
 									'Fixed Background',
-									'genesis-blocks'
+									'goza'
 								) }
 								checked={ attributes.hasParallax }
 								onChange={ () => {
@@ -163,10 +163,10 @@ class BackgroundImagePanel extends Component {
 							/>
 
 							<SelectControl
-								className="gb-inspector-help-text"
+								className="goza-inspector-help-text"
 								label={ __(
 									'Image Display',
-									'genesis-blocks'
+									'goza'
 								) }
 								value={ attributes.backgroundSize }
 								help={ backgroundSizeHelp }
@@ -182,7 +182,7 @@ class BackgroundImagePanel extends Component {
 								<SelectControl
 									label={ __(
 										'Image Repeat',
-										'genesis-blocks'
+										'goza'
 									) }
 									value={ attributes.backgroundRepeat }
 									options={ backgroundRepeatOptions }

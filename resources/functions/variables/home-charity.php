@@ -29,4 +29,5 @@ return [
 	"--footer-heading-color" => '#FFF',
 	"--footer-text-color" => '#FFF',
 	"--footer-bg-color" => '#000',
+	"--topbar-icon-color" => '#4ca5ab',
 ];
