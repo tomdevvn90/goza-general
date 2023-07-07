@@ -20,7 +20,6 @@ if (!defined('ABSPATH')) {
 	<?php $viewport_content = apply_filters('goza_gutenberg_viewport_content', 'width=device-width, initial-scale=1'); ?>
 	<meta name="viewport" content="<?php echo esc_attr($viewport_content); ?>">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 

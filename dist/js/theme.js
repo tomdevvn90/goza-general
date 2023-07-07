@@ -1185,34 +1185,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
 /* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _blocks_progressbar_block__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/progressbar-block */ "./resources/assets/js/blocks/progressbar-block.js");
-/* harmony import */ var _blocks_progressbar_block__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_blocks_progressbar_block__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _blocks_team_carousel__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/team-carousel */ "./resources/assets/js/blocks/team-carousel.js");
-/* harmony import */ var _blocks_team_carousel__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_blocks_team_carousel__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _blocks_events_carousel__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blocks/events-carousel */ "./resources/assets/js/blocks/events-carousel.js");
-/* harmony import */ var _blocks_events_carousel__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_blocks_events_carousel__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _blocks_testimonials__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./blocks/testimonials */ "./resources/assets/js/blocks/testimonials.js");
-/* harmony import */ var _blocks_testimonials__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_blocks_testimonials__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _blocks_posts_slider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./blocks/posts-slider */ "./resources/assets/js/blocks/posts-slider.js");
-/* harmony import */ var _blocks_posts_slider__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_blocks_posts_slider__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _blocks_events_listing__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./blocks/events-listing */ "./resources/assets/js/blocks/events-listing.js");
-/* harmony import */ var _blocks_events_listing__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_blocks_events_listing__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _blocks_gives_slider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./blocks/gives-slider */ "./resources/assets/js/blocks/gives-slider.js");
-/* harmony import */ var _blocks_gives_slider__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_blocks_gives_slider__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _blocks_video_popup_actions__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./blocks/video-popup-actions */ "./resources/assets/js/blocks/video-popup-actions.js");
-/* harmony import */ var _blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./blocks/ss-upcoming-event-video */ "./resources/assets/js/blocks/ss-upcoming-event-video.js");
-/* harmony import */ var _blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _blocks_ss_text_tsm_video__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./blocks/ss-text-tsm-video */ "./resources/assets/js/blocks/ss-text-tsm-video.js");
-/* harmony import */ var _blocks_ss_text_tsm_video__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_blocks_ss_text_tsm_video__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./blocks/logo-carousel */ "./resources/assets/js/blocks/logo-carousel.js");
-/* harmony import */ var _blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _blocks_projects_grid_action__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./blocks/projects-grid-action */ "./resources/assets/js/blocks/projects-grid-action.js");
-/* harmony import */ var _blocks_counter_box__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./blocks/counter-box */ "./resources/assets/js/blocks/counter-box.js");
+/* harmony import */ var waypoints_lib_jquery_waypoints_min_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! waypoints/lib/jquery.waypoints.min.js */ "./node_modules/waypoints/lib/jquery.waypoints.min.js");
+/* harmony import */ var waypoints_lib_jquery_waypoints_min_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(waypoints_lib_jquery_waypoints_min_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _blocks_progressbar_block__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/progressbar-block */ "./resources/assets/js/blocks/progressbar-block.js");
+/* harmony import */ var _blocks_progressbar_block__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_blocks_progressbar_block__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _blocks_team_carousel__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blocks/team-carousel */ "./resources/assets/js/blocks/team-carousel.js");
+/* harmony import */ var _blocks_team_carousel__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_blocks_team_carousel__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _blocks_events_carousel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./blocks/events-carousel */ "./resources/assets/js/blocks/events-carousel.js");
+/* harmony import */ var _blocks_events_carousel__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_blocks_events_carousel__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _blocks_testimonials__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./blocks/testimonials */ "./resources/assets/js/blocks/testimonials.js");
+/* harmony import */ var _blocks_testimonials__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_blocks_testimonials__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _blocks_posts_slider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./blocks/posts-slider */ "./resources/assets/js/blocks/posts-slider.js");
+/* harmony import */ var _blocks_posts_slider__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_blocks_posts_slider__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _blocks_events_listing__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./blocks/events-listing */ "./resources/assets/js/blocks/events-listing.js");
+/* harmony import */ var _blocks_events_listing__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_blocks_events_listing__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _blocks_gives_slider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./blocks/gives-slider */ "./resources/assets/js/blocks/gives-slider.js");
+/* harmony import */ var _blocks_gives_slider__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_blocks_gives_slider__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _blocks_video_popup_actions__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./blocks/video-popup-actions */ "./resources/assets/js/blocks/video-popup-actions.js");
+/* harmony import */ var _blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./blocks/ss-upcoming-event-video */ "./resources/assets/js/blocks/ss-upcoming-event-video.js");
+/* harmony import */ var _blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_blocks_ss_upcoming_event_video__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _blocks_ss_text_tsm_video__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./blocks/ss-text-tsm-video */ "./resources/assets/js/blocks/ss-text-tsm-video.js");
+/* harmony import */ var _blocks_ss_text_tsm_video__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_blocks_ss_text_tsm_video__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./blocks/logo-carousel */ "./resources/assets/js/blocks/logo-carousel.js");
+/* harmony import */ var _blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_blocks_logo_carousel__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _blocks_projects_grid_action__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./blocks/projects-grid-action */ "./resources/assets/js/blocks/projects-grid-action.js");
+/* harmony import */ var _blocks_counter_box__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./blocks/counter-box */ "./resources/assets/js/blocks/counter-box.js");
 
 
 
 
 
+
+
+/* global Waypoint */
 
 aos__WEBPACK_IMPORTED_MODULE_4___default.a.init({
   duration: 1200,
@@ -1273,9 +1278,9 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\ADMIN\Local Sites\goza-theme-dev\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! C:\Users\ADMIN\Local Sites\goza-theme-dev\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-module.exports = __webpack_require__(/*! C:\Users\ADMIN\Local Sites\goza-theme-dev\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+module.exports = __webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
 
 
 /***/ })

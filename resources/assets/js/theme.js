@@ -4,23 +4,26 @@ import counterUp from 'counterup2';
 import './components/navigation';
 import './components/function';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
+
+/* global Waypoint */
+import 'waypoints/lib/jquery.waypoints.min.js';
 
 AOS.init({
     duration: 1200,
     once: true,
-    disable: 'mobile', 
+    disable: 'mobile',
 });
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     AOS.refresh();
 
-    const el = document.querySelector( '.counterUp' )
-    counterUp( el, {
-    duration: 2000,
-    delay: 100,
-    } )
+    const el = document.querySelector('.counterUp')
+    counterUp(el, {
+        duration: 2000,
+        delay: 100,
+    })
 });
 
 import './blocks/progressbar-block';

@@ -16,7 +16,7 @@ return [
 	"--h1-font-size" => '55px',
 	"--h1-line-height" => '1.18',
 	"--h2-font-size" => '40px',
-	"--h2-line-height" => '1.4',
+	"--h2-line-height" => '1.2',
 	"--h3-font-size" => '32px',
 	"--h3-line-height" => '1.1875',
 	"--h4-font-size" => '26px',
