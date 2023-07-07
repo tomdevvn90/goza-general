@@ -322,7 +322,16 @@ beCounterBox();
             trailWidth: $height,
             svgStyle: null
           });
-          cirle.animate($value);
+          var waypoint = new Waypoint({
+            element: this,
+            handler: function handler(direction) {
+              if (direction === 'down' && !cirle.path.classList.contains('in-view')) {
+                cirle.animate($value);
+                cirle.path.classList.add('in-view');
+              }
+            },
+            offset: '80%'
+          });
         } else {
           var line = new ProgressBar.Line("#".concat($idProgressbar), {
             easing: 'easeInOut',
@@ -330,7 +339,16 @@ beCounterBox();
             color: "".concat($strokeColor),
             trailColor: "".concat($trailColor)
           });
-          line.animate($value);
+          var waypoint = new Waypoint({
+            element: this,
+            handler: function handler(direction) {
+              if (direction === 'down' && !line.path.classList.contains('in-view')) {
+                line.animate($value);
+                line.path.classList.add('in-view');
+              }
+            },
+            offset: '80%'
+          });
           $(this).find('.be-progressbar-block-warp svg').css("height", $height);
         }
       }
@@ -1255,9 +1273,9 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-module.exports = __webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! C:\Users\ADMIN\Local Sites\goza-theme-dev\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! C:\Users\ADMIN\Local Sites\goza-theme-dev\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+module.exports = __webpack_require__(/*! C:\Users\ADMIN\Local Sites\goza-theme-dev\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
 
 
 /***/ })
