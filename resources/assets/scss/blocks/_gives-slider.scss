@@ -801,13 +801,28 @@
       .item-give {
         .item-give-inner {
           box-shadow: none;
-            &:hover{
-              .featured-image{
-                .bt-overlay {
-                  opacity: 1;
+
+          &:hover {
+            .featured-image {
+              .bt-overlay {
+                opacity: 1;
+                .bt-content-overlay {
+                  .bt-meta-give-forms {
+                    left: 0;
+                  }
+    
+                  .give-button-donate {
+                    right: 0;
+                  }
                 }
-              } 
+              }
+              .bt-icon-give_forms {
+                opacity: 0;
+              }
+              
             }
+          }
+
           .featured-image {
             width: 100%;
             min-height: 220px;
@@ -854,9 +869,12 @@
                 .bt-meta-give-forms {
                   margin-bottom: 10px;
                   padding: 0 10px;
-
+                  position: relative;
+                  left: -100%;
+                  transition: 0.6s ease;
                   .give-goal-progress {
                     margin-bottom: 0;
+
                     .raised {
                       color: #fff;
                       font-size: 20px;
@@ -877,6 +895,7 @@
 
                     .progress-bar {
                       padding-bottom: 0;
+
                       .give-progress-bar {
                         background: #eee;
                         border-radius: 0;
@@ -898,9 +917,12 @@
                   }
                 }
 
-                .give-button-donate{
+                .give-button-donate {
                   text-align: right;
                   padding: 0 10px;
+                  position: relative;
+                  right: -100%;
+                  transition: 0.6s ease;
                 }
               }
             }
@@ -917,6 +939,7 @@
             letter-spacing: 0.16px;
             font-weight: 700;
             color: #333;
+            font-family: var(--body-family, "Arimo", sans-serif);
 
             a {
               color: inherit;
