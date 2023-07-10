@@ -312,8 +312,9 @@ beCounterBox();
         $trailColor = $(this).data('trail-color'),
         $duration = $(this).data('duration');
       if ($value > 0) {
-        if ($shape == 'circle') {
-          var cirle = new ProgressBar.Circle("#".concat($idProgressbar), {
+        var progressbar;
+        if ($shape === 'circle') {
+          progressbar = new ProgressBar.Circle("#".concat($idProgressbar), {
             strokeWidth: $height,
             easing: 'easeInOut',
             duration: $duration,
@@ -322,35 +323,25 @@ beCounterBox();
             trailWidth: $height,
             svgStyle: null
           });
-          var waypoint = new Waypoint({
-            element: this,
-            handler: function handler(direction) {
-              if (direction === 'down' && !cirle.path.classList.contains('in-view')) {
-                cirle.animate($value);
-                cirle.path.classList.add('in-view');
-              }
-            },
-            offset: '80%'
-          });
         } else {
-          var line = new ProgressBar.Line("#".concat($idProgressbar), {
+          progressbar = new ProgressBar.Line("#".concat($idProgressbar), {
             easing: 'easeInOut',
             duration: $duration,
             color: "".concat($strokeColor),
             trailColor: "".concat($trailColor)
           });
-          var waypoint = new Waypoint({
-            element: this,
-            handler: function handler(direction) {
-              if (direction === 'down' && !line.path.classList.contains('in-view')) {
-                line.animate($value);
-                line.path.classList.add('in-view');
-              }
-            },
-            offset: '80%'
-          });
           $(this).find('.be-progressbar-block-warp svg').css("height", $height);
         }
+        var waypoint = new Waypoint({
+          element: this,
+          handler: function handler(direction) {
+            if (direction === 'down' && !progressbar.path.classList.contains('in-view')) {
+              progressbar.animate($value);
+              progressbar.path.classList.add('in-view');
+            }
+          },
+          offset: '80%'
+        });
       }
     });
   };

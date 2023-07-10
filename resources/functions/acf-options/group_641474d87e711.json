@@ -260,8 +260,7 @@
                 "organization": "Header Orgazination",
                 "ngo-dark": "Header Ngo Dark",
                 "water-charity": "Header Water Charity",
-                "charity-organization": "Header Charity Orgazination",
-                "earthquake": "Header Earthquake"
+                "charity-organization": "Header Charity Orgazination"
             },
             "default_value": false,
             "return_format": "value",
@@ -474,8 +473,7 @@
                     "choices": {
                         "default": "Default",
                         "layout-2": "Layout 2",
-                        "layout-3": "Layout 3",
-                        "layout-4": "Layout 4"
+                        "layout-3": "Layout 3"
                     },
                     "default_value": false,
                     "return_format": "value",
@@ -588,8 +586,7 @@
                 "ngo": "Footer Ngo",
                 "organization": "Footer Orgazination",
                 "water-charity": "Footer Water Charity",
-                "charity-organization": "Footer Charity Organiztion",
-                "earthquake": "Footer Earthquake"
+                "charity-organization": "Footer Charity Organiztion"
             },
             "default_value": false,
             "return_format": "value",
@@ -1153,24 +1150,6 @@
                     "default_value": "#FFF",
                     "enable_opacity": 1,
                     "return_format": "string"
-                },
-                {
-                    "key": "field_64a6dfff5fb38",
-                    "label": "Top bar icon color",
-                    "name": "goza_topbar_icon_color",
-                    "aria-label": "",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "#FFF",
-                    "enable_opacity": 0,
-                    "return_format": "string"
                 }
             ]
         },
@@ -1390,14 +1369,13 @@
                         "Exo 2": "Exo 2",
                         "Fira Sans": "Fira Sans",
                         "Roboto": "Roboto",
-                        "Calligraffitti": "Calligraffitti",
-                        "Muli": "Muli"
+                        "Calligraffitti": "Calligraffitti"
                     },
                     "default_value": false,
-                    "return_format": "value",
-                    "multiple": 0,
                     "allow_null": 0,
+                    "multiple": 0,
                     "ui": 0,
+                    "return_format": "value",
                     "ajax": 0,
                     "placeholder": ""
                 },
@@ -1551,15 +1529,14 @@
                         "Exo 2": "Exo 2",
                         "Fira Sans": "Fira Sans",
                         "Roboto": "Roboto",
-                        "Calligraffitti": "Calligraffitti",
-                        "Muli": "Muli"
+                        "Calligraffitti": "Calligraffitti"
                     },
                     "default_value": false,
-                    "return_format": "value",
-                    "multiple": 0,
                     "allow_null": 0,
+                    "multiple": 0,
                     "ui": 1,
                     "ajax": 0,
+                    "return_format": "value",
                     "placeholder": ""
                 },
                 {
@@ -2182,5 +2159,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688657967
+    "modified": 1688952383
 }
