@@ -3,6 +3,23 @@
     "title": "Icon Box Block",
     "fields": [
         {
+            "key": "field_64ac16434cf7e",
+            "label": "General",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_64219ce607f15",
             "label": "Heading",
             "name": "heading_icon_box",
@@ -36,36 +53,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Child Adoption",
+            "default_value": "#!",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_642448404a89f",
-            "label": "Backround Image",
-            "name": "bg__icon_box",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
         },
         {
             "key": "field_64219e3f07f17",
@@ -151,7 +143,7 @@
             ]
         },
         {
-            "key": "field_64916bb3d64b3",
+            "key": "field_64953f08babe0",
             "label": "Sub heading",
             "name": "subheading_icon_box",
             "aria-label": "",
@@ -169,6 +161,84 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_64ac165a4cf7f",
+            "label": "Styles",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_642448404a89f",
+            "label": "Backround Image",
+            "name": "bg__icon_box",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_64ac196230de8",
+            "label": "Heading Color",
+            "name": "hd_color_ibx",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string"
+        },
+        {
+            "key": "field_64ac1b9430de9",
+            "label": "Sub Heading Color",
+            "name": "sub_hd_color_ibx",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string"
         }
     ],
     "location": [
@@ -189,5 +259,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687252217
+    "modified": 1689000888
 }
