@@ -1,9 +1,9 @@
 {
-    "key": "group_64186c150f839",
+    "key": "group_6439747d645ed",
     "title": "Give Grid Block",
     "fields": [
         {
-            "key": "field_6418775a5fa59",
+            "key": "field_6439747d69e6f",
             "label": "Query",
             "name": "query_give_grid_block",
             "aria-label": "",
@@ -19,7 +19,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_64186c16cbd65",
+                    "key": "field_6439747dc04a1",
                     "label": "Posts per page",
                     "name": "posts_per_page",
                     "aria-label": "",
@@ -28,12 +28,12 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
                     "default_value": 6,
-                    "min": "",
+                    "min": -1,
                     "max": "",
                     "placeholder": "",
                     "step": "",
@@ -41,7 +41,7 @@
                     "append": ""
                 },
                 {
-                    "key": "field_641878fa5fa5a",
+                    "key": "field_6439747dc04e8",
                     "label": "Order",
                     "name": "order",
                     "aria-label": "",
@@ -50,7 +50,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -62,12 +62,14 @@
                     "return_format": "value",
                     "multiple": 0,
                     "allow_null": 0,
-                    "ui": 0,
+                    "ui": 1,
                     "ajax": 0,
-                    "placeholder": ""
+                    "placeholder": "",
+                    "allow_custom": 0,
+                    "search_placeholder": ""
                 },
                 {
-                    "key": "field_641879285fa5b",
+                    "key": "field_6439747dc052b",
                     "label": "Categoires",
                     "name": "categoires",
                     "aria-label": "",
@@ -76,21 +78,21 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
-                    "taxonomy": "give_forms_category",
+                    "taxonomy": "fw-portfolio-category",
                     "add_term": 1,
                     "save_terms": 0,
                     "load_terms": 0,
                     "return_format": "id",
-                    "field_type": "checkbox",
-                    "multiple": 0,
-                    "allow_null": 0
+                    "field_type": "multi_select",
+                    "allow_null": 0,
+                    "multiple": 0
                 },
                 {
-                    "key": "field_641879e4bb66e",
+                    "key": "field_6439747dc056f",
                     "label": "Tags",
                     "name": "tags",
                     "aria-label": "",
@@ -99,25 +101,25 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
-                    "taxonomy": "give_forms_tag",
+                    "taxonomy": "post_tag",
                     "add_term": 1,
                     "save_terms": 0,
                     "load_terms": 0,
                     "return_format": "id",
-                    "field_type": "checkbox",
-                    "multiple": 0,
-                    "allow_null": 0
+                    "field_type": "multi_select",
+                    "allow_null": 0,
+                    "multiple": 0
                 }
             ]
         },
         {
-            "key": "field_641879fbbb66f",
-            "label": "Slider Setting",
-            "name": "slider_setting_give_grid_block",
+            "key": "field_6439747d69eb2",
+            "label": "Setting",
+            "name": "setting_give_grid_block",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -131,7 +133,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_6418717b6bde9",
+                    "key": "field_643974edc8e24",
                     "label": "Grid colum decktop",
                     "name": "grid_colum_decktop",
                     "aria-label": "",
@@ -158,7 +160,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_641871f56bdea",
+                    "key": "field_6439751fc8e25",
                     "label": "Grid colum tablet",
                     "name": "grid_colum_tablet",
                     "aria-label": "",
@@ -185,7 +187,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_6418720c6bdeb",
+                    "key": "field_64397538c8e26",
                     "label": "Grid colum mobile",
                     "name": "grid_colum_mobile",
                     "aria-label": "",
@@ -226,7 +228,7 @@
     "menu_order": 0,
     "position": "normal",
     "style": "default",
-    "label_placement": "top",
+    "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
