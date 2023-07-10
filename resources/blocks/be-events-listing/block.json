@@ -14,6 +14,7 @@
     "styles": [
         { "name": "default", "label": "Default", "isDefault": true },
         { "name": "ev-list", "label": "Events List" },
+        { "name": "ev-grid", "label": "Events Grid" },
         { "name": "ev-fill", "label": "Events Fill" },
         { "name": "ev-outline", "label": "Events Outline" },
         { "name": "ev-special", "label": "Events Special" }

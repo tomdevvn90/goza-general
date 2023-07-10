@@ -7,6 +7,10 @@ function be_item_event($is_style)
             be_template_ev_list();
             break;
 
+        case strpos($is_style, 'is-style-ev-grid') !== false:
+            be_template_ev_grid();
+            break;
+
         case strpos($is_style, 'is-style-ev-fill') !== false:
             be_template_ev_fill();
             break;
@@ -73,6 +77,61 @@ function be_template_ev_list()
                             </g>
                         </svg>
                         <span><?php echo esc_attr($venue) ?></span>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+<?php }
+
+function be_template_ev_grid()
+{
+    $ev_img_url    = get_the_post_thumbnail_url(get_the_ID(), 'full');
+    $start_date = '';
+    $time_start = '';
+    $time_end = '';
+    $venue = '';
+    if (is_plugin_active('the-events-calendar/the-events-calendar.php')) {
+        $start_date = tribe_get_start_date(get_the_ID(), true, 'd F');
+        $time_start  = tribe_get_start_date(get_the_ID(), true, 'G:i');
+        $time_end    = tribe_get_end_date(get_the_ID(), true, 'G:i');
+        $venue       = tribe_get_venue(get_the_ID());
+    }
+
+    $author_id   = get_the_author_meta('ID');
+    $author_name = get_the_author_meta('display_name', $author_id);
+    
+?>
+     <div class="item-event">
+        <div class="item-event--inner">
+            <?php if (!empty($ev_img_url)) : ?>
+                <div class="item-event--thumbnail">
+                    <?php if ($ev_img_url) { ?>
+                        <img src="<?php echo esc_url($ev_img_url) ?>" alt="<?php the_title() ?>">
+                    <?php } ?>
+                </div>
+            <?php endif; ?>
+
+            <div class="item-event--meta">
+                <?php if (!empty($start_date)) : ?>
+                    <span class="item-event--start-date"> <?php echo esc_attr($start_date) ?> </span>
+                <?php endif; ?>
+                <h3 class="item-event--name">
+                    <a href="<?php the_permalink() ?>"> <?php the_title() ?> </a>
+                </h3>
+                <?php if ( !empty($time_start) && !empty($time_end) ) : ?>
+                    <div class="item-event--start-date-time"> 
+                        <i class="fa fa-clock-o" aria-hidden="true"> </i>
+                        <?php echo esc_attr($time_start); ?> 
+                        -
+                        <?php echo esc_attr($time_end); ?> 
+                        <span>By <?php echo esc_attr($author_name); ?></span>
+                    </div>
+                <?php endif; ?>
+                <?php if (!empty($venue)) : ?>
+                    <div class="item-event--venue"> 
+                        <i class="fa fa-map-marker" aria-hidden="true"> </i>
+                        <?php echo esc_attr($venue); ?> 
                     </div>
                 <?php endif; ?>
             </div>
@@ -200,7 +259,8 @@ function be_template_ev_outline()
     if (is_plugin_active('the-events-calendar/the-events-calendar.php')) {
         $day   = tribe_get_start_date(get_the_ID(), true, 'j');
         $month = tribe_get_start_date(get_the_ID(), true, 'F Y -');
-        $time  = tribe_get_start_date(get_the_ID(), true, 'G:i a');
+        $time_start  = tribe_get_start_date(get_the_ID(), true, 'G:i');
+        $time_end  = tribe_get_end_date(get_the_ID(), true, 'G:i');
         $venue = tribe_get_venue(get_the_ID());
     }
 ?>
@@ -238,11 +298,21 @@ function be_template_ev_outline()
 
                 <div class="item-event--start-date">
                     <?php if (!empty($day)) : ?>
-                        <span class="item-event--start-date-day"> <b><?php echo esc_attr($day) ?></b> <?php echo esc_attr($month) ?> </span>
+                        <span class="item-event--start-date-day"> 
+                            <b><?php echo esc_attr($day) ?></b> 
+                        </span>
                     <?php endif; ?>
-
-                    <?php if (!empty($time)) : ?>
-                        <span class="item-event--start-date-time"> <?php echo esc_attr($time) ?> </span>
+                    <?php if (!empty($month)) : ?>
+                        <span class="item-event--start-date-month"> 
+                            <?php echo esc_attr($month) ?> 
+                        </span>
+                    <?php endif; ?>
+                    <?php if (!empty($time_start) || !empty($time_end) ) : ?>
+                        <span class="item-event--start-date-time"> 
+                            <?php echo esc_attr($time_start) ?> 
+                            -
+                            <?php echo esc_attr($time_end) ?> 
+                        </span>
                     <?php endif; ?>
                 </div>
 
