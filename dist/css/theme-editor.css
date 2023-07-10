@@ -6958,7 +6958,7 @@
   padding: 35px 35px 15px 35px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  margin-bottom: 65px;
+  margin-bottom: 55px;
 }
 
 @media screen and (max-width: 600px) {
@@ -14755,6 +14755,59 @@ div[id*=give-form].give-display-reveal .give-btn {
   top: 50%;
   transform: translateY(-50%);
   margin-bottom: 0;
+}
+
+.post-type-archive-tribe_events .goza-section-space {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.post-type-archive-tribe_events .list-tab-event .nav-tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.post-type-archive-tribe_events .list-tab-event .nav-tabs li {
+  float: left;
+  border-radius: 0;
+  margin: 0;
+  min-width: 240px;
+  text-align: center;
+  border: 0;
+  position: relative;
+}
+
+.post-type-archive-tribe_events .list-tab-event .nav-tabs li.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 3px;
+  z-index: 10;
+  top: 0;
+  height: 4px;
+  background-color: var(--link-color, #d41b65);
+}
+
+.post-type-archive-tribe_events .list-tab-event .nav-tabs li.active a {
+  background: #ffffff;
+}
+
+.post-type-archive-tribe_events .list-tab-event .nav-tabs li a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  color: var(--heading-color, #333);
+  font-family: var(--body-family);
+  border-radius: 0;
+  margin-right: 3px;
+  border: 1px solid #eee;
+  border-bottom: 0;
+  font-size: 16px;
+  background: #f9f9f9;
+  font-weight: 700;
+  line-height: 29px;
 }
 
 .block-editor-block-list__block .be-testimonials-block-carousel {

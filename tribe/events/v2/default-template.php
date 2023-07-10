@@ -34,9 +34,29 @@ if( is_singular( 'tribe_events' ) ) {
 	<div id="primary" class="content-area <?php echo esc_attr($classes); ?>">
 		<div class="container responsive">
 			<main id="main" class="site-main">
-				<?php echo tribe( Template_Bootstrap::class )->get_view_html(); ?>
-			</main><!-- .site-main -->
+				<?php // echo tribe( Template_Bootstrap::class )->get_view_html(); ?>
+				<section class="goza-section-space">
+					<div class="list-tab-event">
+						<ul class="nav nav-tabs">
+							<li class="active">
+								<a href="#tab-happening" data-toggle="tab" aria-expanded="true">Happening</a>
+							</li>
+							<li>
+								<a href="#tab-upcoming" data-toggle="tab" aria-expanded="true">Upcoming</a>
+							</li>
+							<li>
+								<a href="#tab-expired" data-toggle="tab" aria-expanded="true">Expired</a>
+							</li>
+						</ul>
+						<div class="tab-content bt-list-event">
+							<div role="tabpanel" class="tab-pane fade active in" id="tab-happening" tabindex="-1"></div>
+							<div role="tabpanel" class="tab-pane fade" id="tab-upcoming" tabindex="-1"></div>
+							<div role="tabpanel" class="tab-pane fade" id="tab-expired" tabindex="-1"></div>
+						</div>
+					</div>
+				</section>
 
+			</main><!-- .site-main -->
 		</div>
 	</div><!-- #primary -->
 </div><!-- #content -->
