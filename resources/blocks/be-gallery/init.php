@@ -5,7 +5,7 @@ function load_template_gallerys($classes){
             be_tempplate_gallery_default();
             break;
 
-        case strpos($classes, 'charity-organization') !== false:
+        case strpos($classes, 'is-style-charity-organization') !== false:
             be_tempplate_charity_organization();
             break;    
 

@@ -11,5 +11,9 @@
     "supports": {
         "align": true
     },
+    "styles": [
+        { "name": "ngo-dark", "label": "Ngo Dark", "isDefault": true },
+        { "name": "water-charity", "label": "Water Charity" }
+    ],
     "align": "full"
-  }
+}
