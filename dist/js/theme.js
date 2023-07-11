@@ -587,8 +587,27 @@ be_projects_grid_loadmore.forEach(function (element) {
       $carousel.slick(Object.assign({}, opt_df, $dataCarousel));
     });
   };
+  var beSSTestimonials = function beSSTestimonials() {
+    var $block = $('.be-section-w-testinials-block');
+    if (!$block.length) return;
+    $block.each(function () {
+      var $carousel = $(this).find('.be-testimonials-list'),
+        $dataCarousel = $(this).data('carousel');
+      var opt_df = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        autoplay: true,
+        arrows: true,
+        prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fa fa-long-arrow-left' aria-hidden='true'></i></button>",
+        nextArrow: "<button type='button' class='slick-next pull-right'><i class='fa fa-long-arrow-right' aria-hidden='true'></i></button>"
+      };
+      $carousel.slick(Object.assign({}, opt_df, $dataCarousel));
+    });
+  };
   $(document).ready(function () {
     beTestimonialCarousel();
+    beSSTestimonials();
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))

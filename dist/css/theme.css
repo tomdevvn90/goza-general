@@ -32628,6 +32628,92 @@ div[id*=give-form].give-display-reveal .give-btn {
   line-height: 29px;
 }
 
+.be-section-w-testinials-block {
+  padding-bottom: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.be-section-w-testinials-block .be-testimonials-wrap {
+  position: relative;
+  top: -40px;
+  margin-bottom: 0px;
+  padding-top: 60px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 400px;
+}
+
+@media (max-width: 500px) {
+  .be-section-w-testinials-block .be-testimonials-wrap {
+    width: 100%;
+  }
+}
+
+.be-section-w-testinials-block .be-testimonials-wrap .be-testimonials-icon {
+  margin-bottom: 20px;
+}
+
+.be-section-w-testinials-block .container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.be-section-w-testinials-block .text-notify {
+  color: var(--text-color, #FFF);
+}
+
+.be-section-w-testinials-block .be-testimonials-list-item-quote {
+  color: var(--text-color, #FFF);
+  font-size: 22px;
+  line-height: 32px;
+  font-style: italic;
+  letter-spacing: 0.16px;
+  margin-bottom: 25px;
+  font-family: var(--heading-family, "Poppins", sans-serif);
+  font-weight: 700;
+}
+
+@media (max-width: 500px) {
+  .be-section-w-testinials-block .be-testimonials-list-item-quote {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.be-section-w-testinials-block .be-testimonials-list-item-author {
+  color: var(--text-color, #FFF);
+  font-size: 18px;
+  line-height: 28px;
+  max-width: 200px;
+}
+
+.be-section-w-testinials-block .be-testimonials-list .slick-arrow {
+  height: 24px;
+  width: 24px;
+  right: 0;
+  bottom: 0;
+  transform: unset;
+  top: unset;
+}
+
+.be-section-w-testinials-block .be-testimonials-list .slick-arrow.slick-prev {
+  left: unset;
+  right: 34px;
+}
+
+.be-section-w-testinials-block .be-testimonials-list .slick-arrow::before {
+  display: none;
+}
+
+.be-section-w-testinials-block .be-testimonials-list .slick-arrow i {
+  font-size: 24px;
+  color: var(--text-color, #FFF);
+}
+
 .tribe-common h1,
 .tribe-common h2,
 .tribe-common h3,
