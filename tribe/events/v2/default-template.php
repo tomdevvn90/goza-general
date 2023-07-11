@@ -39,19 +39,25 @@ if( is_singular( 'tribe_events' ) ) {
 					<div class="list-tab-event">
 						<ul class="nav nav-tabs">
 							<li class="active">
-								<a href="#tab-happening" data-toggle="tab" aria-expanded="true">Happening</a>
+								<a class="tab-item" href="#tab-happening" data-toggle="tab" aria-expanded="true">Happening</a>
 							</li>
 							<li>
-								<a href="#tab-upcoming" data-toggle="tab" aria-expanded="true">Upcoming</a>
+								<a class="tab-item" href="#tab-upcoming" data-toggle="tab" aria-expanded="true">Upcoming</a>
 							</li>
 							<li>
-								<a href="#tab-expired" data-toggle="tab" aria-expanded="true">Expired</a>
+								<a class="tab-item" href="#tab-expired" data-toggle="tab" aria-expanded="true">Expired</a>
 							</li>
 						</ul>
 						<div class="tab-content bt-list-event">
-							<div role="tabpanel" class="tab-pane fade active in" id="tab-happening" tabindex="-1"></div>
-							<div role="tabpanel" class="tab-pane fade" id="tab-upcoming" tabindex="-1"></div>
-							<div role="tabpanel" class="tab-pane fade" id="tab-expired" tabindex="-1"></div>
+							<div role="tabpanel" class="tab-panel fade active in" id="tab-happening" tabindex="-1">
+								<?php tribe_event_happening_list(); ?>
+							</div>
+							<div role="tabpanel" class="tab-panel fade" id="tab-upcoming" tabindex="-1">
+								<?php tribe_event_upcoming_list(); ?>
+							</div>
+							<div role="tabpanel" class="tab-panel fade" id="tab-expired" tabindex="-1">
+								<?php tribe_event_expired_list(); ?>
+							</div>
 						</div>
 					</div>
 				</section>

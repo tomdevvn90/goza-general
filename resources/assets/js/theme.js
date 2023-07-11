@@ -3,6 +3,7 @@ import counterUp from 'counterup2';
 
 import './components/navigation';
 import './components/function';
+import './components/tabpanel';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

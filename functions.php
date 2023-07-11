@@ -53,5 +53,6 @@ if (class_exists('Tribe__Events__Main')) {
 	/**
 	 * Tribe Events.
 	 */
+	require THEME_PATH . '/tribe/events/v2/helper-functions.php';
 	require THEME_PATH . '/tribe-events/helper-functions.php';
 }
