@@ -1270,6 +1270,17 @@ $(document).ready(function () {
 
 /***/ }),
 
+/***/ "./resources/assets/scss/home/general.scss":
+/*!*************************************************!*\
+  !*** ./resources/assets/scss/home/general.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/assets/scss/theme.scss":
 /*!******************************************!*\
   !*** ./resources/assets/scss/theme.scss ***!
@@ -1282,15 +1293,16 @@ $(document).ready(function () {
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************!*\
-  !*** multi ./resources/assets/js/theme.js ./resources/assets/scss/theme.scss ./resources/assets/scss/editor/editor.scss ***!
-  \**************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** multi ./resources/assets/js/theme.js ./resources/assets/scss/theme.scss ./resources/assets/scss/editor/editor.scss ./resources/assets/scss/home/general.scss ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
 __webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-module.exports = __webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+module.exports = __webpack_require__(/*! C:\Users\rimki\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\general.scss */"./resources/assets/scss/home/general.scss");
 
 
 /***/ })

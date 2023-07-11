@@ -1,7 +1,8 @@
 {
     "/js/manifest.js": "/js/manifest.js?id=41f053ba9a94d81b39f8",
-    "/js/theme.js": "/js/theme.js?id=64ce9a5a8934e83b815c",
+    "/js/theme.js": "/js/theme.js?id=cb4d02e2aeca2cc02a3a",
     "/css/theme.css": "/css/theme.css?id=fa4ac21c3e6992a8ea2b",
     "/css/theme-editor.css": "/css/theme-editor.css?id=7e5853de421b3cb16f1c",
-    "/js/vendor.js": "/js/vendor.js?id=9dbd71dc88fe97b172b6"
+    "/css/general.css": "/css/general.css?id=0593ad13e6054de5e493",
+    "/js/vendor.js": "/js/vendor.js?id=fca10165a881664e4cfb"
 }

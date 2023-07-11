@@ -31,6 +31,10 @@ add_action('wp_enqueue_scripts', function () {
 
 	//Global
 	wp_enqueue_style('goza-theme-general-styles', $upload_dir['baseurl'] . '/styles_uploads/variable-css.css', [], THEME_VERSION);
+	if (isset($_GET['home'])) {
+		wp_enqueue_style('goza-theme-home-styles', goza_get_style_home($_GET['home']), [], THEME_VERSION);
+	}
+	wp_enqueue_style('goza-theme-general-styles', $upload_dir['baseurl'] . '/styles_uploads/variable-css.css', [], THEME_VERSION);
 	wp_enqueue_style('app-styles', goza_get_assets('theme', 'css'), [], THEME_VERSION);
 	wp_enqueue_script('manifest-scripts', goza_get_assets('manifest', 'js'), ['jquery'], THEME_VERSION, true);
 	wp_enqueue_script('vendor-scripts', goza_get_assets('vendor', 'js'), ['jquery'], THEME_VERSION, true);
@@ -61,3 +65,11 @@ if (!function_exists('goza_load_css_editor')) {
 }
 
 add_action('admin_enqueue_scripts', 'goza_load_css_editor');
+
+
+if (!function_exists('goza_get_style_home')) {
+	function goza_get_style_home($home_name)
+	{
+		return THEME_URI . '/dist/css/' . $home_name . '.css';
+	}
+}

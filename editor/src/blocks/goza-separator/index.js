@@ -34,7 +34,6 @@ const BlockAttrs = {
 };
 
 
-
 export default registerBlockType('goza-block/goza-separator-block', {
 	title: __('Separator - Goza Theme'),
 	description: __('Create a break between ideas or sections with a horizontal separator.'),
