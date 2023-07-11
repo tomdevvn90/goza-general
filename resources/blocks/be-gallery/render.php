@@ -17,5 +17,10 @@ $gap_row    = get_field('gap_row_gallery_bl') ? : '15';
         <div id="<?= $block['id'] ?>" class="be-gallery-block--inner" data-aos="fade-up" data-light-gallery style="grid-row-gap:<?= $gap_row ?>px; grid-column-gap:<?= $gap_column ?>px" >      
             <?php load_template_gallerys($classes) ?>
         </div>
+
+   <?php else: ?>
+        <div class="be-gallery-block--not-post"> 
+            <h3> Please choose image </h3>
+        </div>
    <?php endif; ?> 
 </div>

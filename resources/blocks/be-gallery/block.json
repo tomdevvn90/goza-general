@@ -10,7 +10,8 @@
     },
     "styles": [
         { "name": "ngo-dark", "label": "Default", "isDefault": true },
-        { "name": "water-charity", "label": "Water Charity" }
+        { "name": "water-charity", "label": "Water Charity" },
+        { "name": "charity-organization", "label": "Charity Organization" }
     ],
     "supports": {
         "align": ["left", "center", "right"]
