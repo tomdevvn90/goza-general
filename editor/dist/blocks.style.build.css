@@ -747,7 +747,7 @@ div.goza-background-repeat-y {
     .goza-layout-columns-2 > .goza-layout-column-wrap.goza-is-responsive-column {
       -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-      grid-template-areas: "col1" "col2"; } }
+      grid-template-areas: "col1" "col2"; } }
 
 .goza-2-col-wideleft > .goza-layout-column-wrap {
   -ms-grid-columns: 2fr 1fr;
@@ -766,7 +766,7 @@ div.goza-background-repeat-y {
     .goza-layout-columns-3 > .goza-layout-column-wrap.goza-is-responsive-column {
       -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-      grid-template-areas: "col1" "col2" "col3"; } }
+      grid-template-areas: "col1" "col2" "col3"; } }
 
 .goza-3-col-widecenter > .goza-layout-column-wrap {
   -ms-grid-columns: 1fr 2fr 1fr;
@@ -802,12 +802,12 @@ div.goza-background-repeat-y {
       grid-template-rows: auto;
       -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: "col1 col2" "col3 col4"; } }
+      grid-template-areas: "col1 col2" "col3 col4"; } }
   @media only screen and (max-width: 600px) {
     .goza-layout-columns-4 > .goza-layout-column-wrap.goza-is-responsive-column {
       -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-      grid-template-areas: "col1" "col2" "col3" "col4"; } }
+      grid-template-areas: "col1" "col2" "col3" "col4"; } }
 
 .goza-4-col-wideleft > .goza-layout-column-wrap {
   -ms-grid-columns: 2fr 1fr 1fr 1fr;
@@ -826,7 +826,7 @@ div.goza-background-repeat-y {
     .goza-layout-columns-5 > .goza-layout-column-wrap.goza-is-responsive-column {
       -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-      grid-template-areas: "col1" "col2" "col3" "col4" "col5"; } }
+      grid-template-areas: "col1" "col2" "col3" "col4" "col5"; } }
 
 .goza-layout-columns-6 > .goza-layout-column-wrap {
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -836,12 +836,12 @@ div.goza-background-repeat-y {
     .goza-layout-columns-6 > .goza-layout-column-wrap.goza-is-responsive-column {
       -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: "col1 col2" "col3 col4" "col5 col6"; } }
+      grid-template-areas: "col1 col2" "col3 col4" "col5 col6"; } }
   @media only screen and (max-width: 600px) {
     .goza-layout-columns-6 > .goza-layout-column-wrap.goza-is-responsive-column {
       -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-      grid-template-areas: "col1" "col2" "col3" "col4" "col5" "col6"; } }
+      grid-template-areas: "col1" "col2" "col3" "col4" "col5" "col6"; } }
 
 .goza-layout-columns-4,
 .goza-layout-columns-5,
@@ -878,3 +878,31 @@ div.goza-background-repeat-y {
       margin: 0; }
   .goza-column-selector button.components-button.is-button:last-child {
     border-radius: 5px; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.goza-separator-blocks {
+  display: -ms-flexbox;
+  display: flex; }
+  .goza-separator-blocks.separator-fullwidth {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    max-width: 100vw; }
+    .goza-separator-blocks.separator-fullwidth .separators {
+      width: 100% !important; }
+  .goza-separator-blocks.separator-center {
+    -ms-flex-pack: center;
+        justify-content: center; }
+  .goza-separator-blocks.separator-left {
+    -ms-flex-pack: start;
+        justify-content: flex-start; }
+  .goza-separator-blocks.separator-right {
+    -ms-flex-pack: end;
+        justify-content: flex-end; }
+  .goza-separator-blocks .separators {
+    height: 2px;
+    width: 64px;
+    background: var(--link-color, #d41b65); }

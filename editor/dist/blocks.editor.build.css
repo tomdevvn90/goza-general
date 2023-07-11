@@ -347,3 +347,15 @@
   -ms-flex-align: center;
       align-items: center;
   text-align: center; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.goza-separator-blocks {
+  padding: 5px 0; }
+  .goza-separator-blocks .separators {
+    height: 2px;
+    width: 64px;
+    background: var(--link-color, #d41b65); }

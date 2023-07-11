@@ -20,21 +20,48 @@
 
                 &:nth-child(even) {
                     flex-direction: column;
+
                     @media (min-width: 600px) {
                         flex-direction: column-reverse;
                     }
                 }
 
-                &-image {
+                &-image { 
                     height: 230px;
                     display: block;
                     overflow: hidden;
+                    position: relative;  
+
+                    &:hover {
+                        &::before {
+                            -webkit-animation: circle 0.75s;
+                            animation: circle 0.75s;
+                        }
+                    } 
 
                     img {
                         object-fit: cover;
                         object-position: center;
                         height: 100%;
                         width: 100%;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        z-index: 2;
+                        display: block;
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        background: rgba(255, 255, 255, 0.2);
+                        border-radius: 100%;
+                        -webkit-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        -webkit-transition: 0.4s ease;
+                        transition: 0.4s ease;
                     }
                 }
 

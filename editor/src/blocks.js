@@ -17,3 +17,4 @@ import './blocks/goza-logo-carousel';
 import './blocks/goza-buttons';
 import './blocks/goza-column';
 import './blocks/goza-column-inner'; 
+import './blocks/goza-separator'; 
