@@ -1189,7 +1189,6 @@ __webpack_require__.r(__webpack_exports__);
   var gozaTabPanel = function gozaTabPanel() {
     $(document).on('click', '.nav-tabs .tab-item', function (e) {
       e.preventDefault();
-      e.stopPropagation();
       var el = $(this).closest('li');
       var tab_panel = $($(this).attr('href'));
       var el_sl = el.siblings();
@@ -1335,10 +1334,10 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\ADMIN\Local Sites\goza-theme-dev\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! C:\Users\ADMIN\Local Sites\goza-theme-dev\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-__webpack_require__(/*! C:\Users\ADMIN\Local Sites\goza-theme-dev\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
-module.exports = __webpack_require__(/*! C:\Users\ADMIN\Local Sites\goza-theme-dev\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\general.scss */"./resources/assets/scss/home/general.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/js/theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/theme.scss */"./resources/assets/scss/theme.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/editor/editor.scss */"./resources/assets/scss/editor/editor.scss");
+module.exports = __webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/home/general.scss */"./resources/assets/scss/home/general.scss");
 
 
 /***/ })

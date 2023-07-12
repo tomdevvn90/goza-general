@@ -3,10 +3,9 @@
 
     //Tab Panel
     const gozaTabPanel= () => {
-        
+
         $(document).on('click', '.nav-tabs .tab-item', function (e) {
             e.preventDefault();
-            e.stopPropagation();
             let el = $(this).closest('li');
             let tab_panel = $( $(this).attr('href') );
             let el_sl = el.siblings();
@@ -15,6 +14,7 @@
             el_sl.removeClass('active');
             tab_panel.addClass('active');
             tab_panel_sl.removeClass('active');
+
         });
     }
 
