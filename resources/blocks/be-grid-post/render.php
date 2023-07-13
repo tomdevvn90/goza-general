@@ -63,12 +63,12 @@ $gp_categories     = __get_field('gp_categories') ?: '';
       ?>
             <div class="be-grid-post__item">
                <a href="<?php echo esc_url(get_permalink()) ?>" class="be-grid-post__item-image">
-                  <img src="<?php echo esc_url($featured_img_url) ?>" alt="<?php echo esc_html(get_the_title()) ?>" />
+                  <img src="<?php echo esc_url($featured_img_url) ?>" data-aos="zoom-in" data-aos-duration="800" alt="<?php echo esc_html(get_the_title()) ?>" />
                </a>
                <div class="be-grid-post__item-content">
-                  <span class="be-grid-post__item-date"><?php esc_attr_e(get_the_date('d M, Y')) ?></span>
-                  <h4 class="be-grid-post__item-title"><a href="<?php echo esc_url(get_permalink()) ?>"><?php echo esc_html(get_the_title()) ?></a></h4>
-                  <div class="be-grid-post__item-meta">
+                  <span class="be-grid-post__item-date" data-aos="fade-up" data-aos-duration="800"><?php esc_attr_e(get_the_date('d M, Y')) ?></span>
+                  <h4 class="be-grid-post__item-title" data-aos="fade-up" data-aos-duration="800"><a href="<?php echo esc_url(get_permalink()) ?>"><?php echo esc_html(get_the_title()) ?></a></h4>
+                  <div class="be-grid-post__item-meta" data-aos="fade-up" data-aos-duration="800">
                      <span><?php esc_html_e('by ' . get_the_author()) ?></span>
                      <span><i class="fa fa-comment" aria-hidden="true"></i> <?php esc_attr_e(get_comments_number()) ?></span>
                   </div>
