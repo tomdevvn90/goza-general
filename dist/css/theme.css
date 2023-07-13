@@ -21059,6 +21059,19 @@ h6 {
   color: var(--header-text-color, #FFF);
   font-weight: normal;
   font-family: var(--body-family, "Arimo", sans-serif);
+  text-transform: none;
+}
+
+.site-header-charity-organization #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link {
+  font-size: 15px;
+  color: #666;
+  font-weight: normal;
+}
+
+.site-header-charity-organization #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link:hover {
+  font-weight: normal;
+  text-decoration: none;
+  color: var(--link-color, #32cbfe);
 }
 
 .be-box-featured-block.home-ngo {
