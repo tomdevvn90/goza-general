@@ -49,14 +49,23 @@ if( is_singular( 'tribe_events' ) ) {
 							</li>
 						</ul>
 						<div class="tab-content bt-list-event">
-							<div role="tabpanel" class="tab-panel fade active in" id="tab-happening" tabindex="-1">
-								<?php tribe_event_happening_list(); ?>
+							<div role="tabpanel" class="tab-panel fade active in" id="tab-happening" tabindex="-1" data-event_type="happening">
+								<?php 
+								$event_type = 'happening';
+								tribe_event_list( $event_type ); 
+								?>
 							</div>
-							<div role="tabpanel" class="tab-panel fade" id="tab-upcoming" tabindex="-1">
-								<?php tribe_event_upcoming_list(); ?>
+							<div role="tabpanel" class="tab-panel fade" id="tab-upcoming" tabindex="-1" data-event_type="upcoming">
+								<?php 
+								$event_type = 'upcoming';
+								tribe_event_list( $event_type ); 
+								?>
 							</div>
-							<div role="tabpanel" class="tab-panel fade" id="tab-expired" tabindex="-1">
-								<?php tribe_event_expired_list(); ?>
+							<div role="tabpanel" class="tab-panel fade" id="tab-expired" tabindex="-1" data-event_type="expired">
+								<?php 
+								$event_type = 'expired';
+								tribe_event_list( $event_type ); 
+								?>
 							</div>
 						</div>
 					</div>
