@@ -21051,6 +21051,16 @@ h6 {
   color: #fff;
 }
 
+.site-header-charity-organization #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link {
+  color: var(--link-color, #32cbfe);
+}
+
+.site-header-charity-organization #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
+  color: var(--header-text-color, #FFF);
+  font-weight: normal;
+  font-family: var(--body-family, "Arimo", sans-serif);
+}
+
 .be-box-featured-block.home-ngo {
   margin-top: 40px;
 }

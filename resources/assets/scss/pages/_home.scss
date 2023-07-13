@@ -82,6 +82,7 @@
 }
 
 
+
 .charity-or-newsletter {
     .tnp {
         form {
@@ -119,6 +120,25 @@
                 background-color: #000;
                 border-radius: 0;
                 color: #fff;
+            }
+        }
+    }
+}
+
+.site-header-charity-organization{
+    #mega-menu-wrap-main-menu {
+        #mega-menu-main-menu {
+            > li.mega-menu-item {
+                &.mega-current-menu-ancestor{
+                    > a.mega-menu-link{
+                        color: var(--link-color, #32cbfe);
+                    }
+                }
+                > a.mega-menu-link{
+                    color: var(--header-text-color, #FFF);
+                    font-weight: normal;
+                    font-family: var(--body-family, "Arimo", sans-serif);
+                }
             }
         }
     }
