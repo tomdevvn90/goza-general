@@ -82,7 +82,7 @@ function be_tempplate_charity_organization(){
                     <p class="item-gallery--desc"> <?= esc_attr($img_desc) ?>  </p>
                 <?php endif; ?>
                 
-                <h4 class="item-gallery--name"> <?= esc_attr($img_name) ?> </h4>
+                <h4 class="item-gallery--title"> <?= esc_attr($img_name) ?> </h4>
             </div>
         </a>
 

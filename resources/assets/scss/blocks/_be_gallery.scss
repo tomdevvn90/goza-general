@@ -326,7 +326,7 @@
                     transition: 0.25s ease;
                 }
 
-                &--name, &--icon{
+                &--title, &--icon{
                     position: absolute;
                 }
 
@@ -366,6 +366,7 @@
                     color: #ffffff !important;
                     font-weight: 700 !important;
                     font-style: italic !important;
+                    font-family: var(--heading-family, "Poppins", sans-serif); 
                     display: inline-block;
                     height: auto;
                     width: auto;
@@ -389,12 +390,13 @@
                     }
                 }
 
-                &--name{
+                &--title{
                     font-size: 16px;
                     line-height: 26px;
                     color: #ffffff;
-                    font-family: var(--heading-family);
+                    font-family: var(--body-family, "Arimo", sans-serif);
                     font-weight: 700;
+                    text-transform: uppercase;
                     display: inline-block;
                     height: auto;
                     width: auto;
@@ -433,7 +435,7 @@
                         transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
                     }
 
-                    .item-gallery--name{
+                    .item-gallery--title{
                         transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
                         opacity: 1;
                         visibility: visible;

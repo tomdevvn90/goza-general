@@ -22264,7 +22264,7 @@ ul.be-list-ul li {
   transition: 0.25s ease;
 }
 
-.be-gallery-block.is-style-charity-organization .be-gallery-block--inner .item-gallery--name,
+.be-gallery-block.is-style-charity-organization .be-gallery-block--inner .item-gallery--title,
 .be-gallery-block.is-style-charity-organization .be-gallery-block--inner .item-gallery--icon {
   position: absolute;
 }
@@ -22307,6 +22307,7 @@ ul.be-list-ul li {
   color: #ffffff !important;
   font-weight: 700 !important;
   font-style: italic !important;
+  font-family: var(--heading-family, "Poppins", sans-serif);
   display: inline-block;
   height: auto;
   width: auto;
@@ -22337,12 +22338,13 @@ ul.be-list-ul li {
   }
 }
 
-.be-gallery-block.is-style-charity-organization .be-gallery-block--inner .item-gallery--name {
+.be-gallery-block.is-style-charity-organization .be-gallery-block--inner .item-gallery--title {
   font-size: 16px;
   line-height: 26px;
   color: #ffffff;
-  font-family: var(--heading-family);
+  font-family: var(--body-family, "Arimo", sans-serif);
   font-weight: 700;
+  text-transform: uppercase;
   display: inline-block;
   height: auto;
   width: auto;
@@ -22359,7 +22361,7 @@ ul.be-list-ul li {
 }
 
 @media (max-width: 1199.98px) {
-  .be-gallery-block.is-style-charity-organization .be-gallery-block--inner .item-gallery--name {
+  .be-gallery-block.is-style-charity-organization .be-gallery-block--inner .item-gallery--title {
     font-size: 20px;
     line-height: 110%;
     left: 15px;
@@ -22369,7 +22371,7 @@ ul.be-list-ul li {
 }
 
 @media (max-width: 991.98px) {
-  .be-gallery-block.is-style-charity-organization .be-gallery-block--inner .item-gallery--name {
+  .be-gallery-block.is-style-charity-organization .be-gallery-block--inner .item-gallery--title {
     font-size: 17px;
   }
 }
@@ -22385,7 +22387,7 @@ ul.be-list-ul li {
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 }
 
-.be-gallery-block.is-style-charity-organization .be-gallery-block--inner .item-gallery:hover .item-gallery--name {
+.be-gallery-block.is-style-charity-organization .be-gallery-block--inner .item-gallery:hover .item-gallery--title {
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   opacity: 1;
   visibility: visible;

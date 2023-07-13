@@ -101,7 +101,7 @@
             "default_value": 15,
             "min": 0,
             "max": "",
-            "step": 5,
+            "step": 1,
             "prepend": "",
             "append": ""
         },
@@ -122,7 +122,7 @@
             "default_value": 15,
             "min": 0,
             "max": "",
-            "step": 5,
+            "step": 1,
             "prepend": "",
             "append": ""
         }
@@ -145,5 +145,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685935036
+    "modified": 1689257037
 }
