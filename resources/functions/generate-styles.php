@@ -12,9 +12,7 @@ function goza_generate_styles_theme()
 
     /*Generate custom css*/
     $general_css = '';
-
     $general_css .= goza_theme_options_styles();
-
 
     /*Create dir or update*/
     $upload_dir = wp_upload_dir();
@@ -160,43 +158,6 @@ function goza_theme_options_styles()
         "--topbar-bg-color" => $topbar_bg_color,
         "--topbar-icon-color" => $goza_topbar_icon_color,
     ];
-
-    // if (isset($_GET['home'])) {
-    //     switch ($_GET['home']) {
-    //         case 'ngo':
-    //             $var_styles_home = goza_variable_style_home('home-ngo');
-    //             break;
-    //         case 'dream':
-    //             $var_styles_home = goza_variable_style_home('home-dream');
-    //             break;
-    //         case 'charity':
-    //             $var_styles_home = goza_variable_style_home('home-charity');
-    //             break;
-    //         case 'charity-new':
-    //             $var_styles_home = goza_variable_style_home('home-charity-new');
-    //             break;
-    //         case 'water':
-    //             $var_styles_home = goza_variable_style_home('home-water');
-    //             break;
-    //         case 'organization':
-    //             $var_styles_home = goza_variable_style_home('home-organization');
-    //             break;
-    //         case 'ngo-dark':
-    //             $var_styles_home = goza_variable_style_home('home-ngo-dark');
-    //             break;
-    //         case 'water-charity':
-    //             $var_styles_home = goza_variable_style_home('home-water-charity');
-    //             break;
-    //         case 'charity-organization':
-    //             $var_styles_home = goza_variable_style_home('home-charity-organization');
-    //             break;
-    //         default:
-    //             $var_styles_home = [];
-    //             break;
-    //     }
-
-    //     $var_styles = array_replace_recursive($var_styles, $var_styles_home);
-    // }
 
     $custom_css .= render_custom_css($var_styles);
 

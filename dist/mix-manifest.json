@@ -1,8 +1,17 @@
 {
     "/js/manifest.js": "/js/manifest.js?id=41f053ba9a94d81b39f8",
-    "/js/theme.js": "/js/theme.js?id=65a61badb0a831927138",
+    "/js/theme.js": "/js/theme.js?id=102b4bd029dd405d7c12",
     "/css/theme.css": "/css/theme.css?id=cffb0fe5c8d1203ce73c",
     "/css/theme-editor.css": "/css/theme-editor.css?id=9692111ca252180dd569",
     "/css/general.css": "/css/general.css?id=0593ad13e6054de5e493",
-    "/js/vendor.js": "/js/vendor.js?id=fca10165a881664e4cfb"
+    "/css/charity.css": "/css/charity.css?id=62613077215a81688aa5",
+    "/css/dream.css": "/css/dream.css?id=cade00aa33286d21686b",
+    "/css/ngo-dark.css": "/css/ngo-dark.css?id=b5b534766278f06a991b",
+    "/css/ngo.css": "/css/ngo.css?id=8fa872ff969416b2bb15",
+    "/css/organization.css": "/css/organization.css?id=845294d7e2a201715e0b",
+    "/css/water-charity.css": "/css/water-charity.css?id=84ec6f6fcbb3b2c7d61e",
+    "/css/water.css": "/css/water.css?id=5d5181a29e632f769192",
+    "/css/charity-new.css": "/css/charity-new.css?id=189debd0f9a2a15d2f3f",
+    "/css/charity-organization.css": "/css/charity-organization.css?id=7eb6063460574dac3f18",
+    "/js/vendor.js": "/js/vendor.js?id=0a29db01a2dae62384d2"
 }

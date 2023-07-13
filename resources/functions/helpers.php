@@ -64,19 +64,6 @@ if (!function_exists('goza_svg_icon')) {
 	}
 }
 
-if (!function_exists('goza_variable_style_home')) {
-
-	/**
-	 * @param $icon
-	 *
-	 * @return mixed|string
-	 */
-	function goza_variable_style_home($var_name)
-	{
-		$variable = require(__DIR__ . '/variables/' . $var_name . '.php');
-		return $variable ? $variable : [];
-	}
-}
 
 if (!function_exists('goza_the_posts_navigation')) {
 	function goza_the_posts_navigation($args = array(), $base = false, $query = false)
@@ -140,7 +127,7 @@ if (!function_exists('goza_the_posts_navigation')) {
 if (!function_exists('__get_field')) {
 	function __get_field($selector, $post_id = false, $format_value = true)
 	{
-		if (function_exists('get_field')) {
+		if (function_exists('get_field') && get_field($selector, $post_id, $format_value)) {
 			return get_field($selector, $post_id, $format_value);
 		}
 
@@ -150,7 +137,7 @@ if (!function_exists('__get_field')) {
 if (!function_exists('__get_fields')) {
 	function __get_fields($post_id = false, $format_value = true)
 	{
-		if (function_exists('get_fields')) {
+		if (function_exists('get_fields') && get_fields($post_id, $format_value)) {
 			return get_fields($post_id, $format_value);
 		}
 
