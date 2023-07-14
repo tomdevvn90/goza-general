@@ -12952,7 +12952,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .post-type-archive-tribe_events .list-tab-event .nav-tabs li {
-    width: calc(33.3333333333% - 3px);
+    width: calc(33.3333333333% - 4px);
     min-width: 0;
   }
 

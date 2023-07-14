@@ -585,7 +585,7 @@
             .list-tab-event{
                 .nav-tabs{
                     li{
-                        width: calc(100% / 3 - 3px);
+                        width: calc(100% / 3 - 4px);
                         min-width: 0;
                         &.active{
                             &::before{
