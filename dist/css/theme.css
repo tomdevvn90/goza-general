@@ -12519,6 +12519,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 .post-type-archive-tribe_events .page-titlebar .page-titlebar-content {
   text-align: center;
+  position: relative;
 }
 
 .post-type-archive-tribe_events .page-titlebar .page-icon {
@@ -12551,6 +12552,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   font-family: "FontAwesome";
   display: inline-block;
   margin-right: 5px;
+}
+
+.post-type-archive-tribe_events .page-titlebar .breadcrumbs a {
+  color: inherit;
+}
+
+.post-type-archive-tribe_events .page-titlebar .breadcrumbs a:hover {
+  text-decoration: underline;
 }
 
 .post-type-archive-tribe_events .goza-section-space {
@@ -18668,6 +18677,56 @@ h6 {
   transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.tnp-subscription form label {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  padding: 5px;
+  margin: 0;
+}
+
+.tnp-subscription form input[type=email] {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  display: block;
+  background-color: #f4f4f4;
+  background-image: none;
+  text-shadow: none;
+  color: #444;
+  font-size: 14px;
+  margin: 0;
+  line-height: normal;
+  border-radius: 3px;
+  border: 1px solid rgba(53, 53, 53, 0.1);
+  transition: all 0.3s ease;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.tnp-subscription form input[type=email]:focus {
+  border: 1px solid rgba(212, 27, 101, 0.5);
+  box-shadow: none;
+  outline: none;
+}
+
+.tnp-subscription form input[type=submit] {
+  border-radius: 3px;
+  border: none;
+  background: var(--link-color, #d41b65);
+  color: #fff;
+  padding: 8px 12px;
+  vertical-align: top;
+  font-family: var(--body-family);
+  font-size: 13px;
+  line-height: 20px;
+  transition: 0.3s;
+}
+
+.tnp-subscription form input[type=submit]:hover {
+  background: #a7154f;
+}
+
 .goza-preloader {
   position: fixed;
   width: 100%;
@@ -21072,6 +21131,141 @@ h6 {
   font-weight: normal;
   text-decoration: none;
   color: var(--link-color, #32cbfe);
+}
+
+.error404 {
+  background: url(../images/background-page-404.jpg?f0ed61d9085e7796edc9ddb433e44ceb) center center/cover;
+  background-attachment: fixed;
+}
+
+.error404 .error-404 {
+  padding: 170px 0 170px;
+  background-attachment: fixed;
+}
+
+.error404 .error-404 .wrap-entry-404 {
+  text-align: center;
+}
+
+.error404 .error-404 h1 {
+  font-size: 80px;
+  line-height: 80px;
+  margin-bottom: 28px;
+  color: #fff;
+  font-family: var(--body-family);
+  font-weight: 700;
+}
+
+.error404 .error-404 p {
+  color: #fff;
+}
+
+.error404 .error-404 .btn-go {
+  display: inline-block;
+  background: var(--link-color, #d41b65);
+  color: #ebebeb;
+  border: medium none;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.error404 .error-404 .btn-go:hover {
+  background: #dd548b;
+  color: #fff;
+}
+
+.error404 .error-404 form {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  width: 450px;
+  margin: 20px auto;
+}
+
+.error404 .error-404 form label {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.error404 .error-404 form label::after {
+  content: "\F002";
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  display: inline-block;
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-rendering: auto;
+  text-transform: none;
+  font-size: 24px;
+  color: var(--link-color);
+}
+
+.error404 .error-404 form input {
+  padding: 0 35px 0 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 100px;
+  padding-left: 24px;
+  padding-right: 80px;
+  color: #333;
+  border: 1px solid rgba(53, 53, 53, 0.1);
+  transition: all 0.3s ease;
+  max-width: 100%;
+}
+
+.error404 .error-404 form input:focus {
+  border: 1px solid rgba(212, 27, 101, 0.5);
+  box-shadow: none;
+  outline: none;
+}
+
+.error404 .error-404 form .search-submit {
+  width: 70px;
+  height: 50px;
+  padding: 0 25px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  background: none;
+  font-size: 0;
+  opacity: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .error404 .error-404 {
+    padding: 150px 0 150px;
+  }
+
+  .error404 .error-404 h1 {
+    font-size: 72px;
+    line-height: 72px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .error404 .error-404 {
+    padding: 120px 0 120px;
+  }
+
+  .error404 .error-404 h1 {
+    font-size: 65px;
+    line-height: 65px;
+  }
 }
 
 .be-box-featured-block.home-ngo {
