@@ -39,13 +39,13 @@ if( is_singular( 'tribe_events' ) ) {
 					<div class="list-tab-event">
 						<ul class="nav nav-tabs">
 							<li class="active">
-								<a class="tab-item" href="#tab-happening" data-toggle="tab" aria-expanded="true">Happening</a>
+								<a class="tab-item" href="#tab-happening" data-toggle="tab" aria-expanded="true"><?php esc_html_e( 'Happening', 'goza' );?></a>
 							</li>
 							<li>
-								<a class="tab-item" href="#tab-upcoming" data-toggle="tab" aria-expanded="true">Upcoming</a>
+								<a class="tab-item" href="#tab-upcoming" data-toggle="tab" aria-expanded="true"><?php esc_html_e( 'Upcoming', 'goza' );?></a>
 							</li>
 							<li>
-								<a class="tab-item" href="#tab-expired" data-toggle="tab" aria-expanded="true">Expired</a>
+								<a class="tab-item" href="#tab-expired" data-toggle="tab" aria-expanded="true"><?php esc_html_e( 'Expired', 'goza' );?></a>
 							</li>
 						</ul>
 						<div class="tab-content bt-list-event">

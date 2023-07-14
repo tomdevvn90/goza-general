@@ -64,6 +64,9 @@ function tribe_event_list( $event_type ){
         'posts_per_page' => tribe_get_option( 'postsPerPage', 10 ),
         'post_status' => 'publish',
         'paged' => $paged,
+        'orderby' => '_EventStartDate',
+        'order' => 'ASC',
+        'eventDisplay'=> 'custom',
     );
 
     if( $event_type == 'happening' ){
@@ -92,6 +95,8 @@ function tribe_event_list( $event_type ){
     }
 
     if( $event_type == 'expired' ){
+        $args_event['orderby'] = '_EventEndDate';
+        $args_event['order'] = 'DESC';
         $args_event['meta_query'] = array(
             array(
                 'key' => '_EventEndDate',
@@ -115,7 +120,7 @@ function tribe_event_list( $event_type ){
         wp_reset_postdata(  );
 
     }else{
-        ?><p class="not-found"><strong>Sorry, not found!</strong></p><?php
+        ?><p class="not-found"><strong><?php __( 'Sorry, not found!', 'goza' );?></strong></p><?php
     }
 
     echo '</div>';
@@ -185,6 +190,9 @@ function goza_event_pagination_load_posts(){
             'posts_per_page' => tribe_get_option( 'postsPerPage', 10 ),
             'post_status' => 'publish',
             'paged' => $cur_page,
+            'orderby' => '_EventStartDate',
+            'order' => 'ASC',
+            'eventDisplay'=> 'custom',
         );
 
         if( $event_type == 'happening' ){
@@ -213,6 +221,8 @@ function goza_event_pagination_load_posts(){
         }
 
         if( $event_type == 'expired' ){
+            $args_event['orderby'] = '_EventEndDate';
+            $args_event['order'] = 'DESC';
             $args_event['meta_query'] = array(
                 array(
                     'key' => '_EventEndDate',
@@ -238,7 +248,7 @@ function goza_event_pagination_load_posts(){
             wp_reset_postdata(  );
 
         }else{
-            ?><p class="not-found"><strong>Sorry, not found!</strong></p><?php
+            ?><p class="not-found"><strong><?php __( 'Sorry, not found!', 'goza' );?></strong></p><?php
         }
         
         $content = ob_get_clean();
@@ -267,9 +277,9 @@ function goza_event_pagination_load_posts(){
 
         if ($previous_btn && $cur_page > 1) {
             $pre = $cur_page - 1;
-            $pag_container .= "<span p='$pre' class='active prev'><i class='fa fa-angle-left'></i> <strong>Newer</strong></span>";
+            $pag_container .= "<span p='$pre' class='active prev'><i class='fa fa-angle-left'></i> <strong>".__('Newer','goza')."</strong></span>";
         } else if ($previous_btn) {
-            $pag_container .= "<span class='inactive prev'><i class='fa fa-angle-left'></i> <strong>Newer</strong></span>";
+            $pag_container .= "<span class='inactive prev'><i class='fa fa-angle-left'></i> <strong>".__('Newer','goza')."</strong></span>";
         }
 
         $pag_container .= "<ul>";
@@ -286,9 +296,10 @@ function goza_event_pagination_load_posts(){
 
         if ($next_btn && $cur_page < $total_page) {
             $nex = $cur_page + 1;
-            $pag_container .= "<span p='$nex' class='active next'><strong>Older</strong> <i class='fa fa-angle-right'></i></span>";
+            $next = __('Older','goza');
+            $pag_container .= "<span p='$nex' class='active next'><strong>".__('Older','goza')."</strong> <i class='fa fa-angle-right'></i></span>";
         } else if ($next_btn) {
-            $pag_container .= "<span class='inactive next'><strong>Older</strong> <i class='fa fa-angle-right'></i></span>";
+            $pag_container .= "<span class='inactive next'><strong>".__('Older','goza')."</strong> <i class='fa fa-angle-right'></i></span>";
         }
 
         $pag_container = $pag_container . "
