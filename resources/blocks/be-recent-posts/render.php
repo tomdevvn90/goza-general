@@ -4,6 +4,8 @@ $id = 'be-ss-hero-'.$block['id'];
 // create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
+$is_style = (isset($block['className']) && !empty($block['className'])) ? $block['className'] : "is-style-default";
+
 // option
 $posts_per_page = !empty( get_field('number_of_items_recent_posts') )? get_field('number_of_items_recent_posts') : get_option('posts_per_page');
 $categories_recent_posts = !empty( get_field('categories_recent_posts') )? get_field('categories_recent_posts') : '';
@@ -33,16 +35,14 @@ $the_query = new WP_Query($args);
 
 ?>
 
-<div id="<?php echo $id; ?>" class="be-recent-posts <?php echo $align_class; ?>">
+<div id="<?php echo $id; ?>" class="be-recent-posts <?php echo $is_style ?> <?php echo $align_class; ?>">
     <div class="be-recent-posts--content">
         <div class="recent-posts-list" style="<?php echo $title_color_style; ?>">      
         <?php if( $the_query->have_posts() ){
             
             while ( $the_query->have_posts() ) {
                 $the_query->the_post();
-
-                be_recent_post_render_template();
-
+                be_recent_post_render_template($is_style);
             }
 
             wp_reset_postdata();
