@@ -76,6 +76,10 @@ const Edit = (props) => {
                     .is-style-wt-charity.${id} .wp-block-goza-blocks-goza-button--inner:after{
                         border-radius: ${borderRadius}px !important; 
                         background-color: ${hoverBgColor} !important;
+                        box-sizing: border-box;
+                    }
+                    .is-style-wt-charity.${id} .wp-block-goza-blocks-goza-button--inner:hover .wp-block-goza-button_link{
+                        border-color:${hoverBgColor} !important;
                     }
                     .is-style-charity-organization.${id} .wp-block-goza-blocks-goza-button--inner:before, .is-style-charity-organization.${id} .wp-block-goza-blocks-goza-button--inner:after{
                         background-color: ${hoverBgColor} !important;
