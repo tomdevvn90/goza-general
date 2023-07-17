@@ -58,7 +58,7 @@ $style  = implode('; ', $styles);
                $box_number = $item['box_number'];
                $box_text = $item['box_text'];
          ?>
-               <div class="be-section-wrap__list-item">
+               <div class="be-section-wrap__list-item" data-aos="zoom-in" data-aos-duration="800">
                   <div class="item-wrap">
                      <span class="item-wrap-num" style="color: <?= esc_attr($sab_box_color_number) ?>"><?= esc_attr($box_number) ?></span>
                      <span class="item-wrap-text" style="color: <?= esc_attr($sab_box_color_text) ?>"><?= esc_attr($box_text) ?></span>
