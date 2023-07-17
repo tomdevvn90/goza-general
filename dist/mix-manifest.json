@@ -1,7 +1,6 @@
 {
     "/js/manifest.js": "/js/manifest.js?id=41f053ba9a94d81b39f8",
     "/js/theme.js": "/js/theme.js?id=8e73987ada73e378b8bf",
-    "/css/theme.css": "/css/theme.css?id=401b38dd04cad3f9fdba",
     "/css/theme-editor.css": "/css/theme-editor.css?id=de7ea5b5222041288ef4",
     "/css/general.css": "/css/general.css?id=0593ad13e6054de5e493",
     "/css/charity.css": "/css/charity.css?id=62613077215a81688aa5",
@@ -13,5 +12,6 @@
     "/css/water.css": "/css/water.css?id=5d5181a29e632f769192",
     "/css/charity-new.css": "/css/charity-new.css?id=189debd0f9a2a15d2f3f",
     "/css/charity-organization.css": "/css/charity-organization.css?id=8470cfaeb38c6bf7f34c",
-    "/js/vendor.js": "/js/vendor.js?id=0a29db01a2dae62384d2"
+    "/js/vendor.js": "/js/vendor.js?id=0a29db01a2dae62384d2",
+    "/css/theme.css": "/css/theme.css?id=2dd99d24d119b6078fea"
 }
