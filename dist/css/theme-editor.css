@@ -6370,6 +6370,10 @@
   text-align: center;
 }
 
+.be-icon-box-block.is-style-water-charity .be-icon-box-block-inner:hover {
+  background-color: transparent;
+}
+
 .be-icon-box-block.is-style-water-charity .be-icon-box-block-inner--icon {
   position: relative;
   width: 100%;
@@ -13314,6 +13318,11 @@
 
 .be-events-carousel-inner.slick-dotted.slick-slider {
   margin-bottom: 0;
+}
+
+.be-events-carousel.is-style-water-charity .be-events-carousel-inner {
+  padding: 0;
+  margin: 0;
 }
 
 .be-events-carousel.is-style-water-charity .be-events-carousel-inner .item-event--content {

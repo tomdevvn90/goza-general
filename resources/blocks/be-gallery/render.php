@@ -15,7 +15,6 @@ $gap_row    = get_field('gap_row_gallery_bl') ? : '0';
 
 <div id="<?php echo $id; ?>" class="be-gallery-block <?= $align_class; ?> <?= $classes ?> <?= $full_width ?>">
    <?php
-   print_r($gap_row);
    if(!empty($gallerys) && isset($gallerys)): ?>
         <div id="<?= $block['id'] ?>" class="be-gallery-block--inner" data-aos="fade-up" data-light-gallery style="grid-row-gap:<?= $gap_row ?>px; grid-column-gap:<?= $gap_column ?>px" >      
             <?php load_template_gallerys($classes) ?>

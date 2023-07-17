@@ -137,6 +137,9 @@
     &.is-style-water-charity{
         .be-icon-box-block-inner{
             text-align: center;
+            &:hover{
+                background-color: transparent;
+            }
             &--icon{
                 position: relative;
                 width: 100%;
