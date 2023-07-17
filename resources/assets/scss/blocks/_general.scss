@@ -109,3 +109,32 @@
     }
 }
 // end css for home orgazination
+
+
+// start css for home water charity
+.wp-block-columns{
+    &.be-gzwc-row-cta-recent-post {
+        .wp-block-goza-blocks-goza-button.is-style-wt-charity{
+            width: 100%;
+            .wp-block-goza-blocks-goza-button--inner{
+                width: 100%;
+                .wp-block-goza-button_link{
+                    width: 100%;
+                    padding-left: 0;
+                    padding-right: 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &.be-row-icb-gzwc{
+        .wp-block-column{
+            &:nth-child(2){
+                border-left: 1px dashed rgba(255,255,255,0.3);
+                border-right: 1px dashed rgba(255,255,255,0.3);
+            }
+        }
+    }
+}
+// end css for home water charity

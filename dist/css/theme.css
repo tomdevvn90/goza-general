@@ -21859,6 +21859,10 @@ ul.be-list-ul li {
   }
 }
 
+.wp-block-columns.be-gzwc-row-recent-post .wp-block-column:nth-child(2) .wp-block-image {
+  margin-bottom: 0;
+}
+
 .be-progressbar-block {
   width: 100%;
   height: auto;
@@ -24933,6 +24937,8 @@ ul.be-list-ul li {
 
 .be-icon-box-block.is-style-water-charity .be-icon-box-block-inner {
   text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .be-icon-box-block.is-style-water-charity .be-icon-box-block-inner:hover {
@@ -31384,6 +31390,26 @@ ul.be-list-ul li {
 
 .be-events-listing-block.is-style-ev-fill.be-gz-orgazination-events-listing .item-event--count-down .be-count-down--result > div {
   background: rgba(44, 73, 151, 0.7);
+}
+
+.wp-block-columns.be-gzwc-row-cta-recent-post .wp-block-goza-blocks-goza-button.is-style-wt-charity {
+  width: 100%;
+}
+
+.wp-block-columns.be-gzwc-row-cta-recent-post .wp-block-goza-blocks-goza-button.is-style-wt-charity .wp-block-goza-blocks-goza-button--inner {
+  width: 100%;
+}
+
+.wp-block-columns.be-gzwc-row-cta-recent-post .wp-block-goza-blocks-goza-button.is-style-wt-charity .wp-block-goza-blocks-goza-button--inner .wp-block-goza-button_link {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.wp-block-columns.be-row-icb-gzwc .wp-block-column:nth-child(2) {
+  border-left: 1px dashed rgba(255, 255, 255, 0.3);
+  border-right: 1px dashed rgba(255, 255, 255, 0.3);
 }
 
 .be-column-image-text-video-block .block-grid {

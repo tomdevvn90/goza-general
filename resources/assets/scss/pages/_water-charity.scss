@@ -1,0 +1,11 @@
+.wp-block-columns{
+    &.be-gzwc-row-recent-post {
+        .wp-block-column {
+            &:nth-child(2){
+                .wp-block-image{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
