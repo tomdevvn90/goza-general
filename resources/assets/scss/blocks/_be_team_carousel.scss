@@ -192,4 +192,97 @@
             }
         }
     }
+    &.is-style-2{
+        .item-team--inner{
+            position: relative;
+            .item-team--avatar{
+                max-width: 100%;
+                position: relative;
+                padding-bottom: 100%;
+                background: #e7e6e4;
+                overflow: hidden;
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                    transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
+                }
+                &::before{
+                    content: " ";
+                    display: inline-block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0px;
+                    top: 0px;
+                    background-color: rgba(0,0,0, 0.4);
+                    opacity: 1;
+                    transition: all 0.4s;
+                    z-index: 1;
+                }
+            }
+            .item-team--social {
+                margin: 0;
+                padding: 5px;
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                top: auto;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                transform: inherit;
+                transition: inherit;
+                opacity: 1;
+                border-top: solid 1px rgba(255,255,255,.5);
+                z-index: 2;
+                li {
+                    transform: inherit;
+                    transition: inherit;
+                    margin: 0;
+                    a{
+                        display: inline-block;
+                        margin: 0 15px;
+                        i{
+                            font-size: 11px;
+                            color: #FFF;
+                        }
+                        &:hover{
+                            i{
+                                color: var(--link-color, #71b61b);
+                            }
+                        }
+                    }
+                }
+            }
+            .item-team--content {
+                position: absolute;
+                top: 30%;
+                left: 0;
+                width: 100%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                transition: all 0.4s;
+                opacity: 0;
+                p.item-team--postion {
+                    display: none;
+                }
+                h4.item-team--name {
+                    color: #fff !important;
+                    font-size: 16px !important;
+                }
+            }
+            &:hover{
+                .item-team--content {
+                    z-index: 1;
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }

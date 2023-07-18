@@ -11,5 +11,9 @@
     "supports": {
         "align": ["left", "center", "right"]
     },
+    "styles": [
+        { "name": "default", "label": "Default", "isDefault": true },
+        { "name": "2", "label": "Style 2" }
+    ],
     "align": "left"
 }

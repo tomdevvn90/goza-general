@@ -71,20 +71,20 @@ function be_template_give_grid_style_4(){
       <a href="<?php echo get_permalink($form_id) ?>">
         <img src="<?php echo esc_url($post_img_url) ?>" alt="#">
       </a>
-      <div class="form-category form-category-style1"><a style="background-color:<?php echo $color ?>" href="<?php echo $give_forms_category_link ?>"><?php echo $give_forms_category_name ?></a></div>
+      <div class="form-category form-category-style1"><a style="color:<?php echo $color ?>" href="<?php echo $give_forms_category_link ?>"><?php echo $give_forms_category_name ?></a></div>
     </div>
     <div class="give-goal-progress-wrap">
-        <div class="progress"><div class="bar" style="background-color:<?php echo $color ?>;width: <?php echo $progress ?>%;" ></div></div>
+        <div class="progress"><div class="bar" style="background-color:<?php echo $color ?>;width: <?php echo $progress ?>%;" ><span><?php echo $progress ?>%</span></div></div>
     </div>
     <div class="entry-content ">
       <div class="entry-content-inner">
 			  <div class="extra-meta">
-          <div class="meta-item meta-date"><span class="ion-android-calendar"></span><?php echo get_the_date('d M, Y',$form_id) ?></div>
+          <div class="meta-item meta-date" style="color:<?php echo $color ?>"><?php echo get_the_date('d M, Y',$form_id) ?></div>
         </div>
 			  <a href="<?php echo get_permalink($form_id) ?>" class="title-link"><h4 class="title"><?php echo get_the_title($form_id) ?></h4></a>
         <div class="entry-bot">
           <div class="bt-com"><?php echo __('Collected', 'goza'); ?> </div>
-          <div class="give-price-goal"><span><?php echo __('Group Goal', 'goza'); ?></span><strong>$</strong><?php echo $goal ?></div>
+          <div class="give-price-goal" style="color:<?php echo $color ?>"><span>$</span><?php echo $goal ?></div>
         </div>
       </div>
     </div>
