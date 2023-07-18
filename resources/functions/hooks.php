@@ -40,13 +40,17 @@ function goza_header_template()
 			case "charity-organization":
 				$template_name = 'charity-organization';
 				break;
+			case "charity-new":
+				$template_name = 'charity-new';
+				break;
 			case "earthquake":
 				$template_name = 'earthquake';
-				break;	
+				break;
 			default:
 				$template_name = 'general';
 		}
 	}
+
 	load_template(get_template_directory() . '/template-parts/headers/header-' . $template_name . '.php', false);
 }
 
@@ -72,6 +76,9 @@ function goza_footer_template()
 				break;
 			case "water":
 				$template_name = 'water';
+				break;
+			case "charity-new":
+				$template_name = 'charity-new';
 				break;
 			case "charity-organization":
 				$template_name = 'charity-organization';
@@ -105,7 +112,7 @@ function goza_topbar_template()
 				break;
 			case "earthquake":
 				$template_name = 'layout-4';
-				break;	
+				break;
 			default:
 				$template_name = 'default';
 		}

@@ -1,14 +1,8 @@
 {
     "/js/manifest.js": "/js/manifest.js?id=41f053ba9a94d81b39f8",
-<<<<<<< HEAD
-    "/js/theme.js": "/js/theme.js?id=8e73987ada73e378b8bf",
-    "/css/theme.css": "/css/theme.css?id=66d16de80d9ddd29e16a",
-    "/css/theme-editor.css": "/css/theme-editor.css?id=8c2b04afe50709d864c9",
-=======
-    "/js/theme.js": "/js/theme.js?id=ded5a263e9ef99de8ad0",
-    "/css/theme.css": "/css/theme.css?id=1f321e5e7ab94947fd05",
+    "/js/theme.js": "/js/theme.js?id=ce6133287eac172274cb",
+    "/css/theme.css": "/css/theme.css?id=dddf508db4397669df2d",
     "/css/theme-editor.css": "/css/theme-editor.css?id=7430263a83c6fa80f2d1",
->>>>>>> bfcf87963b328860f914c866a3fcc099e8023ecf
     "/css/general.css": "/css/general.css?id=0593ad13e6054de5e493",
     "/css/charity.css": "/css/charity.css?id=62613077215a81688aa5",
     "/css/dream.css": "/css/dream.css?id=cade00aa33286d21686b",
@@ -17,7 +11,7 @@
     "/css/organization.css": "/css/organization.css?id=845294d7e2a201715e0b",
     "/css/water-charity.css": "/css/water-charity.css?id=84ec6f6fcbb3b2c7d61e",
     "/css/water.css": "/css/water.css?id=5d5181a29e632f769192",
-    "/css/charity-new.css": "/css/charity-new.css?id=189debd0f9a2a15d2f3f",
+    "/css/charity-new.css": "/css/charity-new.css?id=532822c64da18737ac1f",
     "/css/charity-organization.css": "/css/charity-organization.css?id=8470cfaeb38c6bf7f34c",
     "/js/vendor.js": "/js/vendor.js?id=0a29db01a2dae62384d2"
 }

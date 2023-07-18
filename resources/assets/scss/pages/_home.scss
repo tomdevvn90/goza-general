@@ -164,3 +164,43 @@
         }
     }
 }
+
+
+.site-header-charity-new {
+    #mega-menu-wrap-main-menu {
+        #mega-menu-main-menu {
+            >li.mega-menu-item {
+                &.mega-current-menu-ancestor {
+                    >a.mega-menu-link {
+                        color: var(--link-color, #32cbfe);
+                    }
+                }
+
+                >a.mega-menu-link {
+                    color: var(--header-text-color, #FFF);
+                    font-weight: 500;
+                    font-family: var(--body-family, "Arimo", sans-serif);
+                    text-transform: none;
+                }
+            }
+
+            >li.mega-menu-flyout {
+                ul.mega-sub-menu {
+                    li.mega-menu-item {
+                        a.mega-menu-link {
+                            font-size: 15px;
+                            color: #666;
+                            font-weight: normal;
+
+                            &:hover {
+                                font-weight: normal;
+                                text-decoration: none;
+                                color: var(--link-color, #32cbfe);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
