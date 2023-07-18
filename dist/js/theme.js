@@ -527,6 +527,41 @@ be_projects_grid_loadmore.forEach(function (element) {
       $slider.slick(Object.assign({}, opt_df, $dataSlider));
     });
   };
+  var beEventsCarousel_style2 = function beEventsCarousel_style2() {
+    var $block = $('.be-team-carousel.is-style-2');
+    if ($block.length === 0) return;
+    $block.each(function () {
+      var $slider = $(this).find('.be-team-carousel-inner'),
+        $dataSlider = $slider.data('carousel');
+      var opt_df = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        autoplay: true,
+        arrows: false,
+        adaptiveHeight: false,
+        fade: false,
+        cssEase: 'linear',
+        responsive: [{
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            dots: true,
+            arrows: false
+          }
+        }]
+      };
+      $slider.slick(Object.assign({}, opt_df, $dataSlider));
+    });
+  };
+  $(document).ready(function () {
+    beEventsCarousel_style2();
+  });
   $(document).ready(function () {
     beEventsCarousel();
   });
@@ -1433,19 +1468,19 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\general.scss */"./resources/assets/scss/home/general.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\charity.scss */"./resources/assets/scss/home/charity.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\dream.scss */"./resources/assets/scss/home/dream.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\ngo-dark.scss */"./resources/assets/scss/home/ngo-dark.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\ngo.scss */"./resources/assets/scss/home/ngo.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\organization.scss */"./resources/assets/scss/home/organization.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\water-charity.scss */"./resources/assets/scss/home/water-charity.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\water.scss */"./resources/assets/scss/home/water.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\charity-new.scss */"./resources/assets/scss/home/charity-new.scss");
-module.exports = __webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\charity-organization.scss */"./resources/assets/scss/home/charity-organization.scss");
+__webpack_require__(/*! C:\Users\Admin\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! C:\Users\Admin\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
+__webpack_require__(/*! C:\Users\Admin\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! C:\Users\Admin\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\general.scss */"./resources/assets/scss/home/general.scss");
+__webpack_require__(/*! C:\Users\Admin\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\charity.scss */"./resources/assets/scss/home/charity.scss");
+__webpack_require__(/*! C:\Users\Admin\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\dream.scss */"./resources/assets/scss/home/dream.scss");
+__webpack_require__(/*! C:\Users\Admin\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\ngo-dark.scss */"./resources/assets/scss/home/ngo-dark.scss");
+__webpack_require__(/*! C:\Users\Admin\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\ngo.scss */"./resources/assets/scss/home/ngo.scss");
+__webpack_require__(/*! C:\Users\Admin\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\organization.scss */"./resources/assets/scss/home/organization.scss");
+__webpack_require__(/*! C:\Users\Admin\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\water-charity.scss */"./resources/assets/scss/home/water-charity.scss");
+__webpack_require__(/*! C:\Users\Admin\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\water.scss */"./resources/assets/scss/home/water.scss");
+__webpack_require__(/*! C:\Users\Admin\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\charity-new.scss */"./resources/assets/scss/home/charity-new.scss");
+module.exports = __webpack_require__(/*! C:\Users\Admin\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\charity-organization.scss */"./resources/assets/scss/home/charity-organization.scss");
 
 
 /***/ })

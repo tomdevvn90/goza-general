@@ -13,7 +13,8 @@
     },
     "styles": [
         { "name": "default", "label": "Default", "isDefault": true },
-        { "name": "water-charity", "label": "Water Charity" }
+        { "name": "water-charity", "label": "Water Charity" },
+        { "name": "goza-charity-2", "label": "Goza Charity 2" }
     ],
     "align": "full"
 }
