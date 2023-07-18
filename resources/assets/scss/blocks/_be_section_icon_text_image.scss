@@ -5,11 +5,34 @@
     height: auto;
     &-inner{
         display: flex;
-        align-items: center;
     }
 
     &-right, &-left{
-        width: 50%;
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+        }
+    }
+
+    &-left{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &-right{
+        position: relative;
+        img{
+            -o-object-fit: cover;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            transition: 0.3s ease;
+            @include media-breakpoint-up(lg) {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
     }
 
     &-left{
@@ -17,6 +40,18 @@
         padding-bottom: 90px;
         padding-left: 10%;
         padding-right: 5%;
+        @include media-breakpoint-down(lg) {
+            padding-left: 5%;
+        }
+
+        @include media-breakpoint-down(md){
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        @include media-breakpoint-down(sm){
+            padding: 48px 15px;
+        }
     }
 
     &--sub-heading{
@@ -32,13 +67,26 @@
     &--heading{
         margin: 8px 0 0 0;
         color: #fff;
+        @include media-breakpoint-down(lg) {
+            font-size: 36px;
+        }
+
+        @include media-breakpoint-down(md){
+            font-size: 30px;
+        }
     }
 
     &--list-icon-text{
         margin-top: 32px;
+        @include media-breakpoint-down(md){
+            margin-top: 24px;
+        }
         .item-icon-text{
             &:not(:last-child){
                 margin-bottom: 32px;
+                @include media-breakpoint-down(md){
+                    margin-bottom: 24px;
+                }
             }
 
             &--inner{
@@ -49,10 +97,16 @@
             &--thumbnail{
                 width: 100%;
                 max-width: 80px;
+                @include media-breakpoint-down(md){
+                    max-width: 50px;
+                }
             }
 
             &--content{
                 padding-left: 32px;
+                @include media-breakpoint-down(md){
+                    padding-left: 24px;
+                }
             }
 
             &--heading{
@@ -62,6 +116,15 @@
                 font-weight: 700;
                 margin: 0;
                 color: #fff;
+                @include media-breakpoint-down(md){
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+
+                @include media-breakpoint-down(xs) {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
             }
 
             &--desc{
