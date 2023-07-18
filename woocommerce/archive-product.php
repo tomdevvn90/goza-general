@@ -22,11 +22,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( );
 
+$product_hero_icon = get_field('goza_product_icon','option');
+$product_hero_bg = get_field('goza_product_bg_image','option');
+
+$hero_bg = !empty($product_hero_bg)? 'background-image: url('. $product_hero_bg .')' : '';
+
+$has_sidebar = goza_check_sidebars_widgets_exists('shop-sidebar');
+$classes = $has_sidebar ? 'col-md-8 col-sm-12': 'col-sm-12';
+
 ?>
-<section class="bt-main-row bt-section-space " role="main" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/Blog">
+<section class="bt-product-archice-hero" style="<?php echo $hero_bg; ?>">
+	<div class="container">
+		<div class="wrapper">
+			<?php if( !empty($product_hero_icon) ): ?>
+				<div class="page-icon"><img src="<?php echo $product_hero_icon; ?>" ></div>
+			<?php endif; ?>
+			<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+			<?php
+				if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb( '<div id="breadcrumbs" class="breadcrumbs">','</div>' );
+				}
+			?>
+		</div>
+	</div>
+</section>
+<section class="bt-main-woocommerce bt-section-space <?php echo $has_sidebar ? 'has-sidebar' : ''; ?>" role="main" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="container">
 		<div class="row">
-			<div class="bt-content-area col-md-8 col-sm-12">
+			<div class="bt-content-area <?php echo $classes; ?>">
 				<div class="bt-col-inner">
 					<?php
 						/**
@@ -37,12 +60,6 @@ get_header( );
 						 */
 						do_action( 'woocommerce_before_main_content' );
 					?>
-
-						<?php if ( apply_filters( 'woocommerce_show_page_title', false ) ) : ?>
-
-							<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
-
-						<?php endif; ?>
 
 						<?php
 							/**
@@ -56,43 +73,43 @@ get_header( );
 
 						<?php if ( have_posts() ) : ?>
 
-							<?php
-								/**
-								 * woocommerce_before_shop_loop hook.
-								 *
-								 * @hooked woocommerce_result_count - 20
-								 * @hooked woocommerce_catalog_ordering - 30
-								 */
-								do_action( 'woocommerce_before_shop_loop' );
-							?>
+						<?php
+							/**
+							 * woocommerce_before_shop_loop hook.
+							 *
+							 * @hooked woocommerce_result_count - 20
+							 * @hooked woocommerce_catalog_ordering - 30
+							 */
+							do_action( 'woocommerce_before_shop_loop' );
+						?>
 
-							<?php woocommerce_product_loop_start(); ?>
-								<div class="woocommerce-product-subcategories-wrap">
-								<?php woocommerce_product_subcategories(); ?>
+						<?php woocommerce_product_loop_start(); ?>
+							<div class="woocommerce-product-subcategories-wrap">
+							<?php woocommerce_product_subcategories(); ?>
+							</div>
+							<div class="bt-row">
+								<?php while ( have_posts() ) : the_post();?>
+								<div class="bt-col-<?php echo esc_attr( (int) $goza_customizer_shop_option['products_in_row']); ?> product-item">
+										<?php wc_get_template_part( 'content', 'product' ); ?>
 								</div>
-								<div class="bt-row">
-									<?php while ( have_posts() ) : the_post();?>
-                                    <div class="bt-col-<?php echo esc_attr( (int) $goza_customizer_shop_option['products_in_row']); ?> product-item">
-										  <?php wc_get_template_part( 'content', 'product' ); ?>
-						            </div>
-                                    <?php endwhile; // end of the loop. ?>
-								</div>
-							<?php woocommerce_product_loop_end(); ?>
+								<?php endwhile; // end of the loop. ?>
+							</div>
+						<?php woocommerce_product_loop_end(); ?>
 
-							<?php
-								/**
-								 * woocommerce_after_shop_loop hook.
-								 *
-								 * @hooked woocommerce_pagination - 10
-								 */
-								do_action( 'woocommerce_after_shop_loop' );
-							?>
+						<?php
+							/**
+							 * woocommerce_after_shop_loop hook.
+							 *
+							 * @hooked woocommerce_pagination - 10
+							 */
+							do_action( 'woocommerce_after_shop_loop' );
+						?>
 
-						<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
+					<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
 
-							<?php wc_get_template( 'loop/no-products-found.php' ); ?>
+						<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 
-						<?php endif; ?>
+					<?php endif; ?>
 
 					<?php
 						/**

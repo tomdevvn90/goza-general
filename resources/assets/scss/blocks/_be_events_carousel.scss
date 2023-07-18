@@ -183,6 +183,8 @@
 
     &.is-style-water-charity{
         .be-events-carousel-inner{
+            padding: 0;
+            margin: 0;
             .item-event{
                 &--content{
                     padding: 0 10px;
