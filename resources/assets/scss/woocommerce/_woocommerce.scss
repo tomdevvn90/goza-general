@@ -188,6 +188,7 @@
             }
         }
         .woocommerce-pagination{
+            margin-bottom: 25px;
             .page-numbers{
                 border: 0;
                 li{
@@ -227,7 +228,7 @@
                         background: var(--link-color, #333);
                         color: #fff;
                         border-radius: 3px;
-                        font-size: 24px;
+                        font-size: 22px;
                         text-transform: uppercase;
                         white-space: nowrap;
                         &::after{
@@ -352,6 +353,9 @@
                 .product_list_widget{
                     li{
                         margin-bottom: 5px;
+                        a{
+                            line-height: 1.5;
+                        }
                         img{
                             width: 52px;
                         }
@@ -376,6 +380,19 @@
                         &:hover{
                             background-color: var(--link-color,#d41b65);
                             color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 991px) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            .bt-sidebar{
+                .wg-wrap{
+                    .wp-block-tag-cloud{
+                        a{
+                            padding: 0 10px;
                         }
                     }
                 }
