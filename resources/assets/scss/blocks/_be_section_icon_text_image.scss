@@ -82,6 +82,7 @@
             margin-top: 24px;
         }
         .item-icon-text{
+            cursor: pointer;
             &:not(:last-child){
                 margin-bottom: 32px;
                 @include media-breakpoint-down(md){
@@ -97,6 +98,8 @@
             &--thumbnail{
                 width: 100%;
                 max-width: 80px;
+                -webkit-transition: 0.25s ease;
+                transition: 0.25s ease;
                 @include media-breakpoint-down(md){
                     max-width: 50px;
                 }
@@ -132,6 +135,14 @@
                 margin: 10px 0 0 0;
             }
 
+            &:hover{
+                .item-icon-text--thumbnail{
+                    -webkit-transform: scale(1.1);
+                    -moz-transform: scale(1.1);
+                    -o-transform: scale(1.1);
+                    -ms-transform: scale(1.1);
+                }
+            }
         }
     }
 }

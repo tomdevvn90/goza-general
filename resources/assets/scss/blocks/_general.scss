@@ -131,8 +131,10 @@
     &.be-row-icb-gzwc{
         .wp-block-column{
             &:nth-child(2){
-                border-left: 1px dashed rgba(255,255,255,0.3);
-                border-right: 1px dashed rgba(255,255,255,0.3);
+                @include media-breakpoint-up(md){
+                    border-left: 1px dashed rgba(255,255,255,0.3);
+                    border-right: 1px dashed rgba(255,255,255,0.3);
+                }
             }
         }
     }

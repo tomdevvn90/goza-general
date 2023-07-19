@@ -3453,6 +3453,10 @@
   }
 }
 
+.be-ss-ic-text-img-block--list-icon-text .item-icon-text {
+  cursor: pointer;
+}
+
 .be-ss-ic-text-img-block--list-icon-text .item-icon-text:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -3471,6 +3475,7 @@
 .be-ss-ic-text-img-block--list-icon-text .item-icon-text--thumbnail {
   width: 100%;
   max-width: 80px;
+  transition: 0.25s ease;
 }
 
 @media (max-width: 991.98px) {
@@ -3515,6 +3520,13 @@
 .be-ss-ic-text-img-block--list-icon-text .item-icon-text--desc {
   color: #dcdbdb;
   margin: 10px 0 0 0;
+}
+
+.be-ss-ic-text-img-block--list-icon-text .item-icon-text:hover .item-icon-text--thumbnail {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
 }
 
 .be-team-carousel .slick-list {
@@ -6779,6 +6791,13 @@
   padding-bottom: 0;
 }
 
+@media (max-width: 1199.98px) {
+  .be-icon-box-block.is-style-water-charity .be-icon-box-block-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .be-icon-box-block.is-style-water-charity .be-icon-box-block-inner:hover {
   background-color: transparent;
 }
@@ -6822,6 +6841,14 @@
   font-weight: 700;
   letter-spacing: 0.16px;
   margin: 24px 0 0 0;
+}
+
+@media (max-width: 575.98px) {
+  .be-icon-box-block.is-style-water-charity .be-icon-box-block-inner--heading {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 16px;
+  }
 }
 
 .be-icon-box-block.is-style-water-charity .be-icon-box-block-inner--heading > a {
@@ -7042,7 +7069,7 @@
   z-index: 1;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767.98px) {
   .be-icon-box-block.is-style-5 .be-icon-box-block-inner {
     padding-bottom: 0;
   }
@@ -13067,6 +13094,7 @@
 
 .be-recent-posts.is-style-water-charity .be-recent-posts--content .recent-posts-list .post-item {
   margin: 0;
+  padding: 0;
 }
 
 .be-recent-posts.is-style-water-charity .be-recent-posts--content .recent-posts-list .post-item--meta {
@@ -13469,9 +13497,11 @@
   text-align: center;
 }
 
-.wp-block-columns.be-row-icb-gzwc .wp-block-column:nth-child(2) {
-  border-left: 1px dashed rgba(255, 255, 255, 0.3);
-  border-right: 1px dashed rgba(255, 255, 255, 0.3);
+@media (min-width: 768px) {
+  .wp-block-columns.be-row-icb-gzwc .wp-block-column:nth-child(2) {
+    border-left: 1px dashed rgba(255, 255, 255, 0.3);
+    border-right: 1px dashed rgba(255, 255, 255, 0.3);
+  }
 }
 
 .be-column-image-text-video-block .block-grid {

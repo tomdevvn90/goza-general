@@ -139,6 +139,11 @@
             text-align: center;
             padding-top: 0;
             padding-bottom: 0;
+            @include media-breakpoint-down(lg) {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
             &:hover{
                 background-color: transparent;
             }
@@ -179,6 +184,11 @@
                 font-weight: 700;
                 letter-spacing: 0.16px;
                 margin: 24px 0  0 0;
+                @include media-breakpoint-down(xs) {
+                    font-size: 20px;
+                    line-height: 30px;
+                    margin-top: 16px;
+                }
                 > a{
                     font-size: inherit;
                     font-weight: inherit;
@@ -416,7 +426,7 @@
                 width: 50px;
                 z-index: 1;
             }
-            @media screen and (max-width: 767px){
+            @include media-breakpoint-down(sm) {
                 padding-bottom: 0;
             }
 
