@@ -1,3 +1,18 @@
+#be-block--not-found{
+    background-color: #eee;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    h3{
+        font-size: 32px !important;
+        line-height: 110% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: center;
+        color: var(--link-color);
+        text-transform: uppercase;
+    }
+}
+
 .wp-block-goza-blocks-goza-container{
     &.be-last-post-water{
         > .goza-container-bg{

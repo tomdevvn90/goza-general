@@ -14,12 +14,12 @@ $is_style     = isset($block['className']) ? $block['className'] : "is-style-def
 
 ?>
 <div id="<?php echo $id; ?>" class="be-socials-block <?php echo $align_class; ?> <?php echo $is_style?>"> 
-   <div class="be-socials-block-inner"> 
-      <?php if(!empty($heading)): ?>
-         <h6 class="be-socials-block--heading"> <?php echo $heading ?> </h6>
-      <?php endif; ?>   
+   <?php if(!empty($items) && isset($items)): ?>
+      <div class="be-socials-block-inner"> 
+         <?php if(!empty($heading)): ?>
+            <h6 class="be-socials-block--heading"> <?php echo $heading ?> </h6>
+         <?php endif; ?>   
 
-      <?php if(!empty($items)): ?>
          <ul class="be-socials-block--items">
             <?php foreach ($items as $key => $value) : ?>
                <?php $icon = $value['icon']; ?>
@@ -31,7 +31,11 @@ $is_style     = isset($block['className']) ? $block['className'] : "is-style-def
                   </li>
                <?php endif; ?>   
             <?php endforeach; ?>   
-         </ul>
-      <?php endif; ?>   
-   </div>
+         </ul>  
+      </div>
+   <?php else: ?> 
+      <div id="be-block--not-found"> 
+         <h3> Please add socials </h3>
+      </div>
+  <?php endif; ?>    
 </div>

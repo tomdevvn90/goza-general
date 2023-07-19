@@ -104,6 +104,14 @@
                     color: #FFF;
                     position: relative;
 
+                    @include media-breakpoint-down(sm){
+                        font-size: 18px;
+                    }
+
+                    @include media-breakpoint-down(xs){ 
+                        font-size: 16px;
+                    }
+
                     &:before {
                         content: " ";
                         display: inline-block;

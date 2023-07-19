@@ -27420,6 +27420,11 @@ ul.be-list-ul li {
   }
 }
 
+.be-numberal-donation-box-inner .be-numberal-donation-box--space h3 {
+  color: #000 !important;
+  text-align: center;
+}
+
 .be-numberal-donation-box-progressbar {
   width: 200px;
   background-position: center !important;
@@ -32414,6 +32419,22 @@ ul.be-list-ul li {
   }
 }
 
+#be-block--not-found {
+  background-color: #eee;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+#be-block--not-found h3 {
+  font-size: 32px !important;
+  line-height: 110% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center;
+  color: var(--link-color);
+  text-transform: uppercase;
+}
+
 .wp-block-goza-blocks-goza-container.be-last-post-water > .goza-container-bg::before {
   position: absolute;
   content: " ";
@@ -35121,6 +35142,18 @@ div[id*=give-form].give-display-reveal .give-btn {
   white-space: nowrap;
   color: #FFF;
   position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .be-section-anim-box .be-section-wrap__list-item .item-wrap {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .be-section-anim-box .be-section-wrap__list-item .item-wrap {
+    font-size: 16px;
+  }
 }
 
 .be-section-anim-box .be-section-wrap__list-item .item-wrap:before {

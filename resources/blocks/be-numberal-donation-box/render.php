@@ -3,9 +3,6 @@
 // create id attribute for specific styling
 $id = 'be-numberal-donation-box-' . $block['id'];
 
-// create align class ("alignwide") from block setting ("wide")
-$align_class = $block['align'] ? 'align' . $block['align'] : '';
-
 // ACF field variables
 $counters      = (!empty(get_field('counter_numberal_donation_box'))) ? get_field('counter_numberal_donation_box') : '';
 $pg_value      =  get_field('value_progressbar_donation_box') ?: '';
@@ -21,7 +18,7 @@ $btn_animation = (!empty($general['animation_button'])) ? $general['animation_bu
 $bg            = (!empty(get_field('bg_numberal_donation_box'))) ? get_field('bg_numberal_donation_box') : get_template_directory_uri(). '/resources/assets/images/bg-number-box-default.jpg';
 ?>
 
-<div id="<?php echo $id; ?>" class="be-numberal-donation-box <?php echo $align_class; ?>" style="background-image:url('<?php echo $bg ?>')">   
+<div id="<?php echo $id; ?>" class="be-numberal-donation-box" style="background-image:url('<?php echo $bg ?>')">   
   
    <?php if(!empty($pg_value)): ?>
       <div class="be-numberal-donation-box-progressbar" style="background-image:url('<?php echo $pg_bg ?>')"> 
@@ -70,7 +67,9 @@ $bg            = (!empty(get_field('bg_numberal_donation_box'))) ? get_field('bg
 
          </div>
       <?php }else{ ?>
-         <div class="be-numberal-donation-box--space" style="min-height:200px"> </div>
+         <div class="be-numberal-donation-box--space" style="min-height:200px"> 
+            <h3> Please add counter </h3>
+         </div>
       <?php } ?>   
 
       <div class="be-numberal-donation-box--buttons"> 
