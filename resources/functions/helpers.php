@@ -446,4 +446,35 @@ if (!function_exists('goza_check_sidebars_widgets_exists')) {
 	}
 }
 
+/**
+ * woocommerce product hero
+ */
+if( !function_exists('goza_woocommerce_product_hero_func') ){
+	function goza_woocommerce_product_hero_func() {
+
+		$product_hero_icon = get_field('goza_product_icon','option');
+		$product_hero_bg = get_field('goza_product_bg_image','option');
+	
+		$hero_bg = !empty($product_hero_bg)? 'background-image: url('. $product_hero_bg .')' : '';
+		?>
+		<section class="product-hero" style="<?php echo $hero_bg; ?>">
+			<div class="container">
+				<div class="wrapper">
+					<?php if( !empty($product_hero_icon) ): ?>
+						<div class="page-icon"><img src="<?php echo $product_hero_icon; ?>" ></div>
+					<?php endif; ?>
+					<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+					<?php
+						if ( function_exists('yoast_breadcrumb') ) {
+							yoast_breadcrumb( '<div id="breadcrumbs" class="breadcrumbs">','</div>' );
+						}
+					?>
+				</div>
+			</div>
+		</section>
+		<?php
+	
+	}
+}
+
 

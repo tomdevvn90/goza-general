@@ -31,7 +31,7 @@ $has_sidebar = goza_check_sidebars_widgets_exists('shop-sidebar');
 $classes = $has_sidebar ? 'col-md-8 col-sm-12': 'col-sm-12';
 
 ?>
-<section class="bt-product-archice-hero" style="<?php echo $hero_bg; ?>">
+<section class="product-hero" style="<?php echo $hero_bg; ?>">
 	<div class="container">
 		<div class="wrapper">
 			<?php if( !empty($product_hero_icon) ): ?>
@@ -46,7 +46,7 @@ $classes = $has_sidebar ? 'col-md-8 col-sm-12': 'col-sm-12';
 		</div>
 	</div>
 </section>
-<section class="bt-main-woocommerce bt-section-space <?php echo $has_sidebar ? 'has-sidebar' : ''; ?>" role="main" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/Blog">
+<section class="main-woocommerce bt-section-space <?php echo $has_sidebar ? 'has-sidebar' : ''; ?>" role="main" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="container">
 		<div class="row">
 			<div class="bt-content-area <?php echo $classes; ?>">
@@ -87,11 +87,11 @@ $classes = $has_sidebar ? 'col-md-8 col-sm-12': 'col-sm-12';
 							<div class="woocommerce-product-subcategories-wrap">
 							<?php woocommerce_product_subcategories(); ?>
 							</div>
-							<div class="bt-row">
+							<div class="product-row">
 								<?php while ( have_posts() ) : the_post();?>
-								<div class="bt-col-<?php echo esc_attr( (int) $goza_customizer_shop_option['products_in_row']); ?> product-item">
+									<div class="product-item">
 										<?php wc_get_template_part( 'content', 'product' ); ?>
-								</div>
+									</div>	
 								<?php endwhile; // end of the loop. ?>
 							</div>
 						<?php woocommerce_product_loop_end(); ?>

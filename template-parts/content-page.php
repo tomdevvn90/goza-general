@@ -8,6 +8,10 @@
 ?>
 <div class="entry-content">
     <?php
+    if( is_cart() || is_checkout() ){
+        goza_woocommerce_product_hero_func();
+    }
+    
     the_content();
     wp_link_pages(array(
         'before' => '<div class="page-links">' . esc_html__('Pages:', 'goza'),
