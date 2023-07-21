@@ -36927,6 +36927,7 @@ div[id*=give-form].give-display-reveal .give-btn {
 }
 
 .single-product .main-woocommerce .product-content .product .summary form.cart .quantity .qty {
+  height: 38px;
   line-height: 1;
   padding: 8px;
   border-radius: 3px;
@@ -36990,7 +36991,7 @@ div[id*=give-form].give-display-reveal .give-btn {
   background: #999;
   border: none;
   border-radius: 3px;
-  margin: 0 10px 0 0;
+  margin: 0 8px 0 0;
   opacity: 0.6;
   transition: 0.3s;
 }
@@ -37007,6 +37008,7 @@ div[id*=give-form].give-display-reveal .give-btn {
 
 .single-product .main-woocommerce .product-content .product .woocommerce-tabs .tabs li a {
   color: #fff;
+  font-size: 16px;
 }
 
 .single-product .main-woocommerce .product-content .product .woocommerce-tabs .panel h2 {
