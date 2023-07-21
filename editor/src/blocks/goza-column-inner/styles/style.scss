@@ -42,7 +42,9 @@
 		align-self: flex-end;
 	}
 }
-
+.goza-block-layout-column-inner{
+	height: 100%;
+}
 .goza-block-layout-column-inner,
 .goza-layout-column-wrap>.goza-block-layout-column-inner,
 .goza-has-background-dim>* {
@@ -61,6 +63,7 @@
 .goza-block-layout-column {
 	display: block;
 	width: 100%;
+	height: 100%;
 }
 
 .goza-columns-center .goza-layout-column-wrap {

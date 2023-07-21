@@ -342,3 +342,11 @@
 	align-items: center;
 	text-align: center;
 }
+
+.empty-adv-col{
+	.block-editor-block-list__layout{
+		.block-editor-rich-text__editable{
+			margin-top: 0;
+		}
+	}
+}
