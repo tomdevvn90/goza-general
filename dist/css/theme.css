@@ -22412,6 +22412,10 @@ ul.be-list-ul li {
   .be-section-charity2-team .wp-block-goza-blocks-goza-button {
     justify-content: center;
   }
+
+  .be-section-together-col2 .be-charity2-video {
+    height: 130px !important;
+  }
 }
 
 .be-progressbar-block {
