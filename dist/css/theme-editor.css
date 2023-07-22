@@ -6293,6 +6293,8 @@
   right: inherit;
   transform: translateX(-50%);
   top: 25px;
+  background-color: var(--link-color);
+  color: #fff;
 }
 
 .be-testimonials-block.is-style-2 .be-testimonials-block-carousel .slick-arrow.slick-prev {

@@ -7,8 +7,8 @@ $id = 'be-testimonials-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$testimonials     = get_field('items_tm_bl') ? : '';
-$carousel_setting = get_field('slider_setting_tm_bl') ? : '';
+$testimonials     = get_field('list_items') ? : '';
+$carousel_setting = get_field('slider_setting') ? : '';
 $color_name       = get_field('color_name_tm_bl') ? : '';
 $color_position   = get_field('color_position_tm_bl') ? : '';
 $color_desc       = get_field('color_description_tm_bl') ? : '';
@@ -51,9 +51,6 @@ $classes = isset($block['className']) ? $block['className'] : "is-style-default"
 <div id="<?php echo $id; ?>" class="be-testimonials-block <?php echo $align_class; ?> <?php echo $classes?>" data-style="<?php echo $classes?>"  data-carousel='<?= json_encode($data_carousel) ?>'> 
     <?php if(!empty($testimonials) && isset($testimonials)): ?>        
         <div class="be-testimonials-block-carousel"  data-aos="fade-up"
-            style="--bg-ar-df:<?= $bg_arrow_df ?>; --bg-ar-hv:<?= $bg_arrow_hv ?>;
-            --color-arrow-hv:<?= $color_arrow_hv ?> ; --color-arrow-df:<?= $color_arrow_df ?> ; 
-            --color-dot-df:<?= $color_dots_df ?>; --color-dot-at:<?= $color_dots_at ?>";
         > 
             <?php foreach ($testimonials as $testimonial): ?>
                 

@@ -439,6 +439,8 @@
                 right: inherit;
                 transform: translateX(-50%);
                 top: 25px;
+                background-color: var(--link-color);
+                color: #fff;
                 &.slick-prev {
                     left: calc(50% - 86px);
                 }

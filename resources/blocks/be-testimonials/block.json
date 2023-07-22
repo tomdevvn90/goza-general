@@ -14,7 +14,7 @@
     },
     "styles": [
         { "name": "default", "label": "Default", "isDefault": true },
-        { "name": "2", "label": "Style 2" },
+        { "name": "2", "label": "Charity 2" },
         { "name": "3", "label": "Style 3" },
         { "name": "4", "label": "Style 4" },
         { "name": "5", "label": "Style 5" }
