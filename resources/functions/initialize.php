@@ -3,8 +3,7 @@
  * Use this file for initialization of the theme.
  */
 add_action( 'after_setup_theme', function () {
-	load_theme_textdomain( 'fincorp', get_template_directory() . '/languages' );
-	add_theme_support('woocommerce');
+	load_theme_textdomain( 'fincorp', get_template_directory() . '/languages' ); 
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
@@ -83,4 +82,11 @@ add_action( 'after_setup_theme', function () {
 			'color' => '#000',
 		)
 	));
+
+	// woocommerce
+	add_theme_support('woocommerce');
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
+
 } );

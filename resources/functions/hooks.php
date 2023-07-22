@@ -274,6 +274,14 @@ function goza_override_comment_list($args)
 	return $args;
 }
 
+// woocommerce sidebar
+add_action( 'wp', function() {
+    remove_action( 'woocommerce_sidebar', 'generate_construct_sidebars' );
+
+    add_action( 'woocommerce_sidebar', function() {
+        get_sidebar( 'woocommerce' );
+    } );
+} );
 
 // Single product
 add_action( 'woocommerce_before_main_content', 'goza_woocommerce_before_main_content_single_product_func' );
