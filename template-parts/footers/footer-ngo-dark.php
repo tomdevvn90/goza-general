@@ -35,7 +35,7 @@ if ($goza_sub_news_op) {
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
 ?>
 
-<footer id="site-footer" class="main-footer footer-organization">
+<footer id="site-footer" class="main-footer footer-ngo-dark">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-3 main-footer-widget">
