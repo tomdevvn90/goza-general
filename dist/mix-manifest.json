@@ -1,14 +1,8 @@
 {
     "/js/manifest.js": "/js/manifest.js?id=41f053ba9a94d81b39f8",
-<<<<<<< HEAD
     "/js/theme.js": "/js/theme.js?id=5bfc503f803d8dd96bd3",
-    "/css/theme.css": "/css/theme.css?id=8ebaa4214c4d3582e85f",
-    "/css/theme-editor.css": "/css/theme-editor.css?id=5593e0b13114c7d869fd",
-=======
-    "/js/theme.js": "/js/theme.js?id=ded5a263e9ef99de8ad0",
-    "/css/theme.css": "/css/theme.css?id=945f3835d3f7ba353802",
+    "/css/theme.css": "/css/theme.css?id=352bc02bb9e6062b8191",
     "/css/theme-editor.css": "/css/theme-editor.css?id=9180c3c2ab628f8bfddb",
->>>>>>> 25d0dd2ef397608a4797ab3c1119cc7f03be7540
     "/css/general.css": "/css/general.css?id=0593ad13e6054de5e493",
     "/css/charity.css": "/css/charity.css?id=62613077215a81688aa5",
     "/css/dream.css": "/css/dream.css?id=cade00aa33286d21686b",
