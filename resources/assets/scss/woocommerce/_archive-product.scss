@@ -396,6 +396,14 @@
                 padding-top: 45px;
             }
         }
+
+        @media screen and (max-width: 450px){
+            .products{
+                .product-row{
+                    grid-gap: 35px 15px;
+                }
+            }
+        }
     }
 
 }

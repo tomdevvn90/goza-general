@@ -8,7 +8,7 @@
 ?>
 <div class="entry-content">
     <?php
-    if( is_cart() || is_checkout() ){
+    if( is_cart() || is_checkout() || is_account_page() ){
         goza_woocommerce_product_hero_func();
     }
     
