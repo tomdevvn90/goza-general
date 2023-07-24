@@ -22367,7 +22367,7 @@ ul.be-list-ul li {
   font-family: Satisfy;
 }
 
-.be-section-upcoming-event .be-single-event-inner--heading {
+.be-section-charity2-upcoming-event .be-single-event-inner--heading {
   font-family: Satisfy;
 }
 
@@ -22376,7 +22376,7 @@ ul.be-list-ul li {
 }
 
 @media only screen and (max-width: 767.98px) {
-  .be-section-together {
+  .be-section-charity2-together {
     margin-top: -50px;
   }
 
@@ -22389,6 +22389,10 @@ ul.be-list-ul li {
   }
 
   .be-section-charity2-icon-box > .goza-layout-column-wrap {
+    display: block;
+  }
+
+  .be-section-charity2-stories > .goza-layout-column-wrap {
     display: block;
   }
 
@@ -22415,6 +22419,7 @@ ul.be-list-ul li {
 
   .be-section-together-col2 .be-charity2-video {
     height: 130px !important;
+    justify-content: center;
   }
 }
 
