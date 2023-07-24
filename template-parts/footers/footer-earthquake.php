@@ -30,6 +30,10 @@ if ($goza_sub_news_op) {
 }
 //
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
+
+//logo
+$logo = goza_get_logo_footer_site();
+if ($logo) $goza_ft_logo = $logo;
 ?>
 <footer id="site-footer" class="main-footer footer-earthquake" style="<?= esc_attr($style) ?>">
     <div class="container">

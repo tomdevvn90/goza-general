@@ -14,4 +14,5 @@ return [
     'ngo-dark'               => THEME_URI.'/resources/assets/images/logo/logo-ngo-dark.png',
     'water-charity'          => THEME_URI.'/resources/assets/images/logo/logo-water-charity.png',
     'charity-organization'   => THEME_URI.'/resources/assets/images/logo/logo-charity-organization.png',
+    'earthquake'             => THEME_URI.'/resources/assets/images/logo/logo-earthquake.svg',
 ];

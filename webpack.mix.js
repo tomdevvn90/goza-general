@@ -18,5 +18,6 @@ mix.js('resources/assets/js/theme.js', 'dist/js')
    .sass('resources/assets/scss/home/water.scss', 'dist/css/water.css')
    .sass('resources/assets/scss/home/charity-new.scss', 'dist/css/charity-new.css')
    .sass('resources/assets/scss/home/charity-organization.scss', 'dist/css/charity-organization.css')
+   .sass('resources/assets/scss/home/earthquake.scss', 'dist/css/earthquake.css')
    .extract()
    .version();

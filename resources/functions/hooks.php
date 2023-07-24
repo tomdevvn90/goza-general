@@ -28,6 +28,9 @@ function goza_header_template()
 			case "ngo":
 				$template_name = 'ngo';
 				break;
+			case "ngo-dark":
+				$template_name = 'ngo-dark';
+				break;
 			case "organization":
 				$template_name = 'organization';
 				break;
@@ -68,6 +71,9 @@ function goza_footer_template()
 			case "ngo":
 				$template_name = 'ngo';
 				break;
+			case "ngo-dark":
+				$template_name = 'ngo-dark';
+				break;
 			case "organization":
 				$template_name = 'organization';
 				break;
@@ -82,6 +88,9 @@ function goza_footer_template()
 				break;
 			case "charity-organization":
 				$template_name = 'charity-organization';
+				break;
+			case "earthquake":
+				$template_name = 'earthquake';
 				break;
 			default:
 				$template_name = 'general';
@@ -275,42 +284,43 @@ function goza_override_comment_list($args)
 }
 
 // woocommerce sidebar
-add_action( 'wp', function() {
-    remove_action( 'woocommerce_sidebar', 'generate_construct_sidebars' );
+add_action('wp', function () {
+	remove_action('woocommerce_sidebar', 'generate_construct_sidebars');
 
-    add_action( 'woocommerce_sidebar', function() {
-        get_sidebar( 'woocommerce' );
-    } );
-} );
+	add_action('woocommerce_sidebar', function () {
+		get_sidebar('woocommerce');
+	});
+});
 
 // Single product
-add_action( 'woocommerce_before_main_content', 'goza_woocommerce_before_main_content_single_product_func' );
-function goza_woocommerce_before_main_content_single_product_func() {
+add_action('woocommerce_before_main_content', 'goza_woocommerce_before_main_content_single_product_func');
+function goza_woocommerce_before_main_content_single_product_func()
+{
 
-	if(!is_single() && !is_product() ){
+	if (!is_single() && !is_product()) {
 		return;
 	}
 
-	$product_hero_icon = get_field('goza_single_product_icon','option');
-	$product_hero_bg = get_field('goza_single_product_bg_image','option');
+	$product_hero_icon = get_field('goza_single_product_icon', 'option');
+	$product_hero_bg = get_field('goza_single_product_bg_image', 'option');
 
-	$hero_bg = !empty($product_hero_bg)? 'background-image: url('. $product_hero_bg .')' : '';
+	$hero_bg = !empty($product_hero_bg) ? 'background-image: url(' . $product_hero_bg . ')' : '';
 
 	$has_sidebar = goza_check_sidebars_widgets_exists('shop-sidebar');
-	$classes = $has_sidebar ? 'col-md-8 col-sm-12': 'col-sm-12';
+	$classes = $has_sidebar ? 'col-md-8 col-sm-12' : 'col-sm-12';
 
-	?>
+?>
 	<section class="product-hero" style="<?php echo $hero_bg; ?>">
 		<div class="container">
 			<div class="wrapper">
-				<?php if( !empty($product_hero_icon) ): ?>
-					<div class="page-icon"><img src="<?php echo $product_hero_icon; ?>" ></div>
+				<?php if (!empty($product_hero_icon)) : ?>
+					<div class="page-icon"><img src="<?php echo $product_hero_icon; ?>"></div>
 				<?php endif; ?>
-				<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+				<?php the_title('<h1 class="page-title">', '</h1>'); ?>
 				<?php
-					if ( function_exists('yoast_breadcrumb') ) {
-						yoast_breadcrumb( '<div id="breadcrumbs" class="breadcrumbs">','</div>' );
-					}
+				if (function_exists('yoast_breadcrumb')) {
+					yoast_breadcrumb('<div id="breadcrumbs" class="breadcrumbs">', '</div>');
+				}
 				?>
 			</div>
 		</div>
@@ -318,23 +328,24 @@ function goza_woocommerce_before_main_content_single_product_func() {
 	<section class="main-woocommerce">
 		<div class="container">
 			<div class="row">
-				<?php do_action( 'woocommerce_sidebar' );?>	
-				<div class="product-content <?php echo $classes; ?>">	
-	<?php
-}
+				<?php do_action('woocommerce_sidebar'); ?>
+				<div class="product-content <?php echo $classes; ?>">
+				<?php
+			}
 
-add_action( 'woocommerce_after_main_content', 'goza_woocommerce_after_main_content_single_product_func' );
-function goza_woocommerce_after_main_content_single_product_func() {
+			add_action('woocommerce_after_main_content', 'goza_woocommerce_after_main_content_single_product_func');
+			function goza_woocommerce_after_main_content_single_product_func()
+			{
 
-	if( !is_single() && !is_product() ){
-		return;
-	}
+				if (!is_single() && !is_product()) {
+					return;
+				}
 
-	?>
+				?>
 				</div>
 			</div>
 		</div>
 	</section><!-- </section> product-main -->
-	<?php
+<?php
 
-}
+			}
