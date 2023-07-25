@@ -1,5 +1,5 @@
 <div id="goza-modal-search" class="goza-search">
-    <span class="goza-search-close"><i class="ion-ios-close-empty"></i></span>
+    <span class="goza-search-close"><i class="fa fa-times" aria-hidden="true"></i></span>
     <div class="goza-search-inner">
         <form class="custom-search-form" role="search" method="get" action="#">
             <div class="group-wrap">
