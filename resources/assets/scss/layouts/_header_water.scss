@@ -77,7 +77,7 @@
                 @include media-breakpoint-down(lg) {
                     margin-left: 30px;
                 }
-                .goza-header-button {
+                .goza-header-button-donate button.give-btn.give-btn-modal {
                     background: var(--link-color, #833dcc);
                     color: #fff;
                     border: medium none;

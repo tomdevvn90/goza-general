@@ -49,20 +49,22 @@ $goza_form_donation = __get_field('goza_form_donation', 'option');
                      <span class="goza-total-cart"><?= WC()->cart->cart_contents_count ?></span>
                   </div>
                <?php   } ?>
-               <?php if ($goza_button_type == 'df_link') { ?>
-                  <a class="d-none d-lg-block goza-header-button btn btn-general" href="<?= esc_attr($header_btn['url']) ?>" target="<?= ($header_btn['target']) ? $header_btn['target'] : '' ?>"><?= esc_attr($header_btn['title']) ?></a>
-               <?php } else { 
-                  $atts = array(
-                     'id' => $goza_form_donation->ID,  // integer.
-                     'show_title' => false, // boolean.
-                     'show_goal' => false, // boolean.
-                     'show_content' => 'none', //above, below, or none
-                     'display_style' => 'button', //modal, button, and reveal
-                     'continue_button_title' => '' //string
+               <div class="goza-header-button-donate"> 
+                  <?php if ($goza_button_type == 'df_link') { ?>
+                     <a class="d-none d-lg-block goza-header-button btn btn-general" href="<?= esc_attr($header_btn['url']) ?>" target="<?= ($header_btn['target']) ? $header_btn['target'] : '' ?>"><?= esc_attr($header_btn['title']) ?></a>
+                  <?php } else { 
+                     $atts = array(
+                        'id' => $goza_form_donation->ID,  // integer.
+                        'show_title' => false, // boolean.
+                        'show_goal' => false, // boolean.
+                        'show_content' => 'none', //above, below, or none
+                        'display_style' => 'button', //modal, button, and reveal
+                        'continue_button_title' => '' //string
 
-                  );
-                  echo give_get_donation_form( $atts );
-               } ?>
+                     );
+                     echo give_get_donation_form( $atts );
+                  } ?>
+               </div>
                <div id="goza-hamberger" class="d-block d-lg-none"><i class="fa fa-reorder"></i></div>
             </div>
          </div>
