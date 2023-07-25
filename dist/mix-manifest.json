@@ -1,8 +1,7 @@
 {
     "/js/manifest.js": "/js/manifest.js?id=41f053ba9a94d81b39f8",
     "/js/theme.js": "/js/theme.js?id=0640c233b5aacc40568c",
-    "/css/theme.css": "/css/theme.css?id=dbead702da4de8e26727",
-    "/css/theme-editor.css": "/css/theme-editor.css?id=5d4d35476539e878ce30",
+    "/css/theme-editor.css": "/css/theme-editor.css?id=d924ae0d70d965524cbd",
     "/css/general.css": "/css/general.css?id=0593ad13e6054de5e493",
     "/css/charity.css": "/css/charity.css?id=62613077215a81688aa5",
     "/css/dream.css": "/css/dream.css?id=cade00aa33286d21686b",
@@ -14,5 +13,6 @@
     "/css/charity-new.css": "/css/charity-new.css?id=532822c64da18737ac1f",
     "/css/charity-organization.css": "/css/charity-organization.css?id=8470cfaeb38c6bf7f34c",
     "/css/earthquake.css": "/css/earthquake.css?id=06e8229d73da00b156bf",
-    "/js/vendor.js": "/js/vendor.js?id=93e108c940eb91699ba3"
+    "/js/vendor.js": "/js/vendor.js?id=93e108c940eb91699ba3",
+    "/css/theme.css": "/css/theme.css?id=36573d76f6183f5bfb3a"
 }

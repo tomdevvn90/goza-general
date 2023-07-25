@@ -187,10 +187,13 @@
                         letter-spacing: 0.32px;
                         color: var(--post-title-color, #a52f2a);
                         font-weight: 700;
-                        margin: 24px 0 0 0;
-                        @include media-breakpoint-down(md) {
+                        margin: 8px 0 0 0;
+                        @include media-breakpoint-down(lg) {
                             font-size: 24px;
                             line-height: 115%;
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: 22px;
                         }
 
                         @include media-breakpoint-down(sm) {
@@ -226,7 +229,7 @@
                     }
 
                     &:not(:last-child){
-                        margin-bottom: 24px;
+                        margin-bottom: 32px;
                     }
                 }
             }
