@@ -20148,7 +20148,7 @@ h6 {
 
 .main-footer.footer-water .main-footer-social li a i {
   font-size: 23px;
-  color: #464646;
+  color: var(--footer-text-color, #FFF);
 }
 
 .main-footer.footer-water .main-footer-social li a:hover {
@@ -20156,7 +20156,7 @@ h6 {
 }
 
 .main-footer.footer-water .main-footer-social li a:hover i {
-  color: #8799a3;
+  color: var(--link-color-hover, #a472da);
 }
 
 .main-footer.footer-water .main-footer-socket {
