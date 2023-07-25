@@ -13128,13 +13128,19 @@
   letter-spacing: 0.32px;
   color: var(--post-title-color, #a52f2a);
   font-weight: 700;
-  margin: 24px 0 0 0;
+  margin: 8px 0 0 0;
+}
+
+@media (max-width: 1199.98px) {
+  .be-recent-posts.is-style-water-charity .be-recent-posts--content .recent-posts-list .post-item--title {
+    font-size: 24px;
+    line-height: 115%;
+  }
 }
 
 @media (max-width: 991.98px) {
   .be-recent-posts.is-style-water-charity .be-recent-posts--content .recent-posts-list .post-item--title {
-    font-size: 24px;
-    line-height: 115%;
+    font-size: 22px;
   }
 }
 
@@ -13173,7 +13179,7 @@
 }
 
 .be-recent-posts.is-style-water-charity .be-recent-posts--content .recent-posts-list .post-item:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .be-recent-posts.is-style-goza-charity-2 .be-recent-posts--content .recent-posts-list article:first-child {

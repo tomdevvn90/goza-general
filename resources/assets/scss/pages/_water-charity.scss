@@ -1,5 +1,8 @@
 .wp-block-columns{
     &.be-gzwc-row-recent-post {
+        @include media-breakpoint-down(md) {
+            flex-wrap: wrap !important;
+        }
         .wp-block-column {
             &:nth-child(2){
                 .wp-block-image{
@@ -12,7 +15,21 @@
                         object-fit: cover;
                         -o-object-position: top center;
                         object-position: top center;
+                        @include media-breakpoint-down(md) {
+                            height: auto;
+                        }
                     }
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+                order: 2;
+                body & {
+                    flex-basis: 100%!important
+                }
+
+                &:nth-child(2){
+                    order: 1;
                 }
             }
         }
