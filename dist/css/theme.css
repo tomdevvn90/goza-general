@@ -38413,6 +38413,7 @@ div[id*=give-form].give-display-reveal .give-btn {
 .menu-mini-cart__container .widget_shopping_cart_content .cart_list li {
   position: relative;
   display: block;
+  padding: 0;
   margin-bottom: 10px;
 }
 
@@ -38426,12 +38427,14 @@ div[id*=give-form].give-display-reveal .give-btn {
   line-height: 20px;
   text-align: center;
   background: #333;
-  color: #fff;
+  color: #fff !important;
+  border-radius: 0;
 }
 
 .menu-mini-cart__container .widget_shopping_cart_content .cart_list li a:not(.remove) {
   font-size: 16px;
   line-height: 24px;
+  font-weight: 500;
   display: block;
   text-decoration: underline;
   color: var(--heading-color, #333);
@@ -38444,8 +38447,10 @@ div[id*=give-form].give-display-reveal .give-btn {
 
 .menu-mini-cart__container .widget_shopping_cart_content .cart_list li img {
   max-width: 60px;
+  width: 100%;
   float: left;
   margin-right: 10px;
+  margin-left: 0;
 }
 
 .menu-mini-cart__container .widget_shopping_cart_content .cart_list li .quantity {

@@ -46,7 +46,7 @@ $goza_form_donation = __get_field('goza_form_donation', 'option');
                <?php if ($icon_cart && class_exists('WooCommerce')) { ?>
                   <div class="goza-header-cart-icon">
                      <i class="fa fa-shopping-basket"></i>
-                     <span class="goza-total-cart"><?= WC()->cart->cart_contents_count ?></span>
+                     <span class="goza-total-cart"><?php echo WC()->cart->cart_contents_count; ?></span>
                   </div>
                <?php   } ?>
                <?php if ($goza_button_type == 'df_link') { ?>

@@ -102,6 +102,7 @@
             li{
                 position: relative;
                 display: block;
+                padding: 0;
                 margin-bottom: 10px;
 
                 .remove{
@@ -114,11 +115,13 @@
                     line-height: 20px;
                     text-align: center;
                     background: #333;
-                    color: #fff;
+                    color: #fff !important;
+                    border-radius: 0;
                 }
                 a:not(.remove){
                     font-size: 16px;
                     line-height: 24px;
+                    font-weight: 500;
                     display: block;
                     text-decoration: underline;
                     color: var(--heading-color, #333);
@@ -130,8 +133,10 @@
                 }
                 img{
                     max-width: 60px;
+                    width: 100%;
                     float: left;
                     margin-right: 10px;
+                    margin-left: 0;
                 }
                 .quantity{
                     display: block;
