@@ -48,12 +48,14 @@ mark, .mark {
          .wp-block-column{
             width: 100%;
             max-width: calc(50% - 2em);
+            flex-basis: auto;
          }
       }
       @media (max-width: 767px){
          .wp-block-column{
             width: 100%;
             max-width: 100%;
+            flex-basis: auto;
          }
       }
    }
