@@ -203,7 +203,7 @@
                         line-height: 28px;
                         color: var(--footer-text-color, #FFF);
                         &:hover {
-                            color: #fff;
+                            color: var(--link-color-hover, #a472da);
                         }
 
                         &::before {
