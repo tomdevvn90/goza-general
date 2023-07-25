@@ -456,7 +456,7 @@
 		  text-align: center;
 		  line-height: 1;
 		  color: #ffffff;
-		  background-color: #000000;
+		  background-color: var(--link-color, #d41b65);
 			outline: none;
 			opacity: 1;
 			padding: 0 0 5px 5px;
@@ -486,6 +486,61 @@
 			> *:last-child {
 				margin-bottom: 0;
 			}
+
+      ul#give-gateway-radio-list {
+        input[type=radio] {
+          display: none;
+        }
+        label {
+          position: relative;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          padding-left: 20px;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+          &:hover {
+            color: var(--link-color, #d41b65);
+            &::after{
+              opacity: 1;
+            }
+          }
+          &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 12px;
+            height: 12px;;
+            border-radius: 12px;
+            -webkit-box-shadow: 0 0 2px #000000;
+            box-shadow: 0 0 2px #000000;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 2px;
+            width: 8px;
+            height: 8px;
+            background: var(--link-color, #d41b65);
+            opacity: 0;
+            border-radius: 10px;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+          }
+        }
+        li.give-gateway-option-selected label:after{
+          background: var(--link-color, #d41b65);
+          opacity: 1;
+        }
+      }
 		}
 	}
 	.give-btn {
@@ -496,7 +551,7 @@
 	font-size: 14px;
   font-weight: 700;
 	color: #ffffff;
-	background: var(--heading-color);
+	background: var(--link-color, #d41b65);
 	padding: 10px 35px;
 	outline: none;
 	border: none;
@@ -566,7 +621,7 @@ div[id*=give-form] {
 		}
 		.give-currency-symbol {
 			color: #ffffff;
-			background: var(--heading-color);
+			background: var(--link-color, #d41b65);
       border-radius: 2px 0 0 2px;
 		}
 		#give-amount-text {
@@ -574,6 +629,7 @@ div[id*=give-form] {
       border-radius: 0 2px 2px 0;
 		}
 	}
+  
 	.give-total-wrap,
 	#give-final-total-wrap {
     margin: 15px 0 30px;
@@ -592,7 +648,7 @@ div[id*=give-form] {
 			font-weight: 700;
 			height: 50px;
 			line-height: 48px;
-			color: var(--heading-color);
+			color: var(--link-color, #d41b65);
 			background: #ffffff;
 			outline: none;
 			border: 1px solid rgba(0, 0, 0, 0.1);
@@ -600,7 +656,7 @@ div[id*=give-form] {
 		.give-currency-symbol,
 		.give-donation-total-label {
 			color: #ffffff;
-			background: var(--heading-color);
+			background: var(--link-color, #d41b65);
       border-radius: 2px 0 0 2px;
 		}
 		.give-donation-amount #give-amount {
@@ -612,7 +668,7 @@ div[id*=give-form] {
 			font-weight: 700;
 			white-space: nowrap;
 			color: #ffffff;
-			background: var(--heading-color);
+			background: var(--link-color, #d41b65);
 			margin: 0;
 			padding: 0 20px;
 		}
@@ -655,13 +711,13 @@ div[id*=give-form] {
       -webkit-transition: all .3s;
       transition: all .3s;
       &:hover {
-        color: var(--heading-color);
-        border-color: var(--heading-color);
+        color: var(--link-color, #d41b65);
+        border-color: var(--link-color, #d41b65);
       }
 			&.give-default-level {
 				color: #ffffff;
-				background: var(--heading-color);
-        border-color: var(--heading-color);
+				background: var(--link-color, #d41b65);
+        border-color: var(--link-color, #d41b65);
 				&:hover {
 					color: #ffffff;
 				}
@@ -690,7 +746,7 @@ div[id*=give-form] {
         line-height: 20px;
       }
 			input.give-default-level + label {
-        color: var(--heading-color);
+        color: var(--link-color, #d41b65);
         &:after {
           opacity: 1;
         }
@@ -725,7 +781,7 @@ div[id*=give-form] {
 		text-decoration: underline;
     text-underline-offset: 4px; 
     &:hover {
-			color: var(--heading-color);
+			color: var(--link-color, #d41b65);
     }
   }
   #give_terms,
@@ -765,7 +821,7 @@ div[id*=give-form] {
 			-webkit-transition: all 0.3s;
 			transition: all 0.3s;
 			&:hover {
-				color: var(--heading-color);
+				color: var(--link-color, #d41b65);
 			}
 			&:before {
 				content: "";
@@ -782,19 +838,19 @@ div[id*=give-form] {
 			}
 		}
 		input[type=checkbox]:checked + label {
-			color: var(--heading-color);
+			color: var(--link-color, #d41b65);
 			&:before {
-				background-color: var(--heading-color);
+				background-color: var(--link-color, #d41b65);
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: 10px;
-				border-color: var(--heading-color);
+				border-color: var(--link-color, #d41b65);
 			}
 		}
 	}
 	#give-gateway-radio-list > li {
 		&.give-gateway-option-selected label {
-			color: var(--heading-color);
+			color: var(--link-color, #d41b65);
 			&:after {
 				opacity: 1;
 			}
@@ -829,14 +885,15 @@ div[id*=give-form] {
 	> .give-btn,
 	.give-submit {
 		font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
 		text-transform: uppercase;
 		color: #ffffff;
-		background-color: var(--heading-color);
-		padding: 10px 30px;
+		background-color: var(--link-color, #d41b65);
+		padding: 15px 30px;
 		outline: none;
 		border: none;
 		border-radius: 2px;
+    font-family: var(--heading-family, Poppins, sans-serif);
     &.give-btn-modal {
       margin-bottom: 0;
     }

@@ -93,13 +93,13 @@
                         }
                     }
                 }
-            }
+            } 
 
             &--cta {
                 display: flex;
                 align-items: center;
 
-                .goza-header-button {
+                .goza-header-button-donate button.give-btn.give-btn-modal {
                     background: var(--link-color, #71b61b);
                     color: #fff;
                     border: medium none;

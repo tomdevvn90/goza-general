@@ -14,6 +14,7 @@ $icon_cart          = __get_field('goza_enable_cart', 'option');
 $goza_enable_topbar = __get_field('goza_enable_topbar', 'option');
 $goza_button_type   = __get_field('goza_button_type', 'option');
 $goza_form_donation = __get_field('goza_form_donation', 'option');
+
 ?>
 <header class="<?php echo implode(' ', $classes) ?>">
    <!-- Topbar -->
@@ -57,11 +58,22 @@ $goza_form_donation = __get_field('goza_form_donation', 'option');
                         <div id="goza-hamberger" class="d-block d-lg-none"><i class="fa fa-reorder"></i></div>
                     </div>
 
-                    <?php if ($goza_button_type == 'df_link') { ?>
+                    <div class="goza-header-button-donate"> 
+                        <?php if ($goza_button_type == 'df_link') { ?>
                             <a class="d-none d-lg-block goza-header-button btn btn-general" href="<?= esc_attr($header_btn['url']) ?>" target="<?= ($header_btn['target']) ? $header_btn['target'] : '' ?>"><?= esc_attr($header_btn['title']) ?></a>
-                        <?php } else { ?>
-                            <a class="d-none d-lg-block goza-header-button btn btn-general btn-donation-form" href="javascript:void(0)"><?= esc_html_e('DONATE NOW', 'goza') ?></a>
-                    <?php } ?>
+                        <?php } else { 
+                            $atts = array(
+                                'id' => $goza_form_donation->ID,  // integer.
+                                'show_title' => false, // boolean.
+                                'show_goal' => false, // boolean.
+                                'show_content' => 'none', //above, below, or none
+                                'display_style' => 'button', //modal, button, and reveal
+                                'continue_button_title' => '' //string
+
+                            );
+                            echo give_get_donation_form( $atts );
+                        } ?>
+                    </div>
                 </div>
             </div>
         </div>
