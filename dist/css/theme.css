@@ -20123,7 +20123,7 @@ h6 {
 }
 
 .main-footer.footer-water .main-footer-menu ul li a:hover {
-  color: #fff;
+  color: var(--link-color-hover, #a472da);
 }
 
 .main-footer.footer-water .main-footer-menu ul li a::before {
