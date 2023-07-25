@@ -38444,6 +38444,7 @@ div[id*=give-form].give-display-reveal .give-btn {
 
 .menu-mini-cart__container .widget_shopping_cart_content .cart_list li img {
   max-width: 60px;
+  float: left;
   margin-right: 10px;
 }
 
