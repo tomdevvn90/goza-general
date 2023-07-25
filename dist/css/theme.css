@@ -13760,6 +13760,7 @@ mark,
   .dream-responsive-column-icon.wp-block-columns .wp-block-column {
     width: 100%;
     max-width: calc(50% - 2em);
+    flex-basis: auto;
   }
 }
 
@@ -13767,6 +13768,7 @@ mark,
   .dream-responsive-column-icon.wp-block-columns .wp-block-column {
     width: 100%;
     max-width: 100%;
+    flex-basis: auto;
   }
 }
 
