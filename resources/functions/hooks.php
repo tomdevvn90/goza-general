@@ -348,4 +348,22 @@ function goza_woocommerce_before_main_content_single_product_func()
 	</section><!-- </section> product-main -->
 <?php
 
-			}
+}
+
+add_action( 'wp_footer', 'goza_wp_footer_func');
+function goza_wp_footer_func(){
+
+	$icon_cart = __get_field('goza_enable_cart', 'option');
+	?>
+	<?php if ($icon_cart && class_exists('WooCommerce')) { ?>
+		<div id="menu-mini-cart" class="menu-mini-cart__container">
+			<div class="menu-mini-cart__main">
+				<div class="menu-cart__close-button"></div>
+				<div class="widget_shopping_cart_content">
+					<?php woocommerce_mini_cart(); ?>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+	<?php
+}
