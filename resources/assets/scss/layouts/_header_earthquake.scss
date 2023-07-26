@@ -40,11 +40,9 @@
                 border-radius: 0 15px 15px 0;
                 box-sizing: border-box;
                 position: relative;
-                -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 25px 100%);
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 16px 100%);
                 box-sizing: border-box;
-                border-top-left-radius: 30px;
-                border-bottom-left-radius: 45px;
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 25px;
                 &::before{
                     content: " ";
                     width: 60px;
@@ -53,7 +51,7 @@
                     background-position: left center;
                     background-size: 100% 100%;
                     position: absolute;
-                    left: 0;
+                    left: -15px;
                     top: 0;
                 }
                 @media (min-width: 1508px){
@@ -144,6 +142,7 @@
                     position: absolute;
                     right: -15px;
                     width: 100%;
+                    top:0;
                     max-width: 225px;
                     height: 100%;
                     align-items: center;
