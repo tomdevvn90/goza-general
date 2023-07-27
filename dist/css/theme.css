@@ -22636,8 +22636,11 @@ h6 {
   position: relative;
 }
 
-.be-section-video .gb-background-cover {
+.be-section-margin-video {
   margin-top: -140px;
+}
+
+.be-section-video .gb-background-cover {
   border-radius: 20px;
 }
 
