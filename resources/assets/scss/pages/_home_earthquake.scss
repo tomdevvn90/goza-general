@@ -111,8 +111,8 @@ ul.be-list-ul li{
 }
 .be-row-donor .goza-layout-column-wrap {
   max-width:540px !important;
-  padding-left:22px;
-  padding-right:22px;
+  padding-left:15px;
+  padding-right:15px;
 }
 .be-section-icon-box {
   gap: 0;
@@ -122,5 +122,8 @@ ul.be-list-ul li{
 }
 .be-section-towards .goza-block-layout-column-inner {
   padding: 50px 15px !important;
+}
+.be-section-earthquake-toward .goza-layout-column-wrap{
+  display:block;
 }
 }

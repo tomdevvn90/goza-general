@@ -364,6 +364,11 @@
             }
             @media (max-width: 1200px) {
                 .be-icon-box-block--heading{
+                    padding-right: 50px;
+                }
+            }
+            @media (max-width: 992px) {
+                .be-icon-box-block--heading{
                     padding-right: 0px;
                 }
             }

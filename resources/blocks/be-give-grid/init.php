@@ -236,6 +236,9 @@ function be_template_give_grid_default(){
       if(empty($color)) $color = '#01FFCC';
       $progress = ($goal === 0) ? 0 : round( ( $income / $goal ) * 100, 2 );
 
+      $progress_css = ($goal === 0) ? 0 : round( ( $income / $goal ) * 100, 2 );
+      if ( $income >= $goal ) { $progress_css = 100; }
+
       if ( $income >= $goal ) { $progress = 100; }
       $class_none = '';
       if ( $goal_option == 'disabled' ) { $class_none = 'class-none'; }
@@ -265,8 +268,12 @@ function be_template_give_grid_default(){
       </div>
     </div>
     <div class="progress">
-      <div class="bar" style="background-color:<?php echo $color ?>;width: <?php echo $progress ?>%;" ></div>
-      <div class="form-percent" style="background:<?php echo $color ?>;left: calc(<?php echo $progress ?>%);"><span class="bt-arrow" style="background:<?php echo $color ?>"></span><?php echo $progress ?>%</div>
-    </div>
+      <div class="bar" style="background-color:<?php echo $color ?>;width: <?php echo round($progress) ?>%;" ></div>
+      <?php if ( $progress_css == 100 ) { ?>
+        <div class="form-percent c2" style="background:<?php echo $color ?>;left: calc(<?php echo round($progress) ?>% - 38px);"><span class="bt-arrow" style="background:<?php echo $color ?>"></span><?php echo round($progress) ?>%</div>
+      <?php } else { ?> 
+        <div class="form-percent c1" style="background:<?php echo $color ?>;left: calc(<?php echo round($progress) ?>%);"><span class="bt-arrow" style="background:<?php echo $color ?>"></span><?php echo round($progress) ?>%</div>
+      <?php } ?>
+      </div>
 
-<?php }
+<?php } 
