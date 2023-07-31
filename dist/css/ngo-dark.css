@@ -1,5 +1,5 @@
 :root {
-  --body-family: "Poppins", sans-serif;
+  --body-family: "Muli", sans-serif;
   --body-font-weight: 400;
   --body-font-size: 16px;
   --body-line-height: 1.625;
@@ -25,7 +25,7 @@
   --link-color-hover: #3d3e51;
   --preloader-color: #d94532;
   --header-bg-color: rgb(255,255,255);
-  --header-text-color: rgb(40,40,40);
+  --header-text-color: #fff;
   --header-bg-menu-color: #213e8c;
   --footer-heading-color: #FFF;
   --footer-text-color: #c3c3c3;

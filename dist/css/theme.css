@@ -17887,6 +17887,10 @@ h6 {
   gap: 12px;
 }
 
+.site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-info a:hover {
+  color: var(--link-color);
+}
+
 .site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-info a i::before {
   content: url(../images/icon-phone.png?67fdad7731b6214e1e967df297a4d46e);
 }
@@ -17910,7 +17914,7 @@ h6 {
 }
 
 .site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-info a span:hover {
-  color: var(--link-color-hover, #d94532);
+  color: var(--link-color, #d94532);
 }
 
 .site-header.site-header-ngo-dark .goza-header-main--cta .goza-header-info a span span {
@@ -22023,10 +22027,25 @@ h6 {
 
 .site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
   color: #fff;
-  font-weight: 500;
-  font-family: var(--heading-family, "Poppins", sans-serif);
+  font-weight: 700;
+  font-family: var(--body-family, "Muli", sans-serif);
   text-transform: none;
-  font-size: 18px;
+  font-size: 15px;
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 14px;
+  }
 }
 
 .site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu {
