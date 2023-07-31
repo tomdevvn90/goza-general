@@ -14242,10 +14242,6 @@
   min-height: 450px;
 }
 
-.be-count-down--bg {
-  min-height: 450px;
-}
-
 .be-count-down--bg img {
   -o-object-fit: cover;
   object-fit: cover;
@@ -14254,9 +14250,9 @@
   transition: 0.3s ease;
   -o-object-position: center;
   object-position: center;
+  min-height: 450px;
 }
 
-.be-count-down--bg,
 .be-count-down--content {
   position: absolute;
   left: 0;

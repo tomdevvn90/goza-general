@@ -158,6 +158,12 @@
                     }
                 }
 
+                .goza-header-button-donate{
+                    @include media-breakpoint-down(sm) {
+                        display: none;
+                    }
+                }
+
                 .goza-header-button-donate button.give-btn.give-btn-modal {
                     background: var(--link-color, #d41b65);
                     color: #ebebeb;

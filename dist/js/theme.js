@@ -52,6 +52,7 @@ beCounterBox();
   "use strict";
 
   var beEventsCarousel = function beEventsCarousel() {
+    console.log("vvv");
     var $block = $('.be-events-carousel');
     if ($block.length === 0) return;
     $block.each(function () {
@@ -63,7 +64,7 @@ beCounterBox();
         dots: false,
         autoplay: true,
         arrows: false,
-        adaptiveHeight: false,
+        adaptiveHeight: true,
         fade: false,
         cssEase: 'linear',
         responsive: [{
@@ -77,6 +78,9 @@ beCounterBox();
     });
   };
   $(document).ready(function () {
+    beEventsCarousel();
+  });
+  $(window).on('resize', function () {
     beEventsCarousel();
   });
 })(jQuery);

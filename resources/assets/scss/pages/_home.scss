@@ -329,10 +329,20 @@
 
                 >a.mega-menu-link {
                     color: #fff;
-                    font-weight: 500;
-                    font-family: var(--heading-family, "Poppins", sans-serif);
+                    font-weight: 700;
+                    font-family: var(--body-family, "Muli", sans-serif);
                     text-transform: none;
-                    font-size: 18px;
+                    font-size: 15px;
+                    @media (min-width: 1200px) and (max-width: 1399px) { 
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+
+                    @media (min-width: 992px) and (max-width: 1199px) { 
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        font-size: 14px;
+                    }
                 }
             }
 
@@ -411,5 +421,14 @@
                 }
             }
         }
+    }
+}
+
+
+.wp-block-goza-blocks-goza-button{
+    &.be-gz-last-btn-home{
+        margin: 0;
+        display: flex;
+        justify-content: center;
     }
 }
