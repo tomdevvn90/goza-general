@@ -28,6 +28,8 @@ if ($goza_sub_news_op) {
 //copyright
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
 
+$goza_social_network = __get_field('goza_social_network', 'option');
+
 //logo
 $logo = goza_get_logo_footer_site();
 if ($logo) $goza_ft_logo = $logo;
@@ -54,13 +56,15 @@ if ($logo) $goza_ft_logo = $logo;
                 <?php } ?>
                 <div class="main-footer-menu">
                     <?php
-                    wp_nav_menu([
-                        'theme_location' => 'quicklinks-menu',
-                        'menu_class' => 'quicklinks-menu',
-                        'container_class' => 'menu-container',
-                        'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
-                        'bootstrap' => false
-                    ]);
+                    if (has_nav_menu('quicklinks-menu')) {
+                        wp_nav_menu([
+                            'theme_location' => 'quicklinks-menu',
+                            'menu_class' => 'quicklinks-menu',
+                            'container_class' => 'menu-container',
+                            'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
+                            'bootstrap' => false
+                        ]);
+                    }
                     ?>
                 </div>
             </div>
@@ -70,14 +74,16 @@ if ($logo) $goza_ft_logo = $logo;
                     <h3 class='main-footer-title'><?= esc_attr($goza_social_heading) ?></h3>
                 <?php } ?>
                 <?php
-                if (have_rows('goza_social_network', 'option')) :
-                    echo '<ul class="main-footer-social">';
-                    while (have_rows('goza_social_network', 'option')) : the_row();
-                        $social_icon = get_sub_field('icon');
-                        $social_url = get_sub_field('url');
-                        echo '<li><a href="' . $social_url . '" target="_blank" rel="nofollow"><i class="fa fa-' . $social_icon['value'] . '" aria-hidden="true"></i></a></li>';
-                    endwhile;
-                    echo '</ul>';
+                if (isset($goza_social_network) && !empty($goza_social_network)) :
+                    if (have_rows('goza_social_network', 'option')) :
+                        echo '<ul class="main-footer-social">';
+                        while (have_rows('goza_social_network', 'option')) : the_row();
+                            $social_icon = get_sub_field('icon');
+                            $social_url = get_sub_field('url');
+                            echo '<li><a href="' . $social_url . '" target="_blank" rel="nofollow"><i class="fa fa-' . $social_icon['value'] . '" aria-hidden="true"></i></a></li>';
+                        endwhile;
+                        echo '</ul>';
+                    endif;
                 endif;
                 ?>
             </div>

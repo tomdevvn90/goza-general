@@ -22,7 +22,7 @@ add_action('goza_hook_header', 'goza_header_template');
 function goza_header_template()
 {
 	$goza_layout_header = __get_field('goza_layout_header', 'option');
-	$template_name = isset($goza_layout_header) ? $goza_layout_header : 'general';
+	$template_name = (isset($goza_layout_header) && !empty($goza_layout_header))  ? $goza_layout_header : 'general';
 	if (isset($_GET['home'])) {
 		switch ($_GET['home']) {
 			case "ngo":
@@ -65,7 +65,7 @@ add_action('goza_hook_footer', 'goza_footer_template');
 function goza_footer_template()
 {
 	$goza_layout_footer = __get_field('goza_layout_footer', 'option');
-	$template_name = isset($goza_layout_footer) ? $goza_layout_footer : 'general';
+	$template_name = (isset($goza_layout_footer) && !empty($goza_layout_header)) ? $goza_layout_footer : 'general';
 	if (isset($_GET['home'])) {
 		switch ($_GET['home']) {
 			case "ngo":
@@ -109,7 +109,7 @@ add_action('goza_hook_topbar', 'goza_topbar_template');
 function goza_topbar_template()
 {
 	$goza_layout_topbar = __get_field('goza_topbar_options', 'option');
-	$template_name = isset($goza_layout_topbar['goza_layout_top_bar']) ? $goza_layout_topbar['goza_layout_top_bar'] : 'default';
+	$template_name = (isset($goza_layout_topbar['goza_layout_top_bar']) && !empty($goza_layout_topbar['goza_layout_top_bar'])) ? $goza_layout_topbar['goza_layout_top_bar'] : 'default';
 	if (isset($_GET['home'])) {
 		switch ($_GET['home']) {
 			case "dream":
@@ -348,13 +348,14 @@ function goza_woocommerce_before_main_content_single_product_func()
 	</section><!-- </section> product-main -->
 <?php
 
-}
+			}
 
-add_action( 'wp_footer', 'goza_wp_footer_func');
-function goza_wp_footer_func(){
+			add_action('wp_footer', 'goza_wp_footer_func');
+			function goza_wp_footer_func()
+			{
 
-	$icon_cart = __get_field('goza_enable_cart', 'option');
-	?>
+				$icon_cart = __get_field('goza_enable_cart', 'option');
+?>
 	<?php if ($icon_cart && class_exists('WooCommerce')) { ?>
 		<div id="menu-mini-cart" class="menu-mini-cart__container">
 			<div class="menu-mini-cart__main">
@@ -365,5 +366,5 @@ function goza_wp_footer_func(){
 			</div>
 		</div>
 	<?php } ?>
-	<?php
-}
+<?php
+			}

@@ -25,7 +25,7 @@ $goza_form_donation = __get_field('goza_form_donation', 'option');
 <header class="<?php echo implode(' ', $classes) ?>">
    <!-- Topbar -->
    <?php if ($goza_enable_topbar) do_action('goza_hook_topbar'); ?>
-   
+
    <div class="goza-header-main">
       <div class="container">
          <div class="d-flex align-items-center justify-content-between goza-wrap-logo">
@@ -55,10 +55,10 @@ $goza_form_donation = __get_field('goza_form_donation', 'option');
                   <a class="d-none d-lg-block goza-header-search" href="javascript:void(0)"><i class="fa fa-search"></i></a>
                <?php } ?>
 
-               <div class="goza-header-button-donate"> 
+               <div class="goza-header-button-donate">
                   <?php if ($goza_button_type == 'df_link') { ?>
                      <a class="d-none d-lg-block goza-header-button btn btn-general" href="<?= esc_attr($header_btn['url']) ?>" target="<?= ($header_btn['target']) ? $header_btn['target'] : '' ?>"><?= esc_attr($header_btn['title']) ?></a>
-                  <?php } else { 
+                  <?php } else {
                      $atts = array(
                         'id' => $goza_form_donation->ID,  // integer.
                         'show_title' => false, // boolean.
@@ -68,7 +68,9 @@ $goza_form_donation = __get_field('goza_form_donation', 'option');
                         'continue_button_title' => '' //string
 
                      );
-                     echo give_get_donation_form( $atts );
+                     if (function_exists('give_get_donation_form')) {
+                        echo give_get_donation_form($atts);
+                     }
                   } ?>
                </div>
                <div id="goza-hamberger" class="d-block d-lg-none"><i class="fa fa-reorder"></i></div>
@@ -80,13 +82,15 @@ $goza_form_donation = __get_field('goza_form_donation', 'option');
       <div class="container">
          <div class="goza-header-main--menu">
             <?php
-            wp_nav_menu([
-               'theme_location' => 'main-menu',
-               'menu_class' => 'main-menu',
-               'container_class' => 'menu-container',
-               'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
-               'bootstrap' => false
-            ]);
+            if (has_nav_menu('main-menu')) {
+               wp_nav_menu([
+                  'theme_location' => 'main-menu',
+                  'menu_class' => 'main-menu',
+                  'container_class' => 'menu-container',
+                  'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
+                  'bootstrap' => false
+               ]);
+            }
             ?>
          </div>
       </div>

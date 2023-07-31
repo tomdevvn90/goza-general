@@ -38,7 +38,7 @@
             }
 
             &--menu {
-                .navbar-nav {
+                .navbar-nav, ul {
                     display: flex;
                     align-items: center;
                     padding: 0;

@@ -81,13 +81,15 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
                 <?php } ?>
                 <div class="main-footer-menu">
                     <?php
-                    wp_nav_menu([
-                        'theme_location' => 'quicklinks-menu',
-                        'menu_class' => 'quicklinks-menu',
-                        'container_class' => 'menu-container',
-                        'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
-                        'bootstrap' => false
-                    ]);
+                    if (has_nav_menu('quicklinks-menu')) {
+                        wp_nav_menu([
+                            'theme_location' => 'quicklinks-menu',
+                            'menu_class' => 'quicklinks-menu',
+                            'container_class' => 'menu-container',
+                            'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
+                            'bootstrap' => false
+                        ]);
+                    }
                     ?>
                 </div>
             </div>

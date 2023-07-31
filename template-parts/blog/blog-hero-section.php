@@ -2,9 +2,9 @@
     $page_for_posts_id = get_option( 'page_for_posts' );
     $page_for_posts_obj = get_post( $page_for_posts_id );
 
-    $heading_field_option = get_field('goza_blog_heading', 'option');
-    $icon_field_option = get_field('goza_blog_icon', 'option')? get_field('goza_blog_icon', 'option') : get_template_directory_uri(). '/resources/assets/images/leaf-solid.png';
-    $bg_field_option = get_field('goza_blog_bg_image', 'option');
+    $heading_field_option = __get_field('goza_blog_heading', 'option');
+    $icon_field_option = __get_field('goza_blog_icon', 'option')? __get_field('goza_blog_icon', 'option') : get_template_directory_uri(). '/resources/assets/images/leaf-solid.png';
+    $bg_field_option = __get_field('goza_blog_bg_image', 'option');
 
     $heading_blog = !empty( $heading_field_option )? $heading_field_option : $page_for_posts_obj->post_title;
     $blog_heading = ( is_archive() )? get_the_archive_title() : $heading_blog;

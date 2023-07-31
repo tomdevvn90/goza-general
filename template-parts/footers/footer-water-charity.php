@@ -15,7 +15,7 @@ if ($goza_sub_news_op) {
     $goza_newsletter_desc = $goza_sub_news_op['goza_newsletter_desc'];
     $goza_sc_sub_form = $goza_sub_news_op['goza_sc_sub_form'];
 }
-
+$goza_social_network = __get_field('goza_social_network', 'option');
 //copyright
 $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
 ?>
@@ -37,14 +37,16 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
             </div>
             <div class="col-xl-4 col-lg-5 main-footer-social">
                 <?php
-                if (have_rows('goza_social_network', 'option')) :
-                    echo '<ul class="main-footer-social-list">';
-                    while (have_rows('goza_social_network', 'option')) : the_row();
-                        $social_icon = get_sub_field('icon');
-                        $social_url = get_sub_field('url');
-                        echo '<li><a href="' . $social_url . '" target="_blank" class="social-'.$social_icon['value'].'" rel="nofollow"><i class="fa fa-' . $social_icon['value'] . '" aria-hidden="true"></i></a></li>';
-                    endwhile;
-                    echo '</ul>';
+                if (isset($goza_social_network) && !empty($goza_social_network)) :
+                    if (have_rows('goza_social_network', 'option')) :
+                        echo '<ul class="main-footer-social-list">';
+                        while (have_rows('goza_social_network', 'option')) : the_row();
+                            $social_icon = get_sub_field('icon');
+                            $social_url = get_sub_field('url');
+                            echo '<li><a href="' . $social_url . '" target="_blank" class="social-' . $social_icon['value'] . '" rel="nofollow"><i class="fa fa-' . $social_icon['value'] . '" aria-hidden="true"></i></a></li>';
+                        endwhile;
+                        echo '</ul>';
+                    endif;
                 endif;
                 ?>
             </div>
@@ -54,13 +56,15 @@ $goza_txt_copyright = __get_field('goza_txt_copyright', 'option');
         <?php } ?>
         <div class="main-footer-socket-menu">
             <?php
-            wp_nav_menu([
-                'theme_location' => 'privacy-menu',
-                'menu_class' => 'privacy-menu',
-                'container_class' => 'menu-container',
-                'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
-                'bootstrap' => false
-            ]);
+            if (has_nav_menu('privacy-menu')) {
+                wp_nav_menu([
+                    'theme_location' => 'privacy-menu',
+                    'menu_class' => 'privacy-menu',
+                    'container_class' => 'menu-container',
+                    'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
+                    'bootstrap' => false
+                ]);
+            }
             ?>
         </div>
     </div>

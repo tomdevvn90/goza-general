@@ -31,13 +31,15 @@ $goza_openning = __get_field('goza_openning', 'option');
          <div class="goza-header-main--menus">
             <div class="d-none d-lg-block goza-header-main--menu">
                <?php
-               wp_nav_menu([
-                  'theme_location' => 'main-menu',
-                  'menu_class' => 'main-menu',
-                  'container_class' => 'menu-container',
-                  'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
-                  'bootstrap' => false
-               ]);
+               if (has_nav_menu('main-menu')) {
+                  wp_nav_menu([
+                     'theme_location' => 'main-menu',
+                     'menu_class' => 'main-menu',
+                     'container_class' => 'menu-container',
+                     'items_wrap' => '<ul id="%1$s" class="%2$s navbar-nav">%3$s</ul>',
+                     'bootstrap' => false
+                  ]);
+               }
                ?>
             </div>
             <div class="goza-header-main--cta">
@@ -56,7 +58,7 @@ $goza_openning = __get_field('goza_openning', 'option');
 
                <?php if (isset($goza_email) && $goza_email) { ?>
                   <div class="d-none d-lg-block goza-header-info goza-header-email">
-                     <a href="mailto:<?= esc_attr($goza_email) ?>"><i class="fa fa-envelope-o"></i><span><?= esc_attr($goza_email) ?><span><?= esc_html__( 'online support', 'goza' ) ?></span></span></a>
+                     <a href="mailto:<?= esc_attr($goza_email) ?>"><i class="fa fa-envelope-o"></i><span><?= esc_attr($goza_email) ?><span><?= esc_html__('online support', 'goza') ?></span></span></a>
                   </div>
                <?php  } ?>
 
