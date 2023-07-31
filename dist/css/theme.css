@@ -22109,6 +22109,12 @@ h6 {
   border-bottom: 1px solid rgba(51, 51, 51, 0.05);
 }
 
+.wp-block-goza-blocks-goza-button.be-gz-last-btn-home {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
 .error404 {
   background: url(../images/background-page-404.jpg?f0ed61d9085e7796edc9ddb433e44ceb) center center/cover;
   background-attachment: fixed;

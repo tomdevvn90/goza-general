@@ -423,3 +423,12 @@
         }
     }
 }
+
+
+.wp-block-goza-blocks-goza-button{
+    &.be-gz-last-btn-home{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+}
