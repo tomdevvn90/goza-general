@@ -5718,6 +5718,25 @@
   text-decoration: none;
 }
 
+.be-post-slider-block.is-style-goza-charity .be-post-slider-block-inner .item-post-thumbnail {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 76%;
+  background: #e7e6e4;
+  z-index: 1;
+}
+
+.be-post-slider-block.is-style-goza-charity .be-post-slider-block-inner .item-post-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
+}
+
 .be-post-slider-block.is-style-goza-earthquake .be-post-slider-block-inner .item-post .item-post-inner {
   border-radius: 20px;
   overflow: hidden;
@@ -14708,7 +14727,7 @@
   }
 
   .be-give-form-box-block.is-style-default .give-form-box .give-box-button button.give-btn.give-btn-modal {
-    padding: 10px 10px;
+    padding: 10px 10px !important;
   }
 
   .be-give-form-box-block.is-style-default .give-form-box .give-box-button .give-box-button-social {
