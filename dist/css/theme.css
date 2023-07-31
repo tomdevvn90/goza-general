@@ -16999,6 +16999,12 @@ h6 {
   top: -5px;
 }
 
+@media (max-width: 767.98px) {
+  .site-header.site-header-default .goza-header-main--cta .goza-header-button-donate {
+    display: none;
+  }
+}
+
 .site-header.site-header-default .goza-header-main--cta .goza-header-button-donate button.give-btn.give-btn-modal {
   background: var(--link-color, #d41b65);
   color: #ebebeb;
