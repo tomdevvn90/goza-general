@@ -218,7 +218,13 @@
       }
       .give-box-button {
         display: block;
+        button.give-btn.give-btn-modal {
+          padding: 10px 10px;
+        }
         .give-box-button-social{
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
           ul.list-social-share{
             padding-left: 10px;
           }
@@ -345,9 +351,10 @@
   }
   @media only screen and (max-width: 767px) {
     .give-form-box{
+      padding: 40px 20px;
       .give-box-content {
         h2.give-box-heading{
-          font-size: 40px !important;
+          font-size: 35px !important;
         }
       }
       .give-box-button {

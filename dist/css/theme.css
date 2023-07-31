@@ -18344,7 +18344,8 @@ h6 {
 
 @media (max-width: 767.98px) {
   .site-header.site-header-earthquake .goza-header-main {
-    padding: 20px 0;
+    padding: 10px 0;
+    margin-top: 50px;
   }
 }
 
@@ -18456,6 +18457,12 @@ h6 {
 
 .site-header.site-header-earthquake .goza-header-main--menus .goza-header-button-donate button.give-btn.give-btn-modal:after {
   top: -35px;
+}
+
+@media (max-width: 991.98px) {
+  .site-header.site-header-earthquake .goza-header-main--menus .goza-header-button-donate button.give-btn.give-btn-modal {
+    display: none !important;
+  }
 }
 
 .site-header.site-header-earthquake .goza-header-main--menu .navbar-nav {
@@ -26659,6 +26666,10 @@ ul.be-list-ul li {
   .be-icon-box-block.is-style-4 .be-icon-box-block-inner .be-icon-box-block-inner--content {
     padding: 60px 20px 20px 20px;
   }
+
+  .be-icon-box-block.is-style-4 .be-icon-box-block-inner .be-icon-box-block--heading {
+    padding-right: 0px;
+  }
 }
 
 .be-icon-box-block.is-style-4 .be-icon-box-block-inner .be-icon-box-block--heading {
@@ -26679,9 +26690,9 @@ ul.be-list-ul li {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   .be-icon-box-block.is-style-4 .be-icon-box-block-inner .be-icon-box-block--heading {
-    padding-right: 0px;
+    padding-right: 60px;
   }
 }
 
@@ -34360,6 +34371,16 @@ ul.be-list-ul li {
     display: block;
   }
 
+  .be-give-form-box-block.is-style-default .give-form-box .give-box-button button.give-btn.give-btn-modal {
+    padding: 10px 10px;
+  }
+
+  .be-give-form-box-block.is-style-default .give-form-box .give-box-button .give-box-button-social {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
   .be-give-form-box-block.is-style-default .give-form-box .give-box-button .give-box-button-social ul.list-social-share {
     padding-left: 10px;
   }
@@ -34486,8 +34507,12 @@ ul.be-list-ul li {
 }
 
 @media only screen and (max-width: 767px) {
+  .be-give-form-box-block.is-style-2 .give-form-box {
+    padding: 40px 20px;
+  }
+
   .be-give-form-box-block.is-style-2 .give-form-box .give-box-content h2.give-box-heading {
-    font-size: 40px !important;
+    font-size: 35px !important;
   }
 
   .be-give-form-box-block.is-style-2 .give-form-box .give-box-button {

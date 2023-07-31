@@ -349,6 +349,9 @@
                 .be-icon-box-block-inner--content{
                     padding: 60px 20px 20px 20px;
                 }
+                .be-icon-box-block--heading{
+                    padding-right: 0px;
+                }
             }
 
             .be-icon-box-block--heading{
@@ -367,9 +370,9 @@
                     padding-right: 50px;
                 }
             }
-            @media (max-width: 992px) {
+            @media (max-width: 767px) {
                 .be-icon-box-block--heading{
-                    padding-right: 0px;
+                    padding-right: 60px;
                 }
             }
             .be-icon-box-block--subheading{
