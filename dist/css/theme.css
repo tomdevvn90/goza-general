@@ -18060,6 +18060,11 @@ h6 {
   }
 }
 
+.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
+  display: flex;
+  align-items: center;
+}
+
 .site-header.site-header-charity-organization {
   position: absolute;
   left: 0;
@@ -33906,10 +33911,6 @@ ul.be-list-ul li {
   min-height: 450px;
 }
 
-.be-count-down--bg {
-  min-height: 450px;
-}
-
 .be-count-down--bg img {
   -o-object-fit: cover;
   object-fit: cover;
@@ -33918,9 +33919,9 @@ ul.be-list-ul li {
   transition: 0.3s ease;
   -o-object-position: center;
   object-position: center;
+  min-height: 450px;
 }
 
-.be-count-down--bg,
 .be-count-down--content {
   position: absolute;
   left: 0;
