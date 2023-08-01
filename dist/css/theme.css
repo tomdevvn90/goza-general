@@ -18547,6 +18547,15 @@ h6 {
   color: #fff;
   background: #333;
   box-shadow: 0 0 26px 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-menu-mobile .off-canvas-menu-closed svg {
+  width: 100%;
+  height: auto;
+  max-width: 15px;
 }
 
 .site-menu-mobile-wrap-menu {
@@ -22115,6 +22124,12 @@ ul.be-list-ul li {
   .be-section-together-col2 .be-charity2-video {
     height: 130px !important;
     justify-content: center;
+  }
+}
+
+@media (min-width: 782px) and (max-width: 991.98px) {
+  .wp-block-goza-blocks-goza-button.be-gz-dream-btn-last-home .wp-block-goza-button_link {
+    font-size: 16px !important;
   }
 }
 

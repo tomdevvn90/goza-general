@@ -44,6 +44,14 @@
         color: #fff;
         background: #333;
         box-shadow: 0 0 26px 3px rgba(0, 0, 0, .3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg{
+            width: 100%;
+            height: auto;
+            max-width: 15px;
+        }
     }
 
     &-wrap-menu {
