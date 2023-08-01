@@ -3,8 +3,6 @@
 
     const beEventsCarousel = () =>{
 
-        console.log("vvv")
-
         const $block = $('.be-events-carousel');
 		if ($block.length === 0) return;
 
