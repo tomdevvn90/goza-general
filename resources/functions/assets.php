@@ -29,6 +29,7 @@ add_action('wp_enqueue_scripts', function () {
 
 	$upload_dir = wp_upload_dir();
 
+	wp_enqueue_style('theme-font', THEME_URI . '/resources/assets/fonts/fonts.css', [], THEME_VERSION);
 	//Global
 	wp_enqueue_style('goza-theme-general-styles', $upload_dir['baseurl'] . '/styles_uploads/variable-css.css', [], THEME_VERSION);
 	if (isset($_GET['home'])) {
