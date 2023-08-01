@@ -59,7 +59,7 @@ $gp_categories     = __get_field('gp_categories') ?: '';
          echo '<div class="be-grid-post__list">';
          while ($the_query->have_posts()) {
             $the_query->the_post();
-            $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+            $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full') ?: 'https://placehold.co/600x400?text=Hello+World';
       ?>
             <div class="be-grid-post__item">
                <a href="<?php echo esc_url(get_permalink()) ?>" class="be-grid-post__item-image">
