@@ -16928,8 +16928,7 @@ h6 {
   justify-content: space-between;
 }
 
-.site-header.site-header-default .goza-header-main--menu .navbar-nav,
-.site-header.site-header-default .goza-header-main--menu ul {
+.site-header.site-header-default .goza-header-main--menu .navbar-nav {
   display: flex;
   align-items: center;
   padding: 0;
@@ -16938,8 +16937,7 @@ h6 {
   gap: 35px;
 }
 
-.site-header.site-header-default .goza-header-main--menu .navbar-nav > li > a,
-.site-header.site-header-default .goza-header-main--menu ul > li > a {
+.site-header.site-header-default .goza-header-main--menu .navbar-nav > li > a {
   position: relative;
   display: block;
   text-decoration: none;
@@ -16953,13 +16951,11 @@ h6 {
   font-family: var(--heading-family, Poppins, sans-serif);
 }
 
-.site-header.site-header-default .goza-header-main--menu .navbar-nav > li > a:hover,
-.site-header.site-header-default .goza-header-main--menu ul > li > a:hover {
+.site-header.site-header-default .goza-header-main--menu .navbar-nav > li > a:hover {
   color: var(--link-color, #d41b65);
 }
 
-.site-header.site-header-default .goza-header-main--menu .navbar-nav > li > a.dropdown-toggle::after,
-.site-header.site-header-default .goza-header-main--menu ul > li > a.dropdown-toggle::after {
+.site-header.site-header-default .goza-header-main--menu .navbar-nav > li > a.dropdown-toggle::after {
   display: none;
 }
 
@@ -17493,8 +17489,7 @@ h6 {
   background-color: var(--header-bg-menu-color, #213e8c);
 }
 
-.site-header.site-header-menu-center .goza-header-menus .navbar-nav,
-.site-header.site-header-menu-center .goza-header-menus ul {
+.site-header.site-header-menu-center .goza-header-menus .navbar-nav {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17504,8 +17499,7 @@ h6 {
   gap: 35px;
 }
 
-.site-header.site-header-menu-center .goza-header-menus .navbar-nav > li > a,
-.site-header.site-header-menu-center .goza-header-menus ul > li > a {
+.site-header.site-header-menu-center .goza-header-menus .navbar-nav > li > a {
   position: relative;
   display: block;
   text-decoration: none;
@@ -17520,13 +17514,11 @@ h6 {
   font-family: var(--heading-family, Fira Sans, sans-serif);
 }
 
-.site-header.site-header-menu-center .goza-header-menus .navbar-nav > li > a:hover,
-.site-header.site-header-menu-center .goza-header-menus ul > li > a:hover {
+.site-header.site-header-menu-center .goza-header-menus .navbar-nav > li > a:hover {
   color: var(--link-color, #ec5e87);
 }
 
-.site-header.site-header-menu-center .goza-header-menus .navbar-nav > li > a.dropdown-toggle::after,
-.site-header.site-header-menu-center .goza-header-menus ul > li > a.dropdown-toggle::after {
+.site-header.site-header-menu-center .goza-header-menus .navbar-nav > li > a.dropdown-toggle::after {
   display: none;
 }
 
@@ -17581,8 +17573,7 @@ h6 {
   justify-content: space-between;
 }
 
-.site-header.site-header-charity .goza-header-main--menu .navbar-nav,
-.site-header.site-header-charity .goza-header-main--menu ul {
+.site-header.site-header-charity .goza-header-main--menu .navbar-nav {
   display: flex;
   align-items: center;
   padding: 0;
@@ -17591,8 +17582,7 @@ h6 {
   gap: 25px;
 }
 
-.site-header.site-header-charity .goza-header-main--menu .navbar-nav > li > a,
-.site-header.site-header-charity .goza-header-main--menu ul > li > a {
+.site-header.site-header-charity .goza-header-main--menu .navbar-nav > li > a {
   position: relative;
   display: block;
   text-decoration: none;
@@ -17606,13 +17596,11 @@ h6 {
   transition: 0.3s;
 }
 
-.site-header.site-header-charity .goza-header-main--menu .navbar-nav > li > a:hover,
-.site-header.site-header-charity .goza-header-main--menu ul > li > a:hover {
+.site-header.site-header-charity .goza-header-main--menu .navbar-nav > li > a:hover {
   color: var(--link-color-hover, rgb(113, 182, 27));
 }
 
-.site-header.site-header-charity .goza-header-main--menu .navbar-nav > li > a.dropdown-toggle::after,
-.site-header.site-header-charity .goza-header-main--menu ul > li > a.dropdown-toggle::after {
+.site-header.site-header-charity .goza-header-main--menu .navbar-nav > li > a.dropdown-toggle::after {
   display: none;
 }
 
@@ -18144,8 +18132,7 @@ h6 {
   justify-content: space-between;
 }
 
-.site-header.site-header-charity-organization .goza-header-main--menu .navbar-nav,
-.site-header.site-header-charity-organization .goza-header-main--menu ul {
+.site-header.site-header-charity-organization .goza-header-main--menu .navbar-nav {
   display: flex;
   align-items: center;
   padding: 0;
@@ -18155,14 +18142,12 @@ h6 {
 }
 
 @media (max-width: 1399.98px) {
-  .site-header.site-header-charity-organization .goza-header-main--menu .navbar-nav,
-  .site-header.site-header-charity-organization .goza-header-main--menu ul {
+  .site-header.site-header-charity-organization .goza-header-main--menu .navbar-nav {
     gap: 23px;
   }
 }
 
-.site-header.site-header-charity-organization .goza-header-main--menu .navbar-nav > li > a,
-.site-header.site-header-charity-organization .goza-header-main--menu ul > li > a {
+.site-header.site-header-charity-organization .goza-header-main--menu .navbar-nav > li > a {
   position: relative;
   display: block;
   text-decoration: none;
@@ -18176,13 +18161,11 @@ h6 {
   transition: 0.3s;
 }
 
-.site-header.site-header-charity-organization .goza-header-main--menu .navbar-nav > li > a:hover,
-.site-header.site-header-charity-organization .goza-header-main--menu ul > li > a:hover {
+.site-header.site-header-charity-organization .goza-header-main--menu .navbar-nav > li > a:hover {
   color: var(--link-color-hover, #32cbfe);
 }
 
-.site-header.site-header-charity-organization .goza-header-main--menu .navbar-nav > li > a.dropdown-toggle::after,
-.site-header.site-header-charity-organization .goza-header-main--menu ul > li > a.dropdown-toggle::after {
+.site-header.site-header-charity-organization .goza-header-main--menu .navbar-nav > li > a.dropdown-toggle::after {
   display: none;
 }
 
@@ -18693,8 +18676,7 @@ h6 {
   }
 }
 
-.site-header.site-header-charity-new .goza-header-main--menu .navbar-nav,
-.site-header.site-header-charity-new .goza-header-main--menu ul {
+.site-header.site-header-charity-new .goza-header-main--menu .navbar-nav {
   display: flex;
   align-items: center;
   padding: 0;
@@ -18703,8 +18685,7 @@ h6 {
   gap: 35px;
 }
 
-.site-header.site-header-charity-new .goza-header-main--menu .navbar-nav > li > a,
-.site-header.site-header-charity-new .goza-header-main--menu ul > li > a {
+.site-header.site-header-charity-new .goza-header-main--menu .navbar-nav > li > a {
   position: relative;
   display: block;
   text-decoration: none;
@@ -18718,18 +18699,15 @@ h6 {
   transition: 0.3s;
 }
 
-.site-header.site-header-charity-new .goza-header-main--menu .navbar-nav > li > a:hover,
-.site-header.site-header-charity-new .goza-header-main--menu ul > li > a:hover {
+.site-header.site-header-charity-new .goza-header-main--menu .navbar-nav > li > a:hover {
   color: var(--link-color-hover, #71b61b);
 }
 
-.site-header.site-header-charity-new .goza-header-main--menu .navbar-nav > li > a.dropdown-toggle::after,
-.site-header.site-header-charity-new .goza-header-main--menu ul > li > a.dropdown-toggle::after {
+.site-header.site-header-charity-new .goza-header-main--menu .navbar-nav > li > a.dropdown-toggle::after {
   display: none;
 }
 
-.site-header.site-header-charity-new .goza-header-main--menu .navbar-nav > li ul li a,
-.site-header.site-header-charity-new .goza-header-main--menu ul > li ul li a {
+.site-header.site-header-charity-new .goza-header-main--menu .navbar-nav > li ul li a {
   font-family: "Montserrat";
   letter-spacing: 0px;
   font-style: normal;
