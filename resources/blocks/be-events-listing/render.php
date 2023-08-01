@@ -40,17 +40,21 @@ $the_query = new WP_Query($args);
 ?>
 
 <div id="<?php echo $id; ?>" class="be-events-listing-block <?php echo $align_class ?> <?php echo $classes ?>" style="--title-color:<?= esc_attr($ev_heading_color) ?>; --desc-color : <?= esc_attr($ev_desc_color) ?>">
-   <?php if ($the_query->have_posts()) { ?>
-      <div class="be-events-listing-block-inner">
-         <?php while ($the_query->have_posts()) {
-            $the_query->the_post();
-            be_item_event($classes);
-         } ?>
-      </div>
+   <?php if (is_plugin_active('the-events-calendar/the-events-calendar.php')) { ?>
+      <?php if ($the_query->have_posts()) { ?>
+         <div class="be-events-listing-block-inner">
+            <?php while ($the_query->have_posts()) {
+               $the_query->the_post();
+               be_item_event($classes);
+            } ?>
+         </div>
+      <?php } else {
+         echo '<div class="be-not-found">No results found.</div>';
+      }
+      ?>
    <?php } else {
-      echo '<div class="be-not-found">No results found.</div>';
-   }
-   ?>
+      echo '<div class="required-text" style="padding: 30px 0;">This block require The Events Calendar plugin. Please install follow link <a href="https://wordpress.org/plugins/the-events-calendar/" target="_blank">here</div>';
+   } ?>
 </div>
 <?php
 wp_reset_postdata();
