@@ -32,7 +32,7 @@ $bnc_icon            = __get_field('bnc_icon') ?: '';
 $bnc_title           = __get_field('bnc_title') ?: '';
 $bnc_desc            = __get_field('bnc_desc') ?: '';
 $bnc_cta             = __get_field('bnc_cta') ?: [];
-$bnc_bg_img          = __get_field('bnc_bg_img');
+$bnc_bg_img          = __get_field('bnc_bg_img') ?: ['url' => 'https://picsum.photos/1920/400'];
 $bnc_bg_color        = __get_field('bnc_bg_color') ?: '';
 $bnc_bg_color_box    = __get_field('bnc_bg_color_box') ?: '';
 $bnc_txt_color       = __get_field('bnc_txt_color') ?: '';

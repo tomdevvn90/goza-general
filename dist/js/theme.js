@@ -52,7 +52,6 @@ beCounterBox();
   "use strict";
 
   var beEventsCarousel = function beEventsCarousel() {
-    console.log("vvv");
     var $block = $('.be-events-carousel');
     if ($block.length === 0) return;
     $block.each(function () {
@@ -1144,7 +1143,6 @@ __webpack_require__.r(__webpack_exports__);
       }, 1000);
     }
   };
-  $(document).ready(function () {});
   $(window).on("load", function () {
     //preloader
     var $PRELOADER = $('.goza-preloader');
@@ -1351,12 +1349,15 @@ aos__WEBPACK_IMPORTED_MODULE_6___default.a.init({
   disable: 'mobile'
 });
 $(document).ready(function () {
-  aos__WEBPACK_IMPORTED_MODULE_6___default.a.refresh();
   var el = document.querySelector('.counterUp');
+  if (el === null) return;
   counterup2__WEBPACK_IMPORTED_MODULE_1___default()(el, {
     duration: 2000,
     delay: 100
   });
+});
+$(document).on("load", function () {
+  aos__WEBPACK_IMPORTED_MODULE_6___default.a.refresh();
 });
 
 

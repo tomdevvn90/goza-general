@@ -19,14 +19,17 @@ AOS.init({
 
 
 $(document).ready(function () {
-    AOS.refresh();
-
     const el = document.querySelector('.counterUp')
+    if (el === null) return;
     counterUp(el, {
         duration: 2000,
         delay: 100,
     })
 });
+
+$(document).on("load", function () { 
+    AOS.refresh();
+})
 
 import './blocks/progressbar-block';
 import './blocks/team-carousel';
