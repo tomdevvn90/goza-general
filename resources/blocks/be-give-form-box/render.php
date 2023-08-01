@@ -5,7 +5,7 @@ $id = 'be-give-form-box-' . $block['id'];
 
 // create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
-$bgImage = (!empty(get_field('be_background_form'))) ? get_field('be_background_form') : '';
+$bgImage = (!empty(__get_field('be_background_form'))) ? __get_field('be_background_form') : '';
 $is_style = isset($block['className']) ? $block['className'] : "is-style-default";
 //var_dump($be_donation_form);
 ?>

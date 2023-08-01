@@ -9,7 +9,7 @@ if (is_plugin_active('the-events-calendar/the-events-calendar.php')) {
    $is_style    = isset($block['className']) ? $block['className'] : "is-style-default";
 
    // ACF field variables
-   $ev_select = get_field('event_sg_ev') ?: '';
+   $ev_select = __get_field('event_sg_ev') ?: '';
 
    $args = array(
       'post_type' => 'tribe_events',

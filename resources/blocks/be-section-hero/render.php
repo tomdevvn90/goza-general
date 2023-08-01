@@ -4,17 +4,17 @@ $id = 'be-ss-hero-'.$block['id'];
 // create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
-$min_height = get_field('min_height_ss_hero');
-$bg = get_field('bg_ss_hero');
-$bg_color = get_field('bg_color_ss_hero');
-$bg_overlay_color = get_field('bg_overlay_color_ss_hero');
-$bg_overlay_opacity = get_field('bg_overlay_opacity_ss_hero');
-$content_alignmnet = get_field('content_alignmnet_ss_hero');
-$icon = get_field('icon_ss_hero');
-$heading = get_field('heading_ss_hero');
-$heading_color = get_field('heading_color_ss_hero');
-$heading_font_size = get_field('heading_font_size_ss_hero');
-$breadcrumb_color = get_field('breadcrumb_color_ss_hero');
+$min_height = __get_field('min_height_ss_hero');
+$bg = __get_field('bg_ss_hero');
+$bg_color = __get_field('bg_color_ss_hero');
+$bg_overlay_color = __get_field('bg_overlay_color_ss_hero');
+$bg_overlay_opacity = __get_field('bg_overlay_opacity_ss_hero');
+$content_alignmnet = __get_field('content_alignmnet_ss_hero');
+$icon = __get_field('icon_ss_hero');
+$heading = __get_field('heading_ss_hero');
+$heading_color = __get_field('heading_color_ss_hero');
+$heading_font_size = __get_field('heading_font_size_ss_hero');
+$breadcrumb_color = __get_field('breadcrumb_color_ss_hero');
 
 $min_height_style = !empty( $min_height )? 'min-height: '.$min_height.'px;' : '';
 $bg_image_style = !empty( $bg['url'] )? 'background-image: url('.$bg['url'].');' : '';

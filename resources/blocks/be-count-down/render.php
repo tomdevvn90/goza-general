@@ -5,22 +5,22 @@ $id = 'be-count-down-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field
-$link_op = get_field('goza_link_color_op', 'option') ? : '';
+$link_op = __get_field('goza_link_color_op', 'option') ? : '';
 if(!empty($link_op) && isset($link_op)){
     $link_color = $link_op['link_color'];
 }
 
 // ACF field tab General
-$count_down = get_field('time_count_down_bl') ? : '';
-$bg         = get_field('bg_count_down_bl') ? : 'https://picsum.photos/1920/900?1';
+$count_down = __get_field('time_count_down_bl') ? : '';
+$bg         = __get_field('bg_count_down_bl') ? : 'https://picsum.photos/1920/900?1';
 $time_now   = time();
 $timestamp  = strtotime($count_down);
 $distance   = $timestamp - $time_now;
 
 // ACF field tab Styles
-$color_heading = get_field('color_hd_count_down_bl') ? : '#000';
-$color_number  = get_field('color_nb_count_down_bl') ? : $link_color;
-$height        = get_field('height_count_down_bl') ? : '';
+$color_heading = __get_field('color_hd_count_down_bl') ? : '#000';
+$color_number  = __get_field('color_nb_count_down_bl') ? : $link_color;
+$height        = __get_field('height_count_down_bl') ? : '';
 ?>
 
 <div id="<?php echo $id; ?>" class="be-count-down <?php echo $align_class; ?>" style="min-height:<?= $height ?>">

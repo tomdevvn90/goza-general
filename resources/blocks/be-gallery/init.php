@@ -17,7 +17,7 @@ function load_template_gallerys($classes){
 
 
 function be_tempplate_gallery_default(){
-    $gallerys = get_field('items_gallery_bl');
+    $gallerys = __get_field('items_gallery_bl');
     ?>
     <?php foreach ($gallerys as $key => $value) : ?>
         <?php 
@@ -38,7 +38,7 @@ function be_tempplate_gallery_default(){
 
 
 function be_tempplate_gallery_water_charity(){
-    $gallerys = get_field('items_gallery_bl');
+    $gallerys = __get_field('items_gallery_bl');
     ?>
     <?php foreach ($gallerys as $key => $value) : ?>
         <?php 
@@ -64,7 +64,7 @@ function be_tempplate_gallery_water_charity(){
 
 
 function be_tempplate_charity_organization(){
-    $gallerys = get_field('items_gallery_bl');
+    $gallerys = __get_field('items_gallery_bl');
     ?>
     <?php foreach ($gallerys as $key => $value) : ?>
         <?php

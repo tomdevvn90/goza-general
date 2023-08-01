@@ -1,8 +1,8 @@
 
 <?php
 
-    $icon_field_option = get_field('goza_single_icon', 'option')? get_field('goza_single_icon', 'option') : get_template_directory_uri(). '/resources/assets/images/leaf-solid.png';
-    $bg_field_option = get_field('goza_single_bg_image', 'option');
+    $icon_field_option = __get_field('goza_single_icon', 'option')? __get_field('goza_single_icon', 'option') : get_template_directory_uri(). '/resources/assets/images/leaf-solid.png';
+    $bg_field_option = __get_field('goza_single_bg_image', 'option');
 
     $heading = get_the_title();
     $bg_image_style = !empty( $bg_field_option )? 'background-image: url('.$bg_field_option.');' : '';

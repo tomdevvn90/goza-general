@@ -3,19 +3,19 @@
 $id = 'be-progressbar-' . $block['id'];
 
 // ACF field
-$link_op = get_field('goza_link_color_op', 'option') ? : '';
+$link_op = __get_field('goza_link_color_op', 'option') ? : '';
 if(!empty($link_op) && isset($link_op)){
     $link_color = $link_op['link_color'] ? : '#ec5e87';
 }
 
-$shape    = get_field('shape_pb_bl') ? : 'line';
-$value    = get_field('value_pb_bl') ? : 0;
-$text     = get_field('text_pb_bl') ? : '';
-$height   = get_field('height_pb_bl') ? : 0;
-$strokeCl = get_field('stroke_color_pb_bl') ? : $link_color;
-$trailCl  = get_field('trail_color_pb_bl') ? : '#000';
-$size     = get_field('size_pb_bl') ? : '';
-$duration = get_field('duration_pb_bl') ? : 1200;
+$shape    = __get_field('shape_pb_bl') ? : 'line';
+$value    = __get_field('value_pb_bl') ? : 0;
+$text     = __get_field('text_pb_bl') ? : '';
+$height   = __get_field('height_pb_bl') ? : 0;
+$strokeCl = __get_field('stroke_color_pb_bl') ? : $link_color;
+$trailCl  = __get_field('trail_color_pb_bl') ? : '#000';
+$size     = __get_field('size_pb_bl') ? : '';
+$duration = __get_field('duration_pb_bl') ? : 1200;
 $pgID     = uniqid();
 ?>
 

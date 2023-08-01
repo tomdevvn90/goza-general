@@ -4,13 +4,13 @@ $id = 'be-ss-hero-'.$block['id'];
 // create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
-$infomation_list = get_field('infomation_list_block');
+$infomation_list = __get_field('infomation_list_block');
 
-$info_bg_color = get_field('infomation_bg_color_block');
-$info_text_color = get_field('text_color_infomation_block');
-$info_margin_top = get_field('margin_top_infomation_block');
-$info_box_shadow = get_field('box_shadow_infomation_block');
-$info_animation = get_field('animation_infomation_block');
+$info_bg_color = __get_field('infomation_bg_color_block');
+$info_text_color = __get_field('text_color_infomation_block');
+$info_margin_top = __get_field('margin_top_infomation_block');
+$info_box_shadow = __get_field('box_shadow_infomation_block');
+$info_animation = __get_field('animation_infomation_block');
 
 $info_bg_color_style = !empty($info_bg_color)? 'background-color:'.$info_bg_color.';' : '';
 $info_text_color_style = !empty($info_text_color)? 'color:'.$info_text_color.';' : '';

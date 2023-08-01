@@ -18,11 +18,11 @@ function be_recent_post_render_template($is_style){
 }
 
 function be_template_recent_post_default(){
-    $display_author  = ( get_field('display_author_name_recent_posts') )? get_field('display_author_name_recent_posts') : '';
-    $display_date    = ( get_field('display_date_recent_posts') )? get_field('display_date_recent_posts') : '';
-    $display_excerpt = ( get_field('display_excerpt_recent_posts') )? get_field('display_excerpt_recent_posts') : '';
-    $display_featured_image = ( get_field('display_featured_image_recent_posts') )? get_field('display_featured_image_recent_posts') : '';
-    $image_size = get_field('image_size_recent_posts')? get_field('image_size_recent_posts') : 'small';
+    $display_author  = ( __get_field('display_author_name_recent_posts') )? __get_field('display_author_name_recent_posts') : '';
+    $display_date    = ( __get_field('display_date_recent_posts') )? __get_field('display_date_recent_posts') : '';
+    $display_excerpt = ( __get_field('display_excerpt_recent_posts') )? __get_field('display_excerpt_recent_posts') : '';
+    $display_featured_image = ( __get_field('display_featured_image_recent_posts') )? __get_field('display_featured_image_recent_posts') : '';
+    $image_size = __get_field('image_size_recent_posts')? __get_field('image_size_recent_posts') : 'small';
 
     $post_id     = get_the_ID();
     $thumbnail   = get_the_post_thumbnail( );
@@ -73,7 +73,7 @@ function be_template_recent_post_default(){
 
 
 function be_template_recent_post_water_charity(){
-    $display_date  = ( get_field('display_date_recent_posts') )? get_field('display_date_recent_posts') : '';
+    $display_date  = ( __get_field('display_date_recent_posts') )? __get_field('display_date_recent_posts') : '';
     $comment       = get_comments_number();
     $post_date     = get_the_date('d M, Y');
     ?>
@@ -100,11 +100,11 @@ function be_template_recent_post_water_charity(){
 <?php }
 
 function be_template_recent_post_goza_charity_2(){
-    $display_author  = ( get_field('display_author_name_recent_posts') )? get_field('display_author_name_recent_posts') : '';
-    $display_date    = ( get_field('display_date_recent_posts') )? get_field('display_date_recent_posts') : '';
-    $display_excerpt = ( get_field('display_excerpt_recent_posts') )? get_field('display_excerpt_recent_posts') : '';
-    $display_featured_image = ( get_field('display_featured_image_recent_posts') )? get_field('display_featured_image_recent_posts') : '';
-    $image_size = get_field('image_size_recent_posts')? get_field('image_size_recent_posts') : 'small';
+    $display_author  = ( __get_field('display_author_name_recent_posts') )? __get_field('display_author_name_recent_posts') : '';
+    $display_date    = ( __get_field('display_date_recent_posts') )? __get_field('display_date_recent_posts') : '';
+    $display_excerpt = ( __get_field('display_excerpt_recent_posts') )? __get_field('display_excerpt_recent_posts') : '';
+    $display_featured_image = ( __get_field('display_featured_image_recent_posts') )? __get_field('display_featured_image_recent_posts') : '';
+    $image_size = __get_field('image_size_recent_posts')? __get_field('image_size_recent_posts') : 'small';
 
     $post_id     = get_the_ID();
     $thumbnail   = get_the_post_thumbnail( );

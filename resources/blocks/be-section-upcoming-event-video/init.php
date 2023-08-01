@@ -1,7 +1,7 @@
 <?php
 function be_events_listing(){
-    $events_query  = (!empty(get_field('query_event_ss_up_ev_vd'))) ? get_field('query_event_ss_up_ev_vd') : '';
-    $cta_style     = get_field('bnc_style_ss_up_ev_vd') ?: 'btn-default';
+    $events_query  = (!empty(__get_field('query_event_ss_up_ev_vd'))) ? __get_field('query_event_ss_up_ev_vd') : '';
+    $cta_style     = __get_field('bnc_style_ss_up_ev_vd') ?: 'btn-default';
    
     $args = [
         'post_type'   => 'tribe_events',

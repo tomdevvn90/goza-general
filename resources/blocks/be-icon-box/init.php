@@ -10,13 +10,13 @@ function be_item_icon_box($block){
     $heading_color      = isset($typography_heading['heading_color']) ? $typography_heading['heading_color'] : '#333';
 
     // ACF field variables
-    $heading     = get_field('heading_icon_box');
-    $link        = get_field('link_icon_box');
-    $icon        = (!empty(get_field('icon__icon_box'))) ? get_field('icon__icon_box') : get_template_directory_uri(). '/resources/assets/images/icon-box-default.svg' ;
-    $button      = get_field('button_icon_box');
-    $subheading  = get_field('subheading_icon_box');
-    $hd_color    = get_field('hd_color_ibx') ? : $heading_color;
-    $sub_hd_cl   = get_field('hd_color_ibx') ? : $body_color;
+    $heading     = __get_field('heading_icon_box');
+    $link        = __get_field('link_icon_box');
+    $icon        = (!empty(__get_field('icon__icon_box'))) ? __get_field('icon__icon_box') : get_template_directory_uri(). '/resources/assets/images/icon-box-default.svg' ;
+    $button      = __get_field('button_icon_box');
+    $subheading  = __get_field('subheading_icon_box');
+    $hd_color    = __get_field('hd_color_ibx') ? : $heading_color;
+    $sub_hd_cl   = __get_field('hd_color_ibx') ? : $body_color;
    
     switch ($is_style) {
         case strpos($is_style, 'is-style-2') !== false:       

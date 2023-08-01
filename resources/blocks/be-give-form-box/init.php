@@ -2,10 +2,10 @@
 function be_item_give_form_box($block){
     $is_style = (isset($block['className']) && !empty($block['className'])) ? $block['className'] : "is-style-default";
    //ACF field variables
-    $be_donation_form = get_field('be_donation_form');
-    $be_sub_heading = get_field('be_sub_heading');
-    $be_heading_form = get_field('be_heading_form');
-    $be_description_form = get_field('be_description_form');
+    $be_donation_form = __get_field('be_donation_form');
+    $be_sub_heading = __get_field('be_sub_heading');
+    $be_heading_form = __get_field('be_heading_form');
+    $be_description_form = __get_field('be_description_form');
 
     $goal_option = get_post_meta( $be_donation_form, '_give_goal_option', true );
     $form        = new Give_Donate_Form( $be_donation_form );
@@ -94,7 +94,7 @@ function be_template_give_form_box_default($be_sub_heading, $be_heading_form, $b
         <div class="give-box-button-social">
             <span><?php echo __( 'Share Us At:', 'goza'); ?></span>
             <?php
-            $be_form_social_share = get_field('be_form_social_share');
+            $be_form_social_share = __get_field('be_form_social_share');
             if( $be_form_social_share ): ?>
             <ul class="list-social-share">
                 <?php foreach( $be_form_social_share as $social ): ?>

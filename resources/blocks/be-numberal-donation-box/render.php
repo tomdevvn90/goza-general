@@ -4,18 +4,18 @@
 $id = 'be-numberal-donation-box-' . $block['id'];
 
 // ACF field variables
-$counters      = (!empty(get_field('counter_numberal_donation_box'))) ? get_field('counter_numberal_donation_box') : '';
-$pg_value      =  get_field('value_progressbar_donation_box') ?: '';
-$pg_desc       =  get_field('desc_progressbar_donation_box') ?: '';
-$strokecolor   =  get_field('strokecolor_progressbar_donation_box') ?: '#fff';
-$trailcolor    =  get_field('trailcolor_progressbar_donation_box') ?: '#000';
-$pg_duration   =  get_field('duration_progressbar_donation_box') ?: '1400';
-$pg_bg         =  get_field('bg_progressbar_donation_box') ?: get_template_directory_uri(). '/resources/assets/images/bg-progressbar_donation_box_default.png';
-$cta_donation  = (!empty(get_field('cta_donation_numberal_donation_box'))) ? get_field('cta_donation_numberal_donation_box') : '';
-$cta_valunteer = (!empty(get_field('cta_valunteer_numberal_donation_box'))) ? get_field('cta_valunteer_numberal_donation_box') : '';
-$cta_style     = get_field('style_cta_numberal_donation_box') ?: 'btn-default';
+$counters      = (!empty(__get_field('counter_numberal_donation_box'))) ? __get_field('counter_numberal_donation_box') : '';
+$pg_value      =  __get_field('value_progressbar_donation_box') ?: '';
+$pg_desc       =  __get_field('desc_progressbar_donation_box') ?: '';
+$strokecolor   =  __get_field('strokecolor_progressbar_donation_box') ?: '#fff';
+$trailcolor    =  __get_field('trailcolor_progressbar_donation_box') ?: '#000';
+$pg_duration   =  __get_field('duration_progressbar_donation_box') ?: '1400';
+$pg_bg         =  __get_field('bg_progressbar_donation_box') ?: get_template_directory_uri(). '/resources/assets/images/bg-progressbar_donation_box_default.png';
+$cta_donation  = (!empty(__get_field('cta_donation_numberal_donation_box'))) ? __get_field('cta_donation_numberal_donation_box') : '';
+$cta_valunteer = (!empty(__get_field('cta_valunteer_numberal_donation_box'))) ? __get_field('cta_valunteer_numberal_donation_box') : '';
+$cta_style     = __get_field('style_cta_numberal_donation_box') ?: 'btn-default';
 $btn_animation = (!empty($general['animation_button'])) ? $general['animation_button'] : '';
-$bg            = (!empty(get_field('bg_numberal_donation_box'))) ? get_field('bg_numberal_donation_box') : get_template_directory_uri(). '/resources/assets/images/bg-number-box-default.jpg';
+$bg            = (!empty(__get_field('bg_numberal_donation_box'))) ? __get_field('bg_numberal_donation_box') : get_template_directory_uri(). '/resources/assets/images/bg-number-box-default.jpg';
 ?>
 
 <div id="<?php echo $id; ?>" class="be-numberal-donation-box" style="background-image:url('<?php echo $bg ?>')">   
@@ -46,7 +46,7 @@ $bg            = (!empty(get_field('bg_numberal_donation_box'))) ? get_field('bg
       <?php if(!empty($counters)){ ?>
          <div class="be-numberal-donation-box--list-item"> 
             <?php 
-               $st_counter = (!empty(get_field('settings_counter_numberal_donation_box'))) ? get_field('settings_counter_numberal_donation_box') : '';
+               $st_counter = (!empty(__get_field('settings_counter_numberal_donation_box'))) ? __get_field('settings_counter_numberal_donation_box') : '';
                $duration   =  $st_counter['duration'] ?: 1000;
                $delay      =  $st_counter['delay'] ?: 800;
             ?>

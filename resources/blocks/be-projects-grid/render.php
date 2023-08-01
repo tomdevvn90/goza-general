@@ -6,11 +6,11 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // layput
 
-$columns = get_field('columns_projects_grid');
-$columns_tablet = get_field('columns_tablet_projects_grid');
-$columns_mobile = get_field('columns_mobile_projects_grid');
-$column_gap = get_field('column_gap_projects_grid');
-$row_gap = get_field('row_gap_projects_grid');
+$columns = __get_field('columns_projects_grid');
+$columns_tablet = __get_field('columns_tablet_projects_grid');
+$columns_mobile = __get_field('columns_mobile_projects_grid');
+$column_gap = __get_field('column_gap_projects_grid');
+$row_gap = __get_field('row_gap_projects_grid');
 
 $columns_style = !empty( $columns )? '--columns-project-grid:'.$columns.';' : '';
 $columns_tablet_style = !empty( $columns_tablet )?'--columns-project-grid-tablet:'.$columns_tablet.';' : '';
@@ -21,10 +21,10 @@ $row_gap_style = !empty( $row_gap )? '--row-project-grid-gap:'.$row_gap.'px;' : 
 $columns_variables = $columns_style.$columns_tablet_style.$columns_mobile_style.$column_gap_style.$row_gap_style;
 
 // styles
-$bg_color = get_field('bg_color_projects_grid');
-$title_color = get_field('title_color_projects_grid');
-$excerpt_color = get_field('excerpt_color_projects_grid');
-$button_color = get_field('button_color_projects_grid');
+$bg_color = __get_field('bg_color_projects_grid');
+$title_color = __get_field('title_color_projects_grid');
+$excerpt_color = __get_field('excerpt_color_projects_grid');
+$button_color = __get_field('button_color_projects_grid');
 
 $bg_color_style = !empty( $bg_color )? '--bg-color-project-grid:'.$bg_color.';' : '';
 $title_color_style = !empty( $title_color )? '--title-color-project-grid:'.$title_color.';' : '';
@@ -33,11 +33,11 @@ $button_color_style = !empty( $button_color )? '--btn-color-project-grid:'.$butt
 
 $color_variables = $bg_color_style.$title_color_style.$excerpt_color_style.$button_color_style;
 // option query fields
-$posts_per_page = !empty( get_field('posts_per_page_projects_grid') )? get_field('posts_per_page_projects_grid') : get_option('posts_per_page');
-$order = get_field('order_projects_grid') ? get_field('order_projects_grid') : 'desc';
-$orderby = get_field('orderby_projects_grid') ? get_field('orderby_projects_grid') : 'date';
-$loadmore = get_field('loadmore_projects_grid') ? get_field('loadmore_projects_grid') : false;
-$loadmore_text = get_field('loadmore_text_projects_grid') ? get_field('loadmore_text_projects_grid') : __('View More', 'goza');
+$posts_per_page = !empty( __get_field('posts_per_page_projects_grid') )? __get_field('posts_per_page_projects_grid') : get_option('posts_per_page');
+$order = __get_field('order_projects_grid') ? __get_field('order_projects_grid') : 'desc';
+$orderby = __get_field('orderby_projects_grid') ? __get_field('orderby_projects_grid') : 'date';
+$loadmore = __get_field('loadmore_projects_grid') ? __get_field('loadmore_projects_grid') : false;
+$loadmore_text = __get_field('loadmore_text_projects_grid') ? __get_field('loadmore_text_projects_grid') : __('View More', 'goza');
 
 $paged = get_query_var( 'paged' )? get_query_var( 'paged' ) : 1;
 

@@ -5,18 +5,18 @@ $id = 'be-counter-up-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 $is_style    = isset($block['className']) ? $block['className'] : "is-style-default";
 
-$counter_bg_img = get_field('bg_image_counter_box');
-$counter_number = get_field('number_counter_box');
-$counter_heading = get_field('heading_counter_box');
+$counter_bg_img = __get_field('bg_image_counter_box');
+$counter_number = __get_field('number_counter_box');
+$counter_heading = __get_field('heading_counter_box');
 
 $bg_img = !empty($counter_bg_img) ? 'background-image: url(' . esc_url($counter_bg_img) . ');' : '';
 
-$counter_duration = get_field('duration_counter_box');
-$counter_delay = get_field('delay_counter_box');
-$ctb_ele_padding = get_field('ctb_ele_padding') ?: '30px';
+$counter_duration = __get_field('duration_counter_box');
+$counter_delay = __get_field('delay_counter_box');
+$ctb_ele_padding = __get_field('ctb_ele_padding') ?: '30px';
 
-$number_color = get_field('number_color_counter_box');
-$heading_color = get_field('heading_color_counter_box');
+$number_color = __get_field('number_color_counter_box');
+$heading_color = __get_field('heading_color_counter_box');
 $number_color_style = !empty($number_color) ? 'color:' . esc_attr($number_color) . ';' : '';
 $heading_color_style = !empty($heading_color) ? 'color:' . esc_attr($heading_color) . ';' : '';
 

@@ -14,15 +14,15 @@ if (is_plugin_active('the-events-calendar/the-events-calendar.php')) {
    ];
 
    // ACF field variables
-   $query       = get_field('query_ev_carousel');
-   $carousel_st = get_field('cr_st_ev_carousel');
-   $sub_heading = get_field('sub_hd_ev_carousel') ? : '';
+   $query       = __get_field('query_ev_carousel');
+   $carousel_st = __get_field('cr_st_ev_carousel');
+   $sub_heading = __get_field('sub_hd_ev_carousel') ? : '';
 
    // ACF Tab Style
-   $color_heading = get_field('color_hd_ev_carousel') ? : '';
-   $color_sub_hd  = get_field('color_sub_hd_ev_carousel') ? : '';
-   $color_content = get_field('color_content_ev_carousel') ? : '';
-   $cta_style     = get_field('cta_style_ev_carousel') ?: 'btn-default';
+   $color_heading = __get_field('color_hd_ev_carousel') ? : '';
+   $color_sub_hd  = __get_field('color_sub_hd_ev_carousel') ? : '';
+   $color_content = __get_field('color_content_ev_carousel') ? : '';
+   $cta_style     = __get_field('cta_style_ev_carousel') ?: 'btn-default';
 
    if(!empty($carousel_st) && isset($carousel_st)){
       $data_carousel = array(

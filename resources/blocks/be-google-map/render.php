@@ -4,8 +4,8 @@ $id = 'be-ss-hero-'.$block['id'];
 // create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
-$location = get_field('location_google_map_block');
-$height = get_field('height_google_map_block');
+$location = __get_field('location_google_map_block');
+$height = __get_field('height_google_map_block');
 
 $height_style = !empty( $height )? '--google-map-height:'.$height.'px;' : '';
 

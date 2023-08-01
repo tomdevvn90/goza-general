@@ -7,13 +7,13 @@ $id = 'be-ss-text-tsm-video-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$bg          = get_field('bg_ss_ab_counter') ?: get_template_directory_uri(). '/resources/assets/images/bg-ss-text-tsm-video.jpg';
-$sub_heading = get_field('sub_heading_ss_text_tsm_vd') ?: '';
-$heading     = get_field('heading_ss_text_tsm_vd') ?: '';
-$testimonial = get_field('item_testimonials_ss_text_tsm_vd') ?: '';
-$video       = get_field('vd_ss_text_tsm_vd') ?: '';
-$color_hd    = get_field('color_heading_ss_text_tsm_vd') ?: '';
-$color_sb_hd = get_field('color_sub_heading_ss_text_tsm_vd') ?: '';
+$bg          = __get_field('bg_ss_ab_counter') ?: get_template_directory_uri(). '/resources/assets/images/bg-ss-text-tsm-video.jpg';
+$sub_heading = __get_field('sub_heading_ss_text_tsm_vd') ?: '';
+$heading     = __get_field('heading_ss_text_tsm_vd') ?: '';
+$testimonial = __get_field('item_testimonials_ss_text_tsm_vd') ?: '';
+$video       = __get_field('vd_ss_text_tsm_vd') ?: '';
+$color_hd    = __get_field('color_heading_ss_text_tsm_vd') ?: '';
+$color_sb_hd = __get_field('color_sub_heading_ss_text_tsm_vd') ?: '';
 ?>
 <section id="<?php echo $id; ?>" class="be-ss-text-tsm-video <?php echo $align_class; ?>"> 
    <div class="be-ss-text-tsm-video--bg"> 

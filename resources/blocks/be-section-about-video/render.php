@@ -9,10 +9,10 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 // ACF field 
 
 // tab General
-$heading = get_field('hd_ss_ab_vd');
-$sub_hd  = get_field('sub_hd_ss_ab_vd') ? : '';
-$desc    = get_field('desc_hd_ss_ab_vd') ? : '';
-$img     = get_field('img_ss_ab_vd') ? : 'https://picsum.photos/1920/900?1';
+$heading = __get_field('hd_ss_ab_vd');
+$sub_hd  = __get_field('sub_hd_ss_ab_vd') ? : '';
+$desc    = __get_field('desc_hd_ss_ab_vd') ? : '';
+$img     = __get_field('img_ss_ab_vd') ? : 'https://picsum.photos/1920/900?1';
 
 if(!empty($heading) && isset($heading)){
    $hd_name = $heading['name'] ? : '';
@@ -20,20 +20,20 @@ if(!empty($heading) && isset($heading)){
 }
 
 // tab Video
-$vd_st = get_field('vd_ss_ab_vd');
+$vd_st = __get_field('vd_ss_ab_vd');
 
 if(!empty($vd_st) && isset($vd_st)){
    $vd_url = $vd_st['url'] ? : '';
 }
 
 // tab CTA
-$cta_name  = get_field('cta_name_ss_ab_vd') ? : '';
-$cta_link  = get_field('cta_link_ss_ab_vd') ? : '';
-$cta_style = get_field('cta_style_ss_ab_vd') ? : 'style_default';
+$cta_name  = __get_field('cta_name_ss_ab_vd') ? : '';
+$cta_link  = __get_field('cta_link_ss_ab_vd') ? : '';
+$cta_style = __get_field('cta_style_ss_ab_vd') ? : 'style_default';
 
 // tab Styles
-$color_hd     = get_field('color_hd_ss_ab_vd') ? : '';
-$color_sub_hd = get_field('color_sub_hd_ss_ab_vd') ? : '';
+$color_hd     = __get_field('color_hd_ss_ab_vd') ? : '';
+$color_sub_hd = __get_field('color_sub_hd_ss_ab_vd') ? : '';
 
 ?>
 <section id="<?php echo $id; ?>" class="be-ss-ab-vd <?php echo $align_class; ?>"> 

@@ -22,8 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( );
 
-$product_hero_icon = get_field('goza_product_icon','option');
-$product_hero_bg = get_field('goza_product_bg_image','option');
+$product_hero_icon = __get_field('goza_product_icon','option');
+$product_hero_bg = __get_field('goza_product_bg_image','option');
 
 $hero_bg = !empty($product_hero_bg)? 'background-image: url('. $product_hero_bg .')' : '';
 

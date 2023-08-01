@@ -7,15 +7,15 @@ $id = 'be-testimonials-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$testimonials     = get_field('list_items') ? : '';
-$carousel_setting = get_field('slider_setting') ? : '';
-$color_name       = get_field('color_name_tm_bl') ? : '';
-$color_position   = get_field('color_position_tm_bl') ? : '';
-$color_desc       = get_field('color_description_tm_bl') ? : '';
-$bg_item          = get_field('bg_item_tm_bl') ? : '';
-$slider_color     = get_field('sliders_color_tm_bl') ? : '';
+$testimonials     = __get_field('list_items') ? : '';
+$carousel_setting = __get_field('slider_setting') ? : '';
+$color_name       = __get_field('color_name_tm_bl') ? : '';
+$color_position   = __get_field('color_position_tm_bl') ? : '';
+$color_desc       = __get_field('color_description_tm_bl') ? : '';
+$bg_item          = __get_field('bg_item_tm_bl') ? : '';
+$slider_color     = __get_field('sliders_color_tm_bl') ? : '';
 
-$link_op = get_field('goza_link_color_op', 'option') ? : '';
+$link_op = __get_field('goza_link_color_op', 'option') ? : '';
 if(!empty($link_op) && isset($link_op)){
     $link_color = $link_op['link_color'];
 }

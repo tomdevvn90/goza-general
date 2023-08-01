@@ -127,8 +127,8 @@ if (!function_exists('goza_the_posts_navigation')) {
 if (!function_exists('__get_field')) {
 	function __get_field($selector, $post_id = false, $format_value = true)
 	{
-		if (function_exists('get_field') && get_field($selector, $post_id, $format_value)) {
-			return get_field($selector, $post_id, $format_value);
+		if (function_exists('get_field') && __get_field($selector, $post_id, $format_value)) {
+			return __get_field($selector, $post_id, $format_value);
 		}
 
 		return false;
@@ -452,8 +452,8 @@ if (!function_exists('goza_check_sidebars_widgets_exists')) {
 if( !function_exists('goza_woocommerce_product_hero_func') ){
 	function goza_woocommerce_product_hero_func() {
 
-		$product_hero_icon = get_field('goza_product_icon','option');
-		$product_hero_bg = get_field('goza_product_bg_image','option');
+		$product_hero_icon = __get_field('goza_product_icon','option');
+		$product_hero_bg = __get_field('goza_product_bg_image','option');
 	
 		$hero_bg = !empty($product_hero_bg)? 'background-image: url('. $product_hero_bg .')' : '';
 		?>

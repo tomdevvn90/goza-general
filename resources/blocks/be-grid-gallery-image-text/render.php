@@ -7,14 +7,14 @@ $id = 'be-grid-gallery-image-text-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$general     = get_field('general_grid_gallery_image_text');
-$col_left    = get_field('column_left_grid_gallery_image_text') ? get_field('column_left_grid_gallery_image_text') : '';
-$col_right   = get_field('column_right__grid_gallery_image_text') ? get_field('column_right__grid_gallery_image_text') : '';
-$heading     = get_field('heading_grid_gallery_image_text') ? : '';
-$gallerys    = get_field('items_gallery__image_text') ? : '';
-$ctaName     = get_field('cta_name_grid_gallery_image_text') ?: '';
-$ctaLink     = get_field('cta_link_grid_gallery_image_text') ?: '';
-$cta_style   = get_field('bnc_style_button_grid_gallery_image_text') ?: 'btn-default';
+$general     = __get_field('general_grid_gallery_image_text');
+$col_left    = __get_field('column_left_grid_gallery_image_text') ? __get_field('column_left_grid_gallery_image_text') : '';
+$col_right   = __get_field('column_right__grid_gallery_image_text') ? __get_field('column_right__grid_gallery_image_text') : '';
+$heading     = __get_field('heading_grid_gallery_image_text') ? : '';
+$gallerys    = __get_field('items_gallery__image_text') ? : '';
+$ctaName     = __get_field('cta_name_grid_gallery_image_text') ?: '';
+$ctaLink     = __get_field('cta_link_grid_gallery_image_text') ?: '';
+$cta_style   = __get_field('bnc_style_button_grid_gallery_image_text') ?: 'btn-default';
 
 $bgCl_left   = $col_left['bg_color'] ? : '';
 $bgImg_left  = $col_left['bg_img'] ? : get_template_directory_uri(). '/resources/assets/images/bg-default-gallery.jpg';

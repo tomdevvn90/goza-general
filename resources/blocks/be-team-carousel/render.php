@@ -5,18 +5,18 @@ $id = 'be-team-carousel-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$link_op = get_field('goza_link_color_op', 'option') ? : '';
+$link_op = __get_field('goza_link_color_op', 'option') ? : '';
 if(!empty($link_op) && isset($link_op)){
     $link_color = $link_op['link_color'] ? : '#d94532';
 }
 
-$team        = get_field('items_team_carousel_bl') ? : '';
-$carousel_st = get_field('setting_team_carousel_bl');
-$color_name  = get_field('color_name_team_carousel_bl') ? : '';   
-$color_ps    = get_field('color_postion_team_carousel_bl') ? : ''; 
-$color_sc    = get_field('color_social_team_carousel_bl') ? : '#000'; 
-$color_dots  = get_field('color_dots_team_carousel_bl') ? : ''; 
-$color_arrow = get_field('color_arrow_team_carousel_bl') ? : ''; 
+$team        = __get_field('items_team_carousel_bl') ? : '';
+$carousel_st = __get_field('setting_team_carousel_bl');
+$color_name  = __get_field('color_name_team_carousel_bl') ? : '';   
+$color_ps    = __get_field('color_postion_team_carousel_bl') ? : ''; 
+$color_sc    = __get_field('color_social_team_carousel_bl') ? : '#000'; 
+$color_dots  = __get_field('color_dots_team_carousel_bl') ? : ''; 
+$color_arrow = __get_field('color_arrow_team_carousel_bl') ? : ''; 
 
 $color_dots_df = $color_dots['default'] ? : "#000";
 $color_dots_at = $color_dots['active'] ? : $link_color;

@@ -11,8 +11,8 @@
 // 	return;
 // }
 
-$events_hero_icon = get_field('goza_events_icon','option');
-$events_hero_bg = get_field('goza_events_bg_image','option');
+$events_hero_icon = __get_field('goza_events_icon','option');
+$events_hero_bg = __get_field('goza_events_bg_image','option');
 
 $hero_bg = !empty($events_hero_bg)? 'background-image: url('. $events_hero_bg .')' : '';
 

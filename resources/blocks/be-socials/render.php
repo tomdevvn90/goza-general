@@ -7,9 +7,9 @@ $id = 'be-socials-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$heading      = get_field('heading_bl_socials');
-$open_new_tab = get_field('open_new_tab_bl_social');
-$items        = get_field('list_items_bl_socials');
+$heading      = __get_field('heading_bl_socials');
+$open_new_tab = __get_field('open_new_tab_bl_social');
+$items        = __get_field('list_items_bl_socials');
 $is_style     = isset($block['className']) ? $block['className'] : "is-style-default";
 
 ?>

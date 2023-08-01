@@ -7,7 +7,7 @@ $id = 'be-icon-box-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$bgImage = (!empty(get_field('bg__icon_box'))) ? get_field('bg__icon_box') : '';
+$bgImage = (!empty(__get_field('bg__icon_box'))) ? __get_field('bg__icon_box') : '';
 
 $is_style = isset($block['className']) ? $block['className'] : "is-style-default";
 

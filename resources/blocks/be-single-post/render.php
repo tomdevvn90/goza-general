@@ -8,8 +8,8 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 $is_style    = isset($block['className']) ? $block['className'] : "is-style-water";
 
 // ACF field variables
-$post_select = get_field('select_post_sg_p') ?: '';
-$reverse     = get_field('row_reverse_sg_p') ? '__row-reverse': '';
+$post_select = __get_field('select_post_sg_p') ?: '';
+$reverse     = __get_field('row_reverse_sg_p') ? '__row-reverse': '';
 
 $args = array(
    'post_type' => 'post',

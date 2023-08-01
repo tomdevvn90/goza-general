@@ -1,14 +1,14 @@
 <?php 
 
 function load_testimonial(){
-    $link_op     = get_field('goza_link_color_op', 'option');
+    $link_op     = __get_field('goza_link_color_op', 'option');
     $link_color  = $link_op['link_color'] ? : '';
-    $testimonial = get_field('item_testimonials_ss_text_tsm_vd') ?: '';
-    $color_tsm   = get_field('color_testimonials_ss_text_tsm_vd') ?: '';
+    $testimonial = __get_field('item_testimonials_ss_text_tsm_vd') ?: '';
+    $color_tsm   = __get_field('color_testimonials_ss_text_tsm_vd') ?: '';
     $color_hd    = $color_tsm['heading'] ?: ''; 
     $color_qt    = $color_tsm['quocte'] ?: '';
     $color_dots  = $color_tsm['dots'] ?  : $link_color;
-    $slider_st   = get_field('slider_settings_ss_text_tsm_vd') ?: '';
+    $slider_st   = __get_field('slider_settings_ss_text_tsm_vd') ?: '';
 
     $data_slider = array(
         'dots'           =>  $slider_st['dots'] ?: false,
@@ -37,11 +37,11 @@ function load_testimonial(){
 
 
 function load_video($id){
-    $video      = get_field('vd_ss_text_tsm_vd') ?: ''; 
+    $video      = __get_field('vd_ss_text_tsm_vd') ?: ''; 
     $bg         = $video['bg'] ?: 'https://picsum.photos/1920/900?1';
     $url_vd     = $video['url'];
     $format_vd  = $video['format_video'];
-    $color_vd   = get_field('color_vd_ss_text_tsm_vd') ?: '';
+    $color_vd   = __get_field('color_vd_ss_text_tsm_vd') ?: '';
     $color_icon = $color_vd['icon'] ?: ''; 
     $bg_icon    = $color_vd['bg'] ?: '';
     ?>

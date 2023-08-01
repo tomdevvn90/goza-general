@@ -16,9 +16,9 @@ function be_single_post_template_water(){
     $post_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
     $post_date    = get_the_date('d M, Y');
     $comment      = get_comments_number();
-    $cta_text     = get_field('cta_text_sg_p') ?: 'Read More';
-    $cta_style    = get_field('cta_style_sg_p') ?: 'btn-default';
-    $color_hd     = get_field('cta_style_sg_p') ?: '';
+    $cta_text     = __get_field('cta_text_sg_p') ?: 'Read More';
+    $cta_style    = __get_field('cta_style_sg_p') ?: 'btn-default';
+    $color_hd     = __get_field('cta_style_sg_p') ?: '';
     $thumbnail_id = get_post_thumbnail_id(get_the_ID());
     $srcset       = wp_get_attachment_image_srcset( $thumbnail_id, array( 100, 100 ) );
 
@@ -65,9 +65,9 @@ function be_single_post_template_water(){
 function be_single_post_ngo_dark(){
     $post_date    = get_the_date('d M, Y');
     $comment      = get_comments_number();
-    $cta_text     = get_field('cta_text_sg_p') ?: 'Read More';
-    $cta_style    = get_field('cta_style_sg_p') ?: 'btn-default';
-    $color_hd     = get_field('color_hd_sg_p') ?: '';
+    $cta_text     = __get_field('cta_text_sg_p') ?: 'Read More';
+    $cta_style    = __get_field('cta_style_sg_p') ?: 'btn-default';
+    $color_hd     = __get_field('color_hd_sg_p') ?: '';
     ?>
     <div class="be-single-post-inner--thumbnail"> 
         <?php if(has_post_thumbnail()): ?>

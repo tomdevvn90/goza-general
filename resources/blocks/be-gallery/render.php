@@ -6,10 +6,10 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 $classes     = isset($block['className']) ? $block['className'] : "is-style-ngo-dark";
 
 // ACF field
-$gallerys   = get_field('items_gallery_bl') ? : '';
-$full_width = get_field('full_width_gallery_bl') ? 'full-width' : '';
-$gap_column = get_field('gap_column_gallery_bl') ? : '0';
-$gap_row    = get_field('gap_row_gallery_bl') ? : '0';
+$gallerys   = __get_field('items_gallery_bl') ? : '';
+$full_width = __get_field('full_width_gallery_bl') ? 'full-width' : '';
+$gap_column = __get_field('gap_column_gallery_bl') ? : '0';
+$gap_row    = __get_field('gap_row_gallery_bl') ? : '0';
 
 ?>
 

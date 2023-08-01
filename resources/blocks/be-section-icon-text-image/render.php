@@ -4,14 +4,14 @@
 $id = 'be-ss-ic-text-img' . $block['id'];
 
 // ACF field 
-$heading   = get_field('hd_ss_itm') ? : '';
-$sub_hd    = get_field('sub_hd_ss_itm') ? : '';
-$image     = get_field('image_ss_itm') ? : 'https://picsum.photos/1920/900?1';
-$list_ict  = get_field('list_icon_text_ss_itm') ? : '';
-$bg_cl     = get_field('bg_cl_ss_itm') ? : '#043958';
-$bg_img    = get_field('bg_img_ss_itm') ? : '';
-$hd_cl     = get_field('hd_cl_ss_itm') ? : '';
-$sub_hd_cl = get_field('sub_hd_cl_ss_itm') ? : '';
+$heading   = __get_field('hd_ss_itm') ? : '';
+$sub_hd    = __get_field('sub_hd_ss_itm') ? : '';
+$image     = __get_field('image_ss_itm') ? : 'https://picsum.photos/1920/900?1';
+$list_ict  = __get_field('list_icon_text_ss_itm') ? : '';
+$bg_cl     = __get_field('bg_cl_ss_itm') ? : '#043958';
+$bg_img    = __get_field('bg_img_ss_itm') ? : '';
+$hd_cl     = __get_field('hd_cl_ss_itm') ? : '';
+$sub_hd_cl = __get_field('sub_hd_cl_ss_itm') ? : '';
 ?>
 
 
@@ -29,7 +29,7 @@ $sub_hd_cl = get_field('sub_hd_cl_ss_itm') ? : '';
 
                <?php if(!empty($list_ict) && isset($list_ict)): ?>
                   <?php 
-                     $list_ict_style = get_field('list_icon_text_style_ss_itm') ? : '';
+                     $list_ict_style = __get_field('list_icon_text_style_ss_itm') ? : '';
 
                      if(!empty($list_ict_style) && isset($list_ict_style)){
                         $headingColor = $list_ict_style['hd_cl'];

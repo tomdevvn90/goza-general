@@ -7,13 +7,13 @@ $id = 'be-ss-upcoming-event-video-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$heading  = get_field('heading_ss_up_ev_vd') ?: '';
-$desc     = get_field('desc_ss_up_ev_vd') ?: '';
-$bg       = get_field('bg_img_ss_up_ev_vd') ?: '';
+$heading  = __get_field('heading_ss_up_ev_vd') ?: '';
+$desc     = __get_field('desc_ss_up_ev_vd') ?: '';
+$bg       = __get_field('bg_img_ss_up_ev_vd') ?: '';
 $bg_left  = (!empty($bg['left'])) ? $bg['left'] : get_template_directory_uri(). '/resources/assets/images/bg-event-left-default.jpg';
 $bg_right = (!empty($bg['right'])) ? $bg['right'] : get_template_directory_uri(). '/resources/assets/images/bg-event-right-default.jpg';
-$show_vd  = get_field('show_video_ss_up_ev_vd') ?: false;
-$url_vd   = get_field('url_video_ss_up_ev_vd') ?: '';
+$show_vd  = __get_field('show_video_ss_up_ev_vd') ?: false;
+$url_vd   = __get_field('url_video_ss_up_ev_vd') ?: '';
 ?>
 <section id="<?php echo $id; ?>" class="be-ss-upcoming-event-video <?php echo $align_class; ?>"> 
    <div class="be-ss-upcoming-event-video--bg"> 

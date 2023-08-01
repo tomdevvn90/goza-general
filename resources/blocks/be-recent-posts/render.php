@@ -7,10 +7,10 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 $is_style = (isset($block['className']) && !empty($block['className'])) ? $block['className'] : "is-style-default";
 
 // option
-$posts_per_page = !empty( get_field('number_of_items_recent_posts') )? get_field('number_of_items_recent_posts') : get_option('posts_per_page');
-$categories_recent_posts = !empty( get_field('categories_recent_posts') )? get_field('categories_recent_posts') : '';
+$posts_per_page = !empty( __get_field('number_of_items_recent_posts') )? __get_field('number_of_items_recent_posts') : get_option('posts_per_page');
+$categories_recent_posts = !empty( __get_field('categories_recent_posts') )? __get_field('categories_recent_posts') : '';
 // styles
-$title_color = get_field('title_color_recent_posts')? get_field('title_color_recent_posts') : '';
+$title_color = __get_field('title_color_recent_posts')? __get_field('title_color_recent_posts') : '';
 $title_color_style = !empty( $title_color )? '--post-title-color:'.$title_color.';' : '';
 
 $args = array(

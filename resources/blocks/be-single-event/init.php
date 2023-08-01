@@ -12,13 +12,13 @@ function single_ev_template($is_style ){
 }
 
 function be_single_ev_template_default(){ 
-        $heading      = get_field('heading_sg_ev') ?: '';
-        $cta_style    = get_field('cta_style_sg_ev') ?: 'btn-default';
-        $color_hd     = get_field('cl_heading_sg_ev') ?: '';
-        $color_name   = get_field('cl_name_sg_ev') ?: '';
-        $color_cd     = get_field('cl_cd_sg_ev') ?: '';
+        $heading      = __get_field('heading_sg_ev') ?: '';
+        $cta_style    = __get_field('cta_style_sg_ev') ?: 'btn-default';
+        $color_hd     = __get_field('cl_heading_sg_ev') ?: '';
+        $color_name   = __get_field('cl_name_sg_ev') ?: '';
+        $color_cd     = __get_field('cl_cd_sg_ev') ?: '';
 
-        $link_op = get_field('goza_link_color_op', 'option') ? : '';
+        $link_op = __get_field('goza_link_color_op', 'option') ? : '';
         if(!empty($link_op) && isset($link_op)){
             $link_color = $link_op['link_color'];
         }
@@ -104,11 +104,11 @@ function be_single_ev_template_default(){
 <?php }
 
 function be_single_ev_template_charity(){       
-    $heading      = get_field('heading_sg_ev') ?: '';
-    $cta_style    = get_field('cta_style_sg_ev') ?: 'btn-default';
-    $color_hd     = get_field('cl_heading_sg_ev') ?: '';
-    $color_name   = get_field('cl_name_sg_ev') ?: '';
-    $color_cd     = get_field('cl_cd_sg_ev') ?: '';
+    $heading      = __get_field('heading_sg_ev') ?: '';
+    $cta_style    = __get_field('cta_style_sg_ev') ?: 'btn-default';
+    $color_hd     = __get_field('cl_heading_sg_ev') ?: '';
+    $color_name   = __get_field('cl_name_sg_ev') ?: '';
+    $color_cd     = __get_field('cl_cd_sg_ev') ?: '';
     $author_id    = get_post_field('post_author', get_the_ID());
     $author_name  = get_the_author_meta('display_name', $author_id);
     $author_avta  = get_avatar($author_id);

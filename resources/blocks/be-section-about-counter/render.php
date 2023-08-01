@@ -7,16 +7,16 @@ $id = 'be-ss-ab-counter-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$bg         = get_field('bg_ss_ab_counter') ?: get_template_directory_uri(). '/resources/assets/images/bg-ss-ab-counter.jpg';
-$heading    = get_field('heading_ss_ab_counter') ?: '';
-$desc       = get_field('desc_ss_ab_counter') ?: '';
-$counters   = get_field('counters_ss_ab_counter') ?: '';
-$cta_name   = get_field('cta_name_ss_ab_counter') ?: '';
-$cta_link   = get_field('cta_link_ss_ab_counter') ?: '';
-$cta_style  = get_field('cta_style_ss_ab_counter') ?: 'btn-default';
-$color_hd   = get_field('color_heading_ss_ab_counter') ?: '';
-$color_desc = get_field('color_desc_ss_ab_counter') ?: '';
-$color_ct   = get_field('color_ct_ss_ab_counter') ?: '';
+$bg         = __get_field('bg_ss_ab_counter') ?: get_template_directory_uri(). '/resources/assets/images/bg-ss-ab-counter.jpg';
+$heading    = __get_field('heading_ss_ab_counter') ?: '';
+$desc       = __get_field('desc_ss_ab_counter') ?: '';
+$counters   = __get_field('counters_ss_ab_counter') ?: '';
+$cta_name   = __get_field('cta_name_ss_ab_counter') ?: '';
+$cta_link   = __get_field('cta_link_ss_ab_counter') ?: '';
+$cta_style  = __get_field('cta_style_ss_ab_counter') ?: 'btn-default';
+$color_hd   = __get_field('color_heading_ss_ab_counter') ?: '';
+$color_desc = __get_field('color_desc_ss_ab_counter') ?: '';
+$color_ct   = __get_field('color_ct_ss_ab_counter') ?: '';
 $cl_ct_hd   = $color_ct['heading'] ? : '';
 $cl_ct_nb   = $color_ct['numberal'] ? : '';
 
@@ -40,7 +40,7 @@ $cl_ct_nb   = $color_ct['numberal'] ? : '';
             <?php if(!empty($counters)): ?>
                <div class="be-ss-ab-counter--list-counters"> 
                   <?php 
-                     $st_counter = (!empty(get_field('counter_settings_ss_ab_counter'))) ? get_field('counter_settings_ss_ab_counter') : '';
+                     $st_counter = (!empty(__get_field('counter_settings_ss_ab_counter'))) ? __get_field('counter_settings_ss_ab_counter') : '';
                      $duration   =  $st_counter['duration'] ?: 1000;
                      $delay      =  $st_counter['delay'] ?: 100;
                   ?>

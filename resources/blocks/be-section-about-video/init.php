@@ -1,7 +1,7 @@
 <?php
 function __load_template_video($id){
    // tab Video
-    $vd_st = get_field('vd_ss_ab_vd');
+    $vd_st = __get_field('vd_ss_ab_vd');
 
     if(!empty($vd_st) && isset($vd_st)){
         $vd_url = $vd_st['url'] ? : '';
@@ -11,7 +11,7 @@ function __load_template_video($id){
 
     // tab styles
 
-    $color_vd = get_field('color_vd_ss_ab_vd');
+    $color_vd = __get_field('color_vd_ss_ab_vd');
     if(!empty($color_vd) && isset($color_vd)){
         $color_icon = $color_vd['color_icon'] ? : '';
         $bg_icon    = $color_vd['bg_icon'] ? : '';

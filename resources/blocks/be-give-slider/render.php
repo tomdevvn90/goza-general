@@ -7,8 +7,8 @@ $id = 'be-give-slider-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$query          = get_field('query_gives_slider_block');
-$slider_setting = get_field('slider_setting_gives_slider_block');
+$query          = __get_field('query_gives_slider_block');
+$slider_setting = __get_field('slider_setting_gives_slider_block');
 //var_dump($query);
 $args = [
     'post_type'   => 'give_forms',

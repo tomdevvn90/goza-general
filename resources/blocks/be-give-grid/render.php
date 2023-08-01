@@ -7,8 +7,8 @@ $id = 'be-give-grid-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-$query          = get_field('query_give_grid_block');
-$grid_setting = get_field('setting_give_grid_block');
+$query          = __get_field('query_give_grid_block');
+$grid_setting = __get_field('setting_give_grid_block');
 //var_dump($grid_setting);
 if ($grid_setting) {
     $grid_decktop = $grid_setting['grid_colum_decktop'];

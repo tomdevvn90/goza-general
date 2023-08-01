@@ -7,10 +7,10 @@ $id = 'hero-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // ACF field variables
-// $image = get_field('image');
-// $headline = get_field('headline');
-// $paragraph = get_field('paragraph');
-// $cta = get_field('cta');
+// $image = __get_field('image');
+// $headline = __get_field('headline');
+// $paragraph = __get_field('paragraph');
+// $cta = __get_field('cta');
 
 ?>
 <section id="<?php echo $id; ?>" class="hero <?php echo $align_class; ?>">
