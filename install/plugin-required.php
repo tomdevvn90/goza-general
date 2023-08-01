@@ -59,9 +59,31 @@ function goza_register_required_plugins() {
 
   $plugin_includes = array(
     array(
-      'name'      => 'Advanced Custom Fields',
-      'slug'      => 'advanced-custom-fields', 
-      'required'  => true,
+      'name'          => 'Advanced Custom Fields PRO',
+      'slug'          => 'advanced-custom-fields-pro',
+      'source'        => $pathfile . 'advanced-custom-fields-pro.zip',
+      'required'      => true,
+    ),
+		array(
+      'name'          => 'Smart Slider 3 - Pro',
+      'slug'          => 'smart-slider-3-pro',
+      'source'        => $pathfile . 'smartslider3.zip',
+      'required'      => true,
+    ),
+		array(
+      'name'          => 'Advanced Custom Fields: Font Awesome',
+      'slug'          => 'advanced-custom-fields-font-awesome',
+      'required'      => true,
+    ),
+    array(
+      'name'          => 'GiveWP – Donation Plugin and Fundraising Platform',
+      'slug'          => 'give',
+      'required'      => true,
+    ),
+    array(
+      'name'          => 'The Events Calendar',
+      'slug'          => 'the-events-calendar',
+      'required'      => true,
     ),
     array(
       'name'          => 'Yoast SEO',
@@ -71,6 +93,16 @@ function goza_register_required_plugins() {
     array(
       'name'          => 'WooCommerce',
       'slug'          => 'woocommerce',
+      'required'      => false,
+    ),
+    array(
+      'name'          => 'Smash Balloon Instagram Feed',
+      'slug'          => 'instagram-feed',
+      'required'      => false,
+    ),
+    array(
+      'name'          => 'Smash Balloon Custom Facebook Feed',
+      'slug'          => 'custom-facebook-feed',
       'required'      => false,
     ),
 

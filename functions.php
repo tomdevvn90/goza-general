@@ -56,3 +56,38 @@ if (class_exists('Tribe__Events__Main')) {
 	require THEME_PATH . '/tribe/events/v2/helper-functions.php';
 	require THEME_PATH . '/tribe-events/helper-functions.php';
 }
+
+/**
+ * Validation form comment
+ */
+add_action('wp_footer', 'jayla_comment_validation_init');
+function jayla_comment_validation_init(){
+  if(comments_open() ) { ?>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      jQuery('#commentform').validate({
+          rules: {
+            author: {
+              required: true,
+              minlength: 2
+            },
+            email: {
+              required: true,
+              email: true
+            },
+            comment: {
+              required: true,
+              minlength: 20
+            }
+          },
+          errorElement: "div",
+          errorPlacement: function(error, element) {
+            element.after(error);
+          }
+      });
+    });
+    </script>
+    <?php
+    }
+}
