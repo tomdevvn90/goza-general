@@ -73,7 +73,7 @@ $fbg_button_color     = __get_field('fbg_button_color') ?: '#FFF';
       </div>
    <?php } else { ?>
       <div class="goza-box-featured-grid-notify">
-         <?php echo esc_html_e('Opp! Please add a item in backend!', 'goza') ?>
+         <?php echo esc_html_e('Opp! Please add a item to list!', 'goza') ?>
       </div>
    <?php } ?>
 </div>

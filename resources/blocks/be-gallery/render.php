@@ -22,7 +22,7 @@ $gap_row    = __get_field('gap_row_gallery_bl') ? : '0';
 
    <?php else: ?>
         <div class="be-gallery-block--not-post"> 
-            <h3> Please choose image </h3>
+            <h5> Please add images to gallery on sidebar </h5>
         </div>
    <?php endif; ?> 
 </div>
