@@ -1,4 +1,13 @@
 .site-header {
+    .goza-header-main{
+        .goza-header-button-donate{
+            @include media-breakpoint-down(sm){
+                display: none;
+            }
+        }
+    }
+
+    
     .goza-header-main--menu {
         #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link{
             @include media-breakpoint-down(lg) {
