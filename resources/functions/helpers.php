@@ -127,8 +127,8 @@ if (!function_exists('goza_the_posts_navigation')) {
 if (!function_exists('__get_field')) {
 	function __get_field($selector, $post_id = false, $format_value = true)
 	{
-		if (function_exists('get_field') && __get_field($selector, $post_id, $format_value)) {
-			return __get_field($selector, $post_id, $format_value);
+		if (function_exists('get_field') && get_field($selector, $post_id, $format_value)) {
+			return get_field($selector, $post_id, $format_value);
 		}
 
 		return false;
