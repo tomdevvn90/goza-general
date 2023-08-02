@@ -3,6 +3,10 @@
         padding-top: 60px;
 
         .main-footer-widget {
+            @include media-breakpoint-down(xl) {
+                margin-bottom: 32px;
+            }
+
             &:not(:last-child) {
                 @include media-breakpoint-down(sm) {
                     margin-bottom: 30px;
@@ -25,8 +29,8 @@
             letter-spacing: 0;
             margin-bottom: 30px;
 
-            @include media-breakpoint-down(sm) {
-                margin-bottom: 8px;
+            @include media-breakpoint-down(xl) {
+                margin-bottom: 16px;
             }
         }
 
@@ -136,6 +140,9 @@
             border-top-width: 1px;
             border-top-color: rgba(255, 255, 255, 0.2);
             border-top-style: solid;
+            @include media-breakpoint-down(xl) {
+                margin-top: 28px;
+            }
 
             p {
                 font-size: 16px;

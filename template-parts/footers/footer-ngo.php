@@ -40,7 +40,7 @@ if ($logo) $goza_ft_logo = $logo;
 <footer id="site-footer" class="main-footer footer-ngo">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 main-footer-widget">
+            <div class="col-md-6 col-xl-3 main-footer-widget">
                 <?php if ($goza_ft_logo) { ?>
                     <a href="/" class="main-footer-logo">
                         <img src="<?= esc_url($goza_ft_logo) ?>" alt="Logo" />
@@ -50,7 +50,7 @@ if ($logo) $goza_ft_logo = $logo;
                     <div class="main-footer-desc"><?= $goza_general_content ?></div>
                 <?php } ?>
             </div>
-            <div class="col-md-3 main-footer-widget">
+            <div class="col-md-6 col-xl-3 main-footer-widget">
                 <?php if (isset($goza_ql_heading) && !empty($goza_ql_heading)) { ?>
                     <h3 class="main-footer-title"><?= $goza_ql_heading ?></h3>
                 <?php } ?>
@@ -68,7 +68,7 @@ if ($logo) $goza_ft_logo = $logo;
                     ?>
                 </div>
             </div>
-            <div class="col-md-3 main-footer-widget">
+            <div class="col-md-6 col-xl-3 main-footer-widget">
                 <?php if (isset($goza_newsletter_heading) && !empty($goza_newsletter_heading)) { ?>
                     <h3 class="main-footer-title"><?= $goza_newsletter_heading ?></h3>
                 <?php } ?>
@@ -82,7 +82,7 @@ if ($logo) $goza_ft_logo = $logo;
                 <?php } ?>
 
             </div>
-            <div class="col-md-3 main-footer-widget">
+            <div class="col-md-6 col-xl-3 main-footer-widget">
                 <?php if (isset($goza_gallery_heading) && !empty($goza_gallery_heading)) { ?>
                     <h3 class="main-footer-title"><?= $goza_gallery_heading ?></h3>
                 <?php } ?>
