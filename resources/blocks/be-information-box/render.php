@@ -41,7 +41,7 @@ $data_aos_animated = ($info_animation != 'none')? $info_animation : '';
                         <div class="be-infmation-item--content-wrap">
                             <?php if( $field_type == 'text' && !empty( $value['text'] ) ): ?>
                                 <div class="be-infmation-item--text" style="<?php echo $info_text_color_style; ?>">
-                                    <?php echo $value['text']; ?>
+                                    <?php echo esc_attr($value['text']); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( $field_type === 'phone' && !empty( $phone_list ) ): ?>
@@ -83,7 +83,7 @@ $data_aos_animated = ($info_animation != 'none')? $info_animation : '';
                    <?php
                 }
             } else{
-                echo '<p>Please enter fields to show!</p>';
+                echo '<p style="padding: 30px 0;">Please enter some field on sidebar!</p>';
             } ?>
         </div>
     </div>

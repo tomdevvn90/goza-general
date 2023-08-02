@@ -101,8 +101,18 @@ function goza_register_required_plugins() {
       'required'      => false,
     ),
     array(
-      'name'          => 'Smash Balloon Custom Facebook Feed',
-      'slug'          => 'custom-facebook-feed',
+      'name'          => 'Max Mega Menu',
+      'slug'          => 'megamenu',
+      'required'      => false,
+    ),
+    array(
+      'name'          => 'Newsletter – Send awesome emails from WordPress',
+      'slug'          => 'newsletter',
+      'required'      => false,
+    ),
+    array(
+      'name'          => 'Contact Form 7',
+      'slug'          => 'contact-form-7',
       'required'      => false,
     ),
 

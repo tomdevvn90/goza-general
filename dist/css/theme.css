@@ -22689,14 +22689,13 @@ ul.be-list-ul li {
   padding-bottom: 5vh;
 }
 
-.be-gallery-block--not-post h3 {
-  font-size: 32px !important;
+.be-gallery-block--not-post h5 {
+  font-size: 20px !important;
   line-height: 110% !important;
   margin: 0 !important;
   padding: 0 !important;
   text-align: center;
   color: var(--link-color);
-  text-transform: uppercase;
 }
 
 .be-gallery-block:not(.full-width) {

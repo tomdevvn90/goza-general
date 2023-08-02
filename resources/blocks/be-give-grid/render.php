@@ -30,16 +30,19 @@ $the_query = new WP_Query($args);
 
 ?>
 <div id="<?php echo $id; ?>" class="be-give-grid-block <?php echo $align_class; ?> <?php echo $is_style ?> grid-decktop-<?php echo $grid_decktop ?> grid-tablet-<?php echo $grid_tablet ?> grid-mobile-<?php echo $grid_mobile ?>">
-    <?php if ($the_query->have_posts()) { ?>
-        <div class="be-give-grid-block-inner">
-            <?php while ($the_query->have_posts()) {
-                $the_query->the_post();
-                be_item_give($block);
-            } ?>
-        </div>
+    <?php if (is_plugin_active('the-events-calendar/the-events-calendar.php')) { ?>
+        <?php if ($the_query->have_posts()) { ?>
+            <div class="be-give-grid-block-inner">
+                <?php while ($the_query->have_posts()) {
+                    $the_query->the_post();
+                    be_item_give($block);
+                } ?>
+            </div>
+        <?php } else {
+            echo '<div class="bph-not-found">No results found.</div>';
+        } ?>
     <?php } else {
-        echo '<div class="bph-not-found">No results found.</div>';
+        echo '<div class="required-text" style="padding: 30px 0;">This block require The Events Calendar plugin. Please install follow link <a href="https://wordpress.org/plugins/the-events-calendar/" target="_blank">here</div>';
     } ?>
-    <!-- get_template_part('resources/blocks/be-posts-slider/layout/template-default'); -->
 </div>
 <?php
