@@ -9,10 +9,8 @@
         }
 
         .main-footer-widget {
-            &:not(:last-child) {
-                @include media-breakpoint-down(sm) {
-                    margin-bottom: 30px;
-                }
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 32px;
             }
 
             form {
@@ -85,8 +83,8 @@
             letter-spacing: 0px;
             margin-bottom: 30px;
 
-            @include media-breakpoint-down(sm) {
-                margin-bottom: 20px;
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 16px;
             }
         }
 
@@ -109,7 +107,9 @@
                     font-size: 17px;
                     line-height: 26px;
                     transition: all 0.3s ease;
-
+                    @include media-breakpoint-down(xl) {
+                        font-size: 16px;
+                    }
                     &:hover {
                         color: var(--link-color-hover, #d41b65);
 
@@ -147,7 +147,9 @@
                     font-size: 17px;
                     line-height: 26px;
                     text-decoration: underline;
-
+                    @include media-breakpoint-down(xl) {
+                        font-size: 16px;
+                    }
                     &:hover {
                         color: var(--link-color-hover, #d41b65);
                     }
@@ -162,7 +164,9 @@
             align-items: center;
             margin-top: 50px;
             flex-wrap: wrap;
-
+            @include media-breakpoint-down(lg) {
+                margin-top: 18px;
+            }
             @include media-breakpoint-down(sm) {
                 align-items: flex-start;
                 flex-direction: column-reverse;
@@ -173,7 +177,9 @@
                 color: #c3c3c3;
                 line-height: 28px;
                 text-align: left;
-
+                @include media-breakpoint-down(xl) {
+                    font-size: 16px;
+                }
                 @include media-breakpoint-down(sm) {
                     margin-top: 30px;
                 }
@@ -202,7 +208,9 @@
                             font-weight: 400 !important;
                             color: #c3c3c3;
                             font-size: 17px;
-
+                            @include media-breakpoint-down(xl) {
+                                font-size: 16px;
+                            }
                             &:hover {
                                 color: var(--link-color-hover, #d41b65);
                             }
