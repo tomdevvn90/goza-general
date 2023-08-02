@@ -41,8 +41,16 @@ $plugin_includes = array(
     'slug'     => 'instagram-feed',
   ),
   array(
-    'name'     => 'Smash Balloon Custom Facebook Feed',
-    'slug'     => 'custom-facebook-feed',
+    'name'     => 'Max Mega Menu',
+    'slug'     => 'megamenu',
+  ),
+  array(
+    'name'     => 'Newsletter – Send awesome emails from WordPress',
+    'slug'     => 'newsletter',
+  ),
+  array(
+    'name'     => 'Contact Form 7',
+    'slug'     => 'contact-form-7',
   ),
 
 );
