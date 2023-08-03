@@ -126,9 +126,9 @@
                     font-size: 16px;
                     letter-spacing: 0px;
                     padding: 13px 20px;
-                    line-height: 1.2;
+                    line-height: 1.2em;
                     display: block;
-
+                    font-weight: 700;
                     &:hover {
                         background: var(--link-color-hover, #ed7a13);
                         text-decoration: none;
@@ -147,5 +147,13 @@
                 }
             }
         }
+    }
+}
+
+.site-header-ngo{
+    #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link{
+        color: #fff;
+        font-family: var(--heading-family, Poppins, sans-serif);
+        font-size: 15px;
     }
 }
