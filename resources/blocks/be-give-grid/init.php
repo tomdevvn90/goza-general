@@ -72,7 +72,9 @@ function be_template_give_grid_style_4(){
       <a href="<?php echo get_permalink($form_id) ?>">
         <img src="<?php echo esc_url($post_img_url) ?>" alt="#">
       </a>
-      <div class="form-category form-category-style1"><a style="color:<?php echo $color ?>" href="<?php echo $give_forms_category_link ?>"><?php echo $give_forms_category_name ?></a></div>
+      <?php if ($give_forms_category_name) { ?>
+        <div class="form-category form-category-style1"><a style="color:<?php echo $color ?>" href="<?php echo $give_forms_category_link ?>"><?php echo $give_forms_category_name ?></a></div>
+      <?php } ?>
     </div>
     <div class="give-goal-progress-wrap">
         <div class="progress"><div class="bar" style="background-color:<?php echo $color ?>;width: <?php echo $progress ?>%;" ><span><?php echo $progress ?>%</span></div></div>
@@ -199,7 +201,9 @@ function be_template_give_grid_style_2(){
   ?>
 
     <div class="featured-image" style="background-image: url(<?php echo esc_url($post_img_url) ?>);background-position: center center;background-repeat: no-repeat;background-size: cover;">
-      <div class="form-category form-category-style1"><a style="background-color:<?php echo $color ?>" href="<?php echo $give_forms_category_link ?>"><?php echo $give_forms_category_name ?></a></div>
+      <?php if ($give_forms_category_name) { ?>
+        <div class="form-category form-category-style1"><a style="background-color:<?php echo $color ?>" href="<?php echo $give_forms_category_link ?>"><?php echo $give_forms_category_name ?></a></div>
+      <?php } ?>
     </div>
     <div class="entry-content">
       <a href="<?php echo get_permalink($form_id) ?>" class="title-link"><h4 class="title bt-title-style1"><?php echo get_the_title($form_id) ?></h4></a>
@@ -264,7 +268,9 @@ function be_template_give_grid_default(){
       <img src="<?php echo esc_url($post_img_url) ?>" alt="<?php the_title() ?>"/>
     </div>
     <div class="entry-content">
-      <div class="form-category"><a style="color:<?php echo $color ?>" href="<?php echo $give_forms_category_link ?>"><?php echo $give_forms_category_name ?></a></div>
+      <?php if ($give_forms_category_name) { ?>
+        <div class="form-category"><a style="color:<?php echo $color ?>" href="<?php echo $give_forms_category_link ?>"><?php echo $give_forms_category_name ?></a></div>
+      <?php } ?>
       <a href="<?php echo get_permalink($form_id) ?>" class="title-link"><h4 class="title"><?php echo get_the_title($form_id) ?></h4></a>
       <div class="extra-meta">
         <div class="meta-item meta-author">By <?php echo get_the_author($form_id) ?></div>
