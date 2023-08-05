@@ -45,6 +45,7 @@ function be_template_give_grid_style_4(){
         }
         if (empty($give_forms_category_name)) {
           $give_forms_category_name = '';
+          $give_forms_category_link = '';
         }
       // set color if empty
       if(empty($color)) $color = '#01FFCC';
@@ -109,6 +110,7 @@ function be_template_give_grid_style_3(){
         }
         if (empty($give_forms_category_name)) {
           $give_forms_category_name = '';
+          $give_forms_category_link = '';
         }
       // set color if empty
       if(empty($color)) $color = '#01FFCC';
@@ -173,6 +175,7 @@ function be_template_give_grid_style_2(){
         }
         if (empty($give_forms_category_name)) {
           $give_forms_category_name = '';
+          $give_forms_category_link = '';
         }
       // set color if empty
       if(empty($color)) $color = '#01FFCC';
@@ -231,6 +234,7 @@ function be_template_give_grid_default(){
         }
         if (empty($give_forms_category_name)) {
           $give_forms_category_name = '';
+          $give_forms_category_link = '';
         }
       // set color if empty
       if(empty($color)) $color = '#01FFCC';
