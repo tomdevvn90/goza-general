@@ -65,19 +65,8 @@ function goza_register_required_plugins() {
       'required'      => true,
     ),
 		array(
-      'name'          => 'Smart Slider 3 - Pro',
-      'slug'          => 'smart-slider-3-pro',
-      'source'        => $pathfile . 'smartslider3.zip',
-      'required'      => true,
-    ),
-		array(
       'name'          => 'Advanced Custom Fields: Font Awesome',
       'slug'          => 'advanced-custom-fields-font-awesome',
-      'required'      => true,
-    ),
-    array(
-      'name'          => 'GiveWP – Donation Plugin and Fundraising Platform',
-      'slug'          => 'give',
       'required'      => true,
     ),
     array(

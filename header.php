@@ -20,6 +20,7 @@ if (!defined('ABSPATH')) {
 	<?php $viewport_content = apply_filters('goza_gutenberg_viewport_content', 'width=device-width, initial-scale=1'); ?>
 	<meta name="viewport" content="<?php echo esc_attr($viewport_content); ?>">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel='stylesheet' id='be-give-styles-css' href='<?php echo get_site_url() ?>/wp-content/plugins/give/assets/dist/css/give.css' media='all' />
 	<?php wp_head(); ?>
 </head>
 

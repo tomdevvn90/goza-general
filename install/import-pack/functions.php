@@ -195,6 +195,13 @@ if( ! function_exists( 'beplus_import_pack_import_steps' ) ) {
                 'actions' => ['__yes__'],
             ],
             [
+                'name' => 'install_plugin',
+                'title' => __( 'Install Plugins', 'beplus' ),
+                'description' => __( 'This package include __count_plugin__ plugin(s) please install and activate they before import content. click \'Explained\' to view all plugins.', 'beplus' ),
+                'template_callback' => 'beplus_import_pack_step_install_plugins',
+                'actions' => ['__yes__'],
+            ],
+            [
                 'name' => 'import_package_successful',
                 'title' => __( 'Import Package Successful!', 'beplus' ),
                 'description' => __( 'Thank you creating with '. IMPORT_THEMENAME .'. Do not hesitate to contact us if you need help!', 'beplus' ),

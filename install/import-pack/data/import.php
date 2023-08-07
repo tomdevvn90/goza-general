@@ -7,50 +7,14 @@
  */
 $plugin_includes = array(
   array(
-    'name'     => 'Advanced Custom Fields PRO',
-    'slug'     => 'advanced-custom-fields-pro',
-    'source'   => IMPORT_REMOTE_SERVER_PLUGIN_DOWNLOAD . 'advanced-custom-fields-pro.zip',
-  ),
-  array(
     'name'     => 'Smart Slider 3 - Pro',
     'slug'     => 'smart-slider-3-pro',
     'source'   => IMPORT_REMOTE_SERVER_PLUGIN_DOWNLOAD . 'smartslider3.zip',
   ),
   array(
-    'name'     => 'Advanced Custom Fields: Font Awesome',
-    'slug'     => 'advanced-custom-fields-font-awesome',
-  ),
-  array(
     'name'     => 'GiveWP – Donation Plugin and Fundraising Platform',
     'slug'     => 'give',
-  ),
-  array(
-    'name'     => 'The Events Calendar',
-    'slug'     => 'the-events-calendar',
-  ),
-  array(
-    'name'     => 'Yoast SEO',
-    'slug'     => 'wordpress-seo',
-  ),
-  array(
-    'name'     => 'WooCommerce',
-    'slug'     => 'woocommerce',
-  ),
-  array(
-    'name'     => 'Smash Balloon Instagram Feed',
-    'slug'     => 'instagram-feed',
-  ),
-  array(
-    'name'     => 'Max Mega Menu',
-    'slug'     => 'megamenu',
-  ),
-  array(
-    'name'     => 'Newsletter – Send awesome emails from WordPress',
-    'slug'     => 'newsletter',
-  ),
-  array(
-    'name'     => 'Contact Form 7',
-    'slug'     => 'contact-form-7',
+    'source'   => IMPORT_REMOTE_SERVER_PLUGIN_DOWNLOAD . 'give.zip',
   ),
 
 );
