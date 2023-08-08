@@ -43,7 +43,10 @@ if(!empty($carousel_setting) && isset($carousel_setting)){
         'loop'           =>  $carousel_setting['loop'] ?: false,
         'fade'           =>  $carousel_setting['fade'] ?: false,
     );
+}else{
+    $data_carousel = array();
 }
+
 
 $classes = isset($block['className']) ? $block['className'] : "is-style-default";
 

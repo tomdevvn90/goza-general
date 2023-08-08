@@ -180,18 +180,25 @@ if( ! function_exists( 'beplus_import_pack_import_steps' ) ) {
                     ],
                 ]
             ],
-            [
-                'name' => 'install_plugin',
-                'title' => __( 'Install Plugins', 'beplus' ),
-                'description' => __( 'This package include __count_plugin__ plugin(s) please install and activate they before import content. click \'Explained\' to view all plugins.', 'beplus' ),
-                'template_callback' => 'beplus_import_pack_step_install_plugins',
-                'actions' => ['__yes__'],
-            ],
+            // [
+            //     'name' => 'install_plugin',
+            //     'title' => __( 'Install Plugins', 'beplus' ),
+            //     'description' => __( 'This package include __count_plugin__ plugin(s) please install and activate they before import content. click \'Explained\' to view all plugins.', 'beplus' ),
+            //     'template_callback' => 'beplus_import_pack_step_install_plugins',
+            //     'actions' => ['__yes__'],
+            // ],
             [
                 'name' => 'download_import_package',
                 'title' => __( 'Download & Import Package', 'beplus' ),
                 'description' => __( 'This process may take several minutes or longer depending on the network speed. Thanks you!', 'beplus' ),
                 'template_callback' => 'beplus_import_pack_step_download_import_package',
+                'actions' => ['__yes__'],
+            ],
+            [
+                'name' => 'install_plugin',
+                'title' => __( 'Install Plugins', 'beplus' ),
+                'description' => __( 'This package include __count_plugin__ plugin(s) please install and activate they before import content. click \'Explained\' to view all plugins.', 'beplus' ),
+                'template_callback' => 'beplus_import_pack_step_install_plugins',
                 'actions' => ['__yes__'],
             ],
             [

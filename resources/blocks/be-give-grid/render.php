@@ -27,7 +27,7 @@ $is_style = isset($block['className']) ? $block['className'] : "is-style-default
 
 ob_start();
 $the_query = new WP_Query($args);
-
+if(class_exists('Give')){
 ?>
 <div id="<?php echo $id; ?>" class="be-give-grid-block <?php echo $align_class; ?> <?php echo $is_style ?> grid-decktop-<?php echo $grid_decktop ?> grid-tablet-<?php echo $grid_tablet ?> grid-mobile-<?php echo $grid_mobile ?>">
     <?php if (is_plugin_active('the-events-calendar/the-events-calendar.php')) { ?>
@@ -46,3 +46,4 @@ $the_query = new WP_Query($args);
     } ?>
 </div>
 <?php
+}

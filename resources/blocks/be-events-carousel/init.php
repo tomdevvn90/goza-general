@@ -13,6 +13,9 @@ function load_template_item_event($classes){
 
 function be_template_item_event_water_charity(){ 
     $event_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+    $color_heading = __get_field('color_hd_ev_carousel') ?: '';
+    $color_sub_hd  = __get_field('color_sub_hd_ev_carousel') ?: '';
+    $color_content = __get_field('color_content_ev_carousel') ?: '';
     ?>
     <div class="item-event"> 
         <div class="item-event--content"> 
@@ -32,6 +35,10 @@ function be_template_item_event_ngo_dark(){
     $event_date = tribe_get_start_date( get_the_ID(), true, 'j M Y');
     $event_time = tribe_get_start_date( get_the_ID(), true, 'G:i a');
     $address    = tribe_get_address(get_the_ID());
+    $cta_style  = __get_field('cta_style_ev_carousel') ?: 'btn-default';
+    $color_heading = __get_field('color_hd_ev_carousel') ?: '';
+    $color_sub_hd  = __get_field('color_sub_hd_ev_carousel') ?: '';
+    $color_content = __get_field('color_content_ev_carousel') ?: '';
     ?>
     <div class="item-event"> 
         <div class="item-event--content">
