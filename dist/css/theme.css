@@ -24144,6 +24144,13 @@ ul.be-list-ul li {
   margin: 15px;
 }
 
+@media (max-width: 991.98px) {
+  .be-post-slider-block-inner .item-post-inner {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .be-post-slider-block-inner .item-post-inner:hover > .item-post-thumbnail::after {
   opacity: 1;
 }
