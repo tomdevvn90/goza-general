@@ -60,8 +60,8 @@ if (class_exists('Tribe__Events__Main')) {
 /**
  * Validation form comment
  */
-add_action('wp_footer', 'jayla_comment_validation_init');
-function jayla_comment_validation_init(){
+add_action('wp_footer', 'goza_comment_validation_init');
+function goza_comment_validation_init(){
   if(comments_open() ) { ?>
     <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
     <script type="text/javascript">

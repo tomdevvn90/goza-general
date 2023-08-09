@@ -8,6 +8,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 $bgImage = (!empty(__get_field('be_background_form'))) ? __get_field('be_background_form') : '';
 $is_style = isset($block['className']) ? $block['className'] : "is-style-default";
 //var_dump($be_donation_form);
+if(class_exists('Give')){
 ?>
 <div id="<?php echo $id; ?>" class="be-give-form-box-block <?php echo $align_class; ?> <?php echo $is_style ?>">
    <div class="be-give-form-box-block-inner" style="background-image: url('<?php echo $bgImage ?>')">
@@ -18,3 +19,5 @@ $is_style = isset($block['className']) ? $block['className'] : "is-style-default
       } ?>
    </div>
 </div>
+<?php
+}

@@ -34,6 +34,7 @@ $data_carousel = array(
 
 $is_style = isset($block['className']) ? $block['className'] : "is-style-default";
 $the_query = new WP_Query($args);
+if(class_exists('Give')){
 ?>
 
 <div id="<?php echo $id; ?>" class="be-give-slider-block <?php echo $align_class; ?> <?php echo $is_style ?>" data-style="<?php echo $is_style ?>" data-slider='<?= json_encode($data_carousel) ?>'>
@@ -53,3 +54,4 @@ $the_query = new WP_Query($args);
     } ?>
 </div>
 <?php
+}

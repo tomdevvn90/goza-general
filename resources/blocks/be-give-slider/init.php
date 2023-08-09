@@ -44,14 +44,17 @@ function be_template_give_style_4()
    $color       = get_post_meta($form_id, '_give_goal_color', true);
    $give_forms_category = (wp_get_post_terms($form_id, 'give_forms_category'));
 
-   foreach ($give_forms_category as $give_forms_category1) {
-      $give_forms_category_name = $give_forms_category1->name; //do something here
-      $give_forms_category_link = get_term_link($give_forms_category1->slug, 'give_forms_category'); //do something here
-      //var_dump($give_forms_category_link );
-   }
-   if (empty($give_forms_category_name)) {
-      $give_forms_category_name = '';
-   }
+   if( $give_forms_category && ! is_wp_error( $give_forms_category ) ) {
+      foreach($give_forms_category as $give_forms_category1) {
+          $give_forms_category_name = $give_forms_category1->name; //do something here
+          $give_forms_category_link = get_term_link($give_forms_category1->slug, 'give_forms_category'); //do something here
+          //var_dump($give_forms_category_link );
+          }
+        }
+          if (empty($give_forms_category_name)) {
+            $give_forms_category_name = '';
+            $give_forms_category_link = '';
+          }
    // set color if empty
    if (empty($color)) $color = '#01FFCC';
    $progress = ($goal === 0) ? 0 : round(($income / $goal) * 100, 2);
@@ -114,14 +117,17 @@ function be_template_give_style_3()
    $color       = get_post_meta($form_id, '_give_goal_color', true);
    $give_forms_category = (wp_get_post_terms($form_id, 'give_forms_category'));
 
-   foreach ($give_forms_category as $give_forms_category1) {
-      $give_forms_category_name = $give_forms_category1->name; //do something here
-      $give_forms_category_link = get_term_link($give_forms_category1->slug, 'give_forms_category'); //do something here
-      //var_dump($give_forms_category_link );
-   }
-   if (empty($give_forms_category_name)) {
-      $give_forms_category_name = '';
-   }
+   if( $give_forms_category && ! is_wp_error( $give_forms_category ) ) {
+      foreach($give_forms_category as $give_forms_category1) {
+          $give_forms_category_name = $give_forms_category1->name; //do something here
+          $give_forms_category_link = get_term_link($give_forms_category1->slug, 'give_forms_category'); //do something here
+          //var_dump($give_forms_category_link );
+          }
+        }
+          if (empty($give_forms_category_name)) {
+            $give_forms_category_name = '';
+            $give_forms_category_link = '';
+          }
    // set color if empty
    if (empty($color)) $color = '#01FFCC';
    $progress = ($goal === 0) ? 0 : round(($income / $goal) * 100, 2);
@@ -183,14 +189,17 @@ function be_template_give_style_2()
    $color       = get_post_meta($form_id, '_give_goal_color', true);
    $give_forms_category = (wp_get_post_terms($form_id, 'give_forms_category'));
 
-   foreach ($give_forms_category as $give_forms_category1) {
-      $give_forms_category_name = $give_forms_category1->name; //do something here
-      $give_forms_category_link = get_term_link($give_forms_category1->slug, 'give_forms_category'); //do something here
-      //var_dump($give_forms_category_link );
-   }
-   if (empty($give_forms_category_name)) {
-      $give_forms_category_name = '';
-   }
+   if( $give_forms_category && ! is_wp_error( $give_forms_category ) ) {
+      foreach($give_forms_category as $give_forms_category1) {
+          $give_forms_category_name = $give_forms_category1->name; //do something here
+          $give_forms_category_link = get_term_link($give_forms_category1->slug, 'give_forms_category'); //do something here
+          //var_dump($give_forms_category_link );
+          }
+        }
+          if (empty($give_forms_category_name)) {
+            $give_forms_category_name = '';
+            $give_forms_category_link = '';
+          }
    // set color if empty
    if (empty($color)) $color = '#01FFCC';
    $progress = ($goal === 0) ? 0 : round(($income / $goal) * 100, 2);
@@ -256,14 +265,17 @@ function be_template_give_default()
    $color       = get_post_meta($form_id, '_give_goal_color', true);
    $give_forms_category = (wp_get_post_terms($form_id, 'give_forms_category'));
 
-   foreach ($give_forms_category as $give_forms_category1) {
-      $give_forms_category_name = $give_forms_category1->name; //do something here
-      $give_forms_category_link = get_term_link($give_forms_category1->slug, 'give_forms_category'); //do something here
-      //var_dump($give_forms_category_link );
-   }
-   if (empty($give_forms_category_name)) {
-      $give_forms_category_name = '';
-   }
+   if( $give_forms_category && ! is_wp_error( $give_forms_category ) ) {
+      foreach($give_forms_category as $give_forms_category1) {
+          $give_forms_category_name = $give_forms_category1->name; //do something here
+          $give_forms_category_link = get_term_link($give_forms_category1->slug, 'give_forms_category'); //do something here
+          //var_dump($give_forms_category_link );
+          }
+        }
+          if (empty($give_forms_category_name)) {
+            $give_forms_category_name = '';
+            $give_forms_category_link = '';
+          }
    // set color if empty
    if (empty($color)) $color = '#01FFCC';
    $progress = ($goal === 0) ? 0 : round(($income / $goal) * 100, 2);
@@ -321,14 +333,17 @@ function be_template_give_style_5()
    $color       = get_post_meta($form_id, '_give_goal_color', true);
    $give_forms_category = (wp_get_post_terms($form_id, 'give_forms_category'));
 
-   foreach ($give_forms_category as $give_forms_category1) {
-      $give_forms_category_name = $give_forms_category1->name; //do something here
-      $give_forms_category_link = get_term_link($give_forms_category1->slug, 'give_forms_category'); //do something here
-      //var_dump($give_forms_category_link );
-   }
-   if (empty($give_forms_category_name)) {
-      $give_forms_category_name = '';
-   }
+   if( $give_forms_category && ! is_wp_error( $give_forms_category ) ) {
+      foreach($give_forms_category as $give_forms_category1) {
+          $give_forms_category_name = $give_forms_category1->name; //do something here
+          $give_forms_category_link = get_term_link($give_forms_category1->slug, 'give_forms_category'); //do something here
+          //var_dump($give_forms_category_link );
+          }
+        }
+          if (empty($give_forms_category_name)) {
+            $give_forms_category_name = '';
+            $give_forms_category_link = '';
+          }
    // set color if empty
    if (empty($color)) $color = '#01FFCC';
    $progress = ($goal === 0) ? 0 : round(($income / $goal) * 100, 2);
