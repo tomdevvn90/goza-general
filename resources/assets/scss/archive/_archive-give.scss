@@ -1,0 +1,115 @@
+.donations-give-form-wrap {
+  background: #ffffff;
+  overflow: hidden;
+  border-radius: 2px;
+	.give-card__media {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 66%;
+    background: #e7e6e4;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+	}
+	.give-card__body {
+		padding: 24px 32px;
+		.give-goal-progress {
+			margin-bottom: 24px;
+			.raised {
+				margin-bottom: 4px;
+			}
+		}
+		.give-card__title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 12px;
+		}
+    .give-card__text {
+      margin: 0 0 24px;
+    }
+		.give-card__button {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 24px;
+      color: #FFFFFF;
+      background: var(--link-color, #d41b65);
+			padding: 12px 24px;
+			border-radius: 2px;
+		}
+	}
+	@media( max-width: 575.98px ) {
+		.give-card__body {
+			padding: 24px 16px;
+			.give-goal-progress {
+				margin-bottom: 16px;
+				.raised {
+					font-size: 14px;
+				}
+				.income {
+					font-size: 24px;
+				}
+			}
+			.give-card__title {
+				font-size: 18px;
+				line-height: 28px;
+				margin-bottom: 8px;
+			}
+			.give-card__text {
+				margin-bottom: 16px;
+			}
+			.give-card__button {
+				font-size: 13px;
+				line-height: 20px;
+				padding: 8px 16px;
+			}
+		}
+	}
+
+}
+
+.archive-donation-page-template {
+  &.has-sidebar {
+    .give-forms-list {
+      grid-template-columns: 1fr 1fr;
+      @media( max-width: 767.98px ) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  .give-forms-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    @media( max-width: 991.98px ) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media( max-width: 767.98px ) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+}
+
+.give-forms-loadmore {
+	font-size: 16px;
+	text-align: center;
+	margin-top: 60px;
+	.btn-loadmore {
+		display: inline-block;
+		font-size: 13px;
+		font-weight: 700;
+		line-height: 20px;
+		text-transform: uppercase;
+		padding: 12px 30px;
+		color: #FFFFFF;
+		background: var(--link-color, #d41b65);
+		border-radius: 2px;
+	}
+}
