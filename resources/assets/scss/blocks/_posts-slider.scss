@@ -7,6 +7,11 @@
                 cursor: pointer;
                 box-shadow: 0 0 14.5px 0 rgba(0, 0, 0, 0.09);
                 margin: 15px;
+                box-sizing: border-box;
+                @include media-breakpoint-down(md) {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
                 &:hover{
                     > .item-post{
                          &-thumbnail{

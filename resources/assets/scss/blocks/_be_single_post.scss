@@ -286,6 +286,18 @@
                 img{
                     width: 100%;
                     height: 100%;
+                    -webkit-mask-size: contain;
+                    -webkit-mask-position: center left;
+                    -webkit-mask-repeat: no-repeat;
+                    -webkit-mask-image: url('../resources/assets/images/home-ngo-dark/image-mask.png');
+                    min-height: 300px;
+                }
+            }
+
+            &.__row-reverse{
+                .be-single-post-inner--thumbnail img{
+                    -webkit-mask-image: url('../resources/assets/images/home-ngo-dark/image-mask-right.png');
+                    -webkit-mask-position: center right;
                 }
             }
         }
