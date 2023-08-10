@@ -16,7 +16,7 @@ get_header();
 *
 * @hooked goza_page_titlebar_archive_template - 10
 */
-do_action( 'goza_page_titlebar_archive' );
+do_action( 'goza_hook_blog_hero_section' );
 
 
 ?>
@@ -28,7 +28,7 @@ do_action( 'goza_page_titlebar_archive' );
 
 					<?php if ( have_posts() ) { ?>
 
-						<section class="give-forms-list <?php echo esc_attr( $pagination_type ); ?>">
+						<section class="give-forms-list loadmore-button">
 							<?php
 							// Load posts loop.
 							while ( have_posts() ) {
@@ -39,14 +39,13 @@ do_action( 'goza_page_titlebar_archive' );
 						</section> 
 
 						<?php
-							// Load more button
-							global $wp_query;
-							if (  $wp_query->max_num_pages > 1 ) {
-								echo '<div class="give-forms-loadmore">
-										<a class="btn-loadmore" href="#">' . esc_html__('More Post', 'goza') . '</a>
-									</div>';
-								
-							}
+							the_posts_pagination(
+								array(
+									'mid_size'  => 2,
+									'prev_text' => __( 'Prev', 'goza' ),
+									'next_text' => __( 'Next', 'goza' ) ,
+								)
+							);
 
 					} else {
 
@@ -58,8 +57,11 @@ do_action( 'goza_page_titlebar_archive' );
 
 
 			</main><!-- .site-main -->
-
-			<?php get_sidebar( 'give' ); ?>
+			<aside class="widget-area give-sidebar" role="complementary" aria-label="Give Sidebar">
+				<div class="sidebar-widget-wrap">
+					<?php dynamic_sidebar( 'archive-give-sidebar' ); ?>
+				</div>
+			</aside>
 
 		</div>
 	</div><!-- #primary -->
