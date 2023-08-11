@@ -645,6 +645,13 @@ $main-color: #d41b65;
 			padding: 40px 0 10px;
 			border: none;
 			border-radius: 2px;
+			@include media-breakpoint-down(lg) {
+				margin: 48px 0;
+			}
+
+			@include media-breakpoint-down(md) {
+				margin: 32px 0;
+			}
 			&:before {
 				display: none;
 			}
@@ -910,4 +917,49 @@ $main-color: #d41b65;
 		}
 	}
 
+}
+
+
+.single-tribe_events{
+	.site-content{
+		background: #f8f7f5;
+		padding-top: 90px;
+		padding-bottom: 58px;
+		@include media-breakpoint-down(md) {
+			padding-top: 60px;
+			padding-bottom: 28px;
+		}
+	}
+
+	.tribe-events-single-event{
+		
+		&-content-wrap{
+			.tribe-common-c-btn-border{
+				border-color:var(--link-color, #d41b65);
+				color: var(--link-color, #d41b65);
+				svg{
+					color:var(--link-color, #d41b65);
+				}
+
+				&:hover, &:focus{
+					background-color:var(--link-color, #d41b65);
+					color: #fff;
+					svg{
+						color: #fff;
+					}
+				}
+			}
+		}	
+	}
+
+
+	.tribe-events-event-meta{
+		.tribe-events-meta-group{
+			.tribe-events-meta-item{
+				a{
+					color: var(--link-color, #d41b65);
+				}
+			}
+		}
+	}
 }

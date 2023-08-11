@@ -10,7 +10,7 @@ function tribe_event_item(){
     $start_month = tribe_get_start_date(get_the_ID(), true, 'F');
     $time_start  = tribe_get_start_date(get_the_ID(), true, 'G:i a');
     $time_end    = tribe_get_end_date(get_the_ID(), true, 'G:i a');
-    $venue       = tribe_get_venue(get_the_ID());
+    $venue       = tribe_get_address(get_the_ID());
 
     ?>
     <div <?php post_class( 'item-event', get_the_ID() ); ?> >
@@ -42,8 +42,13 @@ function tribe_event_item(){
                         <?php echo get_the_title(); ?>
                     </a>
                     <?php if( !empty($venue) ): ?>
-                        <div class="venue-empty"><?php echo $venue; ?></div>
+                        <div class="venue-empty d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M256 0C161.896 0 85.333 76.563 85.333 170.667c0 28.25 7.063 56.26 20.49 81.104L246.667 506.5c1.875 3.396 5.448 5.5 9.333 5.5s7.458-2.104 9.333-5.5l140.896-254.813c13.375-24.76 20.438-52.771 20.438-81.021C426.667 76.563 350.104 0 256 0zm0 256c-47.052 0-85.333-38.281-85.333-85.333S208.948 85.334 256 85.334s85.333 38.281 85.333 85.333S303.052 256 256 256z" fill="#000000" data-original="#000000" class=""></path></g></svg>
+                            <span><?php echo $venue; ?></span>
+                        </div>
                     <?php endif; ?>
+
+                    <div class="item-event--excerpt"> <?php the_excerpt() ?> </div>
                 </div>
             </div>
             <a href="<?php echo get_permalink( get_the_ID() ); ?>" class="readmore-link">
