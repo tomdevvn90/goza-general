@@ -34,10 +34,9 @@ if( is_singular( 'tribe_events' ) ) {
 	<div id="primary" class="content-area <?php echo esc_attr($classes); ?>">
 		<div class="container responsive">
 			<main id="main" class="site-main">
-				<?php // echo tribe( Template_Bootstrap::class )->get_view_html(); ?>
 				<section class="goza-section-space">
 					<div class="list-tab-event">
-						<ul class="nav nav-tabs">
+						<ul class="nav nav-tabs d-flex align-items-center">
 							<li class="active">
 								<a class="tab-item" href="#tab-happening" data-toggle="tab" aria-expanded="true"><?php esc_html_e( 'Happening', 'goza' );?></a>
 							</li>
