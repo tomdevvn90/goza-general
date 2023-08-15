@@ -138,7 +138,7 @@
                     border: medium none;
                     border-radius: 3px;
                     -webkit-appearance: button;
-
+                    box-sizing: border-box;
                     @media (max-width: 767px) {
                         width: 100%;
                         padding: 13px 15px;
@@ -146,6 +146,10 @@
                     @media (max-width: 400px) {
                         width: 100%;
                         padding: 13px 10px;
+                    }
+
+                    @media (max-width: 359.98px){
+                        font-size: 14px;
                     }
                 }
             }
@@ -238,6 +242,9 @@
         .form-row-last {
             float: left;
             width: 48.5%;
+            @media (max-width: 575.98px) {
+                width: 100%;
+            }
         }
 
         .form-row-last {

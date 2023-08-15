@@ -8,7 +8,10 @@
         cursor: pointer;
         box-shadow: 0 0 14.5px 0 rgba(0, 0, 0, 0.09);
         margin: 15px;
-
+        @media (max-width: 767.98px){
+          margin-left: 0;
+          margin-right: 0;
+        }
         &:hover {
           >.item-give {
             &-thumbnail {
@@ -412,21 +415,38 @@
               border-top: #ebebeb solid 1px;
               overflow: hidden;
 
-              .give-price-raised {
-                width: 50%;
-                float: left;
-                text-align: center;
+              .give-price-goal, .give-price-raised{
                 font-size: 22px;
                 line-height: 1;
+                text-align: center;
                 letter-spacing: 0;
                 color: #303030;
+                width: 50%;
+                float: left;
+                @media (max-width: 991.98px){
+                  font-size: 20px;
+                  line-height: 120%;
+                }
 
+                @media (max-width: 767.98px){
+                  font-size: 18px;
+                }
+
+                @media (max-width: 359.98px){
+                  font-size: 16px;
+                }
+              }
+
+              .give-price-raised {
                 span {
                   display: block;
                   color: #777777;
                   font-size: 16px;
                   line-height: 2.14;
                   letter-spacing: 0;
+                  @media (max-width: 359.98px){
+                    font-size: 14px;
+                  }
                 }
 
                 strong {
@@ -435,21 +455,16 @@
               }
 
               .give-price-goal {
-                width: 50%;
-                float: left;
-                text-align: center;
                 border-left: #ebebeb solid 1px;
-                font-size: 22px;
-                line-height: 1;
-                letter-spacing: 0;
-                color: #303030;
-
                 span {
                   display: block;
                   color: #777777;
                   font-size: 16px;
                   line-height: 2.14;
                   letter-spacing: 0;
+                  @media (max-width: 359.98px){
+                    font-size: 14px;
+                  }
                 }
 
                 strong {

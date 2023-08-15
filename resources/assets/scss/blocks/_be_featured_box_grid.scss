@@ -51,7 +51,10 @@
                 position: relative;
                 z-index: 2;
                 padding: 40px;
-
+                @media (max-width: 767.98px) {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
                 img {
                     max-width: 65px;
                     margin-bottom: 20px;
