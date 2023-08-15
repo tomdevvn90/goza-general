@@ -12604,7 +12604,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   background: #f9f9f9;
   font-weight: 700;
   line-height: 29px;
-  transition: all 2s ease-in-out 2s;
+  transition: all 0.25s ease-in-out 0.25s;
 }
 
 .post-type-archive-tribe_events .list-tab-event .bt-list-event {
