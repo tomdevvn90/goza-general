@@ -3,6 +3,11 @@
     .woocommerce{
 
         .woocommerce-form-coupon{
+            .form-row-first, .form-row-last{
+                @media screen and (min-width: 451px){
+                    width: calc(50% - 4.5px);
+                }
+            }
             input{
                 border-radius: 3px;
                 border: 1px solid rgba(53, 53, 53, 0.1);
@@ -24,6 +29,7 @@
                 background-color: var(--link-color);
                 color: #FFFFFF;
                 display: inline-block;
+                height: 48px;
                 &::after{
                     background: #fff;
                     content: "";

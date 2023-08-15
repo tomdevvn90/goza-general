@@ -7576,6 +7576,11 @@
 @media screen and (max-width: 767px) {
   .be-events-listing-block.is-style-ev-list .item-event--venue {
     margin-top: 5px;
+    align-items: start;
+  }
+
+  .be-events-listing-block.is-style-ev-list .item-event--venue svg {
+    margin-top: 5px;
   }
 }
 

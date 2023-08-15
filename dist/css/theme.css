@@ -27650,6 +27650,11 @@ ul.be-list-ul li {
 @media screen and (max-width: 767px) {
   .be-events-listing-block.is-style-ev-list .item-event--venue {
     margin-top: 5px;
+    align-items: start;
+  }
+
+  .be-events-listing-block.is-style-ev-list .item-event--venue svg {
+    margin-top: 5px;
   }
 }
 
@@ -38790,6 +38795,13 @@ div[id*=give-form].give-display-reveal .give-btn {
   }
 }
 
+@media screen and (min-width: 451px) {
+  .woocommerce-page .woocommerce .woocommerce-form-coupon .form-row-first,
+  .woocommerce-page .woocommerce .woocommerce-form-coupon .form-row-last {
+    width: calc(50% - 4.5px);
+  }
+}
+
 .woocommerce-page .woocommerce .woocommerce-form-coupon input {
   border-radius: 3px;
   border: 1px solid rgba(53, 53, 53, 0.1);
@@ -38810,6 +38822,7 @@ div[id*=give-form].give-display-reveal .give-btn {
   background-color: var(--link-color);
   color: #FFFFFF;
   display: inline-block;
+  height: 48px;
 }
 
 .woocommerce-page .woocommerce .woocommerce-form-coupon .button::after {
