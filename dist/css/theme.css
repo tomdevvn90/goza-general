@@ -12340,6 +12340,173 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
+.single-post .goza-hero-section .goza-hero-section-inner__heading {
+  font-size: 42px;
+  line-height: 125%;
+  margin-bottom: 16px;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+@media (max-width: 991.98px) {
+  .single-post .goza-hero-section .goza-hero-section-inner__heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .single-post .goza-hero-section .goza-hero-section-inner__heading {
+    font-size: 30px;
+  }
+}
+
+.single-post .goza-section .post-container .post-content h2,
+.single-post .goza-section .post-container .post-content h3,
+.single-post .goza-section .post-container .post-content h4,
+.single-post .goza-section .post-container .post-content h5,
+.single-post .goza-section .post-container .post-content h6 {
+  line-height: 125%;
+  color: var(--heading-color);
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.single-post .goza-section .post-container .post-content h2 {
+  font-size: 32px;
+  margin-top: 32px;
+}
+
+@media (max-width: 991.98px) {
+  .single-post .goza-section .post-container .post-content h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .single-post .goza-section .post-container .post-content h2 {
+    font-size: 26px;
+  }
+}
+
+.single-post .goza-section .post-container .post-content h3 {
+  font-size: 28px;
+  margin-top: 24px;
+}
+
+@media (max-width: 991.98px) {
+  .single-post .goza-section .post-container .post-content h3 {
+    font-size: 24px;
+  }
+}
+
+.single-post .goza-section .post-container .post-content h4 {
+  margin-top: 18px;
+  font-size: 24px;
+}
+
+@media (max-width: 991.98px) {
+  .single-post .goza-section .post-container .post-content h4 {
+    font-size: 20px;
+  }
+}
+
+.single-post .goza-section .post-container .post-content h5 {
+  margin-top: 14px;
+  font-size: 20px;
+}
+
+@media (max-width: 991.98px) {
+  .single-post .goza-section .post-container .post-content h5 {
+    font-size: 18px;
+  }
+}
+
+.single-post .goza-section .post-container .post-content h6 {
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+@media (max-width: 991.98px) {
+  .single-post .goza-section .post-container .post-content h6 {
+    font-size: 16px;
+  }
+}
+
+.single-post .goza-section .post-container .post-content a {
+  color: var(--link-color);
+  box-shadow: 0px 1px 0px var(--link-color);
+}
+
+.single-post .goza-section .post-container .post-content ul li,
+.single-post .goza-section .post-container .post-content ol li,
+.single-post .goza-section .post-container .post-content p,
+.single-post .goza-section .post-container .post-content a {
+  font-size: 16px;
+  line-height: 175%;
+}
+
+@media (max-width: 991.98px) {
+  .single-post .goza-section .post-container .post-content ul li,
+  .single-post .goza-section .post-container .post-content ol li,
+  .single-post .goza-section .post-container .post-content p,
+  .single-post .goza-section .post-container .post-content a {
+    font-size: 14px;
+    line-height: 150%;
+  }
+}
+
+.single-post .goza-section .post-container .post-content p {
+  margin: 24px 0;
+}
+
+.single-post .goza-section .post-container .post-content ul,
+.single-post .goza-section .post-container .post-content ol {
+  margin: 0 0 24px;
+  padding: 0;
+  line-height: 150%;
+}
+
+.single-post .goza-section .post-container .post-content ul li,
+.single-post .goza-section .post-container .post-content ol li {
+  margin-bottom: 12px;
+}
+
+.single-post .goza-section .post-container .post-content ul li::before {
+  content: "\F111";
+  font-size: 80%;
+  margin-right: 8px;
+}
+
+.single-post .goza-section .post-container .post-content .wp-block-quote {
+  border: none;
+  box-shadow: inset 2px 0px 0px var(--link-color);
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 32px 0;
+  padding-left: 56px;
+  background: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+  .single-post .goza-section .post-container .post-content .wp-block-quote {
+    padding-left: 36px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .single-post .goza-section .post-container .post-content .wp-block-quote {
+    padding-left: 24px;
+    font-size: 18px;
+  }
+}
+
+.single-post .goza-section .post-container .post-content .wp-block-quote p {
+  font-size: inherit;
+  margin: 0;
+}
+
 .post-type-archive-give_forms .posts-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
