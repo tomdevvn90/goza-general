@@ -1264,7 +1264,7 @@ __webpack_require__.r(__webpack_exports__);
       menu_mini_cart.addClass('active');
     });
     menu_mini_cart.on('click', function (e) {
-      e.preventDefault();
+      // e.preventDefault();
       if (!menu_mini_cart_main.is(e.target) && menu_mini_cart_main.has(e.target).length === 0) {
         $(this).removeClass('active');
       }
