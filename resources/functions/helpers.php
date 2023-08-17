@@ -214,7 +214,7 @@ if (!function_exists('goza_single_post_navigation')) {
 
 		?>
 		<div class="single-post-navigation post-navigation-skin--<?php echo get_post_type(); ?>">
-			<div class="previous-next-link">
+			<div class="previous-next-link flex-sm-nowrap flex-wrap">
 				<?php if (!empty($prev_post)) : ?>
 					<div class="previous">
 						<a href="<?php echo esc_url($permalink_prev); ?>" class="post-nav-link" rel="prev">
@@ -222,11 +222,9 @@ if (!function_exists('goza_single_post_navigation')) {
 								<?php echo get_the_post_thumbnail($prev_id, 'thumbnail'); ?>
 							</div>
 							<div class="post-nav-title-box">
+								<span class="meta-nav" aria-hidden="true">Previous Post</span>
 								<div class="post-title">
 									<?php echo get_the_title($prev_id); ?>
-								</div>
-								<div class="post-date">
-									<?php echo get_the_date('j F, Y', $prev_id); ?>
 								</div>
 							</div>
 						</a>
@@ -236,11 +234,9 @@ if (!function_exists('goza_single_post_navigation')) {
 					<div class="next">
 						<a href="<?php echo esc_url($permalink_next); ?>" class="post-nav-link" rel="next">
 							<div class="post-nav-title-box">
+								<span class="meta-nav" aria-hidden="true">Next Post</span>
 								<div class="post-title">
 									<?php echo get_the_title($next_id); ?>
-								</div>
-								<div class="post-date">
-									<?php echo get_the_date('j F, Y', $next_id); ?>
 								</div>
 							</div>
 							<div class="post-nav-thumbnail">

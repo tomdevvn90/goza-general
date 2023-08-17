@@ -18,7 +18,7 @@
 
     .goza-section{
         .post-container{
-            .post-content{
+            article.post{
                 h2, h3, h4, h5, h6{
                     line-height: 125%;
                     color: var(--heading-color);
@@ -104,7 +104,7 @@
                     li{
                         &::before{
                             content: "\f111";
-                            font-size: 80%;
+                            font-size: 70%;
                             margin-right: 8px;
                         }
                     }
@@ -131,6 +131,87 @@
                     p{
                         font-size: inherit;
                         margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .single-post-navigation{
+        .previous-next-link{
+            width: 100%;
+            display: flex;
+            padding-top: 24px;
+            border-top: 1px solid rgba(0,0,0,.1);
+            border-bottom: 1px solid rgba(0,0,0,.1);
+            padding-bottom: 24px;
+            margin-left: -7.5px;
+            margin-right: -7.5px;
+            > div{
+                padding-left: 7.5px;
+                padding-right: 7.5px;
+                @media (max-width: 575.98px) { 
+                    width: 100% !important;
+                    text-align: left !important;
+
+                    .post-nav-thumbnail{
+                        max-width: 60px !important;
+                    }
+                }
+                > a{
+                    box-shadow:none !important;
+                }
+                
+
+                &.next{
+                    @media (max-width: 575.98px) { 
+                        margin-top: 16px;
+                    }
+                    a{
+                        flex-direction: row-reverse;
+                        .post-nav-title-box{
+                            padding-right: 0;
+                            padding-left: 6px;
+                        }
+                    }
+                }
+            }
+
+            .meta-nav{
+                font-size: 14px;
+                line-height: 150%;
+            }
+
+            .post-title{
+                margin-bottom: 0px;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .comments-area{
+        ol.children{
+            margin-top: 12px !important;
+        }
+
+        ol{
+            .comment-body{
+                .comment-meta{
+                    a{
+                        box-shadow: none;
+                    }
+
+                    .comment-author{
+                        font-weight: 600;
+                    }
+                }
+
+                .comment-details{
+                    .comment-text{
+                        p{
+                            margin-top: 0;
+                            margin-bottom: 16px;
+                        }
                     }
                 }
             }
