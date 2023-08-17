@@ -11909,7 +11909,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   .be-projects-grid-section .grid-layout {
     grid-template-columns: repeat(var(--columns-grid-mobile, 1), 1fr);
   }

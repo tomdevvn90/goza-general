@@ -189,7 +189,7 @@
             grid-template-columns: repeat( var(--columns-grid-tablet, 2), 1fr);
         }
     }
-    @media (max-width: 991px) {
+    @media (max-width: 768px) {
         .grid-layout{
             grid-template-columns: repeat( var(--columns-grid-mobile, 1), 1fr);
         }

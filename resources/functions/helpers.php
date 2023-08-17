@@ -163,7 +163,7 @@ if (!function_exists('goza_blog_posts_navigation')) {
 				$next_text = '<strong>Older</strong> <i class="fa fa-angle-right"></i>';
 
 				$args = array(
-					'format' => '/page/%#%',
+					'format' => 'page/%#%',
 					'current' => max(1, get_query_var('paged')),
 					'total' => $wp_query->max_num_pages,
 					'prev_next'          => false,
