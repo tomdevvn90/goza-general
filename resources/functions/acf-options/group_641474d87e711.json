@@ -257,12 +257,10 @@
                 "ngo": "Header Ngo",
                 "charity": "Header Charity",
                 "water": "Header Water",
-                "organization": "Header Orgazination",
+                "orgazination": "Header Orgazination",
                 "ngo-dark": "Header Ngo Dark",
                 "water-charity": "Header Water Charity",
-                "charity-organization": "Header Charity Orgazination",
-                "earthquake": "Header Earthquake",
-                "charity-new": "Header Charity-2"
+                "charity-orgazination": "Header Charity Orgazination"
             },
             "default_value": false,
             "return_format": "value",
@@ -353,32 +351,6 @@
             "ui": 1
         },
         {
-            "key": "field_64769b884a318",
-            "label": "Button Type",
-            "name": "goza_button_type",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "df_link": "Default Link",
-                "form_popup": "Form Popup"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
             "key": "field_64181a338467d",
             "label": "Header Button",
             "name": "goza_header_button",
@@ -386,53 +358,13 @@
             "type": "link",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_64769b884a318",
-                        "operator": "==",
-                        "value": "df_link"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "return_format": "array"
-        },
-        {
-            "key": "field_64769c2b4a319",
-            "label": "Select Form Donation",
-            "name": "goza_form_donation",
-            "aria-label": "",
-            "type": "post_object",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_64769b884a318",
-                        "operator": "==",
-                        "value": "form_popup"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "give_forms"
-            ],
-            "post_status": "",
-            "taxonomy": "",
-            "return_format": "object",
-            "multiple": 0,
-            "allow_null": 1,
-            "ui": 1
         },
         {
             "key": "field_64147a2bcef28",
@@ -475,8 +407,7 @@
                     "choices": {
                         "default": "Default",
                         "layout-2": "Layout 2",
-                        "layout-3": "Layout 3",
-                        "layout-4": "Layout 4"
+                        "layout-3": "Layout 3"
                     },
                     "default_value": false,
                     "return_format": "value",
@@ -589,8 +520,7 @@
                 "ngo": "Footer Ngo",
                 "organization": "Footer Orgazination",
                 "water-charity": "Footer Water Charity",
-                "charity-organization": "Footer Charity Organiztion",
-                "earthquake": "Footer Earthquake"
+                "charity-organization": "Footer Charity Organiztion"
             },
             "default_value": false,
             "return_format": "value",
@@ -1373,14 +1303,13 @@
                         "Exo 2": "Exo 2",
                         "Fira Sans": "Fira Sans",
                         "Roboto": "Roboto",
-                        "Calligraffitti": "Calligraffitti",
-                        "Muli": "Muli"
+                        "Calligraffitti": "Calligraffitti"
                     },
                     "default_value": false,
-                    "return_format": "value",
-                    "multiple": 0,
                     "allow_null": 0,
+                    "multiple": 0,
                     "ui": 0,
+                    "return_format": "value",
                     "ajax": 0,
                     "placeholder": ""
                 },
@@ -1534,15 +1463,14 @@
                         "Exo 2": "Exo 2",
                         "Fira Sans": "Fira Sans",
                         "Roboto": "Roboto",
-                        "Calligraffitti": "Calligraffitti",
-                        "Muli": "Muli"
+                        "Calligraffitti": "Calligraffitti"
                     },
                     "default_value": false,
-                    "return_format": "value",
-                    "multiple": 0,
                     "allow_null": 0,
+                    "multiple": 0,
                     "ui": 1,
                     "ajax": 0,
+                    "return_format": "value",
                     "placeholder": ""
                 },
                 {
@@ -2145,6 +2073,73 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium"
+        },
+        {
+            "key": "field_64de3058cd990",
+            "label": "Product",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64de307ecd991",
+            "label": "Icon Hero",
+            "name": "goza_product_icon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_64de3083cd992",
+            "label": "Background Image Hero",
+            "name": "goza_product_bg_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -2165,5 +2160,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692022665
+    "modified": 1692283057
 }
