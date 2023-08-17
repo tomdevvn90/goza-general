@@ -17411,6 +17411,7 @@ h6 {
   width: 100%;
   z-index: 9;
   background: rgba(255, 255, 255, 0) !important;
+  box-sizing: border-box;
 }
 
 @media (max-width: 991.98px) {
@@ -17558,6 +17559,93 @@ h6 {
   .site-header.site-header-ngo .goza-header-main--cta #goza-hamberger {
     display: none;
   }
+}
+
+.site-header.site-header-ngo #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-megamenu > ul.mega-sub-menu {
+  max-width: 660px;
+}
+
+.site-header.site-header-ngo #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item h4.mega-block-title {
+  font-size: 18px;
+  line-height: 115%;
+  color: var(--heading-color);
+  margin: 0 0 24px 0;
+  font-weight: 500;
+}
+
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul {
+  flex-wrap: wrap;
+  gap: 0px;
+}
+
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li {
+  width: 100%;
+}
+
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li a {
+  line-height: 110%;
+}
+
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget {
+  gap: 0;
+}
+
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li {
+  position: relative;
+  padding-left: 75px;
+  margin: 0;
+  min-height: 60px;
+}
+
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li a {
+  color: var(--heading-color);
+  position: initial;
+  margin: 0;
+}
+
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li a img {
+  min-width: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li a:hover {
+  color: var(--link-color, inherit);
+}
+
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li .woocommerce-Price-amount,
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li .product-title {
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li.widget_nav_menu .menu-template-container ul li {
+  margin: 0;
+}
+
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li.widget_nav_menu .menu-template-container ul li a {
+  font-size: 15px;
+  color: var(--heading-color);
+  font-weight: 500;
+}
+
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li.widget_nav_menu .menu-template-container ul li a:hover {
+  color: var(--link-color, inherit);
+}
+
+.site-header.site-header-ngo .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li.widget_nav_menu .menu-template-container ul li:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .site-header-ngo #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
@@ -17724,6 +17812,93 @@ h6 {
 
 .site-header.site-header-search .goza-header-main--cta #goza-hamberger i {
   font-size: 23px;
+}
+
+.site-header.site-header-water #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-megamenu > ul.mega-sub-menu {
+  max-width: 660px;
+}
+
+.site-header.site-header-water #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item h4.mega-block-title {
+  font-size: 18px;
+  line-height: 115%;
+  color: var(--heading-color);
+  margin: 0 0 24px 0;
+  font-weight: 500;
+}
+
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul {
+  flex-wrap: wrap;
+  gap: 0px;
+}
+
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li {
+  width: 100%;
+}
+
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li a {
+  line-height: 110%;
+}
+
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget {
+  gap: 0;
+}
+
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li {
+  position: relative;
+  padding-left: 75px;
+  margin: 0;
+  min-height: 60px;
+}
+
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li a {
+  color: var(--heading-color);
+  position: initial;
+  margin: 0;
+}
+
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li a img {
+  min-width: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li a:hover {
+  color: var(--link-color, inherit);
+}
+
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li .woocommerce-Price-amount,
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li .product-title {
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li.widget_nav_menu .menu-template-container ul li {
+  margin: 0;
+}
+
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li.widget_nav_menu .menu-template-container ul li a {
+  font-size: 15px;
+  color: var(--heading-color);
+  font-weight: 500;
+}
+
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li.widget_nav_menu .menu-template-container ul li a:hover {
+  color: var(--link-color, inherit);
+}
+
+.site-header.site-header-water .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li.widget_nav_menu .menu-template-container ul li:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .site-header.site-header-menu-center .goza-header-main {
@@ -18496,6 +18671,93 @@ h6 {
   .site-header.site-header-water-charity .goza-header-main--cta #goza-hamberger {
     display: none;
   }
+}
+
+.site-header.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-megamenu > ul.mega-sub-menu {
+  max-width: 660px;
+}
+
+.site-header.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item h4.mega-block-title {
+  font-size: 18px;
+  line-height: 115%;
+  color: var(--heading-color);
+  margin: 0 0 24px 0;
+  font-weight: 500;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul {
+  flex-wrap: wrap;
+  gap: 0px;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li {
+  width: 100%;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li a {
+  line-height: 110%;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget {
+  gap: 0;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li {
+  position: relative;
+  padding-left: 75px;
+  margin: 0;
+  min-height: 60px;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li a {
+  color: var(--heading-color);
+  position: initial;
+  margin: 0;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li a img {
+  min-width: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li a:hover {
+  color: var(--link-color, inherit);
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li .woocommerce-Price-amount,
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li .product-title {
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li.widget_nav_menu .menu-template-container ul li {
+  margin: 0;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li.widget_nav_menu .menu-template-container ul li a {
+  font-size: 15px;
+  color: var(--heading-color);
+  font-weight: 500;
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li.widget_nav_menu .menu-template-container ul li a:hover {
+  color: var(--link-color, inherit);
+}
+
+.site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li.widget_nav_menu .menu-template-container ul li:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
