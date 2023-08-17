@@ -18,7 +18,15 @@
 
     .goza-section{
         .post-container{
-            article.post{
+            .post-content article.post{
+                .single-entry-header{
+                    .extra-meta{
+                        a{
+                            box-shadow: none;
+                        }
+                    }
+                }
+
                 h2, h3, h4, h5, h6{
                     line-height: 125%;
                     color: var(--heading-color);
@@ -116,7 +124,7 @@
                     font-size: 20px;
                     line-height: 1.5;
                     margin: 32px 0;
-                    padding-left: 56px;
+                    padding-left: 36px;
                     background: #fff;
                     padding-top: 0;
                     padding-bottom: 0;
@@ -166,12 +174,12 @@
                 &.next{
                     @media (max-width: 575.98px) { 
                         margin-top: 16px;
-                    }
-                    a{
-                        flex-direction: row-reverse;
-                        .post-nav-title-box{
-                            padding-right: 0;
-                            padding-left: 6px;
+                        a{
+                            flex-direction: row-reverse;
+                            .post-nav-title-box{
+                                padding-right: 0;
+                                padding-left: 6px;
+                            }
                         }
                     }
                 }
