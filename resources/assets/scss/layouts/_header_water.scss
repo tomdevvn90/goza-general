@@ -155,4 +155,108 @@
             }
         }
     }
+
+
+    &.site-header-water{
+        #mega-menu-wrap-main-menu #mega-menu-main-menu{
+            > li.mega-menu-megamenu{
+                > ul.mega-sub-menu{
+                    max-width: 660px;
+                }
+
+                > ul.mega-sub-menu li.mega-menu-column{
+                    > ul.mega-sub-menu{
+                        > li.mega-menu-item{
+                            h4.mega-block-title{
+                                font-size: 18px;
+                                line-height: 115%;
+                                color: var(--heading-color);
+                                margin: 0 0 24px 0;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .goza-header-main--menus{
+            ul.max-mega-menu{
+                .mega-sub-menu{
+                    ul{
+                        flex-wrap: wrap;
+                        gap: 0px;
+                        li{
+                            width: 100%;
+                            a{
+                                line-height: 110%;
+                            }
+
+                            ul.product_list_widget{
+                                gap: 0;
+                                > li{
+                                    position: relative;
+                                    padding-left: 75px;
+                                    margin: 0;
+                                    min-height: 60px;
+                                    a{
+                                        color: var(--heading-color);
+                                        position: initial;
+                                        margin: 0;
+                                        img{
+                                            min-width: 60px;
+                                            position: absolute;
+                                            left: 0;
+                                            top: 0;
+                                            margin: 0;
+                                            height: 100%;
+                                            -o-object-fit: cover;
+                                            object-fit: cover;
+                                            -o-object-position: center;
+                                            object-position: center;
+                                        }
+
+                                        &:hover{
+                                            color: var(--link-color, inherit);
+                                        }
+                                    }
+                                    
+                                    .woocommerce-Price-amount, .product-title{
+                                        margin-top: 5px;
+                                        display: inline-block;
+                                    }
+
+                                    &:not(:last-child){
+                                        margin-bottom: 16px;
+                                    }
+                                }
+                            }
+
+                            &.widget_nav_menu {
+                                .menu-template-container{
+                                    ul{
+                                        li {
+                                            margin: 0;
+                                            a{
+                                                font-size: 15px;
+                                                color: var(--heading-color);
+                                                font-weight: 500;
+                                                &:hover{
+                                                    color: var(--link-color, inherit);
+                                                }
+                                            }
+
+                                            &:not(:last-child){
+                                                margin-bottom: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
