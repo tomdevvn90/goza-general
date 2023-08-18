@@ -13327,6 +13327,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 .post-type-archive-fw-portfolio .posts-list .post-item__thumbnail {
   position: relative;
   padding-bottom: 66%;
+  background-color: #eee;
   overflow: hidden;
 }
 
@@ -13498,6 +13499,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 .tax-fw-portfolio-category .posts-list .post-item__thumbnail {
   position: relative;
   padding-bottom: 66%;
+  background-color: #eee;
   overflow: hidden;
 }
 

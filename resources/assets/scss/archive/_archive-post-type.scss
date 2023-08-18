@@ -727,6 +727,7 @@
                 &__thumbnail{
                     position: relative;
                     padding-bottom: 66%;
+                    background-color: #eee;
                     overflow: hidden;
                     &::after{
                         content: "";
@@ -889,6 +890,7 @@
                 &__thumbnail{
                     position: relative;
                     padding-bottom: 66%;
+                    background-color: #eee;
                     overflow: hidden;
                     &::after{
                         content: "";

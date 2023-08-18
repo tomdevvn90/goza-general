@@ -7,12 +7,13 @@
     $post_permalink = get_the_permalink();
 ?>
 <div id="<?php echo esc_attr( $id ); ?>" <?php post_class('post-item'); ?>>
-    <div class="post-item__thumbnail">
-        <img src="<?php echo esc_url( $post_img_url ); ?>" alt="">
-        <a href="<?php echo esc_url( $post_img_url ); ?>" class="zoom-image">
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </a>
-    </div>
+    <a href="<?php echo esc_url( $post_permalink  ); ?>" class="post-item__link">
+        <div class="post-item__thumbnail">
+            <?php if( !empty($post_img_url) ):?>
+            <img src="<?php echo esc_url( $post_img_url ); ?>" alt="alt">
+            <?php endif;?>
+        </div>
+    </a>
     <div class="post-item__content">
         <a class="post-item__link" href="<?php echo esc_url( $post_permalink ); ?>">
             <h2 class="post-item__title"><?php echo __( $post_title, 'goza' ); ?></h2>
