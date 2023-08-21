@@ -6182,6 +6182,12 @@
   content: "\F061";
 }
 
+@media (max-width: 540px) {
+  .be-testimonials-block.is-style-default {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
 @media (max-width: 767px) {
   .be-testimonials-block.is-style-default .slick-track .slick-slide {
     padding-left: 10px;
@@ -6192,19 +6198,30 @@
 }
 
 @media (max-width: 540px) {
-  .be-testimonials-block.is-style-default .be-testimonials-block-carousel .item-testimonial {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  .be-testimonials-block.is-style-default .slick-track .slick-slide {
+    padding-left: 0;
+    padding-right: 0;
   }
+}
+
+.be-testimonials-block.is-style-default .slick-list .slick-track .slick-slide > div {
+  display: flex;
 }
 
 .be-testimonials-block.is-style-default .be-testimonials-block-carousel .item-testimonial-content {
   cursor: pointer;
 }
 
+@media (min-width: 992px) {
+  .be-testimonials-block.is-style-default .be-testimonials-block-carousel .item-testimonial-content {
+    right: 0px;
+  }
+}
+
 @media (min-width: 541px) {
   .be-testimonials-block.is-style-default .be-testimonials-block-carousel .item-testimonial-content {
     position: absolute;
-    right: 0;
+    right: 10px;
     max-width: 60%;
     bottom: 10%;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);

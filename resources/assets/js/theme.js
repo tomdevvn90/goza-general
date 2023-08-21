@@ -11,14 +11,13 @@ import 'aos/dist/aos.css';
 /* global Waypoint */
 import 'waypoints/lib/jquery.waypoints.min.js';
 
-AOS.init({
-    duration: 1200,
-    once: true,
-    disable: 'mobile',
-});
-
-
 $(document).ready(function () {
+    AOS.init({
+        duration: 1200,
+        once: true,
+        disable: 'mobile',
+    });
+
     const el = document.querySelector('.counterUp')
     if (el === null) return;
     counterUp(el, {
