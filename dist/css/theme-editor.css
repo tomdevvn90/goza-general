@@ -14727,6 +14727,13 @@
   font-style: normal;
 }
 
+@media screen and (max-width: 767px) {
+  .goza-box-featured-grid-block .block-inner-grid-box__content-title {
+    font-size: 20px;
+    line-height: 120%;
+  }
+}
+
 .goza-box-featured-grid-block .block-inner-grid-box__content-text {
   color: #ffffff;
 }
@@ -14738,6 +14745,12 @@
   color: #fff;
   margin-top: 15px;
   font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+  .goza-box-featured-grid-block .block-inner-grid-box__content-link {
+    font-size: 17px;
+  }
 }
 
 .be-give-form-box-block.is-style-default .be-give-form-box-block-inner {
