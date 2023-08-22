@@ -12318,9 +12318,21 @@
 .be-counter-up .be-counter-up-box__number {
   font-weight: 700;
   font-size: 45px;
-  line-height: 45px;
+  line-height: 100%;
   color: #333;
   margin-bottom: 10px;
+}
+
+@media (max-width: 1199.98px) {
+  .be-counter-up .be-counter-up-box__number {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .be-counter-up .be-counter-up-box__number {
+    font-size: 30px;
+  }
 }
 
 .be-counter-up .be-counter-up-box__number span {

@@ -1,0 +1,31 @@
+.wp-block-columns{
+    &.be-gz-charity-row-social{
+        .wp-block-column{
+            @media (max-width: 781px){
+                flex-basis: 25%!important;
+                width: calc(25% - 2em) !important;
+                max-width: calc(25% - 2em) !important;
+            }
+
+            @media (max-width: 767.98px) {
+                flex-basis: 50%!important;
+                width: calc(50% - 2em) !important;
+                max-width: calc(50% - 2em) !important;
+                .wp-block-social-links .wp-social-link a{
+                    padding: 0;
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    svg{
+                        width: 100%;
+                        max-width: 35px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

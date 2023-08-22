@@ -24246,6 +24246,37 @@ ul.be-list-ul li {
   }
 }
 
+@media (max-width: 781px) {
+  .wp-block-columns.be-gz-charity-row-social .wp-block-column {
+    flex-basis: 25% !important;
+    width: calc(25% - 2em) !important;
+    max-width: calc(25% - 2em) !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .wp-block-columns.be-gz-charity-row-social .wp-block-column {
+    flex-basis: 50% !important;
+    width: calc(50% - 2em) !important;
+    max-width: calc(50% - 2em) !important;
+  }
+
+  .wp-block-columns.be-gz-charity-row-social .wp-block-column .wp-block-social-links .wp-social-link a {
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wp-block-columns.be-gz-charity-row-social .wp-block-column .wp-block-social-links .wp-social-link a svg {
+    width: 100%;
+    max-width: 35px;
+    height: auto;
+  }
+}
+
 .be-progressbar-block {
   width: 100%;
   height: auto;
@@ -33270,9 +33301,21 @@ ul.be-list-ul li {
 .be-counter-up .be-counter-up-box__number {
   font-weight: 700;
   font-size: 45px;
-  line-height: 45px;
+  line-height: 100%;
   color: #333;
   margin-bottom: 10px;
+}
+
+@media (max-width: 1199.98px) {
+  .be-counter-up .be-counter-up-box__number {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .be-counter-up .be-counter-up-box__number {
+    font-size: 30px;
+  }
 }
 
 .be-counter-up .be-counter-up-box__number span {
