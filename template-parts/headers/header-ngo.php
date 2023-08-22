@@ -58,7 +58,6 @@ $goza_form_donation = __get_field('goza_form_donation', 'option');
                         'show_content' => 'none', //above, below, or none
                         'display_style' => 'button', //modal, button, and reveal
                         'continue_button_title' => '' //string
-
                      );
                      if (function_exists('give_get_donation_form')) {
                         echo give_get_donation_form($atts);

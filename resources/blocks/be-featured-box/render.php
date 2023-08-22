@@ -87,9 +87,24 @@ $style  = implode('; ', $styles);
          ?>
       </div>
       <div class="block-col block-col-2">
-         <?php if ($fb_box_button) { ?>
+         <?php if (!empty($fb_box_button) && isset($fb_box_button)) { ?>
             <a class="featured-box-btn" href="<?= esc_url($fb_box_button['url']) ?>" target="<?= esc_url($fb_box_button['target']) ?>"><?= esc_attr($fb_box_button['title']) ?></a>
-         <?php } ?>
+         <?php }else {
+            $goza_form_donation = __get_field('goza_form_donation', 'option') ? : '';
+            if(!empty($goza_form_donation) && isset($goza_form_donation)){
+               $atts = array(
+                  'id' => $goza_form_donation->ID,  // integer.
+                  'show_title' => false, // boolean.
+                  'show_goal' => false, // boolean.
+                  'show_content' => 'none', //above, below, or none
+                  'display_style' => 'button', //modal, button, and reveal
+                  'continue_button_title' => '' //string
+               );
+               if (function_exists('give_get_donation_form')) {
+                  echo give_get_donation_form($atts);
+               }
+            }
+         } ?>
       </div>
    </div>
 </div>
