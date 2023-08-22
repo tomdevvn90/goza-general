@@ -5221,17 +5221,27 @@
   margin: 0;
 }
 
+@media (max-width: 767.98px) {
+  .be-post-slider-block {
+    box-shadow: 0 0 14.5px 0 rgba(0, 0, 0, 0.09);
+  }
+}
+
 .be-post-slider-block-inner .item-post-inner {
   cursor: pointer;
-  box-shadow: 0 0 14.5px 0 rgba(0, 0, 0, 0.09);
   margin: 15px;
   box-sizing: border-box;
 }
 
-@media (max-width: 991.98px) {
+@media (min-width: 768px) {
   .be-post-slider-block-inner .item-post-inner {
-    margin-left: 0;
-    margin-right: 0;
+    box-shadow: 0 0 14.5px 0 rgba(0, 0, 0, 0.09);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .be-post-slider-block-inner .item-post-inner {
+    margin: 0;
   }
 }
 
@@ -5242,6 +5252,13 @@
 .be-post-slider-block-inner .item-post-content {
   padding: 30px;
   position: relative;
+}
+
+@media (max-width: 991.98px) {
+  .be-post-slider-block-inner .item-post-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .be-post-slider-block-inner .item-post-thumbnail {
@@ -7459,6 +7476,12 @@
   padding-left: 20px;
 }
 
+@media (max-width: 575.98px) {
+  .be-events-listing-block.is-style-ev-list .item-event--meta {
+    padding-left: 10px;
+  }
+}
+
 .be-events-listing-block.is-style-ev-list .item-event--name {
   font-size: 24px;
   line-height: 26px;
@@ -7530,7 +7553,7 @@
 
 @media (max-width: 575.98px) {
   .be-events-listing-block.is-style-ev-list .item-event--start-date__month {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -7686,6 +7709,13 @@
   margin-top: 8px;
 }
 
+@media (max-width: 767.98px) {
+  .be-events-listing-block.is-style-ev-fill .item-event--venue {
+    font-size: 14px;
+    line-height: 118%;
+  }
+}
+
 .be-events-listing-block.is-style-ev-fill .item-event--venue svg path {
   stroke: var(--link-color);
 }
@@ -7695,12 +7725,24 @@
   color: var(--desc-color, #333);
 }
 
+@media (max-width: 767.98px) {
+  .be-events-listing-block.is-style-ev-fill .item-event--excerpt {
+    margin-top: 16px;
+  }
+}
+
 .be-events-listing-block.is-style-ev-fill .item-event--excerpt p {
   color: var(--desc-color, #333);
 }
 
 .be-events-listing-block.is-style-ev-fill .item-event--count-down {
   margin-top: 40px;
+}
+
+@media (max-width: 767.98px) {
+  .be-events-listing-block.is-style-ev-fill .item-event--count-down {
+    margin-top: 24px;
+  }
 }
 
 .be-events-listing-block.is-style-ev-fill .item-event--count-down .be-count-down--result {
@@ -10911,6 +10953,7 @@
 @media (max-width: 767.98px) {
   .goza-image-content-block .block-inner .block-inner__content-heading {
     font-size: 28px;
+    line-height: 120%;
   }
 }
 

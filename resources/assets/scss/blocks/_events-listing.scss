@@ -261,6 +261,9 @@
 
             &--meta {
                 padding-left: 20px;
+                @media (max-width: 575.98px) { 
+                    padding-left: 10px;
+                }
             }
 
             &--name {
@@ -320,7 +323,7 @@
                     }
 
                     @media (max-width: 575.98px) { 
-                        font-size: 13px;
+                        font-size: 12px;
                     }
                 }
 
@@ -467,7 +470,10 @@
             &--venue {
                 color: var(--link-color);
                 margin-top: 8px;
-
+                @media (max-width: 767.98px) {
+                    font-size: 14px;
+                    line-height: 118%;
+                }
                 svg {
                     path {
                         stroke: var(--link-color);
@@ -478,7 +484,9 @@
             &--excerpt {
                 margin-top: 20px;
                 color: var(--desc-color, #333);
-
+                @media (max-width: 767.98px) {
+                    margin-top: 16px;
+                }
                 p{
                     color: var(--desc-color, #333);
                 }
@@ -486,6 +494,9 @@
 
             &--count-down {
                 margin-top: 40px;
+                @media (max-width: 767.98px) {
+                    margin-top: 24px;
+                }
 
                 .be-count-down--result {
                     display: flex;

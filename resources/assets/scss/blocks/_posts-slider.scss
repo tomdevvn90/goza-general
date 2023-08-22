@@ -1,17 +1,23 @@
 .be-post-slider-block{
     box-sizing: border-box;
     margin: 0;
+    @media (max-width: 767.98px) {
+        box-shadow: 0 0 14.5px 0 rgba(0, 0, 0, 0.09);
+    }
     &-inner{
         .item-post{
             &-inner{
                 cursor: pointer;
-                box-shadow: 0 0 14.5px 0 rgba(0, 0, 0, 0.09);
                 margin: 15px;
                 box-sizing: border-box;
-                @include media-breakpoint-down(md) {
-                    margin-left: 0;
-                    margin-right: 0;
+                @media (min-width: 768px) {
+                    box-shadow: 0 0 14.5px 0 rgba(0, 0, 0, 0.09);
                 }
+
+                @media (max-width: 767.98px) {
+                    margin: 0;
+                }
+
                 &:hover{
                     > .item-post{
                          &-thumbnail{
@@ -26,6 +32,10 @@
             &-content{
                 padding: 30px;              
                 position: relative; 
+                @media (max-width: 991.98px) {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
             }
 
             &-thumbnail{
