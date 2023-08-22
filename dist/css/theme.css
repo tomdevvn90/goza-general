@@ -19087,9 +19087,10 @@ h6 {
 .site-header.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item h4.mega-block-title {
   font-size: 18px;
   line-height: 115%;
-  color: var(--heading-color);
+  color: #333;
   margin: 0 0 24px 0;
   font-weight: 500;
+  box-sizing: border-box;
 }
 
 .site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul {
@@ -19117,7 +19118,7 @@ h6 {
 }
 
 .site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li ul.product_list_widget > li a {
-  color: var(--heading-color);
+  color: #333;
   position: initial;
   margin: 0;
 }
@@ -19155,7 +19156,7 @@ h6 {
 
 .site-header.site-header-water-charity .goza-header-main--menus ul.max-mega-menu .mega-sub-menu ul li.widget_nav_menu .menu-template-container ul li a {
   font-size: 15px;
-  color: var(--heading-color);
+  color: #333;
   font-weight: 500;
 }
 
@@ -19170,6 +19171,43 @@ h6 {
 .site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
   display: flex;
   align-items: center;
+}
+
+.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link {
+  color: var(--link-color, #71b61b);
+}
+
+.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
+  color: var(--header-text-color, #FFF);
+  font-weight: 500;
+  font-family: var(--heading-family, "Poppins", sans-serif);
+  text-transform: none;
+  font-size: 16px;
+  line-height: 80px;
+}
+
+.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu {
+  padding: 10px 0px 10px 0px;
+}
+
+.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link {
+  font-family: var(--heading-family, "Poppins", sans-serif);
+  letter-spacing: 0px;
+  font-style: normal;
+  font-weight: 500;
+  padding: 5px 20px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #333;
+}
+
+.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link:hover {
+  text-decoration: none;
+  color: var(--link-color, #71b61b);
+}
+
+.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item:not(:last-child) {
+  border-bottom: 1px solid rgba(51, 51, 51, 0.05);
 }
 
 .site-header.site-header-charity-organization {
@@ -23160,43 +23198,6 @@ h6 {
   color: var(--link-color, #71b61b);
 }
 
-.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link {
-  color: var(--link-color, #71b61b);
-}
-
-.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
-  color: var(--header-text-color, #FFF);
-  font-weight: 500;
-  font-family: var(--heading-family, "Poppins", sans-serif);
-  text-transform: none;
-  font-size: 16px;
-  line-height: 80px;
-}
-
-.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu {
-  padding: 10px 0px 10px 0px;
-}
-
-.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link {
-  font-family: var(--heading-family, "Poppins", sans-serif);
-  letter-spacing: 0px;
-  font-style: normal;
-  font-weight: 400;
-  padding: 5px 20px;
-  font-size: 14px;
-  line-height: 30px;
-  color: #333;
-}
-
-.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link:hover {
-  text-decoration: none;
-  color: var(--link-color, #71b61b);
-}
-
-.site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item:not(:last-child) {
-  border-bottom: 1px solid rgba(51, 51, 51, 0.05);
-}
-
 .site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link {
   color: var(--link-color, #71b61b);
 }
@@ -26011,16 +26012,25 @@ ul.be-list-ul li {
   overflow: hidden;
 }
 
+.is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal,
 .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-raised {
-  width: 45%;
-  float: left;
   text-align: center;
-  font-size: 30px;
+  font-size: 22px;
   line-height: 1;
   letter-spacing: 0;
   color: #303030;
+  float: left;
+  font-weight: 500;
 }
 
+@media screen and (max-width: 359px) {
+  .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal,
+  .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-raised {
+    font-size: 18px;
+  }
+}
+
+.is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal span,
 .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-raised span {
   display: block;
   color: #777777;
@@ -26029,31 +26039,25 @@ ul.be-list-ul li {
   letter-spacing: 0;
 }
 
+@media screen and (max-width: 359px) {
+  .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal span,
+  .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-raised span {
+    font-size: 14px;
+  }
+}
+
+.is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal strong,
 .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-raised strong {
   font-weight: 400;
 }
 
+.is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-raised {
+  width: 45%;
+}
+
 .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal {
   width: 55%;
-  float: left;
-  text-align: center;
   border-left: #ebebeb solid 1px;
-  font-size: 30px;
-  line-height: 1;
-  letter-spacing: 0;
-  color: #303030;
-}
-
-.is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal span {
-  display: block;
-  color: #777777;
-  font-size: 16px;
-  line-height: 2.14;
-  letter-spacing: 0;
-}
-
-.is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal strong {
-  font-weight: 400;
 }
 
 .is-style-3 .be-give-grid-block-inner .give-forms-grid:hover .featured-image img {

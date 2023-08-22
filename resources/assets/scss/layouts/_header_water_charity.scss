@@ -137,9 +137,10 @@
                             h4.mega-block-title{
                                 font-size: 18px;
                                 line-height: 115%;
-                                color: var(--heading-color);
+                                color: #333;
                                 margin: 0 0 24px 0;
                                 font-weight: 500;
+                                box-sizing: border-box;
                             }
                         }
                     }
@@ -167,7 +168,7 @@
                                     margin: 0;
                                     min-height: 60px;
                                     a{
-                                        color: var(--heading-color);
+                                        color: #333;
                                         position: initial;
                                         margin: 0;
                                         img{
@@ -206,7 +207,7 @@
                                             margin: 0;
                                             a{
                                                 font-size: 15px;
-                                                color: var(--heading-color);
+                                                color: #333;
                                                 font-weight: 500;
                                                 &:hover{
                                                     color: var(--link-color, inherit);
@@ -232,4 +233,55 @@
 .site-header-water-charity #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link{
     display: flex;
     align-items: center;
+}
+
+
+.site-header-water-charity{
+    #mega-menu-wrap-main-menu {
+        #mega-menu-main-menu {
+            >li.mega-menu-item {
+                &.mega-current-menu-ancestor {
+                    >a.mega-menu-link {
+                        color: var(--link-color, #71b61b);
+                    }
+                }
+
+                >a.mega-menu-link {
+                    color: var(--header-text-color, #FFF);
+                    font-weight: 500;
+                    font-family: var(--heading-family, "Poppins", sans-serif);
+                    text-transform: none;
+                    font-size: 16px;
+                    line-height: 80px;
+                }
+            }
+
+            >li.mega-menu-flyout {
+                ul.mega-sub-menu {
+                    padding: 10px 0px 10px 0px;
+                    li.mega-menu-item {
+                        a.mega-menu-link {
+                            font-family: var(--heading-family, "Poppins", sans-serif);
+                            letter-spacing: 0px;
+                            font-style: normal;
+                            font-weight: 500;
+                            padding: 5px 20px;
+                            font-size: 16px;
+                            line-height: 30px;
+                            color: #333;
+
+                            &:hover {
+                                text-decoration: none;
+                                color: var(--link-color, #71b61b);
+                            }
+                        }
+
+                        &:not(:last-child){
+                            border-bottom: 1px solid rgba(51, 51, 51, 0.05);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -5028,16 +5028,25 @@
   overflow: hidden;
 }
 
+.is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal,
 .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-raised {
-  width: 45%;
-  float: left;
   text-align: center;
-  font-size: 30px;
+  font-size: 22px;
   line-height: 1;
   letter-spacing: 0;
   color: #303030;
+  float: left;
+  font-weight: 500;
 }
 
+@media screen and (max-width: 359px) {
+  .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal,
+  .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-raised {
+    font-size: 18px;
+  }
+}
+
+.is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal span,
 .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-raised span {
   display: block;
   color: #777777;
@@ -5046,31 +5055,25 @@
   letter-spacing: 0;
 }
 
+@media screen and (max-width: 359px) {
+  .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal span,
+  .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-raised span {
+    font-size: 14px;
+  }
+}
+
+.is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal strong,
 .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-raised strong {
   font-weight: 400;
 }
 
+.is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-raised {
+  width: 45%;
+}
+
 .is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal {
   width: 55%;
-  float: left;
-  text-align: center;
   border-left: #ebebeb solid 1px;
-  font-size: 30px;
-  line-height: 1;
-  letter-spacing: 0;
-  color: #303030;
-}
-
-.is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal span {
-  display: block;
-  color: #777777;
-  font-size: 16px;
-  line-height: 2.14;
-  letter-spacing: 0;
-}
-
-.is-style-3 .be-give-grid-block-inner .give-forms-grid .entry-content .entry-content-inner .entry-bot .give-price-goal strong {
-  font-weight: 400;
 }
 
 .is-style-3 .be-give-grid-block-inner .give-forms-grid:hover .featured-image img {
