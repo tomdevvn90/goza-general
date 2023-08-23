@@ -49,7 +49,7 @@
             "label": "Number Counter",
             "name": "number_counter_box",
             "aria-label": "",
-            "type": "number",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -59,48 +59,6 @@
                 "id": ""
             },
             "default_value": 1000,
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_645b16940286d",
-            "label": "Before Number Counter",
-            "name": "before_number_counter_box",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "Add character something like this: $,#,K...",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "35",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_645b165c0286c",
-            "label": "After Number Counter",
-            "name": "after_number_counter_box",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "Add character something like this: $,#,K...",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "35",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -188,26 +146,6 @@
             "append": ""
         },
         {
-            "key": "field_646f7f4bd7c7b",
-            "label": "Element Padding (1px 1px 1px 1px)",
-            "name": "ctb_ele_padding",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33.3333",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_645b06f54db55",
             "label": "Styles",
             "name": "",
@@ -279,5 +217,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688952383
+    "modified": 1692772944
 }

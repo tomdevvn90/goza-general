@@ -29,4 +29,6 @@ const beCounterBox = () => {
 
 }
 
-beCounterBox();
+$(document).ready(function () {
+    beCounterBox();
+})

@@ -36,7 +36,9 @@ var beCounterBox = function beCounterBox() {
     IO.observe($value);
   });
 };
-beCounterBox();
+$(document).ready(function () {
+  beCounterBox();
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
