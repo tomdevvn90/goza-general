@@ -63,8 +63,12 @@ h2.be-heading-has-line {
   display: inline-block;
   font-size: 26px;
   color: #222;
-    position: relative;
-margin-right:15px;
+  position: relative;
+  margin-right:15px;
+  @include media-breakpoint-down(xs) {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 .be-row-donor button.give-donor__load_more {
   display: none;

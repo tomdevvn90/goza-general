@@ -49,6 +49,19 @@
             font-size: 50px;
             line-height: 60px;
             color: #fff;
+
+            @include media-breakpoint-down(lg) {
+              font-size: 40px;
+              line-height: 115%;
+            }
+    
+            @include media-breakpoint-down(md) {
+              font-size: 36px;
+            }
+      
+            @include media-breakpoint-down(sm) {
+              font-size: 30px;
+            }
           }
           p.give-box-description{
             font-weight: 400;
@@ -62,12 +75,6 @@
             
             @media (max-width: 767.98px) {
               font-size: 16px;
-            }
-          }
-          @media (max-width: 1200px) {
-            h2.give-box-heading{
-              font-size: 40px;
-              line-height: 50px;
             }
           }
         }
@@ -112,6 +119,16 @@
             display: flex;
             justify-content: space-between;
             padding-top: 20px;
+            @media (max-width: 359px) {
+              flex-wrap: wrap;
+              div{
+                width: 100%;
+                text-align: center;
+                &:not(:first-child){
+                  margin-top: 16px;
+                }
+              }
+            }
             .give-price-raised{
               font-size: 26px;
               color: #fff;
@@ -225,6 +242,7 @@
         }
         .give-box-button {
           display: block;
+          padding-bottom: 20px;
           .give-box-button-popup,.give-box-button-social{
             width: 100%;
             min-height: 80px;
@@ -236,14 +254,23 @@
     @media only screen and (max-width: 767px) {
       .give-form-box{
         .give-box-content {
-          h2.give-box-heading{
-            font-size: 40px !important;
-          }
           p.give-box-description {
             margin-bottom: 0 !important;
           }
+
+          .give-box-content-left{
+            padding-top: 20px;
+            padding-bottom: 8px;
+          }
+
+          .give-box-content-right{
+            padding-top: 8px;
+            padding-bottom: 20px;
+          }
+
           .give-box-content-left,.give-box-content-right{
-            padding: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
             .give-price-raised,.give-price-goal{
               font-size: 22px !important;
             }
@@ -275,6 +302,11 @@
   }
   .give-form-box{
     padding: 40px;
+    @include media-breakpoint-down(lg) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
     .give-box-content{
       h2.give-box-heading{
         font-weight: 700;
@@ -282,18 +314,25 @@
         line-height: 60px;
         color: #fff;
         text-transform:uppercase;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 40px;
+          line-height: 115%;
+        }
+
+        @include media-breakpoint-down(md) {
+          font-size: 36px;
+        }
+  
+        @include media-breakpoint-down(sm) {
+          font-size: 30px;
+        }
       }
       p.give-box-description{
         font-weight: 400;
         font-size: 20px;
         line-height: 30px;
         color: #fff;
-      }
-      @media (max-width: 1200px) {
-        h2.give-box-heading{
-          font-size: 40px;
-          line-height: 50px;
-        }
       }
     }
     .give-box-button {
@@ -340,6 +379,10 @@
               font-size: 18px;
               font-weight: 700;
               color: #222;
+              @include media-breakpoint-down(lg) {
+                font-size: 16px;
+              }
+
             }
           }
           .give-total-wrap{
@@ -416,6 +459,14 @@
       color: #fff;
       text-transform:uppercase;
       margin-bottom: 0;
+      @include media-breakpoint-down(md) {
+        font-size: 36px;
+        line-height: 115%;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: 30px;
+      }
     }
     p.give-box-description{
       font-weight: 400;
