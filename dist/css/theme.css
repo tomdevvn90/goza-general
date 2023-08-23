@@ -19417,16 +19417,22 @@ h6 {
   width: 100%;
   height: auto;
   position: absolute;
-  left: 0;
+  left: 7.5px;
   height: 98px;
   bottom: -49px;
   z-index: 99;
 }
 
+@media (max-width: 767.98px) {
+  .site-header.site-header-earthquake .site-header-inner {
+    bottom: -60px;
+  }
+}
+
 @media (max-width: 575.98px) {
   .site-header.site-header-earthquake .site-header-inner {
     width: calc(100% - 30px);
-    left: 50%;
+    left: calc(50% + 7.5px);
     transform: translateX(-50%);
   }
 }
@@ -19495,7 +19501,6 @@ h6 {
 @media (max-width: 767.98px) {
   .site-header.site-header-earthquake .goza-header-main {
     padding: 10px 0;
-    margin-top: 50px;
   }
 }
 
@@ -20487,7 +20492,7 @@ h6 {
 @media (max-width: 767.98px) {
   .goza-topbar.goza-topbar-layout4 {
     padding-top: 24px;
-    padding-bottom: 70px;
+    padding-bottom: 64px;
   }
 }
 
@@ -20552,6 +20557,12 @@ h6 {
   color: var(--topbar-text-color, #FFF);
   font-style: normal;
   font-weight: 400;
+}
+
+@media (max-width: 1199.98px) {
+  .goza-topbar.goza-topbar-layout4 .goza-topbar-inner-info .goza-topbar-ep a {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 767.98px) {

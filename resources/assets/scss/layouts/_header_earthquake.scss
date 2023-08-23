@@ -25,15 +25,19 @@
             width: 100%;
             height: auto;
             position: absolute;
-            left: 0;
+            left: calc(15px / 2);
             height: 98px;  
             bottom: -49px;
             z-index: 99;
+            @include media-breakpoint-down(sm){
+                bottom: -60px;
+            }
             @include media-breakpoint-down(xs) { 
                 width: calc(100% - 30px);
-                left: 50%;
+                left: calc(50% + (15px / 2));
                 transform: translateX(-50%);
             }
+
             > .container{
                 padding-left: 0px;
                 background-color: var(--header-bg-color, #fff);
@@ -84,8 +88,8 @@
 
             @include media-breakpoint-down(sm){
                 padding: 10px 0;
-                margin-top: 50px;
             }
+
             &--logo {
                 @include media-breakpoint-down(md) { 
                     padding-left: 35px;

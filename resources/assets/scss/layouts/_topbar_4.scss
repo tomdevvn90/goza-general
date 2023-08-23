@@ -5,7 +5,7 @@
         padding-bottom: 46px;
         @include media-breakpoint-down(sm){
             padding-top: 24px;
-            padding-bottom: 70px;
+            padding-bottom: 64px;
         }
         .goza-topbar-link{
             a{
@@ -57,6 +57,10 @@
                         color: var(--topbar-text-color, #FFF);
                         font-style: normal;
                         font-weight: 400;
+                        @include media-breakpoint-down(lg) {
+                            font-size: 14px;
+                        }
+
                         @include media-breakpoint-down(sm) {
                             line-height: 115%;
                         }
