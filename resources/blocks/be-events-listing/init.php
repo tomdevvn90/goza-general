@@ -184,14 +184,12 @@ function be_template_ev_default(){
 <?php
 }
 
-function be_template_ev_fill(){
-    if (is_plugin_active('the-events-calendar/the-events-calendar.php')) {
-        $day         = tribe_get_start_date(get_the_ID(), true, 'j F');
-        $count_down  = tribe_get_start_date(get_the_ID(), true, 'm-d-Y G:i:s');
-        $time        = tribe_get_start_date(get_the_ID(), true, 'G:i a');
-        $venue       = tribe_get_address(get_the_ID());
-        $excerpt     = get_the_excerpt(get_the_ID());
-    }
+function be_template_ev_fill(){   
+    $day         = tribe_get_start_date(get_the_ID(), true, 'j F');
+    $count_down  = tribe_get_start_date(get_the_ID(), true, 'm-d-Y G:i:s');
+    $time        = tribe_get_start_date(get_the_ID(), true, 'G:i a');
+    $venue       = tribe_get_address(get_the_ID());
+    $excerpt     = get_the_excerpt(get_the_ID());
 ?>
     <div class="item-event">
         <div class="item-event-inner">
@@ -217,7 +215,7 @@ function be_template_ev_fill(){
                 <a href="<?php the_permalink() ?>"> <?php the_title() ?> </a>
             </h3>
             <?php if (!empty($venue)) : ?>
-                <div class="item-event--venue">
+                <div class="item-event--venue d-flex justify-content-center align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 682.667 682.667" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
                         <g>
                             <defs>

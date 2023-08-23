@@ -97,16 +97,21 @@
             margin-left: auto;
             margin-right: auto;
             font-size: 45px;
-            line-height: 50px;
+            line-height: 112%;
             text-transform: uppercase;
             @include media-breakpoint-down(lg){
                 font-size: 36px;
-                list-style: 41px;
             }
 
             @include media-breakpoint-down(sm) {
                 font-size: 30px;
-                list-style: 35px;
+            }
+        }
+
+        .gsb-services-list .gsb-services-item__wrap-title {
+            @include media-breakpoint-down(sm) {
+                font-size: 20px;
+                line-height: 115%;
             }
         }
     }
@@ -120,6 +125,13 @@
 
         .item-event--count-down .be-count-down--result > div{
             background: rgba(44, 73, 151, 0.7);
+        }
+
+        .item-event--venue {
+            color: rgba(44, 73, 151, 1);
+            svg path {
+                stroke: rgba(44, 73, 151, 1);
+            }
         }
     }
 }
