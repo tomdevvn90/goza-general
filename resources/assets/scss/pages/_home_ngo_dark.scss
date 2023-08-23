@@ -201,11 +201,16 @@
             flex-wrap: wrap !important
         }
         
-        .be-counter-up.is-style-ngo-dark .be-counter-up-box__heading{
-            @include media-breakpoint-only(lg) {
-                font-size: 20px;
-                line-height: 110%;
-                margin-top: -30px;
+        .be-counter-up.is-style-ngo-dark{
+            .be-counter-up-box{
+                padding: 0;
+                &__heading{
+                    @include media-breakpoint-only(lg) {
+                        font-size: 20px;
+                        line-height: 110%;
+                        margin-top: -30px;
+                    }
+                }
             }
         }
 

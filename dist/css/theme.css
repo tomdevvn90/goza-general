@@ -23698,6 +23698,10 @@ h6 {
   }
 }
 
+.wp-block-columns.be-row-counter-gz-ngo-dark .be-counter-up.is-style-ngo-dark .be-counter-up-box {
+  padding: 0;
+}
+
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .wp-block-columns.be-row-counter-gz-ngo-dark .be-counter-up.is-style-ngo-dark .be-counter-up-box__heading {
     font-size: 20px;
