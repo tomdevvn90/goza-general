@@ -4,6 +4,7 @@ $id = 'be-team-carousel-' . $block['id'];
 
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
+$styles = [ ];
 // ACF field variables
 $link_op = __get_field('goza_link_color_op', 'option') ? : '';
 if(!empty($link_op) && isset($link_op)){
@@ -18,14 +19,33 @@ $color_sc    = __get_field('color_social_team_carousel_bl') ? : '#000';
 $color_dots  = __get_field('color_dots_team_carousel_bl') ? : ''; 
 $color_arrow = __get_field('color_arrow_team_carousel_bl') ? : ''; 
 
-$color_dots_df = $color_dots['default'] ? : "#000";
-$color_dots_at = $color_dots['active'] ? : $link_color;
+if(!empty($color_sc) && isset($color_dots)){
+    $color_dots_df = $color_dots['default'] ? : "#000";
+    $color_dots_at = $color_dots['active'] ? : $link_color;
 
-$color_arrow_df = $color_arrow['cl_df'] ? : '#000';
-$color_arrow_hv = $color_arrow['cl_df'] ? : $link_color;
+    $styles['--color-dots-df'] = $color_dots_df;
+    $styles['--color-dots-at'] = $color_dots_at;
+}
 
-$bg_arrow_df = $color_arrow['bg_df'] ? : 'transparent';
-$bg_arrow_hv = $color_arrow['bg_hv'] ? : 'transparent';
+if(!empty($color_arrow) && isset($color_arrow)){
+    $color_arrow_df = $color_arrow['cl_df'] ? : '#000';
+    $color_arrow_hv = $color_arrow['cl_df'] ? : $link_color;
+    
+    $bg_arrow_df = $color_arrow['bg_df'] ? : 'transparent';
+    $bg_arrow_hv = $color_arrow['bg_hv'] ? : 'transparent';
+
+    $styles['--bg-ar-df']    = $bg_arrow_df;
+    $styles['--bg-ar-hv']    = $bg_arrow_hv;
+    $styles['--color-ar-hv'] = $color_arrow_hv;
+    $styles['--color-ar-df'] = $color_arrow_df;
+}
+
+// Combining styles into a single string using semicolons
+$styleString = '';
+foreach ($styles as $key => $value) {
+    $styleString .= "$key: $value; ";
+}
+$styleString = rtrim($styleString, '; '); 
 
 
 if(!empty($carousel_st) && isset($carousel_st)){
@@ -39,14 +59,13 @@ if(!empty($carousel_st) && isset($carousel_st)){
        'fade'           =>  $carousel_st['fade'] ?: false,
     );
 }
+
 $classes = isset($block['className']) ? $block['className'] : "is-style-default";
 ?>
 
-<div id="<?php echo $id; ?>" class="be-team-carousel <?php echo $align_class; ?> <?php echo $classes?>" data-style="<?php echo $classes?>">
+<div id="<?php echo $id; ?>" class="be-team-carousel  <?php echo $classes?>" data-style="<?php echo $classes?>">
     <?php if(!empty($team) && isset($team)): ?>
-        <div class="be-team-carousel-inner" data-carousel='<?= json_encode($data_carousel) ?>' data-aos="fade-up"
-            style="--bg-ar-df:<?= $bg_arrow_df ?>; --bg-ar-hv:<?= $bg_arrow_hv ?>; --color-ar-hv:<?= $color_arrow_hv ?>; --color-ar-df:<?= $color_arrow_df ?>; --color-dots-df:<?= $color_dots_df ?>; --color-dots-at:<?= $color_dots_at ?>;"
-        > 
+        <div class="be-team-carousel-inner" data-carousel='<?= json_encode($data_carousel) ?>' data-aos="fade-up" style="<?php echo esc_attr($styleString); ?>"> 
             <?php foreach ($team as $key => $value) : ?>
                 <?php 
                     $avatar  = $value['avatar'] ? : 'https://picsum.photos/1920/900?1';
@@ -97,6 +116,11 @@ $classes = isset($block['className']) ? $block['className'] : "is-style-default"
                     </div>
                 </div>
             <?php endforeach; ?>    
+        </div>
+
+    <?php else: ?>
+        <div id="be-block--not-found"> 
+            <h3> <?php echo esc_html('Please enter team on sidebar!')  ?></h3>
         </div>
     <?php endif; ?>    
 </div>
