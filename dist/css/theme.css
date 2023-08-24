@@ -18830,9 +18830,33 @@ h6 {
   line-height: 110%;
 }
 
-.site-header.site-header-ngo-dark .goza-header-main--menu ul > li .mega-sub-menu ul li .product_list_widget img {
+.site-header.site-header-ngo-dark .goza-header-main--menu ul > li .mega-sub-menu ul li .product_list_widget > li {
+  position: relative;
+  padding-left: 75px;
+  margin: 0;
+  min-height: 60px;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--menu ul > li .mega-sub-menu ul li .product_list_widget > li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--menu ul > li .mega-sub-menu ul li .product_list_widget > li .woocommerce-Price-amount,
+.site-header.site-header-ngo-dark .goza-header-main--menu ul > li .mega-sub-menu ul li .product_list_widget > li .product-title {
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--menu ul > li .mega-sub-menu ul li .product_list_widget > li a {
+  position: initial;
+}
+
+.site-header.site-header-ngo-dark .goza-header-main--menu ul > li .mega-sub-menu ul li .product_list_widget > li a img {
   min-width: 60px;
-  margin-left: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
 }
 
 .site-header.site-header-ngo-dark .goza-header-main--cta {
@@ -18956,6 +18980,57 @@ h6 {
   .site-header.site-header-ngo-dark .goza-header-main--cta #goza-hamberger {
     display: none;
   }
+}
+
+.site-header.site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link {
+  color: var(--link-color, #71b61b);
+}
+
+.site-header.site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
+  color: #fff;
+  font-weight: 700;
+  font-family: var(--body-family, "Muli", sans-serif);
+  text-transform: none;
+  font-size: 15px;
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .site-header.site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .site-header.site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 14px;
+  }
+}
+
+.site-header.site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu {
+  padding: 10px 0px 10px 0px;
+}
+
+.site-header.site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link {
+  font-family: var(--heading-family, "Poppins", sans-serif);
+  letter-spacing: 0px;
+  font-style: normal;
+  font-weight: 500;
+  padding: 5px 20px;
+  font-size: 14px;
+  line-height: 30px;
+  color: #282828;
+}
+
+.site-header.site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link:hover {
+  text-decoration: none;
+  color: var(--link-color, #71b61b);
+}
+
+.site-header.site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item:not(:last-child) {
+  border-bottom: 1px solid rgba(51, 51, 51, 0.05);
 }
 
 .site-header.site-header-water-charity {
@@ -23223,57 +23298,6 @@ h6 {
   color: var(--link-color, #71b61b);
 }
 
-.site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link {
-  color: var(--link-color, #71b61b);
-}
-
-.site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
-  color: #fff;
-  font-weight: 700;
-  font-family: var(--body-family, "Muli", sans-serif);
-  text-transform: none;
-  font-size: 15px;
-}
-
-@media (min-width: 1200px) and (max-width: 1399px) {
-  .site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
-    padding-left: 8px;
-    padding-right: 8px;
-    font-size: 14px;
-  }
-}
-
-.site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu {
-  padding: 10px 0px 10px 0px;
-}
-
-.site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link {
-  font-family: var(--heading-family, "Poppins", sans-serif);
-  letter-spacing: 0px;
-  font-style: normal;
-  font-weight: 500;
-  padding: 5px 20px;
-  font-size: 14px;
-  line-height: 30px;
-  color: #282828;
-}
-
-.site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link:hover {
-  text-decoration: none;
-  color: var(--link-color, #71b61b);
-}
-
-.site-header-ngo-dark #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item:not(:last-child) {
-  border-bottom: 1px solid rgba(51, 51, 51, 0.05);
-}
-
 .wp-block-goza-blocks-goza-button.be-gz-last-btn-home {
   margin: 0;
   display: flex;
@@ -27201,12 +27225,14 @@ ul.be-list-ul li {
 .be-testimonials-block.is-style-4 .be-testimonials-block-carousel .slick-dots li {
   width: 6px;
   height: 6px;
+  background: #fff;
   position: relative;
 }
 
 .be-testimonials-block.is-style-4 .be-testimonials-block-carousel .slick-dots li.slick-active {
   width: 10px;
   height: 10px;
+  background-color: var(--link-color);
 }
 
 .be-testimonials-block.is-style-4 .be-testimonials-block-carousel .slick-arrow::before {
@@ -34761,13 +34787,12 @@ ul.be-list-ul li {
 }
 
 #be-block--not-found h3 {
-  font-size: 32px !important;
+  font-size: 28spx !important;
   line-height: 110% !important;
   margin: 0 !important;
   padding: 0 !important;
   text-align: center;
   color: var(--link-color);
-  text-transform: uppercase;
 }
 
 .wp-block-goza-blocks-goza-container.be-last-post-water > .goza-container-bg::before {

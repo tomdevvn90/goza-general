@@ -47,14 +47,12 @@ if(!empty($carousel_setting) && isset($carousel_setting)){
     $data_carousel = array();
 }
 
-
 $classes = isset($block['className']) ? $block['className'] : "is-style-default";
 
 ?>
-<div id="<?php echo $id; ?>" class="be-testimonials-block <?php echo $align_class; ?> <?php echo $classes?>" data-style="<?php echo $classes?>"  data-carousel='<?= json_encode($data_carousel) ?>'> 
+<div id="<?php echo $id; ?>" class="be-testimonials-block <?php echo $classes?>" data-style="<?php echo $classes?>"  data-carousel='<?= json_encode($data_carousel) ?>'> 
     <?php if(!empty($testimonials) && isset($testimonials)): ?>        
-        <div class="be-testimonials-block-carousel"  data-aos="fade-up"
-        > 
+        <div class="be-testimonials-block-carousel"  data-aos="fade-up"> 
             <?php foreach ($testimonials as $testimonial): ?>
                 
                 <?php $img_url = (!empty($testimonial['image'])) ? $testimonial['image'] : get_template_directory_uri(). '/resources/assets/images/image-default.jpg' ; ?>
@@ -112,6 +110,11 @@ $classes = isset($block['className']) ? $block['className'] : "is-style-default"
                     </div>
                 </div>
             <?php endforeach; ?>   
+        </div>
+
+    <?php else: ?>
+        <div id="be-block--not-found"> 
+            <h3> <?php echo esc_html('Please enter some testimonials!')  ?></h3>
         </div>
     <?php endif; ?>    
 </div>

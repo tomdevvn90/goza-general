@@ -6181,12 +6181,14 @@
 .be-testimonials-block.is-style-4 .be-testimonials-block-carousel .slick-dots li {
   width: 6px;
   height: 6px;
+  background: #fff;
   position: relative;
 }
 
 .be-testimonials-block.is-style-4 .be-testimonials-block-carousel .slick-dots li.slick-active {
   width: 10px;
   height: 10px;
+  background-color: var(--link-color);
 }
 
 .be-testimonials-block.is-style-4 .be-testimonials-block-carousel .slick-arrow::before {
@@ -13741,13 +13743,12 @@
 }
 
 #be-block--not-found h3 {
-  font-size: 32px !important;
+  font-size: 28spx !important;
   line-height: 110% !important;
   margin: 0 !important;
   padding: 0 !important;
   text-align: center;
   color: var(--link-color);
-  text-transform: uppercase;
 }
 
 .wp-block-goza-blocks-goza-container.be-last-post-water > .goza-container-bg::before {
