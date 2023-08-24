@@ -97,6 +97,20 @@
                 display: flex;
                 align-items: center;
                 gap: 35px;
+                @include media-breakpoint-down(md) { 
+                    gap: 24px;
+                    margin-left: 24px;
+                }
+
+                @include media-breakpoint-down(sm) { 
+                    gap: 15px;
+                    margin-left: 15px;
+                }
+
+                @media (max-width: 359.98px){
+                    gap: 24px;
+                    margin-left: 24px;
+                }
 
                 .goza-header-cart-icon {
                     position: relative;
@@ -138,6 +152,10 @@
                     line-height: 50px;
                     border-radius: 50%;
                     background-color: rgba(255, 255, 255, 0.34);
+
+                    @media (max-width: 359.98px){
+                        display: none;
+                    }
 
                     i {
                         font-size: 120%;

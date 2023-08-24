@@ -38,7 +38,7 @@ if ($logo) $goza_ft_logo = $logo;
 <footer id="site-footer" class="main-footer footer-charity-organization">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 main-footer-widget">
+            <div class="col-md-12 col-lg-4 col-xl-4 main-footer-widget">
                 <?php if ($goza_ft_logo) { ?>
                     <a href="/" class="main-footer-logo">
                         <img src="<?= esc_url($goza_ft_logo) ?>" alt="Logo" />
@@ -50,7 +50,7 @@ if ($logo) $goza_ft_logo = $logo;
 
             </div>
 
-            <div class="col-md-5 main-footer-widget">
+            <div class="col-md-6 col-lg-4 col-xl-5 main-footer-widget">
                 <?php if (isset($goza_ql_heading) && !empty($goza_ql_heading)) { ?>
                     <h3 class="main-footer-title"><?= $goza_ql_heading ?></h3>
                 <?php } ?>
@@ -69,7 +69,7 @@ if ($logo) $goza_ft_logo = $logo;
                 </div>
             </div>
 
-            <div class="col-md-3 main-footer-widget">
+            <div class="col-md-6 col-lg-4 col-xl-3 main-footer-widget">
                 <?php if (isset($goza_social_heading) && !empty($goza_social_heading)) { ?>
                     <h3 class='main-footer-title'><?= esc_attr($goza_social_heading) ?></h3>
                 <?php } ?>
