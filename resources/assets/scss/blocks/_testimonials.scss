@@ -260,12 +260,10 @@
                 li {
                     width: 6px;
                     height: 6px;
-                    background: #fff;
                     position: relative;
                     &.slick-active {
                         width: 10px;
                         height: 10px;
-                        background-color: var(--link-color);
                     }
                 }
             }

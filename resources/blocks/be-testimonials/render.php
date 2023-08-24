@@ -3,15 +3,12 @@
 // create id attribute for specific styling
 $id = 'be-testimonials-' . $block['id'];
 
-// create align class ("alignwide") from block setting ("wide")
-$align_class = $block['align'] ? 'align' . $block['align'] : '';
-
 // ACF field variables
 $testimonials     = __get_field('list_items') ? : '';
 $carousel_setting = __get_field('slider_setting') ? : '';
 $color_name       = __get_field('color_name_tm_bl') ? : '';
 $color_position   = __get_field('color_position_tm_bl') ? : '';
-$color_desc       = __get_field('color_description_tm_bl') ? : '';
+$color_desc       = __get_field('color_desc_tm_bl') ? : '';
 $bg_item          = __get_field('bg_item_tm_bl') ? : '';
 $slider_color     = __get_field('sliders_color_tm_bl') ? : '';
 
@@ -20,18 +17,47 @@ if(!empty($link_op) && isset($link_op)){
     $link_color = $link_op['link_color'];
 }
 
-if(!empty($slider_color) && isset($slider_color)){
-    $color_dots    = $slider_color['dots'] ? : '';
-    $color_dots_df = $color_dots['default'] ? : '#fff';
-    $color_dots_at = $color_dots['active'] ? : $link_color;
+$styles = [ ];
 
-    $color_arrow    = $slider_color['arrow'] ? : '';
-    $color_arrow_df = $color_arrow['color_default'] ? : '#fff';
-    $color_arrow_hv = $color_arrow['color_hover'] ? : $link_color;
+// Checking if $slider_color is not empty and is set
+if (!empty($slider_color) && isset($slider_color)) {
+    // Extracting colors for dots and arrows from $slider_color
+    $cl_dots  = $slider_color['dots_color'] ?: '';
+    $cl_arrow = $slider_color['arrow_color'] ?: '';
 
-    $bg_arrow_df = $color_arrow['bg_default'] ? : '#fff';
-    $bg_arrow_hv = $color_arrow['bg_hover'] ? : $link_color;
+    // Checking if $cl_dots is not empty and is set
+    if (!empty($cl_dots) && isset($cl_dots)) {
+        // Setting default and active colors for dots
+        $cl_dot_df = $cl_dots['default'] ?: '#fff';
+        $cl_dot_at = $cl_dots['active'] ?: $link_color;
+
+        $styles['--color-dot-df'] = $cl_dot_df;
+        $styles['--color-dot-at'] = $cl_dot_at;
+    }
+
+    // Checking if $cl_arrow is not empty and is set
+    if (!empty($cl_arrow) && isset($cl_arrow)) {
+        // Setting default and active colors for arrows
+        $cl_arrow_df = $cl_arrow['cl_default'] ?: $link_color;
+        $cl_arrow_hv = $cl_arrow['cl_active'] ?: '#fff';
+    
+        // Setting default and active background colors for arrows
+        $bg_arrow_df = $cl_arrow['bg_default'] ?: '#fff';
+        $bg_arrow_hv = $cl_arrow['bg_active'] ?: $link_color;
+
+        $styles['--bg-ar-df'] = $bg_arrow_df;
+        $styles['--bg-ar-hv'] = $bg_arrow_hv;
+        $styles['--color-arrow-df'] = $cl_arrow_df;
+        $styles['--color-arrow-hv'] = $cl_arrow_hv;
+    }
 }
+
+// Combining styles into a single string using semicolons
+$styleString = '';
+foreach ($styles as $key => $value) {
+    $styleString .= "$key: $value; ";
+}
+$styleString = rtrim($styleString, '; '); 
 
 if(!empty($carousel_setting) && isset($carousel_setting)){
     $data_carousel = array(
@@ -52,9 +78,8 @@ $classes = isset($block['className']) ? $block['className'] : "is-style-default"
 ?>
 <div id="<?php echo $id; ?>" class="be-testimonials-block <?php echo $classes?>" data-style="<?php echo $classes?>"  data-carousel='<?= json_encode($data_carousel) ?>'> 
     <?php if(!empty($testimonials) && isset($testimonials)): ?>        
-        <div class="be-testimonials-block-carousel"  data-aos="fade-up"> 
+        <div class="be-testimonials-block-carousel"  data-aos="fade-up" style="<?php echo esc_attr($styleString); ?>"> 
             <?php foreach ($testimonials as $testimonial): ?>
-                
                 <?php $img_url = (!empty($testimonial['image'])) ? $testimonial['image'] : get_template_directory_uri(). '/resources/assets/images/image-default.jpg' ; ?>
                 
                 <div class="item-testimonial"> 
