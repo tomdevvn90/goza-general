@@ -70,7 +70,7 @@
                 },
                 {
                     "key": "field_6435119b78e43",
-                    "label": "Categoires",
+                    "label": "Categories",
                     "name": "categoires",
                     "aria-label": "",
                     "type": "taxonomy",
@@ -89,7 +89,9 @@
                     "return_format": "id",
                     "field_type": "multi_select",
                     "allow_null": 0,
-                    "multiple": 0
+                    "bidirectional": 0,
+                    "multiple": 0,
+                    "bidirectional_target": []
                 },
                 {
                     "key": "field_6435119b7c949",
@@ -112,7 +114,8 @@
                     "return_format": "id",
                     "field_type": "multi_select",
                     "allow_null": 0,
-                    "multiple": 0
+                    "multiple": 0,
+                    "bidirectional_target": []
                 }
             ]
         },
@@ -297,5 +300,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688952383
+    "modified": 1692865452
 }
