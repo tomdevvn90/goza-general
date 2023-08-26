@@ -367,7 +367,7 @@ $(document).ready(function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var lightgallery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lightgallery */ "./node_modules/lightgallery/lightgallery.es5.js");
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var lightgallery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lightgallery */ "./node_modules/lightgallery/lightgallery.es5.js");
 
 var projectsGridLightGallery = function projectsGridLightGallery() {
   var be_projects_grid = document.querySelectorAll('.be-projects-grid-section .be-projects-grid');
@@ -392,7 +392,7 @@ be_projects_grid_loadmore.forEach(function (element) {
       page: page,
       settings: settings
     };
-    jquery.ajax({
+    jQuery.ajax({
       type: "post",
       url: php_data.ajax_url,
       data: data,
@@ -404,7 +404,7 @@ be_projects_grid_loadmore.forEach(function (element) {
         if (response.success) {
           button.classList.remove('loading');
           var loadmore = button.closest('.be-projects-grid__loadmore');
-          var projects_grid = jquery('#block-projects-grid-action-' + loadmore.getAttribute('data-block-id'));
+          var projects_grid = jQuery('#block-projects-grid-action-' + loadmore.getAttribute('data-block-id'));
           projects_grid.append(response.data);
           page++;
           button.setAttribute('data-page', page);
@@ -420,6 +420,7 @@ be_projects_grid_loadmore.forEach(function (element) {
     });
   };
 });
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
@@ -1528,20 +1529,20 @@ $(document).on("load", function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\js\theme.js */"./resources/assets/js/theme.js");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\theme.scss */"./resources/assets/scss/theme.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\editor\editor.scss */"./resources/assets/scss/editor/editor.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\general.scss */"./resources/assets/scss/home/general.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\charity.scss */"./resources/assets/scss/home/charity.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\dream.scss */"./resources/assets/scss/home/dream.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\ngo-dark.scss */"./resources/assets/scss/home/ngo-dark.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\ngo.scss */"./resources/assets/scss/home/ngo.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\organization.scss */"./resources/assets/scss/home/organization.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\water-charity.scss */"./resources/assets/scss/home/water-charity.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\water.scss */"./resources/assets/scss/home/water.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\charity-new.scss */"./resources/assets/scss/home/charity-new.scss");
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\charity-organization.scss */"./resources/assets/scss/home/charity-organization.scss");
-module.exports = __webpack_require__(/*! C:\Users\Vuong\Local Sites\goza\app\public\wp-content\themes\goza-theme\resources\assets\scss\home\earthquake.scss */"./resources/assets/scss/home/earthquake.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/js/theme.js */"./resources/assets/js/theme.js");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/theme.scss */"./resources/assets/scss/theme.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/editor/editor.scss */"./resources/assets/scss/editor/editor.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/home/general.scss */"./resources/assets/scss/home/general.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/home/charity.scss */"./resources/assets/scss/home/charity.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/home/dream.scss */"./resources/assets/scss/home/dream.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/home/ngo-dark.scss */"./resources/assets/scss/home/ngo-dark.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/home/ngo.scss */"./resources/assets/scss/home/ngo.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/home/organization.scss */"./resources/assets/scss/home/organization.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/home/water-charity.scss */"./resources/assets/scss/home/water-charity.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/home/water.scss */"./resources/assets/scss/home/water.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/home/charity-new.scss */"./resources/assets/scss/home/charity-new.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/home/charity-organization.scss */"./resources/assets/scss/home/charity-organization.scss");
+module.exports = __webpack_require__(/*! /Users/buitantoan/Local Sites/gutenberg-dev/app/public/wp-content/themes/goza-theme/resources/assets/scss/home/earthquake.scss */"./resources/assets/scss/home/earthquake.scss");
 
 
 /***/ })

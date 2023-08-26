@@ -28,7 +28,7 @@ be_projects_grid_loadmore.forEach(
                 settings : settings,
             }
 
-            jquery.ajax({
+            jQuery.ajax({
                 type: "post",
                 url: php_data.ajax_url,
                 data: data,
@@ -42,7 +42,7 @@ be_projects_grid_loadmore.forEach(
                         button.classList.remove('loading');
 
                         let loadmore = button.closest('.be-projects-grid__loadmore');
-                        let projects_grid = jquery('#block-projects-grid-action-' + loadmore.getAttribute('data-block-id') );
+                        let projects_grid = jQuery('#block-projects-grid-action-' + loadmore.getAttribute('data-block-id') );
             
                         projects_grid.append( response.data );
     
