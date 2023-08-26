@@ -386,7 +386,6 @@ be_projects_grid_loadmore.forEach(function (element) {
     var page = parseInt(this.getAttribute('data-page'));
     var max_page = parseInt(this.getAttribute('data-max-page'));
     var settings = this.getAttribute('data-settings');
-    console.log(settings);
     var data = {
       action: 'loadmore_projects_grid',
       page: page,
