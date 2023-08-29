@@ -414,6 +414,11 @@
                 color: #333333;
             }
             form{
+                .error{
+                    font-size: 13px;
+                    margin-top: 4px;
+                    color: red;
+                }
                 p{
                     position: relative;
                 }

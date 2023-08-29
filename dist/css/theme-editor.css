@@ -14277,7 +14277,7 @@
   bottom: 50px;
 }
 
-.be-ss-ab-vd--video-cta a {
+.be-ss-ab-vd--video-cta .be-popup-video a {
   width: 4em;
   height: 4em;
   background-color: var(--link-color);
@@ -14290,7 +14290,7 @@
   cursor: pointer;
 }
 
-.be-ss-ab-vd--video-cta a::before {
+.be-ss-ab-vd--video-cta .be-popup-video a::before {
   content: "";
   position: absolute;
   z-index: 0;
@@ -14305,7 +14305,11 @@
   animation: pulse-border 1500ms ease-out infinite;
 }
 
-.be-ss-ab-vd--video-cta svg {
+.be-ss-ab-vd--video-cta .be-popup-video a .__icon-play {
+  line-height: 1;
+}
+
+.be-ss-ab-vd--video-cta .be-popup-video svg {
   width: 100%;
   max-width: 20px;
   height: auto;

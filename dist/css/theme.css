@@ -14566,6 +14566,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   color: #333333;
 }
 
+.single .comments-area .comment-respond form .error {
+  font-size: 13px;
+  margin-top: 4px;
+  color: red;
+}
+
 .single .comments-area .comment-respond form p {
   position: relative;
 }
@@ -35351,7 +35357,7 @@ ul.be-list-ul li {
   bottom: 50px;
 }
 
-.be-ss-ab-vd--video-cta a {
+.be-ss-ab-vd--video-cta .be-popup-video a {
   width: 4em;
   height: 4em;
   background-color: var(--link-color);
@@ -35364,7 +35370,7 @@ ul.be-list-ul li {
   cursor: pointer;
 }
 
-.be-ss-ab-vd--video-cta a::before {
+.be-ss-ab-vd--video-cta .be-popup-video a::before {
   content: "";
   position: absolute;
   z-index: 0;
@@ -35379,7 +35385,11 @@ ul.be-list-ul li {
   animation: pulse-border 1500ms ease-out infinite;
 }
 
-.be-ss-ab-vd--video-cta svg {
+.be-ss-ab-vd--video-cta .be-popup-video a .__icon-play {
+  line-height: 1;
+}
+
+.be-ss-ab-vd--video-cta .be-popup-video svg {
   width: 100%;
   max-width: 20px;
   height: auto;

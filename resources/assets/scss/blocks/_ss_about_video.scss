@@ -126,36 +126,41 @@
             position: absolute;
             left: 30px;
             bottom: 50px;
-            a{
-                width: 4em;
-                height: 4em;
-                background-color: var(--link-color);
-                color: var(--link-color);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                cursor: pointer;
-                &::before{
-                    content: "";
-                    position: absolute;
-                    z-index: 0;
-                    left: 50%;
-                    top: 50%;
-                    transform: translateX(-50%) translateY(-50%);
-                    display: block;
-                    width: 3.5em;
-                    height: 3.5em;
-                    background: currentColor repeat scroll 0 0;
+            .be-popup-video{
+                a{
+                    width: 4em;
+                    height: 4em;
+                    background-color: var(--link-color);
+                    color: var(--link-color);
                     border-radius: 50%;
-                    animation: pulse-border 1500ms ease-out infinite;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    cursor: pointer;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        z-index: 0;
+                        left: 50%;
+                        top: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                        display: block;
+                        width: 3.5em;
+                        height: 3.5em;
+                        background: currentColor repeat scroll 0 0;
+                        border-radius: 50%;
+                        animation: pulse-border 1500ms ease-out infinite;
+                    }
+                    .__icon-play{
+                        line-height: 1;
+                    }
                 }
-            }
-            svg{
-                width: 100%;
-                max-width: 20px;
-                height: auto;
+                svg{
+                    width: 100%;
+                    max-width: 20px;
+                    height: auto;
+                }
             }
         }
     }
