@@ -63,6 +63,7 @@ $style  = implode('; ', $styles);
             <?php } ?>
          </div>
          <div class="block-col__content">
+            <div class="block-col__content-wrap">
             <?php if (isset($citv_subheading) && !empty($citv_subheading)) { ?>
                <h6 class="block-col__subheading" style="color: <?= $citv_subheading_color ?>" data-aos="fade-up" data-aos-duration="800"><?= esc_attr($citv_subheading) ?></h6>
             <?php } ?>
@@ -85,6 +86,7 @@ $style  = implode('; ', $styles);
                   <?php } ?>
                </a>
             <?php } ?>
+            </div>
          </div>
       </div>
 
