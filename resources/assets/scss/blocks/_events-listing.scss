@@ -639,6 +639,14 @@
                 }
             }
 
+            &--address{
+                svg{
+                    path{
+                        stroke: var(--link-color);
+                    }
+                }
+            }
+
             &--start-date {
                 b {
                     font-size: inherit;
@@ -766,9 +774,6 @@
             &--start-time {
                 p{
                     margin: 0;
-                }
-                span {
-                    color: var(--heading-color);
                 }
             }
 

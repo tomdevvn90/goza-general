@@ -257,10 +257,10 @@
                 "ngo": "Header Ngo",
                 "charity": "Header Charity",
                 "water": "Header Water",
-                "orgazination": "Header Orgazination",
+                "organization": "Header Orgazination",
                 "ngo-dark": "Header Ngo Dark",
                 "water-charity": "Header Water Charity",
-                "charity-orgazination": "Header Charity Orgazination"
+                "charity-organization": "Header Charity Orgazination"
             },
             "default_value": false,
             "return_format": "value",
@@ -351,6 +351,32 @@
             "ui": 1
         },
         {
+            "key": "field_64769b884a318",
+            "label": "Button Type",
+            "name": "goza_button_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "df_link": "Default Link",
+                "form_popup": "Form Popup"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_64181a338467d",
             "label": "Header Button",
             "name": "goza_header_button",
@@ -358,13 +384,53 @@
             "type": "link",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64769b884a318",
+                        "operator": "==",
+                        "value": "df_link"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_64769c2b4a319",
+            "label": "Select Form Donation",
+            "name": "goza_form_donation",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64769b884a318",
+                        "operator": "==",
+                        "value": "form_popup"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "give_forms"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 1
         },
         {
             "key": "field_64147a2bcef28",
@@ -569,11 +635,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "© All right reserved 2022 <a href=\"#\">Goza<\/a> —  Trusted by <a href=\"https:\/\/wimgo.com\/\" target=\"_blank\" rel=\"noopener\">Wimgo<\/a>",
+            "default_value": "© All right reserved 2022 <a href=\"#\">Goza<\/a>",
+            "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
             "key": "field_64147e7025859",

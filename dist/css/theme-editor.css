@@ -7915,6 +7915,10 @@
   }
 }
 
+.be-events-listing-block.is-style-ev-outline .item-event--address svg path {
+  stroke: var(--link-color);
+}
+
 .be-events-listing-block.is-style-ev-outline .item-event--start-date b {
   font-size: inherit;
   font-family: inherit;
@@ -8043,10 +8047,6 @@
 
 .be-events-listing-block.is-style-ev-special .item-event--start-time p {
   margin: 0;
-}
-
-.be-events-listing-block.is-style-ev-special .item-event--start-time span {
-  color: var(--heading-color);
 }
 
 .be-events-listing-block.is-style-ev-special .item-event--start-time,
@@ -11941,7 +11941,7 @@
   display: none;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button {
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -11957,11 +11957,11 @@
   transition: 0.3s ease;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn.loading::after {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button.loading::after {
   animation: loadmore_loading 0.5s infinite;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn::after {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button::after {
   background: #fff;
   content: "";
   height: 155px;
@@ -11975,11 +11975,11 @@
   z-index: 1;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn:hover {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button:hover {
   opacity: 0.85;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn:hover::after {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button:hover::after {
   left: 120%;
   transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -14277,7 +14277,7 @@
   bottom: 50px;
 }
 
-.be-ss-ab-vd--video-cta a {
+.be-ss-ab-vd--video-cta .be-popup-video a {
   width: 4em;
   height: 4em;
   background-color: var(--link-color);
@@ -14290,7 +14290,7 @@
   cursor: pointer;
 }
 
-.be-ss-ab-vd--video-cta a::before {
+.be-ss-ab-vd--video-cta .be-popup-video a::before {
   content: "";
   position: absolute;
   z-index: 0;
@@ -14305,7 +14305,11 @@
   animation: pulse-border 1500ms ease-out infinite;
 }
 
-.be-ss-ab-vd--video-cta svg {
+.be-ss-ab-vd--video-cta .be-popup-video a .__icon-play {
+  line-height: 1;
+}
+
+.be-ss-ab-vd--video-cta .be-popup-video svg {
   width: 100%;
   max-width: 20px;
   height: auto;

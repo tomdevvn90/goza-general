@@ -308,7 +308,7 @@ function goza_woocommerce_before_main_content_single_product_func()
 	$classes = $has_sidebar ? 'col-md-8 col-sm-12' : 'col-sm-12';
 
 ?>
-	<section class="product-hero" style="background-image:url('<?= esc_url($bg_hero_bar) ?>')">
+	<section class="product-hero â" style="background-image:url('<?= esc_url($bg_hero_bar) ?>')">
 		<div class="container">
 			<div class="wrapper">
 				<div class="page-icon">

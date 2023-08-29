@@ -37,6 +37,7 @@ $posts_per_page = !empty( __get_field('posts_per_page_projects_grid') )? __get_f
 $order = __get_field('order_projects_grid') ? __get_field('order_projects_grid') : 'desc';
 $orderby = __get_field('orderby_projects_grid') ? __get_field('orderby_projects_grid') : 'date';
 $loadmore = __get_field('loadmore_projects_grid') ? __get_field('loadmore_projects_grid') : false;
+$loadmore_type = __get_field('loadmore_type_projects_grid') ? __get_field('loadmore_type_projects_grid') : 'default';
 $loadmore_text = __get_field('loadmore_text_projects_grid') ? __get_field('loadmore_text_projects_grid') : __('View More', 'goza');
 
 $paged = get_query_var( 'paged' )? get_query_var( 'paged' ) : 1;
@@ -74,7 +75,8 @@ $max_num_pages = $the_query->max_num_pages;
         <div class="not-found"><?php echo __('No results found.', 'goza'); ?></div> 
     <?php endif; ?>  
     
-    <?php if ( $loadmore && $max_num_pages > 0 ) {
+    <?php if( $loadmore_type == 'default' ): ?>
+        <?php if ( $loadmore && $max_num_pages > 0 ){
         $setting_loadmore = array(
             'posts_per_page' => $posts_per_page,
             'order' => $order,
@@ -85,13 +87,19 @@ $max_num_pages = $the_query->max_num_pages;
                 data-block-id="'.$block['id'].'"
                 data-aos="fade-up" data-aos-duration="1000">
             <a href="#"
-               class="be-projects-grid__loadmore-btn"
+               class="be-projects-grid__loadmore-btn be-projects-grid__button"
                data-page="1"
                data-max-page="'.esc_attr( $max_num_pages ).'"
                data-settings="'.esc_attr( json_encode($setting_loadmore) ).'" 
-               >'.$loadmore_text.'
+               >'.__($loadmore_text, 'goza').'
             </a>
         </div>';
-    } ?>
+        } ?>
+    <?php else: ?>
+        <div class="be-projects-grid__loadmore" data-block-id="<?php echo $block['id']; ?>" data-aos="fade-up" data-aos-duration="1000">
+            <a href="<?php echo esc_url( get_post_type_archive_link('fw-portfolio') ); ?>" class="be-projects-grid__button"><?php echo __($loadmore_text, 'goza'); ?></a>
+        </div>
+    <?php endif; ?>
+
     </div>
 </section>

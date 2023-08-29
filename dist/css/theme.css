@@ -14566,6 +14566,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   color: #333333;
 }
 
+.single .comments-area .comment-respond form .error {
+  font-size: 13px;
+  margin-top: 4px;
+  color: red;
+}
+
 .single .comments-area .comment-respond form p {
   position: relative;
 }
@@ -28989,6 +28995,10 @@ ul.be-list-ul li {
   }
 }
 
+.be-events-listing-block.is-style-ev-outline .item-event--address svg path {
+  stroke: var(--link-color);
+}
+
 .be-events-listing-block.is-style-ev-outline .item-event--start-date b {
   font-size: inherit;
   font-family: inherit;
@@ -29117,10 +29127,6 @@ ul.be-list-ul li {
 
 .be-events-listing-block.is-style-ev-special .item-event--start-time p {
   margin: 0;
-}
-
-.be-events-listing-block.is-style-ev-special .item-event--start-time span {
-  color: var(--heading-color);
 }
 
 .be-events-listing-block.is-style-ev-special .item-event--start-time,
@@ -33015,7 +33021,7 @@ ul.be-list-ul li {
   display: none;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button {
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -33031,11 +33037,11 @@ ul.be-list-ul li {
   transition: 0.3s ease;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn.loading::after {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button.loading::after {
   animation: loadmore_loading 0.5s infinite;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn::after {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button::after {
   background: #fff;
   content: "";
   height: 155px;
@@ -33049,11 +33055,11 @@ ul.be-list-ul li {
   z-index: 1;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn:hover {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button:hover {
   opacity: 0.85;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn:hover::after {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button:hover::after {
   left: 120%;
   transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -35351,7 +35357,7 @@ ul.be-list-ul li {
   bottom: 50px;
 }
 
-.be-ss-ab-vd--video-cta a {
+.be-ss-ab-vd--video-cta .be-popup-video a {
   width: 4em;
   height: 4em;
   background-color: var(--link-color);
@@ -35364,7 +35370,7 @@ ul.be-list-ul li {
   cursor: pointer;
 }
 
-.be-ss-ab-vd--video-cta a::before {
+.be-ss-ab-vd--video-cta .be-popup-video a::before {
   content: "";
   position: absolute;
   z-index: 0;
@@ -35379,7 +35385,11 @@ ul.be-list-ul li {
   animation: pulse-border 1500ms ease-out infinite;
 }
 
-.be-ss-ab-vd--video-cta svg {
+.be-ss-ab-vd--video-cta .be-popup-video a .__icon-play {
+  line-height: 1;
+}
+
+.be-ss-ab-vd--video-cta .be-popup-video svg {
   width: 100%;
   max-width: 20px;
   height: auto;
@@ -39855,8 +39865,8 @@ div[id*=give-form].give-display-reveal .give-btn {
 
 .single-product .main-woocommerce .product-content .product .woocommerce-tabs .panel #reviews .comment-form #wp-comment-cookies-consent {
   position: relative;
-  min-width: 18px;
-  height: 18px;
+  min-width: 22px;
+  height: 22px;
   margin-top: 2px;
   margin-right: 10px;
 }
@@ -39865,7 +39875,8 @@ div[id*=give-form].give-display-reveal .give-btn {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: var(--link-color);
+  background-color: #FFFFFF;
+  border: 2px solid var(--link-color);
   position: absolute;
   top: 0;
   left: 0;
@@ -39877,13 +39888,16 @@ div[id*=give-form].give-display-reveal .give-btn {
   content: "";
   opacity: 0;
   visibility: hidden;
-  width: 100%;
-  height: 100%;
-  background-color: #FFFFFF;
-  border: 3px solid var(--link-color);
+  background-color: transparent;
+  display: block;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 14px;
+  border: solid var(--link-color);
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
   cursor: pointer;
 }
 
