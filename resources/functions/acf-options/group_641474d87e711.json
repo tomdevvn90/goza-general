@@ -257,10 +257,10 @@
                 "ngo": "Header Ngo",
                 "charity": "Header Charity",
                 "water": "Header Water",
-                "orgazination": "Header Orgazination",
+                "organization": "Header Orgazination",
                 "ngo-dark": "Header Ngo Dark",
                 "water-charity": "Header Water Charity",
-                "charity-orgazination": "Header Charity Orgazination"
+                "charity-organization": "Header Charity Orgazination"
             },
             "default_value": false,
             "return_format": "value",
@@ -351,6 +351,32 @@
             "ui": 1
         },
         {
+            "key": "field_64769b884a318",
+            "label": "Button Type",
+            "name": "goza_button_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "df_link": "Default Link",
+                "form_popup": "Form Popup"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_64181a338467d",
             "label": "Header Button",
             "name": "goza_header_button",
@@ -358,13 +384,53 @@
             "type": "link",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64769b884a318",
+                        "operator": "==",
+                        "value": "df_link"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_64769c2b4a319",
+            "label": "Select Form Donation",
+            "name": "goza_form_donation",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64769b884a318",
+                        "operator": "==",
+                        "value": "form_popup"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "give_forms"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 1
         },
         {
             "key": "field_64147a2bcef28",
@@ -569,11 +635,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "© All right reserved 2022 <a href=\"#\">Goza<\/a> —  Trusted by <a href=\"https:\/\/wimgo.com\/\" target=\"_blank\" rel=\"noopener\">Wimgo<\/a>",
+            "default_value": "© All right reserved 2022 <a href=\"#\">Goza<\/a>",
+            "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
             "key": "field_64147e7025859",
@@ -2075,8 +2141,8 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_64de3058cd990",
-            "label": "Product",
+            "key": "field_64aca9ce2fc5c",
+            "label": "Events Archive",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -2092,7 +2158,74 @@
             "endpoint": 0
         },
         {
-            "key": "field_64de307ecd991",
+            "key": "field_64acaa012fc5d",
+            "label": "Icon Hero",
+            "name": "goza_events_icon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_64acaa052fc5e",
+            "label": "Background Image Hero",
+            "name": "goza_events_bg_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_64b4fe10dd8c0",
+            "label": "Product Archive",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64b4fe24dd8c1",
             "label": "Icon Hero",
             "name": "goza_product_icon",
             "aria-label": "",
@@ -2117,9 +2250,76 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_64de3083cd992",
+            "key": "field_64b4fe29dd8c2",
             "label": "Background Image Hero",
             "name": "goza_product_bg_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_64b9eadc38578",
+            "label": "Product",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64b9eaf738579",
+            "label": "Icon Hero",
+            "name": "goza_single_product_icon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_64b9eb0c3857a",
+            "label": "Background Image Hero",
+            "name": "goza_single_product_bg_image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -2160,5 +2360,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692283057
+    "modified": 1693289113
 }

@@ -29123,10 +29123,6 @@ ul.be-list-ul li {
   margin: 0;
 }
 
-.be-events-listing-block.is-style-ev-special .item-event--start-time span {
-  color: var(--heading-color);
-}
-
 .be-events-listing-block.is-style-ev-special .item-event--start-time,
 .be-events-listing-block.is-style-ev-special .item-event--address {
   font-size: 15px;
