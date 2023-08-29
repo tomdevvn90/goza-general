@@ -24003,6 +24003,10 @@ h6 {
   padding-left: 120px;
 }
 
+.be-row-donor .give-donor .give-donor-details__wrapper {
+  width: 100%;
+}
+
 h2.be-heading-has-line {
   display: inline-block;
   font-size: 26px;
@@ -35387,6 +35391,7 @@ ul.be-list-ul li {
 
 .be-ss-ab-vd--video-cta .be-popup-video a .__icon-play {
   line-height: 1;
+  z-index: 2;
 }
 
 .be-ss-ab-vd--video-cta .be-popup-video svg {

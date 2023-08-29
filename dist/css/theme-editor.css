@@ -14307,6 +14307,7 @@
 
 .be-ss-ab-vd--video-cta .be-popup-video a .__icon-play {
   line-height: 1;
+  z-index: 2;
 }
 
 .be-ss-ab-vd--video-cta .be-popup-video svg {
