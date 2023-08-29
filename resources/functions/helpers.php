@@ -215,36 +215,37 @@ if (!function_exists('goza_single_post_navigation')) {
 		?>
 		<div class="single-post-navigation post-navigation-skin--<?php echo get_post_type(); ?>">
 			<div class="previous-next-link flex-sm-nowrap flex-wrap">
+				<div class="previous">
 				<?php if (!empty($prev_post)) : ?>
-					<div class="previous">
-						<a href="<?php echo esc_url($permalink_prev); ?>" class="post-nav-link" rel="prev">
-							<div class="post-nav-thumbnail">
-								<?php echo get_the_post_thumbnail($prev_id, 'thumbnail'); ?>
+					<a href="<?php echo esc_url($permalink_prev); ?>" class="post-nav-link" rel="prev">
+						<div class="post-nav-thumbnail">
+							<?php echo get_the_post_thumbnail($prev_id, 'thumbnail'); ?>
+						</div>
+						<div class="post-nav-title-box">
+							<span class="meta-nav" aria-hidden="true">Previous Post</span>
+							<div class="post-title">
+								<?php echo get_the_title($prev_id); ?>
 							</div>
-							<div class="post-nav-title-box">
-								<span class="meta-nav" aria-hidden="true">Previous Post</span>
-								<div class="post-title">
-									<?php echo get_the_title($prev_id); ?>
-								</div>
-							</div>
-						</a>
-					</div>
-				<?php endif; ?>
+						</div>
+					</a>
+					<?php endif; ?>
+				</div>
+
+				<div class="next">
 				<?php if (!empty($next_post)) : ?>
-					<div class="next">
-						<a href="<?php echo esc_url($permalink_next); ?>" class="post-nav-link" rel="next">
-							<div class="post-nav-title-box">
-								<span class="meta-nav" aria-hidden="true">Next Post</span>
-								<div class="post-title">
-									<?php echo get_the_title($next_id); ?>
-								</div>
+					<a href="<?php echo esc_url($permalink_next); ?>" class="post-nav-link" rel="next">
+						<div class="post-nav-title-box">
+							<span class="meta-nav" aria-hidden="true">Next Post</span>
+							<div class="post-title">
+								<?php echo get_the_title($next_id); ?>
 							</div>
-							<div class="post-nav-thumbnail">
-								<?php echo get_the_post_thumbnail($next_id, 'thumbnail'); ?>
-							</div>
-						</a>
-					</div>
-				<?php endif; ?>
+						</div>
+						<div class="post-nav-thumbnail">
+							<?php echo get_the_post_thumbnail($next_id, 'thumbnail'); ?>
+						</div>
+					</a>
+					<?php endif; ?>
+				</div>
 			</div>
 		</div>
 		<?php

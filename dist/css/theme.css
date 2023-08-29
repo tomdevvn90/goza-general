@@ -28989,6 +28989,10 @@ ul.be-list-ul li {
   }
 }
 
+.be-events-listing-block.is-style-ev-outline .item-event--address svg path {
+  stroke: var(--link-color);
+}
+
 .be-events-listing-block.is-style-ev-outline .item-event--start-date b {
   font-size: inherit;
   font-family: inherit;
