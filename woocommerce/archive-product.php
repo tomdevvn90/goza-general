@@ -22,22 +22,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( );
 
-$product_hero_icon = __get_field('goza_product_icon','option');
-$product_hero_bg = __get_field('goza_product_bg_image','option');
-
-$hero_bg = !empty($product_hero_bg)? 'background-image: url('. $product_hero_bg .')' : '';
+$icon_hero_bar = __get_field('goza_icon_hero_bar', 'option') ? :  get_template_directory_uri(). '/resources/assets/images/icon-hero-default.png';
+$bg_hero_bar   = __get_field('goza_bg_hero_bar', 'option') ? :  get_template_directory_uri(). '/resources/assets/images/bg-img-hero-default.jpg';
 
 $has_sidebar = goza_check_sidebars_widgets_exists('shop-sidebar');
 $classes = $has_sidebar ? 'col-md-8 col-sm-12': 'col-sm-12';
 
 ?>
-<section class="product-hero" style="<?php echo $hero_bg; ?>">
+<section class="product-hero" style="background-image:url('<?= esc_url($bg_hero_bar) ?>')">
 	<div class="container">
 		<div class="wrapper">
-			<?php if( !empty($product_hero_icon) ): ?>
-				<div class="page-icon"><img src="<?php echo $product_hero_icon; ?>" ></div>
+			<?php if( !empty($icon_hero_bar) ): ?>
+				<div class="page-icon"><img src="<?php echo $icon_hero_bar; ?>" ></div>
 			<?php endif; ?>
+
 			<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+
 			<?php
 				if ( function_exists('yoast_breadcrumb') ) {
 					yoast_breadcrumb( '<div id="breadcrumbs" class="breadcrumbs">','</div>' );

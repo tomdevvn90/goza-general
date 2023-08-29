@@ -447,17 +447,14 @@ if (!function_exists('goza_check_sidebars_widgets_exists')) {
  */
 if( !function_exists('goza_woocommerce_product_hero_func') ){
 	function goza_woocommerce_product_hero_func() {
-
-		$product_hero_icon = __get_field('goza_product_icon','option');
-		$product_hero_bg = __get_field('goza_product_bg_image','option');
-	
-		$hero_bg = !empty($product_hero_bg)? 'background-image: url('. $product_hero_bg .')' : '';
-		?>
-		<section class="product-hero" style="<?php echo $hero_bg; ?>">
+		$icon_hero_bar = __get_field('goza_icon_hero_bar', 'option') ? :  get_template_directory_uri(). '/resources/assets/images/icon-hero-default.png';
+		$bg_hero_bar   = __get_field('goza_bg_hero_bar', 'option') ? :  get_template_directory_uri(). '/resources/assets/images/bg-img-hero-default.jpg';
+	?>
+		<section class="product-hero" style="background-image:url('<?= esc_url($bg_hero_bar) ?>')">
 			<div class="container">
 				<div class="wrapper">
-					<?php if( !empty($product_hero_icon) ): ?>
-						<div class="page-icon"><img src="<?php echo $product_hero_icon; ?>" ></div>
+					<?php if( !empty($icon_hero_bar) ): ?>
+						<div class="page-icon"> <img src="<?= esc_url($icon_hero_bar) ?>" alt="icon" /> </div>
 					<?php endif; ?>
 					<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 					<?php
@@ -468,9 +465,7 @@ if( !function_exists('goza_woocommerce_product_hero_func') ){
 				</div>
 			</div>
 		</section>
-		<?php
-	
-	}
+	<?php }
 }
 
 
