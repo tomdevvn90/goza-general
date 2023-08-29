@@ -11941,7 +11941,7 @@
   display: none;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button {
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -11957,11 +11957,11 @@
   transition: 0.3s ease;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn.loading::after {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button.loading::after {
   animation: loadmore_loading 0.5s infinite;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn::after {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button::after {
   background: #fff;
   content: "";
   height: 155px;
@@ -11975,11 +11975,11 @@
   z-index: 1;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn:hover {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button:hover {
   opacity: 0.85;
 }
 
-.be-projects-grid-section .be-projects-grid__loadmore-btn:hover::after {
+.be-projects-grid-section .be-projects-grid__loadmore .be-projects-grid__button:hover::after {
   left: 120%;
   transition: all 950ms cubic-bezier(0.19, 1, 0.22, 1);
 }

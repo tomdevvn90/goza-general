@@ -117,6 +117,32 @@
             "ui": 1
         },
         {
+            "key": "field_64ed5565a2717",
+            "label": "Loadmore Type",
+            "name": "loadmore_type_projects_grid",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "35",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Load posts in this section",
+                "all": "Go to page all projects"
+            },
+            "default_value": "date",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_6459a0e735635",
             "label": "Loadmore Text",
             "name": "loadmore_text_projects_grid",
@@ -397,5 +423,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688952383
+    "modified": 1693275999
 }
