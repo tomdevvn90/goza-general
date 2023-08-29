@@ -1,25 +1,23 @@
 
-<?php
-
-    $icon_field_option = __get_field('goza_single_icon', 'option')? __get_field('goza_single_icon', 'option') : get_template_directory_uri(). '/resources/assets/images/leaf-solid.png';
-    $bg_field_option = __get_field('goza_single_bg_image', 'option');
-
-    $heading = get_the_title();
+<?php   
+    $icon_hero_bar = __get_field('goza_icon_hero_bar', 'option') ? :  get_template_directory_uri(). '/resources/assets/images/icon-hero-default.png';
+	$bg_hero_bar   = __get_field('goza_bg_hero_bar', 'option') ? :  get_template_directory_uri(). '/resources/assets/images/bg-img-hero-default.jpg';
+    $heading        = get_the_title();
     $bg_image_style = !empty( $bg_field_option )? 'background-image: url('.$bg_field_option.');' : '';
 ?>
 
-<section class="single-hero-section goza-hero-section" style="<?php echo $bg_image_style; ?>">
+<section class="single-hero-section goza-hero-section" style="background-image:url('<?= esc_url($bg_hero_bar) ?>')">
     <div class="goza-hero-section--bg-overlay"></div>
     <div class="goza-hero-section--content container">
         <div class="goza-hero-section-inner">
 
-            <?php if ( !empty( $icon_field_option ) ): ?>
-            <div class="goza-hero-section-inner__icon">
-                <img src="<?php echo esc_url( $icon_field_option ); ?>" alt="<?php echo __('icon', 'goza'); ?>">   
-            </div>  
+            <?php if ( !empty( $icon_hero_bar ) ): ?>
+                <div class="goza-hero-section-inner__icon">
+                    <img src="<?= esc_url($icon_hero_bar) ?>" alt="icon" /> 
+                </div>  
             <?php endif; ?>  
 
-            <h2 class="goza-hero-section-inner__heading"><?php echo $heading; ?></h2>
+            <h2 class="goza-hero-section-inner__heading"> <?= esc_attr($heading) ?></h2>
         
             <?php if ( function_exists( 'yoast_breadcrumb' ) ): ?>
                 <div class="goza-hero-section-inner__breadcrumb">
