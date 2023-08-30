@@ -179,7 +179,7 @@
 
 	&.goza-is-responsive-column {
 
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 767px) {
 			-ms-grid-columns: 1fr;
 			grid-template-columns: 1fr;
 			grid-template-areas:
