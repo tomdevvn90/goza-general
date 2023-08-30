@@ -17,8 +17,12 @@
                 </div>  
             <?php endif; ?>  
 
-            <h2 class="goza-hero-section-inner__heading"><?= esc_attr($heading_hero_bar);?></h2>
-        
+            <?php if(is_archive()){ ?>
+                <h2 class="goza-hero-section-inner__heading"> <?= esc_attr(get_the_archive_title());?> </h2>
+            <?php }else{ ?>
+                <h2 class="goza-hero-section-inner__heading"> <?= esc_attr($heading_hero_bar);?> </h2>
+            <?php } ?>
+            
             <?php if ( function_exists( 'yoast_breadcrumb' ) ): ?>
                 <div class="goza-hero-section-inner__breadcrumb">
                     <?php yoast_breadcrumb(); ?>  
