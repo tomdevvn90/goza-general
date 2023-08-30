@@ -126,6 +126,9 @@
                     position: relative;
                     max-width: 60px;
                     width: 100%;
+                    height: 60px;
+                    border-radius: 3px;
+                    background-color: #eee;
                     &::before{
                         display: inline-block;
                         font-family: "FontAwesome";
@@ -579,6 +582,7 @@
                 .post-nav-link{
                     .post-nav-thumbnail{
                         max-width: 50px;
+                        height: 50px;
                     }
                     .post-nav-title-box{
                         font-size: 14px;
@@ -622,6 +626,18 @@
             }
         }
 
+    }
+
+    @media(max-width: 575.98px){
+        .single-post-navigation{
+            .previous-next-link{
+                .post-nav-link{
+                    .post-nav-thumbnail{
+                        height: 60px;
+                    }
+                }
+            }
+        }
     }
 
     @media(max-width: 480px){
