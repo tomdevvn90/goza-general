@@ -31,7 +31,7 @@ function be_item_event($is_style){
 function be_template_ev_list()
 {
     $day         = tribe_get_start_date(get_the_ID(), true, 'j');
-    $month       = tribe_get_start_date(get_the_ID(), true, 'F');
+    $month       = tribe_get_start_date(get_the_ID(), true, 'M');
     $time        = tribe_get_start_date(get_the_ID(), true, 'G:i a');
     $author_id   = get_the_author_meta('ID');
     $author_name = get_the_author_meta('display_name', $author_id);

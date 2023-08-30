@@ -28741,16 +28741,10 @@ ul.be-list-ul li {
   line-height: 26px;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767.98px) {
   .be-events-listing-block.is-style-ev-list .item-event--start-date__month {
     font-size: 15px;
     line-height: 125%;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .be-events-listing-block.is-style-ev-list .item-event--start-date__month {
-    font-size: 12px;
   }
 }
 
