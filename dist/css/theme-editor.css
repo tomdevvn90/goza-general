@@ -7062,9 +7062,10 @@
   z-index: 1;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767.98px) {
   .be-icon-box-block.is-style-4 .be-icon-box-block-inner {
     padding-bottom: 0;
+    min-height: auto;
   }
 }
 
@@ -7075,11 +7076,13 @@
   padding: 30px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media (max-width: 991.98px) {
   .be-icon-box-block.is-style-4 .be-icon-box-block-inner .be-icon-box-block-inner--content {
     padding: 60px 20px 20px 20px;
   }
+}
 
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   .be-icon-box-block.is-style-4 .be-icon-box-block-inner .be-icon-box-block--heading {
     padding-right: 0px;
   }
@@ -7097,15 +7100,9 @@
   padding-right: 95px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
   .be-icon-box-block.is-style-4 .be-icon-box-block-inner .be-icon-box-block--heading {
-    padding-right: 50px;
-  }
-}
-
-@media (max-width: 767px) {
-  .be-icon-box-block.is-style-4 .be-icon-box-block-inner .be-icon-box-block--heading {
-    padding-right: 60px;
+    padding-right: 25px;
   }
 }
 
@@ -7114,6 +7111,13 @@
   color: #555;
   line-height: 28px;
   margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+  .be-icon-box-block.is-style-4 .be-icon-box-block-inner .be-icon-box-block--subheading {
+    font-size: 17px;
+    line-height: 27px;
+  }
 }
 
 .be-icon-box-block.is-style-4 .be-icon-box-block-inner .be-icon-box-block--icon {
@@ -13846,6 +13850,31 @@
 
 .be-events-listing-block.is-style-ev-fill.be-gz-orgazination-events-listing .item-event--venue svg path {
   stroke: rgb(44, 73, 151);
+}
+
+.wp-block-columns.be-section-icon-box > .block-editor-block-list__block {
+  height: 100%;
+  flex-basis: auto;
+}
+
+.wp-block-columns.be-section-icon-box > .block-editor-block-list__block > .block-editor-block-list__block {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .wp-block-columns.be-section-icon-box .be-icon-box-block {
+    height: 100%;
+  }
+
+  .wp-block-columns.be-section-icon-box .be-icon-box-block-inner {
+    height: 100%;
+  }
+
+  .wp-block-columns.be-section-icon-box .be-icon-box-block-inner--content {
+    height: 100%;
+  }
 }
 
 .wp-block-goza-blocks-goza-columns.be-row-numbers-earthquake .be-counter-up-box {
