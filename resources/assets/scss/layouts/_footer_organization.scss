@@ -60,8 +60,15 @@
                     list-style-type: none;
                     margin: 0;
                     padding: 0;
-
+                    @include media-breakpoint-down(md) {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
                     li {
+                        @include media-breakpoint-down(md) {
+                            width: 50%;
+                        }
+
                         &:not(:last-child) {
                             margin-bottom: 15px;
                         }
@@ -72,6 +79,10 @@
                             line-height: 27px;
                             letter-spacing: 0.48px;
                             color: var(--footer-text-color, #FFF);
+                            @include media-breakpoint-down(xs) { 
+                                font-size: 16px;
+                                line-height: 26px;
+                            }
 
                             &:hover {
                                 color: var(--link-color-hover, inherit);
@@ -86,6 +97,9 @@
                                 margin-right: 20px;
                                 color: var(--link-color, inherit);
                                 font: normal normal normal 14px/1 FontAwesome;
+                                @include media-breakpoint-down(xs) { 
+                                    margin-right: 10px;
+                                }
                             }
                         }
                     }

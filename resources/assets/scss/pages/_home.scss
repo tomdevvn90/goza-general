@@ -4,6 +4,7 @@
         margin-bottom:0;
         .be-icon-box-block{
             border-right: none;
+            height: 100%;
             &:first-child{
                 border-left: 1px dotted #b7b7b7;
             }
@@ -19,8 +20,16 @@
                     border-right: 1px dotted #b7b7b7;
                 }
             }
+
+            @media (max-width: 359px){
+                &:not(:last-child){
+                    .be-icon-box-block{
+                        border-bottom: 1px dotted #b7b7b7 !important;
+                    }
+                }
+            }
     
-            @media (min-width: 768px) and (max-width: 781px) { 
+            @media (min-width: 360px) and (max-width: 991.98px) {
                 body & {
                     flex-basis: 50%!important;
                 }
@@ -38,13 +47,48 @@
                 }
             }
 
-            @include media-breakpoint-down(sm) {
-                .be-icon-box-block{
+            .be-icon-box-block{
+                @media (max-width: 359px){
                     border:none !important;
+                    &:not(:last-child){
+                        border-bottom: 1px dotted #b7b7b7 !important;
+                    }
+                }
+                &-inner{
+                    @include media-breakpoint-down(sm) {
+                        padding: 48px 10px;
+                    }
                 }
 
-                &:not(:last-child){
-                    border-bottom: 1px dotted #b7b7b7;
+                &--heading{
+                    @include media-breakpoint-down(sm) {
+                        font-size: 18px;
+                        line-height: 120%;
+                    }
+
+                    @include media-breakpoint-down(xs) {
+                        font-size: 16px;
+                    }
+                }
+
+
+                &--icon{
+                    img{
+                        @include media-breakpoint-down(sm) {
+                            max-width: 55px;
+                        }
+                    }
+                }
+
+                &--button{
+                    @include media-breakpoint-down(sm) {
+                        text-align: center;
+                    }
+                    a{
+                        @include media-breakpoint-down(sm) {
+                            max-width: 90%;
+                        }
+                    }
                 }
             }
         }   
