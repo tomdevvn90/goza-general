@@ -31,12 +31,12 @@
     }
 
     &.be-gz-orgazination-row-counter{
-        @media (min-width: 414px) and (max-width: 781px){
-            flex-wrap: nowrap !important;
-        } 
+        // @media (min-width: 414px) and (max-width: 781px){
+        //     flex-wrap: nowrap !important;
+        // } 
 
         > .wp-block-column{
-            @media (max-width: 413px){
+            @include media-breakpoint-down(xs) {
                 text-align: center;
                 border:none !important;
                 padding-bottom: 16px;

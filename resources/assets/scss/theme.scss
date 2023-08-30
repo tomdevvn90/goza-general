@@ -1,13 +1,26 @@
 // Functions
 @import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
 
 // Variables
 @import "variables-bootstrap";
 @import "variables";
 
+.wp-block-columns{
+
+    @media (min-width: 782px) and (max-width: 991.98px) { 
+        flex-wrap: wrap !important;
+    }
+
+    &:not(.is-not-stacked-on-mobile)>.wp-block-column{
+        @include media-breakpoint-down(md) {
+            flex-basis: 100%!important;
+        }
+    }
+}
+
+
 // Bootstrap
-// @import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/modal";
