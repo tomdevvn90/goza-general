@@ -19574,8 +19574,7 @@ h6 {
 }
 
 .site-header.site-header-earthquake .site-header-inner {
-  width: 100%;
-  height: auto;
+  width: clac(92.5%);
   position: absolute;
   left: 7.5px;
   height: 98px;
