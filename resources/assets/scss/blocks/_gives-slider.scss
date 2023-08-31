@@ -2,6 +2,12 @@
   box-sizing: border-box;
   margin: 0;
 
+  .slick-slider{
+    &.slick-dotted{
+      margin-bottom: 40px;
+    }
+  }
+  
   &-inner {
     .item-give {
       &-inner {
@@ -193,12 +199,6 @@
         opacity: 1;
         background: var(--heading-color, #d41b65);
         color: #fff;
-      }
-    }
-
-    .slick-slider{
-      &.slick-dotted{
-        margin-bottom: 40px;
       }
     }
 

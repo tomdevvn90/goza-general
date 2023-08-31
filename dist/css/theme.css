@@ -30346,6 +30346,10 @@ ul.be-list-ul li {
   margin: 0;
 }
 
+.be-give-slider-block .slick-slider.slick-dotted {
+  margin-bottom: 40px;
+}
+
 .be-give-slider-block-inner .item-give-inner {
   cursor: pointer;
   box-shadow: 0 0 14.5px 0 rgba(0, 0, 0, 0.09);
@@ -30532,10 +30536,6 @@ ul.be-list-ul li {
   opacity: 1;
   background: var(--heading-color, #d41b65);
   color: #fff;
-}
-
-.be-give-slider-block-inner .slick-slider.slick-dotted {
-  margin-bottom: 40px;
 }
 
 .be-give-slider-block-inner .slick-dots {
