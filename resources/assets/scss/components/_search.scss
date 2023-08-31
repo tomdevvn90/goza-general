@@ -35,7 +35,9 @@
 
     &-close {
         background: #fff none repeat scroll 0 0;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 60px;
         position: fixed;
         right: 60px;
@@ -43,7 +45,8 @@
         width: 60px;
         z-index: 5;
         border-radius: 100px;
-        font-size: 40px;
+        font-size: 20px;
+        color: #333;
         box-shadow: 0px 0px 5px 0px rgba(1, 1, 1, 0.5);
         cursor: pointer;
 
@@ -62,6 +65,14 @@
             -webkit-transform: translate(-50%, -50%);
             color: #333;
             font-size: 24px;
+        }
+
+        svg{
+            width: 1em;
+            height: 1em;
+            path{
+                fill: #333;
+            }
         }
     }
 
