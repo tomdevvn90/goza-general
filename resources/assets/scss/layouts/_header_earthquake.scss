@@ -22,7 +22,7 @@
         }
 
         .site-header-inner{
-            width: 100%;
+            width: clac(100% - 7.5px);
             height: auto;
             position: absolute;
             left: calc(15px / 2);
