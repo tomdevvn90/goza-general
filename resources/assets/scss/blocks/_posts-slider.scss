@@ -1,9 +1,6 @@
 .be-post-slider-block{
     box-sizing: border-box;
     margin: 0;
-    @media (max-width: 767.98px) {
-        box-shadow: 0 0 14.5px 0 rgba(0, 0, 0, 0.09);
-    }
     &-inner{
         .item-post{
             &-inner{

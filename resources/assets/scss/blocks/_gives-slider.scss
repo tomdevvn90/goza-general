@@ -196,8 +196,14 @@
       }
     }
 
+    .slick-slider{
+      &.slick-dotted{
+        margin-bottom: 40px;
+      }
+    }
+
     .slick-dots {
-      bottom: -35px;
+      bottom: -30px;
 
       li {
         display: inline-block;
@@ -639,7 +645,7 @@
         @media only screen and (max-width: 767px) {
           .item-give-inner {
             box-shadow: none;
-            margin: 15px 0px;
+            margin: 20px 0px;
             border: 1px solid #ddd;
           }
         }
