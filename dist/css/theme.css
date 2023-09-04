@@ -13706,20 +13706,26 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
-.post-type-archive-give_forms .donations-give-form-wrap {
+.post-type-archive-give_forms .donations-give-form-wrap,
+.tax-give_forms_category .donations-give-form-wrap,
+.tax-give_forms_tag .donations-give-form-wrap {
   background: #ffffff;
   overflow: hidden;
   border-radius: 2px;
 }
 
-.post-type-archive-give_forms .donations-give-form-wrap .give-card__media {
+.post-type-archive-give_forms .donations-give-form-wrap .give-card__media,
+.tax-give_forms_category .donations-give-form-wrap .give-card__media,
+.tax-give_forms_tag .donations-give-form-wrap .give-card__media {
   position: relative;
   overflow: hidden;
   padding-bottom: 66%;
   background: #e7e6e4;
 }
 
-.post-type-archive-give_forms .donations-give-form-wrap .give-card__media img {
+.post-type-archive-give_forms .donations-give-form-wrap .give-card__media img,
+.tax-give_forms_category .donations-give-form-wrap .give-card__media img,
+.tax-give_forms_tag .donations-give-form-wrap .give-card__media img {
   position: absolute;
   top: 0;
   left: 0;
@@ -13729,30 +13735,42 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
      object-fit: cover;
 }
 
-.post-type-archive-give_forms .donations-give-form-wrap .give-card__body {
+.post-type-archive-give_forms .donations-give-form-wrap .give-card__body,
+.tax-give_forms_category .donations-give-form-wrap .give-card__body,
+.tax-give_forms_tag .donations-give-form-wrap .give-card__body {
   padding: 24px 32px;
 }
 
-.post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-goal-progress {
+.post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-goal-progress,
+.tax-give_forms_category .donations-give-form-wrap .give-card__body .give-goal-progress,
+.tax-give_forms_tag .donations-give-form-wrap .give-card__body .give-goal-progress {
   margin-bottom: 24px;
 }
 
-.post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-goal-progress .raised {
+.post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-goal-progress .raised,
+.tax-give_forms_category .donations-give-form-wrap .give-card__body .give-goal-progress .raised,
+.tax-give_forms_tag .donations-give-form-wrap .give-card__body .give-goal-progress .raised {
   margin-bottom: 4px;
 }
 
-.post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-card__title {
+.post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-card__title,
+.tax-give_forms_category .donations-give-form-wrap .give-card__body .give-card__title,
+.tax-give_forms_tag .donations-give-form-wrap .give-card__body .give-card__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
   margin-bottom: 12px;
 }
 
-.post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-card__text {
+.post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-card__text,
+.tax-give_forms_category .donations-give-form-wrap .give-card__body .give-card__text,
+.tax-give_forms_tag .donations-give-form-wrap .give-card__body .give-card__text {
   margin: 0 0 24px;
 }
 
-.post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-card__button {
+.post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-card__button,
+.tax-give_forms_category .donations-give-form-wrap .give-card__body .give-card__button,
+.tax-give_forms_tag .donations-give-form-wrap .give-card__body .give-card__button {
   display: inline-block;
   font-size: 14px;
   font-weight: 700;
@@ -13764,51 +13782,73 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (max-width: 767.98px) {
-  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body button.give-btn.give-btn-modal {
+  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body button.give-btn.give-btn-modal,
+  .tax-give_forms_category .donations-give-form-wrap .give-card__body button.give-btn.give-btn-modal,
+  .tax-give_forms_tag .donations-give-form-wrap .give-card__body button.give-btn.give-btn-modal {
     line-height: 20px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body {
+  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body,
+  .tax-give_forms_category .donations-give-form-wrap .give-card__body,
+  .tax-give_forms_tag .donations-give-form-wrap .give-card__body {
     padding: 24px 16px;
   }
 
-  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-goal-progress {
+  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-goal-progress,
+  .tax-give_forms_category .donations-give-form-wrap .give-card__body .give-goal-progress,
+  .tax-give_forms_tag .donations-give-form-wrap .give-card__body .give-goal-progress {
     margin-bottom: 16px;
   }
 
-  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-goal-progress .raised {
+  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-goal-progress .raised,
+  .tax-give_forms_category .donations-give-form-wrap .give-card__body .give-goal-progress .raised,
+  .tax-give_forms_tag .donations-give-form-wrap .give-card__body .give-goal-progress .raised {
     font-size: 14px;
   }
 
-  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-goal-progress .income {
+  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-goal-progress .income,
+  .tax-give_forms_category .donations-give-form-wrap .give-card__body .give-goal-progress .income,
+  .tax-give_forms_tag .donations-give-form-wrap .give-card__body .give-goal-progress .income {
     font-size: 24px;
   }
 
-  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-card__title {
+  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-card__title,
+  .tax-give_forms_category .donations-give-form-wrap .give-card__body .give-card__title,
+  .tax-give_forms_tag .donations-give-form-wrap .give-card__body .give-card__title {
     font-size: 18px;
     line-height: 28px;
     margin-bottom: 8px;
   }
 
-  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-card__text {
+  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-card__text,
+  .tax-give_forms_category .donations-give-form-wrap .give-card__body .give-card__text,
+  .tax-give_forms_tag .donations-give-form-wrap .give-card__body .give-card__text {
     margin-bottom: 16px;
   }
 
-  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-card__button {
+  .post-type-archive-give_forms .donations-give-form-wrap .give-card__body .give-card__button,
+  .tax-give_forms_category .donations-give-form-wrap .give-card__body .give-card__button,
+  .tax-give_forms_tag .donations-give-form-wrap .give-card__body .give-card__button {
     font-size: 13px;
     line-height: 20px;
     padding: 8px 16px;
   }
 }
 
-.post-type-archive-give_forms .donations-give-form-wrap .give-goal-progress .income {
+.post-type-archive-give_forms .donations-give-form-wrap .give-goal-progress .income,
+.tax-give_forms_category .donations-give-form-wrap .give-goal-progress .income,
+.tax-give_forms_tag .donations-give-form-wrap .give-goal-progress .income {
   font-size: 30px !important;
 }
 
 .post-type-archive-give_forms .donations-give-form-wrap .give-goal-progress .income,
-.post-type-archive-give_forms .donations-give-form-wrap .give-goal-progress .goal-text {
+.post-type-archive-give_forms .donations-give-form-wrap .give-goal-progress .goal-text,
+.tax-give_forms_category .donations-give-form-wrap .give-goal-progress .income,
+.tax-give_forms_category .donations-give-form-wrap .give-goal-progress .goal-text,
+.tax-give_forms_tag .donations-give-form-wrap .give-goal-progress .income,
+.tax-give_forms_tag .donations-give-form-wrap .give-goal-progress .goal-text {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.2;
@@ -13816,50 +13856,68 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   color: var(--link-color, #d41b65);
 }
 
-.post-type-archive-give_forms .donations-give-form-wrap .give-goal-progress .give-progress-bar {
+.post-type-archive-give_forms .donations-give-form-wrap .give-goal-progress .give-progress-bar,
+.tax-give_forms_category .donations-give-form-wrap .give-goal-progress .give-progress-bar,
+.tax-give_forms_tag .donations-give-form-wrap .give-goal-progress .give-progress-bar {
   border-radius: 0px;
   height: 15px;
 }
 
-.post-type-archive-give_forms .donations-give-form-wrap .give-goal-progress .give-progress-bar > span {
+.post-type-archive-give_forms .donations-give-form-wrap .give-goal-progress .give-progress-bar > span,
+.tax-give_forms_category .donations-give-form-wrap .give-goal-progress .give-progress-bar > span,
+.tax-give_forms_tag .donations-give-form-wrap .give-goal-progress .give-progress-bar > span {
   border-radius: 0px;
 }
 
-.post-type-archive-give_forms .archive-donation-page-template.has-sidebar .give-forms-list {
+.post-type-archive-give_forms .archive-donation-page-template.has-sidebar .give-forms-list,
+.tax-give_forms_category .archive-donation-page-template.has-sidebar .give-forms-list,
+.tax-give_forms_tag .archive-donation-page-template.has-sidebar .give-forms-list {
   grid-template-columns: 1fr 1fr;
 }
 
 @media (max-width: 767.98px) {
-  .post-type-archive-give_forms .archive-donation-page-template.has-sidebar .give-forms-list {
+  .post-type-archive-give_forms .archive-donation-page-template.has-sidebar .give-forms-list,
+  .tax-give_forms_category .archive-donation-page-template.has-sidebar .give-forms-list,
+  .tax-give_forms_tag .archive-donation-page-template.has-sidebar .give-forms-list {
     grid-template-columns: 1fr;
   }
 }
 
-.post-type-archive-give_forms .archive-donation-page-template .give-forms-list {
+.post-type-archive-give_forms .archive-donation-page-template .give-forms-list,
+.tax-give_forms_category .archive-donation-page-template .give-forms-list,
+.tax-give_forms_tag .archive-donation-page-template .give-forms-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
 }
 
 @media (max-width: 991.98px) {
-  .post-type-archive-give_forms .archive-donation-page-template .give-forms-list {
+  .post-type-archive-give_forms .archive-donation-page-template .give-forms-list,
+  .tax-give_forms_category .archive-donation-page-template .give-forms-list,
+  .tax-give_forms_tag .archive-donation-page-template .give-forms-list {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 767.98px) {
-  .post-type-archive-give_forms .archive-donation-page-template .give-forms-list {
+  .post-type-archive-give_forms .archive-donation-page-template .give-forms-list,
+  .tax-give_forms_category .archive-donation-page-template .give-forms-list,
+  .tax-give_forms_tag .archive-donation-page-template .give-forms-list {
     grid-template-columns: 1fr;
   }
 }
 
-.post-type-archive-give_forms .give-forms-loadmore {
+.post-type-archive-give_forms .give-forms-loadmore,
+.tax-give_forms_category .give-forms-loadmore,
+.tax-give_forms_tag .give-forms-loadmore {
   font-size: 16px;
   text-align: center;
   margin-top: 60px;
 }
 
-.post-type-archive-give_forms .give-forms-loadmore .btn-loadmore {
+.post-type-archive-give_forms .give-forms-loadmore .btn-loadmore,
+.tax-give_forms_category .give-forms-loadmore .btn-loadmore,
+.tax-give_forms_tag .give-forms-loadmore .btn-loadmore {
   display: inline-block;
   font-size: 13px;
   font-weight: 700;
@@ -13871,19 +13929,25 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   border-radius: 2px;
 }
 
-.post-type-archive-give_forms .pagination {
+.post-type-archive-give_forms .pagination,
+.tax-give_forms_category .pagination,
+.tax-give_forms_tag .pagination {
   text-align: center;
   margin-top: 64px;
 }
 
-.post-type-archive-give_forms .pagination .nav-links {
+.post-type-archive-give_forms .pagination .nav-links,
+.tax-give_forms_category .pagination .nav-links,
+.tax-give_forms_tag .pagination .nav-links {
   display: inline-flex;
   background: #FFFFFF;
   border: 1px solid #E7E5E4;
   border-radius: 2px;
 }
 
-.post-type-archive-give_forms .pagination .nav-links .page-numbers {
+.post-type-archive-give_forms .pagination .nav-links .page-numbers,
+.tax-give_forms_category .pagination .nav-links .page-numbers,
+.tax-give_forms_tag .pagination .nav-links .page-numbers {
   font-weight: 600;
   font-size: 13px;
   line-height: 45px;
@@ -13892,175 +13956,257 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   min-width: 45px;
 }
 
-.post-type-archive-give_forms .pagination .nav-links .page-numbers:not(:last-child) {
+.post-type-archive-give_forms .pagination .nav-links .page-numbers:not(:last-child),
+.tax-give_forms_category .pagination .nav-links .page-numbers:not(:last-child),
+.tax-give_forms_tag .pagination .nav-links .page-numbers:not(:last-child) {
   border-right: 1px solid #E7E5E4;
 }
 
-.post-type-archive-give_forms .pagination .nav-links .page-numbers:first-child {
+.post-type-archive-give_forms .pagination .nav-links .page-numbers:first-child,
+.tax-give_forms_category .pagination .nav-links .page-numbers:first-child,
+.tax-give_forms_tag .pagination .nav-links .page-numbers:first-child {
   border-radius: 2px 0px 0px 2px;
 }
 
-.post-type-archive-give_forms .pagination .nav-links .page-numbers:last-child {
+.post-type-archive-give_forms .pagination .nav-links .page-numbers:last-child,
+.tax-give_forms_category .pagination .nav-links .page-numbers:last-child,
+.tax-give_forms_tag .pagination .nav-links .page-numbers:last-child {
   border-radius: 0px 2px 2px 0px;
 }
 
 .post-type-archive-give_forms .pagination .nav-links .page-numbers.current,
-.post-type-archive-give_forms .pagination .nav-links .page-numbers:hover {
+.post-type-archive-give_forms .pagination .nav-links .page-numbers:hover,
+.tax-give_forms_category .pagination .nav-links .page-numbers.current,
+.tax-give_forms_category .pagination .nav-links .page-numbers:hover,
+.tax-give_forms_tag .pagination .nav-links .page-numbers.current,
+.tax-give_forms_tag .pagination .nav-links .page-numbers:hover {
   color: #FFFFFF;
   background: var(--link-color, #d41b65);
 }
 
 .post-type-archive-give_forms .pagination .nav-links .page-numbers.current svg,
-.post-type-archive-give_forms .pagination .nav-links .page-numbers:hover svg {
+.post-type-archive-give_forms .pagination .nav-links .page-numbers:hover svg,
+.tax-give_forms_category .pagination .nav-links .page-numbers.current svg,
+.tax-give_forms_category .pagination .nav-links .page-numbers:hover svg,
+.tax-give_forms_tag .pagination .nav-links .page-numbers.current svg,
+.tax-give_forms_tag .pagination .nav-links .page-numbers:hover svg {
   fill: #FFFFFF;
 }
 
 .post-type-archive-give_forms .pagination .nav-links .page-numbers.prev,
-.post-type-archive-give_forms .pagination .nav-links .page-numbers.next {
+.post-type-archive-give_forms .pagination .nav-links .page-numbers.next,
+.tax-give_forms_category .pagination .nav-links .page-numbers.prev,
+.tax-give_forms_category .pagination .nav-links .page-numbers.next,
+.tax-give_forms_tag .pagination .nav-links .page-numbers.prev,
+.tax-give_forms_tag .pagination .nav-links .page-numbers.next {
   padding: 0 16px;
 }
 
 .post-type-archive-give_forms .pagination .nav-links .page-numbers.prev svg,
-.post-type-archive-give_forms .pagination .nav-links .page-numbers.next svg {
+.post-type-archive-give_forms .pagination .nav-links .page-numbers.next svg,
+.tax-give_forms_category .pagination .nav-links .page-numbers.prev svg,
+.tax-give_forms_category .pagination .nav-links .page-numbers.next svg,
+.tax-give_forms_tag .pagination .nav-links .page-numbers.prev svg,
+.tax-give_forms_tag .pagination .nav-links .page-numbers.next svg {
   display: inline-block;
   vertical-align: middle;
   margin-top: -2px;
 }
 
-.post-type-archive-give_forms .pagination .nav-links .page-numbers.prev svg {
+.post-type-archive-give_forms .pagination .nav-links .page-numbers.prev svg,
+.tax-give_forms_category .pagination .nav-links .page-numbers.prev svg,
+.tax-give_forms_tag .pagination .nav-links .page-numbers.prev svg {
   margin-right: 4px;
 }
 
-.post-type-archive-give_forms .pagination .nav-links .page-numbers.next svg {
+.post-type-archive-give_forms .pagination .nav-links .page-numbers.next svg,
+.tax-give_forms_category .pagination .nav-links .page-numbers.next svg,
+.tax-give_forms_tag .pagination .nav-links .page-numbers.next svg {
   margin-left: 4px;
 }
 
 @media (max-width: 575.98px) {
-  .post-type-archive-give_forms .pagination .nav-links .page-numbers {
+  .post-type-archive-give_forms .pagination .nav-links .page-numbers,
+  .tax-give_forms_category .pagination .nav-links .page-numbers,
+  .tax-give_forms_tag .pagination .nav-links .page-numbers {
     line-height: 35px;
     min-width: 35px;
   }
 
   .post-type-archive-give_forms .pagination .nav-links .page-numbers.prev,
-  .post-type-archive-give_forms .pagination .nav-links .page-numbers.next {
+  .post-type-archive-give_forms .pagination .nav-links .page-numbers.next,
+  .tax-give_forms_category .pagination .nav-links .page-numbers.prev,
+  .tax-give_forms_category .pagination .nav-links .page-numbers.next,
+  .tax-give_forms_tag .pagination .nav-links .page-numbers.prev,
+  .tax-give_forms_tag .pagination .nav-links .page-numbers.next {
     font-size: 0;
     min-width: 35px;
     padding: 0;
   }
 
   .post-type-archive-give_forms .pagination .nav-links .page-numbers.prev svg,
-  .post-type-archive-give_forms .pagination .nav-links .page-numbers.next svg {
+  .post-type-archive-give_forms .pagination .nav-links .page-numbers.next svg,
+  .tax-give_forms_category .pagination .nav-links .page-numbers.prev svg,
+  .tax-give_forms_category .pagination .nav-links .page-numbers.next svg,
+  .tax-give_forms_tag .pagination .nav-links .page-numbers.prev svg,
+  .tax-give_forms_tag .pagination .nav-links .page-numbers.next svg {
     margin: -2px 0 0 0;
   }
 }
 
 @media (max-width: 767.98px) {
-  .post-type-archive-give_forms .pagination {
+  .post-type-archive-give_forms .pagination,
+  .tax-give_forms_category .pagination,
+  .tax-give_forms_tag .pagination {
     margin-top: 48px;
   }
 }
 
-.post-type-archive-give_forms .site-content {
+.post-type-archive-give_forms .site-content,
+.tax-give_forms_category .site-content,
+.tax-give_forms_tag .site-content {
   background: #f8f7f5;
 }
 
-.post-type-archive-give_forms .site-content .content-area {
+.post-type-archive-give_forms .site-content .content-area,
+.tax-give_forms_category .site-content .content-area,
+.tax-give_forms_tag .site-content .content-area {
   padding: 96px 0;
 }
 
-.post-type-archive-give_forms .site-content .content-area.has-sidebar.left-sidebar .container {
+.post-type-archive-give_forms .site-content .content-area.has-sidebar.left-sidebar .container,
+.tax-give_forms_category .site-content .content-area.has-sidebar.left-sidebar .container,
+.tax-give_forms_tag .site-content .content-area.has-sidebar.left-sidebar .container {
   flex-direction: row-reverse;
 }
 
-.post-type-archive-give_forms .site-content .content-area.has-sidebar .container {
+.post-type-archive-give_forms .site-content .content-area.has-sidebar .container,
+.tax-give_forms_category .site-content .content-area.has-sidebar .container,
+.tax-give_forms_tag .site-content .content-area.has-sidebar .container {
   display: flex;
   justify-content: space-between;
 }
 
-.post-type-archive-give_forms .site-content .content-area.has-sidebar .site-main {
+.post-type-archive-give_forms .site-content .content-area.has-sidebar .site-main,
+.tax-give_forms_category .site-content .content-area.has-sidebar .site-main,
+.tax-give_forms_tag .site-content .content-area.has-sidebar .site-main {
   width: calc(69.5% - 64px);
 }
 
 @media (max-width: 1199.98px) {
-  .post-type-archive-give_forms .site-content .content-area.has-sidebar .site-main {
+  .post-type-archive-give_forms .site-content .content-area.has-sidebar .site-main,
+  .tax-give_forms_category .site-content .content-area.has-sidebar .site-main,
+  .tax-give_forms_tag .site-content .content-area.has-sidebar .site-main {
     width: calc(69.5% - 48px);
   }
 }
 
-.post-type-archive-give_forms .site-content .content-area.has-sidebar .widget-area {
+.post-type-archive-give_forms .site-content .content-area.has-sidebar .widget-area,
+.tax-give_forms_category .site-content .content-area.has-sidebar .widget-area,
+.tax-give_forms_tag .site-content .content-area.has-sidebar .widget-area {
   width: 30.5%;
 }
 
 @media (max-width: 991.98px) {
   .post-type-archive-give_forms .site-content .content-area.has-sidebar.left-sidebar .container,
-  .post-type-archive-give_forms .site-content .content-area.has-sidebar .container {
+  .post-type-archive-give_forms .site-content .content-area.has-sidebar .container,
+  .tax-give_forms_category .site-content .content-area.has-sidebar.left-sidebar .container,
+  .tax-give_forms_category .site-content .content-area.has-sidebar .container,
+  .tax-give_forms_tag .site-content .content-area.has-sidebar.left-sidebar .container,
+  .tax-give_forms_tag .site-content .content-area.has-sidebar .container {
     flex-direction: column;
   }
 
   .post-type-archive-give_forms .site-content .content-area.has-sidebar .site-main,
-  .post-type-archive-give_forms .site-content .content-area.has-sidebar .widget-area {
+  .post-type-archive-give_forms .site-content .content-area.has-sidebar .widget-area,
+  .tax-give_forms_category .site-content .content-area.has-sidebar .site-main,
+  .tax-give_forms_category .site-content .content-area.has-sidebar .widget-area,
+  .tax-give_forms_tag .site-content .content-area.has-sidebar .site-main,
+  .tax-give_forms_tag .site-content .content-area.has-sidebar .widget-area {
     width: 100%;
   }
 
-  .post-type-archive-give_forms .site-content .content-area.has-sidebar .widget-area {
+  .post-type-archive-give_forms .site-content .content-area.has-sidebar .widget-area,
+  .tax-give_forms_category .site-content .content-area.has-sidebar .widget-area,
+  .tax-give_forms_tag .site-content .content-area.has-sidebar .widget-area {
     max-width: 400px;
     margin: 96px auto 0;
   }
 }
 
 @media (max-width: 767.98px) {
-  .post-type-archive-give_forms .site-content .content-area.has-sidebar .widget-area {
+  .post-type-archive-give_forms .site-content .content-area.has-sidebar .widget-area,
+  .tax-give_forms_category .site-content .content-area.has-sidebar .widget-area,
+  .tax-give_forms_tag .site-content .content-area.has-sidebar .widget-area {
     margin-top: 64px;
   }
 }
 
 @media (max-width: 767.98px) {
-  .post-type-archive-give_forms .site-content .content-area {
+  .post-type-archive-give_forms .site-content .content-area,
+  .tax-give_forms_category .site-content .content-area,
+  .tax-give_forms_tag .site-content .content-area {
     padding: 64px 0;
   }
 }
 
-.post-type-archive-give_forms .give-sidebar.give-single-form-sidebar-left .wg-wrap {
+.post-type-archive-give_forms .give-sidebar.give-single-form-sidebar-left .wg-wrap,
+.tax-give_forms_category .give-sidebar.give-single-form-sidebar-left .wg-wrap,
+.tax-give_forms_tag .give-sidebar.give-single-form-sidebar-left .wg-wrap {
   margin-top: 48px;
   margin-bottom: 0;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap {
+.post-type-archive-give_forms .give-sidebar .wg-wrap,
+.tax-give_forms_category .give-sidebar .wg-wrap,
+.tax-give_forms_tag .give-sidebar .wg-wrap {
   background: #FFFFFF;
   padding: 32px 40px;
   border-radius: 2px;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap:not(:last-child) {
+.post-type-archive-give_forms .give-sidebar .wg-wrap:not(:last-child),
+.tax-give_forms_category .give-sidebar .wg-wrap:not(:last-child),
+.tax-give_forms_tag .give-sidebar .wg-wrap:not(:last-child) {
   margin-bottom: 48px;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap .wg-wrap .widget-title {
+.post-type-archive-give_forms .give-sidebar .wg-wrap .wg-wrap .widget-title,
+.tax-give_forms_category .give-sidebar .wg-wrap .wg-wrap .widget-title,
+.tax-give_forms_tag .give-sidebar .wg-wrap .wg-wrap .widget-title {
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
   margin-bottom: 25px;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-grid {
+.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-grid,
+.tax-give_forms_category .give-sidebar .wg-wrap .give-wrap .give-grid,
+.tax-give_forms_tag .give-sidebar .wg-wrap .give-wrap .give-grid {
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 0;
   margin-bottom: 15px;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-grid__item {
+.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-grid__item,
+.tax-give_forms_category .give-sidebar .wg-wrap .give-wrap .give-grid__item,
+.tax-give_forms_tag .give-sidebar .wg-wrap .give-wrap .give-grid__item {
   margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #eaeaea;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor {
+.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor,
+.tax-give_forms_category .give-sidebar .wg-wrap .give-wrap .give-donor,
+.tax-give_forms_tag .give-sidebar .wg-wrap .give-wrap .give-donor {
   padding: 0;
   border: none;
   box-shadow: none;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-container {
+.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-container,
+.tax-give_forms_category .give-sidebar .wg-wrap .give-wrap .give-donor-container,
+.tax-give_forms_tag .give-sidebar .wg-wrap .give-wrap .give-donor-container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -14068,7 +14214,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   padding: 0;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-container__image {
+.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-container__image,
+.tax-give_forms_category .give-sidebar .wg-wrap .give-wrap .give-donor-container__image,
+.tax-give_forms_tag .give-sidebar .wg-wrap .give-wrap .give-donor-container__image {
   width: 60px !important;
   height: 60px !important;
   background: #E7E6E4;
@@ -14076,18 +14224,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   border: none;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-container__image img {
+.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-container__image img,
+.tax-give_forms_category .give-sidebar .wg-wrap .give-wrap .give-donor-container__image img,
+.tax-give_forms_tag .give-sidebar .wg-wrap .give-wrap .give-donor-container__image img {
   width: 100%;
   height: 100%;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-container-variation {
+.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-container-variation,
+.tax-give_forms_category .give-sidebar .wg-wrap .give-wrap .give-donor-container-variation,
+.tax-give_forms_tag .give-sidebar .wg-wrap .give-wrap .give-donor-container-variation {
   align-items: start !important;
   width: calc(100% - 75px);
   padding-left: 15px;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-container-variation__name {
+.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-container-variation__name,
+.tax-give_forms_category .give-sidebar .wg-wrap .give-wrap .give-donor-container-variation__name,
+.tax-give_forms_tag .give-sidebar .wg-wrap .give-wrap .give-donor-container-variation__name {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
@@ -14095,32 +14249,42 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   margin: 0 !important;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-container-variation__timestamp {
+.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-container-variation__timestamp,
+.tax-give_forms_category .give-sidebar .wg-wrap .give-wrap .give-donor-container-variation__timestamp,
+.tax-give_forms_tag .give-sidebar .wg-wrap .give-wrap .give-donor-container-variation__timestamp {
   font-size: 12px;
   line-height: 1.5;
   color: inherit;
   margin: 0 !important;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-details {
+.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-details,
+.tax-give_forms_category .give-sidebar .wg-wrap .give-wrap .give-donor-details,
+.tax-give_forms_tag .give-sidebar .wg-wrap .give-wrap .give-donor-details {
   width: 100%;
   margin-top: 10px;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-details__wrapper span:last-child {
+.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-details__wrapper span:last-child,
+.tax-give_forms_category .give-sidebar .wg-wrap .give-wrap .give-donor-details__wrapper span:last-child,
+.tax-give_forms_tag .give-sidebar .wg-wrap .give-wrap .give-donor-details__wrapper span:last-child {
   font-size: 14px !important;
   line-height: 1.5;
   color: #002866;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-details__total {
+.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor-details__total,
+.tax-give_forms_category .give-sidebar .wg-wrap .give-wrap .give-donor-details__total,
+.tax-give_forms_tag .give-sidebar .wg-wrap .give-wrap .give-donor-details__total {
   font-size: 20px;
   font-weight: 700;
   line-height: 1.25;
   color: #002866 !important;
 }
 
-.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor__load_more {
+.post-type-archive-give_forms .give-sidebar .wg-wrap .give-wrap .give-donor__load_more,
+.tax-give_forms_category .give-sidebar .wg-wrap .give-wrap .give-donor__load_more,
+.tax-give_forms_tag .give-sidebar .wg-wrap .give-wrap .give-donor__load_more {
   border: none;
   font-size: 14px;
   text-transform: uppercase;
@@ -14132,26 +14296,36 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (max-width: 767.98px) {
-  .post-type-archive-give_forms .give-sidebar.give-single-form-sidebar-left .wg-wrap {
+  .post-type-archive-give_forms .give-sidebar.give-single-form-sidebar-left .wg-wrap,
+  .tax-give_forms_category .give-sidebar.give-single-form-sidebar-left .wg-wrap,
+  .tax-give_forms_tag .give-sidebar.give-single-form-sidebar-left .wg-wrap {
     margin-top: 30px;
     padding: 24px 32px;
   }
 
-  .post-type-archive-give_forms .give-sidebar .wg-wrap {
+  .post-type-archive-give_forms .give-sidebar .wg-wrap,
+  .tax-give_forms_category .give-sidebar .wg-wrap,
+  .tax-give_forms_tag .give-sidebar .wg-wrap {
     padding: 24px 32px;
   }
 
-  .post-type-archive-give_forms .give-sidebar .wg-wrap:not(:last-child) {
+  .post-type-archive-give_forms .give-sidebar .wg-wrap:not(:last-child),
+  .tax-give_forms_category .give-sidebar .wg-wrap:not(:last-child),
+  .tax-give_forms_tag .give-sidebar .wg-wrap:not(:last-child) {
     margin-bottom: 30px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .post-type-archive-give_forms .give-sidebar.give-single-form-sidebar-left .wg-wrap {
+  .post-type-archive-give_forms .give-sidebar.give-single-form-sidebar-left .wg-wrap,
+  .tax-give_forms_category .give-sidebar.give-single-form-sidebar-left .wg-wrap,
+  .tax-give_forms_tag .give-sidebar.give-single-form-sidebar-left .wg-wrap {
     padding: 24px 16px;
   }
 
-  .post-type-archive-give_forms .give-sidebar .wg-wrap {
+  .post-type-archive-give_forms .give-sidebar .wg-wrap,
+  .tax-give_forms_category .give-sidebar .wg-wrap,
+  .tax-give_forms_tag .give-sidebar .wg-wrap {
     padding: 24px 16px;
   }
 }
