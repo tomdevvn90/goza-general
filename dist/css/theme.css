@@ -19755,6 +19755,10 @@ h6 {
   }
 }
 
+.site-header.site-header-earthquake #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a:hover {
+  color: var(--link-color-hover, #00af4e);
+}
+
 .site-header.site-header-earthquake #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item:last-child > a.mega-menu-link {
   padding-right: 0 !important;
 }

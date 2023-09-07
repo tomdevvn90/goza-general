@@ -13,6 +13,9 @@
                     padding-left: 10px !important;
                     padding-right: 10px !important;
                 }
+                &:hover{
+                    color: var(--link-color-hover, #00af4e);
+                }
             }
             &:last-child{
                 > a.mega-menu-link{
