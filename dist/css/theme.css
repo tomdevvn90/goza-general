@@ -20485,6 +20485,11 @@ h6 {
   background: #a7154f;
 }
 
+form.give-form.give-form-type-multi button.give-btn.give-btn-modal {
+  display: block;
+  margin: 0 auto !important;
+}
+
 .goza-preloader {
   position: fixed;
   width: 100%;
