@@ -19767,6 +19767,10 @@ h6 {
   color: var(--link-color, #28C77B);
 }
 
+.site-header.site-header-earthquake #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item ul.mega-sub-menu li a.mega-menu-link:hover {
+  color: var(--link-color-hover, #00af4e);
+}
+
 .site-header.site-header-earthquake .site-header-inner {
   width: calc(100% - 7.5px);
   position: absolute;

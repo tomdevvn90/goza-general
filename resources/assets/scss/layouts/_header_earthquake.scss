@@ -27,6 +27,13 @@
                     color: var(--link-color, #28C77B);
                 }
             }
+            ul.mega-sub-menu{
+                li{
+                    a.mega-menu-link:hover {
+                        color: var(--link-color-hover, #00af4e);
+                    }  
+                }
+            }
         }
 
         .site-header-inner{
