@@ -19,6 +19,11 @@
                     padding-right: 0 !important;
                 }
             }
+            &.mega-current-menu-ancestor {
+                >a.mega-menu-link {
+                    color: var(--link-color, #28C77B);
+                }
+            }
         }
 
         .site-header-inner{
@@ -198,7 +203,7 @@
                             font-family: var(--heading-family, Poppins, sans-serif);
 
                             &:hover {
-                                color: var(--link-color, #d41b65);
+                                color: var(--link-color, #28C77B);
                             }
 
                             &.dropdown-toggle {
@@ -251,7 +256,7 @@
                         transition: 0.3s;
 
                         &:hover {
-                            color: var(--link-color-hover, #d41b65);
+                            color: var(--link-color-hover, #28C77B);
                         }
                     }
 

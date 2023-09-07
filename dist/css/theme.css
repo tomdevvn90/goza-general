@@ -19759,6 +19759,10 @@ h6 {
   padding-right: 0 !important;
 }
 
+.site-header.site-header-earthquake #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link {
+  color: var(--link-color, #28C77B);
+}
+
 .site-header.site-header-earthquake .site-header-inner {
   width: calc(100% - 7.5px);
   position: absolute;
@@ -19989,7 +19993,7 @@ h6 {
 }
 
 .site-header.site-header-earthquake .goza-header-main--menu .navbar-nav > li > a:hover {
-  color: var(--link-color, #d41b65);
+  color: var(--link-color, #28C77B);
 }
 
 .site-header.site-header-earthquake .goza-header-main--menu .navbar-nav > li > a.dropdown-toggle::after {
@@ -20050,7 +20054,7 @@ h6 {
 }
 
 .site-header.site-header-earthquake .goza-header-main--cta .goza-header-cart-icon i:hover {
-  color: var(--link-color-hover, #d41b65);
+  color: var(--link-color-hover, #28C77B);
 }
 
 .site-header.site-header-earthquake .goza-header-main--cta .goza-header-cart-icon .goza-total-cart {
