@@ -16,7 +16,7 @@ $(document).ready(function () {
         duration: 1200,
         once: true,
         disable: 'mobile',
-    });    
+    });
 
     const el = document.querySelector('.counterUp')
     if (el === null) return;
@@ -27,7 +27,7 @@ $(document).ready(function () {
 });
 
 $(document).on("load", function () { 
-    AOS.refreshHard();
+    AOS.refresh();
 })
 
 import './blocks/progressbar-block';
