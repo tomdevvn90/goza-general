@@ -48,7 +48,7 @@ $style  = implode('; ', $styles);
 ?>
 <div <?php echo $anchor; ?>class="<?php echo esc_attr($class_name); ?>" style="<?php echo esc_attr($style); ?>">
    <div class="container">
-      <div class="block-box" style="background-color:<?php echo $bnc_bg_color_box ?>" data-aos="fade-up">
+      <div class="block-box" style="background-color:<?php echo $bnc_bg_color_box ?>" data-aos="fade-up" data-aos-duration="500">
          <?php if ($bnc_icon) { ?>
             <img src="<?= esc_attr($bnc_icon['url']) ?>" alt="<?= esc_attr($bnc_icon['alt']) ?>" />
          <?php } ?>
