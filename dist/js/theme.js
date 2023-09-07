@@ -1359,7 +1359,7 @@ $(document).ready(function () {
   });
 });
 $(document).on("load", function () {
-  aos__WEBPACK_IMPORTED_MODULE_6___default.a.refresh();
+  aos__WEBPACK_IMPORTED_MODULE_6___default.a.refreshHard();
 });
 
 
