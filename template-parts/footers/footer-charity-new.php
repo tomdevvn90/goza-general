@@ -34,7 +34,7 @@ $goza_social_network = __get_field('goza_social_network', 'option');
 <footer id="site-footer" class="main-footer footer-charity-new" style="<?= esc_attr($style) ?>">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-lg-4 main-footer-widget">
+            <div class="col-md-6 col-lg-4 main-footer-widget">
                 <?php if (isset($goza_general_heading) && !empty($goza_general_heading)) { ?>
                     <h3 class='main-footer-heading heading-general'><?= esc_attr($goza_general_heading) ?></h3>
                 <?php } ?>
@@ -43,7 +43,7 @@ $goza_social_network = __get_field('goza_social_network', 'option');
                 <?php } ?>
             </div>
 
-            <div class="col-md-3 col-lg-2 main-footer-widget">
+            <div class="col-md-6 col-lg-2 main-footer-widget">
                 <?php if (isset($goza_ql_heading) && !empty($goza_ql_heading)) { ?>
                     <h3 class='main-footer-heading'><?= esc_attr($goza_ql_heading) ?></h3>
                 <?php } ?>
@@ -60,7 +60,7 @@ $goza_social_network = __get_field('goza_social_network', 'option');
                 ?>
             </div>
 
-            <div class="col-md-3 col-lg-2 main-footer-widget">
+            <div class="col-md-6 col-lg-2 main-footer-widget">
                 <?php if (isset($goza_social_heading) && !empty($goza_social_heading)) { ?>
                     <h3 class='main-footer-heading'><?= esc_attr($goza_social_heading) ?></h3>
                 <?php } ?>
@@ -79,7 +79,7 @@ $goza_social_network = __get_field('goza_social_network', 'option');
                 ?>
             </div>
 
-            <div class="col-md-3 col-lg-4 main-footer-widget">
+            <div class="col-md-6 col-lg-4 main-footer-widget">
                 <?php if (isset($goza_newsletter_heading) && !empty($goza_newsletter_heading)) { ?>
                     <h3 class='main-footer-heading'><?= esc_attr($goza_newsletter_heading) ?></h3>
                 <?php } ?>
