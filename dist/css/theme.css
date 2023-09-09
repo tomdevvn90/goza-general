@@ -18633,15 +18633,6 @@ h6 {
   cursor: pointer;
 }
 
-.site-header.site-header-menu-center .goza-header-main--cta .goza-header-cart-icon i {
-  color: var(--header-text-color, #FFF);
-  transition: 0.3s;
-}
-
-.site-header.site-header-menu-center .goza-header-main--cta .goza-header-cart-icon i:hover {
-  color: var(--link-color-hover, #ec5e87);
-}
-
 .site-header.site-header-menu-center .goza-header-main--cta .goza-header-cart-icon .goza-total-cart {
   right: -9px;
   background: var(--link-color, #ec5e87);
@@ -18674,12 +18665,6 @@ h6 {
 
 .site-header.site-header-menu-center .goza-header-main--cta .goza-header-search i {
   color: #727b7b;
-}
-
-@media (max-width: 991.98px) {
-  .site-header.site-header-menu-center .goza-header-main--cta #goza-hamberger i {
-    color: var(--header-text-color, #FFF);
-  }
 }
 
 .site-header.site-header-menu-center .goza-header-menus {

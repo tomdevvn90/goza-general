@@ -58,14 +58,14 @@
                     position: relative;
                     cursor: pointer;
 
-                    i {
-                        color: var(--header-text-color, #FFF);
-                        transition: 0.3s;
+                    // i {
+                    //     color: var(--header-text-color, #FFF);
+                    //     transition: 0.3s;
 
-                        &:hover {
-                            color: var(--link-color-hover, #ec5e87);
-                        }
-                    }
+                    //     &:hover {
+                    //         color: var(--link-color-hover, #ec5e87);
+                    //     }
+                    // }
 
                     .goza-total-cart {
                         right: -9px;
@@ -99,14 +99,6 @@
 
                     i {
                         color: #727b7b;
-                    }
-                }
-
-                #goza-hamberger {
-                    @include media-breakpoint-down (md) {
-                        i {
-                            color: var(--header-text-color, #FFF);
-                        }
                     }
                 }
             }
