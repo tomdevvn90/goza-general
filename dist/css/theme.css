@@ -23647,15 +23647,23 @@ form.give-form.give-form-type-multi button.give-btn.give-btn-modal {
   letter-spacing: 0.16px;
   text-transform: uppercase;
   padding: 0;
-  width: 180px;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 10px;
+  width: 100%;
+  margin-top: 16px;
   background-color: #000;
   border-radius: 0;
   color: #fff;
+}
+
+@media (min-width: 576px) {
+  .charity-or-newsletter .tnp form .tnp-submit {
+    width: 180px;
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+  }
 }
 
 .site-header-charity-organization #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link {

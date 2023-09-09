@@ -210,15 +210,21 @@
                 letter-spacing: 0.16px;
                 text-transform: uppercase;
                 padding: 0;
-                width: 180px;
+                
                 text-align: center;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                right: 10px;
-                background-color: #000;
+                width: 100%;
+                margin-top: 16px;
+                background-color: #000; 
                 border-radius: 0;
                 color: #fff;
+                @media (min-width: 576px) {
+                    width: 180px;
+                    margin-top: 0;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 10px;
+                }
             }
         }
     }
