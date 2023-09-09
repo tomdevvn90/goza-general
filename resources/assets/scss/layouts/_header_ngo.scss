@@ -255,21 +255,8 @@
 .site-header-ngo{
     #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item {
         > a.mega-menu-link{
-            color: #fff;
             font-family: var(--heading-family, Poppins, sans-serif);
             font-size: 15px;
         }    
-
-        &:hover, &:focus{
-            > a.mega-menu-link{
-                color: var(--link-color);
-            }
-            
-        }
-    }
-   #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link{
-        &:hover, &:focus{
-            color: var(--link-color);
-        }
     }
 }
