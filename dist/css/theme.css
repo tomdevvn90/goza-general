@@ -17798,6 +17798,11 @@ h6 {
   color: var(--link-color);
 }
 
+.site-header #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-current_page_ancestor > a.mega-menu-link,
+.site-header #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-current-menu-item > a.mega-menu-link {
+  color: var(--link-color);
+}
+
 @media (max-width: 767.98px) {
   .site-header .goza-header-main .goza-header-button-donate {
     display: none;
