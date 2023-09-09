@@ -71,6 +71,12 @@
                     z-index: 1;
                 }
             }
+
+            &:not(:first-child){
+                .main-footer-heading {
+                    text-transform: uppercase;
+                }
+            }
         }
 
         .main-footer-heading {

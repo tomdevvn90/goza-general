@@ -21197,6 +21197,10 @@ form.give-form.give-form-type-multi button.give-btn.give-btn-modal {
   z-index: 1;
 }
 
+.main-footer.footer-default .main-footer-widget:not(:first-child) .main-footer-heading {
+  text-transform: uppercase;
+}
+
 .main-footer.footer-default .main-footer-heading {
   font-size: 18px;
   color: #e1e1e1;
