@@ -3234,7 +3234,7 @@
 .is-root-container .be-team-carousel-inner {
   display: flex;
   overflow: auto;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .is-root-container .be-team-carousel-inner .item-team {

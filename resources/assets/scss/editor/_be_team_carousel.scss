@@ -3,7 +3,7 @@
         &-inner{
             display: flex;
             overflow: auto;
-            justify-content: start;
+            justify-content: flex-start;
             .item-team{
                 min-width: 300px;
                 margin-right: 20px;

@@ -63,7 +63,7 @@ if(!empty($carousel_st) && isset($carousel_st)){
 $classes = isset($block['className']) ? $block['className'] : "is-style-default";
 ?>
 
-<div id="<?php echo $id; ?>" class="be-team-carousel  <?php echo $classes?>" data-style="<?php echo $classes?>">
+<div id="<?php echo $id; ?>" class="be-team-carousel be-team-carousel-<?php echo $classes?> <?php echo $classes?>" data-style="<?php echo $classes?>">
     <?php if(!empty($team) && isset($team)): ?>
         <div class="be-team-carousel-inner" data-carousel='<?= json_encode($data_carousel) ?>' data-aos="fade-up" style="<?php echo esc_attr($styleString); ?>"> 
             <?php foreach ($team as $key => $value) : ?>

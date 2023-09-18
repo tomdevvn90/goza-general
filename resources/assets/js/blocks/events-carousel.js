@@ -36,8 +36,4 @@
         beEventsCarousel()
     })
 
-    $(window).on('resize', function () {
-        beEventsCarousel()
-    });
-
 })(jQuery);
