@@ -5873,6 +5873,12 @@
   color: #FFFFFF;
 }
 
+@media screen and (max-width: 767.98px) {
+  .be-post-slider-block.is-style-goza-earthquake .be-post-slider-block-inner .item-post .item-post-inner {
+    margin: 5px !important;
+  }
+}
+
 .be-testimonials-block {
   box-sizing: border-box;
 }
@@ -9752,7 +9758,7 @@
 @media only screen and (max-width: 767px) {
   .be-give-slider-block.is-style-4 .be-give-slider-block-inner .item-give .item-give-inner {
     box-shadow: none;
-    margin: 20px 0px;
+    margin: 20px 5px;
     border: 1px solid #ddd;
   }
 }

@@ -24745,6 +24745,15 @@ ul.be-list-ul li {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .be-column-image-text-video-block .block-col-content .block-col__content {
+    width: 570px;
+    padding-left: 0;
+    padding-right: 0;
+    float: right;
+  }
+}
+
 .be-progressbar-block {
   width: 100%;
   height: auto;
@@ -27318,6 +27327,12 @@ ul.be-list-ul li {
 .be-post-slider-block.is-style-goza-earthquake .be-post-slider-block-inner .item-post .item-post-content .item-post-meta span.item-post-author {
   font-size: 16px;
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 767.98px) {
+  .be-post-slider-block.is-style-goza-earthquake .be-post-slider-block-inner .item-post .item-post-inner {
+    margin: 5px !important;
+  }
 }
 
 .be-testimonials-block {
@@ -31199,7 +31214,7 @@ ul.be-list-ul li {
 @media only screen and (max-width: 767px) {
   .be-give-slider-block.is-style-4 .be-give-slider-block-inner .item-give .item-give-inner {
     box-shadow: none;
-    margin: 20px 0px;
+    margin: 20px 5px;
     border: 1px solid #ddd;
   }
 }
