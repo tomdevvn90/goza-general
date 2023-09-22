@@ -32,8 +32,8 @@
 @media screen and (min-width: 1200px) { 
     .be-column-image-text-video-block .block-col-content .block-col__content{
         width: 570px;
-        padding-left: 0; 
-        padding-right: 0;
+        padding-left: 0 !important; 
+        padding-right: 0 !important;
         float: right; 
     }
 }
