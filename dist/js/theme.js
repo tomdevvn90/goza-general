@@ -81,9 +81,6 @@ $(document).ready(function () {
   $(document).ready(function () {
     beEventsCarousel();
   });
-  $(window).on('resize', function () {
-    beEventsCarousel();
-  });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
@@ -500,8 +497,8 @@ be_projects_grid_loadmore.forEach(function (element) {
 /* WEBPACK VAR INJECTION */(function(jQuery) {(function ($) {
   "use strict";
 
-  var beEventsCarousel = function beEventsCarousel() {
-    var $block = $('.be-team-carousel');
+  var beTeamCarousel = function beTeamCarousel() {
+    var $block = $('.be-team-carousel-is-style-default');
     if ($block.length === 0) return;
     $block.each(function () {
       var $slider = $(this).find('.be-team-carousel-inner'),
@@ -532,8 +529,8 @@ be_projects_grid_loadmore.forEach(function (element) {
       $slider.slick(Object.assign({}, opt_df, $dataSlider));
     });
   };
-  var beEventsCarousel_style2 = function beEventsCarousel_style2() {
-    var $block = $('.be-team-carousel.is-style-2');
+  var beTeamCarousel_style2 = function beTeamCarousel_style2() {
+    var $block = $('.be-team-carousel-is-style-2  ');
     if ($block.length === 0) return;
     $block.each(function () {
       var $slider = $(this).find('.be-team-carousel-inner'),
@@ -565,10 +562,8 @@ be_projects_grid_loadmore.forEach(function (element) {
     });
   };
   $(document).ready(function () {
-    beEventsCarousel_style2();
-  });
-  $(document).ready(function () {
-    beEventsCarousel();
+    beTeamCarousel_style2();
+    beTeamCarousel();
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))

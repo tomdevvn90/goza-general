@@ -2,9 +2,9 @@
 (function ($) {
     "use strict";
 
-    const beEventsCarousel = () =>{
+    const beTeamCarousel = () =>{
 
-        const $block = $('.be-team-carousel');
+        const $block = $('.be-team-carousel-is-style-default');
 		if ($block.length === 0) return;
 
         $block.each(function () {
@@ -40,9 +40,9 @@
 			$slider.slick(Object.assign({}, opt_df, $dataSlider));
         })
     }
-    const beEventsCarousel_style2 = () =>{
+    const beTeamCarousel_style2 = () =>{
 
-        const $block = $('.be-team-carousel.is-style-2');
+        const $block = $('.be-team-carousel-is-style-2  ');
 		if ($block.length === 0) return;
 
         $block.each(function () {
@@ -80,10 +80,8 @@
     }
 
     $(document).ready(function () {
-        beEventsCarousel_style2()
-    })
-    $(document).ready(function () {
-        beEventsCarousel()
+        beTeamCarousel_style2()
+        beTeamCarousel()
     })
     
 
