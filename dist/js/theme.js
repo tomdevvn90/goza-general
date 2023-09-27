@@ -350,7 +350,7 @@ $(document).ready(function () {
       }
     });
   };
-  $(window).on("load", function () {
+  $(window).on("load resize", function () {
     beProgressbarBlock();
     console.log('asd');
   });
