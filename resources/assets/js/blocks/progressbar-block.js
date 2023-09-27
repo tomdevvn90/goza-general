@@ -34,6 +34,7 @@
                       color: `${$strokeColor}`,
                       trailColor: `${$trailColor}`,
                   });
+                  console.log('333');
 
                   $(this).find('.be-progressbar-block-warp svg').css("height", $height);
               }
@@ -54,6 +55,7 @@
 
   $(window).on("load", function () {
       beProgressbarBlock();
+      console.log('asd');
   });
 
 })(jQuery);

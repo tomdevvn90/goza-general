@@ -334,6 +334,7 @@ $(document).ready(function () {
             color: "".concat($strokeColor),
             trailColor: "".concat($trailColor)
           });
+          console.log('333');
           $(this).find('.be-progressbar-block-warp svg').css("height", $height);
         }
         var waypoint = new Waypoint({
@@ -351,6 +352,7 @@ $(document).ready(function () {
   };
   $(window).on("load", function () {
     beProgressbarBlock();
+    console.log('asd');
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
