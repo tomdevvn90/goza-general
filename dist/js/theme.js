@@ -305,7 +305,6 @@ $(document).ready(function () {
     var $progressbar = $('.be-progressbar-block');
     if ($progressbar.length === 0) return;
     var ProgressBar = __webpack_require__(/*! progressbar.js */ "./node_modules/progressbar.js/src/main.js");
-    console.log('123');
     $progressbar.each(function () {
       var $idProgressbar = $(this).find('.be-progressbar-block-warp').attr('id'),
         $shape = $(this).data('shape'),
@@ -314,7 +313,9 @@ $(document).ready(function () {
         $strokeColor = $(this).data('stroke-color'),
         $trailColor = $(this).data('trail-color'),
         $duration = $(this).data('duration');
+      console.log('qqq');
       if ($value > 0) {
+        console.log('123');
         var progressbar;
         if ($shape === 'circle') {
           progressbar = new ProgressBar.Circle("#".concat($idProgressbar), {

@@ -5,7 +5,6 @@
       const $progressbar = $('.be-progressbar-block');
       if ($progressbar.length === 0) return;
       let ProgressBar = require('progressbar.js');
-        console.log('123');
       $progressbar.each(function () {
           const $idProgressbar = $(this).find('.be-progressbar-block-warp').attr('id'),
                 $shape         = $(this).data('shape'),
@@ -14,8 +13,9 @@
                 $strokeColor   = $(this).data('stroke-color'),
                 $trailColor    = $(this).data('trail-color'),
                 $duration      = $(this).data('duration');
-         
+                console.log('qqq');
           if ($value > 0) {
+            console.log('123');
               let progressbar;
               if ($shape === 'circle') {
                   progressbar = new ProgressBar.Circle(`#${$idProgressbar}`, {
