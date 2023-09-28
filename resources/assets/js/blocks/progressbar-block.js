@@ -13,9 +13,7 @@
                 $strokeColor   = $(this).data('stroke-color'),
                 $trailColor    = $(this).data('trail-color'),
                 $duration      = $(this).data('duration');
-                console.log('qqq');
           if ($value > 0) {
-            console.log('123');
               let progressbar;
               if ($shape === 'circle') {
                   progressbar = new ProgressBar.Circle(`#${$idProgressbar}`, {
@@ -34,7 +32,6 @@
                       color: `${$strokeColor}`,
                       trailColor: `${$trailColor}`,
                   });
-                  console.log('333');
 
                   $(this).find('.be-progressbar-block-warp svg').css("height", $height);
               }
@@ -53,9 +50,8 @@
       });
   }
 
-  $(window).on("load resize", function () {
+  $(window).on("load", function () {
       beProgressbarBlock();
-      console.log('asd');
   });
 
 })(jQuery);

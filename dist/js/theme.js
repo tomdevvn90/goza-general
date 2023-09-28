@@ -313,9 +313,7 @@ $(document).ready(function () {
         $strokeColor = $(this).data('stroke-color'),
         $trailColor = $(this).data('trail-color'),
         $duration = $(this).data('duration');
-      console.log('qqq');
       if ($value > 0) {
-        console.log('123');
         var progressbar;
         if ($shape === 'circle') {
           progressbar = new ProgressBar.Circle("#".concat($idProgressbar), {
@@ -334,7 +332,6 @@ $(document).ready(function () {
             color: "".concat($strokeColor),
             trailColor: "".concat($trailColor)
           });
-          console.log('333');
           $(this).find('.be-progressbar-block-warp svg').css("height", $height);
         }
         var waypoint = new Waypoint({
@@ -350,9 +347,8 @@ $(document).ready(function () {
       }
     });
   };
-  $(window).on("load resize", function () {
+  $(window).on("load", function () {
     beProgressbarBlock();
-    console.log('asd');
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
